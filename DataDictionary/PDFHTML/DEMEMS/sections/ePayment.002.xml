@@ -1,0 +1,1626 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="ePayment">
+<element number="ePayment.01" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Primary Method of Payment</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The primary method of payment or type of insurance associated with this EMS encounter</definition>
+<v2Number>E07_01</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2601001</code>
+           <description>Insurance</description>
+        </choice>
+        <choice>
+           <code>2601003</code>
+           <description>Medicaid</description>
+        </choice>
+        <choice>
+           <code>2601005</code>
+           <description>Medicare</description>
+        </choice>
+        <choice>
+           <code>2601007</code>
+           <description>Not Billed (for any reason)</description>
+        </choice>
+        <choice>
+           <code>2601009</code>
+           <description>Other Government</description>
+        </choice>
+        <choice>
+           <code>2601011</code>
+           <description>Self Pay</description>
+        </choice>
+        <choice>
+           <code>2601013</code>
+           <description>Workers Compensation</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><group number="ePayment.CertificateGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<element number="ePayment.02" minOccurs="0" maxOccurs="1" dataType="YesNoUnkValues" isNillable="No">
+<name>Physician Certification Statement</name>
+<national>No</national>
+<state>No</state>
+<definition>Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter.</definition>
+<v2Number>E07_02</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Data Element Name changed from Certificate of Medical Necessity to Physician Certification Statement. The PCS statement and documentation of medical necessity is a requirement of the Centers for Medicare &amp; Medicaid Services. The circumstances are defined in 42 CFR 410.40 (d)(2) and (d)(3). http://www.cms.gov/
+										<br/><br/>A PCS is required for the following non-emergency transport:
+										<br/>1) Non-Emergency Repetitive Scheduled
+										<br/>2) Non Emergency Non-Repetitive-Scheduled
+										<br/>3) Non Emergency Services - Non Scheduled - Under direct care of a physician</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9922001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9922003</code>
+           <description>Unknown</description>
+        </choice>
+        <choice>
+           <code>9922005</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="ePayment.03" minOccurs="0" maxOccurs="1" dataType="DateTimeType" isNillable="No">
+<name>Date Physician Certification Statement Signed</name>
+<national>No</national>
+<state>No</state>
+<definition>The date the Physician Certification Statement was signed</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to assist in billing documentation. Associated with ePayment.02:  Physician Certification Statement.
+										  	<br/><br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<table  cellspacing="2"><tr><td>							
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
+  <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
+  <tr><td align="center">T</td><td>separator that indicates time-of-day follows</td></tr>
+  <tr><td align="center">hh</td><td>a two-digit numeral that represents the hour</td></tr>
+  <tr><td align="center">':'</td><td>a separator between parts of the time-of-day portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minute</td></tr>
+  <tr><td align="center">ss</td><td>a two-integer-digit numeral that represents the whole seconds</td></tr>
+  <tr><td align="center">'.' s+</td><td>(not required) represents the fractional seconds</td></tr>
+  <tr><td align="center">zzzzzz</td><td>(required) represents the timezone (as described below)</td></tr>
+</table> 
+</td></tr></table>
+<br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+<table cellspacing="2"><tr><td>	
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">hh</td><td>a two-digit numeral (with leading zeros as required) that represents the hours</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minutes</td></tr>
+  <tr><td align="center">'+'</td><td>a nonnegative duration</td></tr>
+  <tr><td align="center">'-'</td><td>a nonpositive duration</td></tr>
+</table>
+</td></tr></table></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
+     </patterns>
+      <constraints>
+        <dataType>dateTime</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.04" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Reason for Physician Certification Statement</name>
+<national>No</national>
+<state>No</state>
+<definition>The reason for EMS transport noted on the Physician Certification Statement</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to assist in billing documentation.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2604001</code>
+           <description>Bed Confined</description>
+        </choice>
+        <choice>
+           <code>2604003</code>
+           <description>Cardiac/Hemodynamic monitoring required during transport</description>
+        </choice>
+        <choice>
+           <code>2604005</code>
+           <description>Confused, combative, lethargic, comatose</description>
+        </choice>
+        <choice>
+           <code>2604007</code>
+           <description>Contractures</description>
+        </choice>
+        <choice>
+           <code>2604009</code>
+           <description>Danger to self or others-monitoring</description>
+        </choice>
+        <choice>
+           <code>2604011</code>
+           <description>Danger to self or others-seclusion (flight risk)</description>
+        </choice>
+        <choice>
+           <code>2604013</code>
+           <description>DVT requires elevation of lower extremity</description>
+        </choice>
+        <choice>
+           <code>2604015</code>
+           <description>IV medications/fluids required during transport</description>
+        </choice>
+        <choice>
+           <code>2604017</code>
+           <description>Moderate to severe pain on movement</description>
+        </choice>
+        <choice>
+           <code>2604019</code>
+           <description>Morbid Obesity requires additional personnel/equipment to handle</description>
+        </choice>
+        <choice>
+           <code>2604021</code>
+           <description>Non-healing fractures</description>
+        </choice>
+        <choice>
+           <code>2604023</code>
+           <description>Orthopedic device (backboard, halo, use of pins in traction, etc) requiring special handling in transit</description>
+        </choice>
+        <choice>
+           <code>2604025</code>
+           <description>Restraints (Physical or Chemical) anticipated or used during transport</description>
+        </choice>
+        <choice>
+           <code>2604027</code>
+           <description>Risk of falling off wheelchair or stretcher while in motion (not related to obesity)</description>
+        </choice>
+        <choice>
+           <code>2604029</code>
+           <description>Severe Muscular weakness and de-conditioned state precludes any significant physical activity</description>
+        </choice>
+        <choice>
+           <code>2604031</code>
+           <description>Special handling en route-Isolation</description>
+        </choice>
+        <choice>
+           <code>2604033</code>
+           <description>Third Party assistance/attendant required to apply, administer, or regulate or adjust oxygen en route</description>
+        </choice>
+        <choice>
+           <code>2604035</code>
+           <description>Unable to maintain erect sitting position in a chair for time needed to transport, due to moderate muscular weakness and de-conditioning.</description>
+        </choice>
+        <choice>
+           <code>2604037</code>
+           <description>Unable to sit in chair or wheelchair due to Grade II or greater decubitus ulcers on buttocks.</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="ePayment.05" minOccurs="0" maxOccurs="1" dataType="HealthcareProviderType" isNillable="No">
+<name>Healthcare Provider Type Signing Physician Certification Statement</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of healthcare provider who signed the Physician Certification Statement</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2605001</code>
+           <description>Clinical Nurse Specialist</description>
+        </choice>
+        <choice>
+           <code>2605003</code>
+           <description>Discharge Planner</description>
+        </choice>
+        <choice>
+           <code>2605005</code>
+           <description>Physician (MD or DO)</description>
+        </choice>
+        <choice>
+           <code>2605007</code>
+           <description>Physician Assistant</description>
+        </choice>
+        <choice>
+           <code>2605009</code>
+           <description>Registered Nurse</description>
+        </choice>
+        <choice>
+           <code>2605011</code>
+           <description>Registered Nurse Practitioner</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="ePayment.06" minOccurs="0" maxOccurs="1" dataType="PersonLastName" isNillable="No">
+<name>Last Name of Individual Signing Physician Certification Statement</name>
+<national>No</national>
+<state>No</state>
+<definition>The last name of the healthcare provider who signed the Physician Certification Statement.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to assist in billing documentation.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.07" minOccurs="0" maxOccurs="1" dataType="PersonFirstName" isNillable="No">
+<name>First Name of Individual Signing Physician Certification Statement</name>
+<national>No</national>
+<state>No</state>
+<definition>The first name of the healthcare provider who signed the Physician Certification Statement.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to assist in billing documentation.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>35</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element></group>
+<element number="ePayment.08" minOccurs="0" maxOccurs="1" dataType="ResidencyStatusOfThePatient" isNillable="No">
+<name>Patient Resides in Service Area</name>
+<national>No</national>
+<state>No</state>
+<definition>An indication of whether the patient's current residence is within the EMS agency service area.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to assist in billing documentation.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2608001</code>
+           <description>Resident Within EMS Service Area</description>
+        </choice>
+        <choice>
+           <code>2608003</code>
+           <description>Not a Resident Within EMS Service Area</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><group number="ePayment.InsuranceGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="ePayment.09" minOccurs="0" maxOccurs="1" dataType="InsuranceCompanyID" isNillable="No">
+<name>Insurance Company ID</name>
+<national>No</national>
+<state>No</state>
+<definition>The ID Number of the patient's insurance company.</definition>
+<v2Number>E07_03</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>60</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.10" minOccurs="0" maxOccurs="1" dataType="InsuranceCompanyName" isNillable="No">
+<name>Insurance Company Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The name of the patient's insurance company.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.11" minOccurs="0" maxOccurs="1" dataType="InsuranceCompanyBillingPriority" isNillable="No">
+<name>Insurance Company Billing Priority</name>
+<national>No</national>
+<state>No</state>
+<definition>The billing priority or order for the insurance company.</definition>
+<v2Number>E07_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2611001</code>
+           <description>Other</description>
+        </choice>
+        <choice>
+           <code>2611003</code>
+           <description>Primary</description>
+        </choice>
+        <choice>
+           <code>2611005</code>
+           <description>Secondary</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="ePayment.12" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Insurance Company Address</name>
+<national>No</national>
+<state>No</state>
+<definition>The mailing address of the Insurance Company</definition>
+<v2Number>E07_05</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>55</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+	<StreetAddress>Yes</StreetAddress>
+</restrictions>
+</element><element number="ePayment.13" minOccurs="0" maxOccurs="1" dataType="CityGnisCode" isNillable="No">
+<name>Insurance Company City</name>
+<national>No</national>
+<state>No</state>
+<definition>The insurance company's city or township</definition>
+<v2Number>E07_06</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on GNIS Civil Code or Populated Place code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.14" minOccurs="0" maxOccurs="1" dataType="ANSIStateCode" isNillable="No">
+<name>Insurance Company State</name>
+<national>No</national>
+<state>No</state>
+<definition>The insurance company's state, territory, or province, or District of Columbia.</definition>
+<v2Number>E07_07</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ANSI State Code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.15" minOccurs="0" maxOccurs="1" dataType="ZIP" isNillable="No">
+<name>Insurance Company ZIP Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The insurance company's ZIP Code</definition>
+<v2Number>E07_08</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</pattern>
+     </patterns>
+</restrictions>
+</element><element number="ePayment.16" minOccurs="0" maxOccurs="1" dataType="ANSICountryCode" isNillable="No">
+<name>Insurance Company Country</name>
+<national>No</national>
+<state>No</state>
+<definition>The insurance company's country</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ISO Country Code.<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
+<v3Changes>Added to better document international addresses.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.17" minOccurs="0" maxOccurs="1" dataType="InsuranceGroupIDName" isNillable="No">
+<name>Insurance Group ID/Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The ID number or name of the patient's insurance group</definition>
+<v2Number>E07_09</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>30</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.18" minOccurs="0" maxOccurs="1" dataType="InsurancePolicyIDNumber" isNillable="No">
+<name>Insurance Policy ID Number</name>
+<national>No</national>
+<state>No</state>
+<definition>The ID number of the patient's insurance policy</definition>
+<v2Number>E07_10</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>30</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.19" minOccurs="0" maxOccurs="1" dataType="PersonLastName" isNillable="No">
+<name>Last Name of the Insured</name>
+<national>No</national>
+<state>No</state>
+<definition>The last (family) name of the person insured by the insurance company.</definition>
+<v2Number>E07_11</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.20" minOccurs="0" maxOccurs="1" dataType="PersonFirstName" isNillable="No">
+<name>First Name of the Insured</name>
+<national>No</national>
+<state>No</state>
+<definition>The first (given) name of the person insured by the insurance company</definition>
+<v2Number>E07_12</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>35</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.21" minOccurs="0" maxOccurs="1" dataType="PersonMiddleName" isNillable="No">
+<name>Middle Initial/Name of the Insured</name>
+<national>No</national>
+<state>No</state>
+<definition>The middle name, if any, of the person insured by the insurance company.</definition>
+<v2Number>E07_13</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>25</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.22" minOccurs="0" maxOccurs="1" dataType="RelationshipToInsured" isNillable="No">
+<name>Relationship to the Insured</name>
+<national>No</national>
+<state>No</state>
+<definition>The relationship of the patient to the primary insured person</definition>
+<v2Number>E07_14</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2622001</code>
+           <description>Self</description>
+        </choice>
+        <choice>
+           <code>2622003</code>
+           <description>Spouse</description>
+        </choice>
+        <choice>
+           <code>2622005</code>
+           <description>Child/Dependent</description>
+        </choice>
+        <choice>
+           <code>2622007</code>
+           <description>Other</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element></group>
+<group number="ePayment.ClosestRelativeGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<element number="ePayment.23" minOccurs="0" maxOccurs="1" dataType="PersonLastName" isNillable="No">
+<name>Closest Relative/Guardian Last Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The last (family) name of the patient's closest relative or guardian</definition>
+<v2Number>E07_18</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.24" minOccurs="0" maxOccurs="1" dataType="PersonFirstName" isNillable="No">
+<name>Closest Relative/ Guardian First Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The first (given) name of the patient's closest relative or guardian</definition>
+<v2Number>E07_19</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>35</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.25" minOccurs="0" maxOccurs="1" dataType="PersonMiddleName" isNillable="No">
+<name>Closest Relative/ Guardian Middle Initial/Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The middle name/initial, if any, of the closest patient's relative or guardian.</definition>
+<v2Number>E07_20</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>25</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.26" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Closest Relative/ Guardian Street Address</name>
+<national>No</national>
+<state>No</state>
+<definition>The home street address of the patient's closest relative or guardian.</definition>
+<v2Number>E07_21</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>55</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+	<StreetAddress>Yes</StreetAddress>
+</restrictions>
+</element><element number="ePayment.27" minOccurs="0" maxOccurs="1" dataType="CityGnisCode" isNillable="No">
+<name>Closest Relative/ Guardian City</name>
+<national>No</national>
+<state>No</state>
+<definition>The home city of the patient's closest relative or guardian.</definition>
+<v2Number>E07_22</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on GNIS Civil Code or Populated Place code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.28" minOccurs="0" maxOccurs="1" dataType="ANSIStateCode" isNillable="No">
+<name>Closest Relative/ Guardian State</name>
+<national>No</national>
+<state>No</state>
+<definition>The home state of the patient's closest relative or guardian</definition>
+<v2Number>E07_23</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on ANSI State Code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.29" minOccurs="0" maxOccurs="1" dataType="ZIP" isNillable="No">
+<name>Closest Relative/ Guardian ZIP Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The home ZIP Code of the patient's closest relative or guardian</definition>
+<v2Number>E07_24</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</pattern>
+     </patterns>
+</restrictions>
+</element><element number="ePayment.30" minOccurs="0" maxOccurs="1" dataType="ANSICountryCode" isNillable="No">
+<name>Closest Relative/ Guardian Country</name>
+<national>No</national>
+<state>No</state>
+<definition>The home country of the patient's closest relative or guardian</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ISO Country Code.<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
+<v3Changes>Added to improve international compatibility.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.31" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Closest Relative/ Guardian Phone Number</name>
+<national>No</national>
+<state>No</state>
+<definition>The phone number of the patient's closest relative or guardian</definition>
+<v2Number>E07_25</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]</pattern>
+     </patterns>
+	<correlationID>Yes</correlationID>
+	<phoneNumberType>
+		<choice><code>9913001</code><description>Fax</description></choice>
+		<choice><code>9913003</code><description>Home</description></choice>
+		<choice><code>9913005</code><description>Mobile</description></choice>
+		<choice><code>9913007</code><description>Pager</description></choice>
+		<choice><code>9913009</code><description>Work</description></choice>
+	</phoneNumberType>
+</restrictions>
+</element><element number="ePayment.32" minOccurs="0" maxOccurs="1" dataType="ClosestRelativeGuardianRelationship" isNillable="No">
+<name>Closest Relative/ Guardian Relationship</name>
+<national>No</national>
+<state>No</state>
+<definition>The relationship of the patient's closest relative or guardian</definition>
+<v2Number>E07_26</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2632001</code>
+           <description>Appointed Guardian</description>
+        </choice>
+        <choice>
+           <code>2632003</code>
+           <description>Child/Dependent</description>
+        </choice>
+        <choice>
+           <code>2632005</code>
+           <description>Father</description>
+        </choice>
+        <choice>
+           <code>2632007</code>
+           <description>Mother</description>
+        </choice>
+        <choice>
+           <code>2632009</code>
+           <description>Other (Non-Relative)</description>
+        </choice>
+        <choice>
+           <code>2632011</code>
+           <description>Other (Relative)</description>
+        </choice>
+        <choice>
+           <code>2632013</code>
+           <description>Sibling</description>
+        </choice>
+        <choice>
+           <code>2632015</code>
+           <description>Spouse</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element></group>
+<group number="ePayment.EmployerGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<element number="ePayment.33" minOccurs="0" maxOccurs="1" dataType="EmployerName" isNillable="No">
+<name>Patient's Employer</name>
+<national>No</national>
+<state>No</state>
+<definition>The patient's employers Name</definition>
+<v2Number>E07_27</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>60</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.34" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Patient's Employer's Address</name>
+<national>No</national>
+<state>No</state>
+<definition>The street address of the patient's employer</definition>
+<v2Number>E07_28</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>55</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+	<StreetAddress>Yes</StreetAddress>
+</restrictions>
+</element><element number="ePayment.35" minOccurs="0" maxOccurs="1" dataType="CityGnisCode" isNillable="No">
+<name>Patient's Employer's City</name>
+<national>No</national>
+<state>No</state>
+<definition>The city of the patient's employer</definition>
+<v2Number>E07_29</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on GNIS Civil Code or Populated Place Code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.36" minOccurs="0" maxOccurs="1" dataType="ANSIStateCode" isNillable="No">
+<name>Patient's Employer's State</name>
+<national>No</national>
+<state>No</state>
+<definition>The state of the patient's employer</definition>
+<v2Number>E07_30</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on ANSI State Code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.37" minOccurs="0" maxOccurs="1" dataType="ZIP" isNillable="No">
+<name>Patient's Employer's ZIP Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The ZIP Code of the patient's employer</definition>
+<v2Number>E07_31</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</pattern>
+     </patterns>
+</restrictions>
+</element><element number="ePayment.38" minOccurs="0" maxOccurs="1" dataType="ANSICountryCode" isNillable="No">
+<name>Patient's Employer's Country</name>
+<national>No</national>
+<state>No</state>
+<definition>The country of the patient's employer</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ISO Country Code.<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
+<v3Changes>Added to improve international compatibility.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.39" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Patient’s Employer’s Primary Phone Number</name>
+<national>No</national>
+<state>No</state>
+<definition>The employer’s primary phone number.</definition>
+<v2Number>E07_32</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]</pattern>
+     </patterns>
+	<correlationID>Yes</correlationID>
+	<phoneNumberType>
+		<choice><code>9913001</code><description>Fax</description></choice>
+		<choice><code>9913003</code><description>Home</description></choice>
+		<choice><code>9913005</code><description>Mobile</description></choice>
+		<choice><code>9913007</code><description>Pager</description></choice>
+		<choice><code>9913009</code><description>Work</description></choice>
+	</phoneNumberType>
+</restrictions>
+</element></group>
+<element number="ePayment.40" minOccurs="0" maxOccurs="1" dataType="ResponseUrgency" isNillable="No">
+<name>Response Urgency</name>
+<national>No</national>
+<state>No</state>
+<definition>The urgency in which the EMS agency began to mobilize resources for this EMS encounter.</definition>
+<v2Number>E07_33</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is for billing documentation.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2640001</code>
+           <description>Immediate</description>
+        </choice>
+        <choice>
+           <code>2640003</code>
+           <description>Non-Immediate</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="ePayment.41" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Patient Transport Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>Documentation of the patient's transport need based on mobility and/or physical capability.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to better justify the medical necessity of the transport. Based on CMS 42 CFR Ch IV (10-1-02 Edition) &amp; 410.40 (d) medical necessity requirement (1)</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2641001</code>
+           <description>Unable to sit without assistance</description>
+        </choice>
+        <choice>
+           <code>2641003</code>
+           <description>Unable to stand without assistance</description>
+        </choice>
+        <choice>
+           <code>2641005</code>
+           <description>Unable to walk without assistance</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="ePayment.42" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Specialty Care Transport Care Provider</name>
+<national>No</national>
+<state>No</state>
+<definition>Documentation to show the patient care provided to the patient met the Specialty Care Transport Base Rate requirements.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve Specialty Care Transport billing justification. In accordance with CMS requirements Specialty Care Transport (SCT): ""Additional training" means the specific additional training that a State requires a paramedic to complete in order to qualify to furnish specialty care to a critically ill or injured patient during an SCT."</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2642001</code>
+           <description>Advanced EMT-Paramedic</description>
+        </choice>
+        <choice>
+           <code>2642003</code>
+           <description>Nurse</description>
+        </choice>
+        <choice>
+           <code>2642005</code>
+           <description>Nurse Practitioner</description>
+        </choice>
+        <choice>
+           <code>2642007</code>
+           <description>Physician (MD, DO)</description>
+        </choice>
+        <choice>
+           <code>2642009</code>
+           <description>Physician Assistant</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="ePayment.43" minOccurs="0" maxOccurs="1" dataType="AmbulanceTransportCode" isNillable="No">
+<name>Ambulance Transport Code</name>
+<national>No</national>
+<state>No</state>
+<definition>Indicator about the type of transport of the patient.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve billing with electronic claims using X12. The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport".  The Accredited Standards Committee X12 organization maintains the standard.  See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:  
+http://ushik.org/dr.ui.drData_Page?system=mdr&amp;Search=xxKEYIDxx&amp;KeyOrgID=18&amp;KeyRID=24821000&amp;Referer=DataElement</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>I</code>
+           <description>Initial Trip</description>
+        </choice>
+        <choice>
+           <code>R</code>
+           <description>Return Trip</description>
+        </choice>
+        <choice>
+           <code>X</code>
+           <description>Round Trip</description>
+        </choice>
+        <choice>
+           <code>T</code>
+           <description>Transfer Trip</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="ePayment.44" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Ambulance Transport Reason Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The CMS Ambulance Transport Reason Code for the transport.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve billing with electronic claims using the ASC X12 Standard. 
+The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport". The Accredited Standards Committee X12 organization maintains the standard. See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:
+http://ushik.ahrq.gov/ViewItemDetails?system=mdr&amp;itemKey=21826000</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>A</code>
+           <description>Patient was transported to the nearest facility for care of symptoms, complaints, or both</description>
+        </choice>
+        <choice>
+           <code>B</code>
+           <description>Patient was transported for the benefit of a preferred physician</description>
+        </choice>
+        <choice>
+           <code>C</code>
+           <description>Patient was transported for the nearness of family members</description>
+        </choice>
+        <choice>
+           <code>D</code>
+           <description>Patient was transported for the care of a specialist or for availability of equipment</description>
+        </choice>
+        <choice>
+           <code>E</code>
+           <description>Patient was transferred to a Rehabilitation Facility</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="ePayment.45" minOccurs="0" maxOccurs="1" dataType="TripPurposeDesciption" isNillable="No">
+<name>Round Trip Purpose Description</name>
+<national>No</national>
+<state>No</state>
+<definition>Free text description providing the purpose of the round trip EMS transport based on CR109 field for CMS.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve billing documentation for CMS X12 based transactions.
+<br/><br/>This element should be documented when ePayment.44 (Ambulance Transport) code = X (Round Trip).
+<br/><br/>Ambulance providers can use this field to provide additional information regarding the circumstances of a round trip transport or for other medical 
+neccessity documentation.</v3Comment>
+<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>80</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.46" minOccurs="0" maxOccurs="1" dataType="StretcherPurposeDesciption" isNillable="No">
+<name>Stretcher Purpose Description</name>
+<national>No</national>
+<state>No</state>
+<definition>Free Text Documentation providing the reason for use of a stretcher in the EMS patient transport.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve billing using CMS X12 transactions based on CR110.
+							Ambulance providers can use this field to provide additional information regarding the patient's condition that warranted the use of a strecher or 
+							for other medical necessity documentation.</v3Comment>
+<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>80</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.47" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Ambulance Conditions Indicator</name>
+<national>No</national>
+<state>No</state>
+<definition>Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve billing documentation and justification.</v3Comment>
+<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1</code>
+           <description>Patient was admitted to hospital</description>
+        </choice>
+        <choice>
+           <code>2</code>
+           <description>Patient was bed confined before the ambulance service</description>
+        </choice>
+        <choice>
+           <code>3</code>
+           <description>Patient was bed confined after the ambulance service</description>
+        </choice>
+        <choice>
+           <code>4</code>
+           <description>Patient was moved by stretcher</description>
+        </choice>
+        <choice>
+           <code>5</code>
+           <description>Patient was unconscious or in shock</description>
+        </choice>
+        <choice>
+           <code>6</code>
+           <description>Patient was transported in an emergency situation</description>
+        </choice>
+        <choice>
+           <code>7</code>
+           <description>Patient had to be physically restrained</description>
+        </choice>
+        <choice>
+           <code>8</code>
+           <description>Patient had visible hemorrhaging</description>
+        </choice>
+        <choice>
+           <code>9</code>
+           <description>Ambulance service was medically necessary</description>
+        </choice>
+        <choice>
+           <code>10</code>
+           <description>Transportation was to the nearest facility</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="ePayment.48" minOccurs="0" maxOccurs="1" dataType="Mileage" isNillable="No">
+<name>Mileage to Closest Hospital Facility</name>
+<national>No</national>
+<state>No</state>
+<definition>The mileage to the closest hospital facility from the scene. Documented only if the patient was transported to a facility farther away than the closest hospital.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to clarify billing mileage when the patient is not taken to the closest facility.</v3Comment>
+<v3Changes>Added for improved billing documentation.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>decimal</dataType>
+        <constraint>
+          <constraintTitle>fractionDigits</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>1000</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.49" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
+<name>ALS Assessment Performed and Warranted</name>
+<national>No</national>
+<state>No</state>
+<definition>Documentation that the patient required an ALS assessment and it was performed.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve billing justification</v3Comment>
+<v3Changes>Added to improve billing justification</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="ePayment.50" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>CMS Service Level</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The CMS service level for this EMS encounter.</definition>
+<v2Number>E07_34</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2650001</code>
+           <description>ALS, Level 1</description>
+        </choice>
+        <choice>
+           <code>2650003</code>
+           <description>ALS, Level 1 Emergency</description>
+        </choice>
+        <choice>
+           <code>2650005</code>
+           <description>ALS, Level 2</description>
+        </choice>
+        <choice>
+           <code>2650007</code>
+           <description>BLS</description>
+        </choice>
+        <choice>
+           <code>2650009</code>
+           <description>BLS, Emergency</description>
+        </choice>
+        <choice>
+           <code>2650011</code>
+           <description>Fixed Wing (Airplane)</description>
+        </choice>
+        <choice>
+           <code>2650013</code>
+           <description>Paramedic Intercept</description>
+        </choice>
+        <choice>
+           <code>2650015</code>
+           <description>Specialty Care Transport</description>
+        </choice>
+        <choice>
+           <code>2650017</code>
+           <description>Rotary Wing (Helicopter)</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="ePayment.51" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>EMS Condition Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The condition code associated with the CMS EMS negotiated rule-making process.</definition>
+<v2Number>E07_35</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Source CMS</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <patterns>
+        <pattern>[A-Z]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?</pattern>
+     </patterns>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="ePayment.52" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>CMS Transportation Indicator</name>
+<national>No</national>
+<state>No</state>
+<definition>The CMS Ambulance Fee Schedule Transportation and Air Medical Transportation Indicators are used to better describe why it was necessary for the patient to be transported in a particular way or circumstance.</definition>
+<v2Number>E07_37</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Name changed from Condition Code Modifier to CMS Transportation Indicator</v3Comment>
+<v3Changes>Name changed from Condition Code Modifier to CMS Transportation Indicator</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>C1</code>
+           <description>Interfacility Transport (Requires Higher level of care)</description>
+        </choice>
+        <choice>
+           <code>C2</code>
+           <description>Interfacility Transport (service not available)</description>
+        </choice>
+        <choice>
+           <code>C3</code>
+           <description>Emergency Trauma Dispatch Condition Code (Major Incident or Mechanism of Injury)</description>
+        </choice>
+        <choice>
+           <code>C4</code>
+           <description>Medically Necessary Transport (Facility on Divert or Services Unavailable)</description>
+        </choice>
+        <choice>
+           <code>C5</code>
+           <description>BLS Transport of ALS Patient (ALS not available)</description>
+        </choice>
+        <choice>
+           <code>C6</code>
+           <description>ALS Response (Based on Dispatch Info) to BLS Patient (Condition)</description>
+        </choice>
+        <choice>
+           <code>C7</code>
+           <description>IV Medications required en route (ALS)</description>
+        </choice>
+        <choice>
+           <code>D1</code>
+           <description>Long Distance-patient's condition requires rapid transportation over a long distance</description>
+        </choice>
+        <choice>
+           <code>D2</code>
+           <description>Reare Circumstances, Traffic Patterns Precludes Ground Transport</description>
+        </choice>
+        <choice>
+           <code>D3</code>
+           <description>Time to the closest appropriate hospital due to the patient's condition precludes ground transport; maximize clinical benifits</description>
+        </choice>
+        <choice>
+           <code>D4</code>
+           <description>Pick up Point not Accessible by Ground Transport</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="ePayment.53" minOccurs="0" maxOccurs="1" dataType="AuthorizationCode" isNillable="No">
+<name>Transport Authorization Code</name>
+<national>No</national>
+<state>No</state>
+<definition>Prior authorization code provided by the insurance carrier/payor.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to improve billing documentation.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>52</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.54" minOccurs="0" maxOccurs="1" dataType="PersonName" isNillable="No">
+<name>Prior Authorization Code Payor</name>
+<national>No</national>
+<state>No</state>
+<definition>The Payor who has provided the Prior Authorization Code.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to document Prior Authorization Codes for an EMS Transport.</v3Comment>
+<v3Changes>Added to improve billing documentation.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><group number="ePayment.SupplyItemGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="ePayment.55" minOccurs="0" maxOccurs="1" dataType="SupplyUsed" isNillable="No">
+<name>Supply Item Used Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The name of the supply used on the patient by the EMS Crew during the EMS event.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to track EMS supplies for billing.  The list of supplies would be created by the EMS Agency.  There is no master list of supply items defined.</v3Comment>
+<v3Changes>Added to track EMS supplies for billing.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>80</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="ePayment.56" minOccurs="0" maxOccurs="1" dataType="SupplyCount" isNillable="No">
+<name>Number of Supply Item(s) Used</name>
+<national>No</national>
+<state>No</state>
+<definition>The number of the specific supply item used on the patient by the EMS Crew during the EMS event.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Associated with ePayment.56 (Supply Item Used Name). Used to better track supply items for billing</v3Comment>
+<v3Changes>Added to track EMS supplies for billing.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>100000000</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element></group>
+</section>

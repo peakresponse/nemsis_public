@@ -1,0 +1,54 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eAirway.01" minOccurs="0" maxOccurs="M" isNillable="Yes">
+<name>Indications for Invasive Airway</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The clinical indication for performing invasive airway management.</definition>
+<v2Number></v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better document airway management.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4001001</code>
+           <description>Adequate Airway Reflexes/Effort, Potential for Compromise</description>
+        </choice>
+        <choice>
+           <code>4001003</code>
+           <description>Airway Reflex Compromised</description>
+        </choice>
+        <choice>
+           <code>4001005</code>
+           <description>Apnea or Agonal Respirations</description>
+        </choice>
+        <choice>
+           <code>4001007</code>
+           <description>Illness Involving Airway</description>
+        </choice>
+        <choice>
+           <code>4001009</code>
+           <description>Injury Involving Airway</description>
+        </choice>
+        <choice>
+           <code>4001011</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>4001013</code>
+           <description>Ventilatory Effort Compromised</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

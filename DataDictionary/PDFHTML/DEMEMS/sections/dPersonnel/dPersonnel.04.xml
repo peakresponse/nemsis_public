@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dPersonnel.04" minOccurs="0" maxOccurs="1" dataType="StreetAddress" isNillable="No">
+<name>EMS Personnel's Mailing Address</name>
+<national>No</national>
+<state>No</state>
+<definition>The Street or PO Box of the personnel's mailing address.</definition>
+<v2Number>D08_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>For individuals living outside the USA the full address can be entered in the address line.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>55</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

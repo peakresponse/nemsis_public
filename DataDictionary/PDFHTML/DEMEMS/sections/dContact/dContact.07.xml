@@ -1,0 +1,28 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dContact.07" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Agency Contact State</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The state of the Agency contact's mailing address.</definition>
+<v2Number>D02_06</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency. Based on the state ANSI Code. For individuals living outside the USA full address to be entered in the address line.
+										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

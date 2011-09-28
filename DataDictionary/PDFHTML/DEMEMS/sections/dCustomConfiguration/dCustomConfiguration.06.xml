@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dCustomConfiguration.06" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Custom Data Element Potential Values</name>
+<national>No</national>
+<state>No</state>
+<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

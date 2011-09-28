@@ -1,0 +1,25 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eOther.01" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
+<name>Review Requested</name>
+<national>No</national>
+<state>No</state>
+<definition>Indication of whether the PCR needs review by anyone.</definition>
+<v2Number>E23_01</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

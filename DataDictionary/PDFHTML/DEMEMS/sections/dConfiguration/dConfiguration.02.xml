@@ -1,0 +1,62 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dConfiguration.02" minOccurs="1" maxOccurs="M" isNillable="No">
+<name>State Certification Licensure Levels</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>All of the potential levels of certification/licensure for EMS personnel recognized by the state.</definition>
+<v2Number>D04_01</v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The new 2009 Education Levels have been added.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9911001</code>
+           <description>2009 Advanced Emergency Medical Technician (AEMT)</description>
+        </choice>
+        <choice>
+           <code>9911003</code>
+           <description>2009 Emergency Medical Responder (EMR)</description>
+        </choice>
+        <choice>
+           <code>9911005</code>
+           <description>2009 Emergency Medical Technician</description>
+        </choice>
+        <choice>
+           <code>9911007</code>
+           <description>2009 Paramedic</description>
+        </choice>
+        <choice>
+           <code>9911009</code>
+           <description>EMT-Basic</description>
+        </choice>
+        <choice>
+           <code>9911011</code>
+           <description>EMT-Intermediate</description>
+        </choice>
+        <choice>
+           <code>9911013</code>
+           <description>EMT-Paramedic</description>
+        </choice>
+        <choice>
+           <code>9911015</code>
+           <description>First Responder</description>
+        </choice>
+        <choice>
+           <code>9911017</code>
+           <description>Nurse</description>
+        </choice>
+        <choice>
+           <code>9911019</code>
+           <description>Other</description>
+        </choice>
+        <choice>
+           <code>9911021</code>
+           <description>Physician</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

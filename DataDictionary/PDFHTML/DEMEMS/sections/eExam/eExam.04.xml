@@ -1,0 +1,92 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.04" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Skin Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>The assessment findings associated with the patient's skin.</definition>
+<v2Number>E16_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
+		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3504001</code>
+           <description>Clammy</description>
+        </choice>
+        <choice>
+           <code>3504003</code>
+           <description>Cold</description>
+        </choice>
+        <choice>
+           <code>3504005</code>
+           <description>Cyanotic</description>
+        </choice>
+        <choice>
+           <code>3504007</code>
+           <description>Diaphoretic</description>
+        </choice>
+        <choice>
+           <code>3504009</code>
+           <description>Dry</description>
+        </choice>
+        <choice>
+           <code>3504011</code>
+           <description>Flushed</description>
+        </choice>
+        <choice>
+           <code>3504013</code>
+           <description>Hot</description>
+        </choice>
+        <choice>
+           <code>3504015</code>
+           <description>Jaundiced</description>
+        </choice>
+        <choice>
+           <code>3504017</code>
+           <description>Lividity</description>
+        </choice>
+        <choice>
+           <code>3504019</code>
+           <description>Mottled</description>
+        </choice>
+        <choice>
+           <code>3504021</code>
+           <description>Normal</description>
+        </choice>
+        <choice>
+           <code>3504023</code>
+           <description>Not Done</description>
+        </choice>
+        <choice>
+           <code>3504025</code>
+           <description>Pale</description>
+        </choice>
+        <choice>
+           <code>3504027</code>
+           <description>Poor Turgor</description>
+        </choice>
+        <choice>
+           <code>3504029</code>
+           <description>Red (Erythmatous)</description>
+        </choice>
+        <choice>
+           <code>3504031</code>
+           <description>Tenting</description>
+        </choice>
+        <choice>
+           <code>3504033</code>
+           <description>Warm</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

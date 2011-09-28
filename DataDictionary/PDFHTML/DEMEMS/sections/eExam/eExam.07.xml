@@ -1,0 +1,120 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.07" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Neck Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>The assessment findings associated with the patient's neck.</definition>
+<v2Number>E16_06</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
+		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3507001</code>
+           <description>Abrasion</description>
+        </choice>
+        <choice>
+           <code>3507003</code>
+           <description>Avulsion</description>
+        </choice>
+        <choice>
+           <code>3507005</code>
+           <description>Bleeding Controlled</description>
+        </choice>
+        <choice>
+           <code>3507007</code>
+           <description>Bleeding Uncontrolled</description>
+        </choice>
+        <choice>
+           <code>3507009</code>
+           <description>Burn-Blistering</description>
+        </choice>
+        <choice>
+           <code>3507011</code>
+           <description>Burn-Charring</description>
+        </choice>
+        <choice>
+           <code>3507013</code>
+           <description>Burn-Redness</description>
+        </choice>
+        <choice>
+           <code>3507015</code>
+           <description>Burn-White/Waxy</description>
+        </choice>
+        <choice>
+           <code>3507017</code>
+           <description>Decapitation</description>
+        </choice>
+        <choice>
+           <code>3507019</code>
+           <description>Foreign Body</description>
+        </choice>
+        <choice>
+           <code>3507021</code>
+           <description>Gunshot Wound-Entry</description>
+        </choice>
+        <choice>
+           <code>3507023</code>
+           <description>Gunshot Wound-Exit</description>
+        </choice>
+        <choice>
+           <code>3507025</code>
+           <description>JVD</description>
+        </choice>
+        <choice>
+           <code>3507027</code>
+           <description>Laceration</description>
+        </choice>
+        <choice>
+           <code>3507029</code>
+           <description>Normal</description>
+        </choice>
+        <choice>
+           <code>3507031</code>
+           <description>Not Done</description>
+        </choice>
+        <choice>
+           <code>3507033</code>
+           <description>Pain</description>
+        </choice>
+        <choice>
+           <code>3507035</code>
+           <description>Puncture/Stab Wound</description>
+        </choice>
+        <choice>
+           <code>3507037</code>
+           <description>Stridor</description>
+        </choice>
+        <choice>
+           <code>3507039</code>
+           <description>Subcutaneous Air</description>
+        </choice>
+        <choice>
+           <code>3507041</code>
+           <description>Swelling/Bruising/Contusion with Pain</description>
+        </choice>
+        <choice>
+           <code>3507043</code>
+           <description>Swelling/Bruising/Contusion without Pain</description>
+        </choice>
+        <choice>
+           <code>3507045</code>
+           <description>Tracheal Deviation-Left</description>
+        </choice>
+        <choice>
+           <code>3507047</code>
+           <description>Tracheal Deviation-Right</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

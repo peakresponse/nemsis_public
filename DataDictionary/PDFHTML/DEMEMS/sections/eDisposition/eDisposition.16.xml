@@ -1,0 +1,66 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eDisposition.16" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>EMS Transport Method</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Transport method by this EMS Unit.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Required if the patient is transported by EMS.</v3Comment>
+<v3Changes>Added to better describe Air and Ground Transport methods.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4216001</code>
+           <description>Air Medical-Fixed Wing</description>
+        </choice>
+        <choice>
+           <code>4216003</code>
+           <description>Air Medical-Rotor Craft</description>
+        </choice>
+        <choice>
+           <code>4216005</code>
+           <description>Ground-Ambulance</description>
+        </choice>
+        <choice>
+           <code>4216007</code>
+           <description>Ground-ATV or Rescue Vehicle</description>
+        </choice>
+        <choice>
+           <code>4216009</code>
+           <description>Ground-Bariatric</description>
+        </choice>
+        <choice>
+           <code>4216011</code>
+           <description>Ground-Other Not Listed</description>
+        </choice>
+        <choice>
+           <code>4216013</code>
+           <description>Ground-Mass Casualty Bus/Vehicle</description>
+        </choice>
+        <choice>
+           <code>4216015</code>
+           <description>Ground-Wheelchair Van</description>
+        </choice>
+        <choice>
+           <code>4216017</code>
+           <description>Water-Boat</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

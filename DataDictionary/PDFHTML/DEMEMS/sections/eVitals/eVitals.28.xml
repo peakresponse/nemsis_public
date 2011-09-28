@@ -1,0 +1,38 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.28" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Pain Scale Type</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The type of pain scale used.</definition>
+<v2Number></v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better document the patient's pain level.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3328001</code>
+           <description>FLACC (Face, Legs, Activity, Cry, Consolability)</description>
+        </choice>
+        <choice>
+           <code>3328003</code>
+           <description>Numeric (0-10)</description>
+        </choice>
+        <choice>
+           <code>3328005</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3328007</code>
+           <description>Wong-Baker (FACES)</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+	<xs:include schemaLocation="ansistatecodes.xsd"/>
+	<xs:include schemaLocation="eRecord_v3.xsd"/>
+	<xs:include schemaLocation="eResponse_v3.xsd"/>
+	<xs:include schemaLocation="eDispatch_v3.xsd"/>
+	<xs:include schemaLocation="eTimes_v3.xsd"/>
+	<xs:include schemaLocation="eScene_v3.xsd"/>
+	<xs:include schemaLocation="eDisposition_v3.xsd"/>
+	<xs:include schemaLocation="eCustom_v3.xsd"/>
+	<xs:element name="eCAD">
+		<xs:complexType id="eCAD">
+			<xs:sequence>
+				<xs:element name="eCAD.01" type="EMSAgencyStateID">
+					<xs:annotation>
+						<xs:documentation>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.02" type="EMSAgencyNumber">
+					<xs:annotation>
+						<xs:documentation>The state-assigned provider number of the responding agency</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.03" type="EMSAgencyName">
+					<xs:annotation>
+						<xs:documentation>The formal name of the agency</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.04" type="ANSIStateCode">
+					<xs:annotation>
+						<xs:documentation>The state the Agency provides services in.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.05" type="PatientCareReportNumber" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The unique number automatically assigned by the EMS agency for each patient care report(PCR).  This is a unique number to the EMS agency for all of time.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.06" type="EMSIncidentNumber">
+					<xs:annotation>
+						<xs:documentation>The incident number assigned by the 911 Dispatch System</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.07" type="EMSResponseNumber" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The internal EMS response number which is unique for each EMS Vehicle's (Unit) response to an incident within an EMS Agency.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.08" type="EMSServiceCat" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The type of service or category of service requested of the EMS Agency responding for this specific EMS incident.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.09" type="EMSStandByReason" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Added to document the reason for Standby and assist in administrative analysis of EMS service delivery, special event coverage, etc.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.10" type="PrimaryRoleOfUnit" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The Primary role of the EMS Unit which responded to this specific EMS incident.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.11" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The dispatch delays, if any, associated with the dispatch of the EMS unit to the patient encounter</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMSDispatchDelayReason">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.12" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The response delays, if any, associated with the UNIT of the EMS unit to the patient encounter</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMSUnitDelayReason">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.13" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The scene delays, if any, of the unit associated with the patient encounter</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMSSceneUnitDelayReason">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.14" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The transport delays, if any, of the unit associated with the patient encounter</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMSTransportUnitDelayReason">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.15" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The turn-around delays, if any, associated with the EMS unit associated with the patient encounter</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMSTurnaroundUnitDelayReason">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.16" type="EMSVehicleNumber">
+					<xs:annotation>
+						<xs:documentation>The unique physical vehicle number of the responding unit.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.17" type="VehicleDispatchLocation" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The EMS Location or healthcare facility name representing the geographic location of the vehicle at the time of dispatch.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.18" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The GPS coordinates associated with the EMS unit at the time of dispatch documented in decimal degrees.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attributeGroup ref="GPSLocation"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.19" type="USNG" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The US National Grid Coordinates for the EMS Vehicle's Dispatch Location</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.20" type="EMSResponseMode" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The indication whether the response was emergent or non-emergent. An emergent response is an immediate response (typically using lights and sirens).</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.21" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The documentation of response mode techniques used for this EMS response.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMSAdditionalResponseMode">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.22" type="ComplaintReportedByDispatch">
+					<xs:annotation>
+						<xs:documentation>The complaint dispatch reported to the responding unit.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.23" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indication of whether Emergency Medical Dispatch was performed for this EMS event.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMDPerformed">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.24" type="EMDCardNumber" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.25" type="DateTimeType">
+					<xs:annotation>
+						<xs:documentation>The date/time the phone rings (911 call to public safety answering point or other designated entity) requesting EMS services.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.26" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time dispatch was notified by the 911 call taker (if a separate entity)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.27" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date the responding unit was notified by dispatch</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.28" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date and time the Dispatch was acknowledged by the EMS Unit.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.29" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the unit responded; that is, the time the vehicle started moving</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.30" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the responding unit arrived on the scene; that is, the time the vehicle stopped moving</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.31" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the responding unit arrived at the patient's side</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.32" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the patient was transferred from this EMS agency to another EMS agency for care.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.33" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the responding unit left the scene (started moving)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.34" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the Air Medical vehicle arrived at the destination landing area</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.35" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the responding unit arrived with the patient at the destination or transfer point</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.36" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time that patient care was transferred to the destination healthcare facilities staff</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.37" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the unit back was back in service and available for response (finished with call, but not necessarily back in home location)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.38" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time if the unit's call was cancelled</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.39" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The date/time the responding unit was back in their service area. In agencies who utilized Agency Status Management, home location means the service area as assigned through the agency status management protocol.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.40" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The Date/time the responding unit completed all tasks associated with the event including transfer of the patient, cleaning,
+and restocking.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.41" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="YesNoValues">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.GroupResponders" id="GroupResponders" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold info from all responders to the scene.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eCAD.42" type="OtherEMSAgenciesAtScene" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Other EMS agencies that were at the scene, if any</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.43" type="EMSAgencyID" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The ID number for the Other Public Safety or EMS Agency listed in eCAD.42.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.44" type="OtherServicesAtScene" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Other services that were at the scene, if any</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.45" type="DateTimeType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The time that the initial responder arrived on the scene, if applicable.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.46" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indicator of how many total patients were at the scene</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="NumberOfPatientsAtScene">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.47" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="YesNoValues">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.48" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The kind of location where the incident happened</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="IncidentLocationType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.49" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The state, regulatory, or other unique number (code) associated with the facility if the Incident is a Healthcare Facility.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="IncidentFacilityCode">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.50" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The GPS coordinates associated with the Scene.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attributeGroup ref="GPSLocation"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.51" type="USNG" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The US National Grid Coordinates for the Scene.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCAD.GroupResponderScene" id="GroupFacility" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold info from all responders to the scene.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eCAD.52" type="IncidentFacilityCode" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The state or regulatory number (code) associated with the facility if the Incident is a Healthcare Facility.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.53" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Incident Address Type provides insight into the type of address or location associated with the scene.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="IncidentAddressType">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.54" type="AddressNumber" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The address number or mile post associated with the incident location.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.55" type="SceneStreetPrefix" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The directional descriptor appearing before a street or highway name.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.56" type="StreetAddress" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The street address (or best approximation) where the patient was found, or, if no patient, the address to which the unit responded.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.57" type="StreetAddress" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The street address (or best approximation) where the patient was found, or, if no patient, the address to which the unit responded.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.58" type="StreetType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The street type descriptor after a street or highway name.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.59" type="SceneStreetSuffix" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The directional descriptor appearing after a street or highway name.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.60" type="SceneApartment" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The directional descriptor appearing after a street or highway name.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.61" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CityGnisCode">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.62" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The state, territory, or province where the patient was found or to which the unit responded (or best approximation)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ANSIStateCode">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.63" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The ZIP code of the incident location</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ZIP">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.64" type="SceneCrossStreet" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The nearest cross street to the incident address or directions from a recognized landmark or the second street name of an intersection.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.65" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The county or parish where the patient was found or to which the unit responded (or best approximation)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ANSICountryCode">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.66" type="ANSICountryCode" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The country of the incident location.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.67" type="CensusTracts" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The census tract in which the incident occurred.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.GroupDisposition" id="GroupDisposition" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold info about the Destination and the Disposition details </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eCAD.68" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The destination the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="DestinationTransferredToName">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.69" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The code of the destination the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="DestinationTransferredToCode">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.70" type="StreetAddress" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The street address of the destination the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.71" type="StreetAddress" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The street address of the destination the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.72" type="CityGnisCode" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The city name of the destination the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.73" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The state of the destination the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ANSIStateCode">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.74" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The destination county in which  the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ANSICountyCode">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.75" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The destination ZIP code in which  the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ZIP">
+																					<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.76" type="ANSICountryCode" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The country of the destination</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.77" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The destination GPS Coordinates to which  the patient was delivered or transferred to</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:attributeGroup ref="GPSLocation"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eCAD.78" type="USNG" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The US National Grid Coordinates for the Disposition Location</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.79" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The number of patients transported by this EMS crew and unit.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="NumberOfPatients">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.80" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The method of transport by EMS.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="EMSTransportMethod">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.81" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indication whether the transport was emergent or non-emergent.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="TransportModeFromScene">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.82" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Indication whether or not lights and/or sirens were used on the vehicle while leaving scene</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="AdditionalTransportModeDescriptors">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.83" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The type of destination the patient was delivered or transferred to</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="TypeOfDestination">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.84" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Activation of the Destination Healthcare Facility prior to EMS arrival for acute ill or injured patient.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="YesNoValues">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.85" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Date/Time EMS Notified/Activated the Destination Healthcare Facility prior to EMS arrival for acute ill or injured patient.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="DateTimeType">
+																		<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eCAD.GroupCustom" id="GroupCustom" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold info about the Custom defined information </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eCAD.86" type="CustomTitle" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>This is the title of the custom data element created by an EMS Agency to collect information that is not defined formally in NEMSIS Version 3.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.87" type="CustomDataType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The list of potential values associated with the custom data element.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.88" type="YesNoValues" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Indication if the data element will accept multiple values.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.89" type="ElementUsage" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Usage (Mandatory, Required, or Optional) for the EMS Custom Data Element.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.90" type="CustomValue" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eCAD.91" type="CustomResult" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The actual value or values chosen (if values listed in eCustom.05) or result (free text, Date/Time, or number) documented for the EMS Custom Data Element</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

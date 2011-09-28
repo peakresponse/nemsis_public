@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="ePayment.10" minOccurs="0" maxOccurs="1" dataType="InsuranceCompanyName" isNillable="No">
+<name>Insurance Company Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The name of the patient's insurance company.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

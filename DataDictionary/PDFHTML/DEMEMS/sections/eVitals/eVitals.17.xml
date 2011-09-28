@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.17" minOccurs="0" maxOccurs="1" dataType="CarbonMonoxideLevel" isNillable="No">
+<name>Carbon Monoxide (CO)</name>
+<national>No</national>
+<state>No</state>
+<definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>0</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

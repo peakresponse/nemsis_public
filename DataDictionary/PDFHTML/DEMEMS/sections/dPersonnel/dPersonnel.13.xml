@@ -1,0 +1,47 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dPersonnel.13" minOccurs="0" maxOccurs="M" isNillable="Yes">
+<name>EMS Personnel's Race</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The personnel's race as defined by the OMB (US Office of Management and Budget).</definition>
+<v2Number>D08_13</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl=2&amp;lvlID=172. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1513001</code>
+           <description>American Indian or Alaska Native</description>
+        </choice>
+        <choice>
+           <code>1513003</code>
+           <description>Asian</description>
+        </choice>
+        <choice>
+           <code>1513005</code>
+           <description>Black or African American</description>
+        </choice>
+        <choice>
+           <code>1513007</code>
+           <description>Hispanic or Latino</description>
+        </choice>
+        <choice>
+           <code>1513009</code>
+           <description>Native Hawaiian or Other Pacific Islander</description>
+        </choice>
+        <choice>
+           <code>1513011</code>
+           <description>White</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

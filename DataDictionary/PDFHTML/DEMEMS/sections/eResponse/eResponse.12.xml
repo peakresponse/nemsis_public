@@ -1,0 +1,85 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eResponse.12" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Type of Turn-Around Delay</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The turn-around delays, if any, associated with the EMS unit associated with the patient encounter</definition>
+<v2Number>E02_10</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Changed Equipment Replenishment to Equipment/Supply Replenishment Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc to return to service.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Response</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2212001</code>
+           <description>Clean-up</description>
+        </choice>
+        <choice>
+           <code>2212003</code>
+           <description>Decontamination</description>
+        </choice>
+        <choice>
+           <code>2212005</code>
+           <description>Distance</description>
+        </choice>
+        <choice>
+           <code>2212007</code>
+           <description>Documentation</description>
+        </choice>
+        <choice>
+           <code>2212009</code>
+           <description>ED Overcrowding / Transfer of Care</description>
+        </choice>
+        <choice>
+           <code>2212011</code>
+           <description>Equipment Failure</description>
+        </choice>
+        <choice>
+           <code>2212013</code>
+           <description>Equipment/Supply Replenishment</description>
+        </choice>
+        <choice>
+           <code>2212015</code>
+           <description>None/No Delay</description>
+        </choice>
+        <choice>
+           <code>2212017</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>2212019</code>
+           <description>Staff Delay</description>
+        </choice>
+        <choice>
+           <code>2212021</code>
+           <description>Traffic</description>
+        </choice>
+        <choice>
+           <code>2212023</code>
+           <description>Transport Unavailable</description>
+        </choice>
+        <choice>
+           <code>2212025</code>
+           <description>Vehicle Crash of this Unit</description>
+        </choice>
+        <choice>
+           <code>2212027</code>
+           <description>Vehicle Failure of this Unit</description>
+        </choice>
+        <choice>
+           <code>2212029</code>
+           <description>Weather</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

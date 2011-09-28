@@ -1,0 +1,50 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.07" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Environmental/Food Allergies</name>
+<national>No</national>
+<state>No</state>
+<definition>The patient's known allergies to food or environmental agents.</definition>
+<v2Number>E12_09</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3107001</code>
+           <description>Chemical</description>
+        </choice>
+        <choice>
+           <code>3107003</code>
+           <description>Dander/Dust/Mold/Pollen</description>
+        </choice>
+        <choice>
+           <code>3107005</code>
+           <description>Food Allergy</description>
+        </choice>
+        <choice>
+           <code>3107007</code>
+           <description>Insect Sting</description>
+        </choice>
+        <choice>
+           <code>3107009</code>
+           <description>Latex</description>
+        </choice>
+        <choice>
+           <code>3107011</code>
+           <description>None</description>
+        </choice>
+        <choice>
+           <code>3107013</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3107015</code>
+           <description>Plant</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

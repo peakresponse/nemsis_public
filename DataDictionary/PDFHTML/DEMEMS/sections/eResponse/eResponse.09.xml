@@ -1,0 +1,91 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eResponse.09" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Type of Response Delay</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The response delays, if any, of the EMS unit associated with the patient encounter.</definition>
+<v2Number>E02_07</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2209001</code>
+           <description>Access Unavailable</description>
+        </choice>
+        <choice>
+           <code>2209003</code>
+           <description>Crowd</description>
+        </choice>
+        <choice>
+           <code>2209005</code>
+           <description>Directions/Unable to Locate</description>
+        </choice>
+        <choice>
+           <code>2209007</code>
+           <description>Distance</description>
+        </choice>
+        <choice>
+           <code>2209009</code>
+           <description>Diversion (Different Incident)</description>
+        </choice>
+        <choice>
+           <code>2209011</code>
+           <description>HazMat</description>
+        </choice>
+        <choice>
+           <code>2209013</code>
+           <description>None/No Delay</description>
+        </choice>
+        <choice>
+           <code>2209015</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>2209017</code>
+           <description>Scene Safety (Not Secure for EMS)</description>
+        </choice>
+        <choice>
+           <code>2209019</code>
+           <description>Staff Delay</description>
+        </choice>
+        <choice>
+           <code>2209021</code>
+           <description>Traffic</description>
+        </choice>
+        <choice>
+           <code>2209023</code>
+           <description>Train</description>
+        </choice>
+        <choice>
+           <code>2209025</code>
+           <description>Vehicle Crash Involving this Unit</description>
+        </choice>
+        <choice>
+           <code>2209027</code>
+           <description>Vehicle Failure of this Unit</description>
+        </choice>
+        <choice>
+           <code>2209029</code>
+           <description>Weather</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

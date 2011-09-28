@@ -1,0 +1,49 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.25" minOccurs="0" maxOccurs="1" dataType="MethodBodyTemp" isNillable="No">
+<name>Temperature Method</name>
+<national>No</national>
+<state>No</state>
+<definition>The method used to obtain the patient's body temperature.</definition>
+<v2Number>E14_21</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3325001</code>
+           <description>Axillary</description>
+        </choice>
+        <choice>
+           <code>3325003</code>
+           <description>Central (Venous or Arterial)</description>
+        </choice>
+        <choice>
+           <code>3325005</code>
+           <description>Esophageal</description>
+        </choice>
+        <choice>
+           <code>3325007</code>
+           <description>Oral</description>
+        </choice>
+        <choice>
+           <code>3325009</code>
+           <description>Rectal</description>
+        </choice>
+        <choice>
+           <code>3325011</code>
+           <description>Temporal Artery</description>
+        </choice>
+        <choice>
+           <code>3325013</code>
+           <description>Tympanic</description>
+        </choice>
+        <choice>
+           <code>3325015</code>
+           <description>Urinary Catheter</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

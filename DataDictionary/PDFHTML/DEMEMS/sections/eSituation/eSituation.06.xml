@@ -1,0 +1,58 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eSituation.06" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Time Units of Duration of Complaint</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The time units of the duration of the patient's chief complaint</definition>
+<v2Number>E09_07</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Associated with Duration of the Complaint</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2806001</code>
+           <description>Seconds</description>
+        </choice>
+        <choice>
+           <code>2806003</code>
+           <description>Minutes</description>
+        </choice>
+        <choice>
+           <code>2806005</code>
+           <description>Hours</description>
+        </choice>
+        <choice>
+           <code>2806007</code>
+           <description>Days</description>
+        </choice>
+        <choice>
+           <code>2806009</code>
+           <description>Weeks</description>
+        </choice>
+        <choice>
+           <code>2806011</code>
+           <description>Months</description>
+        </choice>
+        <choice>
+           <code>2806013</code>
+           <description>Years</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

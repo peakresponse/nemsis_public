@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eOutcome.07" minOccurs="0" maxOccurs="1" dataType="SBP" isNillable="No">
+<name>First ED Systolic Blood Pressure</name>
+<national>No</national>
+<state>No</state>
+<definition>The first recorded Emergency Department Systolic Blood Pressure.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better evaluate the outcome of EMS care.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>0</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>500</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

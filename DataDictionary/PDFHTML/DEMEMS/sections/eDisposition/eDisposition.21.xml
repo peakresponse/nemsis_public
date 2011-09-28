@@ -1,0 +1,70 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eDisposition.21" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Type of Destination</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The type of destination the patient was delivered or transferred to</definition>
+<v2Number>E20_17</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Required if Patient Transported by EMS. “Hospital-In Patient Bed” includes any location in the hospital except the Emergency Department.  Choices include those in eDisposition.22 (Hospital In-Patient Destination).</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4221001</code>
+           <description>Home</description>
+        </choice>
+        <choice>
+           <code>4221003</code>
+           <description>Hospital-Emergency Department</description>
+        </choice>
+        <choice>
+           <code>4221005</code>
+           <description>Hospital-In Patient Bed</description>
+        </choice>
+        <choice>
+           <code>4221007</code>
+           <description>Medical Office/Clinic</description>
+        </choice>
+        <choice>
+           <code>4221009</code>
+           <description>Morgue/Mortuary</description>
+        </choice>
+        <choice>
+           <code>4221011</code>
+           <description>Nursing Home/Assisted Living Facility</description>
+        </choice>
+        <choice>
+           <code>4221013</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>4221015</code>
+           <description>Other EMS Responder (air)</description>
+        </choice>
+        <choice>
+           <code>4221017</code>
+           <description>Other EMS Responder (ground)</description>
+        </choice>
+        <choice>
+           <code>4221019</code>
+           <description>Police/Jail</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

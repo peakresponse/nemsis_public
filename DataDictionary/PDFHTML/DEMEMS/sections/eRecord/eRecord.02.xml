@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eRecord.02" minOccurs="1" maxOccurs="1" dataType="SoftwareCreator" isNillable="No">
+<name>Software Creator</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The name of the vendor, manufacturer, and developer who designed the application that created this record.</definition>
+<v2Number>E01_02</v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is required to document the software used to generate the Patient Care Report. This is not the last software which aggregated/stored the Patient Care Report after it was sent from another software.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

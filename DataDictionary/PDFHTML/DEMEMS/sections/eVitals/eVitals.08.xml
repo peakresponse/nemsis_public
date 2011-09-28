@@ -1,0 +1,45 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.08" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Method of Blood Pressure Measurement</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of method of blood pressure measurement.</definition>
+<v2Number>E14_06</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3308001</code>
+           <description>Arterial Line</description>
+        </choice>
+        <choice>
+           <code>3308003</code>
+           <description>Doppler</description>
+        </choice>
+        <choice>
+           <code>3308005</code>
+           <description>Cuff-Automated</description>
+        </choice>
+        <choice>
+           <code>3308007</code>
+           <description>Cuff-Manual Auscultated</description>
+        </choice>
+        <choice>
+           <code>3308009</code>
+           <description>Cuff-Manual Palpated Only</description>
+        </choice>
+        <choice>
+           <code>3308011</code>
+           <description>Venous Line</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

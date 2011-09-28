@@ -1,0 +1,180 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.16" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Extremities Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>The assessment findings associated with the patient's extremities.</definition>
+<v2Number>E16_17</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
+		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3516001</code>
+           <description>Abrasion</description>
+        </choice>
+        <choice>
+           <code>3516003</code>
+           <description>Amputation-Acute</description>
+        </choice>
+        <choice>
+           <code>3516005</code>
+           <description>Amputation-Previous</description>
+        </choice>
+        <choice>
+           <code>3516007</code>
+           <description>Avulsion</description>
+        </choice>
+        <choice>
+           <code>3516009</code>
+           <description>Bleeding Controlled</description>
+        </choice>
+        <choice>
+           <code>3516011</code>
+           <description>Bleeding Uncontrolled</description>
+        </choice>
+        <choice>
+           <code>3516013</code>
+           <description>Breath Sounds-Absent-Left</description>
+        </choice>
+        <choice>
+           <code>3516015</code>
+           <description>Burn-Blistering</description>
+        </choice>
+        <choice>
+           <code>3516017</code>
+           <description>Burn-Charring</description>
+        </choice>
+        <choice>
+           <code>3516019</code>
+           <description>Burn-Redness</description>
+        </choice>
+        <choice>
+           <code>3516021</code>
+           <description>Burn-White/Waxy</description>
+        </choice>
+        <choice>
+           <code>3516023</code>
+           <description>Clubbing (of fingers)</description>
+        </choice>
+        <choice>
+           <code>3516025</code>
+           <description>Crush Injury</description>
+        </choice>
+        <choice>
+           <code>3516027</code>
+           <description>Deformity</description>
+        </choice>
+        <choice>
+           <code>3516029</code>
+           <description>Dislocation</description>
+        </choice>
+        <choice>
+           <code>3516031</code>
+           <description>Edema</description>
+        </choice>
+        <choice>
+           <code>3516033</code>
+           <description>Foreign Body</description>
+        </choice>
+        <choice>
+           <code>3516035</code>
+           <description>Fracture-Closed</description>
+        </choice>
+        <choice>
+           <code>3516037</code>
+           <description>Fracture-Open</description>
+        </choice>
+        <choice>
+           <code>3516039</code>
+           <description>Gunshot Wound-Entry</description>
+        </choice>
+        <choice>
+           <code>3516041</code>
+           <description>Gunshot Wound-Exit</description>
+        </choice>
+        <choice>
+           <code>3516043</code>
+           <description>Laceration</description>
+        </choice>
+        <choice>
+           <code>3516045</code>
+           <description>Motor Function-Abnormal/Weakness</description>
+        </choice>
+        <choice>
+           <code>3516047</code>
+           <description>Motor Function-Absent</description>
+        </choice>
+        <choice>
+           <code>3516049</code>
+           <description>Motor Function-Normal</description>
+        </choice>
+        <choice>
+           <code>3516051</code>
+           <description>Normal</description>
+        </choice>
+        <choice>
+           <code>3516053</code>
+           <description>Not Done</description>
+        </choice>
+        <choice>
+           <code>3516055</code>
+           <description>Pain</description>
+        </choice>
+        <choice>
+           <code>3516057</code>
+           <description>Paralysis</description>
+        </choice>
+        <choice>
+           <code>3516059</code>
+           <description>Pulse-Abnormal</description>
+        </choice>
+        <choice>
+           <code>3516061</code>
+           <description>Pulse-Absent</description>
+        </choice>
+        <choice>
+           <code>3516063</code>
+           <description>Pulse-Normal</description>
+        </choice>
+        <choice>
+           <code>3516065</code>
+           <description>Puncture/Stab Wound</description>
+        </choice>
+        <choice>
+           <code>3516067</code>
+           <description>Sensation-Abnormal</description>
+        </choice>
+        <choice>
+           <code>3516069</code>
+           <description>Sensation-Absent</description>
+        </choice>
+        <choice>
+           <code>3516071</code>
+           <description>Sensation-Normal</description>
+        </choice>
+        <choice>
+           <code>3516073</code>
+           <description>Swelling/Bruising/Contusion with Pain</description>
+        </choice>
+        <choice>
+           <code>3516075</code>
+           <description>Swelling/Bruising/Contusion without Pain</description>
+        </choice>
+        <choice>
+           <code>3516077</code>
+           <description>Tenderness</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

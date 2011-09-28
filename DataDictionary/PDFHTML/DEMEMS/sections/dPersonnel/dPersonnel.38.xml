@@ -1,0 +1,57 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dPersonnel.38" minOccurs="0" maxOccurs="1" dataType="StateCertificationLicensureLevels" isNillable="No">
+<name>EMS Professional's Practice Level</name>
+<national>No</national>
+<state>No</state>
+<definition>The EMS certification level at which the individual is providing patient care services for the EMS agency.</definition>
+<v2Number>D07_05</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9917001</code>
+           <description>2009 Advanced Emergency Medical Technician (AEMT)</description>
+        </choice>
+        <choice>
+           <code>9917003</code>
+           <description>2009 Emergency Medical Responder (EMR)</description>
+        </choice>
+        <choice>
+           <code>9917005</code>
+           <description>2009 Emergency Medical Technician</description>
+        </choice>
+        <choice>
+           <code>9917007</code>
+           <description>2009 Paramedic</description>
+        </choice>
+        <choice>
+           <code>9917009</code>
+           <description>First Responder</description>
+        </choice>
+        <choice>
+           <code>9917011</code>
+           <description>EMT-Basic</description>
+        </choice>
+        <choice>
+           <code>9917013</code>
+           <description>EMT-Intermediate</description>
+        </choice>
+        <choice>
+           <code>9917015</code>
+           <description>EMT-Paramedic</description>
+        </choice>
+        <choice>
+           <code>9917017</code>
+           <description>Nurse</description>
+        </choice>
+        <choice>
+           <code>9917019</code>
+           <description>Physician</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

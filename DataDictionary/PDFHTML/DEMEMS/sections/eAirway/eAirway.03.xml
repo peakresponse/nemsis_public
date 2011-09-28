@@ -1,0 +1,57 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eAirway.03" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Airway Device Being Confirmed</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The airway device in which placement is being confirmed.</definition>
+<v2Number></v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better document airway management.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4003001</code>
+           <description>Cricothyrotomy Tube</description>
+        </choice>
+        <choice>
+           <code>4003003</code>
+           <description>Endotracheal Tube</description>
+        </choice>
+        <choice>
+           <code>4003005</code>
+           <description>Other-Invasive Airway</description>
+        </choice>
+        <choice>
+           <code>4003007</code>
+           <description>SAD-Combitube</description>
+        </choice>
+        <choice>
+           <code>4003009</code>
+           <description>SAD-King LT</description>
+        </choice>
+        <choice>
+           <code>4003011</code>
+           <description>SAD-LMA</description>
+        </choice>
+        <choice>
+           <code>4003013</code>
+           <description>SAD-Other</description>
+        </choice>
+        <choice>
+           <code>4003015</code>
+           <description>Tracheostomy Tube</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

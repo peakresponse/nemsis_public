@@ -1,0 +1,41 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.31" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Reperfusion Checklist</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The results of the patient's Reperfusion Checklist for potential Thrombolysis use.</definition>
+<v2Number>E14_25</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>Name changed from Thrombolytic Screen</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3331001</code>
+           <description>Definite Contraindications to Thrombolytic Use</description>
+        </choice>
+        <choice>
+           <code>3331003</code>
+           <description>No Contraindications to Thrombolytic Use</description>
+        </choice>
+        <choice>
+           <code>3331005</code>
+           <description>Possible Contraindications to Thrombolytic Use</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

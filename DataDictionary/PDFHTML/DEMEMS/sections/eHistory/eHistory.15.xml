@@ -1,0 +1,113 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.15" minOccurs="0" maxOccurs="1" dataType="CurrentMedicationAdministrationRoute" isNillable="No">
+<name>Current Medication Administration Route</name>
+<national>No</national>
+<state>No</state>
+<definition>The administration route (po, SQ, etc.) of the patient's current medication</definition>
+<v2Number>E12_17</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3115001</code>
+           <description>Endotracheal Tube</description>
+        </choice>
+        <choice>
+           <code>3115003</code>
+           <description>Gastrostomy/Feeding Tube</description>
+        </choice>
+        <choice>
+           <code>3115005</code>
+           <description>Inhalation</description>
+        </choice>
+        <choice>
+           <code>3115007</code>
+           <description>Intra-Nasal</description>
+        </choice>
+        <choice>
+           <code>3115009</code>
+           <description>Intramuscular (IM)</description>
+        </choice>
+        <choice>
+           <code>3115011</code>
+           <description>Intraocular</description>
+        </choice>
+        <choice>
+           <code>3115013</code>
+           <description>Intraosseous (IO)</description>
+        </choice>
+        <choice>
+           <code>3115015</code>
+           <description>Intravenous (IV)</description>
+        </choice>
+        <choice>
+           <code>3115017</code>
+           <description>Nasal Cannula</description>
+        </choice>
+        <choice>
+           <code>3115019</code>
+           <description>Nasogastric</description>
+        </choice>
+        <choice>
+           <code>3115021</code>
+           <description>Non-Rebreather Mask</description>
+        </choice>
+        <choice>
+           <code>3115023</code>
+           <description>Ophthalmic</description>
+        </choice>
+        <choice>
+           <code>3115025</code>
+           <description>Oral</description>
+        </choice>
+        <choice>
+           <code>3115027</code>
+           <description>Other/miscellaneous</description>
+        </choice>
+        <choice>
+           <code>3115029</code>
+           <description>Otic</description>
+        </choice>
+        <choice>
+           <code>3115031</code>
+           <description>Rectal</description>
+        </choice>
+        <choice>
+           <code>3115033</code>
+           <description>Subcutaneous</description>
+        </choice>
+        <choice>
+           <code>3115035</code>
+           <description>Sublingual</description>
+        </choice>
+        <choice>
+           <code>3115037</code>
+           <description>Topical</description>
+        </choice>
+        <choice>
+           <code>3115039</code>
+           <description>Tracheostomy</description>
+        </choice>
+        <choice>
+           <code>3115041</code>
+           <description>Transdermal</description>
+        </choice>
+        <choice>
+           <code>3115043</code>
+           <description>Urethral</description>
+        </choice>
+        <choice>
+           <code>3115045</code>
+           <description>Ventimask</description>
+        </choice>
+        <choice>
+           <code>3115047</code>
+           <description>Wound</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

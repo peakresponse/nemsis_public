@@ -1,0 +1,723 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="eProcedures">
+<group number="eProcedures.ProcedureGroup" minOccurs="1" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="eProcedures.01" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Date/Time Procedure Performed</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The date/time the procedure was performed on the patient</definition>
+<v2Number>E19_01</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<table  cellspacing="2"><tr><td>							
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
+  <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
+  <tr><td align="center">T</td><td>separator that indicates time-of-day follows</td></tr>
+  <tr><td align="center">hh</td><td>a two-digit numeral that represents the hour</td></tr>
+  <tr><td align="center">':'</td><td>a separator between parts of the time-of-day portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minute</td></tr>
+  <tr><td align="center">ss</td><td>a two-integer-digit numeral that represents the whole seconds</td></tr>
+  <tr><td align="center">'.' s+</td><td>(not required) represents the fractional seconds</td></tr>
+  <tr><td align="center">zzzzzz</td><td>(required) represents the timezone (as described below)</td></tr>
+</table> 
+</td></tr></table>
+<br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+<table cellspacing="2"><tr><td>	
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">hh</td><td>a two-digit numeral (with leading zeros as required) that represents the hours</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minutes</td></tr>
+  <tr><td align="center">'+'</td><td>a nonnegative duration</td></tr>
+  <tr><td align="center">'-'</td><td>a nonpositive duration</td></tr>
+</table>
+</td></tr></table></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
+     </patterns>
+      <constraints>
+        <dataType>dateTime</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.02" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Procedure Performed Prior to this Units EMS Care</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indicates that the procedure which was performed and documented was performed prior to this EMS units care.</definition>
+<v2Number>E19_02</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is the NEMSIS Version 3 method to document prior aid.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.03" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Procedure</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The procedure performed on the patient documented as an ICD-10 procedure code.</definition>
+<v2Number>E19_03</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>Procedures which are recorded as a Vital Sign do not have to be documented in the Procedure Section.<br/><br/>
+										Code list is represented in ICD-10-PCS: Procedure Codes, see suggested NEMSIS list of procedure codes.
+ICD-10-PCS
+<br/>Website - http://uts.nlm.nih.gov  
+<br/>Product - UMLS Metathesaurus</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801001</code><description>Contraindication Noted</description>		</choice>
+		<choice><code>8801003</code><description>Denied By Order</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <patterns>
+        <pattern>[A-Z]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?</pattern>
+     </patterns>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.04" minOccurs="0" maxOccurs="1" dataType="SizeOfProcedureEquipment" isNillable="No">
+<name>Size of Procedure Equipment</name>
+<national>No</national>
+<state>No</state>
+<definition>The size of the equipment used in the procedure on the patient</definition>
+<v2Number>E19_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Need business logic to require detail of size appropriate for the procedure.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>20</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eProcedures.05" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Number of Procedure Attempts</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The number of attempts taken to complete a procedure or intervention regardless of success.</definition>
+<v2Number>E19_05</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>10</constraintValue>
+        </constraint>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.06" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Procedure Successful</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indicates that this procedure attempt which was performed on the patient was successful</definition>
+<v2Number>E19_06</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.07" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Procedure Complication</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient</definition>
+<v2Number>E19_07</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3907001</code>
+           <description>Altered Mental Status</description>
+        </choice>
+        <choice>
+           <code>3907003</code>
+           <description>Apnea</description>
+        </choice>
+        <choice>
+           <code>3907005</code>
+           <description>Bleeding</description>
+        </choice>
+        <choice>
+           <code>3907007</code>
+           <description>Bradypnea</description>
+        </choice>
+        <choice>
+           <code>3907009</code>
+           <description>Diarrhea</description>
+        </choice>
+        <choice>
+           <code>3907011</code>
+           <description>Esophageal Intubation-immediately</description>
+        </choice>
+        <choice>
+           <code>3907013</code>
+           <description>Esophageal Intubation-other</description>
+        </choice>
+        <choice>
+           <code>3907015</code>
+           <description>Extravasation</description>
+        </choice>
+        <choice>
+           <code>3907017</code>
+           <description>Hypertension</description>
+        </choice>
+        <choice>
+           <code>3907019</code>
+           <description>Hyperthermia</description>
+        </choice>
+        <choice>
+           <code>3907021</code>
+           <description>Hypotension</description>
+        </choice>
+        <choice>
+           <code>3907023</code>
+           <description>Hypothermia</description>
+        </choice>
+        <choice>
+           <code>3907025</code>
+           <description>Hypoxia</description>
+        </choice>
+        <choice>
+           <code>3907027</code>
+           <description>Injury</description>
+        </choice>
+        <choice>
+           <code>3907029</code>
+           <description>Itching/Urticaria</description>
+        </choice>
+        <choice>
+           <code>3907031</code>
+           <description>Nausea</description>
+        </choice>
+        <choice>
+           <code>3907033</code>
+           <description>None</description>
+        </choice>
+        <choice>
+           <code>3907035</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3907037</code>
+           <description>Portacath</description>
+        </choice>
+        <choice>
+           <code>3907039</code>
+           <description>Respiratory Distress</description>
+        </choice>
+        <choice>
+           <code>3907041</code>
+           <description>Tachycardia</description>
+        </choice>
+        <choice>
+           <code>3907043</code>
+           <description>Tachypnea</description>
+        </choice>
+        <choice>
+           <code>3907045</code>
+           <description>Vomiting</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eProcedures.08" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Response to Procedure</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The patient's response to the procedure</definition>
+<v2Number>E19_08</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9916001</code>
+           <description>Improved</description>
+        </choice>
+        <choice>
+           <code>9916003</code>
+           <description>Unchanged</description>
+        </choice>
+        <choice>
+           <code>9916005</code>
+           <description>Worse</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.09" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Procedure Crew Members ID</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The statewide assigned ID number of the EMS crew member performing the procedure on the patient</definition>
+<v2Number>E19_09</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>How should the state ID for an EMS professional be record when working on an event in 2 states.  The ID used would typically be based on the EMS agency's state license specific to each EMS professional. Used for eMedications.09 (Medication Crew (Healthcare Professionals) ID) as well.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>15</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.10" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>EMS or Healthcare Professional Type Performing the Procedure</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The type (level) of EMS or Healthcare Professional performing the procedure. For procedures performed prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard</v3Comment>
+<v3Changes>Added to document the type of healthcare professional administering the medication.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9905001</code>
+           <description>2009 Advanced Emergency Medical Technician (AEMT)</description>
+        </choice>
+        <choice>
+           <code>9905003</code>
+           <description>2009 Emergency Medical Responder (EMR)</description>
+        </choice>
+        <choice>
+           <code>9905005</code>
+           <description>2009 Emergency Medical Technician (EMT)</description>
+        </choice>
+        <choice>
+           <code>9905007</code>
+           <description>2009 Paramedic</description>
+        </choice>
+        <choice>
+           <code>9905009</code>
+           <description>EMT-Basic</description>
+        </choice>
+        <choice>
+           <code>9905011</code>
+           <description>EMT-Intermediate</description>
+        </choice>
+        <choice>
+           <code>9905013</code>
+           <description>EMT-Paramedic (Based on pre-2009 Curriculum)</description>
+        </choice>
+        <choice>
+           <code>9905015</code>
+           <description>First Responder</description>
+        </choice>
+        <choice>
+           <code>9905017</code>
+           <description>Nurse</description>
+        </choice>
+        <choice>
+           <code>9905019</code>
+           <description>Other Healthcare Professional</description>
+        </choice>
+        <choice>
+           <code>9905021</code>
+           <description>Other Non-Healthcare Professional</description>
+        </choice>
+        <choice>
+           <code>9905023</code>
+           <description>Patient</description>
+        </choice>
+        <choice>
+           <code>9905025</code>
+           <description>Physician</description>
+        </choice>
+        <choice>
+           <code>9905027</code>
+           <description>Respiratory Therapist</description>
+        </choice>
+        <choice>
+           <code>9905029</code>
+           <description>Student</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eProcedures.11" minOccurs="0" maxOccurs="1" dataType="TxAuthorization" isNillable="No">
+<name>Procedure Authorization</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of treatment authorization obtained</definition>
+<v2Number>E19_10</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9918001</code>
+           <description>On-Line (Remote Verbal Order)</description>
+        </choice>
+        <choice>
+           <code>9918003</code>
+           <description>On-Scene</description>
+        </choice>
+        <choice>
+           <code>9918005</code>
+           <description>Protocol (Standing Order)</description>
+        </choice>
+        <choice>
+           <code>9918007</code>
+           <description>Written Orders (Patient Specific)</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eProcedures.12" minOccurs="0" maxOccurs="1" dataType="PersonName" isNillable="No">
+<name>Procedure Authorizing Physician</name>
+<national>No</national>
+<state>No</state>
+<definition>The name of the authorizing physician ordering the procedure, if the order was provided by any manner other than protocol (standing order) in eProcedures.11</definition>
+<v2Number>E19_11</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eProcedures.13" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Vascular Access Location</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The location of the vascular access site attempt on the patient, if applicable.</definition>
+<v2Number>E19_12</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is now associated with the Date/Time of the procedure and therefore changed to single choice. This allows the location to be documented with each procedure and attempt. If the vascular access has been established prior to EMS, this should be documented as such.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3913001</code>
+           <description>Antecubital-Left</description>
+        </choice>
+        <choice>
+           <code>3913003</code>
+           <description>Antecubital-Right</description>
+        </choice>
+        <choice>
+           <code>3913005</code>
+           <description>External Jugular-Left</description>
+        </choice>
+        <choice>
+           <code>3913007</code>
+           <description>External Jugular-Right</description>
+        </choice>
+        <choice>
+           <code>3913009</code>
+           <description>Femoral-Left IV</description>
+        </choice>
+        <choice>
+           <code>3913011</code>
+           <description>Femoral-Right IV</description>
+        </choice>
+        <choice>
+           <code>3913013</code>
+           <description>Foot-Right</description>
+        </choice>
+        <choice>
+           <code>3913015</code>
+           <description>Foot-Left</description>
+        </choice>
+        <choice>
+           <code>3913017</code>
+           <description>Forearm-Left</description>
+        </choice>
+        <choice>
+           <code>3913019</code>
+           <description>Forearm-Right</description>
+        </choice>
+        <choice>
+           <code>3913021</code>
+           <description>Hand-Left</description>
+        </choice>
+        <choice>
+           <code>3913023</code>
+           <description>Hand-Right</description>
+        </choice>
+        <choice>
+           <code>3913025</code>
+           <description>Internal Jugular-Left</description>
+        </choice>
+        <choice>
+           <code>3913027</code>
+           <description>Internal Jugular-Right</description>
+        </choice>
+        <choice>
+           <code>3913029</code>
+           <description>IO-Iliac Crest-Left</description>
+        </choice>
+        <choice>
+           <code>3913031</code>
+           <description>IO-Iliac Crest-Right</description>
+        </choice>
+        <choice>
+           <code>3913033</code>
+           <description>IO-Femoral-Left Distal</description>
+        </choice>
+        <choice>
+           <code>3913035</code>
+           <description>IO-Femoral-Right Distal IO</description>
+        </choice>
+        <choice>
+           <code>3913037</code>
+           <description>IO-Humeral-Left</description>
+        </choice>
+        <choice>
+           <code>3913039</code>
+           <description>IO-Humeral-Right</description>
+        </choice>
+        <choice>
+           <code>3913041</code>
+           <description>IO-Tibia-Left Distal</description>
+        </choice>
+        <choice>
+           <code>3913043</code>
+           <description>IO-Sternum</description>
+        </choice>
+        <choice>
+           <code>3913045</code>
+           <description>IO-Tibia-Right Distal</description>
+        </choice>
+        <choice>
+           <code>3913047</code>
+           <description>IO-Tibia-Left Proximal</description>
+        </choice>
+        <choice>
+           <code>3913049</code>
+           <description>IO-Tibia-Right Proximal</description>
+        </choice>
+        <choice>
+           <code>3913051</code>
+           <description>Lower Extremity-Left</description>
+        </choice>
+        <choice>
+           <code>3913053</code>
+           <description>Lower Extremity-Right</description>
+        </choice>
+        <choice>
+           <code>3913055</code>
+           <description>Other Peripheral (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3913057</code>
+           <description>Other Central (PICC, Portacath, Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3913059</code>
+           <description>Scalp</description>
+        </choice>
+        <choice>
+           <code>3913061</code>
+           <description>Subclavian-Left</description>
+        </choice>
+        <choice>
+           <code>3913063</code>
+           <description>Subclavian-Right</description>
+        </choice>
+        <choice>
+           <code>3913065</code>
+           <description>Umbilical</description>
+        </choice>
+        <choice>
+           <code>3913067</code>
+           <description>Venous Cutdown-Left Lower Extremity</description>
+        </choice>
+        <choice>
+           <code>3913069</code>
+           <description>Venous Cutdown-Right Lower Extremity</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element></group>
+</section>

@@ -1,0 +1,74 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dVehicle.04" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Vehicle Type</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The vehicle type of the unit (ambulance, fire, truck, etc.).</definition>
+<v2Number>D06_03</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1404001</code>
+           <description>Ambulance</description>
+        </choice>
+        <choice>
+           <code>1404003</code>
+           <description>ATV</description>
+        </choice>
+        <choice>
+           <code>1404005</code>
+           <description>Bicycle</description>
+        </choice>
+        <choice>
+           <code>1404007</code>
+           <description>Fire Truck</description>
+        </choice>
+        <choice>
+           <code>1404009</code>
+           <description>Fixed Wing</description>
+        </choice>
+        <choice>
+           <code>1404011</code>
+           <description>Motorcycle</description>
+        </choice>
+        <choice>
+           <code>1404013</code>
+           <description>Other</description>
+        </choice>
+        <choice>
+           <code>1404015</code>
+           <description>Personal Vehicle</description>
+        </choice>
+        <choice>
+           <code>1404017</code>
+           <description>Quick Response Vehicle (Non-Transport Vehicle other than Fire Truck)</description>
+        </choice>
+        <choice>
+           <code>1404019</code>
+           <description>Rescue</description>
+        </choice>
+        <choice>
+           <code>1404021</code>
+           <description>Rotor Craft</description>
+        </choice>
+        <choice>
+           <code>1404023</code>
+           <description>Snow Vehicle</description>
+        </choice>
+        <choice>
+           <code>1404025</code>
+           <description>Watercraft</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

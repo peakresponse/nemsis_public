@@ -1,0 +1,34 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.09" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Medical History Obtained From</name>
+<national>No</national>
+<state>No</state>
+<definition>Type of person medical history obtained from</definition>
+<v2Number>E12_11</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3109001</code>
+           <description>Bystander/Other</description>
+        </choice>
+        <choice>
+           <code>3109003</code>
+           <description>Family</description>
+        </choice>
+        <choice>
+           <code>3109005</code>
+           <description>Health Care Personnel</description>
+        </choice>
+        <choice>
+           <code>3109007</code>
+           <description>Patient</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

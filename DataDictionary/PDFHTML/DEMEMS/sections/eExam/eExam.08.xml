@@ -1,0 +1,220 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.08" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Chest/Lungs Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>The assessment findings associated with the patient's chest/lungs.</definition>
+<v2Number>E16_07</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
+		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3508001</code>
+           <description>Abrasion</description>
+        </choice>
+        <choice>
+           <code>3508003</code>
+           <description>Avulsion</description>
+        </choice>
+        <choice>
+           <code>3508005</code>
+           <description>Accessory Muscles Used with Breathing</description>
+        </choice>
+        <choice>
+           <code>3508007</code>
+           <description>Bleeding Controlled</description>
+        </choice>
+        <choice>
+           <code>3508009</code>
+           <description>Bleeding Uncontrolled</description>
+        </choice>
+        <choice>
+           <code>3508011</code>
+           <description>Breath Sounds-Absent-Left</description>
+        </choice>
+        <choice>
+           <code>3508013</code>
+           <description>Breath Sounds-Absent-Right</description>
+        </choice>
+        <choice>
+           <code>3508015</code>
+           <description>Breath Sounds-Decreased Left</description>
+        </choice>
+        <choice>
+           <code>3508017</code>
+           <description>Breath Sounds-Decreased Right</description>
+        </choice>
+        <choice>
+           <code>3508019</code>
+           <description>Breath Sounds-Equal</description>
+        </choice>
+        <choice>
+           <code>3508021</code>
+           <description>Breath Sounds-Normal-Left</description>
+        </choice>
+        <choice>
+           <code>3508023</code>
+           <description>Breath Sounds-Normal-Right</description>
+        </choice>
+        <choice>
+           <code>3508025</code>
+           <description>Burn-Blistering</description>
+        </choice>
+        <choice>
+           <code>3508027</code>
+           <description>Burn-Charring</description>
+        </choice>
+        <choice>
+           <code>3508029</code>
+           <description>Burn-Redness</description>
+        </choice>
+        <choice>
+           <code>3508031</code>
+           <description>Burn-White/Waxy</description>
+        </choice>
+        <choice>
+           <code>3508033</code>
+           <description>Crush Injury</description>
+        </choice>
+        <choice>
+           <code>3508035</code>
+           <description>Deformity</description>
+        </choice>
+        <choice>
+           <code>3508037</code>
+           <description>Flail Segment-Left</description>
+        </choice>
+        <choice>
+           <code>3508039</code>
+           <description>Flail Segment-Right</description>
+        </choice>
+        <choice>
+           <code>3508041</code>
+           <description>Foreign Body</description>
+        </choice>
+        <choice>
+           <code>3508043</code>
+           <description>Gunshot Wound-Entry</description>
+        </choice>
+        <choice>
+           <code>3508045</code>
+           <description>Gunshot Wound-Exit</description>
+        </choice>
+        <choice>
+           <code>3508047</code>
+           <description>Increased Respiratory Effort</description>
+        </choice>
+        <choice>
+           <code>3508049</code>
+           <description>Implanted Device</description>
+        </choice>
+        <choice>
+           <code>3508051</code>
+           <description>Laceration</description>
+        </choice>
+        <choice>
+           <code>3508053</code>
+           <description>Normal</description>
+        </choice>
+        <choice>
+           <code>3508055</code>
+           <description>Not Done</description>
+        </choice>
+        <choice>
+           <code>3508057</code>
+           <description>Pain</description>
+        </choice>
+        <choice>
+           <code>3508059</code>
+           <description>Pain with Inspiration/expiration-Left</description>
+        </choice>
+        <choice>
+           <code>3508061</code>
+           <description>Pain with Inspiration/expiration-Right</description>
+        </choice>
+        <choice>
+           <code>3508063</code>
+           <description>Puncture/Stab Wound</description>
+        </choice>
+        <choice>
+           <code>3508065</code>
+           <description>Rales-Left</description>
+        </choice>
+        <choice>
+           <code>3508067</code>
+           <description>Rales-Right</description>
+        </choice>
+        <choice>
+           <code>3508069</code>
+           <description>Retraction</description>
+        </choice>
+        <choice>
+           <code>3508071</code>
+           <description>Rhonchi-Left</description>
+        </choice>
+        <choice>
+           <code>3508073</code>
+           <description>Rhonchi-Right</description>
+        </choice>
+        <choice>
+           <code>3508075</code>
+           <description>Rhonchi/Wheezing</description>
+        </choice>
+        <choice>
+           <code>3508077</code>
+           <description>Stridor-Left</description>
+        </choice>
+        <choice>
+           <code>3508079</code>
+           <description>Stridor-Right</description>
+        </choice>
+        <choice>
+           <code>3508081</code>
+           <description>Swelling/Bruising/Contusion with Pain</description>
+        </choice>
+        <choice>
+           <code>3508083</code>
+           <description>Swelling/Bruising/Contusion without Pain</description>
+        </choice>
+        <choice>
+           <code>3508085</code>
+           <description>Tenderness-Left</description>
+        </choice>
+        <choice>
+           <code>3508087</code>
+           <description>Tenderness-Right</description>
+        </choice>
+        <choice>
+           <code>3508089</code>
+           <description>Wheezing-Expiratory - Left</description>
+        </choice>
+        <choice>
+           <code>3508091</code>
+           <description>Wheezing-Expiratory - Right</description>
+        </choice>
+        <choice>
+           <code>3508093</code>
+           <description>Wheezing-Inspiratory - Left</description>
+        </choice>
+        <choice>
+           <code>3508095</code>
+           <description>Wheezing-Inspiratory - Right</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

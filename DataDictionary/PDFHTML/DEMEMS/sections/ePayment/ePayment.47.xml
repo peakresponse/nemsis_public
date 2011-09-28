@@ -1,0 +1,58 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="ePayment.47" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Ambulance Conditions Indicator</name>
+<national>No</national>
+<state>No</state>
+<definition>Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve billing documentation and justification.</v3Comment>
+<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1</code>
+           <description>Patient was admitted to hospital</description>
+        </choice>
+        <choice>
+           <code>2</code>
+           <description>Patient was bed confined before the ambulance service</description>
+        </choice>
+        <choice>
+           <code>3</code>
+           <description>Patient was bed confined after the ambulance service</description>
+        </choice>
+        <choice>
+           <code>4</code>
+           <description>Patient was moved by stretcher</description>
+        </choice>
+        <choice>
+           <code>5</code>
+           <description>Patient was unconscious or in shock</description>
+        </choice>
+        <choice>
+           <code>6</code>
+           <description>Patient was transported in an emergency situation</description>
+        </choice>
+        <choice>
+           <code>7</code>
+           <description>Patient had to be physically restrained</description>
+        </choice>
+        <choice>
+           <code>8</code>
+           <description>Patient had visible hemorrhaging</description>
+        </choice>
+        <choice>
+           <code>9</code>
+           <description>Ambulance service was medically necessary</description>
+        </choice>
+        <choice>
+           <code>10</code>
+           <description>Transportation was to the nearest facility</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eOutcome.06" minOccurs="0" maxOccurs="1" dataType="EmergencyDepartmentChiefComplaint" isNillable="No">
+<name>Emergency Department Chief Complaint</name>
+<national>No</national>
+<state>No</state>
+<definition>The patient's reason for seeking care or attention, expressed in the terms as close as possible to those used by the patient or responsible informant.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better evaluate EMS patient care.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

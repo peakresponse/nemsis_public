@@ -1,0 +1,43 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eArrest.13" minOccurs="0" maxOccurs="1" dataType="NeurologicalOutcomeAtDischarge" isNillable="No">
+<name>Neurological Outcome at Hospital Discharge</name>
+<national>No</national>
+<state>No</state>
+<definition>The level of cerebral performance of the patient at the time of discharge from the Hospital</definition>
+<v2Number>E11_07</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>1 = Good Cerebral Performance:  Conscious, Alert, able to work and lead a normal life.<br/><br/>
+2 = Moderate Cerebral Disability:  Conscious and able to function independently (dress, travel, prepare food) may have hemiplegia,
+seizures, or permanent memory or mental changes.<br/><br/>
+3 = Severe Cerebral Disability:  Conscious, dependent on others for daily support, functions only in an institution or at home with
+exceptional family effort.<br/><br/>
+4 = Coma or vegetative state: any degree of coma without the presence of all brain death criteria. Unawareness, even if appears awake
+(vegetative state) without interaction with environment; may have spontaneous eye opening and sleep/awake cycles. Cerebral
+unresponsiveness.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3013001</code>
+           <description>CPC 1 Good Cerebral Performance</description>
+        </choice>
+        <choice>
+           <code>3013003</code>
+           <description>CPC 2 Moderate Cerebral Disability</description>
+        </choice>
+        <choice>
+           <code>3013005</code>
+           <description>CPC 3 Severe Cerebral Disability</description>
+        </choice>
+        <choice>
+           <code>3013007</code>
+           <description>CPC 4 Coma or Vegetative State</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

@@ -1,0 +1,87 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eResponse.11" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Type of Transport Delay</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The transport delays, if any, of the EMS unit associated with the patient encounter.</definition>
+<v2Number>E02_09</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2211001</code>
+           <description>Crowd</description>
+        </choice>
+        <choice>
+           <code>2211003</code>
+           <description>Directions/Unable to Locate</description>
+        </choice>
+        <choice>
+           <code>2211005</code>
+           <description>Distance</description>
+        </choice>
+        <choice>
+           <code>2211007</code>
+           <description>Diversion</description>
+        </choice>
+        <choice>
+           <code>2211009</code>
+           <description>HazMat</description>
+        </choice>
+        <choice>
+           <code>2211011</code>
+           <description>None/No Delay</description>
+        </choice>
+        <choice>
+           <code>2211013</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>2211015</code>
+           <description>Safety</description>
+        </choice>
+        <choice>
+           <code>2211017</code>
+           <description>Staff Delay</description>
+        </choice>
+        <choice>
+           <code>2211019</code>
+           <description>Traffic</description>
+        </choice>
+        <choice>
+           <code>2211021</code>
+           <description>Transport Unavailable</description>
+        </choice>
+        <choice>
+           <code>2211023</code>
+           <description>Vehicle Crash Involving this Unit</description>
+        </choice>
+        <choice>
+           <code>2211025</code>
+           <description>Vehicle Failure of this Unit</description>
+        </choice>
+        <choice>
+           <code>2211027</code>
+           <description>Weather</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

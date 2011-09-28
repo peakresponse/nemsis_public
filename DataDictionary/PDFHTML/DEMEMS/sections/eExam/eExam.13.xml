@@ -1,0 +1,65 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.13" minOccurs="0" maxOccurs="1" dataType="BackAndSpineAssessmentLocation" isNillable="No">
+<name>Back and Spine Assessment Finding Location</name>
+<national>No</national>
+<state>No</state>
+<definition>The location of the patient's back and spine assessment findings.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3513001</code>
+           <description>Cervical-Left</description>
+        </choice>
+        <choice>
+           <code>3513003</code>
+           <description>Cervical-Midline</description>
+        </choice>
+        <choice>
+           <code>3513005</code>
+           <description>Cervical-Right</description>
+        </choice>
+        <choice>
+           <code>3513007</code>
+           <description>Lumbar-Left</description>
+        </choice>
+        <choice>
+           <code>3513009</code>
+           <description>Lumbar-Midline</description>
+        </choice>
+        <choice>
+           <code>3513011</code>
+           <description>Lumbar-Right</description>
+        </choice>
+        <choice>
+           <code>3513013</code>
+           <description>Thoracic-Left</description>
+        </choice>
+        <choice>
+           <code>3513015</code>
+           <description>Thoracic-Midline</description>
+        </choice>
+        <choice>
+           <code>3513017</code>
+           <description>Thoracic-Right</description>
+        </choice>
+        <choice>
+           <code>3513019</code>
+           <description>Sacral-Left</description>
+        </choice>
+        <choice>
+           <code>3513021</code>
+           <description>Sacral-Midline</description>
+        </choice>
+        <choice>
+           <code>3513023</code>
+           <description>Sacral-Right</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

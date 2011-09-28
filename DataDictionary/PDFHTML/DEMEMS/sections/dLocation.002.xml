@@ -1,0 +1,268 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="dLocation">
+<group number="dLocation.LocationGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="Yes" currentStatusDate="Yes">
+<element number="dLocation.01" minOccurs="0" maxOccurs="1" dataType="LocationType" isNillable="No">
+<name>EMS Location Type</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of EMS Location which could be a fixed station or a pre-determined staging area.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is associated with the EMS Agency associated with the EMS Agency Number (dAgency.02).</v3Comment>
+<v3Changes>Added to allow multiple locations to be documented for an EMS Agency.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1301001</code>
+           <description>EMS Agency Headquarters</description>
+        </choice>
+        <choice>
+           <code>1301003</code>
+           <description>EMS Staging Area</description>
+        </choice>
+        <choice>
+           <code>1301005</code>
+           <description>EMS Station</description>
+        </choice>
+        <choice>
+           <code>1301007</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="dLocation.02" minOccurs="0" maxOccurs="1" dataType="StationName" isNillable="No">
+<name>EMS Location Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The name of the EMS Location.</definition>
+<v2Number>D05_01</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dLocation.03" minOccurs="0" maxOccurs="1" dataType="StationNumber" isNillable="No">
+<name>EMS Location Number</name>
+<national>No</national>
+<state>No</state>
+<definition>The ID number of the EMS Location.</definition>
+<v2Number>D05_02</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dLocation.04" minOccurs="0" maxOccurs="1" dataType="GPSLocation" isNillable="No">
+<name>EMS Location GPS</name>
+<national>No</national>
+<state>No</state>
+<definition>The GPS coordinate of  the EMS location.</definition>
+<v2Number>D05_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The pattern for GPS location is in the format "<span style="font-style:italic">latitude</span>,<span style="font-style:italic">longitude</span>" where:
+										  <br/>- <span style="font-style:italic">latitude</span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
+										  <br/>- <span style="font-style:italic">longitude</span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[\d]{0,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[\d]{0,6})?)</pattern>
+     </patterns>
+</restrictions>
+</element><element number="dLocation.05" minOccurs="0" maxOccurs="1" dataType="USNG" isNillable="No">
+<name>EMS Location US National Grid Coordinates</name>
+<national>No</national>
+<state>No</state>
+<definition>The US National Grid Coordinates of the EMS location.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>For more information go to www.fgdc.gov/usng.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}</pattern>
+     </patterns>
+</restrictions>
+</element><element number="dLocation.06" minOccurs="0" maxOccurs="1" dataType="StreetAddress" isNillable="No">
+<name>EMS Location Address</name>
+<national>No</national>
+<state>No</state>
+<definition>The address of the EMS Location.</definition>
+<v2Number>D05_05</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>55</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dLocation.07" minOccurs="0" maxOccurs="1" dataType="CityGnisCode" isNillable="No">
+<name>EMS Location City</name>
+<national>No</national>
+<state>No</state>
+<definition>The city of the EMS Location.</definition>
+<v2Number>D05_06</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on GNIS Civil Code or Populated Place code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+</restrictions>
+</element><element number="dLocation.08" minOccurs="0" maxOccurs="1" dataType="ANSIStateCode" isNillable="No">
+<name>EMS Location State</name>
+<national>No</national>
+<state>No</state>
+<definition>The state of the EMS Location.</definition>
+<v2Number>D05_07</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ANSI Code. <br/><br/>ANSI Country Codes (ISO 3166) Website:<a>http://geonames.usgs.gov/domestic/download_data.htm </a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dLocation.09" minOccurs="0" maxOccurs="1" dataType="ZIP" isNillable="No">
+<name>EMS Station or Location ZIP Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The ZIP code of the EMS Location.</definition>
+<v2Number>D05_08</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Zip Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</pattern>
+     </patterns>
+</restrictions>
+</element><element number="dLocation.10" minOccurs="0" maxOccurs="1" dataType="ANSICountyCode" isNillable="No">
+<name>EMS Location County</name>
+<national>No</national>
+<state>No</state>
+<definition>The county of the EMS Location</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>County codes are based on ISO/ANSI codes. A 5-digit code based on state (2-digits) and county (5-digit).
+										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>5</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dLocation.11" minOccurs="0" maxOccurs="1" dataType="ANSICountryCodesCAMXUS" isNillable="No">
+<name>EMS Location Country</name>
+<national>No</national>
+<state>No</state>
+<definition>The country of the EMS location.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country.
+										<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
+<v3Changes>Added to improve international implementations.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>CA</code>
+           <description>Canada</description>
+        </choice>
+        <choice>
+           <code>MX</code>
+           <description>Mexico</description>
+        </choice>
+        <choice>
+           <code>US</code>
+           <description>United States</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="dLocation.12" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>EMS Location Phone Number</name>
+<national>No</national>
+<state>No</state>
+<definition>The phone number of the EMS Location.</definition>
+<v2Number>D05_09</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]</pattern>
+     </patterns>
+	<correlationID>Yes</correlationID>
+	<phoneNumberType>
+		<choice><code>9913001</code><description>Fax</description></choice>
+		<choice><code>9913003</code><description>Home</description></choice>
+		<choice><code>9913005</code><description>Mobile</description></choice>
+		<choice><code>9913007</code><description>Pager</description></choice>
+		<choice><code>9913009</code><description>Work</description></choice>
+	</phoneNumberType>
+</restrictions>
+</element></group>
+</section>

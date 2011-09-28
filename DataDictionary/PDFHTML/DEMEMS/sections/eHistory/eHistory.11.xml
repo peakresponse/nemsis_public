@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.11" minOccurs="0" maxOccurs="1" dataType="Year" isNillable="No">
+<name>Immunization Date</name>
+<national>No</national>
+<state>No</state>
+<definition>The year associated with each immunization type</definition>
+<v2Number>E12_13</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1900</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

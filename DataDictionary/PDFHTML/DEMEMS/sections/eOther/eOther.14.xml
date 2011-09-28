@@ -1,0 +1,121 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eOther.14" minOccurs="0" maxOccurs="1" dataType="RelationshipSignature" isNillable="No">
+<name>Type Of Patient Representative</name>
+<national>No</national>
+<state>No</state>
+<definition>If Patient Representative is chosen as the owner of the signature, this documents the relationship of the individual signing to the patient.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Required for Billing.</v3Comment>
+<v3Changes>Added to improve documentation on disposition and billing.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4514001</code>
+           <description>Aunt</description>
+        </choice>
+        <choice>
+           <code>4514003</code>
+           <description>Brother</description>
+        </choice>
+        <choice>
+           <code>4514005</code>
+           <description>Daughter</description>
+        </choice>
+        <choice>
+           <code>4514007</code>
+           <description>Discharge Planner</description>
+        </choice>
+        <choice>
+           <code>4514009</code>
+           <description>Domestic Partner</description>
+        </choice>
+        <choice>
+           <code>4514011</code>
+           <description>Father</description>
+        </choice>
+        <choice>
+           <code>4514013</code>
+           <description>Friend</description>
+        </choice>
+        <choice>
+           <code>4514015</code>
+           <description>Grandfather</description>
+        </choice>
+        <choice>
+           <code>4514017</code>
+           <description>Grandmother</description>
+        </choice>
+        <choice>
+           <code>4514019</code>
+           <description>Guardian</description>
+        </choice>
+        <choice>
+           <code>4514021</code>
+           <description>Husband</description>
+        </choice>
+        <choice>
+           <code>4514023</code>
+           <description>Law Enforcement</description>
+        </choice>
+        <choice>
+           <code>4514025</code>
+           <description>MD/DO</description>
+        </choice>
+        <choice>
+           <code>4514027</code>
+           <description>Mother</description>
+        </choice>
+        <choice>
+           <code>4514029</code>
+           <description>Nurse (RN)</description>
+        </choice>
+        <choice>
+           <code>4514031</code>
+           <description>Nurse Practitioner (NP)</description>
+        </choice>
+        <choice>
+           <code>4514033</code>
+           <description>Other Care Provider (Home health, hospice, etc.)</description>
+        </choice>
+        <choice>
+           <code>4514035</code>
+           <description>Other</description>
+        </choice>
+        <choice>
+           <code>4514037</code>
+           <description>Physician's Assistant (PA)</description>
+        </choice>
+        <choice>
+           <code>4514039</code>
+           <description>Power of Attorney</description>
+        </choice>
+        <choice>
+           <code>4514041</code>
+           <description>Relative (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>4514043</code>
+           <description>Self</description>
+        </choice>
+        <choice>
+           <code>4514045</code>
+           <description>Sister</description>
+        </choice>
+        <choice>
+           <code>4514047</code>
+           <description>Son</description>
+        </choice>
+        <choice>
+           <code>4514049</code>
+           <description>Uncle</description>
+        </choice>
+        <choice>
+           <code>4514051</code>
+           <description>Wife</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

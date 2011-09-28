@@ -1,0 +1,29 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.06" minOccurs="0" maxOccurs="M" isNillable="Yes">
+<name>Medication Allergies</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The patient's medication allergies</definition>
+<v2Number>E12_08</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>List of medications based on RxNorm (RXCUI) Code.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801013</code><description>No Known Drug Allergies</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

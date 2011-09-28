@@ -1,0 +1,49 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eArrest.03" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Resuscitation Attempted By EMS</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.)</definition>
+<v2Number>E11_03</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3003001</code>
+           <description>Attemted Defibrillation</description>
+        </choice>
+        <choice>
+           <code>3003003</code>
+           <description>Attempted Ventilation</description>
+        </choice>
+        <choice>
+           <code>3003005</code>
+           <description>Initiated Chest Compressions</description>
+        </choice>
+        <choice>
+           <code>3003007</code>
+           <description>Not Attempted-Considered Futile</description>
+        </choice>
+        <choice>
+           <code>3003009</code>
+           <description>Not Attempted-DNR Orders</description>
+        </choice>
+        <choice>
+           <code>3003011</code>
+           <description>Not Attempted-Signs of Circulation</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

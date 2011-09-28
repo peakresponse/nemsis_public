@@ -1,0 +1,57 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eOther.12" minOccurs="0" maxOccurs="1" dataType="SignatureType" isNillable="No">
+<name>Type of Person Signing</name>
+<national>No</national>
+<state>No</state>
+<definition>The individuals signature associated with eOther.15 (Signature Status).</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better document disposition and billing information.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4512001</code>
+           <description>EMS Crew Member (Other)</description>
+        </choice>
+        <choice>
+           <code>4512003</code>
+           <description>EMS Primary Care Provider (for this event)</description>
+        </choice>
+        <choice>
+           <code>4512005</code>
+           <description>Healthcare Provider</description>
+        </choice>
+        <choice>
+           <code>4512007</code>
+           <description>Medical Director</description>
+        </choice>
+        <choice>
+           <code>4512009</code>
+           <description>Non-Healthcare Provider</description>
+        </choice>
+        <choice>
+           <code>4512011</code>
+           <description>Online Medical Control Healthcare Practitioner</description>
+        </choice>
+        <choice>
+           <code>4512013</code>
+           <description>Other</description>
+        </choice>
+        <choice>
+           <code>4512015</code>
+           <description>Patient</description>
+        </choice>
+        <choice>
+           <code>4512017</code>
+           <description>Patient Representative</description>
+        </choice>
+        <choice>
+           <code>4512019</code>
+           <description>Witness</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

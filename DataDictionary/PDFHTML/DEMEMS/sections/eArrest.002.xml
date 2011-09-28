@@ -1,0 +1,903 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="eArrest">
+<element number="eArrest.01" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Cardiac Arrest</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of the presence of a cardiac arrest at any time.</definition>
+<v2Number>E11_01</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3001001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>3001003</code>
+           <description>Yes, Prior to EMS Arrival</description>
+        </choice>
+        <choice>
+           <code>3001005</code>
+           <description>Yes, After EMS Arrival</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.02" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Cardiac Arrest Etiology</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.)</definition>
+<v2Number>E11_02</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Following the UTSTEIN standard of cardiac arrest etiology the values were determined based on the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports".   http://circ.ahajournals.org/cgi/content/full/110/21/3385</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3002001</code>
+           <description>Cardiac (Presumed)</description>
+        </choice>
+        <choice>
+           <code>3002003</code>
+           <description>Drowning/Submersion</description>
+        </choice>
+        <choice>
+           <code>3002005</code>
+           <description>Drug Overdose</description>
+        </choice>
+        <choice>
+           <code>3002007</code>
+           <description>Electrocution</description>
+        </choice>
+        <choice>
+           <code>3002009</code>
+           <description>Exsanguination</description>
+        </choice>
+        <choice>
+           <code>3002011</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3002013</code>
+           <description>Respiratory/Asphyxia</description>
+        </choice>
+        <choice>
+           <code>3002015</code>
+           <description>Trauma</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.03" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Resuscitation Attempted By EMS</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.)</definition>
+<v2Number>E11_03</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3003001</code>
+           <description>Attemted Defibrillation</description>
+        </choice>
+        <choice>
+           <code>3003003</code>
+           <description>Attempted Ventilation</description>
+        </choice>
+        <choice>
+           <code>3003005</code>
+           <description>Initiated Chest Compressions</description>
+        </choice>
+        <choice>
+           <code>3003007</code>
+           <description>Not Attempted-Considered Futile</description>
+        </choice>
+        <choice>
+           <code>3003009</code>
+           <description>Not Attempted-DNR Orders</description>
+        </choice>
+        <choice>
+           <code>3003011</code>
+           <description>Not Attempted-Signs of Circulation</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eArrest.04" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Arrest Witnessed By</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of who the cardiac arrest was witnessed by</definition>
+<v2Number>E11_04</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3004001</code>
+           <description>Not Witnessed</description>
+        </choice>
+        <choice>
+           <code>3004003</code>
+           <description>Witnessed by Family Member</description>
+        </choice>
+        <choice>
+           <code>3004005</code>
+           <description>Witnessed by Healthcare Provider</description>
+        </choice>
+        <choice>
+           <code>3004007</code>
+           <description>Witnessed by Lay Person</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eArrest.05" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>CPR Care Provided Prior to EMS Arrival</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Documentation of the CPR provided prior to EMS arrival</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.06" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Who Provided CPR Prior to EMS Arrival</name>
+<national>No</national>
+<state>Yes</state>
+<definition>Documentation of who performed CPR prior to EMS arrival.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Associated with eArrest.05 (CPR Care Provided Prior to EMS Arrival) but only required if CPR was provided prior to EMS arrival.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3006001</code>
+           <description>Family Member</description>
+        </choice>
+        <choice>
+           <code>3006003</code>
+           <description>First Responder (Fire, Law, EMS)</description>
+        </choice>
+        <choice>
+           <code>3006005</code>
+           <description>Healthcare Professional (Non-EMS)</description>
+        </choice>
+        <choice>
+           <code>3006007</code>
+           <description>Lay Person (Non-Family)</description>
+        </choice>
+        <choice>
+           <code>3006009</code>
+           <description>Other EMS Professional</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eArrest.07" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>AED Use Prior to EMS Arrival</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Documentation of AED use Prior to EMS Arrival</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3007001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>3007003</code>
+           <description>Yes, Applied without Defibrillation</description>
+        </choice>
+        <choice>
+           <code>3007005</code>
+           <description>Yes, With Defibrillation</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.08" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Who Used AED Prior to EMS Arrival</name>
+<national>No</national>
+<state>Yes</state>
+<definition>Documentation of who used the AED prior to EMS arrival</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Associated with eArrest.07 (AED Use Prior to EMS Arrival).</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3008001</code>
+           <description>Family Member</description>
+        </choice>
+        <choice>
+           <code>3008003</code>
+           <description>First Responder (Fire, Law, EMS)</description>
+        </choice>
+        <choice>
+           <code>3008005</code>
+           <description>Healthcare Professional (Non-EMS)</description>
+        </choice>
+        <choice>
+           <code>3008007</code>
+           <description>Lay Person (Non-Family)</description>
+        </choice>
+        <choice>
+           <code>3008009</code>
+           <description>Other EMS Professional</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eArrest.09" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Type of CPR Provided</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Documentation of the type/technique of CPR used by EMS.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to capture special CPR techniques.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3009001</code>
+           <description>Compressions-Continuous</description>
+        </choice>
+        <choice>
+           <code>3009003</code>
+           <description>Compressions-External Band Type Device</description>
+        </choice>
+        <choice>
+           <code>3009005</code>
+           <description>Compressions-External Plunger Type Device</description>
+        </choice>
+        <choice>
+           <code>3009007</code>
+           <description>Compressions-External Thumper Type Device</description>
+        </choice>
+        <choice>
+           <code>3009009</code>
+           <description>Compressions-Intermittent with Ventilation</description>
+        </choice>
+        <choice>
+           <code>3009011</code>
+           <description>Compressions-Other Device (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3009013</code>
+           <description>Ventilation-Bag Valve Mask</description>
+        </choice>
+        <choice>
+           <code>3009015</code>
+           <description>Ventilation-Impedence Threshold Device</description>
+        </choice>
+        <choice>
+           <code>3009017</code>
+           <description>Ventilation-Mouth to Mouth</description>
+        </choice>
+        <choice>
+           <code>3009019</code>
+           <description>Ventilation-Pocket Mask</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eArrest.10" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Therapeutic Hypothermia Initiated</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Documentation of EMS initiation of Therapeutic Hypothermia.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.11" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>First Monitored Arrest Rhythm of the Patient</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Documentation of what the first monitored arrest rhythm which was noted</definition>
+<v2Number>E11_05</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added term "Arrest" to title to clarify this is the arrest rhythm<br/>Values "Other" and "Normal Sinus Rhythm" removed since they are not Cardiac Arrest Rhythms.<br/>Value "Ventricular Tachycardia" has been changed to "Ventricular Tachycardia-Pulseless".</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3011001</code>
+           <description>Asystole</description>
+        </choice>
+        <choice>
+           <code>3011003</code>
+           <description>Bradycardia</description>
+        </choice>
+        <choice>
+           <code>3011005</code>
+           <description>PEA</description>
+        </choice>
+        <choice>
+           <code>3011007</code>
+           <description>Unknown AED Non-Shockable Rhythm</description>
+        </choice>
+        <choice>
+           <code>3011009</code>
+           <description>Unknown AED Shockable Rhythm</description>
+        </choice>
+        <choice>
+           <code>3011011</code>
+           <description>Ventricular Fibrillation</description>
+        </choice>
+        <choice>
+           <code>3011013</code>
+           <description>Ventricular Tachycardia-Pulseless</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.12" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Any Return of Spontaneous Circulation</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication whether or not there was any return of spontaneous circulation</definition>
+<v2Number>E11_06</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3012001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>3012003</code>
+           <description>Yes, At Arrival at the ED</description>
+        </choice>
+        <choice>
+           <code>3012005</code>
+           <description>Yes, Prior to Arrival at the ED</description>
+        </choice>
+        <choice>
+           <code>3012007</code>
+           <description>Yes, Sustained for 20 consecutive minutes</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eArrest.13" minOccurs="0" maxOccurs="1" dataType="NeurologicalOutcomeAtDischarge" isNillable="No">
+<name>Neurological Outcome at Hospital Discharge</name>
+<national>No</national>
+<state>No</state>
+<definition>The level of cerebral performance of the patient at the time of discharge from the Hospital</definition>
+<v2Number>E11_07</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>1 = Good Cerebral Performance:  Conscious, Alert, able to work and lead a normal life.<br/><br/>
+2 = Moderate Cerebral Disability:  Conscious and able to function independently (dress, travel, prepare food) may have hemiplegia,
+seizures, or permanent memory or mental changes.<br/><br/>
+3 = Severe Cerebral Disability:  Conscious, dependent on others for daily support, functions only in an institution or at home with
+exceptional family effort.<br/><br/>
+4 = Coma or vegetative state: any degree of coma without the presence of all brain death criteria. Unawareness, even if appears awake
+(vegetative state) without interaction with environment; may have spontaneous eye opening and sleep/awake cycles. Cerebral
+unresponsiveness.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3013001</code>
+           <description>CPC 1 Good Cerebral Performance</description>
+        </choice>
+        <choice>
+           <code>3013003</code>
+           <description>CPC 2 Moderate Cerebral Disability</description>
+        </choice>
+        <choice>
+           <code>3013005</code>
+           <description>CPC 3 Severe Cerebral Disability</description>
+        </choice>
+        <choice>
+           <code>3013007</code>
+           <description>CPC 4 Coma or Vegetative State</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eArrest.14" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Date/Time of Cardiac Arrest</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The date/time of the cardiac arrest (if not known, please estimate).</definition>
+<v2Number>E11_08</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Changed from estimated time prior to EMS arrival to date/time of cardiac arrest.
+							  	<br/><br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<table  cellspacing="2"><tr><td>							
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
+  <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
+  <tr><td align="center">T</td><td>separator that indicates time-of-day follows</td></tr>
+  <tr><td align="center">hh</td><td>a two-digit numeral that represents the hour</td></tr>
+  <tr><td align="center">':'</td><td>a separator between parts of the time-of-day portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minute</td></tr>
+  <tr><td align="center">ss</td><td>a two-integer-digit numeral that represents the whole seconds</td></tr>
+  <tr><td align="center">'.' s+</td><td>(not required) represents the fractional seconds</td></tr>
+  <tr><td align="center">zzzzzz</td><td>(required) represents the timezone (as described below)</td></tr>
+</table> 
+</td></tr></table>
+<br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+<table cellspacing="2"><tr><td>	
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">hh</td><td>a two-digit numeral (with leading zeros as required) that represents the hours</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minutes</td></tr>
+  <tr><td align="center">'+'</td><td>a nonnegative duration</td></tr>
+  <tr><td align="center">'-'</td><td>a nonpositive duration</td></tr>
+</table>
+</td></tr></table></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
+     </patterns>
+      <constraints>
+        <dataType>dateTime</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.15" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Date/Time Resuscitation Discontinued</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The date/time the CPR was discontinued (or could be time of death)</definition>
+<v2Number>E11_09</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment><br/><br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<table  cellspacing="2"><tr><td>							
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
+  <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
+  <tr><td align="center">T</td><td>separator that indicates time-of-day follows</td></tr>
+  <tr><td align="center">hh</td><td>a two-digit numeral that represents the hour</td></tr>
+  <tr><td align="center">':'</td><td>a separator between parts of the time-of-day portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minute</td></tr>
+  <tr><td align="center">ss</td><td>a two-integer-digit numeral that represents the whole seconds</td></tr>
+  <tr><td align="center">'.' s+</td><td>(not required) represents the fractional seconds</td></tr>
+  <tr><td align="center">zzzzzz</td><td>(required) represents the timezone (as described below)</td></tr>
+</table> 
+</td></tr></table>
+<br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+<table cellspacing="2"><tr><td>	
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">hh</td><td>a two-digit numeral (with leading zeros as required) that represents the hours</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minutes</td></tr>
+  <tr><td align="center">'+'</td><td>a nonnegative duration</td></tr>
+  <tr><td align="center">'-'</td><td>a nonpositive duration</td></tr>
+</table>
+</td></tr></table></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
+     </patterns>
+      <constraints>
+        <dataType>dateTime</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.16" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Reason CPR/Resuscitation Discontinued</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The reason that CPR or the resuscitation efforts were discontinued.</definition>
+<v2Number>E11_10</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added Resuscitation to Title to allow better documentation of disposition.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3016001</code>
+           <description>DNR</description>
+        </choice>
+        <choice>
+           <code>3016003</code>
+           <description>Medical Control Order</description>
+        </choice>
+        <choice>
+           <code>3016005</code>
+           <description>Obvious Signs of Death</description>
+        </choice>
+        <choice>
+           <code>3016007</code>
+           <description>Protocol/Policy Requirements Completed</description>
+        </choice>
+        <choice>
+           <code>3016009</code>
+           <description>Return of Spontaneous Circulation (pulse or BP noted)</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eArrest.17" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Cardiac Rhythm on Arrival at Destination</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The patient's cardiac rhythm upon delivery or transfer to the destination</definition>
+<v2Number>E11_11</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This element needs to be documented when the patient has been in cardiac or respiratory arrest and transported to a healthcare facility to show the change in patient condition, if any. The cardiac rhythm list has been updated to be the same for eVitals.03 (Cardiac Rhythm and Electrocardiography).  They are using the comomn type:  CardaicRhythm.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9901001</code>
+           <description>Agonal/Idioventricular</description>
+        </choice>
+        <choice>
+           <code>9901003</code>
+           <description>Asystole</description>
+        </choice>
+        <choice>
+           <code>9901005</code>
+           <description>Artifact</description>
+        </choice>
+        <choice>
+           <code>9901007</code>
+           <description>Atrial Fibrillation</description>
+        </choice>
+        <choice>
+           <code>9901009</code>
+           <description>Atrial Flutter</description>
+        </choice>
+        <choice>
+           <code>9901011</code>
+           <description>AV Block-1st Degree</description>
+        </choice>
+        <choice>
+           <code>9901013</code>
+           <description>AV Block-2nd Degree-Type 1</description>
+        </choice>
+        <choice>
+           <code>9901015</code>
+           <description>AV Block-2nd Degree-Type 2</description>
+        </choice>
+        <choice>
+           <code>9901017</code>
+           <description>AV Block-3rd Degree</description>
+        </choice>
+        <choice>
+           <code>9901019</code>
+           <description>Junctional</description>
+        </choice>
+        <choice>
+           <code>9901021</code>
+           <description>Left Bundle Branch Block</description>
+        </choice>
+        <choice>
+           <code>9901023</code>
+           <description>Non-STEMI Anterior Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901025</code>
+           <description>Non-STEMI Inferior Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901027</code>
+           <description>Non-STEMI Lateral Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901029</code>
+           <description>Non-STEMI Posterior Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901031</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>9901033</code>
+           <description>Paced Rhythm</description>
+        </choice>
+        <choice>
+           <code>9901035</code>
+           <description>PEA</description>
+        </choice>
+        <choice>
+           <code>9901037</code>
+           <description>Premature Atrial Contractions</description>
+        </choice>
+        <choice>
+           <code>9901039</code>
+           <description>Premature Ventricular Contractions</description>
+        </choice>
+        <choice>
+           <code>9901041</code>
+           <description>Right Bundle Branch Block</description>
+        </choice>
+        <choice>
+           <code>9901043</code>
+           <description>Sinus Arrhythmia</description>
+        </choice>
+        <choice>
+           <code>9901045</code>
+           <description>Sinus Bradycardia</description>
+        </choice>
+        <choice>
+           <code>9901047</code>
+           <description>Sinus Rhythm</description>
+        </choice>
+        <choice>
+           <code>9901049</code>
+           <description>Sinus Tachycardia</description>
+        </choice>
+        <choice>
+           <code>9901051</code>
+           <description>STEMI Anterior Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901053</code>
+           <description>STEMI Inferior Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901055</code>
+           <description>STEMI Lateral Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901057</code>
+           <description>STEMI Posterior Ischemia</description>
+        </choice>
+        <choice>
+           <code>9901059</code>
+           <description>Supraventricular Tachycardia</description>
+        </choice>
+        <choice>
+           <code>9901061</code>
+           <description>Torsades De Points</description>
+        </choice>
+        <choice>
+           <code>9901063</code>
+           <description>Unknown AED Non-Shockable Rhythm</description>
+        </choice>
+        <choice>
+           <code>9901065</code>
+           <description>Unknown AED Shockable Rhythm</description>
+        </choice>
+        <choice>
+           <code>9901067</code>
+           <description>Ventricular Fibrillation</description>
+        </choice>
+        <choice>
+           <code>9901069</code>
+           <description>Ventricular Tachycardia (With Pulse)</description>
+        </choice>
+        <choice>
+           <code>9901071</code>
+           <description>Ventricular Tachycardia (Pulseless)</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eArrest.18" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>End of EMS Cardiac Arrest Event</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The patient's outcome at the end of the EMS event.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better identify the outcome of EMS cardiac arrest patients.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3018001</code>
+           <description>Expired in ED</description>
+        </choice>
+        <choice>
+           <code>3018003</code>
+           <description>Expired in the Field</description>
+        </choice>
+        <choice>
+           <code>3018005</code>
+           <description>Ongoing Resuscitation in ED</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element></section>

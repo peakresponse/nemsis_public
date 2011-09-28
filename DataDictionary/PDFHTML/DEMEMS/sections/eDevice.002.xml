@@ -1,0 +1,628 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="eDevice">
+<group number="eDevice.DeviceGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="eDevice.01" minOccurs="0" maxOccurs="1" dataType="DeviceSerialNumber" isNillable="No">
+<name>Device Serial Number</name>
+<national>No</national>
+<state>No</state>
+<definition>The unique manufacturer's serial number associated with a medical device.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eDevice.02" minOccurs="0" maxOccurs="1" dataType="DateTimeType" isNillable="No">
+<name>Date/Time of Event</name>
+<national>No</national>
+<state>No</state>
+<definition>The time of the event recorded by the device's internal clock</definition>
+<v2Number>E21_01</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<table  cellspacing="2"><tr><td>							
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
+  <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
+  <tr><td align="center">T</td><td>separator that indicates time-of-day follows</td></tr>
+  <tr><td align="center">hh</td><td>a two-digit numeral that represents the hour</td></tr>
+  <tr><td align="center">':'</td><td>a separator between parts of the time-of-day portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minute</td></tr>
+  <tr><td align="center">ss</td><td>a two-integer-digit numeral that represents the whole seconds</td></tr>
+  <tr><td align="center">'.' s+</td><td>(not required) represents the fractional seconds</td></tr>
+  <tr><td align="center">zzzzzz</td><td>(required) represents the timezone (as described below)</td></tr>
+</table> 
+</td></tr></table>
+<br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+<table cellspacing="2"><tr><td>	
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">hh</td><td>a two-digit numeral (with leading zeros as required) that represents the hours</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minutes</td></tr>
+  <tr><td align="center">'+'</td><td>a nonnegative duration</td></tr>
+  <tr><td align="center">'-'</td><td>a nonpositive duration</td></tr>
+</table>
+</td></tr></table></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
+     </patterns>
+      <constraints>
+        <dataType>dateTime</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eDevice.03" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Medical Device Event Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of event documented by the medical device.</definition>
+<v2Number>E21_02</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Can be displayed in the Vital Signs or Procedure Sections.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4103001</code>
+           <description>12-Lead ECG</description>
+        </choice>
+        <choice>
+           <code>4103003</code>
+           <description>Analysis (Button Pressed)</description>
+        </choice>
+        <choice>
+           <code>4103005</code>
+           <description>CO2</description>
+        </choice>
+        <choice>
+           <code>4103007</code>
+           <description>Date Transmitted</description>
+        </choice>
+        <choice>
+           <code>4103009</code>
+           <description>Defibrillation</description>
+        </choice>
+        <choice>
+           <code>4103011</code>
+           <description>ECG-Monitor</description>
+        </choice>
+        <choice>
+           <code>4103013</code>
+           <description>Heart Rate</description>
+        </choice>
+        <choice>
+           <code>4103015</code>
+           <description>Invasive Pressure 1</description>
+        </choice>
+        <choice>
+           <code>4103017</code>
+           <description>Invasive Pressure 2</description>
+        </choice>
+        <choice>
+           <code>4103019</code>
+           <description>No Shock Advised</description>
+        </choice>
+        <choice>
+           <code>4103021</code>
+           <description>Non-Invasive BP</description>
+        </choice>
+        <choice>
+           <code>4103023</code>
+           <description>Other</description>
+        </choice>
+        <choice>
+           <code>4103025</code>
+           <description>Pacing Electrical Capture</description>
+        </choice>
+        <choice>
+           <code>4103027</code>
+           <description>Pacing Started</description>
+        </choice>
+        <choice>
+           <code>4103029</code>
+           <description>Pacing Stopped</description>
+        </choice>
+        <choice>
+           <code>4103031</code>
+           <description>Patient Connected</description>
+        </choice>
+        <choice>
+           <code>4103033</code>
+           <description>Power On</description>
+        </choice>
+        <choice>
+           <code>4103035</code>
+           <description>Pulse Oximetry</description>
+        </choice>
+        <choice>
+           <code>4103037</code>
+           <description>Pulse Rate</description>
+        </choice>
+        <choice>
+           <code>4103039</code>
+           <description>Respiratory Rate</description>
+        </choice>
+        <choice>
+           <code>4103041</code>
+           <description>Shock Advised</description>
+        </choice>
+        <choice>
+           <code>4103043</code>
+           <description>Sync Off</description>
+        </choice>
+        <choice>
+           <code>4103045</code>
+           <description>Sync On</description>
+        </choice>
+        <choice>
+           <code>4103047</code>
+           <description>Temperature 1</description>
+        </choice>
+        <choice>
+           <code>4103049</code>
+           <description>Temperature 2</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><group number="eDevice.WaveformGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<element number="eDevice.04" minOccurs="0" maxOccurs="1" dataType="GraphicType" isNillable="No">
+<name>Waveform Graphic Type</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of waveform file stored in Waveform Graphic</definition>
+<v2Number>E21_03</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9907001</code>
+           <description>bmp</description>
+        </choice>
+        <choice>
+           <code>9907003</code>
+           <description>cmx</description>
+        </choice>
+        <choice>
+           <code>9907005</code>
+           <description>cod</description>
+        </choice>
+        <choice>
+           <code>9907007</code>
+           <description>doc</description>
+        </choice>
+        <choice>
+           <code>9907009</code>
+           <description>docx</description>
+        </choice>
+        <choice>
+           <code>9907011</code>
+           <description>gif</description>
+        </choice>
+        <choice>
+           <code>9907013</code>
+           <description>ico</description>
+        </choice>
+        <choice>
+           <code>9907015</code>
+           <description>ief</description>
+        </choice>
+        <choice>
+           <code>9907017</code>
+           <description>jfif</description>
+        </choice>
+        <choice>
+           <code>9907019</code>
+           <description>jpeg</description>
+        </choice>
+        <choice>
+           <code>9907021</code>
+           <description>jpe</description>
+        </choice>
+        <choice>
+           <code>9907023</code>
+           <description>jpg</description>
+        </choice>
+        <choice>
+           <code>9907025</code>
+           <description>mht</description>
+        </choice>
+        <choice>
+           <code>9907027</code>
+           <description>mic</description>
+        </choice>
+        <choice>
+           <code>9907029</code>
+           <description>mhtml</description>
+        </choice>
+        <choice>
+           <code>9907031</code>
+           <description>nws</description>
+        </choice>
+        <choice>
+           <code>9907033</code>
+           <description>pbm</description>
+        </choice>
+        <choice>
+           <code>9907035</code>
+           <description>pdf</description>
+        </choice>
+        <choice>
+           <code>9907037</code>
+           <description>pgm</description>
+        </choice>
+        <choice>
+           <code>9907039</code>
+           <description>png</description>
+        </choice>
+        <choice>
+           <code>9907041</code>
+           <description>pnm</description>
+        </choice>
+        <choice>
+           <code>9907043</code>
+           <description>ppm</description>
+        </choice>
+        <choice>
+           <code>9907045</code>
+           <description>ras</description>
+        </choice>
+        <choice>
+           <code>9907047</code>
+           <description>rgb</description>
+        </choice>
+        <choice>
+           <code>9907049</code>
+           <description>svg</description>
+        </choice>
+        <choice>
+           <code>9907051</code>
+           <description>tif</description>
+        </choice>
+        <choice>
+           <code>9907053</code>
+           <description>tiff</description>
+        </choice>
+        <choice>
+           <code>9907055</code>
+           <description>xbm</description>
+        </choice>
+        <choice>
+           <code>9907057</code>
+           <description>xpm</description>
+        </choice>
+        <choice>
+           <code>9907059</code>
+           <description>xwd</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eDevice.05" minOccurs="0" maxOccurs="1" dataType="WaveformGraphic" isNillable="No">
+<name>Waveform Graphic</name>
+<national>No</national>
+<state>No</state>
+<definition>The graphic waveform file.</definition>
+<v2Number>E21_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>base64Binary</dataType>
+      </constraints>
+</restrictions>
+</element><element number="eDevice.06" minOccurs="0" maxOccurs="1" dataType="AEDPacingOrCO2Mode" isNillable="No">
+<name>AED Pacing or C02 Mode</name>
+<national>No</national>
+<state>No</state>
+<definition>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4106001</code>
+           <description>Advisory</description>
+        </choice>
+        <choice>
+           <code>4106003</code>
+           <description>Automated</description>
+        </choice>
+        <choice>
+           <code>4106005</code>
+           <description>Demand</description>
+        </choice>
+        <choice>
+           <code>4106007</code>
+           <description>Manual</description>
+        </choice>
+        <choice>
+           <code>4106009</code>
+           <description>Mid-Stream</description>
+        </choice>
+        <choice>
+           <code>4106011</code>
+           <description>Sensing</description>
+        </choice>
+        <choice>
+           <code>4106013</code>
+           <description>Side-Stream</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element></group>
+<element number="eDevice.07" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>ECG Lead</name>
+<national>No</national>
+<state>No</state>
+<definition>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</definition>
+<v2Number>E21_06</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Can be displayed in the Vital Signs or Procedure Sections.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4107001</code>
+           <description>I</description>
+        </choice>
+        <choice>
+           <code>4107003</code>
+           <description>II</description>
+        </choice>
+        <choice>
+           <code>4107005</code>
+           <description>III</description>
+        </choice>
+        <choice>
+           <code>4107007</code>
+           <description>AVR</description>
+        </choice>
+        <choice>
+           <code>4107009</code>
+           <description>AVL</description>
+        </choice>
+        <choice>
+           <code>4107011</code>
+           <description>AVF</description>
+        </choice>
+        <choice>
+           <code>4107013</code>
+           <description>Paddle</description>
+        </choice>
+        <choice>
+           <code>4107015</code>
+           <description>V1</description>
+        </choice>
+        <choice>
+           <code>4107017</code>
+           <description>V2</description>
+        </choice>
+        <choice>
+           <code>4107019</code>
+           <description>V3</description>
+        </choice>
+        <choice>
+           <code>4107021</code>
+           <description>V4</description>
+        </choice>
+        <choice>
+           <code>4107023</code>
+           <description>V5</description>
+        </choice>
+        <choice>
+           <code>4107025</code>
+           <description>V6</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eDevice.08" minOccurs="0" maxOccurs="1" dataType="ECGInterpretation" isNillable="No">
+<name>ECG Interpretation</name>
+<national>No</national>
+<state>No</state>
+<definition>The interpretation of the rhythm by the device (if appropriate for the event)</definition>
+<v2Number>E21_07</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The rhythm interpretation text imported from the device.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>2000</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><group number="eDevice.ShockGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<element number="eDevice.09" minOccurs="0" maxOccurs="1" dataType="TypeOfShock" isNillable="No">
+<name>Type of Shock</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of shock used by the device for the defibrillation (if appropriate for the event)</definition>
+<v2Number>E21_08</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4109001</code>
+           <description>Biphasic</description>
+        </choice>
+        <choice>
+           <code>4109003</code>
+           <description>Monophasic</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eDevice.10" minOccurs="0" maxOccurs="1" dataType="ShockOrPacingEnergy" isNillable="No">
+<name>Shock or Pacing Energy</name>
+<national>No</national>
+<state>No</state>
+<definition>The energy (in joules) used for the shock or pacing (if appropriate for the event)</definition>
+<v2Number>E21_09</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>decimal</dataType>
+        <constraint>
+          <constraintTitle>totalDigits</constraintTitle>
+          <constraintValue>5</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>fractionDigits</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>9000</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eDevice.11" minOccurs="0" maxOccurs="1" dataType="TotalNumberOfShocks" isNillable="No">
+<name>Total Number of Shocks Delivered</name>
+<national>No</national>
+<state>No</state>
+<definition>The number of times the patient was defibrillated, if the patient was defibrillated during the patient encounter.</definition>
+<v2Number>E21_10</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eDevice.12" minOccurs="0" maxOccurs="1" dataType="PacingRate" isNillable="No">
+<name>Pacing Rate</name>
+<national>No</national>
+<state>No</state>
+<definition>The rate the device was calibrated to pace during the event, if appropriate.</definition>
+<v2Number>E21_11</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>1000</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element></group>
+</group>
+</section>

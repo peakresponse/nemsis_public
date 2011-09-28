@@ -1,0 +1,70 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dAgency.10" minOccurs="0" maxOccurs="M" isNillable="Yes">
+<name>Other Types of Service</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The other service type(s) which are provided by the agency.</definition>
+<v2Number>D01_06</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>If no other services are provided beyond the Primary Service Type, Not Applicable should be used. This should include all of the types of services not listed in (dAgency.09) Primary Type of Service.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1010001</code>
+           <description>911 Response (Scene) with Transport Capability</description>
+        </choice>
+        <choice>
+           <code>1010003</code>
+           <description>911 Response (Scene) without Transport Capability</description>
+        </choice>
+        <choice>
+           <code>1010005</code>
+           <description>Air Medical</description>
+        </choice>
+        <choice>
+           <code>1010007</code>
+           <description>Hazmat</description>
+        </choice>
+        <choice>
+           <code>1010009</code>
+           <description>Medical Transport (Convalescent)</description>
+        </choice>
+        <choice>
+           <code>1010011</code>
+           <description>Paramedic Intercept</description>
+        </choice>
+        <choice>
+           <code>1010013</code>
+           <description>Rescue</description>
+        </choice>
+        <choice>
+           <code>1010015</code>
+           <description>Speciality Care Transport</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+	<currentStatus>
+		<choice><code>A</code><description>Active</description></choice>
+		<choice><code>I</code><description>Inactive</description></choice>
+	</currentStatus>
+	<currentStatusDate>
+	</currentStatusDate>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

@@ -1,0 +1,925 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="eHistory">
+<element number="eHistory.01" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Barriers to Patient Care</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
+<v2Number>E12_01</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added Obesity, Sight Impaired, Psychologically Impaired</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3101001</code>
+           <description>Cultural, Custom, Religious</description>
+        </choice>
+        <choice>
+           <code>3101003</code>
+           <description>Developmentally Impaired</description>
+        </choice>
+        <choice>
+           <code>3101005</code>
+           <description>Hearing Impaired</description>
+        </choice>
+        <choice>
+           <code>3101007</code>
+           <description>Language</description>
+        </choice>
+        <choice>
+           <code>3101009</code>
+           <description>None Noted</description>
+        </choice>
+        <choice>
+           <code>3101011</code>
+           <description>Obesity</description>
+        </choice>
+        <choice>
+           <code>3101013</code>
+           <description>Physical Barrier (Unable to Access Patient)</description>
+        </choice>
+        <choice>
+           <code>3101015</code>
+           <description>Physically Impaired</description>
+        </choice>
+        <choice>
+           <code>3101017</code>
+           <description>Physically Restrained</description>
+        </choice>
+        <choice>
+           <code>3101019</code>
+           <description>Psychologically Impaired</description>
+        </choice>
+        <choice>
+           <code>3101021</code>
+           <description>Sight Impaired</description>
+        </choice>
+        <choice>
+           <code>3101023</code>
+           <description>Speech Impaired</description>
+        </choice>
+        <choice>
+           <code>3101025</code>
+           <description>Unattended or Unsupervised (including minors)</description>
+        </choice>
+        <choice>
+           <code>3101027</code>
+           <description>Unconscious</description>
+        </choice>
+        <choice>
+           <code>3101029</code>
+           <description>Uncooperative</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><group number="eHistory.PractitionerGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="eHistory.02" minOccurs="0" maxOccurs="1" dataType="PersonLastName" isNillable="No">
+<name>Last Name of Patient's Primary Practitioner</name>
+<national>No</national>
+<state>No</state>
+<definition>The last name of the patient's primary practitioner</definition>
+<v2Number>E12_06</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eHistory.03" minOccurs="0" maxOccurs="1" dataType="PersonFirstName" isNillable="No">
+<name>First Name of Patient's Primary Practitioner</name>
+<national>No</national>
+<state>No</state>
+<definition>The first name of the patient's primary practitioner</definition>
+<v2Number>E12_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>35</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eHistory.04" minOccurs="0" maxOccurs="1" dataType="PersonMiddleName" isNillable="No">
+<name>Middle Name/Initial of Patient's Primary Practitioner</name>
+<national>No</national>
+<state>No</state>
+<definition>The middle name or initial of the patient's primary practitioner.</definition>
+<v2Number>E12_05</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>25</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element></group>
+<element number="eHistory.05" minOccurs="0" maxOccurs="M" isNillable="Yes">
+<name>Advance Directives</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The presence of a valid DNR form, living will, or document directing end of life or healthcare treatment decisions.</definition>
+<v2Number>E12_07</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Advanced Directive and Do Not Resuscitate are both included in this data element.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3105001</code>
+           <description>Family/Guardian request DNR (but no documentation)</description>
+        </choice>
+        <choice>
+           <code>3105003</code>
+           <description>Living Will</description>
+        </choice>
+        <choice>
+           <code>3105005</code>
+           <description>None</description>
+        </choice>
+        <choice>
+           <code>3105007</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3105009</code>
+           <description>Other Healthcare Advanced Directive Form</description>
+        </choice>
+        <choice>
+           <code>3105011</code>
+           <description>State/EMS DNR Form</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eHistory.06" minOccurs="0" maxOccurs="M" isNillable="Yes">
+<name>Medication Allergies</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The patient's medication allergies</definition>
+<v2Number>E12_08</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>List of medications based on RxNorm (RXCUI) Code.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801013</code><description>No Known Drug Allergies</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eHistory.07" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Environmental/Food Allergies</name>
+<national>No</national>
+<state>No</state>
+<definition>The patient's known allergies to food or environmental agents.</definition>
+<v2Number>E12_09</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3107001</code>
+           <description>Chemical</description>
+        </choice>
+        <choice>
+           <code>3107003</code>
+           <description>Dander/Dust/Mold/Pollen</description>
+        </choice>
+        <choice>
+           <code>3107005</code>
+           <description>Food Allergy</description>
+        </choice>
+        <choice>
+           <code>3107007</code>
+           <description>Insect Sting</description>
+        </choice>
+        <choice>
+           <code>3107009</code>
+           <description>Latex</description>
+        </choice>
+        <choice>
+           <code>3107011</code>
+           <description>None</description>
+        </choice>
+        <choice>
+           <code>3107013</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3107015</code>
+           <description>Plant</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eHistory.08" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Medical/Surgical History</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The patient's pre-existing medical and surgery history of the patient</definition>
+<v2Number>E12_10</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>Code list is represented by ICD-10-CM: Factors influencing health status and contact with health services (Z78.0 – Z99.89).</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801015</code><description>None Reported</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <patterns>
+        <pattern>[A-Z]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?</pattern>
+     </patterns>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eHistory.09" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Medical History Obtained From</name>
+<national>No</national>
+<state>No</state>
+<definition>Type of person medical history obtained from</definition>
+<v2Number>E12_11</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3109001</code>
+           <description>Bystander/Other</description>
+        </choice>
+        <choice>
+           <code>3109003</code>
+           <description>Family</description>
+        </choice>
+        <choice>
+           <code>3109005</code>
+           <description>Health Care Personnel</description>
+        </choice>
+        <choice>
+           <code>3109007</code>
+           <description>Patient</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><group number="eHistory.ImmunizationsGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="eHistory.10" minOccurs="0" maxOccurs="1" dataType="ImmunizationType" isNillable="No">
+<name>The Patient's Type of Immunization.</name>
+<national>No</national>
+<state>No</state>
+<definition></definition>
+<v2Number>E12_12</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9910001</code>
+           <description>Anthrax</description>
+        </choice>
+        <choice>
+           <code>9910003</code>
+           <description>Cholera</description>
+        </choice>
+        <choice>
+           <code>9910005</code>
+           <description>DPT (Diphtheria, Tetanus, Pertussis)</description>
+        </choice>
+        <choice>
+           <code>9910007</code>
+           <description>Hemophilus Influenza B</description>
+        </choice>
+        <choice>
+           <code>9910009</code>
+           <description>Hepatitis A</description>
+        </choice>
+        <choice>
+           <code>9910011</code>
+           <description>Hepatitis B</description>
+        </choice>
+        <choice>
+           <code>9910013</code>
+           <description>Human Papilloma Virus (HPV)</description>
+        </choice>
+        <choice>
+           <code>9910015</code>
+           <description>Influenza-H1N1</description>
+        </choice>
+        <choice>
+           <code>9910017</code>
+           <description>Influenza-Other</description>
+        </choice>
+        <choice>
+           <code>9910019</code>
+           <description>Influenza-Seasonal (In past 12 months)</description>
+        </choice>
+        <choice>
+           <code>9910021</code>
+           <description>Lyme Disease</description>
+        </choice>
+        <choice>
+           <code>9910023</code>
+           <description>Meningococcus</description>
+        </choice>
+        <choice>
+           <code>9910025</code>
+           <description>MMR (Measles, Mumps, Rubella)</description>
+        </choice>
+        <choice>
+           <code>9910027</code>
+           <description>Other-Not Listed</description>
+        </choice>
+        <choice>
+           <code>9910029</code>
+           <description>Plague</description>
+        </choice>
+        <choice>
+           <code>9910031</code>
+           <description>Pneumococcal (Pneumonia)</description>
+        </choice>
+        <choice>
+           <code>9910033</code>
+           <description>Polio</description>
+        </choice>
+        <choice>
+           <code>9910035</code>
+           <description>Rabies</description>
+        </choice>
+        <choice>
+           <code>9910037</code>
+           <description>Rotavirus</description>
+        </choice>
+        <choice>
+           <code>9910039</code>
+           <description>Shingle</description>
+        </choice>
+        <choice>
+           <code>9910041</code>
+           <description>Small Pox</description>
+        </choice>
+        <choice>
+           <code>9910043</code>
+           <description>Tetanus</description>
+        </choice>
+        <choice>
+           <code>9910045</code>
+           <description>Tuberculosis</description>
+        </choice>
+        <choice>
+           <code>9910047</code>
+           <description>Typhoid</description>
+        </choice>
+        <choice>
+           <code>9910049</code>
+           <description>Varicella (Chickenpox)</description>
+        </choice>
+        <choice>
+           <code>9910051</code>
+           <description>Yellow Fever</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eHistory.11" minOccurs="0" maxOccurs="1" dataType="Year" isNillable="No">
+<name>Immunization Date</name>
+<national>No</national>
+<state>No</state>
+<definition>The year associated with each immunization type</definition>
+<v2Number>E12_13</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1900</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element></group>
+<group number="eHistory.CurrentMedsGroup" minOccurs="1" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="eHistory.12" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Current Medications</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The medications the patient currently takes</definition>
+<v2Number>E12_14</v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>List of medications based on RxNorm (RXCUI) code. See suggested NEMSIS list of medication codes.
+<br/><br/>RxNorm
+<br/>Website - <a>http://uts.nlm.nih.gov</a> 
+<br/>Product - UMLS Metathesaurus
+<br/><br/>Website - <a>http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html</a>  
+<br/>Product - RxNorm Full Monthly Release</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801015</code><description>None Reported</description>		</choice>
+		<choice><code>8801021</code><description>Unresponsive</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eHistory.13" minOccurs="0" maxOccurs="1" dataType="CurrentMedicationDose" isNillable="No">
+<name>Current Medication Dose</name>
+<national>No</national>
+<state>No</state>
+<definition>The numeric dose or amount of the patient's current medication</definition>
+<v2Number>E12_15</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Associated with eHistory.12 (Current Medications)</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>decimal</dataType>
+        <constraint>
+          <constraintTitle>totalDigits</constraintTitle>
+          <constraintValue>8</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>fractionDigits</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eHistory.14" minOccurs="0" maxOccurs="1" dataType="CurrentMedicationDosageUnit" isNillable="No">
+<name>Current Medication Dosage Unit</name>
+<national>No</national>
+<state>No</state>
+<definition>The dosage unit of the patient's current medication</definition>
+<v2Number>E12_16</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3114001</code>
+           <description>cm</description>
+        </choice>
+        <choice>
+           <code>3114003</code>
+           <description>gms</description>
+        </choice>
+        <choice>
+           <code>3114005</code>
+           <description>gtts (drops)</description>
+        </choice>
+        <choice>
+           <code>3114007</code>
+           <description>inches</description>
+        </choice>
+        <choice>
+           <code>3114009</code>
+           <description>iu</description>
+        </choice>
+        <choice>
+           <code>3114011</code>
+           <description>kvo (keep vein open)</description>
+        </choice>
+        <choice>
+           <code>3114013</code>
+           <description>l/min (fluid administration)</description>
+        </choice>
+        <choice>
+           <code>3114015</code>
+           <description>liters</description>
+        </choice>
+        <choice>
+           <code>3114017</code>
+           <description>LPM (gas administration)</description>
+        </choice>
+        <choice>
+           <code>3114019</code>
+           <description>mcg</description>
+        </choice>
+        <choice>
+           <code>3114021</code>
+           <description>mcg/kg/min</description>
+        </choice>
+        <choice>
+           <code>3114023</code>
+           <description>mcg/min</description>
+        </choice>
+        <choice>
+           <code>3114025</code>
+           <description>meq</description>
+        </choice>
+        <choice>
+           <code>3114027</code>
+           <description>metered dose</description>
+        </choice>
+        <choice>
+           <code>3114029</code>
+           <description>mg</description>
+        </choice>
+        <choice>
+           <code>3114031</code>
+           <description>mg/kg</description>
+        </choice>
+        <choice>
+           <code>3114033</code>
+           <description>mg/kg/min</description>
+        </choice>
+        <choice>
+           <code>3114035</code>
+           <description>mg/min</description>
+        </choice>
+        <choice>
+           <code>3114037</code>
+           <description>ml</description>
+        </choice>
+        <choice>
+           <code>3114039</code>
+           <description>ml/hr</description>
+        </choice>
+        <choice>
+           <code>3114041</code>
+           <description>other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>3114043</code>
+           <description>puffs</description>
+        </choice>
+        <choice>
+           <code>3114045</code>
+           <description>units/hr</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eHistory.15" minOccurs="0" maxOccurs="1" dataType="CurrentMedicationAdministrationRoute" isNillable="No">
+<name>Current Medication Administration Route</name>
+<national>No</national>
+<state>No</state>
+<definition>The administration route (po, SQ, etc.) of the patient's current medication</definition>
+<v2Number>E12_17</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3115001</code>
+           <description>Endotracheal Tube</description>
+        </choice>
+        <choice>
+           <code>3115003</code>
+           <description>Gastrostomy/Feeding Tube</description>
+        </choice>
+        <choice>
+           <code>3115005</code>
+           <description>Inhalation</description>
+        </choice>
+        <choice>
+           <code>3115007</code>
+           <description>Intra-Nasal</description>
+        </choice>
+        <choice>
+           <code>3115009</code>
+           <description>Intramuscular (IM)</description>
+        </choice>
+        <choice>
+           <code>3115011</code>
+           <description>Intraocular</description>
+        </choice>
+        <choice>
+           <code>3115013</code>
+           <description>Intraosseous (IO)</description>
+        </choice>
+        <choice>
+           <code>3115015</code>
+           <description>Intravenous (IV)</description>
+        </choice>
+        <choice>
+           <code>3115017</code>
+           <description>Nasal Cannula</description>
+        </choice>
+        <choice>
+           <code>3115019</code>
+           <description>Nasogastric</description>
+        </choice>
+        <choice>
+           <code>3115021</code>
+           <description>Non-Rebreather Mask</description>
+        </choice>
+        <choice>
+           <code>3115023</code>
+           <description>Ophthalmic</description>
+        </choice>
+        <choice>
+           <code>3115025</code>
+           <description>Oral</description>
+        </choice>
+        <choice>
+           <code>3115027</code>
+           <description>Other/miscellaneous</description>
+        </choice>
+        <choice>
+           <code>3115029</code>
+           <description>Otic</description>
+        </choice>
+        <choice>
+           <code>3115031</code>
+           <description>Rectal</description>
+        </choice>
+        <choice>
+           <code>3115033</code>
+           <description>Subcutaneous</description>
+        </choice>
+        <choice>
+           <code>3115035</code>
+           <description>Sublingual</description>
+        </choice>
+        <choice>
+           <code>3115037</code>
+           <description>Topical</description>
+        </choice>
+        <choice>
+           <code>3115039</code>
+           <description>Tracheostomy</description>
+        </choice>
+        <choice>
+           <code>3115041</code>
+           <description>Transdermal</description>
+        </choice>
+        <choice>
+           <code>3115043</code>
+           <description>Urethral</description>
+        </choice>
+        <choice>
+           <code>3115045</code>
+           <description>Ventimask</description>
+        </choice>
+        <choice>
+           <code>3115047</code>
+           <description>Wound</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element></group>
+<element number="eHistory.16" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
+<name>Presence of Emergency Information Form</name>
+<national>No</national>
+<state>No</state>
+<definition>Indication of the presence of the Emergency Information Form associated with patient's with special healthcare needs.</definition>
+<v2Number>E12_18</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eHistory.17" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Alcohol/Drug Use Indicators</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indicators for the potential use of alcohol or drugs by the patient related to the patient's current illness or injury.</definition>
+<v2Number>E12_19</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801015</code><description>None Reported</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3117001</code>
+           <description>Alcohol Containers/Paraphernalia at Scene</description>
+        </choice>
+        <choice>
+           <code>3117003</code>
+           <description>Drug Paraphernalia at Scene</description>
+        </choice>
+        <choice>
+           <code>3117005</code>
+           <description>Patient Admits to Alcohol Use</description>
+        </choice>
+        <choice>
+           <code>3117007</code>
+           <description>Patient Admits to Drug Use</description>
+        </choice>
+        <choice>
+           <code>3117009</code>
+           <description>Positive Level known from Law Enforcement or Hospital Record</description>
+        </choice>
+        <choice>
+           <code>3117011</code>
+           <description>Smell of Alcohol on Breath</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eHistory.18" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Pregnancy</name>
+<national>No</national>
+<state>No</state>
+<definition>Indication of the possibility by the patient's history of current pregnancy.</definition>
+<v2Number>E12_20</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3118001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>3118003</code>
+           <description>Possible, Unconfirmed</description>
+        </choice>
+        <choice>
+           <code>3118005</code>
+           <description>Yes, Confirmed 12 to 20 Weeks</description>
+        </choice>
+        <choice>
+           <code>3118007</code>
+           <description>Yes, Confirmed Greater Than 20 Weeks</description>
+        </choice>
+        <choice>
+           <code>3118009</code>
+           <description>Yes, Confirmed Less Than 12 Weeks</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eHistory.19" minOccurs="0" maxOccurs="1" dataType="DateTimeType" isNillable="No">
+<name>Last Oral Intake</name>
+<national>No</national>
+<state>No</state>
+<definition>Date and Time of last oral intake.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<table  cellspacing="2"><tr><td>							
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
+  <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
+  <tr><td align="center">T</td><td>separator that indicates time-of-day follows</td></tr>
+  <tr><td align="center">hh</td><td>a two-digit numeral that represents the hour</td></tr>
+  <tr><td align="center">':'</td><td>a separator between parts of the time-of-day portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minute</td></tr>
+  <tr><td align="center">ss</td><td>a two-integer-digit numeral that represents the whole seconds</td></tr>
+  <tr><td align="center">'.' s+</td><td>(not required) represents the fractional seconds</td></tr>
+  <tr><td align="center">zzzzzz</td><td>(required) represents the timezone (as described below)</td></tr>
+</table> 
+</td></tr></table>
+<br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+<table cellspacing="2"><tr><td>	
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">hh</td><td>a two-digit numeral (with leading zeros as required) that represents the hours</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minutes</td></tr>
+  <tr><td align="center">'+'</td><td>a nonnegative duration</td></tr>
+  <tr><td align="center">'-'</td><td>a nonpositive duration</td></tr>
+</table>
+</td></tr></table></v3Comment>
+<v3Changes>Added to better document last oral intake.</v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
+     </patterns>
+      <constraints>
+        <dataType>dateTime</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element></section>

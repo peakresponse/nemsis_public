@@ -1,0 +1,23 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eLabs.08" minOccurs="0" maxOccurs="1" dataType="WaveformGraphic" isNillable="No">
+<name>Imaging Study File or Waveform Graphic</name>
+<national>No</national>
+<state>No</state>
+<definition>The imaging study file.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to allow the imaging file to be uploaded and better document patient care.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>base64Binary</dataType>
+      </constraints>
+</restrictions>
+</element>

@@ -1,0 +1,162 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="eCustomConfiguration">
+<group number="eCustomConfiguration.CustomGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="eCustomConfiguration.01" minOccurs="0" maxOccurs="1" dataType="CustomTitle" isNillable="No">
+<name>Custom Data Element Title</name>
+<national>No</national>
+<state>No</state>
+<definition>This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is grouped with all data elements in this section and can have multiple instances.</v3Comment>
+<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eCustomConfiguration.02" minOccurs="0" maxOccurs="1" dataType="CustomDefinition" isNillable="No">
+<name>Custom Definition</name>
+<national>No</national>
+<state>No</state>
+<definition>The definition of the custom element and how it should be used.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>255</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>0</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="eCustomConfiguration.03" minOccurs="0" maxOccurs="1" dataType="CustomDataType" isNillable="No">
+<name>Custom Data Type</name>
+<national>No</national>
+<state>No</state>
+<definition>The data type of the custom element.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9902001</code>
+           <description>Binary</description>
+        </choice>
+        <choice>
+           <code>9902003</code>
+           <description>Date/Time</description>
+        </choice>
+        <choice>
+           <code>9902005</code>
+           <description>Integer/Number</description>
+        </choice>
+        <choice>
+           <code>9902007</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>9902009</code>
+           <description>Text/String</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eCustomConfiguration.04" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
+<name>Custom Data Element Recurrence</name>
+<national>No</national>
+<state>No</state>
+<definition>Indication if the data element will accept multiple values.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eCustomConfiguration.05" minOccurs="0" maxOccurs="1" dataType="ElementUsage" isNillable="No">
+<name>Custom Data Element Usage</name>
+<national>No</national>
+<state>No</state>
+<definition>The Usage (Mandatory, Required, or Optional) for the Custom Data Element.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Mandatory = Must be completed and will not accept null values<br/>Required = Must be completed but will accept null values<br/>Optional = Not required but if collected, it cannot be a null value.</v3Comment>
+<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9903001</code>
+           <description>Mandatory</description>
+        </choice>
+        <choice>
+           <code>9903003</code>
+           <description>Required</description>
+        </choice>
+        <choice>
+           <code>9903005</code>
+           <description>Optional</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="eCustomConfiguration.06" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Custom Data Element Potential Values</name>
+<national>No</national>
+<state>No</state>
+<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>100</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element></group>
+</section>

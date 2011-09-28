@@ -1,0 +1,61 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eAirway.09" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Suspected Reasons for Failed Airway Procedure</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The reason(s) the airway was unable to be successfully managed.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better document airway management.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4009001</code>
+           <description>Difficult Patient Airway Anatomy</description>
+        </choice>
+        <choice>
+           <code>4009003</code>
+           <description>ETI Attempted, but Arrived At Destination Facility Before Accomplished</description>
+        </choice>
+        <choice>
+           <code>4009005</code>
+           <description>Facial or Oral Trauma</description>
+        </choice>
+        <choice>
+           <code>4009007</code>
+           <description>Inability to Expose Vocal Cords</description>
+        </choice>
+        <choice>
+           <code>4009009</code>
+           <description>Inadequate Patient Relaxation/Presence of Protective Airway Reflexes</description>
+        </choice>
+        <choice>
+           <code>4009011</code>
+           <description>Jaw Clenched (Trismus)</description>
+        </choice>
+        <choice>
+           <code>4009013</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>4009015</code>
+           <description>Poor Patient Access</description>
+        </choice>
+        <choice>
+           <code>4009017</code>
+           <description>Secretions/Blood/Vomit</description>
+        </choice>
+        <choice>
+           <code>4009019</code>
+           <description>Unable to Position or Access Patient</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

@@ -1,0 +1,94 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="ePayment.04" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Reason for Physician Certification Statement</name>
+<national>No</national>
+<state>No</state>
+<definition>The reason for EMS transport noted on the Physician Certification Statement</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to assist in billing documentation.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>2604001</code>
+           <description>Bed Confined</description>
+        </choice>
+        <choice>
+           <code>2604003</code>
+           <description>Cardiac/Hemodynamic monitoring required during transport</description>
+        </choice>
+        <choice>
+           <code>2604005</code>
+           <description>Confused, combative, lethargic, comatose</description>
+        </choice>
+        <choice>
+           <code>2604007</code>
+           <description>Contractures</description>
+        </choice>
+        <choice>
+           <code>2604009</code>
+           <description>Danger to self or others-monitoring</description>
+        </choice>
+        <choice>
+           <code>2604011</code>
+           <description>Danger to self or others-seclusion (flight risk)</description>
+        </choice>
+        <choice>
+           <code>2604013</code>
+           <description>DVT requires elevation of lower extremity</description>
+        </choice>
+        <choice>
+           <code>2604015</code>
+           <description>IV medications/fluids required during transport</description>
+        </choice>
+        <choice>
+           <code>2604017</code>
+           <description>Moderate to severe pain on movement</description>
+        </choice>
+        <choice>
+           <code>2604019</code>
+           <description>Morbid Obesity requires additional personnel/equipment to handle</description>
+        </choice>
+        <choice>
+           <code>2604021</code>
+           <description>Non-healing fractures</description>
+        </choice>
+        <choice>
+           <code>2604023</code>
+           <description>Orthopedic device (backboard, halo, use of pins in traction, etc) requiring special handling in transit</description>
+        </choice>
+        <choice>
+           <code>2604025</code>
+           <description>Restraints (Physical or Chemical) anticipated or used during transport</description>
+        </choice>
+        <choice>
+           <code>2604027</code>
+           <description>Risk of falling off wheelchair or stretcher while in motion (not related to obesity)</description>
+        </choice>
+        <choice>
+           <code>2604029</code>
+           <description>Severe Muscular weakness and de-conditioned state precludes any significant physical activity</description>
+        </choice>
+        <choice>
+           <code>2604031</code>
+           <description>Special handling en route-Isolation</description>
+        </choice>
+        <choice>
+           <code>2604033</code>
+           <description>Third Party assistance/attendant required to apply, administer, or regulate or adjust oxygen en route</description>
+        </choice>
+        <choice>
+           <code>2604035</code>
+           <description>Unable to maintain erect sitting position in a chair for time needed to transport, due to moderate muscular weakness and de-conditioning.</description>
+        </choice>
+        <choice>
+           <code>2604037</code>
+           <description>Unable to sit in chair or wheelchair due to Grade II or greater decubitus ulcers on buttocks.</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

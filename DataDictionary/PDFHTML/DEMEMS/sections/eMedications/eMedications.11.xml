@@ -1,0 +1,33 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedications.11" minOccurs="0" maxOccurs="1" dataType="TxAuthorization" isNillable="No">
+<name>Medication Authorization</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of treatment authorization obtained</definition>
+<v2Number>E18_10</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9918001</code>
+           <description>On-Line (Remote Verbal Order)</description>
+        </choice>
+        <choice>
+           <code>9918003</code>
+           <description>On-Scene</description>
+        </choice>
+        <choice>
+           <code>9918005</code>
+           <description>Protocol (Standing Order)</description>
+        </choice>
+        <choice>
+           <code>9918007</code>
+           <description>Written Orders (Patient Specific)</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

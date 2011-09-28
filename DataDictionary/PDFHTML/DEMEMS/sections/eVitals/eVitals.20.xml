@@ -1,0 +1,53 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.20" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Glasgow Coma Score-Verbal</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The patient's Glasgow Coma Score Verbal.</definition>
+<v2Number>E14_16</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>Definitions now based on the National Trauma Data Standard (NTDS).</v3Comment>
+<v3Changes>Definitions changed to be consistent with the National Trauma Data Standard.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>1</code>
+           <description>No verbal/vocal response (All Age Groups)</description>
+        </choice>
+        <choice>
+           <code>2</code>
+           <description>Incomprehensible sounds (&gt;2 Years); Inconsolable, agitated</description>
+        </choice>
+        <choice>
+           <code>3</code>
+           <description>Inappropriate words (&gt;2 Years); Inconsistently consolable, moaning</description>
+        </choice>
+        <choice>
+           <code>4</code>
+           <description>Confused (&gt;2 Years); Cries but is consolable, inappropriate interactions</description>
+        </choice>
+        <choice>
+           <code>5</code>
+           <description>Oriented (&gt;2 Years); Smiles, oriented to sounds, follows objects, interacts</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

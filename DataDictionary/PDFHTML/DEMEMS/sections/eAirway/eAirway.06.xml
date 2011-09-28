@@ -1,0 +1,45 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eAirway.06" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Type of Individual Confirming Airway Device Placement</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The type of individual who confirmed the airway device placement.</definition>
+<v2Number></v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better document airway management.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>4006001</code>
+           <description>Another Person on the Same Crew</description>
+        </choice>
+        <choice>
+           <code>4006003</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>4006005</code>
+           <description>Person Performing Intubation</description>
+        </choice>
+        <choice>
+           <code>4006007</code>
+           <description>Receiving Air Medical/EMS Crew</description>
+        </choice>
+        <choice>
+           <code>4006009</code>
+           <description>Receiving Hospital Team</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

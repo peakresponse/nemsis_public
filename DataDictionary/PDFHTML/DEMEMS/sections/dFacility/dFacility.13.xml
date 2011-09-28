@@ -1,0 +1,21 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dFacility.13" minOccurs="0" maxOccurs="1" dataType="GPSLocation" isNillable="No">
+<name>Facility GPS Location</name>
+<national>No</national>
+<state>No</state>
+<definition>The facility GPS Coordinates.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The information contained within this element could be used to populate the address information within eScene.10 (Scene GPS Location) and/or eDisposition.09 (Destination GPS Location) as appropriate.
+                      <br/><br/>The pattern for GPS location is in the format "<span style="font-style:italic">latitude</span>,<span style="font-style:italic">longitude</span>" where:
+										  <br/>- <span style="font-style:italic">latitude</span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
+										  <br/>- <span style="font-style:italic">longitude</span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[\d]{0,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[\d]{0,6})?)</pattern>
+     </patterns>
+</restrictions>
+</element>

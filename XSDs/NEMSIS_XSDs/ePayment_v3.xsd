@@ -1,0 +1,2292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+	<xs:complexType name="ePayment">
+		<xs:sequence>
+			<xs:element name="ePayment.01" nillable="true" id="ePayment.PrimaryMethodofPayment">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.01</number>
+							<name>Primary Method of Payment</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The primary method of payment or type of insurance associated with this EMS encounter</definition>
+							<v2Number>E07_01</v2Number>
+							<usage>Required</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>Response</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment/>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="PrimaryMethodOfPayment">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.CertificateGroup" id="ePayment.CertificateGroup" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Group Tag to hold Certification information </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ePayment.02" type="YesNoUnkValues" id="ePayment.PhysicianCertificationStatement" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.02</number>
+										<name>Physician Certification Statement</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter.</definition>
+										<v2Number>E07_02</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Data Element Name changed from Certificate of Medical Necessity to Physician Certification Statement. The PCS statement and documentation of medical necessity is a requirement of the Centers for Medicare &amp; Medicaid Services. The circumstances are defined in 42 CFR 410.40 (d)(2) and (d)(3). http://www.cms.gov/
+										&lt;br/>&lt;br/>A PCS is required for the following non-emergency transport:
+										&lt;br/>1) Non-Emergency Repetitive Scheduled
+										&lt;br/>2) Non Emergency Non-Repetitive-Scheduled
+										&lt;br/>3) Non Emergency Services - Non Scheduled - Under direct care of a physician</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.03" type="DateTimeType" id="ePayment.DatePhysicianCertificationStatementSigned" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.03</number>
+										<name>Date Physician Certification Statement Signed</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The date the Physician Certification Statement was signed</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Added to assist in billing documentation. Associated with ePayment.02:  Physician Certification Statement.
+										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+&lt;table  cellspacing="2">&lt;tr>&lt;td>							
+&lt;table border="1px" cellpadding="3px" cellspacing="0">
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">T&lt;/td>&lt;td>separator that indicates time-of-day follows&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral that represents the hour&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">':'&lt;/td>&lt;td>a separator between parts of the time-of-day portion&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minute&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">ss&lt;/td>&lt;td>a two-integer-digit numeral that represents the whole seconds&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">'.' s+&lt;/td>&lt;td>(not required) represents the fractional seconds&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">zzzzzz&lt;/td>&lt;td>(required) represents the timezone (as described below)&lt;/td>&lt;/tr>
+&lt;/table> 
+&lt;/td>&lt;/tr>&lt;/table>
+&lt;br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+&lt;table cellspacing="2">&lt;tr>&lt;td>	
+&lt;table border="1px" cellpadding="3px" cellspacing="0">
+  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral (with leading zeros as required) that represents the hours&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minutes&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">'+'&lt;/td>&lt;td>a nonnegative duration&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;/td>&lt;/tr>&lt;/table></comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.04" id="ePayment.ReasonforPhysicianCertificationStatement" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.04</number>
+										<name>Reason for Physician Certification Statement</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The reason for EMS transport noted on the Physician Certification Statement</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Added to assist in billing documentation.</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="Reason">
+										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ePayment.05" type="HealthcareProviderType" id="ePayment.HealthcareProviderTypeSigningPhysicianCertificationStatement" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.05</number>
+										<name>Healthcare Provider Type Signing Physician Certification Statement</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The type of healthcare provider who signed the Physician Certification Statement</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.06" type="PersonLastName" id="ePayment.LastNameofIndividualSigningPhysicianCertificationStatement" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.06</number>
+										<name>Last Name of Individual Signing Physician Certification Statement</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The last name of the healthcare provider who signed the Physician Certification Statement.</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Added to assist in billing documentation.</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.07" type="PersonFirstName" id="ePayment.FirstNameofIndividualSigningPhysicianCertificationStatement" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.07</number>
+										<name>First Name of Individual Signing Physician Certification Statement</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The first name of the healthcare provider who signed the Physician Certification Statement.</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Added to assist in billing documentation.</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.08" type="ResidencyStatusOfThePatient" id="ePayment.PatientResidesinServiceArea" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.08</number>
+							<name>Patient Resides in Service Area</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>An indication of whether the patient's current residence is within the EMS agency service area.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to assist in billing documentation.</comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.InsuranceGroup" id="ePayment.InsuranceGroup" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Group Tag to hold information about the insurance company </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ePayment.09" type="InsuranceCompanyID" id="ePayment.InsuranceCompanyID" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.09</number>
+										<name>Insurance Company ID</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The ID Number of the patient's insurance company.</definition>
+										<v2Number>E07_03</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.10" type="InsuranceCompanyName" id="ePayment.InsuranceCompanyName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.10</number>
+										<name>Insurance Company Name</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The name of the patient's insurance company.</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.11" type="InsuranceCompanyBillingPriority" id="ePayment.InsuranceCompanyBillingPriority" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.11</number>
+										<name>Insurance Company Billing Priority</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The billing priority or order for the insurance company.</definition>
+										<v2Number>E07_04</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.12" id="ePayment.InsuranceCompanyAddress" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.12</number>
+										<name>Insurance Company Address</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The mailing address of the Insurance Company</definition>
+										<v2Number>E07_05</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="StreetAddress">
+										<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ePayment.13" type="CityGnisCode" id="ePayment.InsuranceCompanyCity" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.13</number>
+										<name>Insurance Company City</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The insurance company's city or township</definition>
+										<v2Number>E07_06</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.14" type="ANSIStateCode" id="ePayment.InsuranceCompanyState" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.14</number>
+										<name>Insurance Company State</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The insurance company's state, territory, or province, or District of Columbia.</definition>
+										<v2Number>E07_07</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.15" type="ZIP" id="ePayment.InsuranceCompanyZIPCode" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.15</number>
+										<name>Insurance Company ZIP Code</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The insurance company's ZIP Code</definition>
+										<v2Number>E07_08</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+&lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.16" type="ANSICountryCode" id="ePayment.InsuranceCompanyCountry" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.16</number>
+										<name>Insurance Company Country</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The insurance company's country</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<v3Changes>Added to better document international addresses.</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.17" type="InsuranceGroupIDName" id="ePayment.InsuranceGroupIDName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.17</number>
+										<name>Insurance Group ID/Name</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The ID number or name of the patient's insurance group</definition>
+										<v2Number>E07_09</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.18" type="InsurancePolicyIDNumber" id="ePayment.InsurancePolicyIDNumber" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.18</number>
+										<name>Insurance Policy ID Number</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The ID number of the patient's insurance policy</definition>
+										<v2Number>E07_10</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.19" type="PersonLastName" id="ePayment.LastNameoftheInsured" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.19</number>
+										<name>Last Name of the Insured</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The last (family) name of the person insured by the insurance company.</definition>
+										<v2Number>E07_11</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.20" type="PersonFirstName" id="ePayment.FirstNameoftheInsured" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.20</number>
+										<name>First Name of the Insured</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The first (given) name of the person insured by the insurance company</definition>
+										<v2Number>E07_12</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.21" type="PersonMiddleName" id="ePayment.MiddleInitialNameoftheInsured" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.21</number>
+										<name>Middle Initial/Name of the Insured</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The middle name, if any, of the person insured by the insurance company.</definition>
+										<v2Number>E07_13</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.22" type="RelationshipToInsured" id="ePayment.RelationshiptotheInsured" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.22</number>
+										<name>Relationship to the Insured</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The relationship of the patient to the primary insured person</definition>
+										<v2Number>E07_14</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.ClosestRelativeGroup" id="ePayment.ClosestRelativeGroup" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Group Tag to hold information about patient's relative or guardian </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ePayment.23" type="PersonLastName" id="ePayment.ClosestRelativeGuardianLastName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.23</number>
+										<name>Closest Relative/Guardian Last Name</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The last (family) name of the patient's closest relative or guardian</definition>
+										<v2Number>E07_18</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.24" type="PersonFirstName" id="ePayment.ClosestRelativeGuardianFirstName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.24</number>
+										<name>Closest Relative/ Guardian First Name</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The first (given) name of the patient's closest relative or guardian</definition>
+										<v2Number>E07_19</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.25" type="PersonMiddleName" id="ePayment.ClosestRelativeGuardianMiddleInitialName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.25</number>
+										<name>Closest Relative/ Guardian Middle Initial/Name</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The middle name/initial, if any, of the closest patient's relative or guardian.</definition>
+										<v2Number>E07_20</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.26" id="ePayment.ClosestRelativeGuardianStreetAddress" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.26</number>
+										<name>Closest Relative/ Guardian Street Address</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The home street address of the patient's closest relative or guardian.</definition>
+										<v2Number>E07_21</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="StreetAddress">
+										<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ePayment.27" type="CityGnisCode" id="ePayment.ClosestRelativeGuardianCity" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.27</number>
+										<name>Closest Relative/ Guardian City</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The home city of the patient's closest relative or guardian.</definition>
+										<v2Number>E07_22</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.28" type="ANSIStateCode" id="ePayment.ClosestRelativeGuardianState" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.28</number>
+										<name>Closest Relative/ Guardian State</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The home state of the patient's closest relative or guardian</definition>
+										<v2Number>E07_23</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.29" type="ZIP" id="ePayment.ClosestRelativeGuardianZIPCode" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.29</number>
+										<name>Closest Relative/ Guardian ZIP Code</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The home ZIP Code of the patient's closest relative or guardian</definition>
+										<v2Number>E07_24</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+&lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.30" type="ANSICountryCode" id="ePayment.ClosestRelativeGuardianCountry" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.30</number>
+										<name>Closest Relative/ Guardian Country</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The home country of the patient's closest relative or guardian</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
+</comment>
+										<v3Changes>Added to improve international compatibility.</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.31" id="ePayment.ClosestRelativeGuardianPhoneNumber" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.31</number>
+										<name>Closest Relative/ Guardian Phone Number</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The phone number of the patient's closest relative or guardian</definition>
+										<v2Number>E07_25</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="PhoneNumber">
+										<xs:attribute name="PhoneNumberType" type="PhoneNumberType" use="optional"/>
+										<xs:attribute name="CorrelationID" type="CorrelationID"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ePayment.32" type="ClosestRelativeGuardianRelationship" id="ePayment.ClosestRelativeGuardianRelationship" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.32</number>
+										<name>Closest Relative/ Guardian Relationship</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The relationship of the patient's closest relative or guardian</definition>
+										<v2Number>E07_26</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.EmployerGroup" id="ePayment.EmployerGroup" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Group Tag to hold information about patient's employer </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ePayment.33" type="EmployerName" id="ePayment.PatientsEmployer" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.33</number>
+										<name>Patient's Employer</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The patient's employers Name</definition>
+										<v2Number>E07_27</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.34" id="ePayment.PatientsEmployersAddress" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.34</number>
+										<name>Patient's Employer's Address</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The street address of the patient's employer</definition>
+										<v2Number>E07_28</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="StreetAddress">
+										<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ePayment.35" type="CityGnisCode" id="ePayment.PatientsEmployersCity" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.35</number>
+										<name>Patient's Employer's City</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The city of the patient's employer</definition>
+										<v2Number>E07_29</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on GNIS Civil Code or Populated Place Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.36" type="ANSIStateCode" id="ePayment.PatientsEmployersState" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.36</number>
+										<name>Patient's Employer's State</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The state of the patient's employer</definition>
+										<v2Number>E07_30</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.37" type="ZIP" id="ePayment.PatientsEmployersZIPCode" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.37</number>
+										<name>Patient's Employer's ZIP Code</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The ZIP Code of the patient's employer</definition>
+										<v2Number>E07_31</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+&lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.38" type="ANSICountryCode" id="ePayment.PatientsEmployersCountry" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.38</number>
+										<name>Patient's Employer's Country</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The country of the patient's employer</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
+</comment>
+										<v3Changes>Added to improve international compatibility.</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.39" id="ePayment.PatientsWorkPhoneNumber" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.39</number>
+										<name>Patient’s Employer’s Primary Phone Number</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The employer’s primary phone number.</definition>
+										<v2Number>E07_32</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="PhoneNumber">
+										<xs:attribute name="PhoneNumberType" type="PhoneNumberType" use="optional"/>
+										<xs:attribute name="CorrelationID" type="CorrelationID"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.40" type="ResponseUrgency" id="ePayment.ResponseUrgency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.40</number>
+							<name>Response Urgency</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The urgency in which the EMS agency began to mobilize resources for this EMS encounter.</definition>
+							<v2Number>E07_33</v2Number>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>This is for billing documentation.</comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.41" id="ePayment.PatientTransportAssessment" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.41</number>
+							<name>Patient Transport Assessment</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Documentation of the patient's transport need based on mobility and/or physical capability.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to better justify the medical necessity of the transport. Based on CMS 42 CFR Ch IV (10-1-02 Edition) &amp; 410.40 (d) medical necessity requirement (1)</comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TransportAssessment">
+							<xs:attribute name="CorrelationID" type="CorrelationID"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.42" id="ePayment.SpecialtyCareTransportCareProvider" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.42</number>
+							<name>Specialty Care Transport Care Provider</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Documentation to show the patient care provided to the patient met the Specialty Care Transport Base Rate requirements.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to improve Specialty Care Transport billing justification. In accordance with CMS requirements Specialty Care Transport (SCT): ""Additional training" means the specific additional training that a State requires a paramedic to complete in order to qualify to furnish specialty care to a critically ill or injured patient during an SCT." </comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TransportCareProvider">
+							<xs:attribute name="CorrelationID" type="CorrelationID"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.43" type="AmbulanceTransportCode" id="ePayment.AmbulanceTransportCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.43</number>
+							<name>Ambulance Transport Code</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Indicator about the type of transport of the patient.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to improve billing with electronic claims using X12. The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport".  The Accredited Standards Committee X12 organization maintains the standard.  See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:  
+http://ushik.org/dr.ui.drData_Page?system=mdr&amp;Search=xxKEYIDxx&amp;KeyOrgID=18&amp;KeyRID=24821000&amp;Referer=DataElement </comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.44" id="ePayment.AmbulanceTransportReasonCode" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.44</number>
+							<name>Ambulance Transport Reason Code</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The CMS Ambulance Transport Reason Code for the transport.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to improve billing with electronic claims using the ASC X12 Standard. 
+The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport". The Accredited Standards Committee X12 organization maintains the standard. See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:
+http://ushik.ahrq.gov/ViewItemDetails?system=mdr&amp;itemKey=21826000 </comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="AmbulanceReasonCode">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.45" type="TripPurposeDesciption" id="ePayment.RoundTripPurposeDescription" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.45</number>
+							<name>Round Trip Purpose Description</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Free text description providing the purpose of the round trip EMS transport based on CR109 field for CMS.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to improve billing documentation for CMS X12 based transactions.
+&lt;br/>&lt;br/>This element should be documented when ePayment.44 (Ambulance Transport) code = X (Round Trip).
+&lt;br/>&lt;br/>Ambulance providers can use this field to provide additional information regarding the circumstances of a round trip transport or for other medical 
+neccessity documentation.							
+							</comment>
+							<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.46" type="StretcherPurposeDesciption" id="ePayment.StretcherPurposeDescription" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.46</number>
+							<name>Stretcher Purpose Description</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Free Text Documentation providing the reason for use of a stretcher in the EMS patient transport.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to improve billing using CMS X12 transactions based on CR110.
+							Ambulance providers can use this field to provide additional information regarding the patient's condition that warranted the use of a strecher or 
+							for other medical necessity documentation.
+							</comment>
+							<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.47" id="ePayment.AmbulanceConditionsIndicator" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.47</number>
+							<name>Ambulance Conditions Indicator</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to improve billing documentation and justification.</comment>
+							<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="AmbulanceConditionsIndicator">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.48" type="Mileage" id="ePayment.MileagetoClosestHospitalFacility" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.48</number>
+							<name>Mileage to Closest Hospital Facility</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The mileage to the closest hospital facility from the scene. Documented only if the patient was transported to a facility farther away than the closest hospital.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to clarify billing mileage when the patient is not taken to the closest facility.</comment>
+							<v3Changes>Added for improved billing documentation.</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.49" type="YesNoValues" id="ePayment.ALSAssessmentPerformedandWarranted" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.49</number>
+							<name>ALS Assessment Performed and Warranted</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Documentation that the patient required an ALS assessment and it was performed.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to improve billing justification</comment>
+							<v3Changes>Added to improve billing justification</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.50" nillable="true" id="ePayment.CMSServiceLevel">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.50</number>
+							<name>CMS Service Level</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The CMS service level for this EMS encounter.</definition>
+							<v2Number>E07_34</v2Number>
+							<usage>Required</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment/>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="CMSServiceLevel">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.51" id="ePayment.EMSConditionCode" maxOccurs="unbounded" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.51</number>
+							<name>EMS Condition Code</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The condition code associated with the CMS EMS negotiated rule-making process.</definition>
+							<v2Number>E07_35</v2Number>
+							<usage>Optional</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>Source CMS</comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="icd10Code">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.52" id="ePayment.CMSTransportationIndicator" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.52</number>
+							<name>CMS Transportation Indicator</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The CMS Ambulance Fee Schedule Transportation and Air Medical Transportation Indicators are used to better describe why it was necessary for the patient to be transported in a particular way or circumstance.</definition>
+							<v2Number>E07_37</v2Number>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Name changed from Condition Code Modifier to CMS Transportation Indicator</comment>
+							<v3Changes>Name changed from Condition Code Modifier to CMS Transportation Indicator</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="CMSTransportationIndicator">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ePayment.53" type="AuthorizationCode" id="ePayment.TransportAuthorizationCode" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.53</number>
+							<name>Transport Authorization Code</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Prior authorization code provided by the insurance carrier/payor.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment/>
+							<v3Changes>Added to improve billing documentation.</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.54" type="PersonName" id="ePayment.PriorAuthorizationCodePayor" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePayment.54</number>
+							<name>Prior Authorization Code Payor</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The Payor who has provided the Prior Authorization Code.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment>Added to document Prior Authorization Codes for an EMS Transport.</comment>
+							<v3Changes>Added to improve billing documentation.</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ePayment.SupplyItemGroup" id="ePayment.SupplyItemGroup" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Group Tag to hold information about the supply used on the patient by the EMS Crew during the EMS event.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ePayment.55" type="SupplyUsed" id="ePayment.SupplyItemUsedName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.55</number>
+										<name>Supply Item Used Name</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The name of the supply used on the patient by the EMS Crew during the EMS event.</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Added to track EMS supplies for billing.  The list of supplies would be created by the EMS Agency.  There is no master list of supply items defined.</comment>
+										<v3Changes>Added to track EMS supplies for billing.</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ePayment.56" type="SupplyCount" id="ePayment.NumberofSupplyItemsUsed" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.56</number>
+										<name>Number of Supply Item(s) Used</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The number of the specific supply item used on the patient by the EMS Crew during the EMS event.</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment>Associated with ePayment.56 (Supply Item Used Name). Used to better track supply items for billing</comment>
+										<v3Changes>Added to track EMS supplies for billing.</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="AmbulanceConditionsIndicator">
+		<xs:annotation>
+			<xs:documentation>Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation>Patient was admitted to hospital</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2">
+				<xs:annotation>
+					<xs:documentation>Patient was bed confined before the ambulance service</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation>Patient was bed confined after the ambulance service</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4">
+				<xs:annotation>
+					<xs:documentation>Patient was moved by stretcher</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation>Patient was unconscious or in shock</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="6">
+				<xs:annotation>
+					<xs:documentation>Patient was transported in an emergency situation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="7">
+				<xs:annotation>
+					<xs:documentation>Patient had to be physically restrained</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="8">
+				<xs:annotation>
+					<xs:documentation>Patient had visible hemorrhaging</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9">
+				<xs:annotation>
+					<xs:documentation>Ambulance service was medically necessary</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="10">
+				<xs:annotation>
+					<xs:documentation>Transportation was to the nearest facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AmbulanceReasonCode">
+		<xs:annotation>
+			<xs:documentation>The CMS Ambulance Transport Reason Code used in CMS X12 transmissions and CR104.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A">
+				<xs:annotation>
+					<xs:documentation>Patient was transported to the nearest facility for care of symptoms, complaints, or both</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="B">
+				<xs:annotation>
+					<xs:documentation>Patient was transported for the benefit of a preferred physician</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C">
+				<xs:annotation>
+					<xs:documentation>Patient was transported for the nearness of family members</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D">
+				<xs:annotation>
+					<xs:documentation>Patient was transported for the care of a specialist or for availability of equipment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="E">
+				<xs:annotation>
+					<xs:documentation>Patient was transferred to a Rehabilitation Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AmbulanceTransportCode">
+		<xs:annotation>
+			<xs:documentation>Information about the EMS Transport related to the CMS Ambulance Transport Code and CR103.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="I">
+				<xs:annotation>
+					<xs:documentation>Initial Trip</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="R">
+				<xs:annotation>
+					<xs:documentation>Return Trip</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="X">
+				<xs:annotation>
+					<xs:documentation>Round Trip</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="T">
+				<xs:annotation>
+					<xs:documentation>Transfer Trip</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AuthorizationCode">
+		<xs:annotation>
+			<xs:documentation>Prior authorization code provided by the insurance carrier/payor.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="52"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ClosestRelativeGuardianRelationship">
+		<xs:annotation>
+			<xs:documentation>The relationship of the patient's closest relative or guardian</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2632001">
+				<xs:annotation>
+					<xs:documentation>Appointed Guardian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632003">
+				<xs:annotation>
+					<xs:documentation>Child/Dependent</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632005">
+				<xs:annotation>
+					<xs:documentation>Father</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632007">
+				<xs:annotation>
+					<xs:documentation>Mother</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632009">
+				<xs:annotation>
+					<xs:documentation>Other (Non-Relative)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632011">
+				<xs:annotation>
+					<xs:documentation>Other (Relative)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632013">
+				<xs:annotation>
+					<xs:documentation>Sibling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632015">
+				<xs:annotation>
+					<xs:documentation>Spouse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CMSServiceLevel">
+		<xs:annotation>
+			<xs:documentation>The CMS service level for this EMS encounter.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2650001">
+				<xs:annotation>
+					<xs:documentation>ALS, Level 1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650003">
+				<xs:annotation>
+					<xs:documentation>ALS, Level 1 Emergency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650005">
+				<xs:annotation>
+					<xs:documentation>ALS, Level 2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650007">
+				<xs:annotation>
+					<xs:documentation>BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650009">
+				<xs:annotation>
+					<xs:documentation>BLS, Emergency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650011">
+				<xs:annotation>
+					<xs:documentation>Fixed Wing (Airplane)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650013">
+				<xs:annotation>
+					<xs:documentation>Paramedic Intercept</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650015">
+				<xs:annotation>
+					<xs:documentation>Specialty Care Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2650017">
+				<xs:annotation>
+					<xs:documentation>Rotary Wing (Helicopter)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CMSTransportationIndicator">
+		<xs:annotation>
+			<xs:documentation>The CMS Condition Code Air Ambulance Modifier indicating why it was medically necessary to respond with air medical services as opposed to ground medical
+services.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="C1">
+				<xs:annotation>
+					<xs:documentation>Interfacility Transport (Requires Higher level of care)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C2">
+				<xs:annotation>
+					<xs:documentation>Interfacility Transport (service not available)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C3">
+				<xs:annotation>
+					<xs:documentation>Emergency Trauma Dispatch Condition Code (Major Incident or Mechanism of Injury)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C4">
+				<xs:annotation>
+					<xs:documentation>Medically Necessary Transport (Facility on Divert or Services Unavailable)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C5">
+				<xs:annotation>
+					<xs:documentation>BLS Transport of ALS Patient (ALS not available)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C6">
+				<xs:annotation>
+					<xs:documentation>ALS Response (Based on Dispatch Info) to BLS Patient (Condition)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="C7">
+				<xs:annotation>
+					<xs:documentation>IV Medications required en route (ALS)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D1">
+				<xs:annotation>
+					<xs:documentation>Long Distance-patient's condition requires rapid transportation over a long distance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D2">
+				<xs:annotation>
+					<xs:documentation>Reare Circumstances, Traffic Patterns Precludes Ground Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D3">
+				<xs:annotation>
+					<xs:documentation>Time to the closest appropriate hospital due to the patient's condition precludes ground transport; maximize clinical benifits</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D4">
+				<xs:annotation>
+					<xs:documentation>Pick up Point not Accessible by Ground Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ConditionCodeNumber">
+		<xs:annotation>
+			<xs:documentation>The condition code associated with the CMS EMS negotiated rule-making process.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2651001">
+				<xs:annotation>
+					<xs:documentation>Abdominal Pain-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651003">
+				<xs:annotation>
+					<xs:documentation>Abnormal Cardiac Rhythm/Cardiac Dysrhythmia-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651005">
+				<xs:annotation>
+					<xs:documentation>Abnormal Skin Signs-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651007">
+				<xs:annotation>
+					<xs:documentation>Abnormal Vital Signs-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651009">
+				<xs:annotation>
+					<xs:documentation>Advanced Airway Management-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651011">
+				<xs:annotation>
+					<xs:documentation>Airway Control/Positioning Required-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651013">
+				<xs:annotation>
+					<xs:documentation>Alcohol Intoxication or Drug Overdose-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651015">
+				<xs:annotation>
+					<xs:documentation>Allergic Reaction-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651017">
+				<xs:annotation>
+					<xs:documentation>Allergic Reaction-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651019">
+				<xs:annotation>
+					<xs:documentation>Altered Level of Consciousness (non-traumatic)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651021">
+				<xs:annotation>
+					<xs:documentation>Animal Bites/Sting/Envenomation-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651023">
+				<xs:annotation>
+					<xs:documentation>Animal Bites/Stings/Envenomation-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651025">
+				<xs:annotation>
+					<xs:documentation>Back Pain (non-traumatic possible cardiac or vascular)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651027">
+				<xs:annotation>
+					<xs:documentation>Back Pain (non-traumatic with neurologic symptoms)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651029">
+				<xs:annotation>
+					<xs:documentation>Blood Glucose-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651031">
+				<xs:annotation>
+					<xs:documentation>Burns-Major-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651033">
+				<xs:annotation>
+					<xs:documentation>Burns-Minor-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651035">
+				<xs:annotation>
+					<xs:documentation>Cardiac Arrest_Resuscitation in Progress-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651037">
+				<xs:annotation>
+					<xs:documentation>Cardiac Symptoms other than Chest Pain (atypical pain)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651039">
+				<xs:annotation>
+					<xs:documentation>Cardiac Symptoms other than Chest Pain (palpitations)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651041">
+				<xs:annotation>
+					<xs:documentation>Cardiac/Hemodynamic Monitoring Required-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651043">
+				<xs:annotation>
+					<xs:documentation>Chemical Restraint-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651045">
+				<xs:annotation>
+					<xs:documentation>Chest Pain (Non-Traumatic) -ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651047">
+				<xs:annotation>
+					<xs:documentation>Choking Episode-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651049">
+				<xs:annotation>
+					<xs:documentation>Cold Exposure-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651051">
+				<xs:annotation>
+					<xs:documentation>Cold Exposure-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651053">
+				<xs:annotation>
+					<xs:documentation>Convulsions/Seizures-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651055">
+				<xs:annotation>
+					<xs:documentation>Difficulty Breathing-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651057">
+				<xs:annotation>
+					<xs:documentation>Electrocution-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651059">
+				<xs:annotation>
+					<xs:documentation>Eye Injuries-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651061">
+				<xs:annotation>
+					<xs:documentation>Eye Symptoms (non-traumatic)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651063">
+				<xs:annotation>
+					<xs:documentation>Hazmat Exposure-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651065">
+				<xs:annotation>
+					<xs:documentation>Heat Exposure-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651067">
+				<xs:annotation>
+					<xs:documentation>Heat Exposure-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651069">
+				<xs:annotation>
+					<xs:documentation>Hemorrhage-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651071">
+				<xs:annotation>
+					<xs:documentation>Infectious Diseases requiring Isolation/Public Health Risk-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651073">
+				<xs:annotation>
+					<xs:documentation>Lightning-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651075">
+				<xs:annotation>
+					<xs:documentation>Major Trauma-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651077">
+				<xs:annotation>
+					<xs:documentation>Medical Device Failure-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651079">
+				<xs:annotation>
+					<xs:documentation>Medical Device Failure-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651081">
+				<xs:annotation>
+					<xs:documentation>Near Drowning-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651083">
+				<xs:annotation>
+					<xs:documentation>Neurologic Distress-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651085">
+				<xs:annotation>
+					<xs:documentation>Non Traumatic Headache-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651087">
+				<xs:annotation>
+					<xs:documentation>Other Trauma (amputation digits)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651089">
+				<xs:annotation>
+					<xs:documentation>Other Trauma (amputation other)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651091">
+				<xs:annotation>
+					<xs:documentation>Other Trauma (fracture/dislocation-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651093">
+				<xs:annotation>
+					<xs:documentation>Other Trauma (major bleeding)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651095">
+				<xs:annotation>
+					<xs:documentation>Other Trauma (need for monitor or airway)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651097">
+				<xs:annotation>
+					<xs:documentation>Other Trauma (penetrating extremity)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651099">
+				<xs:annotation>
+					<xs:documentation>Other Trauma (suspected internal injuries)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651101">
+				<xs:annotation>
+					<xs:documentation>Pain (Severe)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651103">
+				<xs:annotation>
+					<xs:documentation>Patient Safety (monitoring required)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651105">
+				<xs:annotation>
+					<xs:documentation>Patient Safety (restraints required)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651107">
+				<xs:annotation>
+					<xs:documentation>Patient Safety (risk of falling off stretcher)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651109">
+				<xs:annotation>
+					<xs:documentation>Patient Safety (seclusion required)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651111">
+				<xs:annotation>
+					<xs:documentation>Poisons (all routes)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651113">
+				<xs:annotation>
+					<xs:documentation>Post-Operative Procedure Complications-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651115">
+				<xs:annotation>
+					<xs:documentation>Pregnancy Complication/Childbirth/Labor-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651117">
+				<xs:annotation>
+					<xs:documentation>Psychiatric/Behavioral (abnormal mental status)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651119">
+				<xs:annotation>
+					<xs:documentation>Psychiatric/Behavioral (threat to self or others)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651121">
+				<xs:annotation>
+					<xs:documentation>Respiratory Arrest-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651123">
+				<xs:annotation>
+					<xs:documentation>Severe Abdominal Pain-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651125">
+				<xs:annotation>
+					<xs:documentation>Severe Alcohol Intoxication-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651127">
+				<xs:annotation>
+					<xs:documentation>Severe Dehydration-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651129">
+				<xs:annotation>
+					<xs:documentation>Sexual Assault (major injuries)-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651131">
+				<xs:annotation>
+					<xs:documentation>Sexual Assault (minor injuries)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651133">
+				<xs:annotation>
+					<xs:documentation>Sick Person-Fever-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651135">
+				<xs:annotation>
+					<xs:documentation>Special Handling (Isolation)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651137">
+				<xs:annotation>
+					<xs:documentation>Special Handling (orthopedic device required)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651139">
+				<xs:annotation>
+					<xs:documentation>Special Handling (positioning required)-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651141">
+				<xs:annotation>
+					<xs:documentation>Suctioning/Oxygen/IV fluids required-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651143">
+				<xs:annotation>
+					<xs:documentation>Third Party Assistance/Attendant Required-BLS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2651145">
+				<xs:annotation>
+					<xs:documentation>Unconscious/Syncope/Dizziness-ALS</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EmployerName">
+		<xs:annotation>
+			<xs:documentation>The patient's employers Name.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="HealthcareProviderType">
+		<xs:annotation>
+			<xs:documentation>The type of healthcare provider who signed the Physician Certification Statement</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2605001">
+				<xs:annotation>
+					<xs:documentation>Clinical Nurse Specialist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2605003">
+				<xs:annotation>
+					<xs:documentation>Discharge Planner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2605005">
+				<xs:annotation>
+					<xs:documentation>Physician (MD or DO)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2605007">
+				<xs:annotation>
+					<xs:documentation>Physician Assistant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2605009">
+				<xs:annotation>
+					<xs:documentation>Registered Nurse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2605011">
+				<xs:annotation>
+					<xs:documentation>Registered Nurse Practitioner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InsuranceCompanyBillingPriority">
+		<xs:annotation>
+			<xs:documentation>The billing priority or order for the insurance company.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2611001">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611003">
+				<xs:annotation>
+					<xs:documentation>Primary</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611005">
+				<xs:annotation>
+					<xs:documentation>Secondary</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InsuranceCompanyID">
+		<xs:annotation>
+			<xs:documentation>The ID number of the patient's insurance company</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InsuranceCompanyName">
+		<xs:annotation>
+			<xs:documentation>The name of the patient's insurance company</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InsuranceGroupIDName">
+		<xs:annotation>
+			<xs:documentation>The ID number or name of the patient's insurance group</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InsurancePolicyIDNumber">
+		<xs:annotation>
+			<xs:documentation>The ID number of the patient's insurance policy</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PrimaryMethodOfPayment">
+		<xs:annotation>
+			<xs:documentation>The primary method of payment or type of insurance associated with this EMS encounter</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2601001">
+				<xs:annotation>
+					<xs:documentation>Insurance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601003">
+				<xs:annotation>
+					<xs:documentation>Medicaid</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601005">
+				<xs:annotation>
+					<xs:documentation>Medicare</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601007">
+				<xs:annotation>
+					<xs:documentation>Not Billed (for any reason)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601009">
+				<xs:annotation>
+					<xs:documentation>Other Government</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601011">
+				<xs:annotation>
+					<xs:documentation>Self Pay</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601013">
+				<xs:annotation>
+					<xs:documentation>Workers Compensation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Reason">
+		<xs:annotation>
+			<xs:documentation>The reason for EMS transport noted on the Physician Certification Statement</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2604001">
+				<xs:annotation>
+					<xs:documentation>Bed Confined</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604003">
+				<xs:annotation>
+					<xs:documentation>Cardiac/Hemodynamic monitoring required during transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604005">
+				<xs:annotation>
+					<xs:documentation>Confused, combative, lethargic, comatose</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604007">
+				<xs:annotation>
+					<xs:documentation>Contractures</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604009">
+				<xs:annotation>
+					<xs:documentation>Danger to self or others-monitoring</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604011">
+				<xs:annotation>
+					<xs:documentation>Danger to self or others-seclusion (flight risk)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604013">
+				<xs:annotation>
+					<xs:documentation>DVT requires elevation of lower extremity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604015">
+				<xs:annotation>
+					<xs:documentation>IV medications/fluids required during transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604017">
+				<xs:annotation>
+					<xs:documentation>Moderate to severe pain on movement</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604019">
+				<xs:annotation>
+					<xs:documentation>Morbid Obesity requires additional personnel/equipment to handle</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604021">
+				<xs:annotation>
+					<xs:documentation>Non-healing fractures</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604023">
+				<xs:annotation>
+					<xs:documentation>Orthopedic device (backboard, halo, use of pins in traction, etc) requiring special handling in transit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604025">
+				<xs:annotation>
+					<xs:documentation>Restraints (Physical or Chemical) anticipated or used during transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604027">
+				<xs:annotation>
+					<xs:documentation>Risk of falling off wheelchair or stretcher while in motion (not related to obesity)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604029">
+				<xs:annotation>
+					<xs:documentation>Severe Muscular weakness and de-conditioned state precludes any significant physical activity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604031">
+				<xs:annotation>
+					<xs:documentation>Special handling en route-Isolation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604033">
+				<xs:annotation>
+					<xs:documentation>Third Party assistance/attendant required to apply, administer, or regulate or adjust oxygen en route</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604035">
+				<xs:annotation>
+					<xs:documentation>Unable to maintain erect sitting position in a chair for time needed to transport, due to moderate muscular weakness and de-conditioning.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2604037">
+				<xs:annotation>
+					<xs:documentation>Unable to sit in chair or wheelchair due to Grade II or greater decubitus ulcers on buttocks.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RelationshipToInsured">
+		<xs:annotation>
+			<xs:documentation>The relationship of the patient to the primary insured person</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2622001">
+				<xs:annotation>
+					<xs:documentation>Self</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622003">
+				<xs:annotation>
+					<xs:documentation>Spouse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622005">
+				<xs:annotation>
+					<xs:documentation>Child/Dependent</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622007">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ResidencyStatusOfThePatient">
+		<xs:annotation>
+			<xs:documentation>The status of the patient's residency (where they physically reside) within EMS Agencies municipality.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2608001">
+				<xs:annotation>
+					<xs:documentation>Resident Within EMS Service Area</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2608003">
+				<xs:annotation>
+					<xs:documentation>Not a Resident Within EMS Service Area</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ResponseUrgency">
+		<xs:annotation>
+			<xs:documentation>The urgency in which the EMS agency began to mobilize resources.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2640001">
+				<xs:annotation>
+					<xs:documentation>Immediate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2640003">
+				<xs:annotation>
+					<xs:documentation>Non-Immediate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StretcherPurposeDesciption">
+		<xs:annotation>
+			<xs:documentation>Free Text Documentation providing the reason for use of a stretcher in the EMS patient transport.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SupplyCount">
+		<xs:annotation>
+			<xs:documentation>The number of the specific supply item used on the patient by the EMS Crew during the EMS event.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="100000000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SupplyUsed">
+		<xs:annotation>
+			<xs:documentation>The name of the supply used on the patient by the EMS Crew during the EMS event.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransportAssessment">
+		<xs:annotation>
+			<xs:documentation>Documentation of the patient's transport need based on mobility and/or physical capability.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2641001">
+				<xs:annotation>
+					<xs:documentation>Unable to sit without assistance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2641003">
+				<xs:annotation>
+					<xs:documentation>Unable to stand without assistance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2641005">
+				<xs:annotation>
+					<xs:documentation>Unable to walk without assistance</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransportCareProvider">
+		<xs:annotation>
+			<xs:documentation>Documentation to show the patient care event met the Specialty Care Transport Base Rate requirements.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2642001">
+				<xs:annotation>
+					<xs:documentation>Advanced EMT-Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642003">
+				<xs:annotation>
+					<xs:documentation>Nurse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642005">
+				<xs:annotation>
+					<xs:documentation>Nurse Practitioner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642007">
+				<xs:annotation>
+					<xs:documentation>Physician (MD, DO)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642009">
+				<xs:annotation>
+					<xs:documentation>Physician Assistant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TripPurposeDesciption">
+		<xs:annotation>
+			<xs:documentation>The description of the purpose of the round trip EMS transport based on CR109.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="80"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

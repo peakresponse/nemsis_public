@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+	<xs:include schemaLocation="dAgency_v3.xsd"/>
+	<xs:include schemaLocation="eCustom_v3.xsd"/>
+	<xs:include schemaLocation="dCustom_v3.xsd"/>
+	<xs:include schemaLocation="dConfiguration_v3.xsd"/>
+	<xs:include schemaLocation="dState_v3.xsd"/>
+	<xs:include schemaLocation="eRecord_v3.xsd"/>
+	<xs:include schemaLocation="eResponse_v3.xsd"/>
+	<xs:include schemaLocation="eDispatch_v3.xsd"/>
+	<xs:include schemaLocation="eCrew_v3.xsd"/>
+	<xs:include schemaLocation="eTimes_v3.xsd"/>
+	<xs:include schemaLocation="ePatient_v3.xsd"/>
+	<xs:include schemaLocation="ePayment_v3.xsd"/>
+	<xs:include schemaLocation="eScene_v3.xsd"/>
+	<xs:include schemaLocation="eSituation_v3.xsd"/>
+	<xs:include schemaLocation="eInjury_v3.xsd"/>
+	<xs:include schemaLocation="eArrest_v3.xsd"/>
+	<xs:include schemaLocation="eHistory_v3.xsd"/>
+	<xs:include schemaLocation="eNarrative_v3.xsd"/>
+	<xs:include schemaLocation="eVitals_v3.xsd"/>
+	<xs:include schemaLocation="eLabs_v3.xsd"/>
+	<xs:include schemaLocation="eExam_v3.xsd"/>
+	<xs:include schemaLocation="eProtocols_v3.xsd"/>
+	<xs:include schemaLocation="eMedications_v3.xsd"/>
+	<xs:include schemaLocation="eProcedures_v3.xsd"/>
+	<xs:include schemaLocation="eDisposition_v3.xsd"/>
+	<xs:include schemaLocation="eDevice_v3.xsd"/>
+	<xs:include schemaLocation="eOutcome_v3.xsd"/>
+	<xs:include schemaLocation="eOther_v3.xsd"/>
+	<xs:include schemaLocation="eAirway_v3.xsd"/>
+	<xs:element name="EMSDataSet">
+		<xs:annotation>
+			<xs:documentation>Root Tag For Dataset</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Header for file</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DemographicGroup">
+								<xs:annotation>
+									<xs:documentation>Demographic information related to this agency</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="dAgency.01" type="EMSAgencyStateID">
+											<xs:annotation>
+												<xs:documentation>The unique ID assigned to the EMS agency which is associated with all state licensure numbers and information.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dAgency.02" type="EMSAgencyNumber">
+											<xs:annotation>
+												<xs:documentation>The state-assigned provider number of the responding agency</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dAgency.04" type="ANSIStateCode">
+											<xs:annotation>
+												<xs:documentation>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dAgency.ServiceAreaGroup" id="ServiceAreaGroup" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>Group Tag to hold agency service area information </xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="dAgency.06" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>The county(s) within each state for which the agency formally provides service.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ANSICountyCode">
+																	<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="CurrentStatus" type="Status" use="required"/>
+												<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
+												<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dAgency.09" type="TypeOfService">
+											<xs:annotation>
+												<xs:documentation>The primary service type provided by the agency.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dAgency.11" type="StateCertificationLicensureLevels">
+											<xs:annotation>
+												<xs:documentation>The level of service which could be sent to any specific call.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dAgency.12" type="OrganizationStatus">
+											<xs:annotation>
+												<xs:documentation>The primary organizational status of the agency. The definition of Volunteer or Non-Volunteer is based on state or local definitions.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dAgency.13" type="OrganizationalType">
+											<xs:annotation>
+												<xs:documentation>The organizational structure from which EMS services are delivered (fire, hospital, county, etc.).</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="dAgency.25" nillable="true">
+											<xs:annotation>
+												<xs:documentation>standard HIPPA transactions such as electronic claim filing</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="NationalProviderIdentifier">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ConfigurationGroup" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="dConfiguration.ProcedureGroup" id="ProcedureGroup" minOccurs="1" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>Group Tag to hold info about Procedure information </xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="dConfiguration.06" type="StateCertificationLicensureLevels" minOccurs="1">
+														<xs:annotation>
+															<xs:documentation>All EMS Professional Levels which are permitted to perform the associated procedure</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="dConfiguration.07" minOccurs="1" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>A list of all procedures that the agency has implemented and available for use by any/all EMS levels based on ICD-10 Procedure Codes.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="icd10Code">
+																	<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="configuration.MedicationGroup" id="GroupMedication" minOccurs="1" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>Group Tag to hold info about Medication information </xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="dConfiguration.08" type="StateCertificationLicensureLevels" minOccurs="1">
+														<xs:annotation>
+															<xs:documentation>All personnel levels which are permitted to administer the associated medication</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="dConfiguration.09" minOccurs="1" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>A list of all medications the agency has implemented and have available for use.</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="Medication">
+																	<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="dConfiguration.10" minOccurs="1" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>A list of all of the medical treatment protocols that the agency has in place and available for use.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="ProtocolsUsed">
+														<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="eCustomConfiguration"  type="eCustomResults" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>All custom elements associated with agency.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PatientCareReport" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Container Tag to hold each instance of a patient care report (PCR)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="eRecord" type="eRecord">
+											<xs:annotation>
+												<xs:documentation>Patient Record Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eResponse" type="eResponse">
+											<xs:annotation>
+												<xs:documentation>Unit Agency Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eDispatch" type="eDispatch">
+											<xs:annotation>
+												<xs:documentation>Dispatch Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eCrew" type="eCrews">
+											<xs:annotation>
+												<xs:documentation>Crew Member Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eTimes" type="eTimes">
+											<xs:annotation>
+												<xs:documentation>Call Event Times Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ePatient" type="ePatient" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Patient Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ePayment" type="ePayment">
+											<xs:annotation>
+												<xs:documentation>Insurance/Payment Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eScene" type="eScene">
+											<xs:annotation>
+												<xs:documentation>Incident Scene Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eSituation" type="eSituation">
+											<xs:annotation>
+												<xs:documentation>Situation Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eInjury" type="eInjury">
+											<xs:annotation>
+												<xs:documentation>Injury Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eArrest" type="eArrest">
+											<xs:annotation>
+												<xs:documentation>Cardiac Arrest Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eHistory" type="eHistory">
+											<xs:annotation>
+												<xs:documentation>Patient History Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eNarrative" type="eNarrative">
+											<xs:annotation>
+												<xs:documentation>Call Event Narrative</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eVitals" type="eVitals">
+											<xs:annotation>
+												<xs:documentation>Patient Vital Sign Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eLabs" type="eLabs" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Lab Results Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eExam" type="eExam" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Patient Exam Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eProtocols" type="eProtocols">
+											<xs:annotation>
+												<xs:documentation>Medical Protocols Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eMedications" type="eMedications">
+											<xs:annotation>
+												<xs:documentation>Intervention Medications Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eProcedures" type="eProcedures">
+											<xs:annotation>
+												<xs:documentation>Intervention Procedures Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eAirway" type="eAirways">
+											<xs:annotation>
+												<xs:documentation>Airway Device Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eDevice" type="eDevices" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Medical Device Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eDisposition" type="eDisposition">
+											<xs:annotation>
+												<xs:documentation>Patient Disposition Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eOutcome" type="eOutcome">
+											<xs:annotation>
+												<xs:documentation>Patient Outcome Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eCustomResults" type="eCustomResults" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Custom Data Elements Results</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eOther" type="eOther">
+											<xs:annotation>
+												<xs:documentation>Other Miscellaneous Information</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute ref="RecordStatus"/>
+									<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

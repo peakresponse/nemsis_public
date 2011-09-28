@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eOutcome.15" minOccurs="0" maxOccurs="1" dataType="TotalVentilatorDays" isNillable="No">
+<name>Total Ventilator Days</name>
+<national>No</national>
+<state>No</state>
+<definition>The total number of patient days spend on a mechanical ventilator (excluding time in the operating room).</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better measure and define patient outcome.</v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>integer</dataType>
+        <constraint>
+          <constraintTitle>minValue</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>maxValue</constraintTitle>
+          <constraintValue>400</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

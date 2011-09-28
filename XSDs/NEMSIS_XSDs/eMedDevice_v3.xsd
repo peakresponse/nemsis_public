@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="dDevice_v3.xsd"/>
+	<xs:include schemaLocation="eRecord_v3.xsd"/>
+	<xs:include schemaLocation="ePatient_v3.xsd"/>
+	<xs:include schemaLocation="eVitals_v3.xsd"/>
+	<xs:include schemaLocation="eDevice_v3.xsd"/>
+	<xs:include schemaLocation="eCustom_v3.xsd"/>
+	<xs:element name="eMedDevice">
+		<xs:complexType id="eMedDevice.eMedDevice">
+			<xs:sequence>
+				<xs:element name="eMedDevice.01" type="EMSAgencyStateID">
+					<xs:annotation>
+						<xs:documentation>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.02" type="EMSAgencyNumber" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The state-assigned provider number of the responding agency</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.03" type="EMSAgencyName" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The formal name of the agency</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.04" type="ANSIStateCode" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The state the Agency provides services in.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.05" type="DeviceSerialNumber">
+					<xs:annotation>
+						<xs:documentation>The unique manufacturer's serial number associated with a medical device.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.06" type="DeviceNameorID" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The local number or configurable ID/Name of the medical device.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.07" type="MedicalDeviceType">
+					<xs:annotation>
+						<xs:documentation>The type of medical device.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.08" type="DeviceManufacturer">
+					<xs:annotation>
+						<xs:documentation>The manufacturer of the medical device.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.09" type="ModelNumber">
+					<xs:annotation>
+						<xs:documentation>The specific manufacturer's model number associated with medical device.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.10" type="PatientCareReportNumber">
+					<xs:annotation>
+						<xs:documentation>The unique number automatically assigned by the EMS agency for each patient care report(PCR).  This is a unique number to the EMS agency for all of time.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.PatientName" id="eMedDevice.GroupPatientName" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold patient's name </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eMedDevice.11" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's last (family) name</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PersonLastName">
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="PN" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.12" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's first (given) name</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PersonFirstName">
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="PN" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.13" type="PersonMiddleName" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's middle name, if any</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eMedDevice.14" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The Patient's Gender</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="Gender">
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eMedDevice.15" nillable="true" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The patient's race as defined by the OMB (US Office of Management and Budget)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="Race">
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eMedDevice.PatientAge" id="eMedDevice.GroupPatientAge" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold patient's age information </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eMedDevice.16" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's age (either calculated from date of birth or best approximation)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="Age">
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.17" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The unit used to define the patient's age </xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="AgeUnits">
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eMedDevice.18" type="DateType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>The patient's date of birth</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eMedDevice.Vitals" id="eMedDevice.GroupVitals" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold info about the Vitals of the Patient</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eMedDevice.19" type="DateTimeType">
+								<xs:annotation>
+									<xs:documentation>The date/time vital signs were taken on the patient</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.CardiacRhythm" id="eMedDevice.GroupCardiacRhythm" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Group Tag to hold information of the type and method used for ECG interpretation associated with the cardiac rhythm</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="eMedDevice.20" nillable="true" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The initial cardiac rhythm of the patient as interpreted by EMS personnel</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="CardiacRhythm">
+														<xs:attribute name="PN" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="eMedDevice.21" nillable="true" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The type of ECG associated with the cardiac rhythm</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="ECGType">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="eMedDevice.22" nillable="true" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The method of ECG interpretation</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="ECGMethod">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.BloodPressure" id="eMedDevice.GroupBloodPressure" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Group Tag to hold the details of Patient's systolic blood pressure and its procedure </xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="eMedDevice.23" nillable="true" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The patient's systolic blood pressure</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="SBP">
+														<xs:attribute name="PN" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="PN.ExamFindingNotPresent PN.Refused PN.UnableToComplete"/>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="TIMESTAMP" type="TimeStampType" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="eMedDevice.24" nillable="true" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The patient's diastolic blood pressure</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="DBP">
+														<xs:attribute name="PN" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="PN.ExamFindingNotPresent PN.Refused PN.UnableToComplete"/>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<!-- Below should be ModBloodPressure ??? -->
+										<xs:element name="eMedDevice.25" type="MAP" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Indication of method of blood pressure procedure.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.26" type="MAP" nillable="false" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's mean arterial pressure</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.27" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's heart rate expressed as a number per minute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="HeartRate">
+											<xs:attribute name="PN" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="PN.ExamFindingNotPresent PN.Refused PN.UnableToComplete"/>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.28" type="MethodMeasureHeartRate" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor)</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.29" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's oxygen saturation</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="PulseOximetry">
+											<xs:attribute name="PN" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="PN.ExamFindingNotPresent PN.Refused PN.UnableToComplete"/>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.30" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's respiratory rate expressed as a number per minute</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="RespiratoryRate">
+											<xs:attribute name="PN" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="PN.ExamFindingNotPresent PN.Refused PN.UnableToComplete"/>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.31" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's end-tidal or other CO2 level.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="CO2">
+											<xs:attribute name="PN" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.32" type="CarbonMonoxideLevel" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's carbon monoxide level measured in parts per million (ppm)</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.33" nillable="true" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The patient's blood glucose level</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="BloodGlucoseLevel">
+											<xs:attribute name="PN" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+												</xs:simpleType>
+											</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.BodyTempurature" id="eMedDevice.GroupBodyTemperature" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Group Tag to hold information about patient's body temperature </xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="eMedDevice.34" nillable="true" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The patient's body temperature in degrees Celsius/centigrade.</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="BodyTemperature">
+														<xs:attribute name="PN" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+															</xs:simpleType>
+														</xs:attribute>
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="eMedDevice.35" type="MethodBodyTemp" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The method used to obtain the patient's body temperature</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eMedDevice.Device" id="eMedDevice.GroupDevice" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold info about the device </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eMedDevice.36" type="DateTimeType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The time of the event recorded by the device’s internal clock</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.37" type="MedicalDeviceEventType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The type of event documented by the medical device</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.Wave" id="eMedDevice.GroupWave" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Group Tag to hold info about Wave type </xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="eMedDevice.38" type="GraphicType">
+											<xs:annotation>
+												<xs:documentation>The type of waveform file stored in Waveform Graphic </xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eMedDevice.39" type="WaveformGraphic">
+											<xs:annotation>
+												<xs:documentation>The graphic waveform file in a PDF or JPG format.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.40" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="ECGLead">
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.41" type="ECGInterpretation" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The interpretation of the rhythm by the device (if appropriate for the event)</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.Shock" id="eMedDevice.ShockType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Group Tag to hold shock information </xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="eMedDevice.42" type="TypeOfShock" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The energy form used by the device for the defibrillation (if appropriate for the event)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eMedDevice.43" type="ShockOrPacingEnergy" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The energy used for the shock or pacing event (if appropriate for the event)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="eMedDevice.44" type="TotalNumberOfShocks" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>The number of times the patient was defibrillated, if the patient was defibrillated during the patient encounter.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="eMedDevice.45" type="PacingRate" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The rate the device was calibrated to pace during the event, if appropriate.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="eMedDevice.Custom" id="eMedDevice.GroupCustom" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Group Tag to hold info about the Custom defined information </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="eMedDevice.46" type="CustomTitle" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>This is the title of the custom data element created by an EMS Agency to collect information that is not defined formally in NEMSIS Version 3.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.47" type="CustomDataType" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>The list of potential values associated with the custom data element.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.48" type="YesNoValues" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Indication if the data element will accept multiple values.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.49" type="ElementUsage" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The Usage (Mandatory, Required, or Optional) for the EMS Custom Data Element.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.50" type="CustomValue" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eMedDevice.51" type="CustomDataType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>The actual value or values chosen (if values listed in eCustom.05) or result (free text, Date/Time, or number) documented for the EMS Custom Data Element</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

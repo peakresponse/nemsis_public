@@ -1,0 +1,57 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.21" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Glasgow Coma Score-Motor</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition></definition>
+<v2Number>E14_17</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>Definitions now based on the National Trauma Data Standard (NTDS).</v3Comment>
+<v3Changes>Definitions now based on the National Trauma Data Standard (NTDS).</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>1</code>
+           <description>No Motor Response (All Age Groups)</description>
+        </choice>
+        <choice>
+           <code>2</code>
+           <description>Extension to pain (All Age Groups)</description>
+        </choice>
+        <choice>
+           <code>3</code>
+           <description>Flexion to pain (All Age Groups)</description>
+        </choice>
+        <choice>
+           <code>4</code>
+           <description>Withdrawal from pain (All Age Groups)</description>
+        </choice>
+        <choice>
+           <code>5</code>
+           <description>Localizing pain (All Age Groups)</description>
+        </choice>
+        <choice>
+           <code>6</code>
+           <description>Obeys commands (&gt;2Years); Appropriate response to stimulation</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

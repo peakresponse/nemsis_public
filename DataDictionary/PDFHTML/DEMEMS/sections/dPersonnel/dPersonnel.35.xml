@@ -1,0 +1,51 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dPersonnel.35" minOccurs="0" maxOccurs="M" isNillable="Yes">
+<name>EMS Personnel's Other Job Responsibilities</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The EMS personnel's other job responsibilities at the agency beyond their primary role documented in dPersonnel.34 (EMS Personnel's Primary EMS Job Role).</definition>
+<v2Number></v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1535001</code>
+           <description>Administrator/Manager</description>
+        </choice>
+        <choice>
+           <code>1535003</code>
+           <description>Educator/Preceptor</description>
+        </choice>
+        <choice>
+           <code>1535005</code>
+           <description>Fire Suppression</description>
+        </choice>
+        <choice>
+           <code>1535007</code>
+           <description>First-Line Supervisor</description>
+        </choice>
+        <choice>
+           <code>1535009</code>
+           <description>Law Enforcement (Police, Deputy, etc.)</description>
+        </choice>
+        <choice>
+           <code>1535011</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>1535013</code>
+           <description>Patient Care Provider</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

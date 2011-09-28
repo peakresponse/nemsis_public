@@ -1,0 +1,42 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dConfiguration.04" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Medications Permitted by the State</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This data element should capture all of the medications permitted by the state for any/all levels of EMS personnel in the state.
+This should be stored as an RxNorm (RXCUI) Code. This is associated with each of the states (dAgency.04).</v3Comment>
+<v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
+
+<br/><br/>List of medications based on RxNorm (RXCUI) code. See suggested NEMSIS list of medication codes.
+
+<br/><br/>RxNorm
+<br/>Website - http://uts.nlm.nih.gov
+
+<br/><br/>Product - UMLS Metathesaurus
+<br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
+<br/>Product - RxNorm Full Monthly Release</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

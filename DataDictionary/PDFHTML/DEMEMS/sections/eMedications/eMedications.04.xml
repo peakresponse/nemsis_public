@@ -1,0 +1,126 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedications.04" minOccurs="0" maxOccurs="1" dataType="MedicationAdministeredRoute" isNillable="No">
+<name>Medication Administered Route</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The route medication was administered to the patient</definition>
+<v2Number>E18_04</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This medication route list represents a sub-group of values from the Data Elements for Emergency Department Systems (DEEDS), pertaining to prehospital care. <br/> <br/>
+DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapuetic Medication Route.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>3704001</code>
+           <description>Endotracheal tube</description>
+        </choice>
+        <choice>
+           <code>3704003</code>
+           <description>Gastrostomy tube</description>
+        </choice>
+        <choice>
+           <code>3704005</code>
+           <description>Inhalation</description>
+        </choice>
+        <choice>
+           <code>3704007</code>
+           <description>Intraarterial</description>
+        </choice>
+        <choice>
+           <code>3704009</code>
+           <description>Intramuscular</description>
+        </choice>
+        <choice>
+           <code>3704011</code>
+           <description>Intranasal</description>
+        </choice>
+        <choice>
+           <code>3704013</code>
+           <description>Intraocular</description>
+        </choice>
+        <choice>
+           <code>3704015</code>
+           <description>Intraosseous</description>
+        </choice>
+        <choice>
+           <code>3704017</code>
+           <description>Intravenous</description>
+        </choice>
+        <choice>
+           <code>3704019</code>
+           <description>Nasal</description>
+        </choice>
+        <choice>
+           <code>3704021</code>
+           <description>Nasal prongs</description>
+        </choice>
+        <choice>
+           <code>3704023</code>
+           <description>Nasogastric</description>
+        </choice>
+        <choice>
+           <code>3704025</code>
+           <description>Nasotracheal Tube</description>
+        </choice>
+        <choice>
+           <code>3704027</code>
+           <description>Ophthalmic</description>
+        </choice>
+        <choice>
+           <code>3704029</code>
+           <description>Oral</description>
+        </choice>
+        <choice>
+           <code>3704031</code>
+           <description>Other/miscellaneous</description>
+        </choice>
+        <choice>
+           <code>3704033</code>
+           <description>Otic</description>
+        </choice>
+        <choice>
+           <code>3704035</code>
+           <description>Re-breather mask</description>
+        </choice>
+        <choice>
+           <code>3704037</code>
+           <description>Rectal</description>
+        </choice>
+        <choice>
+           <code>3704039</code>
+           <description>Subcutaneous</description>
+        </choice>
+        <choice>
+           <code>3704041</code>
+           <description>Sublingual</description>
+        </choice>
+        <choice>
+           <code>3704043</code>
+           <description>Topical</description>
+        </choice>
+        <choice>
+           <code>3704045</code>
+           <description>Tracheostomy</description>
+        </choice>
+        <choice>
+           <code>3704047</code>
+           <description>Transdermal</description>
+        </choice>
+        <choice>
+           <code>3704049</code>
+           <description>Urethral</description>
+        </choice>
+        <choice>
+           <code>3704051</code>
+           <description>Ventimask</description>
+        </choice>
+        <choice>
+           <code>3704053</code>
+           <description>Wound</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

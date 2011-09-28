@@ -1,0 +1,36 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dAgency.08" minOccurs="1" maxOccurs="M" isNillable="No">
+<name>EMS Agency Service Area ZIP Codes</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The ZIP codes for the EMS Agency's service area.</definition>
+<v2Number></v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
+													<br/><br/>Zip Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</pattern>
+     </patterns>
+	<currentStatus>
+		<choice><code>A</code><description>Active</description></choice>
+		<choice><code>I</code><description>Inactive</description></choice>
+	</currentStatus>
+	<currentStatusDate>
+	</currentStatusDate>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

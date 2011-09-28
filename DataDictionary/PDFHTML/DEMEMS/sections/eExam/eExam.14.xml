@@ -1,0 +1,116 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.14" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Back and Spine Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>The assessment findings associated with the patient's spine (Cervical, Thoracic, Lumbar, and Sacral) and back exam.</definition>
+<v2Number>E16_14</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
+		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3514001</code>
+           <description>Abrasion</description>
+        </choice>
+        <choice>
+           <code>3514003</code>
+           <description>Avulsion</description>
+        </choice>
+        <choice>
+           <code>3514005</code>
+           <description>Back-General</description>
+        </choice>
+        <choice>
+           <code>3514007</code>
+           <description>Bleeding Controlled</description>
+        </choice>
+        <choice>
+           <code>3514009</code>
+           <description>Bleeding Uncontrolled</description>
+        </choice>
+        <choice>
+           <code>3514011</code>
+           <description>Burn-Blistering</description>
+        </choice>
+        <choice>
+           <code>3514013</code>
+           <description>Burn-Charring</description>
+        </choice>
+        <choice>
+           <code>3514015</code>
+           <description>Burn-Redness</description>
+        </choice>
+        <choice>
+           <code>3514017</code>
+           <description>Burn-White/Waxy</description>
+        </choice>
+        <choice>
+           <code>3514019</code>
+           <description>Deformity</description>
+        </choice>
+        <choice>
+           <code>3514021</code>
+           <description>Foreign Body</description>
+        </choice>
+        <choice>
+           <code>3514023</code>
+           <description>Gunshot Wound-Entry</description>
+        </choice>
+        <choice>
+           <code>3514025</code>
+           <description>Gunshot Wound-Exit</description>
+        </choice>
+        <choice>
+           <code>3514027</code>
+           <description>Laceration</description>
+        </choice>
+        <choice>
+           <code>3514029</code>
+           <description>Normal</description>
+        </choice>
+        <choice>
+           <code>3514031</code>
+           <description>Not Done</description>
+        </choice>
+        <choice>
+           <code>3514033</code>
+           <description>Pain</description>
+        </choice>
+        <choice>
+           <code>3514035</code>
+           <description>Pain with Range of Motion</description>
+        </choice>
+        <choice>
+           <code>3514037</code>
+           <description>Swelling/Bruising/Contusion with Pain</description>
+        </choice>
+        <choice>
+           <code>3514039</code>
+           <description>Swelling/Bruising/Contusion without Pain</description>
+        </choice>
+        <choice>
+           <code>3514041</code>
+           <description>Tenderness Costovertebral Angle</description>
+        </choice>
+        <choice>
+           <code>3514043</code>
+           <description>Tenderness Midline Spinous Process</description>
+        </choice>
+        <choice>
+           <code>3514045</code>
+           <description>Tenderness Paraspinous</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

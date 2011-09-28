@@ -1,0 +1,23 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dConfiguration.01" minOccurs="1" maxOccurs="1" dataType="ANSIStateCode" isNillable="No">
+<name>State Associated with the Certification/Licensure Levels</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The state associated with the state certification/licensure levels.</definition>
+<v2Number></v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Associated with the state (dAgency.04 - EMS Agency State).  Since multiple states can exist, this information is multiple entry with the other items in the section associated with each of the states.
+										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element>

@@ -1,0 +1,30 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dLocation.11" minOccurs="0" maxOccurs="1" dataType="ANSICountryCodesCAMXUS" isNillable="No">
+<name>EMS Location Country</name>
+<national>No</national>
+<state>No</state>
+<definition>The country of the EMS location.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country.
+										<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
+<v3Changes>Added to improve international implementations.</v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>CA</code>
+           <description>Canada</description>
+        </choice>
+        <choice>
+           <code>MX</code>
+           <description>Mexico</description>
+        </choice>
+        <choice>
+           <code>US</code>
+           <description>United States</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

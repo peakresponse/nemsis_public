@@ -1,0 +1,58 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dAgency.09" minOccurs="1" maxOccurs="1" isNillable="No">
+<name>Primary Type of Service</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The primary service type provided by the agency.</definition>
+<v2Number>D01_05</v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The Primary Type of Service is associated with each of the EMS Agency Numbers.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9920001</code>
+           <description>911 Response (Scene) with Transport Capability</description>
+        </choice>
+        <choice>
+           <code>9920003</code>
+           <description>911 Response (Scene) without Transport Capability</description>
+        </choice>
+        <choice>
+           <code>9920005</code>
+           <description>Air Medical</description>
+        </choice>
+        <choice>
+           <code>9920007</code>
+           <description>Hazmat</description>
+        </choice>
+        <choice>
+           <code>9920009</code>
+           <description>Medical Transport (Convalescent)</description>
+        </choice>
+        <choice>
+           <code>9920011</code>
+           <description>Paramedic Intercept</description>
+        </choice>
+        <choice>
+           <code>9920013</code>
+           <description>Rescue</description>
+        </choice>
+        <choice>
+           <code>9920015</code>
+           <description>Specialty Care Transport</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

@@ -1,0 +1,68 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.09" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Heart Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>The assessment findings associated with the patient's heart.</definition>
+<v2Number>E16_08</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
+		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+      <enumerations>
+        <choice>
+           <code>3509001</code>
+           <description>Clicks</description>
+        </choice>
+        <choice>
+           <code>3509003</code>
+           <description>Heart Sounds Decreased</description>
+        </choice>
+        <choice>
+           <code>3509005</code>
+           <description>Murmur-Diastolic</description>
+        </choice>
+        <choice>
+           <code>3509007</code>
+           <description>Murmur-Systolic</description>
+        </choice>
+        <choice>
+           <code>3509009</code>
+           <description>Normal</description>
+        </choice>
+        <choice>
+           <code>3509011</code>
+           <description>Not Done</description>
+        </choice>
+        <choice>
+           <code>3509013</code>
+           <description>Rubs</description>
+        </choice>
+        <choice>
+           <code>3509015</code>
+           <description>S1</description>
+        </choice>
+        <choice>
+           <code>3509017</code>
+           <description>S2</description>
+        </choice>
+        <choice>
+           <code>3509019</code>
+           <description>S3</description>
+        </choice>
+        <choice>
+           <code>3509021</code>
+           <description>S4</description>
+        </choice>
+     </enumerations>
+	<correlationID>Yes</correlationID>
+</restrictions>
+</element>

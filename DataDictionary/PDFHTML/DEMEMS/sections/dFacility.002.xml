@@ -1,0 +1,370 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="dFacility">
+<group number="dFacilityGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="dFacility.01" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Type of Facility</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of facility (healthcare or other) that the EMS agency transports paitents to or from.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1701001</code>
+           <description>Assisted Living Facility</description>
+        </choice>
+        <choice>
+           <code>1701003</code>
+           <description>Clinic</description>
+        </choice>
+        <choice>
+           <code>1701005</code>
+           <description>Hospital</description>
+        </choice>
+        <choice>
+           <code>1701007</code>
+           <description>Nursing Home</description>
+        </choice>
+        <choice>
+           <code>1701009</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+        <choice>
+           <code>1701011</code>
+           <description>Urgent Care</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><group number="dFacility.FacilityGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="dFacility.02" minOccurs="0" maxOccurs="1" dataType="FacilityName" isNillable="No">
+<name>Facility Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The name of the facility.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>60</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dFacility.03" minOccurs="0" maxOccurs="1" dataType="FacilityCode" isNillable="No">
+<name>Facility Location Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The code of the facility as asisgned by the state or the EMS agency.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The information contained within this element could be used to populate eScene.09 (Incident Facility Code)  or eDisposition.02 (Destination/Transferred To, Code) via a drop down list created at either the EMS Agency or State level.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>50</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dFacility.04" minOccurs="0" maxOccurs="1" dataType="HospitalDesignation" isNillable="No">
+<name>Hospital Designations</name>
+<national>No</national>
+<state>No</state>
+<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc)</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>To be documented when in eDisposition.21 "Hospital" is selected .</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9908001</code>
+           <description>Hospital (General)</description>
+        </choice>
+        <choice>
+           <code>9908003</code>
+           <description>Trauma Center Level 1</description>
+        </choice>
+        <choice>
+           <code>9908005</code>
+           <description>Trauma Center Level 2</description>
+        </choice>
+        <choice>
+           <code>9908007</code>
+           <description>Trauma Center Level 3</description>
+        </choice>
+        <choice>
+           <code>9908009</code>
+           <description>Trauma Center Level 4</description>
+        </choice>
+        <choice>
+           <code>9908011</code>
+           <description>Trauma Center Level 5</description>
+        </choice>
+        <choice>
+           <code>9908013</code>
+           <description>Rural Access Hospital</description>
+        </choice>
+        <choice>
+           <code>9908015</code>
+           <description>STEMI Center (24/7)</description>
+        </choice>
+        <choice>
+           <code>9908017</code>
+           <description>Stroke Center</description>
+        </choice>
+        <choice>
+           <code>9908019</code>
+           <description>Burn Center</description>
+        </choice>
+        <choice>
+           <code>9908021</code>
+           <description>Pediatric Center</description>
+        </choice>
+        <choice>
+           <code>9908023</code>
+           <description>Neonatal Center</description>
+        </choice>
+        <choice>
+           <code>9908025</code>
+           <description>Rehab Center</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="dFacility.05" minOccurs="0" maxOccurs="1" dataType="NationalProviderIdentifier" isNillable="No">
+<name>Facility National Provider Identifier</name>
+<national>No</national>
+<state>No</state>
+<definition>The facility National Provider Identifier associated with National Provider System (NPS).</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>10</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dFacility.06" minOccurs="0" maxOccurs="1" dataType="FacilityRoom" isNillable="No">
+<name>Facility Room, Suite, or Apartment</name>
+<national>No</national>
+<state>No</state>
+<definition>The number of the specific room, suite, or apartment.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>15</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>1</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dFacility.07" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Facility Street Address</name>
+<national>No</national>
+<state>No</state>
+<definition>The address where the facility is located.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.03 (Destination Street Address)  as appropriate.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>maxLength</constraintTitle>
+          <constraintValue>55</constraintValue>
+        </constraint>
+        <constraint>
+          <constraintTitle>minLength</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+	<StreetAddress>Yes</StreetAddress>
+</restrictions>
+</element><element number="dFacility.08" minOccurs="0" maxOccurs="1" dataType="CityGnisCode" isNillable="No">
+<name>Facility City</name>
+<national>No</national>
+<state>No</state>
+<definition>The city where the facility is located.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on GNIS Civil Code or Populated Place code. The information contained within this element could be used to populate the address information within eScene.17 (Incident City) and/or eDisposition.04 (Destination City) as appropriate.
+										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>positiveInteger</dataType>
+      </constraints>
+</restrictions>
+</element><element number="dFacility.09" minOccurs="0" maxOccurs="1" dataType="ANSIStateCode" isNillable="No">
+<name>Facility State</name>
+<national>No</national>
+<state>No</state>
+<definition>The state where the facility is located.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.05 (Destination State) as appropriate.
+								<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>2</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dFacility.10" minOccurs="0" maxOccurs="1" dataType="ZIP" isNillable="No">
+<name>Facility ZIP Code</name>
+<national>No</national>
+<state>No</state>
+<definition>The zip code where the facility is located.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The information contained within this element could be used to populate the address information within eScene.19 (Incident ZIP Code) and/or eDisposition.07 (Destination ZIP Code) as appropriate.
+										<br/><br/>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</pattern>
+     </patterns>
+</restrictions>
+</element><element number="dFacility.11" minOccurs="0" maxOccurs="1" dataType="ANSICountyCode" isNillable="No">
+<name>Facility County</name>
+<national>No</national>
+<state>No</state>
+<definition>The county where the facility is located.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.21 (Incident County) and/or eDisposition.06 (Destination County) as appropriate.
+<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <constraints>
+        <dataType>string</dataType>
+        <constraint>
+          <constraintTitle>length</constraintTitle>
+          <constraintValue>5</constraintValue>
+        </constraint>
+      </constraints>
+</restrictions>
+</element><element number="dFacility.12" minOccurs="0" maxOccurs="1" dataType="ANSICountryCodesCAMXUS" isNillable="No">
+<name>Facility Country</name>
+<national>No</national>
+<state>No</state>
+<definition>The country where the facility is located.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.22 (Incident Country) and/or eDisposition.08 (Destination Country) as appropriate.
+										<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm </a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>CA</code>
+           <description>Canada</description>
+        </choice>
+        <choice>
+           <code>MX</code>
+           <description>Mexico</description>
+        </choice>
+        <choice>
+           <code>US</code>
+           <description>United States</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element><element number="dFacility.13" minOccurs="0" maxOccurs="1" dataType="GPSLocation" isNillable="No">
+<name>Facility GPS Location</name>
+<national>No</national>
+<state>No</state>
+<definition>The facility GPS Coordinates.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>The information contained within this element could be used to populate the address information within eScene.10 (Scene GPS Location) and/or eDisposition.09 (Destination GPS Location) as appropriate.
+                      <br/><br/>The pattern for GPS location is in the format "<span style="font-style:italic">latitude</span>,<span style="font-style:italic">longitude</span>" where:
+										  <br/>- <span style="font-style:italic">latitude</span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
+										  <br/>- <span style="font-style:italic">longitude</span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[\d]{0,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[\d]{0,6})?)</pattern>
+     </patterns>
+</restrictions>
+</element><element number="dFacility.14" minOccurs="0" maxOccurs="1" dataType="USNG" isNillable="No">
+<name>Facilitiy US National Grid Coordinates</name>
+<national>No</national>
+<state>No</state>
+<definition>Facilitiy US National Grid Coordinates</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Standard found at www.fgdc.gov/usng. The information contained within this element could be used to populate the address information within eScene.11 (Scene US National Grid Coordinates) and/or eDisposition.10 (Disposition Location US National Grid Coordinates) as appropriate.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <patterns>
+        <pattern>[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}</pattern>
+     </patterns>
+</restrictions>
+</element></group>
+</group>
+</section>

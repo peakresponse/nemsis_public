@@ -1,0 +1,58 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dContact.01" minOccurs="0" maxOccurs="1" isNillable="Yes">
+<name>Agency Contact Type</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The contact type within the EMS agency.</definition>
+<v2Number></v2Number>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>1101001</code>
+           <description>Administrative Assistant</description>
+        </choice>
+        <choice>
+           <code>1101003</code>
+           <description>EMS Agency Director/Chief/Lead Administrator/CEO</description>
+        </choice>
+        <choice>
+           <code>1101005</code>
+           <description>EMS Assistant Agency Director/Chief/Administrator/CEO</description>
+        </choice>
+        <choice>
+           <code>1101007</code>
+           <description>EMS Assistant Medical Director</description>
+        </choice>
+        <choice>
+           <code>1101009</code>
+           <description>EMS IT/Data Specialist</description>
+        </choice>
+        <choice>
+           <code>1101011</code>
+           <description>EMS Medical Director</description>
+        </choice>
+        <choice>
+           <code>1101013</code>
+           <description>EMS Quality/Performance Improvement Specialist</description>
+        </choice>
+        <choice>
+           <code>1101015</code>
+           <description>EMS Training/Education Specialist</description>
+        </choice>
+        <choice>
+           <code>1101017</code>
+           <description>Other (Not Listed)</description>
+        </choice>
+     </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

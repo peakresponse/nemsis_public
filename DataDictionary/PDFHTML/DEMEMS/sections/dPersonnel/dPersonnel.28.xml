@@ -1,0 +1,25 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dPersonnel.28" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
+<name>National Registry Credentialed</name>
+<national>No</national>
+<state>No</state>
+<definition>Indication of a current National Registry Credential for the level of certification/licensure in (dPersonnel.27) as of the date of the State's EMS current certification date (dPersonnel.28).</definition>
+<v2Number>D08_16</v2Number>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+      <enumerations>
+        <choice>
+           <code>9923001</code>
+           <description>No</description>
+        </choice>
+        <choice>
+           <code>9923003</code>
+           <description>Yes</description>
+        </choice>
+     </enumerations>
+</restrictions>
+</element>

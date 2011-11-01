@@ -17,25 +17,25 @@
 	<pertinentNegatives>
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>decimal</dataType>
-        <constraint>
-          <constraintTitle>totalDigits</constraintTitle>
-          <constraintValue>4</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>fractionDigits</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0.1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>999.9</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>4</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0.1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>999.9</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

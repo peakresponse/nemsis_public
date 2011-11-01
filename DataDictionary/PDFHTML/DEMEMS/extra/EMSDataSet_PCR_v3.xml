@@ -5,7 +5,7 @@
 										<element number="eDispatch" type="eDispatch" minOccurs="1" maxOccurs="1"><name>Dispatch Information</name></element>
 										<element number="eCrew" type="eCrews" minOccurs="1" maxOccurs="1"><name>Crew Member Information</name></element>
 										<element number="eTimes" type="eTimes" minOccurs="1" maxOccurs="1"><name>Call Event Times Information</name></element>
-										<element number="ePatient" type="ePatient" minOccurs="0" maxOccurs="1"><name>Patient Information</name></element>
+										<element number="ePatient" type="ePatient" minOccurs="1" maxOccurs="1"><name>Patient Information</name></element>
 										<element number="ePayment" type="ePayment" minOccurs="1" maxOccurs="1"><name>Insurance/Payment Information</name></element>
 										<element number="eScene" type="eScene" minOccurs="1" maxOccurs="1"><name>Incident Scene Information</name></element>
 										<element number="eSituation" type="eSituation" minOccurs="1" maxOccurs="1"><name>Situation Information</name></element>
@@ -19,7 +19,7 @@
 										<element number="eProtocols" type="eProtocols" minOccurs="1" maxOccurs="1"><name>Medical Protocols Information</name></element>
 										<element number="eMedications" type="eMedications" minOccurs="1" maxOccurs="1"><name>Intervention Medications Information</name></element>
 										<element number="eProcedures" type="eProcedures" minOccurs="1" maxOccurs="1"><name>Intervention Procedures Information</name></element>
-										<element number="eAirway" type="eAirways" minOccurs="1" maxOccurs="1"><name>Airway Device Information</name></element>
+										<element number="eAirway" type="eAirways" minOccurs="0" maxOccurs="1"><name>Airway Device Information</name></element>
 										<element number="eDevice" type="eDevices" minOccurs="0" maxOccurs="1"><name>Medical Device Information</name></element>
 										<element number="eDisposition" type="eDisposition" minOccurs="1" maxOccurs="1"><name>Patient Disposition Information</name></element>
 										<element number="eOutcome" type="eOutcome" minOccurs="1" maxOccurs="1"><name>Patient Outcome Information</name></element>

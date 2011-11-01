@@ -18,25 +18,25 @@
 	<pertinentNegatives>
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>decimal</dataType>
-        <constraint>
-          <constraintTitle>totalDigits</constraintTitle>
-          <constraintValue>4</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>fractionDigits</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0.1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>999.9</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>4</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0.1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>999.9</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -62,44 +62,44 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3502001</code>
-           <description>Blue</description>
-        </choice>
-        <choice>
-           <code>3502003</code>
-           <description>Green</description>
-        </choice>
-        <choice>
-           <code>3502005</code>
-           <description>Grey</description>
-        </choice>
-        <choice>
-           <code>3502007</code>
-           <description>Orange</description>
-        </choice>
-        <choice>
-           <code>3502009</code>
-           <description>Pink</description>
-        </choice>
-        <choice>
-           <code>3502011</code>
-           <description>Purple</description>
-        </choice>
-        <choice>
-           <code>3502013</code>
-           <description>Red</description>
-        </choice>
-        <choice>
-           <code>3502015</code>
-           <description>White</description>
-        </choice>
-        <choice>
-           <code>3502017</code>
-           <description>Yellow</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3502001</code>
+      <description>Blue</description>
+    </choice>
+    <choice>
+      <code>3502003</code>
+      <description>Green</description>
+    </choice>
+    <choice>
+      <code>3502005</code>
+      <description>Grey</description>
+    </choice>
+    <choice>
+      <code>3502007</code>
+      <description>Orange</description>
+    </choice>
+    <choice>
+      <code>3502009</code>
+      <description>Pink</description>
+    </choice>
+    <choice>
+      <code>3502011</code>
+      <description>Purple</description>
+    </choice>
+    <choice>
+      <code>3502013</code>
+      <description>Red</description>
+    </choice>
+    <choice>
+      <code>3502015</code>
+      <description>White</description>
+    </choice>
+    <choice>
+      <code>3502017</code>
+      <description>Yellow</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -107,19 +107,19 @@
 	</notValues>
 </restrictions>
 </element><group number="eExam.AssessmentGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
-<element number="eExam.03" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<element number="eExam.03" minOccurs="0" maxOccurs="1" isNillable="No">
 <name>Date/Time of Assessment</name>
 <national>No</national>
-<state>Yes</state>
+<state>No</state>
 <definition>The date/time of the assessment</definition>
 <v2Number>E16_03</v2Number>
-<usage>Recommended</usage>
-<notValue>Yes</notValue>
+<usage>Optional</usage>
+<notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
 <v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
 <table border="1px" cellpadding="3px" cellspacing="0">
-  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>
   <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
   <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
   <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
@@ -151,22 +151,17 @@
       <patterns>
         <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
      </patterns>
-      <constraints>
-        <dataType>dateTime</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-      </constraints>
-	<notValues>
-		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
-		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
-		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
-	</notValues>
+  <constraints>
+    <dataType>dateTime</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eExam.04" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Skin Assessment</name>
@@ -186,77 +181,77 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3504001</code>
-           <description>Clammy</description>
-        </choice>
-        <choice>
-           <code>3504003</code>
-           <description>Cold</description>
-        </choice>
-        <choice>
-           <code>3504005</code>
-           <description>Cyanotic</description>
-        </choice>
-        <choice>
-           <code>3504007</code>
-           <description>Diaphoretic</description>
-        </choice>
-        <choice>
-           <code>3504009</code>
-           <description>Dry</description>
-        </choice>
-        <choice>
-           <code>3504011</code>
-           <description>Flushed</description>
-        </choice>
-        <choice>
-           <code>3504013</code>
-           <description>Hot</description>
-        </choice>
-        <choice>
-           <code>3504015</code>
-           <description>Jaundiced</description>
-        </choice>
-        <choice>
-           <code>3504017</code>
-           <description>Lividity</description>
-        </choice>
-        <choice>
-           <code>3504019</code>
-           <description>Mottled</description>
-        </choice>
-        <choice>
-           <code>3504021</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3504023</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3504025</code>
-           <description>Pale</description>
-        </choice>
-        <choice>
-           <code>3504027</code>
-           <description>Poor Turgor</description>
-        </choice>
-        <choice>
-           <code>3504029</code>
-           <description>Red (Erythmatous)</description>
-        </choice>
-        <choice>
-           <code>3504031</code>
-           <description>Tenting</description>
-        </choice>
-        <choice>
-           <code>3504033</code>
-           <description>Warm</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3504001</code>
+      <description>Clammy</description>
+    </choice>
+    <choice>
+      <code>3504003</code>
+      <description>Cold</description>
+    </choice>
+    <choice>
+      <code>3504005</code>
+      <description>Cyanotic</description>
+    </choice>
+    <choice>
+      <code>3504007</code>
+      <description>Diaphoretic</description>
+    </choice>
+    <choice>
+      <code>3504009</code>
+      <description>Dry</description>
+    </choice>
+    <choice>
+      <code>3504011</code>
+      <description>Flushed</description>
+    </choice>
+    <choice>
+      <code>3504013</code>
+      <description>Hot</description>
+    </choice>
+    <choice>
+      <code>3504015</code>
+      <description>Jaundiced</description>
+    </choice>
+    <choice>
+      <code>3504017</code>
+      <description>Lividity</description>
+    </choice>
+    <choice>
+      <code>3504019</code>
+      <description>Mottled</description>
+    </choice>
+    <choice>
+      <code>3504021</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3504023</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3504025</code>
+      <description>Pale</description>
+    </choice>
+    <choice>
+      <code>3504027</code>
+      <description>Poor Turgor</description>
+    </choice>
+    <choice>
+      <code>3504029</code>
+      <description>Red (Erythmatous)</description>
+    </choice>
+    <choice>
+      <code>3504031</code>
+      <description>Tenting</description>
+    </choice>
+    <choice>
+      <code>3504033</code>
+      <description>Warm</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eExam.05" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Head Assessment</name>
@@ -276,97 +271,97 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3505001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3505003</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3505005</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3505007</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3505009</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3505011</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3505013</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3505015</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3505017</code>
-           <description>Decapitation</description>
-        </choice>
-        <choice>
-           <code>3505019</code>
-           <description>Deformity</description>
-        </choice>
-        <choice>
-           <code>3505021</code>
-           <description>Drainage</description>
-        </choice>
-        <choice>
-           <code>3505023</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3505025</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3505027</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3505029</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3505031</code>
-           <description>Mass/Lesion</description>
-        </choice>
-        <choice>
-           <code>3505033</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3505035</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3505037</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3505039</code>
-           <description>Puncture/Stab Wound</description>
-        </choice>
-        <choice>
-           <code>3505041</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3505043</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3505001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3505003</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3505005</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3505007</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3505009</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3505011</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3505013</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3505015</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3505017</code>
+      <description>Decapitation</description>
+    </choice>
+    <choice>
+      <code>3505019</code>
+      <description>Deformity</description>
+    </choice>
+    <choice>
+      <code>3505021</code>
+      <description>Drainage</description>
+    </choice>
+    <choice>
+      <code>3505023</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3505025</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3505027</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3505029</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3505031</code>
+      <description>Mass/Lesion</description>
+    </choice>
+    <choice>
+      <code>3505033</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3505035</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3505037</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3505039</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3505041</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3505043</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eExam.06" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Face Assessment</name>
@@ -386,101 +381,101 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3506001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3506003</code>
-           <description>Asymmetric Smile or Droop</description>
-        </choice>
-        <choice>
-           <code>3506005</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3506007</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3506009</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3506011</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3506013</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3506015</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3506017</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3506019</code>
-           <description>Decapitation</description>
-        </choice>
-        <choice>
-           <code>3506021</code>
-           <description>Deformity</description>
-        </choice>
-        <choice>
-           <code>3506023</code>
-           <description>Drainage</description>
-        </choice>
-        <choice>
-           <code>3506025</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3506027</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3506029</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3506031</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3506033</code>
-           <description>Mass/Lesion</description>
-        </choice>
-        <choice>
-           <code>3506035</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3506037</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3506039</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3506041</code>
-           <description>Puncture/Stab Wound</description>
-        </choice>
-        <choice>
-           <code>3506043</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3506045</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3506001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3506003</code>
+      <description>Asymmetric Smile or Droop</description>
+    </choice>
+    <choice>
+      <code>3506005</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3506007</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3506009</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3506011</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3506013</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3506015</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3506017</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3506019</code>
+      <description>Decapitation</description>
+    </choice>
+    <choice>
+      <code>3506021</code>
+      <description>Deformity</description>
+    </choice>
+    <choice>
+      <code>3506023</code>
+      <description>Drainage</description>
+    </choice>
+    <choice>
+      <code>3506025</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3506027</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3506029</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3506031</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3506033</code>
+      <description>Mass/Lesion</description>
+    </choice>
+    <choice>
+      <code>3506035</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3506037</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3506039</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3506041</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3506043</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3506045</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eExam.07" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Neck Assessment</name>
@@ -500,105 +495,105 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3507001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3507003</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3507005</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3507007</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3507009</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3507011</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3507013</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3507015</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3507017</code>
-           <description>Decapitation</description>
-        </choice>
-        <choice>
-           <code>3507019</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3507021</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3507023</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3507025</code>
-           <description>JVD</description>
-        </choice>
-        <choice>
-           <code>3507027</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3507029</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3507031</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3507033</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3507035</code>
-           <description>Puncture/Stab Wound</description>
-        </choice>
-        <choice>
-           <code>3507037</code>
-           <description>Stridor</description>
-        </choice>
-        <choice>
-           <code>3507039</code>
-           <description>Subcutaneous Air</description>
-        </choice>
-        <choice>
-           <code>3507041</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3507043</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-        <choice>
-           <code>3507045</code>
-           <description>Tracheal Deviation-Left</description>
-        </choice>
-        <choice>
-           <code>3507047</code>
-           <description>Tracheal Deviation-Right</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3507001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3507003</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3507005</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3507007</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3507009</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3507011</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3507013</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3507015</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3507017</code>
+      <description>Decapitation</description>
+    </choice>
+    <choice>
+      <code>3507019</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3507021</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3507023</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3507025</code>
+      <description>JVD</description>
+    </choice>
+    <choice>
+      <code>3507027</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3507029</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3507031</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3507033</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3507035</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3507037</code>
+      <description>Stridor</description>
+    </choice>
+    <choice>
+      <code>3507039</code>
+      <description>Subcutaneous Air</description>
+    </choice>
+    <choice>
+      <code>3507041</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3507043</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+    <choice>
+      <code>3507045</code>
+      <description>Tracheal Deviation-Left</description>
+    </choice>
+    <choice>
+      <code>3507047</code>
+      <description>Tracheal Deviation-Right</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eExam.08" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Chest/Lungs Assessment</name>
@@ -622,201 +617,201 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3508001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3508003</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3508005</code>
-           <description>Accessory Muscles Used with Breathing</description>
-        </choice>
-        <choice>
-           <code>3508007</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3508009</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3508011</code>
-           <description>Breath Sounds-Absent-Left</description>
-        </choice>
-        <choice>
-           <code>3508013</code>
-           <description>Breath Sounds-Absent-Right</description>
-        </choice>
-        <choice>
-           <code>3508015</code>
-           <description>Breath Sounds-Decreased Left</description>
-        </choice>
-        <choice>
-           <code>3508017</code>
-           <description>Breath Sounds-Decreased Right</description>
-        </choice>
-        <choice>
-           <code>3508019</code>
-           <description>Breath Sounds-Equal</description>
-        </choice>
-        <choice>
-           <code>3508021</code>
-           <description>Breath Sounds-Normal-Left</description>
-        </choice>
-        <choice>
-           <code>3508023</code>
-           <description>Breath Sounds-Normal-Right</description>
-        </choice>
-        <choice>
-           <code>3508025</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3508027</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3508029</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3508031</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3508033</code>
-           <description>Crush Injury</description>
-        </choice>
-        <choice>
-           <code>3508035</code>
-           <description>Deformity</description>
-        </choice>
-        <choice>
-           <code>3508037</code>
-           <description>Flail Segment-Left</description>
-        </choice>
-        <choice>
-           <code>3508039</code>
-           <description>Flail Segment-Right</description>
-        </choice>
-        <choice>
-           <code>3508041</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3508043</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3508045</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3508047</code>
-           <description>Increased Respiratory Effort</description>
-        </choice>
-        <choice>
-           <code>3508049</code>
-           <description>Implanted Device</description>
-        </choice>
-        <choice>
-           <code>3508051</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3508053</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3508055</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3508057</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3508059</code>
-           <description>Pain with Inspiration/expiration-Left</description>
-        </choice>
-        <choice>
-           <code>3508061</code>
-           <description>Pain with Inspiration/expiration-Right</description>
-        </choice>
-        <choice>
-           <code>3508063</code>
-           <description>Puncture/Stab Wound</description>
-        </choice>
-        <choice>
-           <code>3508065</code>
-           <description>Rales-Left</description>
-        </choice>
-        <choice>
-           <code>3508067</code>
-           <description>Rales-Right</description>
-        </choice>
-        <choice>
-           <code>3508069</code>
-           <description>Retraction</description>
-        </choice>
-        <choice>
-           <code>3508071</code>
-           <description>Rhonchi-Left</description>
-        </choice>
-        <choice>
-           <code>3508073</code>
-           <description>Rhonchi-Right</description>
-        </choice>
-        <choice>
-           <code>3508075</code>
-           <description>Rhonchi/Wheezing</description>
-        </choice>
-        <choice>
-           <code>3508077</code>
-           <description>Stridor-Left</description>
-        </choice>
-        <choice>
-           <code>3508079</code>
-           <description>Stridor-Right</description>
-        </choice>
-        <choice>
-           <code>3508081</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3508083</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-        <choice>
-           <code>3508085</code>
-           <description>Tenderness-Left</description>
-        </choice>
-        <choice>
-           <code>3508087</code>
-           <description>Tenderness-Right</description>
-        </choice>
-        <choice>
-           <code>3508089</code>
-           <description>Wheezing-Expiratory - Left</description>
-        </choice>
-        <choice>
-           <code>3508091</code>
-           <description>Wheezing-Expiratory - Right</description>
-        </choice>
-        <choice>
-           <code>3508093</code>
-           <description>Wheezing-Inspiratory - Left</description>
-        </choice>
-        <choice>
-           <code>3508095</code>
-           <description>Wheezing-Inspiratory - Right</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3508001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3508003</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3508005</code>
+      <description>Accessory Muscles Used with Breathing</description>
+    </choice>
+    <choice>
+      <code>3508007</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3508009</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3508011</code>
+      <description>Breath Sounds-Absent-Left</description>
+    </choice>
+    <choice>
+      <code>3508013</code>
+      <description>Breath Sounds-Absent-Right</description>
+    </choice>
+    <choice>
+      <code>3508015</code>
+      <description>Breath Sounds-Decreased Left</description>
+    </choice>
+    <choice>
+      <code>3508017</code>
+      <description>Breath Sounds-Decreased Right</description>
+    </choice>
+    <choice>
+      <code>3508019</code>
+      <description>Breath Sounds-Equal</description>
+    </choice>
+    <choice>
+      <code>3508021</code>
+      <description>Breath Sounds-Normal-Left</description>
+    </choice>
+    <choice>
+      <code>3508023</code>
+      <description>Breath Sounds-Normal-Right</description>
+    </choice>
+    <choice>
+      <code>3508025</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3508027</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3508029</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3508031</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3508033</code>
+      <description>Crush Injury</description>
+    </choice>
+    <choice>
+      <code>3508035</code>
+      <description>Deformity</description>
+    </choice>
+    <choice>
+      <code>3508037</code>
+      <description>Flail Segment-Left</description>
+    </choice>
+    <choice>
+      <code>3508039</code>
+      <description>Flail Segment-Right</description>
+    </choice>
+    <choice>
+      <code>3508041</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3508043</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3508045</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3508047</code>
+      <description>Increased Respiratory Effort</description>
+    </choice>
+    <choice>
+      <code>3508049</code>
+      <description>Implanted Device</description>
+    </choice>
+    <choice>
+      <code>3508051</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3508053</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3508055</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3508057</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3508059</code>
+      <description>Pain with Inspiration/expiration-Left</description>
+    </choice>
+    <choice>
+      <code>3508061</code>
+      <description>Pain with Inspiration/expiration-Right</description>
+    </choice>
+    <choice>
+      <code>3508063</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3508065</code>
+      <description>Rales-Left</description>
+    </choice>
+    <choice>
+      <code>3508067</code>
+      <description>Rales-Right</description>
+    </choice>
+    <choice>
+      <code>3508069</code>
+      <description>Retraction</description>
+    </choice>
+    <choice>
+      <code>3508071</code>
+      <description>Rhonchi-Left</description>
+    </choice>
+    <choice>
+      <code>3508073</code>
+      <description>Rhonchi-Right</description>
+    </choice>
+    <choice>
+      <code>3508075</code>
+      <description>Rhonchi/Wheezing</description>
+    </choice>
+    <choice>
+      <code>3508077</code>
+      <description>Stridor-Left</description>
+    </choice>
+    <choice>
+      <code>3508079</code>
+      <description>Stridor-Right</description>
+    </choice>
+    <choice>
+      <code>3508081</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3508083</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+    <choice>
+      <code>3508085</code>
+      <description>Tenderness-Left</description>
+    </choice>
+    <choice>
+      <code>3508087</code>
+      <description>Tenderness-Right</description>
+    </choice>
+    <choice>
+      <code>3508089</code>
+      <description>Wheezing-Expiratory - Left</description>
+    </choice>
+    <choice>
+      <code>3508091</code>
+      <description>Wheezing-Expiratory - Right</description>
+    </choice>
+    <choice>
+      <code>3508093</code>
+      <description>Wheezing-Inspiratory - Left</description>
+    </choice>
+    <choice>
+      <code>3508095</code>
+      <description>Wheezing-Inspiratory - Right</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eExam.09" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Heart Assessment</name>
@@ -836,57 +831,57 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3509001</code>
-           <description>Clicks</description>
-        </choice>
-        <choice>
-           <code>3509003</code>
-           <description>Heart Sounds Decreased</description>
-        </choice>
-        <choice>
-           <code>3509005</code>
-           <description>Murmur-Diastolic</description>
-        </choice>
-        <choice>
-           <code>3509007</code>
-           <description>Murmur-Systolic</description>
-        </choice>
-        <choice>
-           <code>3509009</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3509011</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3509013</code>
-           <description>Rubs</description>
-        </choice>
-        <choice>
-           <code>3509015</code>
-           <description>S1</description>
-        </choice>
-        <choice>
-           <code>3509017</code>
-           <description>S2</description>
-        </choice>
-        <choice>
-           <code>3509019</code>
-           <description>S3</description>
-        </choice>
-        <choice>
-           <code>3509021</code>
-           <description>S4</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3509001</code>
+      <description>Clicks</description>
+    </choice>
+    <choice>
+      <code>3509003</code>
+      <description>Heart Sounds Decreased</description>
+    </choice>
+    <choice>
+      <code>3509005</code>
+      <description>Murmur-Diastolic</description>
+    </choice>
+    <choice>
+      <code>3509007</code>
+      <description>Murmur-Systolic</description>
+    </choice>
+    <choice>
+      <code>3509009</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3509011</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3509013</code>
+      <description>Rubs</description>
+    </choice>
+    <choice>
+      <code>3509015</code>
+      <description>S1</description>
+    </choice>
+    <choice>
+      <code>3509017</code>
+      <description>S2</description>
+    </choice>
+    <choice>
+      <code>3509019</code>
+      <description>S3</description>
+    </choice>
+    <choice>
+      <code>3509021</code>
+      <description>S4</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><group number="eExam.AbdomenGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eExam.10" minOccurs="0" maxOccurs="1" dataType="AbdominalExamFindingLocation" isNillable="No">
-<name>Abdominal Exam Finding Location</name>
+<name>Abdominal Assessment Finding Location</name>
 <national>No</national>
 <state>No</state>
 <definition>The location of the patient's abdomen assessment findings.</definition>
@@ -897,32 +892,32 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3510001</code>
-           <description>Generalized</description>
-        </choice>
-        <choice>
-           <code>3510003</code>
-           <description>Left Lower Quadrant</description>
-        </choice>
-        <choice>
-           <code>3510005</code>
-           <description>Left Upper Quadrant</description>
-        </choice>
-        <choice>
-           <code>3510007</code>
-           <description>Periumbilical</description>
-        </choice>
-        <choice>
-           <code>3510009</code>
-           <description>Right Lower Quadrant</description>
-        </choice>
-        <choice>
-           <code>3510011</code>
-           <description>Right Upper Quadrant</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3510001</code>
+      <description>Generalized</description>
+    </choice>
+    <choice>
+      <code>3510003</code>
+      <description>Left Lower Quadrant</description>
+    </choice>
+    <choice>
+      <code>3510005</code>
+      <description>Left Upper Quadrant</description>
+    </choice>
+    <choice>
+      <code>3510007</code>
+      <description>Periumbilical</description>
+    </choice>
+    <choice>
+      <code>3510009</code>
+      <description>Right Lower Quadrant</description>
+    </choice>
+    <choice>
+      <code>3510011</code>
+      <description>Right Upper Quadrant</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eExam.11" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Abdomen Assessment</name>
@@ -942,121 +937,121 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3511001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3511003</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3511005</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3511007</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3511009</code>
-           <description>Bowel Sounds-Absent</description>
-        </choice>
-        <choice>
-           <code>3511011</code>
-           <description>Bowel Sounds-Present</description>
-        </choice>
-        <choice>
-           <code>3511013</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3511015</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3511017</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3511019</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3511021</code>
-           <description>Distention</description>
-        </choice>
-        <choice>
-           <code>3511023</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3511025</code>
-           <description>Guarding</description>
-        </choice>
-        <choice>
-           <code>3511027</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3511029</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3511031</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3511033</code>
-           <description>Mass/Lesion</description>
-        </choice>
-        <choice>
-           <code>3511035</code>
-           <description>Mass-Pulsating</description>
-        </choice>
-        <choice>
-           <code>3511037</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3511039</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3511041</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3511043</code>
-           <description>Pregnant-Palpable Uterus</description>
-        </choice>
-        <choice>
-           <code>3511045</code>
-           <description>Puncture/Stab Wound</description>
-        </choice>
-        <choice>
-           <code>3511047</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3511049</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-        <choice>
-           <code>3511051</code>
-           <description>Tenderness</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3511001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3511003</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3511005</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3511007</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3511009</code>
+      <description>Bowel Sounds-Absent</description>
+    </choice>
+    <choice>
+      <code>3511011</code>
+      <description>Bowel Sounds-Present</description>
+    </choice>
+    <choice>
+      <code>3511013</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3511015</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3511017</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3511019</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3511021</code>
+      <description>Distention</description>
+    </choice>
+    <choice>
+      <code>3511023</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3511025</code>
+      <description>Guarding</description>
+    </choice>
+    <choice>
+      <code>3511027</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3511029</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3511031</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3511033</code>
+      <description>Mass/Lesion</description>
+    </choice>
+    <choice>
+      <code>3511035</code>
+      <description>Mass-Pulsating</description>
+    </choice>
+    <choice>
+      <code>3511037</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3511039</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3511041</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3511043</code>
+      <description>Pregnant-Palpable Uterus</description>
+    </choice>
+    <choice>
+      <code>3511045</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3511047</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3511049</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+    <choice>
+      <code>3511051</code>
+      <description>Tenderness</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
 <element number="eExam.12" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Pelvis/Genitourinary Assessment</name>
 <national>No</national>
 <state>No</state>
-<definition>The assessment findings associated with the patient's pelvis/genitourniary.</definition>
-<v2Number>E16_14</v2Number>
+<definition>The assessment findings associated with the patient's pelvis/genitourinary.</definition>
+<v2Number>E16_13</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>Yes</pertinentNegative>
@@ -1069,129 +1064,125 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3512001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3512003</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3512005</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3512007</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3512009</code>
-           <description>Bleeding-Rectal</description>
-        </choice>
-        <choice>
-           <code>3512011</code>
-           <description>Bleeding-Urethral</description>
-        </choice>
-        <choice>
-           <code>3512013</code>
-           <description>Bleeding-Vaginal</description>
-        </choice>
-        <choice>
-           <code>3512015</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3512017</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3512019</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3512021</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3512023</code>
-           <description>Deformity</description>
-        </choice>
-        <choice>
-           <code>3512025</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3512027</code>
-           <description>Genital Injury</description>
-        </choice>
-        <choice>
-           <code>3512029</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3512031</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3512033</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3512035</code>
-           <description>Mass/Lesion</description>
-        </choice>
-        <choice>
-           <code>3512037</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3512039</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3512041</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3512043</code>
-           <description>Pelvic Fracture</description>
-        </choice>
-        <choice>
-           <code>3512045</code>
-           <description>Pelvic Instability</description>
-        </choice>
-        <choice>
-           <code>3512047</code>
-           <description>Penile Priapism/Erection</description>
-        </choice>
-        <choice>
-           <code>3512049</code>
-           <description>Pregnant-Crowning</description>
-        </choice>
-        <choice>
-           <code>3512051</code>
-           <description>Puncture/Stab Wound</description>
-        </choice>
-        <choice>
-           <code>3512053</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3512055</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-        <choice>
-           <code>3512057</code>
-           <description>Tenderness</description>
-        </choice>
-        <choice>
-           <code>3512059</code>
-           <description>Unstable</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3512001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3512003</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3512005</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3512007</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3512009</code>
+      <description>Bleeding-Rectal</description>
+    </choice>
+    <choice>
+      <code>3512011</code>
+      <description>Bleeding-Urethral</description>
+    </choice>
+    <choice>
+      <code>3512013</code>
+      <description>Bleeding-Vaginal</description>
+    </choice>
+    <choice>
+      <code>3512015</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3512017</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3512019</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3512021</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3512023</code>
+      <description>Deformity</description>
+    </choice>
+    <choice>
+      <code>3512025</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3512027</code>
+      <description>Genital Injury</description>
+    </choice>
+    <choice>
+      <code>3512029</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3512031</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3512033</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3512035</code>
+      <description>Mass/Lesion</description>
+    </choice>
+    <choice>
+      <code>3512037</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3512039</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3512041</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3512043</code>
+      <description>Pelvic Fracture</description>
+    </choice>
+    <choice>
+      <code>3512045</code>
+      <description>Pelvic Instability</description>
+    </choice>
+    <choice>
+      <code>3512047</code>
+      <description>Penile Priapism/Erection</description>
+    </choice>
+    <choice>
+      <code>3512049</code>
+      <description>Pregnant-Crowning</description>
+    </choice>
+    <choice>
+      <code>3512051</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3512053</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3512055</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+    <choice>
+      <code>3512057</code>
+      <description>Tenderness</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><group number="eExam.SpineGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eExam.13" minOccurs="0" maxOccurs="1" dataType="BackAndSpineAssessmentLocation" isNillable="No">
@@ -1206,56 +1197,60 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3513001</code>
-           <description>Cervical-Left</description>
-        </choice>
-        <choice>
-           <code>3513003</code>
-           <description>Cervical-Midline</description>
-        </choice>
-        <choice>
-           <code>3513005</code>
-           <description>Cervical-Right</description>
-        </choice>
-        <choice>
-           <code>3513007</code>
-           <description>Lumbar-Left</description>
-        </choice>
-        <choice>
-           <code>3513009</code>
-           <description>Lumbar-Midline</description>
-        </choice>
-        <choice>
-           <code>3513011</code>
-           <description>Lumbar-Right</description>
-        </choice>
-        <choice>
-           <code>3513013</code>
-           <description>Thoracic-Left</description>
-        </choice>
-        <choice>
-           <code>3513015</code>
-           <description>Thoracic-Midline</description>
-        </choice>
-        <choice>
-           <code>3513017</code>
-           <description>Thoracic-Right</description>
-        </choice>
-        <choice>
-           <code>3513019</code>
-           <description>Sacral-Left</description>
-        </choice>
-        <choice>
-           <code>3513021</code>
-           <description>Sacral-Midline</description>
-        </choice>
-        <choice>
-           <code>3513023</code>
-           <description>Sacral-Right</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3513001</code>
+      <description>Back-General</description>
+    </choice>
+    <choice>
+      <code>3513003</code>
+      <description>Cervical-Left</description>
+    </choice>
+    <choice>
+      <code>3513005</code>
+      <description>Cervical-Midline</description>
+    </choice>
+    <choice>
+      <code>3513007</code>
+      <description>Cervical-Right</description>
+    </choice>
+    <choice>
+      <code>3513009</code>
+      <description>Lumbar-Left</description>
+    </choice>
+    <choice>
+      <code>3513011</code>
+      <description>Lumbar-Midline</description>
+    </choice>
+    <choice>
+      <code>3513013</code>
+      <description>Lumbar-Right</description>
+    </choice>
+    <choice>
+      <code>3513015</code>
+      <description>Thoracic-Left</description>
+    </choice>
+    <choice>
+      <code>3513017</code>
+      <description>Thoracic-Midline</description>
+    </choice>
+    <choice>
+      <code>3513019</code>
+      <description>Thoracic-Right</description>
+    </choice>
+    <choice>
+      <code>3513021</code>
+      <description>Sacral-Left</description>
+    </choice>
+    <choice>
+      <code>3513023</code>
+      <description>Sacral-Midline</description>
+    </choice>
+    <choice>
+      <code>3513025</code>
+      <description>Sacral-Right</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eExam.14" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Back and Spine Assessment</name>
@@ -1275,101 +1270,101 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3514001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3514003</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3514005</code>
-           <description>Back-General</description>
-        </choice>
-        <choice>
-           <code>3514007</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3514009</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3514011</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3514013</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3514015</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3514017</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3514019</code>
-           <description>Deformity</description>
-        </choice>
-        <choice>
-           <code>3514021</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3514023</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3514025</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3514027</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3514029</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3514031</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3514033</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3514035</code>
-           <description>Pain with Range of Motion</description>
-        </choice>
-        <choice>
-           <code>3514037</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3514039</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-        <choice>
-           <code>3514041</code>
-           <description>Tenderness Costovertebral Angle</description>
-        </choice>
-        <choice>
-           <code>3514043</code>
-           <description>Tenderness Midline Spinous Process</description>
-        </choice>
-        <choice>
-           <code>3514045</code>
-           <description>Tenderness Paraspinous</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3514001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3514003</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3514005</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3514007</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3514009</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3514011</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3514013</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3514015</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3514017</code>
+      <description>Deformity</description>
+    </choice>
+    <choice>
+      <code>3514019</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3514021</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3514023</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3514025</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3514027</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3514029</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3514031</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3514033</code>
+      <description>Pain with Range of Motion</description>
+    </choice>
+    <choice>
+      <code>3514035</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3514037</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3514039</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+    <choice>
+      <code>3514041</code>
+      <description>Tenderness Costovertebral Angle</description>
+    </choice>
+    <choice>
+      <code>3514043</code>
+      <description>Tenderness Midline Spinous Process</description>
+    </choice>
+    <choice>
+      <code>3514045</code>
+      <description>Tenderness Paraspinous</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
 <group number="eExam.ExtremityGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
@@ -1385,200 +1380,200 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3515001</code>
-           <description>Ankle-Left</description>
-        </choice>
-        <choice>
-           <code>3515003</code>
-           <description>Ankle-Right</description>
-        </choice>
-        <choice>
-           <code>3515005</code>
-           <description>Arm-Upper-Left</description>
-        </choice>
-        <choice>
-           <code>3515007</code>
-           <description>Arm-Upper-Right</description>
-        </choice>
-        <choice>
-           <code>3515009</code>
-           <description>Elbow-Left</description>
-        </choice>
-        <choice>
-           <code>3515011</code>
-           <description>Elbow-Right</description>
-        </choice>
-        <choice>
-           <code>3515013</code>
-           <description>Finger-2nd (Index)-Left</description>
-        </choice>
-        <choice>
-           <code>3515015</code>
-           <description>Finger-2nd (Index)-Right</description>
-        </choice>
-        <choice>
-           <code>3515017</code>
-           <description>Finger-3rd (Middle)-Left</description>
-        </choice>
-        <choice>
-           <code>3515019</code>
-           <description>Finger-3rd (Middle)-Right</description>
-        </choice>
-        <choice>
-           <code>3515021</code>
-           <description>Finger-4th (Ring)-Left</description>
-        </choice>
-        <choice>
-           <code>3515023</code>
-           <description>Finger-4th (Ring)-Right</description>
-        </choice>
-        <choice>
-           <code>3515025</code>
-           <description>Finger-5th (Smallest)-Left</description>
-        </choice>
-        <choice>
-           <code>3515027</code>
-           <description>Finger-5th (Smallest)-Right</description>
-        </choice>
-        <choice>
-           <code>3515029</code>
-           <description>Foot-Dorsal-Left</description>
-        </choice>
-        <choice>
-           <code>3515031</code>
-           <description>Foot-Dorsal-Right</description>
-        </choice>
-        <choice>
-           <code>3515033</code>
-           <description>Foot-Plantar-Left</description>
-        </choice>
-        <choice>
-           <code>3515035</code>
-           <description>Foot-Plantar-Right</description>
-        </choice>
-        <choice>
-           <code>3515037</code>
-           <description>Forearm-Left</description>
-        </choice>
-        <choice>
-           <code>3515039</code>
-           <description>Forearm-Right</description>
-        </choice>
-        <choice>
-           <code>3515041</code>
-           <description>Hand-Dorsal-Left</description>
-        </choice>
-        <choice>
-           <code>3515043</code>
-           <description>Hand-Dorsal-Right</description>
-        </choice>
-        <choice>
-           <code>3515045</code>
-           <description>Hand-Palm-Left</description>
-        </choice>
-        <choice>
-           <code>3515047</code>
-           <description>Hand-Palm-Right</description>
-        </choice>
-        <choice>
-           <code>3515049</code>
-           <description>Hip-Left</description>
-        </choice>
-        <choice>
-           <code>3515051</code>
-           <description>Hip-Right</description>
-        </choice>
-        <choice>
-           <code>3515053</code>
-           <description>Knee-Left</description>
-        </choice>
-        <choice>
-           <code>3515055</code>
-           <description>Knee-Right</description>
-        </choice>
-        <choice>
-           <code>3515057</code>
-           <description>Leg-Lower-Left</description>
-        </choice>
-        <choice>
-           <code>3515059</code>
-           <description>Leg-Lower-Right</description>
-        </choice>
-        <choice>
-           <code>3515061</code>
-           <description>Leg-Upper-Left</description>
-        </choice>
-        <choice>
-           <code>3515063</code>
-           <description>Leg-Upper-Right</description>
-        </choice>
-        <choice>
-           <code>3515065</code>
-           <description>Shoulder-Left</description>
-        </choice>
-        <choice>
-           <code>3515067</code>
-           <description>Shoulder-Right</description>
-        </choice>
-        <choice>
-           <code>3515069</code>
-           <description>Thumb-Left</description>
-        </choice>
-        <choice>
-           <code>3515071</code>
-           <description>Thumb-Right</description>
-        </choice>
-        <choice>
-           <code>3515073</code>
-           <description>Toe-1st (Big)-Left</description>
-        </choice>
-        <choice>
-           <code>3515075</code>
-           <description>Toe-1st (Big)-Right</description>
-        </choice>
-        <choice>
-           <code>3515077</code>
-           <description>Toe-2nd-Left</description>
-        </choice>
-        <choice>
-           <code>3515079</code>
-           <description>Toe-2nd-Right</description>
-        </choice>
-        <choice>
-           <code>3515081</code>
-           <description>Toe-3rd-Left</description>
-        </choice>
-        <choice>
-           <code>3515083</code>
-           <description>Toe-3rd-Right</description>
-        </choice>
-        <choice>
-           <code>3515085</code>
-           <description>Toe-4th-Left</description>
-        </choice>
-        <choice>
-           <code>3515087</code>
-           <description>Toe-4th-Right</description>
-        </choice>
-        <choice>
-           <code>3515089</code>
-           <description>Toe-5th (Smallest)-Left</description>
-        </choice>
-        <choice>
-           <code>3515091</code>
-           <description>Toe-5th (Smallest)-Right</description>
-        </choice>
-        <choice>
-           <code>3515093</code>
-           <description>Wrist-Left</description>
-        </choice>
-        <choice>
-           <code>3515095</code>
-           <description>Wrist-Right</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3515001</code>
+      <description>Ankle-Left</description>
+    </choice>
+    <choice>
+      <code>3515003</code>
+      <description>Ankle-Right</description>
+    </choice>
+    <choice>
+      <code>3515005</code>
+      <description>Arm-Upper-Left</description>
+    </choice>
+    <choice>
+      <code>3515007</code>
+      <description>Arm-Upper-Right</description>
+    </choice>
+    <choice>
+      <code>3515009</code>
+      <description>Elbow-Left</description>
+    </choice>
+    <choice>
+      <code>3515011</code>
+      <description>Elbow-Right</description>
+    </choice>
+    <choice>
+      <code>3515013</code>
+      <description>Finger-2nd (Index)-Left</description>
+    </choice>
+    <choice>
+      <code>3515015</code>
+      <description>Finger-2nd (Index)-Right</description>
+    </choice>
+    <choice>
+      <code>3515017</code>
+      <description>Finger-3rd (Middle)-Left</description>
+    </choice>
+    <choice>
+      <code>3515019</code>
+      <description>Finger-3rd (Middle)-Right</description>
+    </choice>
+    <choice>
+      <code>3515021</code>
+      <description>Finger-4th (Ring)-Left</description>
+    </choice>
+    <choice>
+      <code>3515023</code>
+      <description>Finger-4th (Ring)-Right</description>
+    </choice>
+    <choice>
+      <code>3515025</code>
+      <description>Finger-5th (Smallest)-Left</description>
+    </choice>
+    <choice>
+      <code>3515027</code>
+      <description>Finger-5th (Smallest)-Right</description>
+    </choice>
+    <choice>
+      <code>3515029</code>
+      <description>Foot-Dorsal-Left</description>
+    </choice>
+    <choice>
+      <code>3515031</code>
+      <description>Foot-Dorsal-Right</description>
+    </choice>
+    <choice>
+      <code>3515033</code>
+      <description>Foot-Plantar-Left</description>
+    </choice>
+    <choice>
+      <code>3515035</code>
+      <description>Foot-Plantar-Right</description>
+    </choice>
+    <choice>
+      <code>3515037</code>
+      <description>Forearm-Left</description>
+    </choice>
+    <choice>
+      <code>3515039</code>
+      <description>Forearm-Right</description>
+    </choice>
+    <choice>
+      <code>3515041</code>
+      <description>Hand-Dorsal-Left</description>
+    </choice>
+    <choice>
+      <code>3515043</code>
+      <description>Hand-Dorsal-Right</description>
+    </choice>
+    <choice>
+      <code>3515045</code>
+      <description>Hand-Palm-Left</description>
+    </choice>
+    <choice>
+      <code>3515047</code>
+      <description>Hand-Palm-Right</description>
+    </choice>
+    <choice>
+      <code>3515049</code>
+      <description>Hip-Left</description>
+    </choice>
+    <choice>
+      <code>3515051</code>
+      <description>Hip-Right</description>
+    </choice>
+    <choice>
+      <code>3515053</code>
+      <description>Knee-Left</description>
+    </choice>
+    <choice>
+      <code>3515055</code>
+      <description>Knee-Right</description>
+    </choice>
+    <choice>
+      <code>3515057</code>
+      <description>Leg-Lower-Left</description>
+    </choice>
+    <choice>
+      <code>3515059</code>
+      <description>Leg-Lower-Right</description>
+    </choice>
+    <choice>
+      <code>3515061</code>
+      <description>Leg-Upper-Left</description>
+    </choice>
+    <choice>
+      <code>3515063</code>
+      <description>Leg-Upper-Right</description>
+    </choice>
+    <choice>
+      <code>3515065</code>
+      <description>Shoulder-Left</description>
+    </choice>
+    <choice>
+      <code>3515067</code>
+      <description>Shoulder-Right</description>
+    </choice>
+    <choice>
+      <code>3515069</code>
+      <description>Thumb-Left</description>
+    </choice>
+    <choice>
+      <code>3515071</code>
+      <description>Thumb-Right</description>
+    </choice>
+    <choice>
+      <code>3515073</code>
+      <description>Toe-1st (Big)-Left</description>
+    </choice>
+    <choice>
+      <code>3515075</code>
+      <description>Toe-1st (Big)-Right</description>
+    </choice>
+    <choice>
+      <code>3515077</code>
+      <description>Toe-2nd-Left</description>
+    </choice>
+    <choice>
+      <code>3515079</code>
+      <description>Toe-2nd-Right</description>
+    </choice>
+    <choice>
+      <code>3515081</code>
+      <description>Toe-3rd-Left</description>
+    </choice>
+    <choice>
+      <code>3515083</code>
+      <description>Toe-3rd-Right</description>
+    </choice>
+    <choice>
+      <code>3515085</code>
+      <description>Toe-4th-Left</description>
+    </choice>
+    <choice>
+      <code>3515087</code>
+      <description>Toe-4th-Right</description>
+    </choice>
+    <choice>
+      <code>3515089</code>
+      <description>Toe-5th (Smallest)-Left</description>
+    </choice>
+    <choice>
+      <code>3515091</code>
+      <description>Toe-5th (Smallest)-Right</description>
+    </choice>
+    <choice>
+      <code>3515093</code>
+      <description>Wrist-Left</description>
+    </choice>
+    <choice>
+      <code>3515095</code>
+      <description>Wrist-Right</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eExam.16" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Extremities Assessment</name>
@@ -1598,165 +1593,161 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3516001</code>
-           <description>Abrasion</description>
-        </choice>
-        <choice>
-           <code>3516003</code>
-           <description>Amputation-Acute</description>
-        </choice>
-        <choice>
-           <code>3516005</code>
-           <description>Amputation-Previous</description>
-        </choice>
-        <choice>
-           <code>3516007</code>
-           <description>Avulsion</description>
-        </choice>
-        <choice>
-           <code>3516009</code>
-           <description>Bleeding Controlled</description>
-        </choice>
-        <choice>
-           <code>3516011</code>
-           <description>Bleeding Uncontrolled</description>
-        </choice>
-        <choice>
-           <code>3516013</code>
-           <description>Breath Sounds-Absent-Left</description>
-        </choice>
-        <choice>
-           <code>3516015</code>
-           <description>Burn-Blistering</description>
-        </choice>
-        <choice>
-           <code>3516017</code>
-           <description>Burn-Charring</description>
-        </choice>
-        <choice>
-           <code>3516019</code>
-           <description>Burn-Redness</description>
-        </choice>
-        <choice>
-           <code>3516021</code>
-           <description>Burn-White/Waxy</description>
-        </choice>
-        <choice>
-           <code>3516023</code>
-           <description>Clubbing (of fingers)</description>
-        </choice>
-        <choice>
-           <code>3516025</code>
-           <description>Crush Injury</description>
-        </choice>
-        <choice>
-           <code>3516027</code>
-           <description>Deformity</description>
-        </choice>
-        <choice>
-           <code>3516029</code>
-           <description>Dislocation</description>
-        </choice>
-        <choice>
-           <code>3516031</code>
-           <description>Edema</description>
-        </choice>
-        <choice>
-           <code>3516033</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3516035</code>
-           <description>Fracture-Closed</description>
-        </choice>
-        <choice>
-           <code>3516037</code>
-           <description>Fracture-Open</description>
-        </choice>
-        <choice>
-           <code>3516039</code>
-           <description>Gunshot Wound-Entry</description>
-        </choice>
-        <choice>
-           <code>3516041</code>
-           <description>Gunshot Wound-Exit</description>
-        </choice>
-        <choice>
-           <code>3516043</code>
-           <description>Laceration</description>
-        </choice>
-        <choice>
-           <code>3516045</code>
-           <description>Motor Function-Abnormal/Weakness</description>
-        </choice>
-        <choice>
-           <code>3516047</code>
-           <description>Motor Function-Absent</description>
-        </choice>
-        <choice>
-           <code>3516049</code>
-           <description>Motor Function-Normal</description>
-        </choice>
-        <choice>
-           <code>3516051</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3516053</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3516055</code>
-           <description>Pain</description>
-        </choice>
-        <choice>
-           <code>3516057</code>
-           <description>Paralysis</description>
-        </choice>
-        <choice>
-           <code>3516059</code>
-           <description>Pulse-Abnormal</description>
-        </choice>
-        <choice>
-           <code>3516061</code>
-           <description>Pulse-Absent</description>
-        </choice>
-        <choice>
-           <code>3516063</code>
-           <description>Pulse-Normal</description>
-        </choice>
-        <choice>
-           <code>3516065</code>
-           <description>Puncture/Stab Wound</description>
-        </choice>
-        <choice>
-           <code>3516067</code>
-           <description>Sensation-Abnormal</description>
-        </choice>
-        <choice>
-           <code>3516069</code>
-           <description>Sensation-Absent</description>
-        </choice>
-        <choice>
-           <code>3516071</code>
-           <description>Sensation-Normal</description>
-        </choice>
-        <choice>
-           <code>3516073</code>
-           <description>Swelling/Bruising/Contusion with Pain</description>
-        </choice>
-        <choice>
-           <code>3516075</code>
-           <description>Swelling/Bruising/Contusion without Pain</description>
-        </choice>
-        <choice>
-           <code>3516077</code>
-           <description>Tenderness</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3516001</code>
+      <description>Abrasion</description>
+    </choice>
+    <choice>
+      <code>3516003</code>
+      <description>Amputation-Acute</description>
+    </choice>
+    <choice>
+      <code>3516005</code>
+      <description>Amputation-Previous</description>
+    </choice>
+    <choice>
+      <code>3516007</code>
+      <description>Avulsion</description>
+    </choice>
+    <choice>
+      <code>3516009</code>
+      <description>Bleeding Controlled</description>
+    </choice>
+    <choice>
+      <code>3516011</code>
+      <description>Bleeding Uncontrolled</description>
+    </choice>
+    <choice>
+      <code>3516013</code>
+      <description>Burn-Blistering</description>
+    </choice>
+    <choice>
+      <code>3516015</code>
+      <description>Burn-Charring</description>
+    </choice>
+    <choice>
+      <code>3516017</code>
+      <description>Burn-Redness</description>
+    </choice>
+    <choice>
+      <code>3516019</code>
+      <description>Burn-White/Waxy</description>
+    </choice>
+    <choice>
+      <code>3516021</code>
+      <description>Clubbing (of fingers)</description>
+    </choice>
+    <choice>
+      <code>3516023</code>
+      <description>Crush Injury</description>
+    </choice>
+    <choice>
+      <code>3516025</code>
+      <description>Deformity</description>
+    </choice>
+    <choice>
+      <code>3516027</code>
+      <description>Dislocation</description>
+    </choice>
+    <choice>
+      <code>3516029</code>
+      <description>Edema</description>
+    </choice>
+    <choice>
+      <code>3516031</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3516033</code>
+      <description>Fracture-Closed</description>
+    </choice>
+    <choice>
+      <code>3516035</code>
+      <description>Fracture-Open</description>
+    </choice>
+    <choice>
+      <code>3516037</code>
+      <description>Gunshot Wound-Entry</description>
+    </choice>
+    <choice>
+      <code>3516039</code>
+      <description>Gunshot Wound-Exit</description>
+    </choice>
+    <choice>
+      <code>3516041</code>
+      <description>Laceration</description>
+    </choice>
+    <choice>
+      <code>3516043</code>
+      <description>Motor Function-Abnormal/Weakness</description>
+    </choice>
+    <choice>
+      <code>3516045</code>
+      <description>Motor Function-Absent</description>
+    </choice>
+    <choice>
+      <code>3516047</code>
+      <description>Motor Function-Normal</description>
+    </choice>
+    <choice>
+      <code>3516049</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3516051</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3516053</code>
+      <description>Pain</description>
+    </choice>
+    <choice>
+      <code>3516055</code>
+      <description>Paralysis</description>
+    </choice>
+    <choice>
+      <code>3516057</code>
+      <description>Pulse-Abnormal</description>
+    </choice>
+    <choice>
+      <code>3516059</code>
+      <description>Pulse-Absent</description>
+    </choice>
+    <choice>
+      <code>3516061</code>
+      <description>Pulse-Normal</description>
+    </choice>
+    <choice>
+      <code>3516063</code>
+      <description>Puncture/Stab Wound</description>
+    </choice>
+    <choice>
+      <code>3516065</code>
+      <description>Sensation-Abnormal</description>
+    </choice>
+    <choice>
+      <code>3516067</code>
+      <description>Sensation-Absent</description>
+    </choice>
+    <choice>
+      <code>3516069</code>
+      <description>Sensation-Normal</description>
+    </choice>
+    <choice>
+      <code>3516071</code>
+      <description>Swelling/Bruising/Contusion with Pain</description>
+    </choice>
+    <choice>
+      <code>3516073</code>
+      <description>Swelling/Bruising/Contusion without Pain</description>
+    </choice>
+    <choice>
+      <code>3516075</code>
+      <description>Tenderness</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
 <group number="eExam.EyeGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
@@ -1772,20 +1763,20 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3517001</code>
-           <description>Bilateral</description>
-        </choice>
-        <choice>
-           <code>3517003</code>
-           <description>Left</description>
-        </choice>
-        <choice>
-           <code>3517005</code>
-           <description>Right</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3517001</code>
+      <description>Bilateral</description>
+    </choice>
+    <choice>
+      <code>3517003</code>
+      <description>Left</description>
+    </choice>
+    <choice>
+      <code>3517005</code>
+      <description>Right</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eExam.18" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Eye Assessment</name>
@@ -1805,117 +1796,117 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3518001</code>
-           <description>1-mm</description>
-        </choice>
-        <choice>
-           <code>3518003</code>
-           <description>2-mm</description>
-        </choice>
-        <choice>
-           <code>3518005</code>
-           <description>3-mm</description>
-        </choice>
-        <choice>
-           <code>3518007</code>
-           <description>4-mm</description>
-        </choice>
-        <choice>
-           <code>3518009</code>
-           <description>5-mm</description>
-        </choice>
-        <choice>
-           <code>3518011</code>
-           <description>6-mm</description>
-        </choice>
-        <choice>
-           <code>3518013</code>
-           <description>7-mm</description>
-        </choice>
-        <choice>
-           <code>3518015</code>
-           <description>8-mm or &gt;</description>
-        </choice>
-        <choice>
-           <code>3518017</code>
-           <description>Blind</description>
-        </choice>
-        <choice>
-           <code>3518019</code>
-           <description>Cataract Present</description>
-        </choice>
-        <choice>
-           <code>3518021</code>
-           <description>Clouded</description>
-        </choice>
-        <choice>
-           <code>3518023</code>
-           <description>Deformity</description>
-        </choice>
-        <choice>
-           <code>3518025</code>
-           <description>Dysconjugate Gaze</description>
-        </choice>
-        <choice>
-           <code>3518027</code>
-           <description>Foreign Body</description>
-        </choice>
-        <choice>
-           <code>3518029</code>
-           <description>Glaucoma Present</description>
-        </choice>
-        <choice>
-           <code>3518031</code>
-           <description>Hyphema</description>
-        </choice>
-        <choice>
-           <code>3518033</code>
-           <description>Jaundiced Sclera</description>
-        </choice>
-        <choice>
-           <code>3518035</code>
-           <description>Missing</description>
-        </choice>
-        <choice>
-           <code>3518037</code>
-           <description>Non-Reactive</description>
-        </choice>
-        <choice>
-           <code>3518039</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3518041</code>
-           <description>Non-Reactive Prosthetic</description>
-        </choice>
-        <choice>
-           <code>3518043</code>
-           <description>Nystagmus Noted</description>
-        </choice>
-        <choice>
-           <code>3518045</code>
-           <description>Open Globe</description>
-        </choice>
-        <choice>
-           <code>3518047</code>
-           <description>PERRL</description>
-        </choice>
-        <choice>
-           <code>3518049</code>
-           <description>Pupil-Irregular/Teardrop</description>
-        </choice>
-        <choice>
-           <code>3518051</code>
-           <description>Reactive</description>
-        </choice>
-        <choice>
-           <code>3518053</code>
-           <description>Sluggish</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3518001</code>
+      <description>1-mm</description>
+    </choice>
+    <choice>
+      <code>3518003</code>
+      <description>2-mm</description>
+    </choice>
+    <choice>
+      <code>3518005</code>
+      <description>3-mm</description>
+    </choice>
+    <choice>
+      <code>3518007</code>
+      <description>4-mm</description>
+    </choice>
+    <choice>
+      <code>3518009</code>
+      <description>5-mm</description>
+    </choice>
+    <choice>
+      <code>3518011</code>
+      <description>6-mm</description>
+    </choice>
+    <choice>
+      <code>3518013</code>
+      <description>7-mm</description>
+    </choice>
+    <choice>
+      <code>3518015</code>
+      <description>8-mm or &gt;</description>
+    </choice>
+    <choice>
+      <code>3518017</code>
+      <description>Blind</description>
+    </choice>
+    <choice>
+      <code>3518019</code>
+      <description>Cataract Present</description>
+    </choice>
+    <choice>
+      <code>3518021</code>
+      <description>Clouded</description>
+    </choice>
+    <choice>
+      <code>3518023</code>
+      <description>Deformity</description>
+    </choice>
+    <choice>
+      <code>3518025</code>
+      <description>Dysconjugate Gaze</description>
+    </choice>
+    <choice>
+      <code>3518027</code>
+      <description>Foreign Body</description>
+    </choice>
+    <choice>
+      <code>3518029</code>
+      <description>Glaucoma Present</description>
+    </choice>
+    <choice>
+      <code>3518031</code>
+      <description>Hyphema</description>
+    </choice>
+    <choice>
+      <code>3518033</code>
+      <description>Jaundiced Sclera</description>
+    </choice>
+    <choice>
+      <code>3518035</code>
+      <description>Missing</description>
+    </choice>
+    <choice>
+      <code>3518037</code>
+      <description>Non-Reactive</description>
+    </choice>
+    <choice>
+      <code>3518039</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3518041</code>
+      <description>Non-Reactive Prosthetic</description>
+    </choice>
+    <choice>
+      <code>3518043</code>
+      <description>Nystagmus Noted</description>
+    </choice>
+    <choice>
+      <code>3518045</code>
+      <description>Open Globe</description>
+    </choice>
+    <choice>
+      <code>3518047</code>
+      <description>PERRL</description>
+    </choice>
+    <choice>
+      <code>3518049</code>
+      <description>Pupil-Irregular/Teardrop</description>
+    </choice>
+    <choice>
+      <code>3518051</code>
+      <description>Reactive</description>
+    </choice>
+    <choice>
+      <code>3518053</code>
+      <description>Sluggish</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
 <element number="eExam.19" minOccurs="0" maxOccurs="M" isNillable="No">
@@ -1940,60 +1931,60 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3519001</code>
-           <description>Combative</description>
-        </choice>
-        <choice>
-           <code>3519003</code>
-           <description>Confused</description>
-        </choice>
-        <choice>
-           <code>3519005</code>
-           <description>Hallucinations</description>
-        </choice>
-        <choice>
-           <code>3519007</code>
-           <description>Normal Baseline for Patient</description>
-        </choice>
-        <choice>
-           <code>3519009</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3519011</code>
-           <description>Oriented-Person</description>
-        </choice>
-        <choice>
-           <code>3519013</code>
-           <description>Oriented-Place</description>
-        </choice>
-        <choice>
-           <code>3519015</code>
-           <description>Oriented-Event</description>
-        </choice>
-        <choice>
-           <code>3519017</code>
-           <description>Oriented-Time</description>
-        </choice>
-        <choice>
-           <code>3519019</code>
-           <description>Pharmacologically Sedated/Paralyzed</description>
-        </choice>
-        <choice>
-           <code>3519021</code>
-           <description>Unresponsive</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3519001</code>
+      <description>Combative</description>
+    </choice>
+    <choice>
+      <code>3519003</code>
+      <description>Confused</description>
+    </choice>
+    <choice>
+      <code>3519005</code>
+      <description>Hallucinations</description>
+    </choice>
+    <choice>
+      <code>3519007</code>
+      <description>Normal Baseline for Patient</description>
+    </choice>
+    <choice>
+      <code>3519009</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3519011</code>
+      <description>Oriented-Person</description>
+    </choice>
+    <choice>
+      <code>3519013</code>
+      <description>Oriented-Place</description>
+    </choice>
+    <choice>
+      <code>3519015</code>
+      <description>Oriented-Event</description>
+    </choice>
+    <choice>
+      <code>3519017</code>
+      <description>Oriented-Time</description>
+    </choice>
+    <choice>
+      <code>3519019</code>
+      <description>Pharmacologically Sedated/Paralyzed</description>
+    </choice>
+    <choice>
+      <code>3519021</code>
+      <description>Unresponsive</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eExam.20" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Neurological Assessment</name>
 <national>No</national>
 <state>No</state>
 <definition>The assessment findings of the patient's neurological examination.</definition>
-<v2Number>E16_20</v2Number>
+<v2Number>E16_24</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>Yes</pertinentNegative>
@@ -2010,101 +2001,101 @@
 		<choice><code>8801017</code><description>Not Performed by EMS</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3520001</code>
-           <description>Aphagia</description>
-        </choice>
-        <choice>
-           <code>3520003</code>
-           <description>Aphasia</description>
-        </choice>
-        <choice>
-           <code>3520005</code>
-           <description>Cerebellar Function-Abnormal</description>
-        </choice>
-        <choice>
-           <code>3520007</code>
-           <description>Cerebellar Function-Normal</description>
-        </choice>
-        <choice>
-           <code>3520009</code>
-           <description>Decerebrate Posturing</description>
-        </choice>
-        <choice>
-           <code>3520011</code>
-           <description>Decorticate Posturing</description>
-        </choice>
-        <choice>
-           <code>3520013</code>
-           <description>Gait-Abnormal</description>
-        </choice>
-        <choice>
-           <code>3520015</code>
-           <description>Gait-Normal</description>
-        </choice>
-        <choice>
-           <code>3520017</code>
-           <description>Hemiplegia-Left</description>
-        </choice>
-        <choice>
-           <code>3520019</code>
-           <description>Hemiplegia-Right</description>
-        </choice>
-        <choice>
-           <code>3520021</code>
-           <description>Normal Baseline for Patient</description>
-        </choice>
-        <choice>
-           <code>3520023</code>
-           <description>Not Done</description>
-        </choice>
-        <choice>
-           <code>3520025</code>
-           <description>Seizures</description>
-        </choice>
-        <choice>
-           <code>3520027</code>
-           <description>Speech Normal</description>
-        </choice>
-        <choice>
-           <code>3520029</code>
-           <description>Speech Slurring</description>
-        </choice>
-        <choice>
-           <code>3520031</code>
-           <description>Strength-Asymmetric</description>
-        </choice>
-        <choice>
-           <code>3520033</code>
-           <description>Strength-Normal</description>
-        </choice>
-        <choice>
-           <code>3520035</code>
-           <description>Strength-Symmetric</description>
-        </choice>
-        <choice>
-           <code>3520037</code>
-           <description>Tremors</description>
-        </choice>
-        <choice>
-           <code>3520039</code>
-           <description>Weakness-Facial Droop-Left</description>
-        </choice>
-        <choice>
-           <code>3520041</code>
-           <description>Weakness-Facial Droop-Right</description>
-        </choice>
-        <choice>
-           <code>3520043</code>
-           <description>Weakness-Left Sided</description>
-        </choice>
-        <choice>
-           <code>3520045</code>
-           <description>Weakness-Right Sided</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>3520001</code>
+      <description>Aphagia</description>
+    </choice>
+    <choice>
+      <code>3520003</code>
+      <description>Aphasia</description>
+    </choice>
+    <choice>
+      <code>3520005</code>
+      <description>Cerebellar Function-Abnormal</description>
+    </choice>
+    <choice>
+      <code>3520007</code>
+      <description>Cerebellar Function-Normal</description>
+    </choice>
+    <choice>
+      <code>3520009</code>
+      <description>Decerebrate Posturing</description>
+    </choice>
+    <choice>
+      <code>3520011</code>
+      <description>Decorticate Posturing</description>
+    </choice>
+    <choice>
+      <code>3520013</code>
+      <description>Gait-Abnormal</description>
+    </choice>
+    <choice>
+      <code>3520015</code>
+      <description>Gait-Normal</description>
+    </choice>
+    <choice>
+      <code>3520017</code>
+      <description>Hemiplegia-Left</description>
+    </choice>
+    <choice>
+      <code>3520019</code>
+      <description>Hemiplegia-Right</description>
+    </choice>
+    <choice>
+      <code>3520021</code>
+      <description>Normal Baseline for Patient</description>
+    </choice>
+    <choice>
+      <code>3520023</code>
+      <description>Not Done</description>
+    </choice>
+    <choice>
+      <code>3520025</code>
+      <description>Seizures</description>
+    </choice>
+    <choice>
+      <code>3520027</code>
+      <description>Speech Normal</description>
+    </choice>
+    <choice>
+      <code>3520029</code>
+      <description>Speech Slurring</description>
+    </choice>
+    <choice>
+      <code>3520031</code>
+      <description>Strength-Asymmetric</description>
+    </choice>
+    <choice>
+      <code>3520033</code>
+      <description>Strength-Normal</description>
+    </choice>
+    <choice>
+      <code>3520035</code>
+      <description>Strength-Symmetric</description>
+    </choice>
+    <choice>
+      <code>3520037</code>
+      <description>Tremors</description>
+    </choice>
+    <choice>
+      <code>3520039</code>
+      <description>Weakness-Facial Droop-Left</description>
+    </choice>
+    <choice>
+      <code>3520041</code>
+      <description>Weakness-Facial Droop-Right</description>
+    </choice>
+    <choice>
+      <code>3520043</code>
+      <description>Weakness-Left Sided</description>
+    </choice>
+    <choice>
+      <code>3520045</code>
+      <description>Weakness-Right Sided</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
 </section>

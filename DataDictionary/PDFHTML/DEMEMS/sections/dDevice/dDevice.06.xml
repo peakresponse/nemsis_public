@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="dDevice.06" minOccurs="0" maxOccurs="1" dataType="DateType" isNillable="No">
-<name>Device Purchase Date</name>
+<name>Medical Device Purchase Date</name>
 <national>No</national>
 <state>No</state>
 <definition>The date the device was purchased or placed in service by the EMS agency.</definition>
@@ -11,16 +11,16 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>date</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1900-01-01</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>date</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1900-01-01</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element>

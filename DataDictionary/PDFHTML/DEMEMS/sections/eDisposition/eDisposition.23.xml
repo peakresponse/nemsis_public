@@ -11,60 +11,68 @@
 <v3Comment>To be documented when in eDisposition.21 (Type of Destination) equals "4221003: Hospital-Emergency Department" or "4221005: Hospital-In Patient Bed" is selected .</v3Comment>
 <v3Changes>Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9908001</code>
-           <description>Hospital (General)</description>
-        </choice>
-        <choice>
-           <code>9908003</code>
-           <description>Trauma Center Level 1</description>
-        </choice>
-        <choice>
-           <code>9908005</code>
-           <description>Trauma Center Level 2</description>
-        </choice>
-        <choice>
-           <code>9908007</code>
-           <description>Trauma Center Level 3</description>
-        </choice>
-        <choice>
-           <code>9908009</code>
-           <description>Trauma Center Level 4</description>
-        </choice>
-        <choice>
-           <code>9908011</code>
-           <description>Trauma Center Level 5</description>
-        </choice>
-        <choice>
-           <code>9908013</code>
-           <description>Rural Access Hospital</description>
-        </choice>
-        <choice>
-           <code>9908015</code>
-           <description>STEMI Center (24/7)</description>
-        </choice>
-        <choice>
-           <code>9908017</code>
-           <description>Stroke Center</description>
-        </choice>
-        <choice>
-           <code>9908019</code>
-           <description>Burn Center</description>
-        </choice>
-        <choice>
-           <code>9908021</code>
-           <description>Pediatric Center</description>
-        </choice>
-        <choice>
-           <code>9908023</code>
-           <description>Neonatal Center</description>
-        </choice>
-        <choice>
-           <code>9908025</code>
-           <description>Rehab Center</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9908001</code>
+      <description>Behavioral Health</description>
+    </choice>
+    <choice>
+      <code>9908003</code>
+      <description>Burn Center</description>
+    </choice>
+    <choice>
+      <code>9908005</code>
+      <description>Critical Access Hospital</description>
+    </choice>
+    <choice>
+      <code>9908007</code>
+      <description>Hospital (General)</description>
+    </choice>
+    <choice>
+      <code>9908009</code>
+      <description>Neonatal Center</description>
+    </choice>
+    <choice>
+      <code>9908011</code>
+      <description>Pediatric Center</description>
+    </choice>
+    <choice>
+      <code>9908013</code>
+      <description>STEMI</description>
+    </choice>
+    <choice>
+      <code>9908015</code>
+      <description>STEMI Center (24/7)</description>
+    </choice>
+    <choice>
+      <code>9908017</code>
+      <description>Stroke Center</description>
+    </choice>
+    <choice>
+      <code>9908019</code>
+      <description>Rehab Center</description>
+    </choice>
+    <choice>
+      <code>9908021</code>
+      <description>Trauma Center Level 1</description>
+    </choice>
+    <choice>
+      <code>9908023</code>
+      <description>Trauma Center Level 2</description>
+    </choice>
+    <choice>
+      <code>9908025</code>
+      <description>Trauma Center Level 3</description>
+    </choice>
+    <choice>
+      <code>9908027</code>
+      <description>Trauma Center Level 4</description>
+    </choice>
+    <choice>
+      <code>9908029</code>
+      <description>Trauma Center Level 5</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

@@ -8,26 +8,26 @@
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria.</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Cardiac Arrest</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3001001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>3001003</code>
-           <description>Yes, Prior to EMS Arrival</description>
-        </choice>
-        <choice>
-           <code>3001005</code>
-           <description>Yes, After EMS Arrival</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3001001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>3001003</code>
+      <description>Yes, Prior to EMS Arrival</description>
+    </choice>
+    <choice>
+      <code>3001005</code>
+      <description>Yes, After EMS Arrival</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

@@ -14,26 +14,26 @@
       <patterns>
         <pattern>.+@.+</pattern>
      </patterns>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>3</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>3</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
-	<emailAddressType>
-		<choice><code>9904001</code><description>Personal</description></choice>
-		<choice><code>9904003</code><description>Work</description></choice>
-	</emailAddressType>
+  <correlationID>Yes</correlationID>
+  <emailAddressType>
+    <choice><code>9904001</code><description>Personal</description></choice>
+    <choice><code>9904003</code><description>Work</description></choice>
+  </emailAddressType>
 </restrictions>
 </element>

@@ -8,34 +8,34 @@
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Cardiac Arrest</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3004001</code>
-           <description>Not Witnessed</description>
-        </choice>
-        <choice>
-           <code>3004003</code>
-           <description>Witnessed by Family Member</description>
-        </choice>
-        <choice>
-           <code>3004005</code>
-           <description>Witnessed by Healthcare Provider</description>
-        </choice>
-        <choice>
-           <code>3004007</code>
-           <description>Witnessed by Lay Person</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3004001</code>
+      <description>Not Witnessed</description>
+    </choice>
+    <choice>
+      <code>3004003</code>
+      <description>Witnessed by Family Member</description>
+    </choice>
+    <choice>
+      <code>3004005</code>
+      <description>Witnessed by Healthcare Provider</description>
+    </choice>
+    <choice>
+      <code>3004007</code>
+      <description>Witnessed by Lay Person</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

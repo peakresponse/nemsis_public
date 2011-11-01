@@ -7,10 +7,12 @@
 <title>NEMSIS Data Dictionary Section Groupin</title>
     <style type="text/css">           
         body {font-family:arial,helvetica,sans-serif; position:relative;}
-        .header {width:6.5in;background:#004080; color:white; padding:1px 2px 4px 5px; margin:0px 0px 0px 0px;font-size:18px;}
+        a:link, a:visited   { font-size: 12; text-decoration: none; color:#24409A; }
+        a:hover, a:focus    { font-size: 12; text-decoration: none; color:#BB7A2A; }
+        .header {width:630px;background:#004080; color:white; padding:1px 2px 4px 5px; margin:0px 0px 0px 0px;font-size:18px;}
         .element {white-space:nowrap;width:5in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
         .elementSmall {white-space:nowrap;width:4.8in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
-        .elementGroup {width:5.5in;float:left;z-index:10;background:#99CC99; padding:1px 1px 3px 5px; margin:3px 0px 3px 0px;font-size:12px; border:solid 1px;}        
+        .elementGroup {width:5.5in;float:left;z-index:10;background:#99CC99; padding:1px 1px 3px 5px; margin:3px 0px 3px 0px;font-size:12px; border:solid 1px;;white-space:nowrap;}        
         .national {height:12px;background:#E10000;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}                
         .state    {height:12px;background:#FBC723;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}        
         .optional {height:12px;background:#BBBBBB;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}   
@@ -18,22 +20,26 @@
 
         .correlationID {height:12px;background:ORANGE;font-size:10px;}   
  
-        .legendTitle   {font-size:16px;}
-        .legend     {font-size:11px;}
-        .legendKey   {font-size:11px;}
-        .pnNvNil  {height:12px;float:left;background:#FFFFBB; padding:3px 3px 3px 3px; margin:3px 0px 3px 1px;font-size:10px; border:solid 1px;}                
-        .usage    {height:12px;float:left;background:#BBBBBB; padding:3px 3px 3px 3px; margin:3px 0px 3px 1px;font-size:10px; border:solid 1px;}    
+        .legendTitle  {font-size:16px;}
+        .legend       {font-size:11px;}
+        .legendKey    {font-size:11px;}
+        
+        .row       {width:8in;float:left;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;} 
+        .parent    {width:8in;float:left;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;} 
+         
+        .pnNvNil  {height:12px;float:left;background:#FFFFBB; padding:3px 3px 3px 3px; margin:3px 0px 3px 1px;font-size:10px; border:solid 1px;white-space:nowrap;}                
+        .usage    {height:12px;float:left;background:#BBBBBB; padding:3px 3px 3px 3px; margin:3px 0px 3px 1px;font-size:10px; border:solid 1px;white-space:nowrap;}    
 
         .indent         {float:left;height:22px;width:20px;padding:0px 0px 0px 0px; border-bottom:solid 1px;}
         .recurrence     {float:left;width:30px;height:22px;padding:0px 0px 0px 0px; border-bottom:solid 1px;}
-        .recurrence_tx  {float:left;height:11px;padding:8px 0px 0px 2px;font-size:10px;white-space:nowrap;}
+        .recurrence_tx  {float:left;height:11px;padding:10px 0px 0px 2px;font-size:10px;}
         
-        .verticalLine {float:left;height:30px;padding:0px 0px 0px 0px; margin:-8px 0px 0px 0px; border-left:solid 1px;}  
-        .indent_g2 {float:left;width:30px;padding:3px 0px 1px 0px;}
-        .indent_tag {float:left;height:22px;padding:0px 0px 0px 0px;border-bottom:solid 1px;}
+        .verticalLine {float:left;height:30px;padding:0px 0px 0px 0px; margin:-6px 0px 0px 0px; border-left:solid 1px;}  
+        .indent_g2    {float:left;width:30px;padding:3px 0px 1px 0px;}
+        .indent_tag   {float:left;height:22px;padding:0px 0px 0px 0px;border-bottom:solid 1px;}
               
-        .blank {float:left;height:12px;width:2px;padding:3px 0px 3px 0px;margin:3px 0px 3px 0px;font-size:12px;}
-        .indent_g  {float:left;width:48px;padding:3px 0px 1px 0px;}  
+        .blank        {float:left;height:12px;width:2px;padding:3px 0px 3px 0px;margin:3px 0px 3px 0px;font-size:12px;}
+        .indent_g     {float:left;width:48px;padding:3px 0px 1px 0px;}  
         .indent_gback {float:left;width:49px;padding:3px 0px 1px 0px;}
     </style>
 </head>
@@ -88,19 +94,20 @@
       </tr>
     </table>      
     <div style="clear:both"/>
-    <div style="height:5px;"></div>  
+    <div style="height:1px;font-size:1px;"></div>  
     <div class="header"><xsl:value-of select="section/@name"/></div>    
-    <xsl:call-template name="section">
+    <xsl:call-template name="section">      
       <xsl:with-param name="count" select="0"/>
     </xsl:call-template>
     <div style="clear:both"/>  
+    <div style="height:1px;font-size:1px;"></div> 
     <div class="header"><xsl:value-of select="section/@name"/></div>  
 </body>
 </html>
 </xsl:template>
 
 <xsl:template name="section">
-  <xsl:param name="count"/>
+  <xsl:param name="count"/> 
   <xsl:for-each select="section|element|group">
     <xsl:choose>
         <xsl:when test="local-name()='section'">
@@ -108,82 +115,85 @@
             <xsl:with-param name="count" select="$count + 1"/>
           </xsl:call-template>              
         </xsl:when>     
+        
+              
         <xsl:when test="local-name()='group'"> 
+          <div class="row">   
+          <div class="parent">   
           <xsl:call-template name="for.loop">            
             <xsl:with-param name="count" select="$count"/>
             <xsl:with-param name="i" select="1"/>
-          </xsl:call-template>       
+          </xsl:call-template>      
           <div class="recurrence">      
             <div class="recurrence_tx"> 
               <xsl:value-of select="@minOccurs"/> : <xsl:value-of select="@maxOccurs"/>
             </div>
           </div>
-
-          <div class="indent_tag"/><div class="elementGroup"><xsl:value-of select="@number"/></div> 
-                    
-          <xsl:choose><xsl:when test="@correlationID='Yes'">
-		        <div class="pnNvNil">C</div>                
-          </xsl:when></xsl:choose>  
-                    
+            <div class="indent_tag"/><div class="elementGroup"><xsl:value-of select="@number"/></div>                     
+            <xsl:choose><xsl:when test="@correlationID='Yes'">
+    		      <div class="pnNvNil">C</div>                
+            </xsl:when></xsl:choose>   
+          </div>          
+          </div>      
           <div style="clear:both"/>
           <xsl:call-template name="section">
             <xsl:with-param name="count" select="$count + 1"/>
-          </xsl:call-template>            
-        </xsl:when>   
-        <xsl:when test="local-name()='element'">         
+          </xsl:call-template>       
+        </xsl:when>                   
+        
+        <xsl:when test="local-name()='element'">     
+          <div class="row">      
+          <div class="parent">  
           <xsl:call-template name="for.loop">
             <xsl:with-param name="count" select="$count"/>
             <xsl:with-param name="i" select="1"/>
-          </xsl:call-template>             
-          <div class="recurrence">             
-            <div class="recurrence_tx">    
-              <xsl:value-of select="@minOccurs"/> : <xsl:value-of select="@maxOccurs"/>
+          </xsl:call-template>     
+            <div class="recurrence">             
+              <div class="recurrence_tx">    
+                <xsl:value-of select="@minOccurs"/> : <xsl:value-of select="@maxOccurs"/>
+              </div>
             </div>
-          </div>       
-               
-          <xsl:if test="$count &lt; 2"> 
-              <div class="element"><a href="{/section/@name}/{@number}.xml" style="color:#24409A" target="detailFrame"><xsl:value-of select="@number"/> - <xsl:value-of select="name"/></a></div>
-          </xsl:if>   
-          <xsl:if test="$count &gt; 1"> 
-              <div class="elementSmall"><a href="{/section/@name}/{@number}.xml" style="color:#24409A" target="detailFrame"><xsl:value-of select="@number"/> - <xsl:value-of select="name"/></a></div>
-          </xsl:if>   
-          
-          <div class="blank"/>          
-          <xsl:choose><xsl:when test="national/text()='Yes'">
-            <div class="national">N</div>
-          </xsl:when></xsl:choose>          
-          <xsl:choose><xsl:when test="state/text()='Yes'">
-            <div class="state">S</div>
-          </xsl:when></xsl:choose>        
-          <xsl:choose><xsl:when test="usage/text()='Mandatory'">
-            <div class="optional">M</div>
-          </xsl:when></xsl:choose>       
-          <xsl:choose><xsl:when test="usage/text()='Required'">
-            <div class="optional">R</div>
-          </xsl:when></xsl:choose>      
-          <xsl:choose><xsl:when test="usage/text()='Recommended'">
-            <div class="optional">E</div>
-          </xsl:when></xsl:choose>     
-          <xsl:choose><xsl:when test="usage/text()='Optional'">
-            <div class="optional">O</div>
-          </xsl:when></xsl:choose>  
-          
-          <xsl:choose><xsl:when test="notValue/text()='Yes' or pertinentNegative/text()='Yes' or @isNillable='Yes'">
-            <div class="pnNvNil">
-              <xsl:choose><xsl:when test="notValue/text()='Yes'">N<xsl:choose><xsl:when test="pertinentNegative/text()='Yes' or @isNillable='Yes'">, </xsl:when></xsl:choose></xsl:when></xsl:choose>              
-              <xsl:choose><xsl:when test="@isNillable='Yes'">L<xsl:choose><xsl:when test="pertinentNegative/text()='Yes'">, </xsl:when></xsl:choose></xsl:when></xsl:choose>
-              <xsl:choose><xsl:when test="pertinentNegative/text()='Yes'">P</xsl:when></xsl:choose>                           
-             </div>                                        
-          </xsl:when></xsl:choose>
-			
-          <xsl:choose><xsl:when test="restrictions/correlationID/text()='Yes'">
-            <div class="pnNvNil">C</div>                
-          </xsl:when></xsl:choose>  
-          
+            <xsl:if test="$count &lt; 2"> 
+                <div class="element"><a href="{/section/@name}/{@number}.xml" target="detailFrame"><xsl:value-of select="@number"/> - <xsl:value-of select="name"/></a></div>
+            </xsl:if>   
+            <xsl:if test="$count &gt; 1"> 
+                <div class="elementSmall"><a href="{/section/@name}/{@number}.xml" target="detailFrame"><xsl:value-of select="@number"/> - <xsl:value-of select="name"/></a></div>
+            </xsl:if>  
+            <div class="blank"/>          
+            <xsl:choose><xsl:when test="national/text()='Yes'">
+              <div class="national">N</div>
+            </xsl:when></xsl:choose>          
+            <xsl:choose><xsl:when test="state/text()='Yes'">
+              <div class="state">S</div>
+            </xsl:when></xsl:choose>        
+            <xsl:choose><xsl:when test="usage/text()='Mandatory'">
+              <div class="optional">M</div>
+            </xsl:when></xsl:choose>       
+            <xsl:choose><xsl:when test="usage/text()='Required'">
+              <div class="optional">R</div>
+            </xsl:when></xsl:choose>      
+            <xsl:choose><xsl:when test="usage/text()='Recommended'">
+              <div class="optional">E</div>
+            </xsl:when></xsl:choose>     
+            <xsl:choose><xsl:when test="usage/text()='Optional'">
+              <div class="optional">O</div>
+            </xsl:when></xsl:choose>  
+            <xsl:choose><xsl:when test="notValue/text()='Yes' or pertinentNegative/text()='Yes' or @isNillable='Yes'">
+              <div class="pnNvNil">
+                <xsl:choose><xsl:when test="notValue/text()='Yes'">N<xsl:choose><xsl:when test="pertinentNegative/text()='Yes' or @isNillable='Yes'">, </xsl:when></xsl:choose></xsl:when></xsl:choose>              
+                <xsl:choose><xsl:when test="@isNillable='Yes'">L<xsl:choose><xsl:when test="pertinentNegative/text()='Yes'">, </xsl:when></xsl:choose></xsl:when></xsl:choose>
+                <xsl:choose><xsl:when test="pertinentNegative/text()='Yes'">P</xsl:when></xsl:choose>                           
+               </div>                                        
+            </xsl:when></xsl:choose>
+            <xsl:choose><xsl:when test="restrictions/correlationID/text()='Yes'">
+              <div class="pnNvNil">C</div>                
+            </xsl:when></xsl:choose>  
+          </div>
+          </div>
         </xsl:when>           
     </xsl:choose>
     <div style="clear:both"/>
-  </xsl:for-each> 
+  </xsl:for-each>       
 </xsl:template>
 
 <xsl:template name="for.loop">        

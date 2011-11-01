@@ -1,24 +1,32 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eHistory.08" minOccurs="0" maxOccurs="M" isNillable="No">
+<element number="eHistory.08" minOccurs="0" maxOccurs="M" isNillable="Yes">
 <name>Medical/Surgical History</name>
 <national>No</national>
 <state>Yes</state>
 <definition>The patient's pre-existing medical and surgery history of the patient</definition>
 <v2Number>E12_10</v2Number>
-<usage>Optional</usage>
-<notValue>No</notValue>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
 <pertinentNegative>Yes</pertinentNegative>
-<v3Comment>Code list is represented by ICD-10-CM: Factors influencing health status and contact with health services (Z78.0 – Z99.89).</v3Comment>
+<v3Comment>Code list is represented by ICD-10-CM: Factors influencing health status and contact with health services (Z78.0 – Z99.89).
+							<br/><br/>ICD-10-CM
+							<br/>Website - <a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov</a>
+							<br/>Product - UMLS Metathesaurus</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
 	<pertinentNegatives>
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801015</code><description>None Reported</description>		</choice>
+		<choice><code>8801021</code><description>Unresponsive</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
       <patterns>
-        <pattern>[A-Z]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?</pattern>
+        <pattern>[0-9A-HJ-NP-Z]([0-9A-Za-z]{1,6})?</pattern>
      </patterns>
-	<correlationID>Yes</correlationID>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

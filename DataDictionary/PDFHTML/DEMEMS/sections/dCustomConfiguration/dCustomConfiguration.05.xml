@@ -11,19 +11,19 @@
 <v3Comment>Mandatory = Must be completed and will not accept null values<br/>Required = Must be completed but will accept null values<br/>Optional = Not required but if collected, it cannot be a null value.</v3Comment>
 <v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9903001</code>
-           <description>Mandatory</description>
-        </choice>
-        <choice>
-           <code>9903003</code>
-           <description>Required</description>
-        </choice>
-        <choice>
-           <code>9903005</code>
-           <description>Optional</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9903001</code>
+      <description>Mandatory</description>
+    </choice>
+    <choice>
+      <code>9903003</code>
+      <description>Required</description>
+    </choice>
+    <choice>
+      <code>9903005</code>
+      <description>Optional</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element>

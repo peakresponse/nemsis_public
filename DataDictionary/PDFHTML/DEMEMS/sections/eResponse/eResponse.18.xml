@@ -1,26 +1,18 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eResponse.18" minOccurs="0" maxOccurs="1" dataType="EMSMileageOdometer" isNillable="No">
-<name>Beginning Odometer Reading of Responding Vehicle</name>
+<element number="eResponse.18" minOccurs="0" maxOccurs="1" dataType="USNG" isNillable="No">
+<name>Vehicle Dispatch US National Grid Location</name>
 <national>No</national>
-<state>Yes</state>
-<definition>The mileage (counter or odometer reading) of the vehicle at the beginning of the call (when the wheels begin moving). If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16</definition>
-<v2Number>E02_16</v2Number>
+<state>No</state>
+<definition>The US National Grid Coordinates for the EMS Vehicle's Dispatch Location.</definition>
+<v2Number></v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>If a mileage counter is being used instead of an odometer, this value would be 0.</v3Comment>
+<v3Comment>Standard found at www.fgdc.gov/usng. Used by the EMS components of US Governmental entities such as national parks and military agencies.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>decimal</dataType>
-        <constraint>
-          <constraintTitle>totalDigits</constraintTitle>
-          <constraintValue>8</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>fractionDigits</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+      <patterns>
+        <pattern>[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}</pattern>
+     </patterns>
 </restrictions>
 </element>

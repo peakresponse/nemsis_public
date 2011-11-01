@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
 <section name="eInjury">
-<element number="eInjury.01" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<element number="eInjury.01" minOccurs="1" maxOccurs="M" isNillable="Yes">
 <name>Cause of Injury</name>
 <national>Yes</national>
 <state>Yes</state>
@@ -41,26 +41,30 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2902001</code>
-           <description>Blunt</description>
-        </choice>
-        <choice>
-           <code>2902003</code>
-           <description>Burn</description>
-        </choice>
-        <choice>
-           <code>2902005</code>
-           <description>Penetrating</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2902001</code>
+      <description>Blunt</description>
+    </choice>
+    <choice>
+      <code>2902003</code>
+      <description>Burn</description>
+    </choice>
+    <choice>
+      <code>2902005</code>
+      <description>Other</description>
+    </choice>
+    <choice>
+      <code>2902007</code>
+      <description>Penetrating</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eInjury.03" minOccurs="1" maxOccurs="M" isNillable="Yes">
 <name>Trauma Center Criteria</name>
@@ -77,57 +81,57 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2903001</code>
-           <description>Amputation Proximal to Wrist and Ankle</description>
-        </choice>
-        <choice>
-           <code>2903003</code>
-           <description>Crushed, Degloved, or Mangled Extremity</description>
-        </choice>
-        <choice>
-           <code>2903005</code>
-           <description>Flail Chest</description>
-        </choice>
-        <choice>
-           <code>2903007</code>
-           <description>Glasgow Coma Score less than 14</description>
-        </choice>
-        <choice>
-           <code>2903009</code>
-           <description>Open or Depressed Skull Fracture</description>
-        </choice>
-        <choice>
-           <code>2903011</code>
-           <description>Paralysis</description>
-        </choice>
-        <choice>
-           <code>2903013</code>
-           <description>Pelvic Fracture(s)</description>
-        </choice>
-        <choice>
-           <code>2903015</code>
-           <description>Penetrating Injury to Head, Neck, Torso, and Extremities Proximal to Elbow and Knee</description>
-        </choice>
-        <choice>
-           <code>2903017</code>
-           <description>Respiratory Rate &lt;10 or &gt;29 OR (&lt;20 in infant &lt; one year)</description>
-        </choice>
-        <choice>
-           <code>2903019</code>
-           <description>Systolic Blood Pressure less than 90</description>
-        </choice>
-        <choice>
-           <code>2903021</code>
-           <description>Two or More Proximal Long-Bone Fractures</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2903001</code>
+      <description>Amputation Proximal to Wrist and Ankle</description>
+    </choice>
+    <choice>
+      <code>2903003</code>
+      <description>Crushed, Degloved, or Mangled Extremity</description>
+    </choice>
+    <choice>
+      <code>2903005</code>
+      <description>Flail Chest</description>
+    </choice>
+    <choice>
+      <code>2903007</code>
+      <description>Glasgow Coma Score less than 14</description>
+    </choice>
+    <choice>
+      <code>2903009</code>
+      <description>Open or Depressed Skull Fracture</description>
+    </choice>
+    <choice>
+      <code>2903011</code>
+      <description>Paralysis</description>
+    </choice>
+    <choice>
+      <code>2903013</code>
+      <description>Pelvic Fracture(s)</description>
+    </choice>
+    <choice>
+      <code>2903015</code>
+      <description>Penetrating Injury to Head, Neck, Torso, and Extremities Proximal to Elbow and Knee</description>
+    </choice>
+    <choice>
+      <code>2903017</code>
+      <description>Respiratory Rate &lt;10 or &gt;29 OR (&lt;20 in infant &lt; one year)</description>
+    </choice>
+    <choice>
+      <code>2903019</code>
+      <description>Systolic Blood Pressure less than 90</description>
+    </choice>
+    <choice>
+      <code>2903021</code>
+      <description>Two or More Proximal Long-Bone Fractures</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eInjury.04" minOccurs="1" maxOccurs="M" isNillable="Yes">
 <name>Vehicular, Pedestrian, or Other Injury Risk Factor</name>
@@ -147,45 +151,45 @@
 	<pertinentNegatives>
 		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>2904001</code>
-           <description>Adults: &gt; 20 ft. (one story is equal to 10 ft.)</description>
-        </choice>
-        <choice>
-           <code>2904003</code>
-           <description>Auto v. Pedestrian/Bicyclist Thrown, Run Over, or &gt; 20 MPH Impact</description>
-        </choice>
-        <choice>
-           <code>2904005</code>
-           <description>Children: &gt; 10 ft. or 2-3 times the height of the child</description>
-        </choice>
-        <choice>
-           <code>2904007</code>
-           <description>Death in Same Passenger Compartment</description>
-        </choice>
-        <choice>
-           <code>2904009</code>
-           <description>Ejection (partial or complete) from vehicle</description>
-        </choice>
-        <choice>
-           <code>2904011</code>
-           <description>Intrusion: &gt; 12 in. occupant site; &gt; 18 in. any site</description>
-        </choice>
-        <choice>
-           <code>2904013</code>
-           <description>Motorcycle Crash &gt; 20 MPH</description>
-        </choice>
-        <choice>
-           <code>2904015</code>
-           <description>Vehicle Telemetry Data (AACN) Consistent with High Risk of Injury</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2904001</code>
+      <description>Auto v. Pedestrian/Bicyclist Thrown, Run Over, or &gt; 20 MPH Impact</description>
+    </choice>
+    <choice>
+      <code>2904003</code>
+      <description>Fall Adults: &gt; 20 ft. (one story is equal to 10 ft.)</description>
+    </choice>
+    <choice>
+      <code>2904005</code>
+      <description>Fall Children: &gt; 10 ft. or 2-3 times the height of the child</description>
+    </choice>
+    <choice>
+      <code>2904007</code>
+      <description>Crash Death in Same Passenger Compartment</description>
+    </choice>
+    <choice>
+      <code>2904009</code>
+      <description>Crash Ejection (partial or complete) from vehicle</description>
+    </choice>
+    <choice>
+      <code>2904011</code>
+      <description>Crash Intrusion: &gt; 12 in. occupant site; &gt; 18 in. any site</description>
+    </choice>
+    <choice>
+      <code>2904013</code>
+      <description>Crash Vehicle Telemetry Data (AACN) Consistent with High Risk of Injury</description>
+    </choice>
+    <choice>
+      <code>2904015</code>
+      <description>Motorcycle Crash &gt; 20 MPH</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eInjury.05" minOccurs="0" maxOccurs="1" dataType="AreaOfVehicleImpact" isNillable="No">
 <name>Main Area of the Vehicle Impacted by the Collision</name>
@@ -196,20 +200,20 @@
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>The front of the vehicle is 12, passenger (right) side is 3, read is 6, etc.<br/><br/>Based on MMUCC via areas(s) of impact &amp; FARS coding manual clock diagram.</v3Comment>
+<v3Comment>The front of the vehicle is 12, passenger (right) side is 3, rear is 6, etc.<br/><br/>Based on MMUCC via areas(s) of impact &amp; FARS coding manual clock diagram.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>12</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>12</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.06" minOccurs="0" maxOccurs="1" dataType="SeatRowLocation" isNillable="No">
 <name>Location of Patient in Vehicle</name>
@@ -223,68 +227,68 @@
 <v3Comment>MMUCC P6 data element</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2906001</code>
-           <description>Front Seat-Left Side (or motorcycle driver)</description>
-        </choice>
-        <choice>
-           <code>2906003</code>
-           <description>Front Seat-Middle</description>
-        </choice>
-        <choice>
-           <code>2906005</code>
-           <description>Front Seat-Right Side</description>
-        </choice>
-        <choice>
-           <code>2906007</code>
-           <description>Passenger in other enclosed passenger or cargo area (non-trailing unit such as a bus, etc.)</description>
-        </choice>
-        <choice>
-           <code>2906009</code>
-           <description>Passenger in unenclosed passenger or cargo area (non-trailing unit such as a pickup, etc.)</description>
-        </choice>
-        <choice>
-           <code>2906011</code>
-           <description>Riding on Vehicle Exterior (non-trailing unit)</description>
-        </choice>
-        <choice>
-           <code>2906013</code>
-           <description>Second Seat-Left Side (or motorcycle passenger)</description>
-        </choice>
-        <choice>
-           <code>2906015</code>
-           <description>Second Seat-Middle</description>
-        </choice>
-        <choice>
-           <code>2906017</code>
-           <description>Second Seat-Right Side</description>
-        </choice>
-        <choice>
-           <code>2906019</code>
-           <description>Sleeper Section of Cab (truck)</description>
-        </choice>
-        <choice>
-           <code>2906021</code>
-           <description>Third Row-Left Side (or motorcycle passenger)</description>
-        </choice>
-        <choice>
-           <code>2906023</code>
-           <description>Third Row-Middle</description>
-        </choice>
-        <choice>
-           <code>2906025</code>
-           <description>Third Row-Right Side</description>
-        </choice>
-        <choice>
-           <code>2906027</code>
-           <description>Trailing Unit</description>
-        </choice>
-        <choice>
-           <code>2906029</code>
-           <description>Unknown</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2906001</code>
+      <description>Front Seat-Left Side (or motorcycle driver)</description>
+    </choice>
+    <choice>
+      <code>2906003</code>
+      <description>Front Seat-Middle</description>
+    </choice>
+    <choice>
+      <code>2906005</code>
+      <description>Front Seat-Right Side</description>
+    </choice>
+    <choice>
+      <code>2906007</code>
+      <description>Passenger in other enclosed passenger or cargo area (non-trailing unit such as a bus, etc.)</description>
+    </choice>
+    <choice>
+      <code>2906009</code>
+      <description>Passenger in unenclosed passenger or cargo area (non-trailing unit such as a pickup, etc.)</description>
+    </choice>
+    <choice>
+      <code>2906011</code>
+      <description>Riding on Vehicle Exterior (non-trailing unit)</description>
+    </choice>
+    <choice>
+      <code>2906013</code>
+      <description>Second Seat-Left Side (or motorcycle passenger)</description>
+    </choice>
+    <choice>
+      <code>2906015</code>
+      <description>Second Seat-Middle</description>
+    </choice>
+    <choice>
+      <code>2906017</code>
+      <description>Second Seat-Right Side</description>
+    </choice>
+    <choice>
+      <code>2906019</code>
+      <description>Sleeper Section of Cab (truck)</description>
+    </choice>
+    <choice>
+      <code>2906021</code>
+      <description>Third Row-Left Side (or motorcycle passenger)</description>
+    </choice>
+    <choice>
+      <code>2906023</code>
+      <description>Third Row-Middle</description>
+    </choice>
+    <choice>
+      <code>2906025</code>
+      <description>Third Row-Right Side</description>
+    </choice>
+    <choice>
+      <code>2906027</code>
+      <description>Trailing Unit</description>
+    </choice>
+    <choice>
+      <code>2906029</code>
+      <description>Unknown</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eInjury.07" minOccurs="0" maxOccurs="M" isNillable="Yes">
 <name>Use of Occupant Safety Equipment</name>
@@ -301,66 +305,66 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2907001</code>
-           <description>Child Booster Seat</description>
-        </choice>
-        <choice>
-           <code>2907003</code>
-           <description>Eye Protection</description>
-        </choice>
-        <choice>
-           <code>2907005</code>
-           <description>Helmet Worn</description>
-        </choice>
-        <choice>
-           <code>2907007</code>
-           <description>Infant Car Seat Forward Facing</description>
-        </choice>
-        <choice>
-           <code>2907009</code>
-           <description>Infant Car Seat Rear Facing</description>
-        </choice>
-        <choice>
-           <code>2907011</code>
-           <description>Lap Belt With Shoulder Belt</description>
-        </choice>
-        <choice>
-           <code>2907013</code>
-           <description>Lap Belt Without Shoulder Belt</description>
-        </choice>
-        <choice>
-           <code>2907015</code>
-           <description>None</description>
-        </choice>
-        <choice>
-           <code>2907017</code>
-           <description>Other</description>
-        </choice>
-        <choice>
-           <code>2907019</code>
-           <description>Personal Floatation Device</description>
-        </choice>
-        <choice>
-           <code>2907021</code>
-           <description>Protective Clothing</description>
-        </choice>
-        <choice>
-           <code>2907023</code>
-           <description>Protective Non-Clothing Gear</description>
-        </choice>
-        <choice>
-           <code>2907025</code>
-           <description>Shoulder Belt</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2907001</code>
+      <description>Child Booster Seat</description>
+    </choice>
+    <choice>
+      <code>2907003</code>
+      <description>Eye Protection</description>
+    </choice>
+    <choice>
+      <code>2907005</code>
+      <description>Helmet Worn</description>
+    </choice>
+    <choice>
+      <code>2907007</code>
+      <description>Infant Car Seat Forward Facing</description>
+    </choice>
+    <choice>
+      <code>2907009</code>
+      <description>Infant Car Seat Rear Facing</description>
+    </choice>
+    <choice>
+      <code>2907011</code>
+      <description>Lap Belt With Shoulder Belt</description>
+    </choice>
+    <choice>
+      <code>2907013</code>
+      <description>Lap Belt Without Shoulder Belt</description>
+    </choice>
+    <choice>
+      <code>2907015</code>
+      <description>None</description>
+    </choice>
+    <choice>
+      <code>2907017</code>
+      <description>Other</description>
+    </choice>
+    <choice>
+      <code>2907019</code>
+      <description>Personal Floatation Device</description>
+    </choice>
+    <choice>
+      <code>2907021</code>
+      <description>Protective Clothing</description>
+    </choice>
+    <choice>
+      <code>2907023</code>
+      <description>Protective Non-Clothing Gear</description>
+    </choice>
+    <choice>
+      <code>2907025</code>
+      <description>Shoulder Belt</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eInjury.08" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Airbag Deployment</name>
@@ -374,33 +378,33 @@
 <v3Comment>MMUCC P8 data element used but Other added to include newer airbag devices. URL: http://www.mmucc.us/mmucctraining_old/lessons/occupant/seatingposition_files/seatingposition04.htm</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2908001</code>
-           <description>Airbag Deployed Front</description>
-        </choice>
-        <choice>
-           <code>2908003</code>
-           <description>Airbag Deployed Side</description>
-        </choice>
-        <choice>
-           <code>2908005</code>
-           <description>Airbag Deployed Other (knee, Air belt, etc.)</description>
-        </choice>
-        <choice>
-           <code>2908007</code>
-           <description>No Airbag Deployed</description>
-        </choice>
-        <choice>
-           <code>2908009</code>
-           <description>No Airbag Present</description>
-        </choice>
-        <choice>
-           <code>2908011</code>
-           <description>Other</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>2908001</code>
+      <description>Airbag Deployed Front</description>
+    </choice>
+    <choice>
+      <code>2908003</code>
+      <description>Airbag Deployed Side</description>
+    </choice>
+    <choice>
+      <code>2908005</code>
+      <description>Airbag Deployed Other (knee, Air belt, etc.)</description>
+    </choice>
+    <choice>
+      <code>2908007</code>
+      <description>No Airbag Deployed</description>
+    </choice>
+    <choice>
+      <code>2908009</code>
+      <description>No Airbag Present</description>
+    </choice>
+    <choice>
+      <code>2908011</code>
+      <description>Other</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eInjury.09" minOccurs="0" maxOccurs="1" dataType="HeightOfFall" isNillable="No">
 <name>Height of Fall (feet)</name>
@@ -411,20 +415,20 @@
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Classify same level falls as 3 feet</v3Comment>
+<v3Comment>Classify same level falls as 0 feet</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>3</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>10000</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>10000</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.10" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>OSHA Personal Protective Equipment Used</name>
@@ -438,37 +442,37 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document personal protection equipment used by the patient associated with an injury.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2910001</code>
-           <description>Eye and Face Protection</description>
-        </choice>
-        <choice>
-           <code>2910003</code>
-           <description>Foot Protection</description>
-        </choice>
-        <choice>
-           <code>2910005</code>
-           <description>Head Protection</description>
-        </choice>
-        <choice>
-           <code>2910007</code>
-           <description>Hearing Protection</description>
-        </choice>
-        <choice>
-           <code>2910009</code>
-           <description>Respiratory Protection</description>
-        </choice>
-        <choice>
-           <code>2910011</code>
-           <description>Safety Belts, lifelines, and lanyards</description>
-        </choice>
-        <choice>
-           <code>2910013</code>
-           <description>Safety Nets</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>2910001</code>
+      <description>Eye and Face Protection</description>
+    </choice>
+    <choice>
+      <code>2910003</code>
+      <description>Foot Protection</description>
+    </choice>
+    <choice>
+      <code>2910005</code>
+      <description>Head Protection</description>
+    </choice>
+    <choice>
+      <code>2910007</code>
+      <description>Hearing Protection</description>
+    </choice>
+    <choice>
+      <code>2910009</code>
+      <description>Respiratory Protection</description>
+    </choice>
+    <choice>
+      <code>2910011</code>
+      <description>Safety Belts, lifelines, and lanyards</description>
+    </choice>
+    <choice>
+      <code>2910013</code>
+      <description>Safety Nets</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><group number="eInjury.CollisionGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
 <element number="eInjury.11" minOccurs="0" maxOccurs="1" dataType="Company" isNillable="No">
@@ -483,17 +487,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Provider Name. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN) Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>30</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>30</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.12" minOccurs="0" maxOccurs="1" dataType="IncidentID" isNillable="No">
 <name>ACN Incident ID</name>
@@ -507,17 +511,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Incident ID. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.13" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>ACN Call Back Phone Number</name>
@@ -534,14 +538,14 @@
       <patterns>
         <pattern>[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]</pattern>
      </patterns>
-	<correlationID>Yes</correlationID>
-	<phoneNumberType>
-		<choice><code>9913001</code><description>Fax</description></choice>
-		<choice><code>9913003</code><description>Home</description></choice>
-		<choice><code>9913005</code><description>Mobile</description></choice>
-		<choice><code>9913007</code><description>Pager</description></choice>
-		<choice><code>9913009</code><description>Work</description></choice>
-	</phoneNumberType>
+  <correlationID>Yes</correlationID>
+  <phoneNumberType>
+    <choice><code>9913001</code><description>Fax</description></choice>
+    <choice><code>9913003</code><description>Home</description></choice>
+    <choice><code>9913005</code><description>Mobile</description></choice>
+    <choice><code>9913007</code><description>Pager</description></choice>
+    <choice><code>9913009</code><description>Work</description></choice>
+  </phoneNumberType>
 </restrictions>
 </element><element number="eInjury.14" minOccurs="0" maxOccurs="1" dataType="DateTimeType" isNillable="No">
 <name>Date/Time of ACN Incident</name>
@@ -556,7 +560,7 @@
 										  	<br/><br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
 <table border="1px" cellpadding="3px" cellspacing="0">
-  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>
   <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
   <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
   <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
@@ -583,17 +587,17 @@
       <patterns>
         <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
      </patterns>
-      <constraints>
-        <dataType>dateTime</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>dateTime</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.15" minOccurs="0" maxOccurs="1" dataType="GPSLocation" isNillable="No">
 <name>ACN Incident Location</name>
@@ -606,8 +610,8 @@
 <pertinentNegative>No</pertinentNegative>
 <v3Comment>Based on Vehicular Emergency Data Set:  Location (combining Latitude and Longitude). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.										
 										  The pattern for GPS location is in the format "<span style="font-style:italic">latitude</span>,<span style="font-style:italic">longitude</span>" where:
-										  <br/>- <span style="font-style:italic">latitude</span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
-										  <br/>- <span style="font-style:italic">longitude</span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places</v3Comment>
+										  <br/>- <span style="font-style:italic">latitude</span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
+										  <br/>- <span style="font-style:italic">longitude</span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
       <patterns>
@@ -626,17 +630,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Body Type. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.17" minOccurs="0" maxOccurs="1" dataType="Manufacturer" isNillable="No">
 <name>ACN Incident Vehicle Manufacturer</name>
@@ -650,17 +654,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Manufacturer. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.18" minOccurs="0" maxOccurs="1" dataType="Make" isNillable="No">
 <name>ACN Incident Vehicle Make</name>
@@ -674,17 +678,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Make. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.19" minOccurs="0" maxOccurs="1" dataType="Model" isNillable="No">
 <name>ACN Incident Vehicle Model</name>
@@ -698,17 +702,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Model. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.20" minOccurs="0" maxOccurs="1" dataType="Year" isNillable="No">
 <name>ACN Incident Vehicle Model Year</name>
@@ -722,17 +726,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Year. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1900</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1900</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.21" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
 <name>ACN Incident Multiple Impacts</name>
@@ -746,16 +750,16 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Multiple Impacts. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9923001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>9923003</code>
-           <description>Yes</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eInjury.22" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>ACN Incident Delta Velocity</name>
@@ -769,22 +773,22 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Delta Velocity. The force of impact based on the change in velocity over the duration of the crash pulse. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>999</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-      </constraints>
-	<correlationID>Yes</correlationID>
-	<velocityUnit>
-		<choice><code>9921001</code><description>Kilometers per Hour</description></choice>
-		<choice><code>9921003</code><description>Miles per Hour</description></choice>
-	</velocityUnit>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>999</constraintValue>
+    </constraint>
+  </constraints>
+  <correlationID>Yes</correlationID>
+  <velocityUnit>
+    <choice><code>9921001</code><description>Kilometers per Hour</description></choice>
+    <choice><code>9921003</code><description>Miles per Hour</description></choice>
+  </velocityUnit>
 </restrictions>
 </element><element number="eInjury.23" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
 <name>ACN High Probability of Injury</name>
@@ -801,16 +805,16 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9923001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>9923003</code>
-           <description>Yes</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eInjury.24" minOccurs="0" maxOccurs="1" dataType="PDOF" isNillable="No">
 <name>ACN Incident PDOF</name>
@@ -824,17 +828,17 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  PDOF. Principal direction of the force of the impact to nearest o'clock reading.  Values are 1 through 12 (e.g. 12=Frontal collision, 3=passenger side (right) collision, etc). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>12</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>12</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eInjury.25" minOccurs="0" maxOccurs="1" dataType="ACNYesNoType" isNillable="No">
 <name>ACN Incident Rollover</name>
@@ -848,16 +852,16 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Rollover. Indicates if the vehicle rolled over during the collision/event (e.g. True=Rollover, False=No Rollover). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>Y</code>
-           <description>Yes</description>
-        </choice>
-        <choice>
-           <code>N</code>
-           <description>No</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>Y</code>
+      <description>Yes</description>
+    </choice>
+    <choice>
+      <code>N</code>
+      <description>No</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><group number="eInjury.SeatGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eInjury.26" minOccurs="0" maxOccurs="1" isNillable="No">
@@ -872,44 +876,44 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Seat - Multiple entry for each seats data. Indicates seatbelt and seat sensor data for individual seat position in the vehicle. These elements come from passenger vehicle. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2926001</code>
-           <description>Driver Front Seat</description>
-        </choice>
-        <choice>
-           <code>2926003</code>
-           <description>Front Row Middle Seat</description>
-        </choice>
-        <choice>
-           <code>2926005</code>
-           <description>Passenger Front Seat</description>
-        </choice>
-        <choice>
-           <code>2926007</code>
-           <description>Second Row Left Seat</description>
-        </choice>
-        <choice>
-           <code>2926009</code>
-           <description>Second Row Middle Seat</description>
-        </choice>
-        <choice>
-           <code>2926011</code>
-           <description>Second Row Right Seat</description>
-        </choice>
-        <choice>
-           <code>2926013</code>
-           <description>Third Row Left Seat</description>
-        </choice>
-        <choice>
-           <code>2926015</code>
-           <description>Third Row Middle Seat</description>
-        </choice>
-        <choice>
-           <code>2926017</code>
-           <description>Third Row Right Seat</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2926001</code>
+      <description>Driver Front Seat</description>
+    </choice>
+    <choice>
+      <code>2926003</code>
+      <description>Front Row Middle Seat</description>
+    </choice>
+    <choice>
+      <code>2926005</code>
+      <description>Passenger Front Seat</description>
+    </choice>
+    <choice>
+      <code>2926007</code>
+      <description>Second Row Left Seat</description>
+    </choice>
+    <choice>
+      <code>2926009</code>
+      <description>Second Row Middle Seat</description>
+    </choice>
+    <choice>
+      <code>2926011</code>
+      <description>Second Row Right Seat</description>
+    </choice>
+    <choice>
+      <code>2926013</code>
+      <description>Third Row Left Seat</description>
+    </choice>
+    <choice>
+      <code>2926015</code>
+      <description>Third Row Middle Seat</description>
+    </choice>
+    <choice>
+      <code>2926017</code>
+      <description>Third Row Right Seat</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eInjury.27" minOccurs="0" maxOccurs="1" dataType="ACNYesNoType" isNillable="No">
 <name>Seat Occupied</name>
@@ -923,16 +927,16 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Occupied - Associated with each seat. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>Y</code>
-           <description>Yes</description>
-        </choice>
-        <choice>
-           <code>N</code>
-           <description>No</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>Y</code>
+      <description>Yes</description>
+    </choice>
+    <choice>
+      <code>N</code>
+      <description>No</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eInjury.28" minOccurs="0" maxOccurs="1" dataType="ACNYesNoType" isNillable="No">
 <name>ACN Incident Seatbelt Use</name>
@@ -946,16 +950,16 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Belt Fastened - Associated with each Seat. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>Y</code>
-           <description>Yes</description>
-        </choice>
-        <choice>
-           <code>N</code>
-           <description>No</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>Y</code>
+      <description>Yes</description>
+    </choice>
+    <choice>
+      <code>N</code>
+      <description>No</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eInjury.29" minOccurs="0" maxOccurs="1" dataType="ACNYesNoType" isNillable="No">
 <name>ACN Incident Airbag Deployed</name>
@@ -969,16 +973,16 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Deployed - Associated with each seat. Indicates if airbag is deployed. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>Y</code>
-           <description>Yes</description>
-        </choice>
-        <choice>
-           <code>N</code>
-           <description>No</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>Y</code>
+      <description>Yes</description>
+    </choice>
+    <choice>
+      <code>N</code>
+      <description>No</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element></group>
 </group>

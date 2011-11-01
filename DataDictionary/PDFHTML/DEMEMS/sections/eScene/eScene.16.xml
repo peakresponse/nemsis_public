@@ -1,23 +1,30 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eScene.16" minOccurs="0" maxOccurs="1" isNillable="Yes">
-<name>Incident City</name>
+<name>Incident Apartment, Suite, or Room</name>
 <national>No</national>
 <state>Yes</state>
-<definition>The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation)</definition>
-<v2Number>E08_12</v2Number>
+<definition>The number of the specific apartment, suite, or room where the incident occurred.</definition>
+<v2Number></v2Number>
 <usage>Recommended</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Based on GNIS Civil Code or Populated Place code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>15</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
-		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
 </restrictions>
 </element>

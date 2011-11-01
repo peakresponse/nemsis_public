@@ -1,15 +1,17 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eSituation.13" minOccurs="1" maxOccurs="1" isNillable="Yes">
-<name>Patient's Initial Condition at Scene</name>
+<name>Initial Patient Acuity</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The condition of the patient on EMS arrival at the scene.</definition>
+<definition>The acuity of the patient’s condition upon EMS arrival at the scene.</definition>
 <v2Number></v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Added to better document the patient's initial condition on EMS arrival.</v3Comment>
-<v3Changes>Added to better document the patient's initial condition on EMS arrival.</v3Changes>
+<v3Comment>Definitions related to “Critical, Emergent, and Lower Acuity” can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
+							<br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf 
+							<br/><br/>Dead without Resuscitation Efforts would be appropriate if resuscitation was initiated by non-EMS personnel but discontinued immediately upon evaluation by first arriving EMS personnel.</v3Comment>
+<v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
 <performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -19,24 +21,24 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2813001</code>
-           <description>Black (Dead)</description>
-        </choice>
-        <choice>
-           <code>2813003</code>
-           <description>Green (Satisfactory)</description>
-        </choice>
-        <choice>
-           <code>2813005</code>
-           <description>Red (Critical)</description>
-        </choice>
-        <choice>
-           <code>2813007</code>
-           <description>Yellow (Serious)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2813001</code>
+      <description>Critical (Red)</description>
+    </choice>
+    <choice>
+      <code>2813003</code>
+      <description>Emergent (Yellow)</description>
+    </choice>
+    <choice>
+      <code>2813005</code>
+      <description>Lower Acuity (Green)</description>
+    </choice>
+    <choice>
+      <code>2813007</code>
+      <description>Dead without Resuscitation Efforts (Black)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

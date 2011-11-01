@@ -8,50 +8,54 @@
 <usage>Recommended</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>If the invasive airway is confirmed via multiple methods each method should be documented invidually by time, method, and type of individual.</v3Comment>
+<v3Comment>If the invasive airway is confirmed via multiple methods each method should be documented individually by time, method, and type of individual.</v3Comment>
 <v3Changes>Added to better document airway management.</v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4004001</code>
-           <description>Auscultation</description>
-        </choice>
-        <choice>
-           <code>4004003</code>
-           <description>Bulb/Syringe Aspiration</description>
-        </choice>
-        <choice>
-           <code>4004005</code>
-           <description>Colorimetric ETCO2</description>
-        </choice>
-        <choice>
-           <code>4004007</code>
-           <description>Condensation in Tube</description>
-        </choice>
-        <choice>
-           <code>4004009</code>
-           <description>Digital (Numeric) ETCO2</description>
-        </choice>
-        <choice>
-           <code>4004011</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4004013</code>
-           <description>Visualization</description>
-        </choice>
-        <choice>
-           <code>4004015</code>
-           <description>Visualization of Vocal Cords</description>
-        </choice>
-        <choice>
-           <code>4004017</code>
-           <description>Waveform ETCO2</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4004001</code>
+      <description>Auscultation</description>
+    </choice>
+    <choice>
+      <code>4004003</code>
+      <description>Bulb/Syringe Aspiration</description>
+    </choice>
+    <choice>
+      <code>4004005</code>
+      <description>Colorimetric ETCO2</description>
+    </choice>
+    <choice>
+      <code>4004007</code>
+      <description>Condensation in Tube</description>
+    </choice>
+    <choice>
+      <code>4004009</code>
+      <description>Digital (Numeric) ETCO2</description>
+    </choice>
+    <choice>
+      <code>4004011</code>
+      <description>Direct Re-Visualization of Tube in Place</description>
+    </choice>
+    <choice>
+      <code>4004013</code>
+      <description>Endotracheal Tube Whistle (BAAM, etc)</description>
+    </choice>
+    <choice>
+      <code>4004015</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4004017</code>
+      <description>Visualization of Vocal Cords</description>
+    </choice>
+    <choice>
+      <code>4004019</code>
+      <description>Waveform ETCO2</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

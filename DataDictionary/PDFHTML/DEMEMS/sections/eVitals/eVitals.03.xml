@@ -1,9 +1,9 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eVitals.03" minOccurs="1" maxOccurs="M" isNillable="Yes">
-<name>Cardiac Rhythm and Electrocardiography</name>
+<name>Cardiac Rhythm / Electrocardiography (ECG)</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The initial cardiac rhythm of the patient as interpreted by EMS personnel.</definition>
+<definition>The cardiac rhythm / ECG and other electrocardiography findings of the patient as interpreted by EMS personnel.</definition>
 <v2Number>E14_03</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
@@ -19,156 +19,156 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>9901001</code>
-           <description>Agonal/Idioventricular</description>
-        </choice>
-        <choice>
-           <code>9901003</code>
-           <description>Asystole</description>
-        </choice>
-        <choice>
-           <code>9901005</code>
-           <description>Artifact</description>
-        </choice>
-        <choice>
-           <code>9901007</code>
-           <description>Atrial Fibrillation</description>
-        </choice>
-        <choice>
-           <code>9901009</code>
-           <description>Atrial Flutter</description>
-        </choice>
-        <choice>
-           <code>9901011</code>
-           <description>AV Block-1st Degree</description>
-        </choice>
-        <choice>
-           <code>9901013</code>
-           <description>AV Block-2nd Degree-Type 1</description>
-        </choice>
-        <choice>
-           <code>9901015</code>
-           <description>AV Block-2nd Degree-Type 2</description>
-        </choice>
-        <choice>
-           <code>9901017</code>
-           <description>AV Block-3rd Degree</description>
-        </choice>
-        <choice>
-           <code>9901019</code>
-           <description>Junctional</description>
-        </choice>
-        <choice>
-           <code>9901021</code>
-           <description>Left Bundle Branch Block</description>
-        </choice>
-        <choice>
-           <code>9901023</code>
-           <description>Non-STEMI Anterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901025</code>
-           <description>Non-STEMI Inferior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901027</code>
-           <description>Non-STEMI Lateral Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901029</code>
-           <description>Non-STEMI Posterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901031</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>9901033</code>
-           <description>Paced Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901035</code>
-           <description>PEA</description>
-        </choice>
-        <choice>
-           <code>9901037</code>
-           <description>Premature Atrial Contractions</description>
-        </choice>
-        <choice>
-           <code>9901039</code>
-           <description>Premature Ventricular Contractions</description>
-        </choice>
-        <choice>
-           <code>9901041</code>
-           <description>Right Bundle Branch Block</description>
-        </choice>
-        <choice>
-           <code>9901043</code>
-           <description>Sinus Arrhythmia</description>
-        </choice>
-        <choice>
-           <code>9901045</code>
-           <description>Sinus Bradycardia</description>
-        </choice>
-        <choice>
-           <code>9901047</code>
-           <description>Sinus Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901049</code>
-           <description>Sinus Tachycardia</description>
-        </choice>
-        <choice>
-           <code>9901051</code>
-           <description>STEMI Anterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901053</code>
-           <description>STEMI Inferior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901055</code>
-           <description>STEMI Lateral Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901057</code>
-           <description>STEMI Posterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901059</code>
-           <description>Supraventricular Tachycardia</description>
-        </choice>
-        <choice>
-           <code>9901061</code>
-           <description>Torsades De Points</description>
-        </choice>
-        <choice>
-           <code>9901063</code>
-           <description>Unknown AED Non-Shockable Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901065</code>
-           <description>Unknown AED Shockable Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901067</code>
-           <description>Ventricular Fibrillation</description>
-        </choice>
-        <choice>
-           <code>9901069</code>
-           <description>Ventricular Tachycardia (With Pulse)</description>
-        </choice>
-        <choice>
-           <code>9901071</code>
-           <description>Ventricular Tachycardia (Pulseless)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9901001</code>
+      <description>Agonal/Idioventricular</description>
+    </choice>
+    <choice>
+      <code>9901003</code>
+      <description>Asystole</description>
+    </choice>
+    <choice>
+      <code>9901005</code>
+      <description>Artifact</description>
+    </choice>
+    <choice>
+      <code>9901007</code>
+      <description>Atrial Fibrillation</description>
+    </choice>
+    <choice>
+      <code>9901009</code>
+      <description>Atrial Flutter</description>
+    </choice>
+    <choice>
+      <code>9901011</code>
+      <description>AV Block-1st Degree</description>
+    </choice>
+    <choice>
+      <code>9901013</code>
+      <description>AV Block-2nd Degree-Type 1</description>
+    </choice>
+    <choice>
+      <code>9901015</code>
+      <description>AV Block-2nd Degree-Type 2</description>
+    </choice>
+    <choice>
+      <code>9901017</code>
+      <description>AV Block-3rd Degree</description>
+    </choice>
+    <choice>
+      <code>9901019</code>
+      <description>Junctional</description>
+    </choice>
+    <choice>
+      <code>9901021</code>
+      <description>Left Bundle Branch Block</description>
+    </choice>
+    <choice>
+      <code>9901023</code>
+      <description>Non-STEMI Anterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901025</code>
+      <description>Non-STEMI Inferior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901027</code>
+      <description>Non-STEMI Lateral Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901029</code>
+      <description>Non-STEMI Posterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901031</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>9901033</code>
+      <description>Paced Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901035</code>
+      <description>PEA</description>
+    </choice>
+    <choice>
+      <code>9901037</code>
+      <description>Premature Atrial Contractions</description>
+    </choice>
+    <choice>
+      <code>9901039</code>
+      <description>Premature Ventricular Contractions</description>
+    </choice>
+    <choice>
+      <code>9901041</code>
+      <description>Right Bundle Branch Block</description>
+    </choice>
+    <choice>
+      <code>9901043</code>
+      <description>Sinus Arrhythmia</description>
+    </choice>
+    <choice>
+      <code>9901045</code>
+      <description>Sinus Bradycardia</description>
+    </choice>
+    <choice>
+      <code>9901047</code>
+      <description>Sinus Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901049</code>
+      <description>Sinus Tachycardia</description>
+    </choice>
+    <choice>
+      <code>9901051</code>
+      <description>STEMI Anterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901053</code>
+      <description>STEMI Inferior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901055</code>
+      <description>STEMI Lateral Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901057</code>
+      <description>STEMI Posterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901059</code>
+      <description>Supraventricular Tachycardia</description>
+    </choice>
+    <choice>
+      <code>9901061</code>
+      <description>Torsades De Points</description>
+    </choice>
+    <choice>
+      <code>9901063</code>
+      <description>Unknown AED Non-Shockable Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901065</code>
+      <description>Unknown AED Shockable Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901067</code>
+      <description>Ventricular Fibrillation</description>
+    </choice>
+    <choice>
+      <code>9901069</code>
+      <description>Ventricular Tachycardia (With Pulse)</description>
+    </choice>
+    <choice>
+      <code>9901071</code>
+      <description>Ventricular Tachycardia (Pulseless)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

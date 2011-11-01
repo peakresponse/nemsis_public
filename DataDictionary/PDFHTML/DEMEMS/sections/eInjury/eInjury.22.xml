@@ -11,21 +11,21 @@
 <v3Comment>Based on Vehicular Emergency Data Set:  Delta Velocity. The force of impact based on the change in velocity over the duration of the crash pulse. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>999</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-      </constraints>
-	<correlationID>Yes</correlationID>
-	<velocityUnit>
-		<choice><code>9921001</code><description>Kilometers per Hour</description></choice>
-		<choice><code>9921003</code><description>Miles per Hour</description></choice>
-	</velocityUnit>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>999</constraintValue>
+    </constraint>
+  </constraints>
+  <correlationID>Yes</correlationID>
+  <velocityUnit>
+    <choice><code>9921001</code><description>Kilometers per Hour</description></choice>
+    <choice><code>9921003</code><description>Miles per Hour</description></choice>
+  </velocityUnit>
 </restrictions>
 </element>

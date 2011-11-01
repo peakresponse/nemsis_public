@@ -9,9 +9,9 @@
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
 <v3Comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  (For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-<br/><br/><a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf</a>  Page 35-36
-<br/><br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
-<br/><br/>Contractor site, Knowledge Trek:  <a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf</a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</v3Comment>
+<div style="font-size:2px"> </div><a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf</a>  Page 35-36
+<div style="font-size:3px"> </div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
+<div style="font-size:3px"> </div>Contractor site, Knowledge Trek:  <a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf</a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
@@ -22,92 +22,92 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>01</code>
-           <description>Discharged to home or self care (routine discharge)</description>
-        </choice>
-        <choice>
-           <code>02</code>
-           <description>Discharged/transferred to another short term general hospital for inpatient care</description>
-        </choice>
-        <choice>
-           <code>03</code>
-           <description>Discharged/transferred to a skilled nursing facility (SNF) {With Medicare certification in anticipation of covered skilled care.  See Code 61 below.}</description>
-        </choice>
-        <choice>
-           <code>04</code>
-           <description>Discharged/transferred to an intermediate care facility (ICF)</description>
-        </choice>
-        <choice>
-           <code>05</code>
-           <description>Discharged/transferred to another type of institution not defined elsewhere in this code list</description>
-        </choice>
-        <choice>
-           <code>06</code>
-           <description>Discharged/transferred to home under care of organized home health service organization in anticipation of covered skills care</description>
-        </choice>
-        <choice>
-           <code>07</code>
-           <description>Left against medical advice or discontinued care</description>
-        </choice>
-        <choice>
-           <code>09</code>
-           <description>Admitted as an inpatient to this hospital.</description>
-        </choice>
-        <choice>
-           <code>20</code>
-           <description>Deceased/Expired (or did not recover - Religious Non Medical Health Care Patient)</description>
-        </choice>
-        <choice>
-           <code>21</code>
-           <description>Discharged/transferred to court/law enforcement</description>
-        </choice>
-        <choice>
-           <code>30</code>
-           <description>Still a patient or expected to return for outpatient services.</description>
-        </choice>
-        <choice>
-           <code>43</code>
-           <description>Discharged/transferred to a Federal Health Care Facility (e.g. VA or federal health care facility)</description>
-        </choice>
-        <choice>
-           <code>50</code>
-           <description>Discharged/transferred to Hospice - home.</description>
-        </choice>
-        <choice>
-           <code>51</code>
-           <description>Discharged/transferred to Hospice - medical facility</description>
-        </choice>
-        <choice>
-           <code>61</code>
-           <description>Discharged/transferred within this institution to a hospital based Medicare approved swing bed.</description>
-        </choice>
-        <choice>
-           <code>62</code>
-           <description>Discharged/transferred to a inpatient rehabilitation facility including distinct part units of a hospital.</description>
-        </choice>
-        <choice>
-           <code>63</code>
-           <description>Discharged/transferred to long term care hospitals</description>
-        </choice>
-        <choice>
-           <code>64</code>
-           <description>Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare</description>
-        </choice>
-        <choice>
-           <code>65</code>
-           <description>Discharged/transferred to a psychiatric hospital or psychiatric distinct part unit of a hospital.</description>
-        </choice>
-        <choice>
-           <code>66</code>
-           <description>Discharged/transferred to a Critical Access Hospital (CAH).</description>
-        </choice>
-        <choice>
-           <code>70</code>
-           <description>Discharged/transferred to another type of health care institution not defined elsewhere in the code list.</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>01</code>
+      <description>Discharged to home or self care (routine discharge)</description>
+    </choice>
+    <choice>
+      <code>02</code>
+      <description>Discharged/transferred to another short term general hospital for inpatient care</description>
+    </choice>
+    <choice>
+      <code>03</code>
+      <description>Discharged/transferred to a skilled nursing facility (SNF) {With Medicare certification in anticipation of covered skilled care.  See Code 61 below.}</description>
+    </choice>
+    <choice>
+      <code>04</code>
+      <description>Discharged/transferred to an intermediate care facility (ICF)</description>
+    </choice>
+    <choice>
+      <code>05</code>
+      <description>Discharged/transferred to another type of institution not defined elsewhere in this code list</description>
+    </choice>
+    <choice>
+      <code>06</code>
+      <description>Discharged/transferred to home under care of organized home health service organization in anticipation of covered skills care</description>
+    </choice>
+    <choice>
+      <code>07</code>
+      <description>Left against medical advice or discontinued care</description>
+    </choice>
+    <choice>
+      <code>09</code>
+      <description>Admitted as an inpatient to this hospital.</description>
+    </choice>
+    <choice>
+      <code>20</code>
+      <description>Deceased/Expired (or did not recover - Religious Non Medical Health Care Patient)</description>
+    </choice>
+    <choice>
+      <code>21</code>
+      <description>Discharged/transferred to court/law enforcement</description>
+    </choice>
+    <choice>
+      <code>30</code>
+      <description>Still a patient or expected to return for outpatient services.</description>
+    </choice>
+    <choice>
+      <code>43</code>
+      <description>Discharged/transferred to a Federal Health Care Facility (e.g. VA or federal health care facility)</description>
+    </choice>
+    <choice>
+      <code>50</code>
+      <description>Discharged/transferred to Hospice - home.</description>
+    </choice>
+    <choice>
+      <code>51</code>
+      <description>Discharged/transferred to Hospice - medical facility</description>
+    </choice>
+    <choice>
+      <code>61</code>
+      <description>Discharged/transferred within this institution to a hospital based Medicare approved swing bed.</description>
+    </choice>
+    <choice>
+      <code>62</code>
+      <description>Discharged/transferred to a inpatient rehabilitation facility including distinct part units of a hospital.</description>
+    </choice>
+    <choice>
+      <code>63</code>
+      <description>Discharged/transferred to long term care hospitals</description>
+    </choice>
+    <choice>
+      <code>64</code>
+      <description>Discharged/transferred to a nursing facility certified under Medicaid but not certified under Medicare</description>
+    </choice>
+    <choice>
+      <code>65</code>
+      <description>Discharged/transferred to a psychiatric hospital or psychiatric distinct part unit of a hospital.</description>
+    </choice>
+    <choice>
+      <code>66</code>
+      <description>Discharged/transferred to a Critical Access Hospital (CAH).</description>
+    </choice>
+    <choice>
+      <code>70</code>
+      <description>Discharged/transferred to another type of health care institution not defined elsewhere in the code list.</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

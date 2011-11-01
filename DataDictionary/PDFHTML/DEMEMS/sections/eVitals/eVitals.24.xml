@@ -18,25 +18,25 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>decimal</dataType>
-        <constraint>
-          <constraintTitle>totalDigits</constraintTitle>
-          <constraintValue>3</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>fractionDigits</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>50.0</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>3</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>50.0</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

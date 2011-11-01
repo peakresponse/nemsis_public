@@ -11,16 +11,23 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-      </constraints>
+  <enumerations>
+    <choice>
+      <code>4513001</code>
+      <description>HIPAA acknowledgement/Release</description>
+    </choice>
+    <choice>
+      <code>4513003</code>
+      <description>Permission to Treat</description>
+    </choice>
+    <choice>
+      <code>4513005</code>
+      <description>Release for Billing</description>
+    </choice>
+    <choice>
+      <code>4513007</code>
+      <description>Transfer of Patient Care</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element>

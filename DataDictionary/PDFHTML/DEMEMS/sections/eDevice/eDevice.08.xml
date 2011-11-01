@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eDevice.08" minOccurs="0" maxOccurs="1" dataType="ECGInterpretation" isNillable="No">
-<name>ECG Interpretation</name>
+<name>Medical Device ECG Interpretation</name>
 <national>No</national>
 <state>No</state>
 <definition>The interpretation of the rhythm by the device (if appropriate for the event)</definition>
@@ -16,16 +16,16 @@
 <performanceMeasure>STEMI</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>2000</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>2000</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element>

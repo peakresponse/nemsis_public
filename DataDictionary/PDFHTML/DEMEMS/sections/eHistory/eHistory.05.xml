@@ -19,37 +19,37 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3105001</code>
-           <description>Family/Guardian request DNR (but no documentation)</description>
-        </choice>
-        <choice>
-           <code>3105003</code>
-           <description>Living Will</description>
-        </choice>
-        <choice>
-           <code>3105005</code>
-           <description>None</description>
-        </choice>
-        <choice>
-           <code>3105007</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>3105009</code>
-           <description>Other Healthcare Advanced Directive Form</description>
-        </choice>
-        <choice>
-           <code>3105011</code>
-           <description>State/EMS DNR Form</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3105001</code>
+      <description>Family/Guardian request DNR (but no documentation)</description>
+    </choice>
+    <choice>
+      <code>3105003</code>
+      <description>Living Will</description>
+    </choice>
+    <choice>
+      <code>3105005</code>
+      <description>None</description>
+    </choice>
+    <choice>
+      <code>3105007</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>3105009</code>
+      <description>Other Healthcare Advanced Directive Form</description>
+    </choice>
+    <choice>
+      <code>3105011</code>
+      <description>State EMS DNR or Medical Order Form</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

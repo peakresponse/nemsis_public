@@ -1,26 +1,32 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eScene.19" minOccurs="0" maxOccurs="1" dataType="SceneCrossStreet" isNillable="No">
-<name>Scene Cross Street or Directions</name>
-<national>No</national>
+<element number="eScene.19" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Incident ZIP Code</name>
+<national>Yes</national>
 <state>Yes</state>
-<definition>The nearest cross street to the incident address or directions from a recognized landmark or the second street name of an intersection.</definition>
-<v2Number></v2Number>
-<usage>Optional</usage>
-<notValue>No</notValue>
+<definition>The ZIP code of the incident location</definition>
+<v2Number>E08_15</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
-<v3Changes>Added to better locate/document the scene (incident) location.</v3Changes>
+<v3Comment>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>50</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+      <patterns>
+        <pattern>[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]</pattern>
+     </patterns>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
 </restrictions>
 </element>

@@ -20,51 +20,70 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>1010001</code>
-           <description>911 Response (Scene) with Transport Capability</description>
-        </choice>
-        <choice>
-           <code>1010003</code>
-           <description>911 Response (Scene) without Transport Capability</description>
-        </choice>
-        <choice>
-           <code>1010005</code>
-           <description>Air Medical</description>
-        </choice>
-        <choice>
-           <code>1010007</code>
-           <description>Hazmat</description>
-        </choice>
-        <choice>
-           <code>1010009</code>
-           <description>Medical Transport (Convalescent)</description>
-        </choice>
-        <choice>
-           <code>1010011</code>
-           <description>Paramedic Intercept</description>
-        </choice>
-        <choice>
-           <code>1010013</code>
-           <description>Rescue</description>
-        </choice>
-        <choice>
-           <code>1010015</code>
-           <description>Speciality Care Transport</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9920001</code>
+      <description>911 Response (Scene) with Transport Capability</description>
+    </choice>
+    <choice>
+      <code>9920003</code>
+      <description>911 Response (Scene) without Transport Capability</description>
+    </choice>
+    <choice>
+      <code>9920005</code>
+      <description>Air Medical</description>
+    </choice>
+    <choice>
+      <code>9920007</code>
+      <description>ALS Intercept</description>
+    </choice>
+    <choice>
+      <code>9920009</code>
+      <description>Critical Care Ground Support</description>
+    </choice>
+    <choice>
+      <code>9920011</code>
+      <description>Hazmat</description>
+    </choice>
+    <choice>
+      <code>9920013</code>
+      <description>Medical Transport (Convalescent, Interfacility Transfer Hospital and Nursing Home)</description>
+    </choice>
+    <choice>
+      <code>9920015</code>
+      <description>Rescue</description>
+    </choice>
+    <choice>
+      <code>9920017</code>
+      <description>Community Paramedicine</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-	<currentStatus>
-		<choice><code>A</code><description>Active</description></choice>
-		<choice><code>I</code><description>Inactive</description></choice>
+  <currentStatus>
+    <choice><code>A</code><description>Active</description></choice>
+    <choice><code>I</code><description>Inactive</description></choice>
 	</currentStatus>
-	<currentStatusDate>
-	</currentStatusDate>
-	<correlationID>Yes</correlationID>
+  <currentStatusDate>
+    <constraints>
+      <dataType>dateTime</dataType>
+      <constraint>
+        <constraintTitle>minInclusive</constraintTitle>
+        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+      </constraint>
+      <constraint>
+        <constraintTitle>maxInclusive</constraintTitle>
+        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+      </constraint>
+      <constraint>
+        <constraintTitle>pattern</constraintTitle>
+        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
+      </constraint>
+      </constraints>
+  </currentStatusDate>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

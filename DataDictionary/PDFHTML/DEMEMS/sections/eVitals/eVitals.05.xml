@@ -14,28 +14,28 @@
 <performanceMeasure>STEMI</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3305001</code>
-           <description>Computer Interpretation</description>
-        </choice>
-        <choice>
-           <code>3305003</code>
-           <description>Manual Interpretation</description>
-        </choice>
-        <choice>
-           <code>3305005</code>
-           <description>Transmission with No Interpretation</description>
-        </choice>
-        <choice>
-           <code>3305007</code>
-           <description>Transmission with Remote Interpretation</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3305001</code>
+      <description>Computer Interpretation</description>
+    </choice>
+    <choice>
+      <code>3305003</code>
+      <description>Manual Interpretation</description>
+    </choice>
+    <choice>
+      <code>3305005</code>
+      <description>Transmission with No Interpretation</description>
+    </choice>
+    <choice>
+      <code>3305007</code>
+      <description>Transmission with Remote Interpretation</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

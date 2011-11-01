@@ -14,21 +14,21 @@
       <patterns>
         <pattern>.+@.+</pattern>
      </patterns>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>3</constraintValue>
-        </constraint>
-      </constraints>
-	<correlationID>Yes</correlationID>
-	<emailAddressType>
-		<choice><code>9904001</code><description>Personal</description></choice>
-		<choice><code>9904003</code><description>Work</description></choice>
-	</emailAddressType>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>3</constraintValue>
+    </constraint>
+  </constraints>
+  <correlationID>Yes</correlationID>
+  <emailAddressType>
+    <choice><code>9904001</code><description>Personal</description></choice>
+    <choice><code>9904003</code><description>Work</description></choice>
+  </emailAddressType>
 </restrictions>
 </element>

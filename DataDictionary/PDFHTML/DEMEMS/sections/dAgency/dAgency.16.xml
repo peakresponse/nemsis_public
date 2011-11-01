@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="dAgency.16" minOccurs="1" maxOccurs="1" isNillable="Yes">
-<name>Total Primary Service Size Area</name>
+<name>Total Primary Service Area Size</name>
 <national>Yes</national>
 <state>Yes</state>
 <definition>The total square miles in the agency's service area.</definition>
@@ -20,17 +20,17 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>1000000</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>positiveInteger</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>4000000</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

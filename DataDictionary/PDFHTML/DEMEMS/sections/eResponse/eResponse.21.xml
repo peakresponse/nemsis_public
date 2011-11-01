@@ -1,26 +1,26 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eResponse.21" minOccurs="0" maxOccurs="1" dataType="EMSMileageOdometer" isNillable="No">
-<name>Ending Odometer Reading of Responding Vehicle</name>
+<name>Patient Destination Odometer Reading of Responding Vehicle</name>
 <national>No</national>
 <state>Yes</state>
-<definition>If using a counter, this is the mileage traveled beginning with dispatch through the transport of the patient to their destination and ending when back in service, starting from 0. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16</definition>
-<v2Number>E02_19</v2Number>
+<definition>The mileage (counter or odometer reading) of the vehicle when it arrives at the patient's destination. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)</definition>
+<v2Number>E02_18</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>If using a counter, this is the mileage traveled from dispatch to the patient's transport destination starting from 0.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>decimal</dataType>
-        <constraint>
-          <constraintTitle>totalDigits</constraintTitle>
-          <constraintValue>8</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>fractionDigits</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>8</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element>

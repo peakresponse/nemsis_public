@@ -9,7 +9,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eCustomConfiguration.01" type="CustomTitle" id="eCustomConfiguration.eCustomDataElementTitle" minOccurs="0">
+						<xs:element name="eCustomConfiguration.01" id="eCustomConfiguration.eCustomDataElementTitle" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -26,6 +26,13 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="CustomTitle">
+										<xs:attribute name="nemsisElement" type="xs:string" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>																	
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="eCustomConfiguration.02" type="CustomDefinition" id="eCustomConfiguration.eCustomDefinition" minOccurs="0">
 							<xs:annotation>
@@ -118,7 +125,10 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="CustomValue"/>
+									<xs:extension base="CustomValue">
+										<xs:attribute name="nemsisCode" type="xs:string" use="optional"/>
+										<xs:attribute name="customValueDescription"   type="xs:string" use="optional"/>
+									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -130,12 +140,9 @@
 	</xs:complexType>
 	<xs:complexType name="eCustomResults" id="eCustomConfiguration.eCustomResults">
 		<xs:sequence>
-			<xs:annotation>
-				<xs:documentation>Group Tag to hold custom result information</xs:documentation>
-			</xs:annotation>
 			<xs:element name="eCustomResults.ResultsGroup" id="eCustomConfiguration.eResultsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold custom information</xs:documentation>
+					<xs:documentation>Group Tag to hold custom results</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>

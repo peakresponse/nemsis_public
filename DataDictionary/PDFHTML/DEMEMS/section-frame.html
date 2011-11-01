@@ -1,14 +1,6 @@
 <html>
 <head>
-  <style type="text/css">
-.f1, body, td { font-family: "Arial", sans-serif; font-style: normal; font-weight: normal; text-decoration: none; color: black }
-  .f2 { font-size: 12px; font-weight: bold }
-  .f3 { font-size: 12px }
-  .f4 { font-size: 10px; font-weight: bold }
-  .p1 { white-space:nowrap }
-  .p2 { margin-top:7pt; white-space:nowrap }
-  .p3 { margin-top:3pt; white-space:nowrap }
-  </style>
+  <link rel="stylesheet" type="text/css" href="css\main.css" />
   <title></title>
   <script language="JavaScript" type="text/javascript">
   <!--
@@ -19,110 +11,119 @@
   parent.listFrame.location=lf;
   parent.detailFrame.location=df;        
   }
+  function changeFrames_References()
+  {        
+  var lf = 'references/reference_list.html';
+  var df = 'references/reference_main.xml';
+  parent.listFrame.location=lf;
+  parent.detailFrame.location=df;      
+  }
   //-->
   </script>
 </head>
 <body>
-  <div class="p1">
-    <span class="f2">NEMSIS v3.0.5</span>
+  <div class="pageHeader1">
+    <div class="p4" style="color:#FFFFFF;position:absolute;top:10%;">
+      &nbsp;&nbsp;NEMSIS Data Dictionary<br/>&nbsp;&nbsp;Version&nbsp;3.1.0
+    </div>
   </div>
-  <div class="p1">
-    <span class="f2">&nbsp;</span>
-  </div>
-  <div class="p1">
-    <span class="f2">Overview</span>
-  </div>
-  <div class="p1">
-    <span class="f3"><a href="overview.html" style="color:#24409A;" target="detailFrame">Overview &amp; Summary</a></span>
-  </div>
-  <div class="p1">
-    <span class="f3"><a href="samplePage.html" style="color:#24409A;" target="detailFrame">Sample Element Page</a></span>
+  <div class="spacer5">&nbsp;</div>
+  <div class="p2">
+    &nbsp;&nbsp;<a href="overview.html" target="detailFrame">Overview &amp; Summary</a>
   </div>
   <div class="p2">
-    <span class="f2">DEM & EMS Dataset Grouping</span>
+    &nbsp;&nbsp;<a href="samplePage.html" target="detailFrame">Sample Element Page</a>
   </div>
-  <div class="p1">
-    <span class="f3"><a href="extra/DEMDataSet_v3.xml" style="color:#24409A;" target="detailFrame">DEM Dataset</a></span>
-  </div>
-  <div class="p1">
-    <span class="f3"><a href="extra/EMSDataSet_Header_v3.xml" style="color:#24409A;" target="detailFrame">EMS Dataset Header</a></span>
-  </div>
-  <div class="p1">
-    <span class="f3"><a href="extra/EMSDataSet_PCR_v3.xml" style="color:#24409A;" target="detailFrame">EMS Dataset Patient Care Report</a></span>
+  <div style="font-size:10px">&nbsp;</div>
+  <div class="p3">
+    &nbsp;&nbsp;DEM & EMS Dataset Grouping
   </div>
   <div class="p2">
-    <span class="f2">Sections</span>
+    &nbsp;&nbsp;<a href="extra/DEMDataSet_v3.xml" target="detailFrame">DEM Dataset</a>
   </div>
-  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dAgency');">dAgency</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dConfiguration');">dConfiguration</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dContact');">dContact</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dCustomConfiguration');">dCustomConfiguration</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dCustomResults');">dCustomResults</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dDevice');">dDevice</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dFacility');">dFacility</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dLocation');">dLocation</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dPersonnel');">dPersonnel</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('dVehicle');">dVehicle</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eAirway');">eAirway</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eArrest');">eArrest</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eCrew');">eCrew</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eCustomConfiguration');">eCustomConfiguration</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eCustomResults');">eCustomResults</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eDevice');">eDevice</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eDispatch');">eDispatch</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eDisposition');">eDisposition</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eExam');">eExam</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eHistory');">eHistory</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eInjury');">eInjury</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eLabs');">eLabs</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eMedications');">eMedications</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eNarrative');">eNarrative</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eOther');">eOther</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eOutcome');">eOutcome</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('ePatient');">ePatient</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('ePayment');">ePayment</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eProcedures');">eProcedures</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eProtocols');">eProtocols</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eRecord');">eRecord</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eResponse');">eResponse</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eScene');">eScene</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eSituation');">eSituation</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eTimes');">eTimes</a></span>
-  </div>  <div class="p1">
-    <span class="f3"><a href="Javascript: void(0);" style="color:#24409A;" onclick="changeFrames('eVitals');">eVitals</a></span>
+  <div class="p2">
+    &nbsp;&nbsp;<a href="extra/EMSDataSet_Header_v3.xml" target="detailFrame">EMS Dataset Header</a></span>
+  </div>
+  <div class="p2">
+    &nbsp;&nbsp;<a href="extra/EMSDataSet_PCR_v3.xml" target="detailFrame">EMS Dataset Patient Care Report</a>
+  </div>
+<div style="font-size:10px">&nbsp;</div>
+<div class="p3">&nbsp;&nbsp;Demographic Sections</div>
+  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dAgency');">dAgency</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dConfiguration');">dConfiguration</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dContact');">dContact</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dCustomConfiguration');">dCustomConfiguration</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dCustomResults');">dCustomResults</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dDevice');">dDevice</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dFacility');">dFacility</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dLocation');">dLocation</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dPersonnel');">dPersonnel</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dState');">dState</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dVehicle');">dVehicle</a>
+  </div><div style="font-size:10px">&nbsp;</div>
+    <div class="p3">&nbsp;&nbsp;EMS Sections</div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eAirway');">eAirway</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eArrest');">eArrest</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eCrew');">eCrew</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eCustomConfiguration');">eCustomConfiguration</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eCustomResults');">eCustomResults</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eDevice');">eDevice</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eDispatch');">eDispatch</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eDisposition');">eDisposition</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eExam');">eExam</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eHistory');">eHistory</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eInjury');">eInjury</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eLabs');">eLabs</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eMedications');">eMedications</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eNarrative');">eNarrative</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eOther');">eOther</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eOutcome');">eOutcome</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('ePatient');">ePatient</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('ePayment');">ePayment</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eProcedures');">eProcedures</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eProtocols');">eProtocols</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eRecord');">eRecord</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eResponse');">eResponse</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eScene');">eScene</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eSituation');">eSituation</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eState');">eState</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eTimes');">eTimes</a>
+  </div>  <div class="p2">
+&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eVitals');">eVitals</a>
   </div></body></html>

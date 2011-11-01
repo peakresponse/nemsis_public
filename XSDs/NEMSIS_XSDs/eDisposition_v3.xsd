@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eDisposition" id="eDisposition.Disposition">
 		<xs:sequence>
@@ -17,7 +17,7 @@
 										<name>Destination/Transferred To, Name</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The destination the patient was delivered or transferred to</definition>
+										<definition>The destination the patient was delivered or transferred to.</definition>
 										<v2Number>E20_01</v2Number>
 										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
@@ -53,7 +53,7 @@
 										<name>Destination/Transferred To, Code</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The code of the destination the patient was delivered or transferred to</definition>
+										<definition>The code of the destination the patient was delivered or transferred to.</definition>
 										<v2Number>E20_02</v2Number>
 										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
@@ -64,7 +64,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>May be populated from list in dFacility.03 (Facility Location Code) or dFacility.05 (Facility National Provider Identifier) if a health care facility. NPI codes can be found on the NEMSIS webiste.</comment>
+										<comment>May be populated from list in dFacility.03 (Facility Location Code) or dFacility.05 (Facility National Provider Identifier) if a health care facility. NPI codes can be found on the NEMSIS SharePoint site.</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -89,11 +89,11 @@
 										<name>Destination Street Address</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The street address of the destination the patient was delivered or transferred to</definition>
+										<definition>The street address of the destination the patient was delivered or transferred to.</definition>
 										<v2Number>E20_03</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>May be auto-poplulated if list created in dFacility.08 (Facility Street Address).</comment>
+										<comment>May be auto-populated if list created in dFacility.07 (Facility Street Address).</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -114,11 +114,11 @@
 										<name>Destination City</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The city name of the destination the patient was delivered or transferred to</definition>
+										<definition>The city name of the destination the patient was delivered or transferred to.</definition>
 										<v2Number>E20_04</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>Based on GNIS Civil Code or Populated Place code. May be auto-poplulated if list created in dFacility.09 (Facility City).
+										<comment>Based on GNIS Civil Code or Populated Place code. May be auto-populated if list created in dFacility.08 (Facility City).
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 										<v3Changes/>
 									</nemsisTacDoc>
@@ -133,7 +133,7 @@
 										<name>Destination State</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The state of the destination the patient was delivered or transferred to</definition>
+										<definition>The state of the destination the patient was delivered or transferred to.</definition>
 										<v2Number>E20_05</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -145,7 +145,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Based on the ANSI Code. May be auto-poplulated if list created in dFacility.10 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -170,7 +170,7 @@
 										<name>Destination County</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The destination county in which  the patient was delivered or transferred to</definition>
+										<definition>The destination county in which  the patient was delivered or transferred to.</definition>
 										<v2Number>E20_06</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -182,7 +182,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>May be auto-poplulated if list created in dFacility.12 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
+										<comment>May be auto-populated if list created in dFacility.11 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
 							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 										<v3Changes/>
 									</nemsisTacDoc>
@@ -208,7 +208,7 @@
 										<name>Destination ZIP Code</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The destination ZIP code in which  the patient was delivered or transferred to</definition>
+										<definition>The destination ZIP code in which  the patient was delivered or transferred to.</definition>
 										<v2Number>E20_07</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -220,9 +220,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>May be auto-poplulated if list created in dFacility.14 (Facility ZIP Code). &lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
-&lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
-   </comment>
+										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+&lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -247,11 +246,11 @@
 										<name>Destination Country</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The country of the destination</definition>
+										<definition>The country of the destination.</definition>
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>May be auto-poplulated if list created in dFacility.13 (Facility Country).&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<comment>May be auto-populated if list created in dFacility.12 (Facility Country).&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 										<v3Changes>Added for improved international compatibility.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -265,14 +264,14 @@
 										<name>Destination GPS Location</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The destination GPS Coordinates to which  the patient was delivered or transferred to</definition>
+										<definition>The destination GPS Coordinates to which  the patient was delivered or transferred to.</definition>
 										<v2Number>E20_08</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>May be auto-poplulated if list created in dFacility.14 (Facility GPS Location).
+										<comment>May be auto-populated if list created in dFacility.13 (Facility GPS Location).
 										  &lt;br/>&lt;br/>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
-										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
-										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places						  
+										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
+										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 										</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
@@ -290,11 +289,13 @@
 										<name>Disposition Location US National Grid Coordinates</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Facilitiy US National Grid Coordinates</definition>
+										<definition>The US National Grid Coordinates for the Disposition Location.  This may be the Healthcare Facility US National Grid Coordinates.</definition>
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>Standard found at www.fgdc.gov/usng. May be auto-poplulated if list created in dFacility.15 (Facilitiy US National Grid Coordinates).</comment>
+										<comment>Standard found at www.fgdc.gov/usng. &lt;br/>
+										Through programming this may be partially auto-populated if the list is created in dFacility.14 (Facility US National Grid Coordinates).									
+										</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -340,7 +341,7 @@
 							<name>Incident/Patient Disposition</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Type of disposition treatment and/or transport of the patient_</definition>
+							<definition>Type of disposition treatment and/or transport of the patient by this EMS Unit.</definition>
 							<v2Number>E20_10</v2Number>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
@@ -508,7 +509,7 @@
 							<name>Additional Transport Mode Descriptors</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication whether or not lights and/or sirens were used on the vehicle while leaving scene</definition>
+							<definition>The documentation of transport mode techniques for this EMS response.</definition>
 							<v2Number/>
 							<usage>Required</usage>
 							<performanceMeasure/>
@@ -696,7 +697,7 @@
 			</xs:element>
 			<xs:element name="eDisposition.HospitalTeamActivationGroup" id="eDisposition.HospitalTeamActivationGroup" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about the Destination and the Disposition details </xs:documentation>
+					<xs:documentation>Group Tag to hold info about the destination team pre-arrival activation</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -756,7 +757,7 @@
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -794,7 +795,8 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-					</xs:sequence><xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="eDisposition.26" id="eDisposition.DispositionInstructionsProvided" minOccurs="0" maxOccurs="unbounded">
@@ -805,7 +807,7 @@
 							<name>Disposition Instructions Provided</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>Information provded to patient during disposition for patients not transported or treated.</definition>
+							<definition>Information provided to patient during disposition for patients not transported or treated.</definition>
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasure/>
@@ -847,25 +849,10 @@
 			</xs:enumeration>
 			<xs:enumeration value="4218007">
 				<xs:annotation>
-					<xs:documentation>Lights and Sirens</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4218009">
-				<xs:annotation>
-					<xs:documentation>Lights, No Sirens</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4218011">
-				<xs:annotation>
-					<xs:documentation>No Lights and Sirens</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4218013">
-				<xs:annotation>
 					<xs:documentation>Speed-Enhanced per Local Policy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4218015">
+			<xs:enumeration value="4218009">
 				<xs:annotation>
 					<xs:documentation>Speed-Normal Traffic</xs:documentation>
 				</xs:annotation>
@@ -934,7 +921,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
-			<xs:maxLength value="60"/>
+			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="DispositionInstruction">
@@ -1170,7 +1157,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="IncidentPatientDisposition">
 		<xs:annotation>
-			<xs:documentation>Type of disposition treatment and/or transport of the patient.</xs:documentation>
+			<xs:documentation>Type of disposition treatment and/or transport of the patient by this EMS Unit.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4212001">
@@ -1195,70 +1182,80 @@
 			</xs:enumeration>
 			<xs:enumeration value="4212009">
 				<xs:annotation>
-					<xs:documentation>No Patient Found (Canceled on Scene)</xs:documentation>
+					<xs:documentation>No Patient Contact (Cancelled on Scene)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212011">
 				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-No EMS Transport</xs:documentation>
+					<xs:documentation>No Patient Found (Canceled on Scene)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212013">
 				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-Transported by EMS</xs:documentation>
+					<xs:documentation>Patient Dead at Scene-No EMS Transport</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212015">
 				<xs:annotation>
-					<xs:documentation>Patient Evaluated, No Treatment/Transport Required</xs:documentation>
+					<xs:documentation>Patient Dead at Scene-Transported by EMS</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212017">
 				<xs:annotation>
-					<xs:documentation>Patient Refused Evaluation/Care (With Transport)</xs:documentation>
+					<xs:documentation>Patient Evaluated, No Treatment/Transport Required</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212019">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Released (AMA)</xs:documentation>
+					<xs:documentation>Patient Refused Evaluation/Care (With Transport)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212021">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Released (per protocol)</xs:documentation>
+					<xs:documentation>Patient Refused Evaluation/Care and (Without Transport)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212023">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Transferred Care to Another EMS Professional</xs:documentation>
+					<xs:documentation>Patient Treated, Released (AMA)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212025">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by EMS</xs:documentation>
+					<xs:documentation>Patient Treated, Released (per protocol)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212027">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by Law Enforcement</xs:documentation>
+					<xs:documentation>Patient Treated, Transferred Care to Another EMS Professional</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212029">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by Private Vehicle</xs:documentation>
+					<xs:documentation>Patient Treated, Transported by EMS</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212031">
 				<xs:annotation>
-					<xs:documentation>Standby-No Services or Support Provided</xs:documentation>
+					<xs:documentation>Patient Treated, Transported by Law Enforcement</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212033">
 				<xs:annotation>
-					<xs:documentation>Standby-Public Safety, Fire, or EMS Operational Support Provided</xs:documentation>
+					<xs:documentation>Patient Treated, Transported by Private Vehicle</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212035">
+				<xs:annotation>
+					<xs:documentation>Standby-No Services or Support Provided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4212037">
+				<xs:annotation>
+					<xs:documentation>Standby-Public Safety, Fire, or EMS Operational Support Provided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4212039">
 				<xs:annotation>
 					<xs:documentation>Transport of Body Parts or Organs Only</xs:documentation>
 				</xs:annotation>
@@ -1363,7 +1360,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4220011">
 				<xs:annotation>
-					<xs:documentation>On-Line Medical Direction</xs:documentation>
+					<xs:documentation>On-Line/On-Scene Medical Direction</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4220013">
@@ -1437,7 +1434,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4221005">
 				<xs:annotation>
-					<xs:documentation>Hospital-In Patient Bed</xs:documentation>
+					<xs:documentation>Hospital-Non-Emergency Department Bed</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4221007">

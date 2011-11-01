@@ -12,19 +12,19 @@
 <v3Comment>This has been inserted to allow each patient to be tracked across multiple PCRs within an EMS Agency.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
-</element><group number="ePatient.PatientNameGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+</element><group number="ePatient.PatientNameGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
 <element number="ePatient.02" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Last Name</name>
 <national>No</national>
@@ -41,17 +41,17 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>50</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -74,17 +74,17 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>35</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -103,17 +103,17 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>25</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element></group>
 <element number="ePatient.05" minOccurs="0" maxOccurs="1" isNillable="No">
@@ -125,21 +125,33 @@
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>This is a CMS standard.  According to the Medicare Claims Processing Manual, Chapter 15 - Ambulance, Ambulance suppliers bill using CMS-1500 form or CMS-1450 form for institution-based ambulance providers.  This standard adheres to CMS-1500 and 1450.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>55</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
-	<StreetAddress>Yes</StreetAddress>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>55</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
+  <streetAddress>
+    <constraints>
+      <dataType>string</dataType>
+      <constraint>
+        <constraintTitle>minLength</constraintTitle>
+        <constraintValue>1</constraintValue>
+      </constraint>
+      <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+        <constraintValue>55</constraintValue>
+      </constraint>
+    </constraints>
+  </streetAddress>
 </restrictions>
 </element><element number="ePatient.06" minOccurs="0" maxOccurs="1" dataType="CityGnisCode" isNillable="No">
 <name>Patient's Home City</name>
@@ -153,9 +165,9 @@
 <v3Comment>Based on GNIS Civil Code or Populated Place code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-      </constraints>
+  <constraints>
+    <dataType>positiveInteger</dataType>
+  </constraints>
 </restrictions>
 </element><element number="ePatient.07" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Patient's Home County</name>
@@ -179,13 +191,13 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>5</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>5</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -212,13 +224,13 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -266,13 +278,13 @@
 <v3Comment>Based on the ISO Country Code.<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="ePatient.11" minOccurs="0" maxOccurs="1" dataType="CensusTracts" isNillable="No">
 <name>Patient Home Census Tract</name>
@@ -295,17 +307,17 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>15</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>15</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="ePatient.12" minOccurs="0" maxOccurs="1" dataType="SocialSecurityNumber" isNillable="No">
 <name>Social Security Number</name>
@@ -319,17 +331,17 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>000000000</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>999999999</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>000000000</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>999999999</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="ePatient.13" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Gender</name>
@@ -352,20 +364,20 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9906001</code>
-           <description>Female</description>
-        </choice>
-        <choice>
-           <code>9906003</code>
-           <description>Male</description>
-        </choice>
-        <choice>
-           <code>9906005</code>
-           <description>Unknown (Unable to Determine)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9906001</code>
+      <description>Female</description>
+    </choice>
+    <choice>
+      <code>9906003</code>
+      <description>Male</description>
+    </choice>
+    <choice>
+      <code>9906005</code>
+      <description>Unknown (Unable to Determine)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -392,37 +404,37 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2514001</code>
-           <description>American Indian or Alaska Native</description>
-        </choice>
-        <choice>
-           <code>2514003</code>
-           <description>Asian</description>
-        </choice>
-        <choice>
-           <code>2514005</code>
-           <description>Black or African American</description>
-        </choice>
-        <choice>
-           <code>2514007</code>
-           <description>Hispanic or Latino</description>
-        </choice>
-        <choice>
-           <code>2514009</code>
-           <description>Native Hawaiian or Other Pacific Islander</description>
-        </choice>
-        <choice>
-           <code>2514011</code>
-           <description>White</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2514001</code>
+      <description>American Indian or Alaska Native</description>
+    </choice>
+    <choice>
+      <code>2514003</code>
+      <description>Asian</description>
+    </choice>
+    <choice>
+      <code>2514005</code>
+      <description>Black or African American</description>
+    </choice>
+    <choice>
+      <code>2514007</code>
+      <description>Hispanic or Latino</description>
+    </choice>
+    <choice>
+      <code>2514009</code>
+      <description>Native Hawaiian or Other Pacific Islander</description>
+    </choice>
+    <choice>
+      <code>2514011</code>
+      <description>White</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><group number="ePatient.AgeGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
 <element number="ePatient.15" minOccurs="1" maxOccurs="1" isNillable="Yes">
@@ -446,17 +458,17 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>120</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>120</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -483,57 +495,66 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2516001</code>
-           <description>Days</description>
-        </choice>
-        <choice>
-           <code>2516003</code>
-           <description>Hours</description>
-        </choice>
-        <choice>
-           <code>2516005</code>
-           <description>Minutes</description>
-        </choice>
-        <choice>
-           <code>2516007</code>
-           <description>Months</description>
-        </choice>
-        <choice>
-           <code>2516009</code>
-           <description>Years</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2516001</code>
+      <description>Days</description>
+    </choice>
+    <choice>
+      <code>2516003</code>
+      <description>Hours</description>
+    </choice>
+    <choice>
+      <code>2516005</code>
+      <description>Minutes</description>
+    </choice>
+    <choice>
+      <code>2516007</code>
+      <description>Months</description>
+    </choice>
+    <choice>
+      <code>2516009</code>
+      <description>Years</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
 </restrictions>
 </element></group>
-<element number="ePatient.17" minOccurs="0" maxOccurs="1" dataType="DateOfBirth" isNillable="No">
+<element number="ePatient.17" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Date of Birth</name>
 <national>No</national>
 <state>Yes</state>
 <definition>The patient's date of birth</definition>
 <v2Number>E06_16</v2Number>
-<usage>Optional</usage>
-<notValue>No</notValue>
-<pertinentNegative>No</pertinentNegative>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>date</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1890-01-01</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01</constraintValue>
-        </constraint>
-      </constraints>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+  <constraints>
+    <dataType>date</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1890-01-01</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01</constraintValue>
+    </constraint>
+  </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
 </restrictions>
 </element><element number="ePatient.18" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Patient's Phone Number</name>
@@ -550,14 +571,14 @@
       <patterns>
         <pattern>[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]</pattern>
      </patterns>
-	<correlationID>Yes</correlationID>
-	<phoneNumberType>
-		<choice><code>9913001</code><description>Fax</description></choice>
-		<choice><code>9913003</code><description>Home</description></choice>
-		<choice><code>9913005</code><description>Mobile</description></choice>
-		<choice><code>9913007</code><description>Pager</description></choice>
-		<choice><code>9913009</code><description>Work</description></choice>
-	</phoneNumberType>
+  <correlationID>Yes</correlationID>
+  <phoneNumberType>
+    <choice><code>9913001</code><description>Fax</description></choice>
+    <choice><code>9913003</code><description>Home</description></choice>
+    <choice><code>9913005</code><description>Mobile</description></choice>
+    <choice><code>9913007</code><description>Pager</description></choice>
+    <choice><code>9913009</code><description>Work</description></choice>
+  </phoneNumberType>
 </restrictions>
 </element><element number="ePatient.19" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Patient's Email Address</name>
@@ -568,28 +589,28 @@
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Added to improve followup and billing communication.</v3Comment>
+<v3Comment>Added to improve follow-up and billing communication.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
       <patterns>
         <pattern>.+@.+</pattern>
      </patterns>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>3</constraintValue>
-        </constraint>
-      </constraints>
-	<correlationID>Yes</correlationID>
-	<emailAddressType>
-		<choice><code>9904001</code><description>Personal</description></choice>
-		<choice><code>9904003</code><description>Work</description></choice>
-	</emailAddressType>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>3</constraintValue>
+    </constraint>
+  </constraints>
+  <correlationID>Yes</correlationID>
+  <emailAddressType>
+    <choice><code>9904001</code><description>Personal</description></choice>
+    <choice><code>9904003</code><description>Work</description></choice>
+  </emailAddressType>
 </restrictions>
 </element><element number="ePatient.20" minOccurs="0" maxOccurs="1" dataType="ANSIStateCode" isNillable="No">
 <name>State Issuing Driver's License</name>
@@ -603,13 +624,13 @@
 <v3Comment>Stored as the ANSI State Code. <br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="ePatient.21" minOccurs="0" maxOccurs="1" dataType="DriversLicenseNumber" isNillable="No">
 <name>Driver's License Number</name>
@@ -623,16 +644,16 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>30</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>30</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element></section>

@@ -1,14 +1,23 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eScene.08" minOccurs="1" maxOccurs="1" isNillable="Yes">
-<name>Incident Location Type</name>
+<name>Triage Classification for MCI Patient</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The kind of location where the incident happened</definition>
-<v2Number>E08_07</v2Number>
+<definition>The color associated with the initial triage assessment/classification of the MCI patient.</definition>
+<v2Number></v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Code list is represented in ICD-10-CM: Place of Occurrence of the external cause (Y92.0-Y92.9).</v3Comment>
+<v3Comment>This element is documented when eScene.07 (Mass Casualty Incident) = Yes.
+<br/><br/>
+Examples of triage systems include START and SALT.  
+<br/><br/>
+<div style="font-size:11px">Adapted from: SALT mass casualty triage: concept endorsed by the American College of Emergency Physicians, American College of Surgeons Committee on Trauma, American Trauma Society, National Association of EMS Physicians, National Disaster Life Support Education Consortium, and State and Territorial Injury Prevention Directors Association. Disaster Med Public Health Prep. 2008 Dec;2(4):245-6.
+</div>
+<div style="font-size:4px"> </div>
+<div style="font-size:11px">
+START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then SAVE-a new method of dynamic triage for victims of a catastrophic earthquake. Prehospital Disaster Med. 1996; Apr-Jun; 11(2): 117-24							
+</div></v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
@@ -20,9 +29,28 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <patterns>
-        <pattern>Y92\.[0-9]</pattern>
-     </patterns>
+  <enumerations>
+    <choice>
+      <code>2708001</code>
+      <description>Red - Immediate</description>
+    </choice>
+    <choice>
+      <code>2708003</code>
+      <description>Yellow - Delayed</description>
+    </choice>
+    <choice>
+      <code>2708005</code>
+      <description>Green - Minimal (Minor)</description>
+    </choice>
+    <choice>
+      <code>2708007</code>
+      <description>Gray - Expectant</description>
+    </choice>
+    <choice>
+      <code>2708009</code>
+      <description>Black - Deceased</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

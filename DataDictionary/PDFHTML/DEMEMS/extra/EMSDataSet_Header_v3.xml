@@ -1,5 +1,8 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/root.xslt"?>
 <section name="EMSDataset">
+	<element number="eState" type="eState" minOccurs="0" maxOccurs="M">
+		<name>State Required PCR Data Elements</name>
+	</element>
 	<group number="Header" minOccurs="1" maxOccurs="M">
 		<group number="DemographicGroup" minOccurs="1" maxOccurs="1">
 			<element number="dAgency.01" minOccurs="1" maxOccurs="1" dataType="EMSAgencyStateID" isNillable="No">
@@ -11,10 +14,8 @@
 				<usage>Mandatory</usage>
 				<notValue>No</notValue>
 				<pertinentNegative>No</pertinentNegative>
-				<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-				<v3Changes>Added to better define multiple EMS Agency numbers within a single EMS Agency.</v3Changes>
 			</element>
-			<element number="dAgency.02" minOccurs="1" maxOccurs="M" isNillable="No">
+			<element number="dAgency.02" minOccurs="1" maxOccurs="1" isNillable="No">
 				<name>EMS Agency Number</name>
 				<national>Yes</national>
 				<state>Yes</state>
@@ -23,10 +24,8 @@
 				<usage>Mandatory</usage>
 				<notValue>No</notValue>
 				<pertinentNegative>No</pertinentNegative>
-				<comment>This is the primary identifier to the entire Demographic Section.  Each of the Demographic sections must be associated with an EMS Agency Number. An EMS Agency can have more than one Agency Number within a state. This reflects the ability for an EMS Agency to have a different number for each service type or location (based on state implementation).</comment>
-				<v3Changes>Multiple EMS Agency Numbers may be associated with dAgency.01.</v3Changes>
 			</element>
-			<!--<element number="dAgency.03" minOccurs="1" maxOccurs="1" isNillable="Yes">
+			<element number="dAgency.03" minOccurs="1" maxOccurs="1" isNillable="Yes">
 				<name>EMS Agency Name</name>
 				<national>No</national>
 				<state>Yes</state>
@@ -47,8 +46,6 @@
 				<usage>Mandatory</usage>
 				<notValue>No</notValue>
 				<pertinentNegative>No</pertinentNegative>
-				<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.</comment>
-				<v3Changes>An additional data element (dAgency.05) has been added to document all of the states in which the EMS Agency provides services.</v3Changes>
 			</element>
 			<group number="dAgency.AgencyServiceGroup" minOccurs="1" maxOccurs="M">
 			  
@@ -102,8 +99,6 @@
 					<usage>Mandatory</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment>This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.</comment>
-					<v3Changes/>
 				</element>
 			</group>
 			<element number="dAgency.09" minOccurs="1" maxOccurs="1" dataType="TypeOfService" isNillable="No">
@@ -115,8 +110,6 @@
 				<usage>Mandatory</usage>
 				<notValue>No</notValue>
 				<pertinentNegative>No</pertinentNegative>
-				<comment>The Primary Type of Service is associated with each of the EMS Agency Numbers.  This was added to better allow EMS Agencies to document and be analyzed using licensure information.</comment>
-				<v3Changes/>
 			</element>			
 			<element number="dAgency.11" minOccurs="1" maxOccurs="1" dataType="StateCertificationLicensureLevels" isNillable="No">
 				<name>Level of Service</name>
@@ -127,8 +120,6 @@
 				<usage>Mandatory</usage>
 				<notValue>No</notValue>
 				<pertinentNegative>No</pertinentNegative>
-				<comment>The Level of Service is associated with the specific EMS Agency Number (dAgency.02) for the EMS Agency.</comment>
-				<v3Changes/>
 			</element>
   		<element number="dAgency.12" minOccurs="1" maxOccurs="1" dataType="OrganizationStatus" isNillable="No">
   			<name>Organization Status</name>
@@ -151,7 +142,7 @@
   				<performanceMeasure>Trauma</performanceMeasure>
   			</performanceMeasuresGroup>
   		</element>
-			<element number="dAgency.13" minOccurs="1" maxOccurs="1" dataType="OrganizationalType" isNillable="No">
+			<element number="dAgency.16" minOccurs="1" maxOccurs="1" dataType="OrganizationalType" isNillable="No">
 				<name>Organizational Type</name>
 				<national>Yes</national>
 				<state>Yes</state>
@@ -160,8 +151,6 @@
 				<usage>Mandatory</usage>
 				<notValue>No</notValue>
 				<pertinentNegative>No</pertinentNegative>
-				<comment>Organizational Type is associated with the EMS Agency and the specific EMS Agency Number (dAgency.02).</comment>
-				<v3Changes/>
 			</element>
 			<element number="dAgency.25" minOccurs="1" maxOccurs="1" isNillable="Yes">
 				<name>National Provider Identifier</name>
@@ -187,8 +176,6 @@
 					<usage>Mandatory</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment>The New 2009 EMS Educational Levels have been added. Associated with each (dConfiguration.05) Procedure</comment>
-					<v3Changes/>
 				</element>
 				<element number="dConfiguration.07" minOccurs="1" maxOccurs="M" dataType="icd10Code" isNillable="No">
 					<name>EMS Agency Procedures</name>
@@ -213,8 +200,6 @@
 					<usage>Mandatory</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment>The new 2009 EMS Educational Levels have been added. Associated with each (dConfiguration.08) EMS Agency Medications.</comment>
-					<v3Changes/>
 				</element>
 				<element number="dConfiguration.09" minOccurs="1" maxOccurs="M" dataType="Medication" isNillable="No">
 					<name>EMS Agency Medications</name>
@@ -225,8 +210,6 @@
 					<usage>Mandatory</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment>The medication list is stored as the RXNORM (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities.</comment>
-					<v3Changes/>
 				</element>
 			</group>
 			<element number="dConfiguration.10" minOccurs="1" maxOccurs="M" dataType="ProtocolsUsed" isNillable="No">
@@ -238,8 +221,6 @@
 				<usage>Mandatory</usage>
 				<notValue>No</notValue>
 				<pertinentNegative>No</pertinentNegative>
-				<comment>This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. State and Local entities can customize protocols but where possible local protocols should map to these uniform codes. Additional protocols should be coded using text values or numbers between 100 and 10,000. The list is defined by the NASEMSO State Medical Directors.</comment>
-				<v3Changes/>
 			</element>
 			<group number="eCustomConfiguration.CustomGroup" minOccurs="0" maxOccurs="M">
 				<element number="eCustomConfiguration.01" minOccurs="0" maxOccurs="1" dataType="CustomTitle" isNillable="No">
@@ -251,8 +232,6 @@
 					<usage>Optional</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment>This is grouped with all data elements in this section and can have multiple instances.</comment>
-					<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 				</element>
 				<element number="eCustomConfiguration.02" minOccurs="0" maxOccurs="1" dataType="CustomDataType" isNillable="No">
 					<name>Custom Definition</name>
@@ -263,8 +242,6 @@
 					<usage>Optional</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment/>
-					<v3Changes/>
 				</element>
 				<element number="eCustomConfiguration.03" minOccurs="0" maxOccurs="1" dataType="CustomDataType" isNillable="No">
 					<name>EMS Custom Data Type</name>
@@ -275,8 +252,6 @@
 					<usage>Optional</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment/>
-					<v3Changes/>
 				</element>
 				<element number="eCustomConfiguration.04" minOccurs="0" maxOccurs="1" dataType="YesNoValues" isNillable="No">
 					<name>EMS Custom Data Element Multiplicity</name>
@@ -287,8 +262,6 @@
 					<usage>Optional</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment/>
-					<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 				</element>
 				<element number="eCustomConfiguration.05" minOccurs="0" maxOccurs="1" dataType="ElementUsage" isNillable="No">
 					<name>EMS Custom Data Element Usage</name>
@@ -311,8 +284,6 @@
 					<usage>Optional</usage>
 					<notValue>No</notValue>
 					<pertinentNegative>No</pertinentNegative>
-					<comment/>
-					<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 				</element>
 			</group>
 		</group>

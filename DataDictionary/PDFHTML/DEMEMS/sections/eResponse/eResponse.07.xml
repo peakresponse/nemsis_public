@@ -3,7 +3,7 @@
 <name>Primary Role of the Unit</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The Primary role of the EMS Unit which responded to this specific EMS incident.</definition>
+<definition>The Primary role of the EMS Unit which responded to this specific EMS event</definition>
 <v2Number>E02_05</v2Number>
 <usage>Mandatory</usage>
 <notValue>No</notValue>
@@ -20,27 +20,27 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2207001</code>
-           <description>Air Transport</description>
-        </choice>
-        <choice>
-           <code>2207003</code>
-           <description>Ground Transport</description>
-        </choice>
-        <choice>
-           <code>2207005</code>
-           <description>Non-Transport (Care or Assistance)</description>
-        </choice>
-        <choice>
-           <code>2207007</code>
-           <description>Rescue</description>
-        </choice>
-        <choice>
-           <code>2207009</code>
-           <description>Supervisor (Administrative Only)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2207001</code>
+      <description>Air Transport</description>
+    </choice>
+    <choice>
+      <code>2207003</code>
+      <description>Ground Transport</description>
+    </choice>
+    <choice>
+      <code>2207005</code>
+      <description>Non-Transport Administrative (e.g., Supervisor)</description>
+    </choice>
+    <choice>
+      <code>2207007</code>
+      <description>Non-Transport Assistance</description>
+    </choice>
+    <choice>
+      <code>2207009</code>
+      <description>Non-Transport Rescue</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element>

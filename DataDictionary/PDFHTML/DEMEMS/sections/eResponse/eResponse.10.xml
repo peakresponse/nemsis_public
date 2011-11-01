@@ -3,12 +3,12 @@
 <name>Type of Scene Delay</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The scene delays, if any, of the EMS unit associated with the patient encounter.</definition>
+<definition>The scene delays, if any, of the EMS unit associated with the EMS event.</definition>
 <v2Number>E02_08</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>A scene delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) to the time the unit left the scene (eTimes.09).</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
@@ -20,80 +20,88 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>2210001</code>
-           <description>Access Unavailable</description>
-        </choice>
-        <choice>
-           <code>2210003</code>
-           <description>Crowd</description>
-        </choice>
-        <choice>
-           <code>2210005</code>
-           <description>Directions/Unable to Locate</description>
-        </choice>
-        <choice>
-           <code>2210007</code>
-           <description>Distance</description>
-        </choice>
-        <choice>
-           <code>2210009</code>
-           <description>Diversion</description>
-        </choice>
-        <choice>
-           <code>2210011</code>
-           <description>Extrication &gt; 20 min.</description>
-        </choice>
-        <choice>
-           <code>2210013</code>
-           <description>HazMat</description>
-        </choice>
-        <choice>
-           <code>2210015</code>
-           <description>Language Barrier</description>
-        </choice>
-        <choice>
-           <code>2210017</code>
-           <description>None/No Delay</description>
-        </choice>
-        <choice>
-           <code>2210019</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>2210021</code>
-           <description>Safety-Crew/Staging</description>
-        </choice>
-        <choice>
-           <code>2210023</code>
-           <description>Safety-Patien</description>
-        </choice>
-        <choice>
-           <code>2210025</code>
-           <description>Staff Delay</description>
-        </choice>
-        <choice>
-           <code>2210027</code>
-           <description>Traffic</description>
-        </choice>
-        <choice>
-           <code>2210029</code>
-           <description>Vehicle Crash Involving this Unit</description>
-        </choice>
-        <choice>
-           <code>2210031</code>
-           <description>Vehicle Failure of this Unit</description>
-        </choice>
-        <choice>
-           <code>2210033</code>
-           <description>Weather</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>2210001</code>
+      <description>Awaiting Air Unit</description>
+    </choice>
+    <choice>
+      <code>2210003</code>
+      <description>Awaiting Ground Unit</description>
+    </choice>
+    <choice>
+      <code>2210005</code>
+      <description>Crowd</description>
+    </choice>
+    <choice>
+      <code>2210007</code>
+      <description>Directions/Unable to Locate</description>
+    </choice>
+    <choice>
+      <code>2210009</code>
+      <description>Distance</description>
+    </choice>
+    <choice>
+      <code>2210011</code>
+      <description>Extrication</description>
+    </choice>
+    <choice>
+      <code>2210013</code>
+      <description>HazMat</description>
+    </choice>
+    <choice>
+      <code>2210015</code>
+      <description>Language Barrier</description>
+    </choice>
+    <choice>
+      <code>2210017</code>
+      <description>None/No Delay</description>
+    </choice>
+    <choice>
+      <code>2210019</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>2210021</code>
+      <description>Patient Access</description>
+    </choice>
+    <choice>
+      <code>2210023</code>
+      <description>Safety-Crew/Staging</description>
+    </choice>
+    <choice>
+      <code>2210025</code>
+      <description>Safety-Patient</description>
+    </choice>
+    <choice>
+      <code>2210027</code>
+      <description>Staff Delay</description>
+    </choice>
+    <choice>
+      <code>2210029</code>
+      <description>Traffic</description>
+    </choice>
+    <choice>
+      <code>2210031</code>
+      <description>Triage/Multiple Patients</description>
+    </choice>
+    <choice>
+      <code>2210033</code>
+      <description>Vehicle Crash Involving this Unit</description>
+    </choice>
+    <choice>
+      <code>2210035</code>
+      <description>Vehicle Failure of this Unit</description>
+    </choice>
+    <choice>
+      <code>2210037</code>
+      <description>Weather</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

@@ -76,9 +76,8 @@
 										<usage>Optional</usage>
 										<performanceMeasure/>
 										<comment>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
-										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
-										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places
-						  
+										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
+										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 										  </comment>
 										<v3Changes/>
 									</nemsisTacDoc>
@@ -285,7 +284,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
+			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="StationNumber">

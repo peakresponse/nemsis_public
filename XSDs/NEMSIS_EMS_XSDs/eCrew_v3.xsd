@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eCrews">
 		<xs:sequence>
-			<xs:element name="eCrew.CrewGroup" id="eCrew.CrewGroup" maxOccurs="unbounded">
+			<xs:element name="eCrew.CrewGroup" id="eCrew.CrewGroup" maxOccurs="unbounded" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold crew information</xs:documentation>
 				</xs:annotation>
@@ -54,7 +54,7 @@
 										<name>Crew Member Level</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The functioning level of the crew memeber ID during this EMS patient encounter.</definition>
+										<definition>The functioning level of the crew member ID during this EMS patient encounter.</definition>
 										<v2Number>E04_03</v2Number>
 										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
@@ -66,7 +66,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
+										<comment>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -198,6 +198,16 @@
 			<xs:enumeration value="2302027">
 				<xs:annotation>
 					<xs:documentation>Student</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2302029">
+				<xs:annotation>
+					<xs:documentation>Critical Care Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2302031">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

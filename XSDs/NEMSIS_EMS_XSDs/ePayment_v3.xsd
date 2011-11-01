@@ -84,7 +84,7 @@
 										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -808,7 +808,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="ePayment.39" id="ePayment.PatientsWorkPhoneNumber" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="ePayment.39" id="ePayment.PatientsWorkPhoneNumber" minOccurs="0" maxOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -966,7 +966,7 @@ http://ushik.ahrq.gov/ViewItemDetails?system=mdr&amp;itemKey=21826000 </comment>
 							<comment>Added to improve billing documentation for CMS X12 based transactions.
 &lt;br/>&lt;br/>This element should be documented when ePayment.44 (Ambulance Transport) code = X (Round Trip).
 &lt;br/>&lt;br/>Ambulance providers can use this field to provide additional information regarding the circumstances of a round trip transport or for other medical 
-neccessity documentation.							
+necessity documentation.							
 							</comment>
 							<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
 						</nemsisTacDoc>
@@ -986,7 +986,7 @@ neccessity documentation.
 							<usage>Optional</usage>
 							<performanceMeasure/>
 							<comment>Added to improve billing using CMS X12 transactions based on CR110.
-							Ambulance providers can use this field to provide additional information regarding the patient's condition that warranted the use of a strecher or 
+							Ambulance providers can use this field to provide additional information regarding the patient's condition that warranted the use of a stretcher or 
 							for other medical necessity documentation.
 							</comment>
 							<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
@@ -1109,7 +1109,9 @@ neccessity documentation.
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Source CMS</comment>
+							<comment>Code list is represented in ICD-10-CM Codes: 
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
+							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -1155,7 +1157,7 @@ neccessity documentation.
 							<name>Transport Authorization Code</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>Prior authorization code provided by the insurance carrier/payor.</definition>
+							<definition>Prior authorization code provided by the insurance carrier/payer.</definition>
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasure/>
@@ -1170,10 +1172,10 @@ neccessity documentation.
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>ePayment.54</number>
-							<name>Prior Authorization Code Payor</name>
+							<name>Prior Authorization Code Payer</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The Payor who has provided the Prior Authorization Code.</definition>
+							<definition>The Payer who has provided the Prior Authorization Code.</definition>
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasure/>
@@ -1503,7 +1505,7 @@ services.</xs:documentation>
 			</xs:enumeration>
 			<xs:enumeration value="D2">
 				<xs:annotation>
-					<xs:documentation>Reare Circumstances, Traffic Patterns Precludes Ground Transport</xs:documentation>
+					<xs:documentation>Rare Circumstances, Traffic Patterns Precludes Ground Transport</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D3">

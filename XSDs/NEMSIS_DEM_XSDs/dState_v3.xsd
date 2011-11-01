@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
-        <xs:include schemaLocation="commonTypes_v3.xsd"/>
-        <xs:complexType name="dState">
-                <xs:sequence>
-                        <xs:element name="dState.01" maxOccurs="unbounded">
-                                <xs:annotation>
-                                        <xs:documentation>State Required Demographic Data Elements</xs:documentation>
-                                </xs:annotation>
-                                <xs:complexType>
-                                        <xs:simpleContent>
-                                                <xs:extension base="StateRequiredDemographic">
-                                                        <xs:attribute name="TIMESTAMP" type="TimeStampType" use="optional"/><xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-                                                </xs:extension>
-                                        </xs:simpleContent>
-                                </xs:complexType>
-                        </xs:element>
-                </xs:sequence>
-                
-												<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-												<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
-        </xs:complexType>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+	<xs:complexType name="dState">
+		<xs:sequence>
+			<xs:element name="dState.01" minOccurs="0" id="dState.StateRquiredElement" maxOccurs="unbounded">
+				<xs:annotation><xs:documentation>
+													<nemsisTacDoc>
+										<number>dState.01</number>
+										<name>State Required Element</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>Indicates which elements are required by the state.</definition>
+										<v2Number></v2Number>
+										<usage>Optional</usage>
+										<comment></comment>
+										<v3Changes/>
+									</nemsisTacDoc></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="StateRequiredElement">
+							<xs:attribute name="TIMESTAMP" type="TimeStampType" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="CurrentStatus" type="Status" use="required"/>
+		<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
+	</xs:complexType>
 </xs:schema>

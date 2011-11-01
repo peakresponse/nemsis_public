@@ -541,96 +541,6 @@
         </table>
     </td></tr>
         
-    <!--<xsl:choose>  
-    <xsl:when test="element/restrictions/pertinentNegatives/*">
-    <tr><td height="8px;"></td></tr> 
-    <tr><td>    
-            <table border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td>
-                  <table width="675px" cellspacing="0" cellpadding="0" border="0" >
-                    <tr>
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                    </tr>
-                    <tr>
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
-                      <td width="667px" class="sectionNOTValuesTitle">Pertinent Negatives</td>
-                      <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                    </tr>      
-                    <tr>
-                      <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                      <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <table width="675px" cellspacing="0" cellpadding="0" border="0" >
-                    <tr>
-                    <xsl:for-each select="element/restrictions/pertinentNegatives/choice">                  
-                        <td class="sectionPNValue">
-                          <xsl:value-of select="description"/>
-                        </td>                 
-                    </xsl:for-each>  
-                    </tr>      
-                  </table>
-                </td>                       
-              </tr>
-            </table> 
-    </td></tr>    
-    </xsl:when>
-    </xsl:choose> -->   
-    
-    <!-- NOT VALUES -->
-    <!--<xsl:choose>  
-    <xsl:when test="element/restrictions/notValues/*">
-    <tr><td height="8px;"></td></tr> 
-    <tr><td>    
-            <table border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td>
-                  <table width="675px" cellspacing="0" cellpadding="0" border="0" >
-                    <tr>
-                      <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                      <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                      <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                    </tr>
-                    <tr>
-                      <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
-                      <td width="667px" class="sectionNOTValuesTitle">NOT Values</td>
-                      <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                    </tr>      
-                    <tr>
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                      <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr><td height="2px;"></td></tr> 
-              <tr>
-                <td>
-                  <table cellspacing="0" cellpadding="0" border="0" >
-                    <tr>                      
-                    <td width="5px;"></td>
-                    <xsl:for-each select="element/restrictions/notValues/choice">                 
-                        <td class="sectionNOTValuesValue">
-                          <xsl:value-of select="description"/>
-                        </td>                 
-                    </xsl:for-each>  
-                    </tr>      
-                  </table>
-                </td>                       
-              </tr>
-            </table>
-    </td></tr>         
-    </xsl:when>
-    </xsl:choose>         --> 
     
     <!-- PERFORMANCE MEASURES SECTION -->  
     <xsl:choose>  
@@ -693,7 +603,7 @@
                     or  element/restrictions/currentStatus
                     or  element/restrictions/currentStatusDate
                     or  element/restrictions/fileType
-                    or  element/restrictions/StreetAddress
+                    or  element/restrictions/streetAddress
                     ">
     <tr><td height="8px;"></td></tr> 
     <tr><td>    
@@ -720,51 +630,6 @@
             </td>
           </tr>
           
-
-                    
-                    
-          <!--<xsl:choose><xsl:when test="element/restrictions/notValues">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">
-                      <table width="100%" cellspacing="0" cellpadding="0" border="0" >
-                      <tr>
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif);"></td>        
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
-                        <td align="left" class="attributeName">NOT Values</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                      </tr>      
-                      <tr>
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
-                    </table>                    
-                  </td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td style="padding-left:10px;">
-                  <xsl:for-each select="element/restrictions/notValues/choice">
-                    <div class="attributeValue" style="float:left;width:180px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                    </div>
-                  </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> -->
-                    
                     
           <xsl:choose><xsl:when test="element/restrictions/notValues">
           <tr><td height="5px;"></td></tr>  
@@ -814,7 +679,7 @@
           </tr>
           </xsl:when></xsl:choose>                     
           
-          <xsl:choose><xsl:when test="element/restrictions/StreetAddress">
+          <xsl:choose><xsl:when test="element/restrictions/streetAddress">
           <tr><td height="5px;"></td></tr>  
           <tr>
             <td>
@@ -827,14 +692,13 @@
                   <td width="5px"></td>
                   <td>
                     <div class="attributeValue" style="float:left;width:130px;"> 
-                      <b>Data Type:</b> String  
+                     <b>Data Type: </b> <xsl:value-of select="element/restrictions/streetAddress/constraints/dataType"/> 
                     </div>
-                    <div class="attributeValue" style="float:left;width:130px;"> 
-                      <b>MinLength:</b> 2  
-                    </div>
-                    <div class="attributeValue" style="float:left;width:130px;"> 
-                      <b>MaxLength:</b> 55 
-                    </div>
+                    <xsl:for-each select="element/restrictions/streetAddress/constraints/constraint">
+                      <div class="attributeValue" style="float:left;width:130px;"> 
+                        <b><xsl:value-of select="constraintTitle"/>: </b> <xsl:value-of select="constraintValue"/> 
+                      </div>
+                    </xsl:for-each> 
                   </td>
                 </tr>  
               </table>
@@ -978,16 +842,14 @@
                 <tr>
                   <td width="5px"></td>
                   <td>
-                    <table cellspacing="0" cellpadding="0" border="0">
-                      <tr>
-                        <td class="attributeValue" style="width:150px;"><b>Data Type:</b> DateTime</td>
-                        <td class="attributeValue" style="width:220px;"><b>minInclusive:</b> 1950-01-01T00:00:00</td>
-                        <td class="attributeValue" style="width:220px;"><b>maxInclusive:</b> 2050-01-01T00:00:00</td>                        
-                      </tr>
-                      <tr>
-                        <td class="attributeValue" style="width:500px;" colspan="3"><b>Pattern:</b> [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</td>
-                      </tr>                        
-                    </table>                                        
+                    <div class="attributeValue" style="float:left;width:130px;"> 
+                     <b>Data Type: </b> <xsl:value-of select="element/restrictions/currentStatusDate/constraints/dataType"/> 
+                    </div>
+                    <xsl:for-each select="element/restrictions/currentStatusDate/constraints/constraint">
+                      <div class="attributeValue" style="float:left;width:250px;white-space: nowrap;"> 
+                        <b><xsl:value-of select="constraintTitle"/>: </b> <xsl:value-of select="constraintValue"/> 
+                      </div>
+                    </xsl:for-each>                                       
                   </td>
                 </tr>  
               </table>
@@ -1222,9 +1084,9 @@
     </xsl:choose>    
         
     <!-- DATA ELEMENT COMMENT SECTION -->
-    <xsl:choose>  
-    <xsl:when test="string-length(element/v3Comment) &gt; 0">
-    <tr><td height="8px;"></td></tr> 
+    <!--<xsl:choose>  
+    <xsl:when test="string-length(element/v3Comment) &gt;= 0">-->
+    <tr><td height="4px;"></td></tr> 
     <tr><td>    
         <table border="0" cellspacing="0">
           <tr>
@@ -1253,8 +1115,8 @@
           </tr>
         </table>     
     </td></tr>       
-    </xsl:when>
-    </xsl:choose>     
+    <!--</xsl:when>
+    </xsl:choose>     -->
        
     <!-- VERSION 3 CHANGES IMPLEMENTED SECTION -->
     <xsl:choose>  

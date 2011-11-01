@@ -12,16 +12,16 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9923001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>9923003</code>
-           <description>Yes</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.02" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Potential System of Care/Specialty/Registry Patient</name>
@@ -43,51 +43,51 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4502001</code>
-           <description>Airway</description>
-        </choice>
-        <choice>
-           <code>4502003</code>
-           <description>Burn</description>
-        </choice>
-        <choice>
-           <code>4502005</code>
-           <description>Cardiac/MI</description>
-        </choice>
-        <choice>
-           <code>4502007</code>
-           <description>CVA/Stroke</description>
-        </choice>
-        <choice>
-           <code>4502009</code>
-           <description>Drowning</description>
-        </choice>
-        <choice>
-           <code>4502011</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4502013</code>
-           <description>Spinal Cord Injury</description>
-        </choice>
-        <choice>
-           <code>4502015</code>
-           <description>STEMI/Acute Cardiac</description>
-        </choice>
-        <choice>
-           <code>4502017</code>
-           <description>Trauma</description>
-        </choice>
-        <choice>
-           <code>4502019</code>
-           <description>Traumatic Brain Injury</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>4502001</code>
+      <description>Airway</description>
+    </choice>
+    <choice>
+      <code>4502003</code>
+      <description>Burn</description>
+    </choice>
+    <choice>
+      <code>4502005</code>
+      <description>Cardiac/MI</description>
+    </choice>
+    <choice>
+      <code>4502007</code>
+      <description>CVA/Stroke</description>
+    </choice>
+    <choice>
+      <code>4502009</code>
+      <description>Drowning</description>
+    </choice>
+    <choice>
+      <code>4502011</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4502013</code>
+      <description>Spinal Cord Injury</description>
+    </choice>
+    <choice>
+      <code>4502015</code>
+      <description>STEMI/Acute Cardiac</description>
+    </choice>
+    <choice>
+      <code>4502017</code>
+      <description>Trauma</description>
+    </choice>
+    <choice>
+      <code>4502019</code>
+      <description>Traumatic Brain Injury</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
-</element><group number="eOther.EMSCrewMemberGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+</element><group number="eOther.EMSCrewMemberGroup" minOccurs="1" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eOther.03" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Personal Protective Equipment Used</name>
 <national>No</national>
@@ -100,57 +100,57 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4503001</code>
-           <description>Eye Protection</description>
-        </choice>
-        <choice>
-           <code>4503003</code>
-           <description>Gloves</description>
-        </choice>
-        <choice>
-           <code>4503005</code>
-           <description>Helmet</description>
-        </choice>
-        <choice>
-           <code>4503007</code>
-           <description>Level A Suit</description>
-        </choice>
-        <choice>
-           <code>4503009</code>
-           <description>Level B Suit</description>
-        </choice>
-        <choice>
-           <code>4503011</code>
-           <description>Level C Suit</description>
-        </choice>
-        <choice>
-           <code>4503013</code>
-           <description>Level D Suit (Turn out gear)</description>
-        </choice>
-        <choice>
-           <code>4503015</code>
-           <description>Mask-N95</description>
-        </choice>
-        <choice>
-           <code>4503017</code>
-           <description>Mask-Surgical (Non-Fitted)</description>
-        </choice>
-        <choice>
-           <code>4503019</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4503021</code>
-           <description>PAPR</description>
-        </choice>
-        <choice>
-           <code>4503023</code>
-           <description>Reflective Vest</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>4503001</code>
+      <description>Eye Protection</description>
+    </choice>
+    <choice>
+      <code>4503003</code>
+      <description>Gloves</description>
+    </choice>
+    <choice>
+      <code>4503005</code>
+      <description>Helmet</description>
+    </choice>
+    <choice>
+      <code>4503007</code>
+      <description>Level A Suit</description>
+    </choice>
+    <choice>
+      <code>4503009</code>
+      <description>Level B Suit</description>
+    </choice>
+    <choice>
+      <code>4503011</code>
+      <description>Level C Suit</description>
+    </choice>
+    <choice>
+      <code>4503013</code>
+      <description>Level D Suit (Turn out gear)</description>
+    </choice>
+    <choice>
+      <code>4503015</code>
+      <description>Mask-N95</description>
+    </choice>
+    <choice>
+      <code>4503017</code>
+      <description>Mask-Surgical (Non-Fitted)</description>
+    </choice>
+    <choice>
+      <code>4503019</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4503021</code>
+      <description>PAPR</description>
+    </choice>
+    <choice>
+      <code>4503023</code>
+      <description>Reflective Vest</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eOther.04" minOccurs="0" maxOccurs="1" dataType="CrewMemberID" isNillable="No">
 <name>EMS Professional (Crew Member) ID</name>
@@ -164,17 +164,17 @@
 <v3Comment>Added to allow documentation of PPE and work related health and safety down to the individual level within each EMS crew.</v3Comment>
 <v3Changes>Added to better document EMS workplace health and safety issues.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>15</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>15</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eOther.05" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Suspected EMS Work Related Exposure, Injury, or Death</name>
@@ -188,21 +188,21 @@
 <v3Comment>Associated with eOther.04 (EMS Professional (Crew Member) ID)</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9923001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>9923003</code>
-           <description>Yes</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eOther.06" minOccurs="0" maxOccurs="M" isNillable="Yes">
 <name>Type of Suspected EMS Blood/Body Fluid Exposure, Injury, or Death</name>
@@ -216,74 +216,74 @@
 <v3Comment>Associated witheOther.04 (EMS Professional (Crew Member) ID).</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4506001</code>
-           <description>Death-Cardiac Arrest</description>
-        </choice>
-        <choice>
-           <code>4506003</code>
-           <description>Death-Injury Related</description>
-        </choice>
-        <choice>
-           <code>4506005</code>
-           <description>Death-Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4506007</code>
-           <description>Exposure-Airborne Respiratory/Biological/Aerosolized Secretions</description>
-        </choice>
-        <choice>
-           <code>4506009</code>
-           <description>Exposure-Body Fluid Contact to Broken Skin</description>
-        </choice>
-        <choice>
-           <code>4506011</code>
-           <description>Exposure-Body Fluid Contact with Eye</description>
-        </choice>
-        <choice>
-           <code>4506013</code>
-           <description>Exposure-Body Fluid Contact with Intact Skin</description>
-        </choice>
-        <choice>
-           <code>4506015</code>
-           <description>Exposure-Body Fluid Contact with Mucosal Surface</description>
-        </choice>
-        <choice>
-           <code>4506017</code>
-           <description>Exposure-Needle Stick with Body Fluid Injection</description>
-        </choice>
-        <choice>
-           <code>4506019</code>
-           <description>Exposure-Needle Stick without Body Fluid Injection</description>
-        </choice>
-        <choice>
-           <code>4506021</code>
-           <description>Exposure-Toxin/Chemical/Hazmat</description>
-        </choice>
-        <choice>
-           <code>4506023</code>
-           <description>Injury-Lifting/Back/Musculoskeletal</description>
-        </choice>
-        <choice>
-           <code>4506025</code>
-           <description>Injury-Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4506027</code>
-           <description>None</description>
-        </choice>
-        <choice>
-           <code>4506029</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4506001</code>
+      <description>Death-Cardiac Arrest</description>
+    </choice>
+    <choice>
+      <code>4506003</code>
+      <description>Death-Injury Related</description>
+    </choice>
+    <choice>
+      <code>4506005</code>
+      <description>Death-Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4506007</code>
+      <description>Exposure-Airborne Respiratory/Biological/Aerosolized Secretions</description>
+    </choice>
+    <choice>
+      <code>4506009</code>
+      <description>Exposure-Body Fluid Contact to Broken Skin</description>
+    </choice>
+    <choice>
+      <code>4506011</code>
+      <description>Exposure-Body Fluid Contact with Eye</description>
+    </choice>
+    <choice>
+      <code>4506013</code>
+      <description>Exposure-Body Fluid Contact with Intact Skin</description>
+    </choice>
+    <choice>
+      <code>4506015</code>
+      <description>Exposure-Body Fluid Contact with Mucosal Surface</description>
+    </choice>
+    <choice>
+      <code>4506017</code>
+      <description>Exposure-Needle Stick with Body Fluid Injection</description>
+    </choice>
+    <choice>
+      <code>4506019</code>
+      <description>Exposure-Needle Stick without Body Fluid Injection</description>
+    </choice>
+    <choice>
+      <code>4506021</code>
+      <description>Exposure-Toxin/Chemical/Hazmat</description>
+    </choice>
+    <choice>
+      <code>4506023</code>
+      <description>Injury-Lifting/Back/Musculoskeletal</description>
+    </choice>
+    <choice>
+      <code>4506025</code>
+      <description>Injury-Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4506027</code>
+      <description>None</description>
+    </choice>
+    <choice>
+      <code>4506029</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
 <element number="eOther.07" minOccurs="0" maxOccurs="M" dataType="SuspectedIntentionalOrUnintentionalDisaster" isNillable="No">
@@ -301,64 +301,64 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4507001</code>
-           <description>Biologic Agent</description>
-        </choice>
-        <choice>
-           <code>4507003</code>
-           <description>Building Failure</description>
-        </choice>
-        <choice>
-           <code>4507005</code>
-           <description>Chemical Agent</description>
-        </choice>
-        <choice>
-           <code>4507007</code>
-           <description>Explosive Device</description>
-        </choice>
-        <choice>
-           <code>4507009</code>
-           <description>Fire</description>
-        </choice>
-        <choice>
-           <code>4507011</code>
-           <description>Hostage Event</description>
-        </choice>
-        <choice>
-           <code>4507013</code>
-           <description>Mass Gathering</description>
-        </choice>
-        <choice>
-           <code>4507015</code>
-           <description>Mass Illness</description>
-        </choice>
-        <choice>
-           <code>4507017</code>
-           <description>Nuclear Agent</description>
-        </choice>
-        <choice>
-           <code>4507019</code>
-           <description>Radioactive Device</description>
-        </choice>
-        <choice>
-           <code>4507021</code>
-           <description>Secondary Destructive Device</description>
-        </choice>
-        <choice>
-           <code>4507023</code>
-           <description>Shooting/Sniper</description>
-        </choice>
-        <choice>
-           <code>4507025</code>
-           <description>Vehicular</description>
-        </choice>
-        <choice>
-           <code>4507027</code>
-           <description>Weather</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4507001</code>
+      <description>Biologic Agent</description>
+    </choice>
+    <choice>
+      <code>4507003</code>
+      <description>Building Failure</description>
+    </choice>
+    <choice>
+      <code>4507005</code>
+      <description>Chemical Agent</description>
+    </choice>
+    <choice>
+      <code>4507007</code>
+      <description>Explosive Device</description>
+    </choice>
+    <choice>
+      <code>4507009</code>
+      <description>Fire</description>
+    </choice>
+    <choice>
+      <code>4507011</code>
+      <description>Hostage Event</description>
+    </choice>
+    <choice>
+      <code>4507013</code>
+      <description>Mass Gathering</description>
+    </choice>
+    <choice>
+      <code>4507015</code>
+      <description>Mass Illness</description>
+    </choice>
+    <choice>
+      <code>4507017</code>
+      <description>Nuclear Agent</description>
+    </choice>
+    <choice>
+      <code>4507019</code>
+      <description>Radioactive Device</description>
+    </choice>
+    <choice>
+      <code>4507021</code>
+      <description>Secondary Destructive Device</description>
+    </choice>
+    <choice>
+      <code>4507023</code>
+      <description>Shooting/Sniper</description>
+    </choice>
+    <choice>
+      <code>4507025</code>
+      <description>Vehicular</description>
+    </choice>
+    <choice>
+      <code>4507027</code>
+      <description>Weather</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.08" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Crew Member Completing this Report</name>
@@ -372,17 +372,17 @@
 <v3Comment>If the EMS Professional has a specific ID associated with two states, the ID used would typically be based on the EMS Agencies state license.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>15</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>15</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -402,60 +402,60 @@
 <v3Comment>Added to allow an improved implementation of electronic healthcare records.</v3Comment>
 <v3Changes>Added to allow an improved implementation of electronic healthcare records.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4509001</code>
-           <description>Audio Recording</description>
-        </choice>
-        <choice>
-           <code>4509003</code>
-           <description>Billing Information</description>
-        </choice>
-        <choice>
-           <code>4509005</code>
-           <description>Diagnostic Image (CT, X-ray, US, etc)</description>
-        </choice>
-        <choice>
-           <code>4509007</code>
-           <description>DNR/Living Will</description>
-        </choice>
-        <choice>
-           <code>4509009</code>
-           <description>ECG/Lab Results</description>
-        </choice>
-        <choice>
-           <code>4509011</code>
-           <description>Guardianship/Power of Attorney</description>
-        </choice>
-        <choice>
-           <code>4509013</code>
-           <description>Healthcare Record</description>
-        </choice>
-        <choice>
-           <code>4509015</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4509017</code>
-           <description>Patient Identification</description>
-        </choice>
-        <choice>
-           <code>4509019</code>
-           <description>Patient Refusal Sheet</description>
-        </choice>
-        <choice>
-           <code>4509021</code>
-           <description>Picture/Graphic</description>
-        </choice>
-        <choice>
-           <code>4509023</code>
-           <description>Sound Recording</description>
-        </choice>
-        <choice>
-           <code>4509025</code>
-           <description>Video/Movie</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4509001</code>
+      <description>Audio Recording</description>
+    </choice>
+    <choice>
+      <code>4509003</code>
+      <description>Billing Information</description>
+    </choice>
+    <choice>
+      <code>4509005</code>
+      <description>Diagnostic Image (CT, X-ray, US, etc)</description>
+    </choice>
+    <choice>
+      <code>4509007</code>
+      <description>DNR/Living Will</description>
+    </choice>
+    <choice>
+      <code>4509009</code>
+      <description>ECG/Lab Results</description>
+    </choice>
+    <choice>
+      <code>4509011</code>
+      <description>Guardianship/Power of Attorney</description>
+    </choice>
+    <choice>
+      <code>4509013</code>
+      <description>Healthcare Record</description>
+    </choice>
+    <choice>
+      <code>4509015</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4509017</code>
+      <description>Patient Identification</description>
+    </choice>
+    <choice>
+      <code>4509019</code>
+      <description>Patient Refusal Sheet</description>
+    </choice>
+    <choice>
+      <code>4509021</code>
+      <description>Picture/Graphic</description>
+    </choice>
+    <choice>
+      <code>4509023</code>
+      <description>Sound Recording</description>
+    </choice>
+    <choice>
+      <code>4509025</code>
+      <description>Video/Movie</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.10" minOccurs="0" maxOccurs="1" dataType="GraphicType" isNillable="No">
 <name>File Attachment Type</name>
@@ -469,128 +469,128 @@
 <v3Comment>Provides a mechanism for external records to be associated with the PCR.</v3Comment>
 <v3Changes>Added to allow an improved implementation of electronic healthcare records.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9907001</code>
-           <description>bmp</description>
-        </choice>
-        <choice>
-           <code>9907003</code>
-           <description>cmx</description>
-        </choice>
-        <choice>
-           <code>9907005</code>
-           <description>cod</description>
-        </choice>
-        <choice>
-           <code>9907007</code>
-           <description>doc</description>
-        </choice>
-        <choice>
-           <code>9907009</code>
-           <description>docx</description>
-        </choice>
-        <choice>
-           <code>9907011</code>
-           <description>gif</description>
-        </choice>
-        <choice>
-           <code>9907013</code>
-           <description>ico</description>
-        </choice>
-        <choice>
-           <code>9907015</code>
-           <description>ief</description>
-        </choice>
-        <choice>
-           <code>9907017</code>
-           <description>jfif</description>
-        </choice>
-        <choice>
-           <code>9907019</code>
-           <description>jpeg</description>
-        </choice>
-        <choice>
-           <code>9907021</code>
-           <description>jpe</description>
-        </choice>
-        <choice>
-           <code>9907023</code>
-           <description>jpg</description>
-        </choice>
-        <choice>
-           <code>9907025</code>
-           <description>mht</description>
-        </choice>
-        <choice>
-           <code>9907027</code>
-           <description>mic</description>
-        </choice>
-        <choice>
-           <code>9907029</code>
-           <description>mhtml</description>
-        </choice>
-        <choice>
-           <code>9907031</code>
-           <description>nws</description>
-        </choice>
-        <choice>
-           <code>9907033</code>
-           <description>pbm</description>
-        </choice>
-        <choice>
-           <code>9907035</code>
-           <description>pdf</description>
-        </choice>
-        <choice>
-           <code>9907037</code>
-           <description>pgm</description>
-        </choice>
-        <choice>
-           <code>9907039</code>
-           <description>png</description>
-        </choice>
-        <choice>
-           <code>9907041</code>
-           <description>pnm</description>
-        </choice>
-        <choice>
-           <code>9907043</code>
-           <description>ppm</description>
-        </choice>
-        <choice>
-           <code>9907045</code>
-           <description>ras</description>
-        </choice>
-        <choice>
-           <code>9907047</code>
-           <description>rgb</description>
-        </choice>
-        <choice>
-           <code>9907049</code>
-           <description>svg</description>
-        </choice>
-        <choice>
-           <code>9907051</code>
-           <description>tif</description>
-        </choice>
-        <choice>
-           <code>9907053</code>
-           <description>tiff</description>
-        </choice>
-        <choice>
-           <code>9907055</code>
-           <description>xbm</description>
-        </choice>
-        <choice>
-           <code>9907057</code>
-           <description>xpm</description>
-        </choice>
-        <choice>
-           <code>9907059</code>
-           <description>xwd</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9907001</code>
+      <description>bmp</description>
+    </choice>
+    <choice>
+      <code>9907003</code>
+      <description>cmx</description>
+    </choice>
+    <choice>
+      <code>9907005</code>
+      <description>cod</description>
+    </choice>
+    <choice>
+      <code>9907007</code>
+      <description>doc</description>
+    </choice>
+    <choice>
+      <code>9907009</code>
+      <description>docx</description>
+    </choice>
+    <choice>
+      <code>9907011</code>
+      <description>gif</description>
+    </choice>
+    <choice>
+      <code>9907013</code>
+      <description>ico</description>
+    </choice>
+    <choice>
+      <code>9907015</code>
+      <description>ief</description>
+    </choice>
+    <choice>
+      <code>9907017</code>
+      <description>jfif</description>
+    </choice>
+    <choice>
+      <code>9907019</code>
+      <description>jpeg</description>
+    </choice>
+    <choice>
+      <code>9907021</code>
+      <description>jpe</description>
+    </choice>
+    <choice>
+      <code>9907023</code>
+      <description>jpg</description>
+    </choice>
+    <choice>
+      <code>9907025</code>
+      <description>mht</description>
+    </choice>
+    <choice>
+      <code>9907027</code>
+      <description>mic</description>
+    </choice>
+    <choice>
+      <code>9907029</code>
+      <description>mhtml</description>
+    </choice>
+    <choice>
+      <code>9907031</code>
+      <description>nws</description>
+    </choice>
+    <choice>
+      <code>9907033</code>
+      <description>pbm</description>
+    </choice>
+    <choice>
+      <code>9907035</code>
+      <description>pdf</description>
+    </choice>
+    <choice>
+      <code>9907037</code>
+      <description>pgm</description>
+    </choice>
+    <choice>
+      <code>9907039</code>
+      <description>png</description>
+    </choice>
+    <choice>
+      <code>9907041</code>
+      <description>pnm</description>
+    </choice>
+    <choice>
+      <code>9907043</code>
+      <description>ppm</description>
+    </choice>
+    <choice>
+      <code>9907045</code>
+      <description>ras</description>
+    </choice>
+    <choice>
+      <code>9907047</code>
+      <description>rgb</description>
+    </choice>
+    <choice>
+      <code>9907049</code>
+      <description>svg</description>
+    </choice>
+    <choice>
+      <code>9907051</code>
+      <description>tif</description>
+    </choice>
+    <choice>
+      <code>9907053</code>
+      <description>tiff</description>
+    </choice>
+    <choice>
+      <code>9907055</code>
+      <description>xbm</description>
+    </choice>
+    <choice>
+      <code>9907057</code>
+      <description>xpm</description>
+    </choice>
+    <choice>
+      <code>9907059</code>
+      <description>xwd</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.11" minOccurs="0" maxOccurs="1" isNillable="No">
 <name>File Attachment Image</name>
@@ -604,9 +604,9 @@
 <v3Comment>Associated with eOther.09 (External Electronic Documents) and eOther.10 (File Attachment Type).</v3Comment>
 <v3Changes>Added to allow an improved implementation of electronic healthcare records.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>base64Binary</dataType>
-      </constraints>
+  <constraints>
+    <dataType>base64Binary</dataType>
+  </constraints>
 </restrictions>
 </element></group>
 <group number="eOther.SignatureGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
@@ -622,48 +622,48 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document disposition and billing information.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4512001</code>
-           <description>EMS Crew Member (Other)</description>
-        </choice>
-        <choice>
-           <code>4512003</code>
-           <description>EMS Primary Care Provider (for this event)</description>
-        </choice>
-        <choice>
-           <code>4512005</code>
-           <description>Healthcare Provider</description>
-        </choice>
-        <choice>
-           <code>4512007</code>
-           <description>Medical Director</description>
-        </choice>
-        <choice>
-           <code>4512009</code>
-           <description>Non-Healthcare Provider</description>
-        </choice>
-        <choice>
-           <code>4512011</code>
-           <description>Online Medical Control Healthcare Practitioner</description>
-        </choice>
-        <choice>
-           <code>4512013</code>
-           <description>Other</description>
-        </choice>
-        <choice>
-           <code>4512015</code>
-           <description>Patient</description>
-        </choice>
-        <choice>
-           <code>4512017</code>
-           <description>Patient Representative</description>
-        </choice>
-        <choice>
-           <code>4512019</code>
-           <description>Witness</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4512001</code>
+      <description>EMS Crew Member (Other)</description>
+    </choice>
+    <choice>
+      <code>4512003</code>
+      <description>EMS Primary Care Provider (for this event)</description>
+    </choice>
+    <choice>
+      <code>4512005</code>
+      <description>Healthcare Provider</description>
+    </choice>
+    <choice>
+      <code>4512007</code>
+      <description>Medical Director</description>
+    </choice>
+    <choice>
+      <code>4512009</code>
+      <description>Non-Healthcare Provider</description>
+    </choice>
+    <choice>
+      <code>4512011</code>
+      <description>Online Medical Control Healthcare Practitioner</description>
+    </choice>
+    <choice>
+      <code>4512013</code>
+      <description>Other</description>
+    </choice>
+    <choice>
+      <code>4512015</code>
+      <description>Patient</description>
+    </choice>
+    <choice>
+      <code>4512017</code>
+      <description>Patient Representative</description>
+    </choice>
+    <choice>
+      <code>4512019</code>
+      <description>Witness</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.13" minOccurs="0" maxOccurs="1" dataType="SignatureReason" isNillable="No">
 <name>Signature Reason</name>
@@ -677,17 +677,24 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-      </constraints>
+  <enumerations>
+    <choice>
+      <code>4513001</code>
+      <description>HIPAA acknowledgement/Release</description>
+    </choice>
+    <choice>
+      <code>4513003</code>
+      <description>Permission to Treat</description>
+    </choice>
+    <choice>
+      <code>4513005</code>
+      <description>Release for Billing</description>
+    </choice>
+    <choice>
+      <code>4513007</code>
+      <description>Transfer of Patient Care</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.14" minOccurs="0" maxOccurs="1" dataType="RelationshipSignature" isNillable="No">
 <name>Type Of Patient Representative</name>
@@ -701,112 +708,112 @@
 <v3Comment>Required for Billing.</v3Comment>
 <v3Changes>Added to improve documentation on disposition and billing.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4514001</code>
-           <description>Aunt</description>
-        </choice>
-        <choice>
-           <code>4514003</code>
-           <description>Brother</description>
-        </choice>
-        <choice>
-           <code>4514005</code>
-           <description>Daughter</description>
-        </choice>
-        <choice>
-           <code>4514007</code>
-           <description>Discharge Planner</description>
-        </choice>
-        <choice>
-           <code>4514009</code>
-           <description>Domestic Partner</description>
-        </choice>
-        <choice>
-           <code>4514011</code>
-           <description>Father</description>
-        </choice>
-        <choice>
-           <code>4514013</code>
-           <description>Friend</description>
-        </choice>
-        <choice>
-           <code>4514015</code>
-           <description>Grandfather</description>
-        </choice>
-        <choice>
-           <code>4514017</code>
-           <description>Grandmother</description>
-        </choice>
-        <choice>
-           <code>4514019</code>
-           <description>Guardian</description>
-        </choice>
-        <choice>
-           <code>4514021</code>
-           <description>Husband</description>
-        </choice>
-        <choice>
-           <code>4514023</code>
-           <description>Law Enforcement</description>
-        </choice>
-        <choice>
-           <code>4514025</code>
-           <description>MD/DO</description>
-        </choice>
-        <choice>
-           <code>4514027</code>
-           <description>Mother</description>
-        </choice>
-        <choice>
-           <code>4514029</code>
-           <description>Nurse (RN)</description>
-        </choice>
-        <choice>
-           <code>4514031</code>
-           <description>Nurse Practitioner (NP)</description>
-        </choice>
-        <choice>
-           <code>4514033</code>
-           <description>Other Care Provider (Home health, hospice, etc.)</description>
-        </choice>
-        <choice>
-           <code>4514035</code>
-           <description>Other</description>
-        </choice>
-        <choice>
-           <code>4514037</code>
-           <description>Physician's Assistant (PA)</description>
-        </choice>
-        <choice>
-           <code>4514039</code>
-           <description>Power of Attorney</description>
-        </choice>
-        <choice>
-           <code>4514041</code>
-           <description>Relative (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4514043</code>
-           <description>Self</description>
-        </choice>
-        <choice>
-           <code>4514045</code>
-           <description>Sister</description>
-        </choice>
-        <choice>
-           <code>4514047</code>
-           <description>Son</description>
-        </choice>
-        <choice>
-           <code>4514049</code>
-           <description>Uncle</description>
-        </choice>
-        <choice>
-           <code>4514051</code>
-           <description>Wife</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4514001</code>
+      <description>Aunt</description>
+    </choice>
+    <choice>
+      <code>4514003</code>
+      <description>Brother</description>
+    </choice>
+    <choice>
+      <code>4514005</code>
+      <description>Daughter</description>
+    </choice>
+    <choice>
+      <code>4514007</code>
+      <description>Discharge Planner</description>
+    </choice>
+    <choice>
+      <code>4514009</code>
+      <description>Domestic Partner</description>
+    </choice>
+    <choice>
+      <code>4514011</code>
+      <description>Father</description>
+    </choice>
+    <choice>
+      <code>4514013</code>
+      <description>Friend</description>
+    </choice>
+    <choice>
+      <code>4514015</code>
+      <description>Grandfather</description>
+    </choice>
+    <choice>
+      <code>4514017</code>
+      <description>Grandmother</description>
+    </choice>
+    <choice>
+      <code>4514019</code>
+      <description>Guardian</description>
+    </choice>
+    <choice>
+      <code>4514021</code>
+      <description>Husband</description>
+    </choice>
+    <choice>
+      <code>4514023</code>
+      <description>Law Enforcement</description>
+    </choice>
+    <choice>
+      <code>4514025</code>
+      <description>MD/DO</description>
+    </choice>
+    <choice>
+      <code>4514027</code>
+      <description>Mother</description>
+    </choice>
+    <choice>
+      <code>4514029</code>
+      <description>Nurse (RN)</description>
+    </choice>
+    <choice>
+      <code>4514031</code>
+      <description>Nurse Practitioner (NP)</description>
+    </choice>
+    <choice>
+      <code>4514033</code>
+      <description>Other Care Provider (Home health, hospice, etc.)</description>
+    </choice>
+    <choice>
+      <code>4514035</code>
+      <description>Other</description>
+    </choice>
+    <choice>
+      <code>4514037</code>
+      <description>Physician's Assistant (PA)</description>
+    </choice>
+    <choice>
+      <code>4514039</code>
+      <description>Power of Attorney</description>
+    </choice>
+    <choice>
+      <code>4514041</code>
+      <description>Relative (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4514043</code>
+      <description>Self</description>
+    </choice>
+    <choice>
+      <code>4514045</code>
+      <description>Sister</description>
+    </choice>
+    <choice>
+      <code>4514047</code>
+      <description>Son</description>
+    </choice>
+    <choice>
+      <code>4514049</code>
+      <description>Uncle</description>
+    </choice>
+    <choice>
+      <code>4514051</code>
+      <description>Wife</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.15" minOccurs="0" maxOccurs="1" dataType="SignatureStatus" isNillable="No">
 <name>Signature Status</name>
@@ -820,76 +827,76 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document disposition and billing.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4515001</code>
-           <description>Not Signed - Crew Called out to another call</description>
-        </choice>
-        <choice>
-           <code>4515003</code>
-           <description>Not Signed - Deceased</description>
-        </choice>
-        <choice>
-           <code>4515005</code>
-           <description>Not Signed - Due to Distress Level</description>
-        </choice>
-        <choice>
-           <code>4515007</code>
-           <description>Not Signed - Equipment Failure</description>
-        </choice>
-        <choice>
-           <code>4515009</code>
-           <description>Not Signed - In Law Enforcement Custody</description>
-        </choice>
-        <choice>
-           <code>4515011</code>
-           <description>Not Signed - Language Barrier</description>
-        </choice>
-        <choice>
-           <code>4515013</code>
-           <description>Not Signed - Mental Status/Impaired</description>
-        </choice>
-        <choice>
-           <code>4515015</code>
-           <description>Not Signed - Minor/Child</description>
-        </choice>
-        <choice>
-           <code>4515017</code>
-           <description>Not Signed - Physical Impairment of Extremities</description>
-        </choice>
-        <choice>
-           <code>4515019</code>
-           <description>Not Signed - Refused</description>
-        </choice>
-        <choice>
-           <code>4515021</code>
-           <description>Not Signed - Transferred Care/No Access to Obtain Signature</description>
-        </choice>
-        <choice>
-           <code>4515023</code>
-           <description>Not Signed - Unconscious</description>
-        </choice>
-        <choice>
-           <code>4515025</code>
-           <description>Not Signed -Visually Impaired</description>
-        </choice>
-        <choice>
-           <code>4515027</code>
-           <description>Physical Signature/Paper Copy Obtained</description>
-        </choice>
-        <choice>
-           <code>4515029</code>
-           <description>Refused</description>
-        </choice>
-        <choice>
-           <code>4515031</code>
-           <description>Signed</description>
-        </choice>
-        <choice>
-           <code>4515033</code>
-           <description>Signed-Not Patient</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4515001</code>
+      <description>Not Signed - Crew Called out to another call</description>
+    </choice>
+    <choice>
+      <code>4515003</code>
+      <description>Not Signed - Deceased</description>
+    </choice>
+    <choice>
+      <code>4515005</code>
+      <description>Not Signed - Due to Distress Level</description>
+    </choice>
+    <choice>
+      <code>4515007</code>
+      <description>Not Signed - Equipment Failure</description>
+    </choice>
+    <choice>
+      <code>4515009</code>
+      <description>Not Signed - In Law Enforcement Custody</description>
+    </choice>
+    <choice>
+      <code>4515011</code>
+      <description>Not Signed - Language Barrier</description>
+    </choice>
+    <choice>
+      <code>4515013</code>
+      <description>Not Signed - Mental Status/Impaired</description>
+    </choice>
+    <choice>
+      <code>4515015</code>
+      <description>Not Signed - Minor/Child</description>
+    </choice>
+    <choice>
+      <code>4515017</code>
+      <description>Not Signed - Physical Impairment of Extremities</description>
+    </choice>
+    <choice>
+      <code>4515019</code>
+      <description>Not Signed - Refused</description>
+    </choice>
+    <choice>
+      <code>4515021</code>
+      <description>Not Signed - Transferred Care/No Access to Obtain Signature</description>
+    </choice>
+    <choice>
+      <code>4515023</code>
+      <description>Not Signed - Unconscious</description>
+    </choice>
+    <choice>
+      <code>4515025</code>
+      <description>Not Signed -Visually Impaired</description>
+    </choice>
+    <choice>
+      <code>4515027</code>
+      <description>Physical Signature/Paper Copy Obtained</description>
+    </choice>
+    <choice>
+      <code>4515029</code>
+      <description>Refused</description>
+    </choice>
+    <choice>
+      <code>4515031</code>
+      <description>Signed</description>
+    </choice>
+    <choice>
+      <code>4515033</code>
+      <description>Signed-Not Patient</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eOther.16" minOccurs="0" maxOccurs="1" dataType="FileName" isNillable="No">
 <name>Signature File Name</name>
@@ -903,13 +910,13 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>255</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>255</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eOther.17" minOccurs="0" maxOccurs="1" dataType="GraphicType" isNillable="No">
 <name>Signature File Type</name>
@@ -923,130 +930,130 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9907001</code>
-           <description>bmp</description>
-        </choice>
-        <choice>
-           <code>9907003</code>
-           <description>cmx</description>
-        </choice>
-        <choice>
-           <code>9907005</code>
-           <description>cod</description>
-        </choice>
-        <choice>
-           <code>9907007</code>
-           <description>doc</description>
-        </choice>
-        <choice>
-           <code>9907009</code>
-           <description>docx</description>
-        </choice>
-        <choice>
-           <code>9907011</code>
-           <description>gif</description>
-        </choice>
-        <choice>
-           <code>9907013</code>
-           <description>ico</description>
-        </choice>
-        <choice>
-           <code>9907015</code>
-           <description>ief</description>
-        </choice>
-        <choice>
-           <code>9907017</code>
-           <description>jfif</description>
-        </choice>
-        <choice>
-           <code>9907019</code>
-           <description>jpeg</description>
-        </choice>
-        <choice>
-           <code>9907021</code>
-           <description>jpe</description>
-        </choice>
-        <choice>
-           <code>9907023</code>
-           <description>jpg</description>
-        </choice>
-        <choice>
-           <code>9907025</code>
-           <description>mht</description>
-        </choice>
-        <choice>
-           <code>9907027</code>
-           <description>mic</description>
-        </choice>
-        <choice>
-           <code>9907029</code>
-           <description>mhtml</description>
-        </choice>
-        <choice>
-           <code>9907031</code>
-           <description>nws</description>
-        </choice>
-        <choice>
-           <code>9907033</code>
-           <description>pbm</description>
-        </choice>
-        <choice>
-           <code>9907035</code>
-           <description>pdf</description>
-        </choice>
-        <choice>
-           <code>9907037</code>
-           <description>pgm</description>
-        </choice>
-        <choice>
-           <code>9907039</code>
-           <description>png</description>
-        </choice>
-        <choice>
-           <code>9907041</code>
-           <description>pnm</description>
-        </choice>
-        <choice>
-           <code>9907043</code>
-           <description>ppm</description>
-        </choice>
-        <choice>
-           <code>9907045</code>
-           <description>ras</description>
-        </choice>
-        <choice>
-           <code>9907047</code>
-           <description>rgb</description>
-        </choice>
-        <choice>
-           <code>9907049</code>
-           <description>svg</description>
-        </choice>
-        <choice>
-           <code>9907051</code>
-           <description>tif</description>
-        </choice>
-        <choice>
-           <code>9907053</code>
-           <description>tiff</description>
-        </choice>
-        <choice>
-           <code>9907055</code>
-           <description>xbm</description>
-        </choice>
-        <choice>
-           <code>9907057</code>
-           <description>xpm</description>
-        </choice>
-        <choice>
-           <code>9907059</code>
-           <description>xwd</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9907001</code>
+      <description>bmp</description>
+    </choice>
+    <choice>
+      <code>9907003</code>
+      <description>cmx</description>
+    </choice>
+    <choice>
+      <code>9907005</code>
+      <description>cod</description>
+    </choice>
+    <choice>
+      <code>9907007</code>
+      <description>doc</description>
+    </choice>
+    <choice>
+      <code>9907009</code>
+      <description>docx</description>
+    </choice>
+    <choice>
+      <code>9907011</code>
+      <description>gif</description>
+    </choice>
+    <choice>
+      <code>9907013</code>
+      <description>ico</description>
+    </choice>
+    <choice>
+      <code>9907015</code>
+      <description>ief</description>
+    </choice>
+    <choice>
+      <code>9907017</code>
+      <description>jfif</description>
+    </choice>
+    <choice>
+      <code>9907019</code>
+      <description>jpeg</description>
+    </choice>
+    <choice>
+      <code>9907021</code>
+      <description>jpe</description>
+    </choice>
+    <choice>
+      <code>9907023</code>
+      <description>jpg</description>
+    </choice>
+    <choice>
+      <code>9907025</code>
+      <description>mht</description>
+    </choice>
+    <choice>
+      <code>9907027</code>
+      <description>mic</description>
+    </choice>
+    <choice>
+      <code>9907029</code>
+      <description>mhtml</description>
+    </choice>
+    <choice>
+      <code>9907031</code>
+      <description>nws</description>
+    </choice>
+    <choice>
+      <code>9907033</code>
+      <description>pbm</description>
+    </choice>
+    <choice>
+      <code>9907035</code>
+      <description>pdf</description>
+    </choice>
+    <choice>
+      <code>9907037</code>
+      <description>pgm</description>
+    </choice>
+    <choice>
+      <code>9907039</code>
+      <description>png</description>
+    </choice>
+    <choice>
+      <code>9907041</code>
+      <description>pnm</description>
+    </choice>
+    <choice>
+      <code>9907043</code>
+      <description>ppm</description>
+    </choice>
+    <choice>
+      <code>9907045</code>
+      <description>ras</description>
+    </choice>
+    <choice>
+      <code>9907047</code>
+      <description>rgb</description>
+    </choice>
+    <choice>
+      <code>9907049</code>
+      <description>svg</description>
+    </choice>
+    <choice>
+      <code>9907051</code>
+      <description>tif</description>
+    </choice>
+    <choice>
+      <code>9907053</code>
+      <description>tiff</description>
+    </choice>
+    <choice>
+      <code>9907055</code>
+      <description>xbm</description>
+    </choice>
+    <choice>
+      <code>9907057</code>
+      <description>xpm</description>
+    </choice>
+    <choice>
+      <code>9907059</code>
+      <description>xwd</description>
+    </choice>
+  </enumerations>
 </restrictions>
-</element><element number="eOther.18" minOccurs="0" maxOccurs="1" dataType="base64Binary" isNillable="No">
+</element><element number="eOther.18" minOccurs="0" maxOccurs="1" dataType="Graphic" isNillable="No">
 <name>Signature Graphic</name>
 <national>No</national>
 <state>No</state>
@@ -1058,6 +1065,9 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document disposition and billing.</v3Changes>
 <restrictions>
+  <constraints>
+    <dataType>base64Binary</dataType>
+  </constraints>
 </restrictions>
 </element><element number="eOther.19" minOccurs="0" maxOccurs="1" dataType="DateTimeType" isNillable="No">
 <name>Date/Time of Signature</name>
@@ -1071,7 +1081,7 @@
 <v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
 <table border="1px" cellpadding="3px" cellspacing="0">
-  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>
   <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
   <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
   <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
@@ -1098,17 +1108,17 @@
       <patterns>
         <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
      </patterns>
-      <constraints>
-        <dataType>dateTime</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>dateTime</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eOther.20" minOccurs="0" maxOccurs="1" dataType="PersonLastName" isNillable="No">
 <name>Signature Last Name</name>
@@ -1122,17 +1132,17 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document disposition and billing.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>50</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eOther.21" minOccurs="0" maxOccurs="1" dataType="PersonFirstName" isNillable="No">
 <name>Signature First Name</name>
@@ -1146,17 +1156,17 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document disposition and billing.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>35</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element></group>
 </section>

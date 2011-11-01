@@ -8,16 +8,17 @@
 <usage>Mandatory</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Associated with the state (dAgency.04 - EMS Agency State).  Since multiple states can exist, this information is multiple entry with the other items in the section associated with each of the states.
-										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Comment>Associated with the state (dAgency.01 - EMS Agency State). 
+										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a>
+										<br/><br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element>

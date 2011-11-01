@@ -1,92 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
-        <xs:include schemaLocation="commonTypes_v3.xsd"/>
-        <xs:complexType name="eState">
-                <xs:sequence>
-                        <xs:element name="eState.CustomGroup" id="eState.GroupDemographicData" maxOccurs="unbounded">
-                                <xs:annotation>
-                                        <xs:documentation>Group Tag to hold State Demographic Custom Data details </xs:documentation>
-                                </xs:annotation>
-                                <xs:complexType>
-                                        <xs:sequence>
-                                                <xs:element name="eState.01">
-                                                        <xs:annotation>
-                                                                <xs:documentation>State Required Demographic Data Elements</xs:documentation>
-                                                        </xs:annotation>
-                                                        <xs:complexType>
-                                                                <xs:simpleContent>
-                                                                        <xs:extension base="StateRequiredDemographic">
-                                                                                <xs:attribute name="TS" type="TimeStampType" use="optional"/>
-                                                                        </xs:extension>
-                                                                </xs:simpleContent>
-                                                        </xs:complexType>
-                                                </xs:element>
-                                                <xs:element name="eState.02" minOccurs="0">
-                                                        <xs:annotation>
-                                                                <xs:documentation>State Demographic Custom Data Element Title</xs:documentation>
-                                                        </xs:annotation>
-                                                        <xs:complexType>
-                                                                <xs:simpleContent>
-                                                                        <xs:extension base="StateDemographicCustom">
-                                                                                <xs:attribute name="TS" type="TimeStampType" use="optional"/>
-                                                                        </xs:extension>
-                                                                </xs:simpleContent>
-                                                        </xs:complexType>
-                                                </xs:element>
-                                                <xs:element name="eState.03" type="StateDemographicCustomPotentialValues" minOccurs="0" maxOccurs="unbounded">
-                                                        <xs:annotation>
-                                                                <xs:documentation>State Demographic Custom Data Element Potential Values </xs:documentation>
-                                                        </xs:annotation>
-                                                </xs:element>
-                                                <xs:element name="eState.04" type="StateDemographicMultiplicity" minOccurs="0">
-                                                        <xs:annotation>
-                                                                <xs:documentation>State Demographic Custom Data Element Multiplicity </xs:documentation>
-                                                        </xs:annotation>
-                                                </xs:element>
-                                                <xs:element name="eState.05" type="StateDemographicUsage" minOccurs="0">
-                                                        <xs:annotation>
-                                                                <xs:documentation>State Demographic Custom Data Element Usage</xs:documentation>
-                                                        </xs:annotation>
-                                                </xs:element>
-                                        </xs:sequence>
-                                </xs:complexType>
-                        </xs:element>
-                </xs:sequence>
-                
-												<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-												<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
-        </xs:complexType>
-        <xs:simpleType name="StateDemographicCustom">
-                <xs:annotation>
-                        <xs:documentation>State Demographic Custom Data Element Title</xs:documentation>
-                </xs:annotation>
-                <xs:restriction base="xs:string">
-                        <xs:minLength value="1"/>
-                        <xs:maxLength value="100"/>
-                </xs:restriction>
-        </xs:simpleType>
-        <xs:simpleType name="StateDemographicCustomPotentialValues">
-                <xs:annotation>
-                        <xs:documentation>State Demographic Custom Data Element Title</xs:documentation>
-                </xs:annotation>
-                <xs:restriction base="xs:string">
-                        <xs:minLength value="1"/>
-                        <xs:maxLength value="100"/>
-                </xs:restriction>
-        </xs:simpleType>
-        <xs:simpleType name="StateDemographicMultiplicity">
-                <xs:annotation>
-                        <xs:documentation>State Demographic Custom Data Element Title</xs:documentation>
-                </xs:annotation>
-                <xs:restriction base="xs:boolean"/>
-        </xs:simpleType>
-        <xs:simpleType name="StateDemographicUsage">
-                <xs:annotation>
-                        <xs:documentation>State Demographic Custom Data Element Usage</xs:documentation>
-                </xs:annotation>
-                <xs:restriction base="xs:string">
-                        <xs:minLength value="1"/>
-                        <xs:maxLength value="1"/>
-                </xs:restriction>
-        </xs:simpleType>
+	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+	<xs:complexType name="eState">
+		<xs:sequence>
+			<xs:element name="eState.01" minOccurs="0" id="eState.StateRequiredElement" maxOccurs="unbounded">
+				<xs:annotation><xs:documentation>
+													<nemsisTacDoc>
+										<number>eState.01</number>
+										<name>State Required Element</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>Indicates which elements are required by the state</definition>
+										<v2Number></v2Number>
+										<usage>Optional</usage>
+										<comment></comment>
+										<v3Changes/>
+									</nemsisTacDoc></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="StateRequiredElement">
+							<xs:attribute name="TIMESTAMP" type="TimeStampType" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="CurrentStatus" type="Status" use="required"/>
+		<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
+	</xs:complexType>
 </xs:schema>

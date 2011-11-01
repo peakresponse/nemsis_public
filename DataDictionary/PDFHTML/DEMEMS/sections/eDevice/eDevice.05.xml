@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eDevice.05" minOccurs="0" maxOccurs="1" dataType="WaveformGraphic" isNillable="No">
-<name>Waveform Graphic</name>
+<name>Medical Device Waveform Graphic</name>
 <national>No</national>
 <state>No</state>
 <definition>The graphic waveform file.</definition>
@@ -16,8 +16,8 @@
 <performanceMeasure>STEMI</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>base64Binary</dataType>
-      </constraints>
+  <constraints>
+    <dataType>base64Binary</dataType>
+  </constraints>
 </restrictions>
 </element>

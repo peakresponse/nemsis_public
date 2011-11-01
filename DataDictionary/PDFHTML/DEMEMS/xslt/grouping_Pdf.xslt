@@ -38,10 +38,33 @@
     </style>
 </head>
 <body>  
-  
     <table style="border:solid 1px;" width="630px" cellpadding="2px" cellspacing="0">
       <tr>        
         <td class="legendTitle" width="80px">Legend</td> 
+        <td>
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tr>               
+              <td class="legend" align="right" width="80px">Dataset Level:</td> 
+              <td width="2px"/>
+              <td width="300px">
+                <table cellpadding="0" cellspacing="0" border="0" width="300px">
+                  <tr>                    
+                    <td style="font-size:11px;background:#E10000;border:solid 0px;" width="11px" align="center" height="18px;" >N</td>
+                    <td style="width:2px;"/>    
+                    <td style="font-size:11px;" width="50px">National</td>
+                    <td style="width:5px;"/>    
+                    <td style="font-size:11px;background:#FBC723;border:solid 0px;" width="11px" align="center" height="18px;" >S</td>
+                    <td style="width:2px;"/>    
+                    <td style="font-size:11px;">State</td>  
+                  </tr>
+                </table>
+              </td>
+           </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td class="legendTitle" width="80px"></td> 
         <td>
           <table cellpadding="0" cellspacing="0" border="0">         
            <tr>
@@ -58,28 +81,6 @@
               <td style="font-size:11px;background:#FFFFBB;border:solid 1px;" width="5px;" height="16px;" align="center"></td>
               <td style="width:2px;"/>    
               <td class="legendKey"><B>N</B> = Not Values, <B>P</B> = Pertinent Negatives , <B>L</B> = Nillable, and/or <B>C</B> = Correlation ID</td>     
-            </tr>      
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td class="legendTitle" width="80px"></td> 
-        <td>
-          <table cellpadding="0" cellspacing="0" border="0">         
-           <tr>
-              <td class="legend" align="right" width="80px">Usage:</td>   
-              <td width="2px"/>
-              <td style="font-size:11px;background:#BBBBBB;border:solid 1px;" width="5px;" height="16px;" align="center"></td>
-              <td style="width:2px;"/>    
-              <td class="legendKey"><B>M</B> = Mandatory , <B>R</B> = Required , or <B>O</B> = Optional</td>               
-           </tr>
-           <tr><td height="2px"/></tr>
-           <tr>
-              <td class="legend" align="right" width="80px">Attributes:</td>   
-              <td width="2px"/>
-              <td style="font-size:11px;background:#FFFFBB;border:solid 1px;" width="5px;" height="16px;" align="center"></td>
-              <td style="width:2px;"/>    
-              <td class="legendKey"><B>N</B> = Not Values, <B>P</B> = Pertinent Negatives , and/or <B>L</B> = Nillable</td>      
             </tr>      
           </table>
         </td>
@@ -165,7 +166,10 @@
           </xsl:when></xsl:choose>       
           <xsl:choose><xsl:when test="usage/text()='Required'">
             <div class="optional">R</div>
-          </xsl:when></xsl:choose>     
+          </xsl:when></xsl:choose>        
+          <xsl:choose><xsl:when test="usage/text()='Recommended'">
+            <div class="optional">E</div>
+          </xsl:when></xsl:choose>   
           <xsl:choose><xsl:when test="usage/text()='Optional'">
             <div class="optional">O</div>
           </xsl:when></xsl:choose>  

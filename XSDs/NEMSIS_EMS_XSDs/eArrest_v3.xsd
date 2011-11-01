@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eArrest" id="eArrest.Arrest">
 		<xs:sequence>
@@ -17,7 +17,7 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -34,7 +34,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.02" nillable="true">
+			<xs:element name="eArrest.02" id="eArrest.CardiacArrestEtiology" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -48,7 +48,7 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Following the UTSTEIN standard of cardiac arrest etiology the values were determined based on the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports".   http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria.&lt;br/>&lt;br/>Following the UTSTEIN standard of cardiac arrest etiology the values were determined based on the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports".   http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -65,7 +65,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.03" nillable="true" maxOccurs="unbounded">
+			<xs:element name="eArrest.03" nillable="true" id="eArrest.ResuscitationAttemptedByEMS" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -79,7 +79,7 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -111,7 +111,7 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -143,7 +143,7 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -168,13 +168,15 @@
 							<name>Who Provided CPR Prior to EMS Arrival</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>Documentation of who performed CPR prior to EMS arrival.</definition>
+							<definition>Documentation of who performed CPR prior to this EMS unit's arrival.</definition>
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Associated with eArrest.05 (CPR Care Provided Prior to EMS Arrival) but only required if CPR was provided prior to EMS arrival.</comment>
+							<comment>Associated with eArrest.05 (CPR Care Provided Prior to EMS Arrival) but only required if CPR was provided prior to EMS arrival.&lt;br/>&lt;br/>
+This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385							
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -201,7 +203,7 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -226,13 +228,14 @@
 							<name>Who Used AED Prior to EMS Arrival</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>Documentation of who used the AED prior to EMS arrival</definition>
+							<definition>Documentation of who performed CPR prior to this EMS unit's arrival.</definition>
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Associated with eArrest.07 (AED Use Prior to EMS Arrival).</comment>
+							<comment>Associated with eArrest.07 (AED Use Prior to EMS Arrival).
+							&lt;br/>&lt;br/>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -322,7 +325,9 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Added term "Arrest" to title to clarify this is the arrest rhythm&lt;br/>Values "Other" and "Normal Sinus Rhythm" removed since they are not Cardiac Arrest Rhythms.&lt;br/>Value "Ventricular Tachycardia" has been changed to "Ventricular Tachycardia-Pulseless".</comment>
+							<comment>Added term "Arrest" to title to clarify this is the arrest rhythm&lt;br/>Values "Other" and "Normal Sinus Rhythm" removed since they are not Cardiac Arrest Rhythms.&lt;br/>Value "Ventricular Tachycardia" has been changed to "Ventricular Tachycardia-Pulseless".
+							&lt;br/>&lt;br/>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385							
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -347,13 +352,16 @@
 							<name>Any Return of Spontaneous Circulation</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication whether or not there was any return of spontaneous circulation</definition>
+							<definition>Indication whether or not there was any return of spontaneous circulation.</definition>
 							<v2Number>E11_06</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
+							<comment>
+							This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385							
+&lt;br/>&lt;br/>This element needs to be documented when the patient has been in cardiac or respiratory arrest and transported to a healthcare facility to show the change in patient condition, if any. The cardiac rhythm list has been updated to be the same for eVitals.03 (Cardiac Rhythm Electrocardiography (ECG)). They are using the common type: CardiacRhythm. ST segment changes consistent (or not consistent) with STEMI criteria should be documented as Ischemia in the appropriate location							
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -386,13 +394,16 @@
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>1 = Good Cerebral Performance:  Conscious, Alert, able to work and lead a normal life.&lt;br/>&lt;br/>
-2 = Moderate Cerebral Disability:  Conscious and able to function independently (dress, travel, prepare food) may have hemiplegia,
-seizures, or permanent memory or mental changes.&lt;br/>&lt;br/>
-3 = Severe Cerebral Disability:  Conscious, dependent on others for daily support, functions only in an institution or at home with
-exceptional family effort.&lt;br/>&lt;br/>
-4 = Coma or vegetative state: any degree of coma without the presence of all brain death criteria. Unawareness, even if appears awake
-(vegetative state) without interaction with environment; may have spontaneous eye opening and sleep/awake cycles. Cerebral
-unresponsiveness.</comment>
+							2 = Moderate Cerebral Disability:  Conscious and able to function independently (dress, travel, prepare food) may have hemiplegia,
+							seizures, or permanent memory or mental changes.&lt;br/>&lt;br/>
+							3 = Severe Cerebral Disability:  Conscious, dependent on others for daily support, functions only in an institution or at home with
+							exceptional family effort.&lt;br/>&lt;br/>
+							4 = Coma or vegetative state: any degree of coma without the presence of all brain death criteria. Unawareness, even if appears awake
+							(vegetative state) without interaction with environment; may have spontaneous eye opening and sleep/awake cycles. Cerebral
+							unresponsiveness.
+							&lt;br/>&lt;br/>
+							This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385								
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -412,11 +423,13 @@ unresponsiveness.</comment>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Changed from estimated time prior to EMS arrival to date/time of cardiac arrest.
+							<comment>
+							This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385														
+							&lt;br/>&lt;br/>Changed from estimated time prior to EMS arrival to date/time of cardiac arrest.
 							  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -469,10 +482,10 @@ unresponsiveness.</comment>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -555,7 +568,8 @@ unresponsiveness.</comment>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>This element needs to be documented when the patient has been in cardiac or respiratory arrest and transported to a healthcare facility to show the change in patient condition, if any. The cardiac rhythm list has been updated to be the same for eVitals.03 (Cardiac Rhythm and Electrocardiography).  They are using the comomn type:  CardaicRhythm.</comment>
+							<comment>This element needs to be documented when the patient has been in cardiac or respiratory arrest and transported to a healthcare facility to show the change in patient condition, if any. The cardiac rhythm list has been updated to be the same for eVitals.03 (Cardiac Rhythm Electrocardiography (ECG)). They are using the common type: CardiacRhythm. ST segment changes consistent (or not consistent) with STEMI criteria should be documented as Ischemia in the appropriate location						
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -573,7 +587,7 @@ unresponsiveness.</comment>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.18" id="eArrest.EndofEMSCardiacArrestEvent" nillable="true" >
+			<xs:element name="eArrest.18" nillable="true" id="eArrest.EndofEMSCardiacArrestEvent">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -587,7 +601,7 @@ unresponsiveness.</comment>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
+							<comment>A resuscitation event is deemed to have ended when death is declared or spontaneous circulation is restored and sustained for 20 minutes or longer.&lt;br/>&lt;br/>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes>Added to better identify the outcome of EMS cardiac arrest patients.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -894,10 +908,15 @@ unresponsiveness.</comment>
 			</xs:enumeration>
 			<xs:enumeration value="3016007">
 				<xs:annotation>
-					<xs:documentation>Protocol/Policy Requirements Completed</xs:documentation>
+					<xs:documentation>Physically Unable to Perform</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3016009">
+				<xs:annotation>
+					<xs:documentation>Protocol/Policy Requirements Completed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3016011">
 				<xs:annotation>
 					<xs:documentation>Return of Spontaneous Circulation (pulse or BP noted)</xs:documentation>
 				</xs:annotation>
@@ -995,7 +1014,7 @@ unresponsiveness.</comment>
 			</xs:enumeration>
 			<xs:enumeration value="3006009">
 				<xs:annotation>
-					<xs:documentation>Other EMS Professional</xs:documentation>
+					<xs:documentation>Other EMS Professional (not part of dispatched response)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1027,7 +1046,7 @@ unresponsiveness.</comment>
 			</xs:enumeration>
 			<xs:enumeration value="3008009">
 				<xs:annotation>
-					<xs:documentation>Other EMS Professional</xs:documentation>
+					<xs:documentation>Other EMS Professional (not part of dispatched response)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

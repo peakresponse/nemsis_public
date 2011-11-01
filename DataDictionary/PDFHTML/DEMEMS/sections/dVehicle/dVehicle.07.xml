@@ -11,16 +11,16 @@
 <v3Comment>Indicate the number of each of the following EMS Personnel levels on the crew. Associated with each Certification/Licensure Level in dVehicle.04 (Crew State Certification/Licensure Levels).</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>12</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>positiveInteger</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>12</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element>

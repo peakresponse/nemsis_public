@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eOther.18" minOccurs="0" maxOccurs="1" dataType="base64Binary" isNillable="No">
+<element number="eOther.18" minOccurs="0" maxOccurs="1" dataType="Graphic" isNillable="No">
 <name>Signature Graphic</name>
 <national>No</national>
 <state>No</state>
@@ -11,5 +11,8 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document disposition and billing.</v3Changes>
 <restrictions>
+  <constraints>
+    <dataType>base64Binary</dataType>
+  </constraints>
 </restrictions>
 </element>

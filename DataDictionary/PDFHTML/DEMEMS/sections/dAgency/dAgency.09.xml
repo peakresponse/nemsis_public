@@ -20,39 +20,43 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9920001</code>
-           <description>911 Response (Scene) with Transport Capability</description>
-        </choice>
-        <choice>
-           <code>9920003</code>
-           <description>911 Response (Scene) without Transport Capability</description>
-        </choice>
-        <choice>
-           <code>9920005</code>
-           <description>Air Medical</description>
-        </choice>
-        <choice>
-           <code>9920007</code>
-           <description>Hazmat</description>
-        </choice>
-        <choice>
-           <code>9920009</code>
-           <description>Medical Transport (Convalescent)</description>
-        </choice>
-        <choice>
-           <code>9920011</code>
-           <description>Paramedic Intercept</description>
-        </choice>
-        <choice>
-           <code>9920013</code>
-           <description>Rescue</description>
-        </choice>
-        <choice>
-           <code>9920015</code>
-           <description>Specialty Care Transport</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9920001</code>
+      <description>911 Response (Scene) with Transport Capability</description>
+    </choice>
+    <choice>
+      <code>9920003</code>
+      <description>911 Response (Scene) without Transport Capability</description>
+    </choice>
+    <choice>
+      <code>9920005</code>
+      <description>Air Medical</description>
+    </choice>
+    <choice>
+      <code>9920007</code>
+      <description>ALS Intercept</description>
+    </choice>
+    <choice>
+      <code>9920009</code>
+      <description>Critical Care Ground Support</description>
+    </choice>
+    <choice>
+      <code>9920011</code>
+      <description>Hazmat</description>
+    </choice>
+    <choice>
+      <code>9920013</code>
+      <description>Medical Transport (Convalescent, Interfacility Transfer Hospital and Nursing Home)</description>
+    </choice>
+    <choice>
+      <code>9920015</code>
+      <description>Rescue</description>
+    </choice>
+    <choice>
+      <code>9920017</code>
+      <description>Community Paramedicine</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element>

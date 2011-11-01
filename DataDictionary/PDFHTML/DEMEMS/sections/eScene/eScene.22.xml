@@ -1,35 +1,22 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eScene.22" minOccurs="0" maxOccurs="1" dataType="CensusTracts" isNillable="No">
-<name>Incident Census Tract</name>
+<element number="eScene.22" minOccurs="0" maxOccurs="1" dataType="ANSICountryCode" isNillable="No">
+<name>Incident Country</name>
 <national>No</national>
 <state>No</state>
-<definition>The census tract in which the incident occurred.</definition>
+<definition>The country of the incident location.</definition>
 <v2Number></v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Census Tract Data Website (files and descriptions): <a>http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html</a></v3Comment>
-<v3Changes>Added to improve the ability to use census and other demographic information within EMS research.</v3Changes>
-<performanceMeasuresGroup>
-<performanceMeasure>Airway</performanceMeasure>
-<performanceMeasure>Cardiac Arrest</performanceMeasure>
-<performanceMeasure>Pediatric</performanceMeasure>
-<performanceMeasure>Response</performanceMeasure>
-<performanceMeasure>STEMI</performanceMeasure>
-<performanceMeasure>Stroke</performanceMeasure>
-<performanceMeasure>Trauma</performanceMeasure>
-</performanceMeasuresGroup>
+<v3Comment>Based on the ISO Country Code.<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
+<v3Changes>Added for international compatibility.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>15</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element>

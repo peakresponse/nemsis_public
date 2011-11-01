@@ -97,7 +97,7 @@
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDispatch.04</number>
-							<name>Computer Aided Dispatch (CAD) Name or ID</name>
+							<name>Dispatch Center Name or ID</name>
 							<national>No</national>
 							<state>No</state>
 							<definition>The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable.</definition>
@@ -109,203 +109,89 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
+			<xs:element name="eDispatch.05" type="DispatchPriority" id="eDispatch.DispatchPriorityPatientAcuity" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eDispatch.05</number>
+							<name>Dispatch Priority (Patient Acuity)</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The actual, apparent, or potential acuity of the patient’s condition as determined through information obtained during the EMD process.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<comment>
+The use of priority and acuity values vary by EMS agency.  Some systems may utilize fewer than four priority levels and some more.  The use of four priority levels is to capture the majority and allow for the inclusion of the NHTSA National EMS Core Content definitions for patient acuity, specifically: Critical, Emergent, and Lower Acuity.
+&lt;br/>&lt;br/>
+For EMS Agencies and CAD / EMD systems utilizing Alpha-Echo, Omega levels for determining the priority level for dispatch of the EMS unit, the recommended mapping is:
+&lt;br/>&lt;br/>
+&lt;table cellpadding="2px" cellspacing="0px" border="1px">
+&lt;tr>
+&lt;td>Echo = Priority 1&lt;/td>&lt;td>Charlie = Priority 2&lt;/td>&lt;td>Alpha = Priority 3&lt;/td>
+&lt;/tr>&lt;tr>
+&lt;td>Delta = Priority 1&lt;/td>&lt;td>Bravo = Priority 2&lt;/td>&lt;td>Omega = Priority 4&lt;/td>
+&lt;/tr>&lt;/table>
+&lt;br/>
+&lt;br/>Priority 1 is typically an emergent (lights and sirens) response
+&lt;br/>Priority 2 is typically an emergent response without the use lights and sirens
+&lt;br/>Priority 3 is typically a non-emergent response for nursing home, hospital-to-hospital transfers, etc.
+&lt;br/>Priority 4 is typically a scheduled response (scheduled  transfer) or standby event
+&lt;br/>&lt;br/>
+Definitions related to “Critical, Emergent, and Lower Acuity” can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
+&lt;br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf 							
+							</comment>
+							<v3Changes></v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="ComplaintReportedByDispatch">
 		<xs:annotation>
 			<xs:documentation>The complaint dispatch reported to the responding unit.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="2301001">
-				<xs:annotation>
-					<xs:documentation>Abdominal Pain/Problems</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301003">
-				<xs:annotation>
-					<xs:documentation>Allergic Reaction/Stings</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301005">
-				<xs:annotation>
-					<xs:documentation>Animal Bite</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301007">
-				<xs:annotation>
-					<xs:documentation>Assault</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301009">
-				<xs:annotation>
-					<xs:documentation>Automated Crash Notification</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301011">
-				<xs:annotation>
-					<xs:documentation>Back Pain (Non-Traumatic)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301013">
-				<xs:annotation>
-					<xs:documentation>Breathing Problem</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301015">
-				<xs:annotation>
-					<xs:documentation>Burns/Explosion</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301017">
-				<xs:annotation>
-					<xs:documentation>Carbon Monoxide/Hazmat/Inhalation/CBRN</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301019">
-				<xs:annotation>
-					<xs:documentation>Cardiac Arrest/Death</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301021">
-				<xs:annotation>
-					<xs:documentation>Chest Pain (Non-Traumatic)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301023">
-				<xs:annotation>
-					<xs:documentation>Choking</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301025">
-				<xs:annotation>
-					<xs:documentation>Convulsions/Seizure</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301027">
-				<xs:annotation>
-					<xs:documentation>Diabetic Problem</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301029">
-				<xs:annotation>
-					<xs:documentation>Drowning/Diving/SCUBA Accident</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301031">
-				<xs:annotation>
-					<xs:documentation>Electrocution/Lightning</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301033">
-				<xs:annotation>
-					<xs:documentation>Eye Problem/Injury</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301035">
-				<xs:annotation>
-					<xs:documentation>Falls</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301037">
-				<xs:annotation>
-					<xs:documentation>Headache</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301039">
-				<xs:annotation>
-					<xs:documentation>Healthcare Professional/Admission</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301041">
-				<xs:annotation>
-					<xs:documentation>Heart Problems/AICD</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301043">
-				<xs:annotation>
-					<xs:documentation>Heat/Cold Exposure</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301045">
-				<xs:annotation>
-					<xs:documentation>Hemorrhage/Laceration</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301047">
-				<xs:annotation>
-					<xs:documentation>Industrial Accident/Inaccessible Incident/Other Entrapments (Non-Vehicle)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301049">
-				<xs:annotation>
-					<xs:documentation>Interfacility Evaluation/Transfer</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301051">
-				<xs:annotation>
-					<xs:documentation>Overdose/Poisoning/Ingestion</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301053">
-				<xs:annotation>
-					<xs:documentation>Pandemic/Epidemic/Outbreak</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301055">
-				<xs:annotation>
-					<xs:documentation>Pregnancy/Childbirth/Miscarriage</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301057">
-				<xs:annotation>
-					<xs:documentation>Psychiatric Problem/Abnormal Behavior/Suicide Attempt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301059">
-				<xs:annotation>
-					<xs:documentation>Sick Person/No Other Appropriate Choice</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301061">
-				<xs:annotation>
-					<xs:documentation>Stab/Gunshot Wound/Penetrating Trauma</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301063">
-				<xs:annotation>
-					<xs:documentation>Standby</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301065">
-				<xs:annotation>
-					<xs:documentation>Stroke/CVA</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301067">
-				<xs:annotation>
-					<xs:documentation>Traffic/Transportation Incident</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301069">
-				<xs:annotation>
-					<xs:documentation>Transfer/Interfacility/Palliative Care</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301071">
-				<xs:annotation>
-					<xs:documentation>Traumatic Injury</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301073">
-				<xs:annotation>
-					<xs:documentation>Unconscious/Fainting/Near-Fainting</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2301075">
-				<xs:annotation>
-					<xs:documentation>Unknown Problem/Person Down</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
+		<xs:restriction base="xs:string">		
+			<xs:enumeration value="2301001"><xs:annotation><xs:documentation>Abdominal Pain/Problems</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301003"><xs:annotation><xs:documentation>Allergic Reaction/Stings</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301005"><xs:annotation><xs:documentation>Animal Bite</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301007"><xs:annotation><xs:documentation>Assault</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301009"><xs:annotation><xs:documentation>Automated Crash Notification</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301011"><xs:annotation><xs:documentation>Back Pain (Non-Traumatic)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301013"><xs:annotation><xs:documentation>Breathing Problem</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301015"><xs:annotation><xs:documentation>Burns/Explosion</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301017"><xs:annotation><xs:documentation>Carbon Monoxide/Hazmat/Inhalation/CBRN</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301019"><xs:annotation><xs:documentation>Cardiac Arrest/Death</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301021"><xs:annotation><xs:documentation>Chest Pain (Non-Traumatic)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301023"><xs:annotation><xs:documentation>Choking</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301025"><xs:annotation><xs:documentation>Convulsions/Seizure</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301027"><xs:annotation><xs:documentation>Diabetic Problem</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301029"><xs:annotation><xs:documentation>Electrocution/Lightning</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301031"><xs:annotation><xs:documentation>Eye Problem/Injury</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301033"><xs:annotation><xs:documentation>Falls</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301035"><xs:annotation><xs:documentation>Fire</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301037"><xs:annotation><xs:documentation>Headache</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301039"><xs:annotation><xs:documentation>Healthcare Professional/Admission</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301041"><xs:annotation><xs:documentation>Heart Problems/AICD</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301043"><xs:annotation><xs:documentation>Heat/Cold Exposure</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301045"><xs:annotation><xs:documentation>Hemorrhage/Laceration</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301047"><xs:annotation><xs:documentation>Industrial Accident/Inaccessible Incident/Other Entrapments (Non-Vehicle)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301049"><xs:annotation><xs:documentation>Medical Alarm</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301051"><xs:annotation><xs:documentation>No Other Appropriate Choice</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301053"><xs:annotation><xs:documentation>Overdose/Poisoning/Ingestion</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301055"><xs:annotation><xs:documentation>Pandemic/Epidemic/Outbreak</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301057"><xs:annotation><xs:documentation>Pregnancy/Childbirth/Miscarriage</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301059"><xs:annotation><xs:documentation>Psychiatric Problem/Abnormal Behavior/Suicide Attempt</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301061"><xs:annotation><xs:documentation>Sick Person</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301063"><xs:annotation><xs:documentation>Stab/Gunshot Wound/Penetrating Trauma</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301065"><xs:annotation><xs:documentation>Standby</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301067"><xs:annotation><xs:documentation>Stroke/CVA</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301069"><xs:annotation><xs:documentation>Traffic/Transportation Incident</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301071"><xs:annotation><xs:documentation>Transfer/Interfacility/Palliative Care</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301073"><xs:annotation><xs:documentation>Traumatic Injury</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301075"><xs:annotation><xs:documentation>Well Person Check</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301077"><xs:annotation><xs:documentation>Unconscious/Fainting/Near-Fainting</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2301079"><xs:annotation><xs:documentation>Unknown Problem/Person Down</xs:documentation></xs:annotation></xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ComputerAidedDispatchCADNameorID">
@@ -317,6 +203,17 @@
 			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="DispatchPriority">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:restriction base="xs:string">		
+			<xs:enumeration value="2305001"><xs:annotation><xs:documentation>Priority 1 (Critical)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2305003"><xs:annotation><xs:documentation>Priority 2 (Emergent)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2305005"><xs:annotation><xs:documentation>Priority 3 (Lower Acuity)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="2305007"><xs:annotation><xs:documentation>Priority 4 (Non-Acute [e.g. Scheduled Transfer  or Standby]) </xs:documentation></xs:annotation></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>		
 	<xs:simpleType name="EMDCardNumber">
 		<xs:annotation>
 			<xs:documentation>The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode</xs:documentation>

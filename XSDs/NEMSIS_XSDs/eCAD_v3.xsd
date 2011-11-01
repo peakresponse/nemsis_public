@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
-	<xs:include schemaLocation="ansistatecodes.xsd"/>
 	<xs:include schemaLocation="eRecord_v3.xsd"/>
 	<xs:include schemaLocation="eResponse_v3.xsd"/>
 	<xs:include schemaLocation="eDispatch_v3.xsd"/>
@@ -69,11 +68,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMSDispatchDelayReason">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -85,11 +84,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMSUnitDelayReason">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -101,11 +100,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMSSceneUnitDelayReason">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -117,11 +116,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMSTransportUnitDelayReason">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -133,11 +132,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMSTurnaroundUnitDelayReason">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -177,11 +176,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMSAdditionalResponseMode">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -198,11 +197,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMDPerformed">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -239,11 +238,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -255,11 +254,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -271,11 +270,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -287,11 +286,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -303,11 +302,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -324,11 +323,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -340,11 +339,11 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -377,11 +376,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="YesNoValues">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -422,11 +421,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="NumberOfPatientsAtScene">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -438,11 +437,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="YesNoValues">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -454,11 +453,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="IncidentLocationType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -470,11 +469,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="IncidentFacilityCode">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -510,11 +509,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="IncidentAddressType">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -561,11 +560,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="CityGnisCode">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -577,11 +576,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="ANSIStateCode">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -593,11 +592,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="ZIP">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -614,11 +613,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="ANSICountryCode">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -649,11 +648,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="DestinationTransferredToName">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -665,11 +664,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="DestinationTransferredToCode">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -696,11 +695,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="ANSIStateCode">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -712,11 +711,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="ANSICountyCode">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -728,11 +727,11 @@ and restocking.</xs:documentation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="ZIP">
-																					<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -765,11 +764,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="NumberOfPatients">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -781,11 +780,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="EMSTransportMethod">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -797,11 +796,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="TransportModeFromScene">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -813,11 +812,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="AdditionalTransportModeDescriptors">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -829,11 +828,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="TypeOfDestination">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -845,11 +844,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="YesNoValues">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
@@ -861,11 +860,11 @@ and restocking.</xs:documentation>
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="DateTimeType">
-																		<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
+								<xs:attribute name="NV" use="optional">
+									<xs:simpleType>
+										<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									</xs:simpleType>
+								</xs:attribute>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>

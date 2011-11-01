@@ -53,7 +53,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the EMS Crew Member </xs:documentation>
 				</xs:annotation>
@@ -102,7 +102,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eOther.05" nillable="true" id="eOther.SuspectedEMSWorkRelatedExposureInjuryorDeath" >
+						<xs:element name="eOther.05" nillable="true" id="eOther.SuspectedEMSWorkRelatedExposureInjuryorDeath">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -132,7 +132,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eOther.06" nillable="true" id="eOther.TypeofSuspectedEMSBloodBodyFluidExposureInjuryorDeath" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="eOther.06" nillable="true" id="eOther.TypeofSuspectedEMSBloodBodyFluidExposureInjuryorDeath" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -163,9 +163,9 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
-			 </xs:element>
+			</xs:element>
 			<xs:element name="eOther.07" type="SuspectedIntentionalOrUnintentionalDisaster" id="eOther.NaturalSuspectedIntentionalorUnintentionalDisaster" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
@@ -240,8 +240,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="ExternalElectronicDocuments">
-									</xs:extension>
+									<xs:extension base="ExternalElectronicDocuments"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -282,13 +281,12 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="FileImage">
-									</xs:extension>
+									<xs:extension base="FileImage"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="eOther.SignatureGroup" id="eOther.SignatureGroup" minOccurs="0" maxOccurs="unbounded">
@@ -403,7 +401,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eOther.18" type="xs:base64Binary" id="eOther.SignatureGraphic" minOccurs="0">
+						<xs:element name="eOther.18" type="Graphic" id="eOther.SignatureGraphic" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -436,7 +434,7 @@
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -856,9 +854,27 @@
 		<xs:annotation>
 			<xs:documentation>The signature reason</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:maxLength value="100"/>
-			<xs:minLength value="0"/>
+		<xs:restriction base="xs:string">			
+			<xs:enumeration value="4513001">
+				<xs:annotation>
+					<xs:documentation>HIPAA acknowledgement/Release </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513003">
+				<xs:annotation>
+					<xs:documentation>Permission to Treat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513005">
+				<xs:annotation>
+					<xs:documentation>Release for Billing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513007">
+				<xs:annotation>
+					<xs:documentation>Transfer of Patient Care </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SignatureGraphic">

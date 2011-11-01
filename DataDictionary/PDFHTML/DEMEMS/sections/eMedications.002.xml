@@ -13,7 +13,7 @@
 <v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
 <table border="1px" cellpadding="3px" cellspacing="0">
-  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>
   <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
   <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
   <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
@@ -48,17 +48,17 @@
       <patterns>
         <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
      </patterns>
-      <constraints>
-        <dataType>dateTime</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>dateTime</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -84,16 +84,16 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9923001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>9923003</code>
-           <description>Yes</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -134,9 +134,17 @@
 		<choice><code>8801003</code><description>Denied By Order</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>7</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -152,119 +160,119 @@
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
 <v3Comment>This medication route list represents a sub-group of values from the Data Elements for Emergency Department Systems (DEEDS), pertaining to prehospital care. <br/> <br/>
-DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapuetic Medication Route.</v3Comment>
+DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3704001</code>
-           <description>Endotracheal tube</description>
-        </choice>
-        <choice>
-           <code>3704003</code>
-           <description>Gastrostomy tube</description>
-        </choice>
-        <choice>
-           <code>3704005</code>
-           <description>Inhalation</description>
-        </choice>
-        <choice>
-           <code>3704007</code>
-           <description>Intraarterial</description>
-        </choice>
-        <choice>
-           <code>3704009</code>
-           <description>Intramuscular</description>
-        </choice>
-        <choice>
-           <code>3704011</code>
-           <description>Intranasal</description>
-        </choice>
-        <choice>
-           <code>3704013</code>
-           <description>Intraocular</description>
-        </choice>
-        <choice>
-           <code>3704015</code>
-           <description>Intraosseous</description>
-        </choice>
-        <choice>
-           <code>3704017</code>
-           <description>Intravenous</description>
-        </choice>
-        <choice>
-           <code>3704019</code>
-           <description>Nasal</description>
-        </choice>
-        <choice>
-           <code>3704021</code>
-           <description>Nasal prongs</description>
-        </choice>
-        <choice>
-           <code>3704023</code>
-           <description>Nasogastric</description>
-        </choice>
-        <choice>
-           <code>3704025</code>
-           <description>Nasotracheal Tube</description>
-        </choice>
-        <choice>
-           <code>3704027</code>
-           <description>Ophthalmic</description>
-        </choice>
-        <choice>
-           <code>3704029</code>
-           <description>Oral</description>
-        </choice>
-        <choice>
-           <code>3704031</code>
-           <description>Other/miscellaneous</description>
-        </choice>
-        <choice>
-           <code>3704033</code>
-           <description>Otic</description>
-        </choice>
-        <choice>
-           <code>3704035</code>
-           <description>Re-breather mask</description>
-        </choice>
-        <choice>
-           <code>3704037</code>
-           <description>Rectal</description>
-        </choice>
-        <choice>
-           <code>3704039</code>
-           <description>Subcutaneous</description>
-        </choice>
-        <choice>
-           <code>3704041</code>
-           <description>Sublingual</description>
-        </choice>
-        <choice>
-           <code>3704043</code>
-           <description>Topical</description>
-        </choice>
-        <choice>
-           <code>3704045</code>
-           <description>Tracheostomy</description>
-        </choice>
-        <choice>
-           <code>3704047</code>
-           <description>Transdermal</description>
-        </choice>
-        <choice>
-           <code>3704049</code>
-           <description>Urethral</description>
-        </choice>
-        <choice>
-           <code>3704051</code>
-           <description>Ventimask</description>
-        </choice>
-        <choice>
-           <code>3704053</code>
-           <description>Wound</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3704001</code>
+      <description>Endotracheal tube</description>
+    </choice>
+    <choice>
+      <code>3704003</code>
+      <description>Gastrostomy tube</description>
+    </choice>
+    <choice>
+      <code>3704005</code>
+      <description>Inhalation</description>
+    </choice>
+    <choice>
+      <code>3704007</code>
+      <description>Intraarterial</description>
+    </choice>
+    <choice>
+      <code>3704009</code>
+      <description>Intramuscular</description>
+    </choice>
+    <choice>
+      <code>3704011</code>
+      <description>Intranasal</description>
+    </choice>
+    <choice>
+      <code>3704013</code>
+      <description>Intraocular</description>
+    </choice>
+    <choice>
+      <code>3704015</code>
+      <description>Intraosseous</description>
+    </choice>
+    <choice>
+      <code>3704017</code>
+      <description>Intravenous</description>
+    </choice>
+    <choice>
+      <code>3704019</code>
+      <description>Nasal</description>
+    </choice>
+    <choice>
+      <code>3704021</code>
+      <description>Nasal prongs</description>
+    </choice>
+    <choice>
+      <code>3704023</code>
+      <description>Nasogastric</description>
+    </choice>
+    <choice>
+      <code>3704025</code>
+      <description>Nasotracheal Tube</description>
+    </choice>
+    <choice>
+      <code>3704027</code>
+      <description>Ophthalmic</description>
+    </choice>
+    <choice>
+      <code>3704029</code>
+      <description>Oral</description>
+    </choice>
+    <choice>
+      <code>3704031</code>
+      <description>Other/miscellaneous</description>
+    </choice>
+    <choice>
+      <code>3704033</code>
+      <description>Otic</description>
+    </choice>
+    <choice>
+      <code>3704035</code>
+      <description>Re-breather mask</description>
+    </choice>
+    <choice>
+      <code>3704037</code>
+      <description>Rectal</description>
+    </choice>
+    <choice>
+      <code>3704039</code>
+      <description>Subcutaneous</description>
+    </choice>
+    <choice>
+      <code>3704041</code>
+      <description>Sublingual</description>
+    </choice>
+    <choice>
+      <code>3704043</code>
+      <description>Topical</description>
+    </choice>
+    <choice>
+      <code>3704045</code>
+      <description>Tracheostomy</description>
+    </choice>
+    <choice>
+      <code>3704047</code>
+      <description>Transdermal</description>
+    </choice>
+    <choice>
+      <code>3704049</code>
+      <description>Urethral</description>
+    </choice>
+    <choice>
+      <code>3704051</code>
+      <description>Ventimask</description>
+    </choice>
+    <choice>
+      <code>3704053</code>
+      <description>Wound</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><group number="eMedications.DosageGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
 <element number="eMedications.05" minOccurs="1" maxOccurs="1" isNillable="Yes">
@@ -279,17 +287,17 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>decimal</dataType>
-        <constraint>
-          <constraintTitle>totalDigits</constraintTitle>
-          <constraintValue>8</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>fractionDigits</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>8</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -307,68 +315,68 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3706001</code>
-           <description>GMS</description>
-        </choice>
-        <choice>
-           <code>3706003</code>
-           <description>Inches</description>
-        </choice>
-        <choice>
-           <code>3706005</code>
-           <description>International Units</description>
-        </choice>
-        <choice>
-           <code>3706007</code>
-           <description>Keep Vein Open (To Keep Open)</description>
-        </choice>
-        <choice>
-           <code>3706009</code>
-           <description>LITERS</description>
-        </choice>
-        <choice>
-           <code>3706011</code>
-           <description>Liters Per Minute</description>
-        </choice>
-        <choice>
-           <code>3706013</code>
-           <description>MDI Puffs</description>
-        </choice>
-        <choice>
-           <code>3706015</code>
-           <description>Micrograms</description>
-        </choice>
-        <choice>
-           <code>3706017</code>
-           <description>Micrograms per Kilogram per Minute</description>
-        </choice>
-        <choice>
-           <code>3706019</code>
-           <description>Milliequivalents</description>
-        </choice>
-        <choice>
-           <code>3706021</code>
-           <description>Milligrams</description>
-        </choice>
-        <choice>
-           <code>3706023</code>
-           <description>Milligrams Per Kilogram Per Minute</description>
-        </choice>
-        <choice>
-           <code>3706025</code>
-           <description>Milliliters</description>
-        </choice>
-        <choice>
-           <code>3706027</code>
-           <description>Milliliters Per Hour</description>
-        </choice>
-        <choice>
-           <code>3706029</code>
-           <description>Other</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3706001</code>
+      <description>Grams</description>
+    </choice>
+    <choice>
+      <code>3706003</code>
+      <description>Inches</description>
+    </choice>
+    <choice>
+      <code>3706005</code>
+      <description>International Units</description>
+    </choice>
+    <choice>
+      <code>3706007</code>
+      <description>Keep Vein Open (To Keep Open)</description>
+    </choice>
+    <choice>
+      <code>3706009</code>
+      <description>Liters</description>
+    </choice>
+    <choice>
+      <code>3706011</code>
+      <description>Liters Per Minute</description>
+    </choice>
+    <choice>
+      <code>3706013</code>
+      <description>MDI Puffs</description>
+    </choice>
+    <choice>
+      <code>3706015</code>
+      <description>Micrograms</description>
+    </choice>
+    <choice>
+      <code>3706017</code>
+      <description>Micrograms per Kilogram per Minute</description>
+    </choice>
+    <choice>
+      <code>3706019</code>
+      <description>Milliequivalents</description>
+    </choice>
+    <choice>
+      <code>3706021</code>
+      <description>Milligrams</description>
+    </choice>
+    <choice>
+      <code>3706023</code>
+      <description>Milligrams Per Kilogram Per Minute</description>
+    </choice>
+    <choice>
+      <code>3706025</code>
+      <description>Milliliters</description>
+    </choice>
+    <choice>
+      <code>3706027</code>
+      <description>Milliliters Per Hour</description>
+    </choice>
+    <choice>
+      <code>3706029</code>
+      <description>Other</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -387,20 +395,20 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9916001</code>
-           <description>Improved</description>
-        </choice>
-        <choice>
-           <code>9916003</code>
-           <description>Unchanged</description>
-        </choice>
-        <choice>
-           <code>9916005</code>
-           <description>Worse</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9916001</code>
+      <description>Improved</description>
+    </choice>
+    <choice>
+      <code>9916003</code>
+      <description>Unchanged</description>
+    </choice>
+    <choice>
+      <code>9916005</code>
+      <description>Worse</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -418,97 +426,97 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3708001</code>
-           <description>Altered Mental Status</description>
-        </choice>
-        <choice>
-           <code>3708003</code>
-           <description>Apnea</description>
-        </choice>
-        <choice>
-           <code>3708005</code>
-           <description>Bleeding</description>
-        </choice>
-        <choice>
-           <code>3708007</code>
-           <description>Bradycardia</description>
-        </choice>
-        <choice>
-           <code>3708009</code>
-           <description>Bradypnea</description>
-        </choice>
-        <choice>
-           <code>3708011</code>
-           <description>Diarrhea</description>
-        </choice>
-        <choice>
-           <code>3708013</code>
-           <description>Extravasation</description>
-        </choice>
-        <choice>
-           <code>3708015</code>
-           <description>Hypertension</description>
-        </choice>
-        <choice>
-           <code>3708017</code>
-           <description>Hyperthermia</description>
-        </choice>
-        <choice>
-           <code>3708019</code>
-           <description>Hypotension</description>
-        </choice>
-        <choice>
-           <code>3708021</code>
-           <description>Hypothermia</description>
-        </choice>
-        <choice>
-           <code>3708023</code>
-           <description>Hypoxia</description>
-        </choice>
-        <choice>
-           <code>3708025</code>
-           <description>Injury</description>
-        </choice>
-        <choice>
-           <code>3708027</code>
-           <description>Itching/Urticaria</description>
-        </choice>
-        <choice>
-           <code>3708029</code>
-           <description>Nausea</description>
-        </choice>
-        <choice>
-           <code>3708031</code>
-           <description>None</description>
-        </choice>
-        <choice>
-           <code>3708033</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>3708035</code>
-           <description>Respiratory Distress</description>
-        </choice>
-        <choice>
-           <code>3708037</code>
-           <description>Tachycardia</description>
-        </choice>
-        <choice>
-           <code>3708039</code>
-           <description>Tachypnea</description>
-        </choice>
-        <choice>
-           <code>3708041</code>
-           <description>Vomiting</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3708001</code>
+      <description>Altered Mental Status</description>
+    </choice>
+    <choice>
+      <code>3708003</code>
+      <description>Apnea</description>
+    </choice>
+    <choice>
+      <code>3708005</code>
+      <description>Bleeding</description>
+    </choice>
+    <choice>
+      <code>3708007</code>
+      <description>Bradycardia</description>
+    </choice>
+    <choice>
+      <code>3708009</code>
+      <description>Bradypnea</description>
+    </choice>
+    <choice>
+      <code>3708011</code>
+      <description>Diarrhea</description>
+    </choice>
+    <choice>
+      <code>3708013</code>
+      <description>Extravasation</description>
+    </choice>
+    <choice>
+      <code>3708015</code>
+      <description>Hypertension</description>
+    </choice>
+    <choice>
+      <code>3708017</code>
+      <description>Hyperthermia</description>
+    </choice>
+    <choice>
+      <code>3708019</code>
+      <description>Hypotension</description>
+    </choice>
+    <choice>
+      <code>3708021</code>
+      <description>Hypothermia</description>
+    </choice>
+    <choice>
+      <code>3708023</code>
+      <description>Hypoxia</description>
+    </choice>
+    <choice>
+      <code>3708025</code>
+      <description>Injury</description>
+    </choice>
+    <choice>
+      <code>3708027</code>
+      <description>Itching/Urticaria</description>
+    </choice>
+    <choice>
+      <code>3708029</code>
+      <description>Nausea</description>
+    </choice>
+    <choice>
+      <code>3708031</code>
+      <description>None</description>
+    </choice>
+    <choice>
+      <code>3708033</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>3708035</code>
+      <description>Respiratory Distress</description>
+    </choice>
+    <choice>
+      <code>3708037</code>
+      <description>Tachycardia</description>
+    </choice>
+    <choice>
+      <code>3708039</code>
+      <description>Tachypnea</description>
+    </choice>
+    <choice>
+      <code>3708041</code>
+      <description>Vomiting</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eMedications.09" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Medication Crew (Healthcare Professionals) ID</name>
@@ -530,17 +538,17 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>15</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>15</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -548,7 +556,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 	</notValues>
 </restrictions>
 </element><element number="eMedications.10" minOccurs="1" maxOccurs="1" isNillable="Yes">
-<name>EMS or Healthcare Professional Type Administering Medication</name>
+<name>Role/Type of Person Administering Medication</name>
 <national>Yes</national>
 <state>Yes</state>
 <definition>The type (level) of EMS or Healthcare Professional Administering the Medication. For medications administered prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
@@ -556,71 +564,80 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.</v3Comment>
+<v3Comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.
+										<br/><br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</v3Comment>
 <v3Changes>Added to better document the type of healthcare professional who administered the medication.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9905001</code>
-           <description>2009 Advanced Emergency Medical Technician (AEMT)</description>
-        </choice>
-        <choice>
-           <code>9905003</code>
-           <description>2009 Emergency Medical Responder (EMR)</description>
-        </choice>
-        <choice>
-           <code>9905005</code>
-           <description>2009 Emergency Medical Technician (EMT)</description>
-        </choice>
-        <choice>
-           <code>9905007</code>
-           <description>2009 Paramedic</description>
-        </choice>
-        <choice>
-           <code>9905009</code>
-           <description>EMT-Basic</description>
-        </choice>
-        <choice>
-           <code>9905011</code>
-           <description>EMT-Intermediate</description>
-        </choice>
-        <choice>
-           <code>9905013</code>
-           <description>EMT-Paramedic (Based on pre-2009 Curriculum)</description>
-        </choice>
-        <choice>
-           <code>9905015</code>
-           <description>First Responder</description>
-        </choice>
-        <choice>
-           <code>9905017</code>
-           <description>Nurse</description>
-        </choice>
-        <choice>
-           <code>9905019</code>
-           <description>Other Healthcare Professional</description>
-        </choice>
-        <choice>
-           <code>9905021</code>
-           <description>Other Non-Healthcare Professional</description>
-        </choice>
-        <choice>
-           <code>9905023</code>
-           <description>Patient</description>
-        </choice>
-        <choice>
-           <code>9905025</code>
-           <description>Physician</description>
-        </choice>
-        <choice>
-           <code>9905027</code>
-           <description>Respiratory Therapist</description>
-        </choice>
-        <choice>
-           <code>9905029</code>
-           <description>Student</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9905001</code>
+      <description>2009 Advanced Emergency Medical Technician (AEMT)</description>
+    </choice>
+    <choice>
+      <code>9905003</code>
+      <description>2009 Emergency Medical Responder (EMR)</description>
+    </choice>
+    <choice>
+      <code>9905005</code>
+      <description>2009 Emergency Medical Technician (EMT)</description>
+    </choice>
+    <choice>
+      <code>9905007</code>
+      <description>2009 Paramedic</description>
+    </choice>
+    <choice>
+      <code>9905009</code>
+      <description>EMT-Basic</description>
+    </choice>
+    <choice>
+      <code>9905011</code>
+      <description>EMT-Intermediate</description>
+    </choice>
+    <choice>
+      <code>9905013</code>
+      <description>EMT-Paramedic (Based on pre-2009 Curriculum)</description>
+    </choice>
+    <choice>
+      <code>9905015</code>
+      <description>First Responder</description>
+    </choice>
+    <choice>
+      <code>9905017</code>
+      <description>Nurse</description>
+    </choice>
+    <choice>
+      <code>9905019</code>
+      <description>Other Healthcare Professional</description>
+    </choice>
+    <choice>
+      <code>9905021</code>
+      <description>Other Non-Healthcare Professional</description>
+    </choice>
+    <choice>
+      <code>9905023</code>
+      <description>Patient/Lay Person</description>
+    </choice>
+    <choice>
+      <code>9905025</code>
+      <description>Physician</description>
+    </choice>
+    <choice>
+      <code>9905027</code>
+      <description>Respiratory Therapist</description>
+    </choice>
+    <choice>
+      <code>9905029</code>
+      <description>Student</description>
+    </choice>
+    <choice>
+      <code>9905031</code>
+      <description>Critical Care Paramedic</description>
+    </choice>
+    <choice>
+      <code>9905033</code>
+      <description>Community Paramedicine</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -638,24 +655,24 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9918001</code>
-           <description>On-Line (Remote Verbal Order)</description>
-        </choice>
-        <choice>
-           <code>9918003</code>
-           <description>On-Scene</description>
-        </choice>
-        <choice>
-           <code>9918005</code>
-           <description>Protocol (Standing Order)</description>
-        </choice>
-        <choice>
-           <code>9918007</code>
-           <description>Written Orders (Patient Specific)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9918001</code>
+      <description>On-Line (Remote Verbal Order)</description>
+    </choice>
+    <choice>
+      <code>9918003</code>
+      <description>On-Scene</description>
+    </choice>
+    <choice>
+      <code>9918005</code>
+      <description>Protocol (Standing Order)</description>
+    </choice>
+    <choice>
+      <code>9918007</code>
+      <description>Written Orders (Patient Specific)</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eMedications.12" minOccurs="0" maxOccurs="1" dataType="PersonName" isNillable="No">
 <name>Medication Authorizing Physician</name>
@@ -669,17 +686,17 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>50</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element></group>
 </section>

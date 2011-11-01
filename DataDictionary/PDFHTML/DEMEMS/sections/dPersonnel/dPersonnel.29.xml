@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="dPersonnel.29" minOccurs="0" maxOccurs="1" dataType="NationalRegistryCertificationLevel" isNillable="No">
-<name>National Registry Certification Level</name>
+<name>EMS Personnel's National Registry Certification Level</name>
 <national>No</national>
 <state>No</state>
 <definition>The level of the current National Registry of Emergency Medical Technicians (NREMT) certification.</definition>
@@ -8,42 +8,42 @@
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>1532901</code>
-           <description>2009 Advanced Emergency Medical Technician(AEMT)</description>
-        </choice>
-        <choice>
-           <code>1529003</code>
-           <description>2009 Emergency Medical Responder (EMR)</description>
-        </choice>
-        <choice>
-           <code>1529005</code>
-           <description>2009 Emergency Medical Technician</description>
-        </choice>
-        <choice>
-           <code>1529007</code>
-           <description>2009 Paramedic</description>
-        </choice>
-        <choice>
-           <code>1529009</code>
-           <description>EMT-Basic</description>
-        </choice>
-        <choice>
-           <code>1529011</code>
-           <description>EMT-Intermediate</description>
-        </choice>
-        <choice>
-           <code>1529013</code>
-           <description>EMT-Paramedic</description>
-        </choice>
-        <choice>
-           <code>1529015</code>
-           <description>First Responder</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>1529901</code>
+      <description>2009 Advanced Emergency Medical Technician(AEMT)</description>
+    </choice>
+    <choice>
+      <code>1529003</code>
+      <description>2009 Emergency Medical Responder (EMR)</description>
+    </choice>
+    <choice>
+      <code>1529005</code>
+      <description>2009 Emergency Medical Technician</description>
+    </choice>
+    <choice>
+      <code>1529007</code>
+      <description>2009 Paramedic</description>
+    </choice>
+    <choice>
+      <code>1529009</code>
+      <description>EMT-Basic</description>
+    </choice>
+    <choice>
+      <code>1529011</code>
+      <description>EMT-Intermediate</description>
+    </choice>
+    <choice>
+      <code>1529013</code>
+      <description>EMT-Paramedic</description>
+    </choice>
+    <choice>
+      <code>1529015</code>
+      <description>First Responder</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element>

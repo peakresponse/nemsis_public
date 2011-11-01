@@ -17,12 +17,29 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="dState" type="dState">
+				<xs:element name="dState" type="dState" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>State Required Demographic Data Elements</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="dCustomConfiguration" type="dCustomConfiguration" minOccurs="0" maxOccurs="unbounded">
+				<!--<xs:element name="Header" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Container Tag to hold each instance of a demographic record</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dAgencyParent" type="dAgencyParent">
+								<xs:annotation>
+									<xs:documentation>State Required Demographic Data Elements</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="dAgencyInformation">
+								<xs:annotation>
+									<xs:documentation>State Required Demographic Data Elements</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>-->
+				<xs:element name="dCustomConfiguration" type="dCustomConfiguration" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Contains information for demographic custom elements.</xs:documentation>
 					</xs:annotation>
@@ -38,7 +55,7 @@
 									<xs:documentation>Agency Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dContact" type="dContact">
+							<xs:element name="dContact" type="dContact" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Contact Information</xs:documentation>
 								</xs:annotation>
@@ -48,12 +65,12 @@
 									<xs:documentation>Configuration Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dLocation" type="dLocation">
+							<xs:element name="dLocation" type="dLocation" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Location Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dVehicle" type="dVehicle">
+							<xs:element name="dVehicle" type="dVehicle" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Vehicle Information</xs:documentation>
 								</xs:annotation>
@@ -84,4 +101,10 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	<!--</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>-->
 </xs:schema>

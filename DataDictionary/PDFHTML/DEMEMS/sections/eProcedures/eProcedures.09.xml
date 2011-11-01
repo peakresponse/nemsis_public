@@ -8,7 +8,7 @@
 <usage>Recommended</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>How should the state ID for an EMS professional be record when working on an event in 2 states.  The ID used would typically be based on the EMS agency's state license specific to each EMS professional. Used for eMedications.09 (Medication Crew (Healthcare Professionals) ID) as well.</v3Comment>
+<v3Comment>For an incident that occurs in multiple states, the certification ID number the EMS agency would typically use is based on the EMS agency's state license specific to each EMS professional.  If the incident needs to be reported to each state, then the EMS Agency Number for each state should be submitted as well as the certification ID numbers for each EMS professional on the unit.</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
@@ -19,17 +19,17 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>15</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>15</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

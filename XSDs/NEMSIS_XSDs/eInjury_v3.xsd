@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eInjury" id="eInjury.SituationTrauma">
 		<xs:sequence>
-			<xs:element name="eInjury.01" nillable="true" id="eInjury.CauseofInjury">
+			<xs:element name="eInjury.01" nillable="true" id="eInjury.CauseofInjury" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -37,7 +37,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eInjury.02" nillable="true" id="eInjury.MechanismofInjury" maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="eInjury.02" nillable="true" id="eInjury.MechanismofInjury" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -150,7 +150,7 @@
 							<v2Number>E10_05</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment>The front of the vehicle is 12, passenger (right) side is 3, read is 6, etc.&lt;br/>&lt;br/>Based on MMUCC via areas(s) of impact &amp; FARS coding manual clock diagram.</comment>
+							<comment>The front of the vehicle is 12, passenger (right) side is 3, rear is 6, etc.&lt;br/>&lt;br/>Based on MMUCC via areas(s) of impact &amp; FARS coding manual clock diagram.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -174,7 +174,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eInjury.07" nillable="true" id="eInjury.UseofOccupantSafetyEquipment" maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="eInjury.07" nillable="true" id="eInjury.UseofOccupantSafetyEquipment" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -243,7 +243,7 @@
 							<v2Number>E10_10</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment>Classify same level falls as 3 feet</comment>
+							<comment>Classify same level falls as 0 feet</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -358,7 +358,7 @@
 										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -399,8 +399,8 @@
 										<performanceMeasure/>
 										<comment>Based on Vehicular Emergency Data Set:  Location (combining Latitude and Longitude). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.										
 										  The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
-										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
-										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places						  
+										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
+										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 										</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -626,8 +626,7 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="SeatLocation">
-												</xs:extension>
+												<xs:extension base="SeatLocation"/>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
@@ -941,9 +940,9 @@
 		<xs:annotation>
 			<xs:documentation>The Automated Collision Notification Delta Velocity (Delta V) force associated with the crash.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="0"/>
-			<xs:maxLength value="999"/>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="999"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EquipmentUsed">
@@ -993,7 +992,7 @@
 			<xs:documentation>The distance in feet the patient fell, measured from the lowest point of the patient to the ground</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:minInclusive value="3"/>
+			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="10000"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -1040,6 +1039,11 @@
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2902005">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2902007">
 				<xs:annotation>
 					<xs:documentation>Penetrating</xs:documentation>
 				</xs:annotation>
@@ -1339,42 +1343,42 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2904001">
 				<xs:annotation>
-					<xs:documentation>Adults: > 20 ft. (one story is equal to 10 ft.)</xs:documentation>
+					<xs:documentation>Auto v. Pedestrian/Bicyclist Thrown, Run Over, or > 20 MPH Impact</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904003">
 				<xs:annotation>
-					<xs:documentation>Auto v. Pedestrian/Bicyclist Thrown, Run Over, or > 20 MPH Impact</xs:documentation>
+					<xs:documentation>Fall Adults: > 20 ft. (one story is equal to 10 ft.)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904005">
 				<xs:annotation>
-					<xs:documentation>Children: > 10 ft. or 2-3 times the height of the child</xs:documentation>
+					<xs:documentation>Fall Children: > 10 ft. or 2-3 times the height of the child</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904007">
 				<xs:annotation>
-					<xs:documentation>Death in Same Passenger Compartment</xs:documentation>
+					<xs:documentation>Crash Death in Same Passenger Compartment</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904009">
 				<xs:annotation>
-					<xs:documentation>Ejection (partial or complete) from vehicle</xs:documentation>
+					<xs:documentation>Crash Ejection (partial or complete) from vehicle</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904011">
 				<xs:annotation>
-					<xs:documentation>Intrusion: > 12 in. occupant site; > 18 in. any site</xs:documentation>
+					<xs:documentation>Crash Intrusion: > 12 in. occupant site; > 18 in. any site</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904013">
 				<xs:annotation>
-					<xs:documentation>Motorcycle Crash > 20 MPH</xs:documentation>
+					<xs:documentation>Crash Vehicle Telemetry Data (AACN) Consistent with High Risk of Injury</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904015">
 				<xs:annotation>
-					<xs:documentation>Vehicle Telemetry Data (AACN) Consistent with High Risk of Injury</xs:documentation>
+					<xs:documentation>Motorcycle Crash > 20 MPH</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

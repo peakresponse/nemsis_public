@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eSituation" id="eSituation.Situation">
 		<xs:sequence>
@@ -12,7 +12,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The date and time the symptom began as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals.</definition>
-							<v2Number/>
+							<v2Number>E05_01</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -27,7 +27,7 @@
 							  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -65,7 +65,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eSituation.02" id="eSituation.PossibleInjury"  nillable="true">
+			<xs:element name="eSituation.02" nillable="true" id="eSituation.PossibleInjury">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -102,7 +102,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eSituation.PatientComplaintGroup" id="eSituation.PatientComplaintGroup" maxOccurs="unbounded">
+			<xs:element name="eSituation.PatientComplaintGroup" id="eSituation.PatientComplaintGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold information about patient's complaint </xs:documentation>
 				</xs:annotation>
@@ -254,10 +254,11 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-					</xs:sequence><xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-		 	<xs:element name="eSituation.07" nillable="true" id="eSituation.ChiefComplaintAnatomicLocation">
+			<xs:element name="eSituation.07" nillable="true" id="eSituation.ChiefComplaintAnatomicLocation">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -348,7 +349,12 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.&lt;br/>&lt;br/>Code list is represented in ICD-10-CM: Symptoms, Signs and Abnormal Clinical and Laboratory Findings, (R00-69, R73.9)</comment>
+							<comment>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.&lt;br/>&lt;br/>Code list is represented in ICD-10-CM: Symptoms, Signs and Abnormal Clinical and Laboratory Findings, (R00-69, R73.9)
+							&lt;br/>&lt;br/>Code list is represented in ICD-10-CM Diagnoses Codes.  See suggested NEMSIS list of symptoms and signs codes.
+							&lt;br/>&lt;br/>ICD-10-CM
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
+							&lt;br/>Product - UMLS Metathesaurus							
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -384,7 +390,12 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Symptoms, Signs and Abnormal Clinical and Laboratory Findings, (R00-69, R73.9)</comment>
+							<comment>Code list is represented in ICD-10-CM: Symptoms, Signs and Abnormal Clinical and Laboratory Findings, (R00-69, R73.9)
+							&lt;br/>&lt;br/>Code list is represented in ICD-10-CM Diagnoses Codes.  See suggested NEMSIS list of symptoms and signs codes.
+							&lt;br/>&lt;br/>ICD-10-CM
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
+							&lt;br/>Product - UMLS Metathesaurus								
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -396,7 +407,8 @@
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
-							</xs:attribute><xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+							</xs:attribute>
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -420,14 +432,18 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Diagnoses Codes, see suggested NEMSIS list of provider impression codes.</comment>
+							<comment>Code list is represented in ICD-10-CM: Diagnoses Codes, see suggested NEMSIS list of provider impression codes.
+							&lt;br/>&lt;br/>ICD-10-CM
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
+							&lt;br/>Product - UMLS Metathesaurus								
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="ProvidersPrimaryImpression">
+						<xs:extension base="ProvidersImpression">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -456,32 +472,37 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Diagnoses Codes, see suggested NEMSIS list of provider impression codes.</comment>
+							<comment>Code list is represented in ICD-10-CM: Diagnoses Codes, see suggested NEMSIS list of provider impression codes.
+							&lt;br/>&lt;br/>ICD-10-CM
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
+							&lt;br/>Product - UMLS Metathesaurus								
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="ProvidersSecondaryImpression">
+						<xs:extension base="ProvidersImpression">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
-							</xs:attribute><xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+							</xs:attribute>
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eSituation.13" nillable="true" id="eSituation.PatientsInitialConditionatScene">
+			<xs:element name="eSituation.13" nillable="true" id="eSituation.InitialPatientAcuity">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eSituation.13</number>
-							<name>Patient's Initial Condition at Scene</name>
+							<name>Initial Patient Acuity</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The condition of the patient on EMS arrival at the scene.</definition>
+							<definition>The acuity of the patient’s condition upon EMS arrival at the scene.</definition>
 							<v2Number/>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -492,14 +513,17 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Added to better document the patient's initial condition on EMS arrival.</comment>
-							<v3Changes>Added to better document the patient's initial condition on EMS arrival.</v3Changes>
+							<comment>Definitions related to “Critical, Emergent, and Lower Acuity” can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
+							&lt;br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf 
+							&lt;br/>&lt;br/>Dead without Resuscitation Efforts would be appropriate if resuscitation was initiated by non-EMS personnel but discontinued immediately upon evaluation by first arriving EMS personnel.
+							</comment>
+							<v3Changes></v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="PatientInitialCondition">
+						<xs:extension base="InitialPatientAcuity">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -509,7 +533,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eSituation.WorkRelatedGroup" id="eSituation.GroupWorkRelatedInjury">
+			<xs:element name="eSituation.WorkRelatedGroup" id="eSituation.GroupWorkRelatedInjury" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold patient details if the illness or injury is work related </xs:documentation>
 				</xs:annotation>
@@ -580,23 +604,23 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eSituation.17"  id="eSituation.PatientActivity" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eSituation.17" id="eSituation.PatientActivity" minOccurs="0" maxOccurs="unbounded" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eSituation.17</number>
 										<name>Patient Activity</name>
 										<national>No</national>
-										<state>No</state>
+										<state>Yes</state>
 										<definition>The activity the patient was involved in at the time the patient experienced the onset of symptoms or experienced an injury.</definition>
-										<v2Number></v2Number>
-										<usage>Optional</usage>
+										<v2Number/>
+										<usage>Recommended</usage>
 										<performanceMeasure/>
 										<comment>Code list is represented in ICD-10-CM: Diagnoses Codes.  This list will only contain specific Y codes, see suggested NEMSIS list of activity codes (Y93).
 										&lt;br/>&lt;br/>Code list is represented in ICD-10 Codes.
 &lt;br/>Website - http://uts.nlm.nih.gov  
 &lt;br/>Product - UMLS Metathesaurus</comment>
-										<v3Changes></v3Changes>
+										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -604,10 +628,14 @@
 								<xs:simpleContent>
 									<xs:extension base="icd10Activity">
 										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
-							
 						</xs:element>
 					</xs:sequence>
 				</xs:complexType>
@@ -619,7 +647,7 @@
 			<xs:documentation>The activity the patient was involved in at the time the patient experienced the onset of symptoms or experienced an injury.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[Y]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?"></xs:pattern>
+			<xs:pattern value="[Y]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Complaint">
@@ -690,7 +718,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2808001">
 				<xs:annotation>
-					<xs:documentation>Beharvioral/Psychiatric</xs:documentation>
+					<xs:documentation>Behavioral/Psychiatric</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2808003">
@@ -773,7 +801,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="1"/>
-			<xs:maxInclusive value="360"/>
+			<xs:maxInclusive value="365"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OccupationIndustry">
@@ -883,29 +911,29 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="PatientInitialCondition">
+	<xs:simpleType name="InitialPatientAcuity">
 		<xs:annotation>
 			<xs:documentation>The condition of the patient on EMS arrival at the scene.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2813001">
 				<xs:annotation>
-					<xs:documentation>Black (Dead)</xs:documentation>
+					<xs:documentation>Critical (Red)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2813003">
 				<xs:annotation>
-					<xs:documentation>Green (Satisfactory)</xs:documentation>
+					<xs:documentation>Emergent (Yellow)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2813005">
 				<xs:annotation>
-					<xs:documentation>Red (Critical)</xs:documentation>
+					<xs:documentation>Lower Acuity (Green)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2813007">
 				<xs:annotation>
-					<xs:documentation>Yellow (Serious)</xs:documentation>
+					<xs:documentation>Dead without Resuscitation Efforts (Black)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1037,25 +1065,15 @@
 			<xs:documentation>The sign and symptom present in the patient or observed by EMS personnel</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-		<xs:pattern value="R[0-6][0-9](\.\d{0,4})?|R73.9"/>
+			<xs:pattern value="R[0-6][0-9](\.\d{0,4})?|R73.9"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="ProvidersPrimaryImpression">
+	<xs:simpleType name="ProvidersImpression">
 		<xs:annotation>
 			<xs:documentation>The EMS personnel's impression of the patient's primary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="100"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="ProvidersSecondaryImpression">
-		<xs:annotation>
-			<xs:documentation>The EMS personnel's impression of the patient's secondary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures).</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="100"/>
+			<xs:pattern value="[A-Z]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TimeUnitsOfChiefComplaint">

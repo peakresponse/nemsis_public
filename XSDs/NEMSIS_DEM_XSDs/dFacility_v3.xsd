@@ -4,7 +4,9 @@
 	<xs:complexType name="dFacility" id="dFacility.FacilityLocationInformation">
 		<xs:sequence>
 			<xs:element name="dFacilityGroup" id="dFacility.dFacilityGroup" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation><xs:documentation>Group Tag to hold info about Facility Information and Facility Type</xs:documentation></xs:annotation>
+				<xs:annotation>
+					<xs:documentation>Group Tag to hold info about Facility Information and Facility Type</xs:documentation>
+				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="dFacility.01" id="dFacility.TypeofFacility" minOccurs="0">
@@ -15,8 +17,8 @@
 										<name>Type of Facility</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of facility (healthcare or other) that the EMS agency transports paitents to or from.</definition>
-										<v2Number/>
+										<definition>The type of facility (healthcare or other) that the EMS agency transports patients to or from.</definition>
+										<v2Number>D04_15</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup/>
 										<comment/>
@@ -45,7 +47,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The name of the facility.</definition>
-													<v2Number/>
+													<v2Number>D04_11</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup/>
 													<comment/>
@@ -62,8 +64,8 @@
 													<name>Facility Location Code</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The code of the facility as asisgned by the state or the EMS agency.</definition>
-													<v2Number/>
+													<definition>The code of the facility as assigned by the state or the EMS agency.</definition>
+													<v2Number>D04_12</v2Number>v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup/>
 													<comment>The information contained within this element could be used to populate eScene.09 (Incident Facility Code)  or eDisposition.02 (Destination/Transferred To, Code) via a drop down list created at either the EMS Agency or State level.</comment>
@@ -72,7 +74,7 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="dFacility.04" type="HospitalDesignation" id="dFacility.HospitalDesignation" minOccurs="0">
+									<xs:element name="dFacility.04" type="HospitalDesignation" id="dFacility.HospitalDesignation" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -81,7 +83,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc) </definition>
-													<v2Number/>
+													<v2Number></v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup/>
 													<comment>To be documented when in eDisposition.21 "Hospital" is selected . </comment>
@@ -111,11 +113,11 @@
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
-													<number>eScene.06</number>
+													<number>dFacility.06</number>
 													<name>Facility Room, Suite, or Apartment</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The number of the specific room, suite, or apartment.</definition>
+													<definition>The number of the specific room, suite, or apartment of the facility.</definition>
 													<v2Number/>
 													<usage>Optional</usage>
 													<performanceMeasure/>
@@ -263,8 +265,8 @@
 													<performanceMeasure/>
 													<comment>The information contained within this element could be used to populate the address information within eScene.10 (Scene GPS Location) and/or eDisposition.09 (Destination GPS Location) as appropriate.
                       &lt;br/>&lt;br/>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
-										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
-										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places
+										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
+										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places
 						        </comment>
 													<v3Changes/>
 												</nemsisTacDoc>
@@ -276,10 +278,10 @@
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>dFacility.14</number>
-													<name>Facilitiy US National Grid Coordinates</name>
+													<name>Facility US National Grid Coordinates</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>Facilitiy US National Grid Coordinates</definition>
+													<definition>Facility US National Grid Coordinates</definition>
 													<v2Number/>
 													<usage>Optional</usage>
 													<performanceMeasure/>
@@ -323,7 +325,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
-			<xs:maxLength value="60"/>
+			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="FacilityRoom">

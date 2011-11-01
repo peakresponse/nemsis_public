@@ -8,7 +8,11 @@
 <usage>Recommended</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>Yes</pertinentNegative>
-<v3Comment>List of medications based on RxNorm (RXCUI) Code.</v3Comment>
+<v3Comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 PCS codes can be used for medication groups. (See suggested NEMSIS list.) 
+							<br/><br/>
+							<br/>Code list is represented in ICD-10 Codes. 
+							<br/>Website - <a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov</a> 
+							<br/>Product - UMLS Metathesaurus</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
 	<pertinentNegatives>
@@ -16,14 +20,14 @@
 		<choice><code>8801013</code><description>No Known Drug Allergies</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-      </constraints>
+      <patterns>
+        <pattern>Z88(\.[0-9])?|Z91.041</pattern>
+     </patterns>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

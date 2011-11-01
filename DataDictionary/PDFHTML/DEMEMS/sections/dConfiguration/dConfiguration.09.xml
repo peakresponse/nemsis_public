@@ -27,9 +27,17 @@ since each EMS Agency Number may have different capabilities.
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-      </constraints>
-	<correlationID>Yes</correlationID>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>7</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

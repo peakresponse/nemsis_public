@@ -13,7 +13,7 @@
 <v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
 <table border="1px" cellpadding="3px" cellspacing="0">
-  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>
   <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
   <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
   <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
@@ -48,17 +48,17 @@
       <patterns>
         <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
      </patterns>
-      <constraints>
-        <dataType>dateTime</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>dateTime</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -84,27 +84,27 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9923001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>9923003</code>
-           <description>Yes</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
 </restrictions>
-</element><group number="eVitals.CardiacRhythmGroup" minOccurs="1" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+</element><group number="eVitals.CardiacRhythmGroup" minOccurs="1" maxOccurs="1" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eVitals.03" minOccurs="1" maxOccurs="M" isNillable="Yes">
-<name>Cardiac Rhythm and Electrocardiography</name>
+<name>Cardiac Rhythm / Electrocardiography (ECG)</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The initial cardiac rhythm of the patient as interpreted by EMS personnel.</definition>
+<definition>The cardiac rhythm / ECG and other electrocardiography findings of the patient as interpreted by EMS personnel.</definition>
 <v2Number>E14_03</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
@@ -120,157 +120,157 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>9901001</code>
-           <description>Agonal/Idioventricular</description>
-        </choice>
-        <choice>
-           <code>9901003</code>
-           <description>Asystole</description>
-        </choice>
-        <choice>
-           <code>9901005</code>
-           <description>Artifact</description>
-        </choice>
-        <choice>
-           <code>9901007</code>
-           <description>Atrial Fibrillation</description>
-        </choice>
-        <choice>
-           <code>9901009</code>
-           <description>Atrial Flutter</description>
-        </choice>
-        <choice>
-           <code>9901011</code>
-           <description>AV Block-1st Degree</description>
-        </choice>
-        <choice>
-           <code>9901013</code>
-           <description>AV Block-2nd Degree-Type 1</description>
-        </choice>
-        <choice>
-           <code>9901015</code>
-           <description>AV Block-2nd Degree-Type 2</description>
-        </choice>
-        <choice>
-           <code>9901017</code>
-           <description>AV Block-3rd Degree</description>
-        </choice>
-        <choice>
-           <code>9901019</code>
-           <description>Junctional</description>
-        </choice>
-        <choice>
-           <code>9901021</code>
-           <description>Left Bundle Branch Block</description>
-        </choice>
-        <choice>
-           <code>9901023</code>
-           <description>Non-STEMI Anterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901025</code>
-           <description>Non-STEMI Inferior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901027</code>
-           <description>Non-STEMI Lateral Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901029</code>
-           <description>Non-STEMI Posterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901031</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>9901033</code>
-           <description>Paced Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901035</code>
-           <description>PEA</description>
-        </choice>
-        <choice>
-           <code>9901037</code>
-           <description>Premature Atrial Contractions</description>
-        </choice>
-        <choice>
-           <code>9901039</code>
-           <description>Premature Ventricular Contractions</description>
-        </choice>
-        <choice>
-           <code>9901041</code>
-           <description>Right Bundle Branch Block</description>
-        </choice>
-        <choice>
-           <code>9901043</code>
-           <description>Sinus Arrhythmia</description>
-        </choice>
-        <choice>
-           <code>9901045</code>
-           <description>Sinus Bradycardia</description>
-        </choice>
-        <choice>
-           <code>9901047</code>
-           <description>Sinus Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901049</code>
-           <description>Sinus Tachycardia</description>
-        </choice>
-        <choice>
-           <code>9901051</code>
-           <description>STEMI Anterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901053</code>
-           <description>STEMI Inferior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901055</code>
-           <description>STEMI Lateral Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901057</code>
-           <description>STEMI Posterior Ischemia</description>
-        </choice>
-        <choice>
-           <code>9901059</code>
-           <description>Supraventricular Tachycardia</description>
-        </choice>
-        <choice>
-           <code>9901061</code>
-           <description>Torsades De Points</description>
-        </choice>
-        <choice>
-           <code>9901063</code>
-           <description>Unknown AED Non-Shockable Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901065</code>
-           <description>Unknown AED Shockable Rhythm</description>
-        </choice>
-        <choice>
-           <code>9901067</code>
-           <description>Ventricular Fibrillation</description>
-        </choice>
-        <choice>
-           <code>9901069</code>
-           <description>Ventricular Tachycardia (With Pulse)</description>
-        </choice>
-        <choice>
-           <code>9901071</code>
-           <description>Ventricular Tachycardia (Pulseless)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9901001</code>
+      <description>Agonal/Idioventricular</description>
+    </choice>
+    <choice>
+      <code>9901003</code>
+      <description>Asystole</description>
+    </choice>
+    <choice>
+      <code>9901005</code>
+      <description>Artifact</description>
+    </choice>
+    <choice>
+      <code>9901007</code>
+      <description>Atrial Fibrillation</description>
+    </choice>
+    <choice>
+      <code>9901009</code>
+      <description>Atrial Flutter</description>
+    </choice>
+    <choice>
+      <code>9901011</code>
+      <description>AV Block-1st Degree</description>
+    </choice>
+    <choice>
+      <code>9901013</code>
+      <description>AV Block-2nd Degree-Type 1</description>
+    </choice>
+    <choice>
+      <code>9901015</code>
+      <description>AV Block-2nd Degree-Type 2</description>
+    </choice>
+    <choice>
+      <code>9901017</code>
+      <description>AV Block-3rd Degree</description>
+    </choice>
+    <choice>
+      <code>9901019</code>
+      <description>Junctional</description>
+    </choice>
+    <choice>
+      <code>9901021</code>
+      <description>Left Bundle Branch Block</description>
+    </choice>
+    <choice>
+      <code>9901023</code>
+      <description>Non-STEMI Anterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901025</code>
+      <description>Non-STEMI Inferior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901027</code>
+      <description>Non-STEMI Lateral Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901029</code>
+      <description>Non-STEMI Posterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901031</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>9901033</code>
+      <description>Paced Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901035</code>
+      <description>PEA</description>
+    </choice>
+    <choice>
+      <code>9901037</code>
+      <description>Premature Atrial Contractions</description>
+    </choice>
+    <choice>
+      <code>9901039</code>
+      <description>Premature Ventricular Contractions</description>
+    </choice>
+    <choice>
+      <code>9901041</code>
+      <description>Right Bundle Branch Block</description>
+    </choice>
+    <choice>
+      <code>9901043</code>
+      <description>Sinus Arrhythmia</description>
+    </choice>
+    <choice>
+      <code>9901045</code>
+      <description>Sinus Bradycardia</description>
+    </choice>
+    <choice>
+      <code>9901047</code>
+      <description>Sinus Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901049</code>
+      <description>Sinus Tachycardia</description>
+    </choice>
+    <choice>
+      <code>9901051</code>
+      <description>STEMI Anterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901053</code>
+      <description>STEMI Inferior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901055</code>
+      <description>STEMI Lateral Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901057</code>
+      <description>STEMI Posterior Ischemia</description>
+    </choice>
+    <choice>
+      <code>9901059</code>
+      <description>Supraventricular Tachycardia</description>
+    </choice>
+    <choice>
+      <code>9901061</code>
+      <description>Torsades De Points</description>
+    </choice>
+    <choice>
+      <code>9901063</code>
+      <description>Unknown AED Non-Shockable Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901065</code>
+      <description>Unknown AED Shockable Rhythm</description>
+    </choice>
+    <choice>
+      <code>9901067</code>
+      <description>Ventricular Fibrillation</description>
+    </choice>
+    <choice>
+      <code>9901069</code>
+      <description>Ventricular Tachycardia (With Pulse)</description>
+    </choice>
+    <choice>
+      <code>9901071</code>
+      <description>Ventricular Tachycardia (Pulseless)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eVitals.04" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>ECG Type</name>
@@ -287,40 +287,40 @@
 <performanceMeasure>STEMI</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3304001</code>
-           <description>3 Lead</description>
-        </choice>
-        <choice>
-           <code>3304003</code>
-           <description>4 Lead</description>
-        </choice>
-        <choice>
-           <code>3304005</code>
-           <description>5 Lead</description>
-        </choice>
-        <choice>
-           <code>3304007</code>
-           <description>12 Lead-Left Sided (Normal)</description>
-        </choice>
-        <choice>
-           <code>3304009</code>
-           <description>12 Lead-Right Sided</description>
-        </choice>
-        <choice>
-           <code>3304011</code>
-           <description>15 Lead</description>
-        </choice>
-        <choice>
-           <code>3304013</code>
-           <description>18 Lead</description>
-        </choice>
-        <choice>
-           <code>3304015</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3304001</code>
+      <description>3 Lead</description>
+    </choice>
+    <choice>
+      <code>3304003</code>
+      <description>4 Lead</description>
+    </choice>
+    <choice>
+      <code>3304005</code>
+      <description>5 Lead</description>
+    </choice>
+    <choice>
+      <code>3304007</code>
+      <description>12 Lead-Left Sided (Normal)</description>
+    </choice>
+    <choice>
+      <code>3304009</code>
+      <description>12 Lead-Right Sided</description>
+    </choice>
+    <choice>
+      <code>3304011</code>
+      <description>15 Lead</description>
+    </choice>
+    <choice>
+      <code>3304013</code>
+      <description>18 Lead</description>
+    </choice>
+    <choice>
+      <code>3304015</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -341,29 +341,29 @@
 <performanceMeasure>STEMI</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3305001</code>
-           <description>Computer Interpretation</description>
-        </choice>
-        <choice>
-           <code>3305003</code>
-           <description>Manual Interpretation</description>
-        </choice>
-        <choice>
-           <code>3305005</code>
-           <description>Transmission with No Interpretation</description>
-        </choice>
-        <choice>
-           <code>3305007</code>
-           <description>Transmission with Remote Interpretation</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3305001</code>
+      <description>Computer Interpretation</description>
+    </choice>
+    <choice>
+      <code>3305003</code>
+      <description>Manual Interpretation</description>
+    </choice>
+    <choice>
+      <code>3305005</code>
+      <description>Transmission with No Interpretation</description>
+    </choice>
+    <choice>
+      <code>3305007</code>
+      <description>Transmission with Remote Interpretation</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
 <group number="eVitals.BloodPressureGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
@@ -392,17 +392,17 @@
 		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>500</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>500</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -446,38 +446,39 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3308001</code>
-           <description>Arterial Line</description>
-        </choice>
-        <choice>
-           <code>3308003</code>
-           <description>Doppler</description>
-        </choice>
-        <choice>
-           <code>3308005</code>
-           <description>Cuff-Automated</description>
-        </choice>
-        <choice>
-           <code>3308007</code>
-           <description>Cuff-Manual Auscultated</description>
-        </choice>
-        <choice>
-           <code>3308009</code>
-           <description>Cuff-Manual Palpated Only</description>
-        </choice>
-        <choice>
-           <code>3308011</code>
-           <description>Venous Line</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3308001</code>
+      <description>Arterial Line</description>
+    </choice>
+    <choice>
+      <code>3308003</code>
+      <description>Doppler</description>
+    </choice>
+    <choice>
+      <code>3308005</code>
+      <description>Cuff-Automated</description>
+    </choice>
+    <choice>
+      <code>3308007</code>
+      <description>Cuff-Manual Auscultated</description>
+    </choice>
+    <choice>
+      <code>3308009</code>
+      <description>Cuff-Manual Palpated Only</description>
+    </choice>
+    <choice>
+      <code>3308011</code>
+      <description>Venous Line</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
 </restrictions>
 </element></group>
+<group number="eVitals.HeartRateGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
 <element number="eVitals.09" minOccurs="0" maxOccurs="1" dataType="MAP" isNillable="No">
 <name>Mean Arterial Pressure</name>
 <national>No</national>
@@ -490,20 +491,19 @@
 <v3Comment></v3Comment>
 <v3Changes>Added for additional patient monitoring capability.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>500</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>500</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
-</element><group number="eVitals.HeartRateGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
-<element number="eVitals.10" minOccurs="1" maxOccurs="1" isNillable="Yes">
+</element><element number="eVitals.10" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Heart Rate</name>
 <national>Yes</national>
 <state>Yes</state>
@@ -528,17 +528,17 @@
 		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>500</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>500</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -556,32 +556,32 @@
 <v3Comment>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Comment>
 <v3Changes>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3311001</code>
-           <description>Auscultated</description>
-        </choice>
-        <choice>
-           <code>3311003</code>
-           <description>Doppler</description>
-        </choice>
-        <choice>
-           <code>3311005</code>
-           <description>Electronic Monitor - Cardiac</description>
-        </choice>
-        <choice>
-           <code>3311007</code>
-           <description>Electronic Monitor - Pulse Oximeter</description>
-        </choice>
-        <choice>
-           <code>3311009</code>
-           <description>Electronic Monitor (Other)</description>
-        </choice>
-        <choice>
-           <code>3311011</code>
-           <description>Palpated</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3311001</code>
+      <description>Auscultated</description>
+    </choice>
+    <choice>
+      <code>3311003</code>
+      <description>Doppler</description>
+    </choice>
+    <choice>
+      <code>3311005</code>
+      <description>Electronic Monitor - Cardiac</description>
+    </choice>
+    <choice>
+      <code>3311007</code>
+      <description>Electronic Monitor - Pulse Oximeter</description>
+    </choice>
+    <choice>
+      <code>3311009</code>
+      <description>Electronic Monitor (Other)</description>
+    </choice>
+    <choice>
+      <code>3311011</code>
+      <description>Palpated</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element></group>
 <element number="eVitals.12" minOccurs="1" maxOccurs="1" isNillable="Yes">
@@ -609,17 +609,17 @@
 		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -637,20 +637,20 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3313001</code>
-           <description>Irregularly Irregular</description>
-        </choice>
-        <choice>
-           <code>3313003</code>
-           <description>Regular</description>
-        </choice>
-        <choice>
-           <code>3313005</code>
-           <description>Regulary Irregular</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3313001</code>
+      <description>Irregularly Irregular</description>
+    </choice>
+    <choice>
+      <code>3313003</code>
+      <description>Regular</description>
+    </choice>
+    <choice>
+      <code>3313005</code>
+      <description>Regulary Irregular</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eVitals.14" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Respiratory Rate</name>
@@ -677,17 +677,17 @@
 		<choice><code>8801005</code><description>Exam Finding Not Present</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>300</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>300</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -708,36 +708,36 @@
 	<pertinentNegatives>
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3315001</code>
-           <description>Apneic</description>
-        </choice>
-        <choice>
-           <code>3315003</code>
-           <description>Labored</description>
-        </choice>
-        <choice>
-           <code>3315005</code>
-           <description>Mechanically Assisted (BVM, CPAP,etc)</description>
-        </choice>
-        <choice>
-           <code>3315007</code>
-           <description>Normal</description>
-        </choice>
-        <choice>
-           <code>3315009</code>
-           <description>Rapid</description>
-        </choice>
-        <choice>
-           <code>3315011</code>
-           <description>Shallow</description>
-        </choice>
-        <choice>
-           <code>3315013</code>
-           <description>Weak/Agonal</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3315001</code>
+      <description>Apneic</description>
+    </choice>
+    <choice>
+      <code>3315003</code>
+      <description>Labored</description>
+    </choice>
+    <choice>
+      <code>3315005</code>
+      <description>Mechanically Assisted (BVM, CPAP,etc)</description>
+    </choice>
+    <choice>
+      <code>3315007</code>
+      <description>Normal</description>
+    </choice>
+    <choice>
+      <code>3315009</code>
+      <description>Rapid</description>
+    </choice>
+    <choice>
+      <code>3315011</code>
+      <description>Shallow</description>
+    </choice>
+    <choice>
+      <code>3315013</code>
+      <description>Weak/Agonal</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eVitals.16" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Carbon Dioxide (CO2)</name>
@@ -763,45 +763,53 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
 </restrictions>
-</element><element number="eVitals.17" minOccurs="0" maxOccurs="1" dataType="CarbonMonoxideLevel" isNillable="No">
+</element><element number="eVitals.17" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Carbon Monoxide (CO)</name>
 <national>No</national>
-<state>No</state>
+<state>Yes</state>
 <definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
 <v2Number></v2Number>
-<usage>Optional</usage>
-<notValue>No</notValue>
-<pertinentNegative>No</pertinentNegative>
+<usage>Recommended</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
 <v3Comment></v3Comment>
 <v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-      </constraints>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+  </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
 </restrictions>
 </element><element number="eVitals.18" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Blood Glucose Level</name>
@@ -823,17 +831,17 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2000</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2000</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -864,24 +872,24 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>1</code>
-           <description>No eye movement when assessed (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>2</code>
-           <description>Opens Eyes to painful stimulation (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>3</code>
-           <description>Opens Eyes to verbal stimulation (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>4</code>
-           <description>Opens Eyes spontaneously (All Age Groups)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>1</code>
+      <description>No eye movement when assessed (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>2</code>
+      <description>Opens Eyes to painful stimulation (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>3</code>
+      <description>Opens Eyes to verbal stimulation (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>4</code>
+      <description>Opens Eyes spontaneously (All Age Groups)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -897,7 +905,7 @@
 <notValue>Yes</notValue>
 <pertinentNegative>Yes</pertinentNegative>
 <v3Comment>Definitions now based on the National Trauma Data Standard (NTDS).</v3Comment>
-<v3Changes>Definitions changed to be consistent with the National Trauma Data Standard.</v3Changes>
+<v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
 <performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -911,28 +919,28 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>1</code>
-           <description>No verbal/vocal response (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>2</code>
-           <description>Incomprehensible sounds (&gt;2 Years); Inconsolable, agitated</description>
-        </choice>
-        <choice>
-           <code>3</code>
-           <description>Inappropriate words (&gt;2 Years); Inconsistently consolable, moaning</description>
-        </choice>
-        <choice>
-           <code>4</code>
-           <description>Confused (&gt;2 Years); Cries but is consolable, inappropriate interactions</description>
-        </choice>
-        <choice>
-           <code>5</code>
-           <description>Oriented (&gt;2 Years); Smiles, oriented to sounds, follows objects, interacts</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>1</code>
+      <description>No verbal/vocal response (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>2</code>
+      <description>Incomprehensible sounds (&gt;2 Years); Inconsolable, agitated</description>
+    </choice>
+    <choice>
+      <code>3</code>
+      <description>Inappropriate words (&gt;2 Years); Inconsistently consolable, moaning</description>
+    </choice>
+    <choice>
+      <code>4</code>
+      <description>Confused (&gt;2 Years); Cries but is consolable, inappropriate interactions</description>
+    </choice>
+    <choice>
+      <code>5</code>
+      <description>Oriented (&gt;2 Years); Smiles, oriented to sounds, follows objects, interacts</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -942,13 +950,13 @@
 <name>Glasgow Coma Score-Motor</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition></definition>
+<definition>The patient's Glasgow Coma Score Motor</definition>
 <v2Number>E14_17</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>Yes</pertinentNegative>
 <v3Comment>Definitions now based on the National Trauma Data Standard (NTDS).</v3Comment>
-<v3Changes>Definitions now based on the National Trauma Data Standard (NTDS).</v3Changes>
+<v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
 <performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -962,32 +970,32 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>1</code>
-           <description>No Motor Response (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>2</code>
-           <description>Extension to pain (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>3</code>
-           <description>Flexion to pain (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>4</code>
-           <description>Withdrawal from pain (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>5</code>
-           <description>Localizing pain (All Age Groups)</description>
-        </choice>
-        <choice>
-           <code>6</code>
-           <description>Obeys commands (&gt;2Years); Appropriate response to stimulation</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>1</code>
+      <description>No Motor Response (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>2</code>
+      <description>Extension to pain (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>3</code>
+      <description>Flexion to pain (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>4</code>
+      <description>Withdrawal from pain (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>5</code>
+      <description>Localizing pain (All Age Groups)</description>
+    </choice>
+    <choice>
+      <code>6</code>
+      <description>Obeys commands (&gt;2Years); Appropriate response to stimulation</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1003,7 +1011,7 @@
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
 <v3Comment>Definitions now based on the National Trauma Data Standard (NTDS).</v3Comment>
-<v3Changes>Definitions now based on the National Trauma Data Standard (NTDS).</v3Changes>
+<v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
 <performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -1013,33 +1021,33 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3322001</code>
-           <description>Eye Obstruction Prevents Eye Assessment</description>
-        </choice>
-        <choice>
-           <code>3322003</code>
-           <description>Initial GCS has legitimate values without interventions such as intubation and sedation</description>
-        </choice>
-        <choice>
-           <code>3322005</code>
-           <description>Patient Chemically Paralyzed</description>
-        </choice>
-        <choice>
-           <code>3322007</code>
-           <description>Patient Chemically Sedated</description>
-        </choice>
-        <choice>
-           <code>3322009</code>
-           <description>Patient Intubated</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3322001</code>
+      <description>Eye Obstruction Prevents Eye Assessment</description>
+    </choice>
+    <choice>
+      <code>3322003</code>
+      <description>Initial GCS has legitimate values without interventions such as intubation and sedation</description>
+    </choice>
+    <choice>
+      <code>3322005</code>
+      <description>Patient Chemically Paralyzed</description>
+    </choice>
+    <choice>
+      <code>3322007</code>
+      <description>Patient Chemically Sedated</description>
+    </choice>
+    <choice>
+      <code>3322009</code>
+      <description>Patient Intubated</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eVitals.23" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Total Glasgow Coma Score</name>
@@ -1065,17 +1073,17 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>3</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>15</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>3</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>15</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1083,7 +1091,7 @@
 	</notValues>
 </restrictions>
 </element></group>
-<group number="eVitals.TemperatureGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<group number="eVitals.TemperatureGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
 <element number="eVitals.24" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Temperature</name>
 <national>No</national>
@@ -1103,25 +1111,25 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>decimal</dataType>
-        <constraint>
-          <constraintTitle>totalDigits</constraintTitle>
-          <constraintValue>3</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>fractionDigits</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>50.0</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>3</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>50.0</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1140,40 +1148,40 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3325001</code>
-           <description>Axillary</description>
-        </choice>
-        <choice>
-           <code>3325003</code>
-           <description>Central (Venous or Arterial)</description>
-        </choice>
-        <choice>
-           <code>3325005</code>
-           <description>Esophageal</description>
-        </choice>
-        <choice>
-           <code>3325007</code>
-           <description>Oral</description>
-        </choice>
-        <choice>
-           <code>3325009</code>
-           <description>Rectal</description>
-        </choice>
-        <choice>
-           <code>3325011</code>
-           <description>Temporal Artery</description>
-        </choice>
-        <choice>
-           <code>3325013</code>
-           <description>Tympanic</description>
-        </choice>
-        <choice>
-           <code>3325015</code>
-           <description>Urinary Catheter</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3325001</code>
+      <description>Axillary</description>
+    </choice>
+    <choice>
+      <code>3325003</code>
+      <description>Central (Venous or Arterial)</description>
+    </choice>
+    <choice>
+      <code>3325005</code>
+      <description>Esophageal</description>
+    </choice>
+    <choice>
+      <code>3325007</code>
+      <description>Oral</description>
+    </choice>
+    <choice>
+      <code>3325009</code>
+      <description>Rectal</description>
+    </choice>
+    <choice>
+      <code>3325011</code>
+      <description>Temporal Artery</description>
+    </choice>
+    <choice>
+      <code>3325013</code>
+      <description>Tympanic</description>
+    </choice>
+    <choice>
+      <code>3325015</code>
+      <description>Urinary Catheter</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element></group>
 <element number="eVitals.26" minOccurs="1" maxOccurs="1" isNillable="Yes">
@@ -1200,24 +1208,24 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3326001</code>
-           <description>Alert</description>
-        </choice>
-        <choice>
-           <code>3326003</code>
-           <description>Verbal</description>
-        </choice>
-        <choice>
-           <code>3326005</code>
-           <description>Painful</description>
-        </choice>
-        <choice>
-           <code>3326007</code>
-           <description>Unresponsive</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3326001</code>
+      <description>Alert</description>
+    </choice>
+    <choice>
+      <code>3326003</code>
+      <description>Verbal</description>
+    </choice>
+    <choice>
+      <code>3326005</code>
+      <description>Painful</description>
+    </choice>
+    <choice>
+      <code>3326007</code>
+      <description>Unresponsive</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1245,17 +1253,17 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>10</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>10</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1273,24 +1281,24 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document the patient's pain level.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3328001</code>
-           <description>FLACC (Face, Legs, Activity, Cry, Consolability)</description>
-        </choice>
-        <choice>
-           <code>3328003</code>
-           <description>Numeric (0-10)</description>
-        </choice>
-        <choice>
-           <code>3328005</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>3328007</code>
-           <description>Wong-Baker (FACES)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3328001</code>
+      <description>FLACC (Face, Legs, Activity, Cry, Consolability)</description>
+    </choice>
+    <choice>
+      <code>3328003</code>
+      <description>Numeric (0-10)</description>
+    </choice>
+    <choice>
+      <code>3328005</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>3328007</code>
+      <description>Wong-Baker (FACES)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1318,20 +1326,20 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3329001</code>
-           <description>Negative</description>
-        </choice>
-        <choice>
-           <code>3329003</code>
-           <description>Non-Conclusive</description>
-        </choice>
-        <choice>
-           <code>3329005</code>
-           <description>Positive</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3329001</code>
+      <description>Negative</description>
+    </choice>
+    <choice>
+      <code>3329003</code>
+      <description>Non-Conclusive</description>
+    </choice>
+    <choice>
+      <code>3329005</code>
+      <description>Positive</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1352,32 +1360,32 @@
 <performanceMeasure>Stroke</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3330001</code>
-           <description>Cincinnati</description>
-        </choice>
-        <choice>
-           <code>3330003</code>
-           <description>Los Angeles</description>
-        </choice>
-        <choice>
-           <code>3330005</code>
-           <description>Massachusetts</description>
-        </choice>
-        <choice>
-           <code>3330007</code>
-           <description>Miami Emergency Neurologic Deficit (MEND)</description>
-        </choice>
-        <choice>
-           <code>3330009</code>
-           <description>NIH</description>
-        </choice>
-        <choice>
-           <code>3330011</code>
-           <description>Other Stoke Scale Type</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3330001</code>
+      <description>Cincinnati</description>
+    </choice>
+    <choice>
+      <code>3330003</code>
+      <description>Los Angeles</description>
+    </choice>
+    <choice>
+      <code>3330005</code>
+      <description>Massachusetts</description>
+    </choice>
+    <choice>
+      <code>3330007</code>
+      <description>Miami Emergency Neurologic Deficit (MEND)</description>
+    </choice>
+    <choice>
+      <code>3330009</code>
+      <description>NIH</description>
+    </choice>
+    <choice>
+      <code>3330011</code>
+      <description>Other Stoke Scale Type</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1404,20 +1412,20 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <enumerations>
-        <choice>
-           <code>3331001</code>
-           <description>Definite Contraindications to Thrombolytic Use</description>
-        </choice>
-        <choice>
-           <code>3331003</code>
-           <description>No Contraindications to Thrombolytic Use</description>
-        </choice>
-        <choice>
-           <code>3331005</code>
-           <description>Possible Contraindications to Thrombolytic Use</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3331001</code>
+      <description>Definite Contraindications to Thrombolytic Use</description>
+    </choice>
+    <choice>
+      <code>3331003</code>
+      <description>No Contraindications to Thrombolytic Use</description>
+    </choice>
+    <choice>
+      <code>3331005</code>
+      <description>Possible Contraindications to Thrombolytic Use</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1438,17 +1446,17 @@
 	<pertinentNegatives>
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>10</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>10</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eVitals.33" minOccurs="0" maxOccurs="1" isNillable="No">
 <name>Revised Trauma Score</name>
@@ -1469,17 +1477,17 @@
 		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
 		<choice><code>8801019</code><description>Refused</description>		</choice>
 	</pertinentNegatives>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>0</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>12</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>12</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element></group>
 </section>

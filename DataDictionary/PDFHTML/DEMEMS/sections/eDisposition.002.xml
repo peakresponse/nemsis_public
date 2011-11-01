@@ -5,7 +5,7 @@
 <name>Destination/Transferred To, Name</name>
 <national>No</national>
 <state>Yes</state>
-<definition>The destination the patient was delivered or transferred to</definition>
+<definition>The destination the patient was delivered or transferred to.</definition>
 <v2Number>E20_01</v2Number>
 <usage>Recommended</usage>
 <notValue>Yes</notValue>
@@ -21,17 +21,17 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>60</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -42,12 +42,12 @@
 <name>Destination/Transferred To, Code</name>
 <national>No</national>
 <state>Yes</state>
-<definition>The code of the destination the patient was delivered or transferred to</definition>
+<definition>The code of the destination the patient was delivered or transferred to.</definition>
 <v2Number>E20_02</v2Number>
 <usage>Recommended</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>May be populated from list in dFacility.03 (Facility Location Code) or dFacility.05 (Facility National Provider Identifier) if a health care facility. NPI codes can be found on the NEMSIS webiste.</v3Comment>
+<v3Comment>May be populated from list in dFacility.03 (Facility Location Code) or dFacility.05 (Facility National Provider Identifier) if a health care facility. NPI codes can be found on the NEMSIS SharePoint site.</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
@@ -58,17 +58,17 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>50</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -79,54 +79,66 @@
 <name>Destination Street Address</name>
 <national>No</national>
 <state>Yes</state>
-<definition>The street address of the destination the patient was delivered or transferred to</definition>
+<definition>The street address of the destination the patient was delivered or transferred to.</definition>
 <v2Number>E20_03</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>May be auto-poplulated if list created in dFacility.08 (Facility Street Address).</v3Comment>
+<v3Comment>May be auto-populated if list created in dFacility.07 (Facility Street Address).</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>maxLength</constraintTitle>
-          <constraintValue>55</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>minLength</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
-	<StreetAddress>Yes</StreetAddress>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>55</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
+  <streetAddress>
+    <constraints>
+      <dataType>string</dataType>
+      <constraint>
+        <constraintTitle>minLength</constraintTitle>
+        <constraintValue>1</constraintValue>
+      </constraint>
+      <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+        <constraintValue>55</constraintValue>
+      </constraint>
+    </constraints>
+  </streetAddress>
 </restrictions>
 </element><element number="eDisposition.04" minOccurs="0" maxOccurs="1" dataType="CityGnisCode" isNillable="No">
 <name>Destination City</name>
 <national>No</national>
 <state>Yes</state>
-<definition>The city name of the destination the patient was delivered or transferred to</definition>
+<definition>The city name of the destination the patient was delivered or transferred to.</definition>
 <v2Number>E20_04</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Based on GNIS Civil Code or Populated Place code. May be auto-poplulated if list created in dFacility.09 (Facility City).
+<v3Comment>Based on GNIS Civil Code or Populated Place code. May be auto-populated if list created in dFacility.08 (Facility City).
 										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-      </constraints>
+  <constraints>
+    <dataType>positiveInteger</dataType>
+  </constraints>
 </restrictions>
 </element><element number="eDisposition.05" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Destination State</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The state of the destination the patient was delivered or transferred to</definition>
+<definition>The state of the destination the patient was delivered or transferred to.</definition>
 <v2Number>E20_05</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Based on the ANSI Code. May be auto-poplulated if list created in dFacility.10 (Facility State).<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
 <performanceMeasure>Airway</performanceMeasure>
@@ -138,13 +150,13 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -154,12 +166,12 @@
 <name>Destination County</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The destination county in which  the patient was delivered or transferred to</definition>
+<definition>The destination county in which  the patient was delivered or transferred to.</definition>
 <v2Number>E20_06</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>May be auto-poplulated if list created in dFacility.12 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
+<v3Comment>May be auto-populated if list created in dFacility.11 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
 							<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
@@ -172,13 +184,13 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>5</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>5</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -189,12 +201,12 @@
 <name>Destination ZIP Code</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>The destination ZIP code in which  the patient was delivered or transferred to</definition>
+<definition>The destination ZIP code in which  the patient was delivered or transferred to.</definition>
 <v2Number>E20_07</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>May be auto-poplulated if list created in dFacility.14 (Facility ZIP Code). <br/><br/>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+<v3Comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).<br/><br/>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
 <br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
@@ -219,35 +231,35 @@
 <name>Destination Country</name>
 <national>No</national>
 <state>No</state>
-<definition>The country of the destination</definition>
+<definition>The country of the destination.</definition>
 <v2Number></v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>May be auto-poplulated if list created in dFacility.13 (Facility Country).<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
+<v3Comment>May be auto-populated if list created in dFacility.12 (Facility Country).<br/><br/>ANSI Country Codes (ISO 3166) Website: <a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a></v3Comment>
 <v3Changes>Added for improved international compatibility.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>string</dataType>
-        <constraint>
-          <constraintTitle>length</constraintTitle>
-          <constraintValue>2</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element><element number="eDisposition.09" minOccurs="0" maxOccurs="1" dataType="GPSLocation" isNillable="No">
 <name>Destination GPS Location</name>
 <national>No</national>
 <state>No</state>
-<definition>The destination GPS Coordinates to which  the patient was delivered or transferred to</definition>
+<definition>The destination GPS Coordinates to which  the patient was delivered or transferred to.</definition>
 <v2Number>E20_08</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>May be auto-poplulated if list created in dFacility.14 (Facility GPS Location).
+<v3Comment>May be auto-populated if list created in dFacility.13 (Facility GPS Location).
 										  <br/><br/>The pattern for GPS location is in the format "<span style="font-style:italic">latitude</span>,<span style="font-style:italic">longitude</span>" where:
-										  <br/>- <span style="font-style:italic">latitude</span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
-										  <br/>- <span style="font-style:italic">longitude</span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places</v3Comment>
+										  <br/>- <span style="font-style:italic">latitude</span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
+										  <br/>- <span style="font-style:italic">longitude</span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
       <patterns>
@@ -258,12 +270,13 @@
 <name>Disposition Location US National Grid Coordinates</name>
 <national>No</national>
 <state>No</state>
-<definition>Facilitiy US National Grid Coordinates</definition>
+<definition>The US National Grid Coordinates for the Disposition Location.  This may be the Healthcare Facility US National Grid Coordinates.</definition>
 <v2Number></v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Standard found at www.fgdc.gov/usng. May be auto-poplulated if list created in dFacility.15 (Facilitiy US National Grid Coordinates).</v3Comment>
+<v3Comment>Standard found at www.fgdc.gov/usng. <br/>
+										Through programming this may be partially auto-populated if the list is created in dFacility.14 (Facility US National Grid Coordinates).</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
       <patterns>
@@ -283,17 +296,17 @@
 <v3Comment>Added to document multiple patients being transported with the same vehicle and crew.</v3Comment>
 <v3Changes>Added to document multiple patients being transported with the same vehicle and crew.</v3Changes>
 <restrictions>
-      <constraints>
-        <dataType>positiveInteger</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>100</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>positiveInteger</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -304,7 +317,7 @@
 <name>Incident/Patient Disposition</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>Type of disposition treatment and/or transport of the patient_</definition>
+<definition>Type of disposition treatment and/or transport of the patient by this EMS Unit.</definition>
 <v2Number>E20_10</v2Number>
 <usage>Mandatory</usage>
 <notValue>No</notValue>
@@ -321,80 +334,88 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4212001</code>
-           <description>Assist, Agency</description>
-        </choice>
-        <choice>
-           <code>4212003</code>
-           <description>Assist, Public</description>
-        </choice>
-        <choice>
-           <code>4212005</code>
-           <description>Assist, Unit</description>
-        </choice>
-        <choice>
-           <code>4212007</code>
-           <description>Cancelled (Prior to Arrival At Scene)</description>
-        </choice>
-        <choice>
-           <code>4212009</code>
-           <description>No Patient Found (Canceled on Scene)</description>
-        </choice>
-        <choice>
-           <code>4212011</code>
-           <description>Patient Dead at Scene-No EMS Transport</description>
-        </choice>
-        <choice>
-           <code>4212013</code>
-           <description>Patient Dead at Scene-Transported by EMS</description>
-        </choice>
-        <choice>
-           <code>4212015</code>
-           <description>Patient Evaluated, No Treatment/Transport Required</description>
-        </choice>
-        <choice>
-           <code>4212017</code>
-           <description>Patient Refused Evaluation/Care (With Transport)</description>
-        </choice>
-        <choice>
-           <code>4212019</code>
-           <description>Patient Treated, Released (AMA)</description>
-        </choice>
-        <choice>
-           <code>4212021</code>
-           <description>Patient Treated, Released (per protocol)</description>
-        </choice>
-        <choice>
-           <code>4212023</code>
-           <description>Patient Treated, Transferred Care to Another EMS Professional</description>
-        </choice>
-        <choice>
-           <code>4212025</code>
-           <description>Patient Treated, Transported by EMS</description>
-        </choice>
-        <choice>
-           <code>4212027</code>
-           <description>Patient Treated, Transported by Law Enforcement</description>
-        </choice>
-        <choice>
-           <code>4212029</code>
-           <description>Patient Treated, Transported by Private Vehicle</description>
-        </choice>
-        <choice>
-           <code>4212031</code>
-           <description>Standby-No Services or Support Provided</description>
-        </choice>
-        <choice>
-           <code>4212033</code>
-           <description>Standby-Public Safety, Fire, or EMS Operational Support Provided</description>
-        </choice>
-        <choice>
-           <code>4212035</code>
-           <description>Transport of Body Parts or Organs Only</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4212001</code>
+      <description>Assist, Agency</description>
+    </choice>
+    <choice>
+      <code>4212003</code>
+      <description>Assist, Public</description>
+    </choice>
+    <choice>
+      <code>4212005</code>
+      <description>Assist, Unit</description>
+    </choice>
+    <choice>
+      <code>4212007</code>
+      <description>Cancelled (Prior to Arrival At Scene)</description>
+    </choice>
+    <choice>
+      <code>4212009</code>
+      <description>No Patient Contact (Cancelled on Scene)</description>
+    </choice>
+    <choice>
+      <code>4212011</code>
+      <description>No Patient Found (Canceled on Scene)</description>
+    </choice>
+    <choice>
+      <code>4212013</code>
+      <description>Patient Dead at Scene-No EMS Transport</description>
+    </choice>
+    <choice>
+      <code>4212015</code>
+      <description>Patient Dead at Scene-Transported by EMS</description>
+    </choice>
+    <choice>
+      <code>4212017</code>
+      <description>Patient Evaluated, No Treatment/Transport Required</description>
+    </choice>
+    <choice>
+      <code>4212019</code>
+      <description>Patient Refused Evaluation/Care (With Transport)</description>
+    </choice>
+    <choice>
+      <code>4212021</code>
+      <description>Patient Refused Evaluation/Care and (Without Transport)</description>
+    </choice>
+    <choice>
+      <code>4212023</code>
+      <description>Patient Treated, Released (AMA)</description>
+    </choice>
+    <choice>
+      <code>4212025</code>
+      <description>Patient Treated, Released (per protocol)</description>
+    </choice>
+    <choice>
+      <code>4212027</code>
+      <description>Patient Treated, Transferred Care to Another EMS Professional</description>
+    </choice>
+    <choice>
+      <code>4212029</code>
+      <description>Patient Treated, Transported by EMS</description>
+    </choice>
+    <choice>
+      <code>4212031</code>
+      <description>Patient Treated, Transported by Law Enforcement</description>
+    </choice>
+    <choice>
+      <code>4212033</code>
+      <description>Patient Treated, Transported by Private Vehicle</description>
+    </choice>
+    <choice>
+      <code>4212035</code>
+      <description>Standby-No Services or Support Provided</description>
+    </choice>
+    <choice>
+      <code>4212037</code>
+      <description>Standby-Public Safety, Fire, or EMS Operational Support Provided</description>
+    </choice>
+    <choice>
+      <code>4212039</code>
+      <description>Transport of Body Parts or Organs Only</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eDisposition.13" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>How Patient Was Moved to Ambulance</name>
@@ -408,41 +429,41 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9909001</code>
-           <description>Assisted/Walk</description>
-        </choice>
-        <choice>
-           <code>9909003</code>
-           <description>Backboard</description>
-        </choice>
-        <choice>
-           <code>9909005</code>
-           <description>Chair</description>
-        </choice>
-        <choice>
-           <code>9909007</code>
-           <description>Carried</description>
-        </choice>
-        <choice>
-           <code>9909009</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>9909011</code>
-           <description>Stairchair</description>
-        </choice>
-        <choice>
-           <code>9909013</code>
-           <description>Stretcher</description>
-        </choice>
-        <choice>
-           <code>9909015</code>
-           <description>Wheelchair</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>9909001</code>
+      <description>Assisted/Walk</description>
+    </choice>
+    <choice>
+      <code>9909003</code>
+      <description>Backboard</description>
+    </choice>
+    <choice>
+      <code>9909005</code>
+      <description>Chair</description>
+    </choice>
+    <choice>
+      <code>9909007</code>
+      <description>Carried</description>
+    </choice>
+    <choice>
+      <code>9909009</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>9909011</code>
+      <description>Stairchair</description>
+    </choice>
+    <choice>
+      <code>9909013</code>
+      <description>Stretcher</description>
+    </choice>
+    <choice>
+      <code>9909015</code>
+      <description>Wheelchair</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eDisposition.14" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Position of Patient During Transport</name>
@@ -456,49 +477,49 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4214001</code>
-           <description>Car Seat</description>
-        </choice>
-        <choice>
-           <code>4214003</code>
-           <description>Fowlers (Semi-Upright Sitting)</description>
-        </choice>
-        <choice>
-           <code>4214005</code>
-           <description>Lateral Left</description>
-        </choice>
-        <choice>
-           <code>4214007</code>
-           <description>Lateral Right</description>
-        </choice>
-        <choice>
-           <code>4214009</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4214011</code>
-           <description>Prone</description>
-        </choice>
-        <choice>
-           <code>4214013</code>
-           <description>Semi-Fowlers</description>
-        </choice>
-        <choice>
-           <code>4214015</code>
-           <description>Sitting</description>
-        </choice>
-        <choice>
-           <code>4214017</code>
-           <description>Supine</description>
-        </choice>
-        <choice>
-           <code>4214019</code>
-           <description>Trendelenburg</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>4214001</code>
+      <description>Car Seat</description>
+    </choice>
+    <choice>
+      <code>4214003</code>
+      <description>Fowlers (Semi-Upright Sitting)</description>
+    </choice>
+    <choice>
+      <code>4214005</code>
+      <description>Lateral Left</description>
+    </choice>
+    <choice>
+      <code>4214007</code>
+      <description>Lateral Right</description>
+    </choice>
+    <choice>
+      <code>4214009</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4214011</code>
+      <description>Prone</description>
+    </choice>
+    <choice>
+      <code>4214013</code>
+      <description>Semi-Fowlers</description>
+    </choice>
+    <choice>
+      <code>4214015</code>
+      <description>Sitting</description>
+    </choice>
+    <choice>
+      <code>4214017</code>
+      <description>Supine</description>
+    </choice>
+    <choice>
+      <code>4214019</code>
+      <description>Trendelenburg</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eDisposition.15" minOccurs="0" maxOccurs="1" dataType="HowPatientWasMovedToFromAmbulance" isNillable="No">
 <name>How Patient Was Transported From Ambulance</name>
@@ -512,40 +533,40 @@
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9909001</code>
-           <description>Assisted/Walk</description>
-        </choice>
-        <choice>
-           <code>9909003</code>
-           <description>Backboard</description>
-        </choice>
-        <choice>
-           <code>9909005</code>
-           <description>Chair</description>
-        </choice>
-        <choice>
-           <code>9909007</code>
-           <description>Carried</description>
-        </choice>
-        <choice>
-           <code>9909009</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>9909011</code>
-           <description>Stairchair</description>
-        </choice>
-        <choice>
-           <code>9909013</code>
-           <description>Stretcher</description>
-        </choice>
-        <choice>
-           <code>9909015</code>
-           <description>Wheelchair</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9909001</code>
+      <description>Assisted/Walk</description>
+    </choice>
+    <choice>
+      <code>9909003</code>
+      <description>Backboard</description>
+    </choice>
+    <choice>
+      <code>9909005</code>
+      <description>Chair</description>
+    </choice>
+    <choice>
+      <code>9909007</code>
+      <description>Carried</description>
+    </choice>
+    <choice>
+      <code>9909009</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>9909011</code>
+      <description>Stairchair</description>
+    </choice>
+    <choice>
+      <code>9909013</code>
+      <description>Stretcher</description>
+    </choice>
+    <choice>
+      <code>9909015</code>
+      <description>Wheelchair</description>
+    </choice>
+  </enumerations>
 </restrictions>
 </element><element number="eDisposition.16" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>EMS Transport Method</name>
@@ -568,44 +589,44 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4216001</code>
-           <description>Air Medical-Fixed Wing</description>
-        </choice>
-        <choice>
-           <code>4216003</code>
-           <description>Air Medical-Rotor Craft</description>
-        </choice>
-        <choice>
-           <code>4216005</code>
-           <description>Ground-Ambulance</description>
-        </choice>
-        <choice>
-           <code>4216007</code>
-           <description>Ground-ATV or Rescue Vehicle</description>
-        </choice>
-        <choice>
-           <code>4216009</code>
-           <description>Ground-Bariatric</description>
-        </choice>
-        <choice>
-           <code>4216011</code>
-           <description>Ground-Other Not Listed</description>
-        </choice>
-        <choice>
-           <code>4216013</code>
-           <description>Ground-Mass Casualty Bus/Vehicle</description>
-        </choice>
-        <choice>
-           <code>4216015</code>
-           <description>Ground-Wheelchair Van</description>
-        </choice>
-        <choice>
-           <code>4216017</code>
-           <description>Water-Boat</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4216001</code>
+      <description>Air Medical-Fixed Wing</description>
+    </choice>
+    <choice>
+      <code>4216003</code>
+      <description>Air Medical-Rotor Craft</description>
+    </choice>
+    <choice>
+      <code>4216005</code>
+      <description>Ground-Ambulance</description>
+    </choice>
+    <choice>
+      <code>4216007</code>
+      <description>Ground-ATV or Rescue Vehicle</description>
+    </choice>
+    <choice>
+      <code>4216009</code>
+      <description>Ground-Bariatric</description>
+    </choice>
+    <choice>
+      <code>4216011</code>
+      <description>Ground-Other Not Listed</description>
+    </choice>
+    <choice>
+      <code>4216013</code>
+      <description>Ground-Mass Casualty Bus/Vehicle</description>
+    </choice>
+    <choice>
+      <code>4216015</code>
+      <description>Ground-Wheelchair Van</description>
+    </choice>
+    <choice>
+      <code>4216017</code>
+      <description>Water-Boat</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -632,24 +653,24 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4217001</code>
-           <description>Emergent (Immediate Response)</description>
-        </choice>
-        <choice>
-           <code>4217003</code>
-           <description>Emergent Downgraded to Non-Emergent</description>
-        </choice>
-        <choice>
-           <code>4217005</code>
-           <description>Non-Emergent</description>
-        </choice>
-        <choice>
-           <code>4217007</code>
-           <description>Non-Emergent Upgraded to Emergent</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4217001</code>
+      <description>Emergent (Immediate Response)</description>
+    </choice>
+    <choice>
+      <code>4217003</code>
+      <description>Emergent Downgraded to Non-Emergent</description>
+    </choice>
+    <choice>
+      <code>4217005</code>
+      <description>Non-Emergent</description>
+    </choice>
+    <choice>
+      <code>4217007</code>
+      <description>Non-Emergent Upgraded to Emergent</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -659,7 +680,7 @@
 <name>Additional Transport Mode Descriptors</name>
 <national>Yes</national>
 <state>Yes</state>
-<definition>Indication whether or not lights and/or sirens were used on the vehicle while leaving scene</definition>
+<definition>The documentation of transport mode techniques for this EMS response.</definition>
 <v2Number></v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
@@ -667,45 +688,33 @@
 <v3Comment>Information now split between eDisposition.17 (Transport Mode from Scene) and eDisposition.18 (Additional Transport Mode Descriptors). Element eDisposition.18  (Additional Transport Mode Descriptors) has been added to document the use of lights and sirens or other descriptive information.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4218001</code>
-           <description>Intersection Navigation-Against Normal Light Patterns</description>
-        </choice>
-        <choice>
-           <code>4218003</code>
-           <description>Intersection Navigation-With Automated Light Changing Technology</description>
-        </choice>
-        <choice>
-           <code>4218005</code>
-           <description>Intersection Navigation-With Normal Light Patterns</description>
-        </choice>
-        <choice>
-           <code>4218007</code>
-           <description>Lights and Sirens</description>
-        </choice>
-        <choice>
-           <code>4218009</code>
-           <description>Lights, No Sirens</description>
-        </choice>
-        <choice>
-           <code>4218011</code>
-           <description>No Lights and Sirens</description>
-        </choice>
-        <choice>
-           <code>4218013</code>
-           <description>Speed-Enhanced per Local Policy</description>
-        </choice>
-        <choice>
-           <code>4218015</code>
-           <description>Speed-Normal Traffic</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4218001</code>
+      <description>Intersection Navigation-Against Normal Light Patterns</description>
+    </choice>
+    <choice>
+      <code>4218003</code>
+      <description>Intersection Navigation-With Automated Light Changing Technology</description>
+    </choice>
+    <choice>
+      <code>4218005</code>
+      <description>Intersection Navigation-With Normal Light Patterns</description>
+    </choice>
+    <choice>
+      <code>4218007</code>
+      <description>Speed-Enhanced per Local Policy</description>
+    </choice>
+    <choice>
+      <code>4218009</code>
+      <description>Speed-Normal Traffic</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eDisposition.19" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Condition of Patient at Destination</name>
@@ -725,20 +734,20 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9916001</code>
-           <description>Improved</description>
-        </choice>
-        <choice>
-           <code>9916003</code>
-           <description>Unchanged</description>
-        </choice>
-        <choice>
-           <code>9916005</code>
-           <description>Worse</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9916001</code>
+      <description>Improved</description>
+    </choice>
+    <choice>
+      <code>9916003</code>
+      <description>Unchanged</description>
+    </choice>
+    <choice>
+      <code>9916005</code>
+      <description>Worse</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -763,57 +772,57 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4220001</code>
-           <description>Closest Facility</description>
-        </choice>
-        <choice>
-           <code>4220003</code>
-           <description>Diversion</description>
-        </choice>
-        <choice>
-           <code>4220005</code>
-           <description>Family Choice</description>
-        </choice>
-        <choice>
-           <code>4220007</code>
-           <description>Insurance Status/Requirement</description>
-        </choice>
-        <choice>
-           <code>4220009</code>
-           <description>Law Enforcement Choice</description>
-        </choice>
-        <choice>
-           <code>4220011</code>
-           <description>On-Line Medical Direction</description>
-        </choice>
-        <choice>
-           <code>4220013</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4220015</code>
-           <description>Patient's Choice</description>
-        </choice>
-        <choice>
-           <code>4220017</code>
-           <description>Patient's Physician's Choice</description>
-        </choice>
-        <choice>
-           <code>4220019</code>
-           <description>Protocol</description>
-        </choice>
-        <choice>
-           <code>4220021</code>
-           <description>Regional Specialty Center</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4220001</code>
+      <description>Closest Facility</description>
+    </choice>
+    <choice>
+      <code>4220003</code>
+      <description>Diversion</description>
+    </choice>
+    <choice>
+      <code>4220005</code>
+      <description>Family Choice</description>
+    </choice>
+    <choice>
+      <code>4220007</code>
+      <description>Insurance Status/Requirement</description>
+    </choice>
+    <choice>
+      <code>4220009</code>
+      <description>Law Enforcement Choice</description>
+    </choice>
+    <choice>
+      <code>4220011</code>
+      <description>On-Line/On-Scene Medical Direction</description>
+    </choice>
+    <choice>
+      <code>4220013</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4220015</code>
+      <description>Patient's Choice</description>
+    </choice>
+    <choice>
+      <code>4220017</code>
+      <description>Patient's Physician's Choice</description>
+    </choice>
+    <choice>
+      <code>4220019</code>
+      <description>Protocol</description>
+    </choice>
+    <choice>
+      <code>4220021</code>
+      <description>Regional Specialty Center</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-	<correlationID>Yes</correlationID>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eDisposition.21" minOccurs="1" maxOccurs="1" isNillable="Yes">
 <name>Type of Destination</name>
@@ -836,48 +845,48 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4221001</code>
-           <description>Home</description>
-        </choice>
-        <choice>
-           <code>4221003</code>
-           <description>Hospital-Emergency Department</description>
-        </choice>
-        <choice>
-           <code>4221005</code>
-           <description>Hospital-In Patient Bed</description>
-        </choice>
-        <choice>
-           <code>4221007</code>
-           <description>Medical Office/Clinic</description>
-        </choice>
-        <choice>
-           <code>4221009</code>
-           <description>Morgue/Mortuary</description>
-        </choice>
-        <choice>
-           <code>4221011</code>
-           <description>Nursing Home/Assisted Living Facility</description>
-        </choice>
-        <choice>
-           <code>4221013</code>
-           <description>Other (Not Listed)</description>
-        </choice>
-        <choice>
-           <code>4221015</code>
-           <description>Other EMS Responder (air)</description>
-        </choice>
-        <choice>
-           <code>4221017</code>
-           <description>Other EMS Responder (ground)</description>
-        </choice>
-        <choice>
-           <code>4221019</code>
-           <description>Police/Jail</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4221001</code>
+      <description>Home</description>
+    </choice>
+    <choice>
+      <code>4221003</code>
+      <description>Hospital-Emergency Department</description>
+    </choice>
+    <choice>
+      <code>4221005</code>
+      <description>Hospital-Non-Emergency Department Bed</description>
+    </choice>
+    <choice>
+      <code>4221007</code>
+      <description>Medical Office/Clinic</description>
+    </choice>
+    <choice>
+      <code>4221009</code>
+      <description>Morgue/Mortuary</description>
+    </choice>
+    <choice>
+      <code>4221011</code>
+      <description>Nursing Home/Assisted Living Facility</description>
+    </choice>
+    <choice>
+      <code>4221013</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>4221015</code>
+      <description>Other EMS Responder (air)</description>
+    </choice>
+    <choice>
+      <code>4221017</code>
+      <description>Other EMS Responder (ground)</description>
+    </choice>
+    <choice>
+      <code>4221019</code>
+      <description>Police/Jail</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -895,108 +904,108 @@
 <v3Comment>To be documented when in eDisposition.21 "Hospital-In Patient Bed" is selected.</v3Comment>
 <v3Changes>Added to identify the location within the hospital that the patient was directly taken to by EMS.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4222001</code>
-           <description>Hospital-Burn</description>
-        </choice>
-        <choice>
-           <code>4222003</code>
-           <description>Hospital-Cath Lab</description>
-        </choice>
-        <choice>
-           <code>4222005</code>
-           <description>Hospital-CCU</description>
-        </choice>
-        <choice>
-           <code>4222007</code>
-           <description>Hospital-Endoscopy</description>
-        </choice>
-        <choice>
-           <code>4222009</code>
-           <description>Hospital-Hospice</description>
-        </choice>
-        <choice>
-           <code>4222011</code>
-           <description>Hospital-Hyperbaric Oxygen Treatment</description>
-        </choice>
-        <choice>
-           <code>4222013</code>
-           <description>Hospital-ICU</description>
-        </choice>
-        <choice>
-           <code>4222015</code>
-           <description>Hospital-Labor &amp; Delivery</description>
-        </choice>
-        <choice>
-           <code>4222017</code>
-           <description>Hospital-Med/Surg</description>
-        </choice>
-        <choice>
-           <code>4222019</code>
-           <description>Hospital-Mental Health</description>
-        </choice>
-        <choice>
-           <code>4222021</code>
-           <description>Hospital-MICU</description>
-        </choice>
-        <choice>
-           <code>4222023</code>
-           <description>Hospital-NICU</description>
-        </choice>
-        <choice>
-           <code>4222025</code>
-           <description>Hospital-Nursery</description>
-        </choice>
-        <choice>
-           <code>4222027</code>
-           <description>Hospital-Peds (General)</description>
-        </choice>
-        <choice>
-           <code>4222029</code>
-           <description>Hospital-Peds ICU</description>
-        </choice>
-        <choice>
-           <code>4222031</code>
-           <description>Hospital-OR</description>
-        </choice>
-        <choice>
-           <code>4222033</code>
-           <description>Hospital-Orthopedic</description>
-        </choice>
-        <choice>
-           <code>4222035</code>
-           <description>Hospital-Other</description>
-        </choice>
-        <choice>
-           <code>4222037</code>
-           <description>Hospital-Out-Patient Bed</description>
-        </choice>
-        <choice>
-           <code>4222039</code>
-           <description>Hospital-Radiology Services - MRI</description>
-        </choice>
-        <choice>
-           <code>4222041</code>
-           <description>Hospital-Radiology Services - CT/PET</description>
-        </choice>
-        <choice>
-           <code>4222043</code>
-           <description>Hospital-Radiology Services - X-Ray</description>
-        </choice>
-        <choice>
-           <code>4222045</code>
-           <description>Hospital-Radiation</description>
-        </choice>
-        <choice>
-           <code>4222047</code>
-           <description>Hospital-Rehab</description>
-        </choice>
-        <choice>
-           <code>4222049</code>
-           <description>Hospital-SICU</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4222001</code>
+      <description>Hospital-Burn</description>
+    </choice>
+    <choice>
+      <code>4222003</code>
+      <description>Hospital-Cath Lab</description>
+    </choice>
+    <choice>
+      <code>4222005</code>
+      <description>Hospital-CCU</description>
+    </choice>
+    <choice>
+      <code>4222007</code>
+      <description>Hospital-Endoscopy</description>
+    </choice>
+    <choice>
+      <code>4222009</code>
+      <description>Hospital-Hospice</description>
+    </choice>
+    <choice>
+      <code>4222011</code>
+      <description>Hospital-Hyperbaric Oxygen Treatment</description>
+    </choice>
+    <choice>
+      <code>4222013</code>
+      <description>Hospital-ICU</description>
+    </choice>
+    <choice>
+      <code>4222015</code>
+      <description>Hospital-Labor &amp; Delivery</description>
+    </choice>
+    <choice>
+      <code>4222017</code>
+      <description>Hospital-Med/Surg</description>
+    </choice>
+    <choice>
+      <code>4222019</code>
+      <description>Hospital-Mental Health</description>
+    </choice>
+    <choice>
+      <code>4222021</code>
+      <description>Hospital-MICU</description>
+    </choice>
+    <choice>
+      <code>4222023</code>
+      <description>Hospital-NICU</description>
+    </choice>
+    <choice>
+      <code>4222025</code>
+      <description>Hospital-Nursery</description>
+    </choice>
+    <choice>
+      <code>4222027</code>
+      <description>Hospital-Peds (General)</description>
+    </choice>
+    <choice>
+      <code>4222029</code>
+      <description>Hospital-Peds ICU</description>
+    </choice>
+    <choice>
+      <code>4222031</code>
+      <description>Hospital-OR</description>
+    </choice>
+    <choice>
+      <code>4222033</code>
+      <description>Hospital-Orthopedic</description>
+    </choice>
+    <choice>
+      <code>4222035</code>
+      <description>Hospital-Other</description>
+    </choice>
+    <choice>
+      <code>4222037</code>
+      <description>Hospital-Out-Patient Bed</description>
+    </choice>
+    <choice>
+      <code>4222039</code>
+      <description>Hospital-Radiology Services - MRI</description>
+    </choice>
+    <choice>
+      <code>4222041</code>
+      <description>Hospital-Radiology Services - CT/PET</description>
+    </choice>
+    <choice>
+      <code>4222043</code>
+      <description>Hospital-Radiology Services - X-Ray</description>
+    </choice>
+    <choice>
+      <code>4222045</code>
+      <description>Hospital-Radiation</description>
+    </choice>
+    <choice>
+      <code>4222047</code>
+      <description>Hospital-Rehab</description>
+    </choice>
+    <choice>
+      <code>4222049</code>
+      <description>Hospital-SICU</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1014,60 +1023,68 @@
 <v3Comment>To be documented when in eDisposition.21 (Type of Destination) equals "4221003: Hospital-Emergency Department" or "4221005: Hospital-In Patient Bed" is selected .</v3Comment>
 <v3Changes>Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>9908001</code>
-           <description>Hospital (General)</description>
-        </choice>
-        <choice>
-           <code>9908003</code>
-           <description>Trauma Center Level 1</description>
-        </choice>
-        <choice>
-           <code>9908005</code>
-           <description>Trauma Center Level 2</description>
-        </choice>
-        <choice>
-           <code>9908007</code>
-           <description>Trauma Center Level 3</description>
-        </choice>
-        <choice>
-           <code>9908009</code>
-           <description>Trauma Center Level 4</description>
-        </choice>
-        <choice>
-           <code>9908011</code>
-           <description>Trauma Center Level 5</description>
-        </choice>
-        <choice>
-           <code>9908013</code>
-           <description>Rural Access Hospital</description>
-        </choice>
-        <choice>
-           <code>9908015</code>
-           <description>STEMI Center (24/7)</description>
-        </choice>
-        <choice>
-           <code>9908017</code>
-           <description>Stroke Center</description>
-        </choice>
-        <choice>
-           <code>9908019</code>
-           <description>Burn Center</description>
-        </choice>
-        <choice>
-           <code>9908021</code>
-           <description>Pediatric Center</description>
-        </choice>
-        <choice>
-           <code>9908023</code>
-           <description>Neonatal Center</description>
-        </choice>
-        <choice>
-           <code>9908025</code>
-           <description>Rehab Center</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>9908001</code>
+      <description>Behavioral Health</description>
+    </choice>
+    <choice>
+      <code>9908003</code>
+      <description>Burn Center</description>
+    </choice>
+    <choice>
+      <code>9908005</code>
+      <description>Critical Access Hospital</description>
+    </choice>
+    <choice>
+      <code>9908007</code>
+      <description>Hospital (General)</description>
+    </choice>
+    <choice>
+      <code>9908009</code>
+      <description>Neonatal Center</description>
+    </choice>
+    <choice>
+      <code>9908011</code>
+      <description>Pediatric Center</description>
+    </choice>
+    <choice>
+      <code>9908013</code>
+      <description>STEMI</description>
+    </choice>
+    <choice>
+      <code>9908015</code>
+      <description>STEMI Center (24/7)</description>
+    </choice>
+    <choice>
+      <code>9908017</code>
+      <description>Stroke Center</description>
+    </choice>
+    <choice>
+      <code>9908019</code>
+      <description>Rehab Center</description>
+    </choice>
+    <choice>
+      <code>9908021</code>
+      <description>Trauma Center Level 1</description>
+    </choice>
+    <choice>
+      <code>9908023</code>
+      <description>Trauma Center Level 2</description>
+    </choice>
+    <choice>
+      <code>9908025</code>
+      <description>Trauma Center Level 3</description>
+    </choice>
+    <choice>
+      <code>9908027</code>
+      <description>Trauma Center Level 4</description>
+    </choice>
+    <choice>
+      <code>9908029</code>
+      <description>Trauma Center Level 5</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1092,40 +1109,40 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4224001</code>
-           <description>No</description>
-        </choice>
-        <choice>
-           <code>4224003</code>
-           <description>Yes-Adult Trauma</description>
-        </choice>
-        <choice>
-           <code>4224005</code>
-           <description>Yes-Cardiac Arrest</description>
-        </choice>
-        <choice>
-           <code>4224007</code>
-           <description>Yes-Obstetrics</description>
-        </choice>
-        <choice>
-           <code>4224009</code>
-           <description>Yes-Other</description>
-        </choice>
-        <choice>
-           <code>4224011</code>
-           <description>Yes-Pediatric Trauma</description>
-        </choice>
-        <choice>
-           <code>4224013</code>
-           <description>Yes-STEMI</description>
-        </choice>
-        <choice>
-           <code>4224015</code>
-           <description>Yes-Stroke</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>4224001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>4224003</code>
+      <description>Yes-Adult Trauma</description>
+    </choice>
+    <choice>
+      <code>4224005</code>
+      <description>Yes-Cardiac Arrest</description>
+    </choice>
+    <choice>
+      <code>4224007</code>
+      <description>Yes-Obstetrics</description>
+    </choice>
+    <choice>
+      <code>4224009</code>
+      <description>Yes-Other</description>
+    </choice>
+    <choice>
+      <code>4224011</code>
+      <description>Yes-Pediatric Trauma</description>
+    </choice>
+    <choice>
+      <code>4224013</code>
+      <description>Yes-STEMI</description>
+    </choice>
+    <choice>
+      <code>4224015</code>
+      <description>Yes-Stroke</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1143,7 +1160,7 @@
 <v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
 <table border="1px" cellpadding="3px" cellspacing="0">
-  <tr><td align="center">yyyy</td><td>a two-digit numeral that represents the year</td></tr>
+  <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>
   <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
   <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
   <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
@@ -1178,17 +1195,17 @@
       <patterns>
         <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
      </patterns>
-      <constraints>
-        <dataType>dateTime</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>dateTime</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+  </constraints>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
@@ -1199,7 +1216,7 @@
 <name>Disposition Instructions Provided</name>
 <national>No</national>
 <state>No</state>
-<definition>Information provded to patient during disposition for patients not transported or treated.</definition>
+<definition>Information provided to patient during disposition for patients not transported or treated.</definition>
 <v2Number></v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
@@ -1207,40 +1224,40 @@
 <v3Comment></v3Comment>
 <v3Changes>Added to better document instructions given to patients not transported by EMS.</v3Changes>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>4226001</code>
-           <description>Contact 911 or see your Doctor if problem returns</description>
-        </choice>
-        <choice>
-           <code>4226003</code>
-           <description>Contact 911 or see your Doctor if problem worsens</description>
-        </choice>
-        <choice>
-           <code>4226005</code>
-           <description>Other Not Listed (Described in Narrative)</description>
-        </choice>
-        <choice>
-           <code>4226007</code>
-           <description>Problem Specific Instructions Provided</description>
-        </choice>
-        <choice>
-           <code>4226009</code>
-           <description>See Your Doctor or the Emergency Department immediately</description>
-        </choice>
-        <choice>
-           <code>4226011</code>
-           <description>See Your Doctor or the Emergency Department in the next 24 hours</description>
-        </choice>
-        <choice>
-           <code>4226013</code>
-           <description>See Your Doctor or the Emergency Department in the next 4 hours</description>
-        </choice>
-        <choice>
-           <code>4226015</code>
-           <description>See Your Doctor within the next one week</description>
-        </choice>
-     </enumerations>
-	<correlationID>Yes</correlationID>
+  <enumerations>
+    <choice>
+      <code>4226001</code>
+      <description>Contact 911 or see your Doctor if problem returns</description>
+    </choice>
+    <choice>
+      <code>4226003</code>
+      <description>Contact 911 or see your Doctor if problem worsens</description>
+    </choice>
+    <choice>
+      <code>4226005</code>
+      <description>Other Not Listed (Described in Narrative)</description>
+    </choice>
+    <choice>
+      <code>4226007</code>
+      <description>Problem Specific Instructions Provided</description>
+    </choice>
+    <choice>
+      <code>4226009</code>
+      <description>See Your Doctor or the Emergency Department immediately</description>
+    </choice>
+    <choice>
+      <code>4226011</code>
+      <description>See Your Doctor or the Emergency Department in the next 24 hours</description>
+    </choice>
+    <choice>
+      <code>4226013</code>
+      <description>See Your Doctor or the Emergency Department in the next 4 hours</description>
+    </choice>
+    <choice>
+      <code>4226015</code>
+      <description>See Your Doctor within the next one week</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></section>

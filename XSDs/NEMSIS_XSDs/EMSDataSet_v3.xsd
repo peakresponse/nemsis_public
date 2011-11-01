@@ -5,7 +5,7 @@
 	<xs:include schemaLocation="eCustom_v3.xsd"/>
 	<xs:include schemaLocation="dCustom_v3.xsd"/>
 	<xs:include schemaLocation="dConfiguration_v3.xsd"/>
-	<xs:include schemaLocation="dState_v3.xsd"/>
+	<xs:include schemaLocation="eState_v3.xsd"/>
 	<xs:include schemaLocation="eRecord_v3.xsd"/>
 	<xs:include schemaLocation="eResponse_v3.xsd"/>
 	<xs:include schemaLocation="eDispatch_v3.xsd"/>
@@ -36,6 +36,11 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
+				<xs:element name="eState" type="eState" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>State Required Elements</xs:documentation>
+					</xs:annotation>
+				</xs:element>
 				<xs:element name="Header" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Header for file</xs:documentation>
@@ -63,7 +68,7 @@
 												<xs:documentation>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dAgency.ServiceAreaGroup" id="ServiceAreaGroup" maxOccurs="unbounded">
+										<xs:element name="dAgency.ServiceAreaGroup" id="ServiceAreaGroup">
 											<xs:annotation>
 												<xs:documentation>Group Tag to hold agency service area information </xs:documentation>
 											</xs:annotation>
@@ -195,7 +200,7 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="eCustomConfiguration"  type="eCustomResults" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="eCustomConfiguration" type="eCustomConfiguration" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>All custom elements associated with agency.</xs:documentation>
 											</xs:annotation>
@@ -235,7 +240,7 @@
 												<xs:documentation>Call Event Times Information</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="ePatient" type="ePatient" minOccurs="0">
+										<xs:element name="ePatient" type="ePatient">
 											<xs:annotation>
 												<xs:documentation>Patient Information</xs:documentation>
 											</xs:annotation>
@@ -305,7 +310,7 @@
 												<xs:documentation>Intervention Procedures Information</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eAirway" type="eAirways">
+										<xs:element name="eAirway" type="eAirways" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>Airway Device Information</xs:documentation>
 											</xs:annotation>

@@ -3,8 +3,15 @@
 	<element number="dState" type="dState" minOccurs="0" maxOccurs="M">
 		<name>State Required Demographic Data Elements</name>
 	</element>
+	
+	<!--<group number="Header" minOccurs="1" maxOccurs="M">
+	<element number="dAgencyParent" type="dAgencyParent" minOccurs="1" maxOccurs="1">
+		<name>Agency Parent Information</name>
+	</element>	-->
+	
+	<!--<group number="dAgencyInformation" minOccurs="1" maxOccurs="M">-->
 	<group number="dCustomConfiguration.CustomGroup" minOccurs="0" maxOccurs="M">
-		<element number="dCustomConfiguration.01" minOccurs="0" maxOccurs="1" dataType="CustomTitle" isNillable="No">
+		<!--<element number="dCustomConfiguration.01" minOccurs="0" maxOccurs="1" dataType="CustomTitle" isNillable="No">
 			<name>Custom Data Element Title</name>
 			<national>No</national>
 			<state>No</state>
@@ -177,22 +184,22 @@
 					</constraint>
 				</constraints>
 			</restrictions>
-		</element>
+		</element>-->
 	</group>
 	<group number="DemographicReport" minOccurs="1" maxOccurs="M">
 		<element number="dAgency" minOccurs="1" maxOccurs="1">
 			<name>Agency Information</name>
 		</element>
-		<element number="dContact" minOccurs="1"  maxOccurs="1">
+		<element number="dContact" minOccurs="0"  maxOccurs="1">
 			<name>Contact Information</name>
 		</element>
 		<element number="dConfiguration"  minOccurs="1" maxOccurs="1">
 			<name>Configuration Information</name>
 		</element>
-		<element number="dLocation"  minOccurs="1"  maxOccurs="1">
+		<element number="dLocation"  minOccurs="0"  maxOccurs="1">
 			<name>Location Information</name>
 		</element>
-		<element number="dVehicle"  minOccurs="1"  maxOccurs="1">
+		<element number="dVehicle"  minOccurs="0"  maxOccurs="1">
 			<name>Vehicle Information</name>
 		</element>
 		<element number="dPersonnel" minOccurs="0" maxOccurs="1">
@@ -202,7 +209,7 @@
 			<name>Device Information</name>
 		</element>
 		<element number="dFacility"  minOccurs="0" maxOccurs="1">
-			<name>Device Information</name>
+			<name>Facility Information</name>
 		</element>
 		<element number="dCustom"  minOccurs="0" maxOccurs="1">
 			<name>Custom Element Information</name>

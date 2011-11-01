@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dPersonnel" id="dPersonnel.GeneralPersonnelInformation">
 		<xs:sequence>
-			<xs:element name="dPersonnel.PersonnelGroup" id="dPersonnel.PersonnelGroup" maxOccurs="unbounded">
+			<xs:element name="dPersonnel.PersonnelGroup" id="dPersonnel.PersonnelGroup" maxOccurs="unbounded"  minOccurs="0">
 			<xs:annotation><xs:documentation>Group tag to hold info about the personnel</xs:documentation></xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -13,7 +13,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="dPersonnel.01" type="PersonLastName" id="dPersonnel.EMSPersonnelsLastName" minOccurs="0">
+									<xs:element name="dPersonnel.01"  id="dPersonnel.EMSPersonnelsLastName" minOccurs="0"  nillable="true">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -23,15 +23,26 @@
 													<state>Yes</state>
 													<definition>The last name of the personnel.</definition>
 													<v2Number>D08_01</v2Number>
-													<usage>Optional</usage>
+													<usage>Recommended</usage>
 													<performanceMeasure/>
 													<comment/>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="PersonLastName">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 									</xs:element>
-									<xs:element name="dPersonnel.02" type="PersonFirstName" id="dPersonnel.EMSPersonnelsFirstName" minOccurs="0">
+									<xs:element name="dPersonnel.02" id="dPersonnel.EMSPersonnelsFirstName" minOccurs="0" nillable="true">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -41,15 +52,26 @@
 													<state>Yes</state>
 													<definition>The first name of the personnel.</definition>
 													<v2Number>D08_03</v2Number>
-													<usage>Optional</usage>
+													<usage>Recommended</usage>
 													<performanceMeasure/>
 													<comment/>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="PersonFirstName">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 									</xs:element>
-									<xs:element name="dPersonnel.03" type="PersonMiddleName" id="dPersonnel.EMSPersonnelsMiddleNameInitial" minOccurs="0">
+									<xs:element name="dPersonnel.03"  id="dPersonnel.EMSPersonnelsMiddleNameInitial" minOccurs="0" nillable="true">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -59,13 +81,24 @@
 													<state>Yes</state>
 													<definition>The middle name or initial of the personnel.</definition>
 													<v2Number>D08_02</v2Number>
-													<usage>Optional</usage>
+													<usage>Recommended</usage>
 													<performanceMeasure/>
 													<comment/>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="PersonMiddleName">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
@@ -488,7 +521,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dPersonnel.LicensureGroup" id="dPersonnel.LicensureGroup" maxOccurs="unbounded">
+						<xs:element name="dPersonnel.LicensureGroup" id="dPersonnel.LicensureGroup" maxOccurs="unbounded" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>Group to hold the licensure information</xs:documentation>
 							</xs:annotation>
@@ -564,7 +597,7 @@
 													<v2Number>D08_15</v2Number>
 													<usage>Recommended</usage>
 													<performanceMeasure/>
-													<comment>Added 2009 EMS Education Levels.</comment>
+													<comment>Added 2009 EMS Education Levels.&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -639,16 +672,16 @@
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dPersonnel.28" type="YesNoValues" minOccurs="0">
+						<xs:element name="dPersonnel.28" type="NationalRegistryNumber" id="dPersonnel.NationalRegistryNumber" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dPersonnel.28</number>
-										<name>National Registry Credentialed</name>
+										<name>EMS Personnel's National Registry Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Indication of a current National Registry Credential for the level of certification/licensure in (dPersonnel.27) as of the date of the State's EMS current certification date (dPersonnel.28).</definition>
-										<v2Number>D08_16</v2Number>
+										<definition>The National Registry number associated with the level of certification/licensure obtained through NREMT.</definition>
+										<v2Number></v2Number>
 										<usage>Optional</usage>
 										<performanceMeasures/>
 										<comment/>
@@ -657,33 +690,33 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dPersonnel.29" type="NationalRegistryCertificationLevel" minOccurs="0">
+						<xs:element name="dPersonnel.29" type="NationalRegistryCertificationLevel" id="dPersonnel.NationalRegistryCertificationLevel" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dPersonnel.29</number>
-										<name>National Registry Certification Level</name>
+										<name>EMS Personnel's National Registry Certification Level</name>
 										<national>No</national>
 										<state>No</state>
 										<definition>The level of the current National Registry of Emergency Medical Technicians (NREMT) certification.</definition>
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasures/>
-										<comment/>
+										<comment>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dPersonnel.30" type="DateType" minOccurs="0">
+						<xs:element name="dPersonnel.30" type="DateType" id="dPersonnel.PersonnelsCurrentNationalCertificationExpirationDate" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dPersonnel.30</number>
-										<name>National Registry Certification Date</name>
+										<name>EMS Personnel's Current National Registry Expiration Date</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The date of the current National Registry of Emergency Medical Technicians (NREMT) certification.</definition>
+										<definition>The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires</definition>
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasures/>
@@ -701,7 +734,7 @@
 										<name>EMS Personnel's Employment Status</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The personnel's employment status for this agency.</definition>
+										<definition>The personnel's primary employment status for this agency.</definition>
 										<v2Number>D07_03</v2Number>
 										<usage>Recommended</usage>
 										<performanceMeasure/>
@@ -790,7 +823,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="PrimaryJobRole">
+									<xs:extension base="JobResponsibilities">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
@@ -884,7 +917,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 													<v2Number>D07_05</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasure/>
-													<comment/>
+													<comment>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -940,29 +973,40 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 		<xs:restriction base="xs:string"><xs:enumeration value="1531001"><xs:annotation><xs:documentation>Full Time Paid Employee</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1531003"><xs:annotation><xs:documentation>Part Time Paid Employee</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1531005"><xs:annotation><xs:documentation>Volunteer</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1531007"><xs:annotation><xs:documentation>Neither an Employee/Nor a Volunteer</xs:documentation></xs:annotation>
+			</xs:enumeration><xs:enumeration value="1531007"><xs:annotation><xs:documentation>Neither an Employee Nor a Volunteer</xs:documentation></xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="JobResponsibilities">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's other job responsibilities at the agency beyond their primary role documented in dStaff.07 (Primary EMS Job Role).</xs:documentation>
+			<xs:documentation>The individuals primary/main EMS role at the EMS Agency. This is the function which is performed the majority of the time for the EMS professional.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1535001"><xs:annotation><xs:documentation>Administrator/Manager</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1535003"><xs:annotation><xs:documentation>Educator/Preceptor</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1535005"><xs:annotation><xs:documentation>Fire Suppression</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1535007"><xs:annotation><xs:documentation>First-Line Supervisor</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1535009"><xs:annotation><xs:documentation>Law Enforcement (Police, Deputy, etc.)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1535011"><xs:annotation><xs:documentation>Other (Not Listed)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1535013"><xs:annotation><xs:documentation>Patient Care Provider</xs:documentation></xs:annotation>
-			</xs:enumeration>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1534001"><xs:annotation><xs:documentation>Administrator/Manager</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534003"><xs:annotation><xs:documentation>Driver/Pilot</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534005"><xs:annotation><xs:documentation>Educator/Preceptor</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534007"><xs:annotation><xs:documentation>Fire Suppression</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534009"><xs:annotation><xs:documentation>First-Line Supervisor</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534011"><xs:annotation><xs:documentation>Law Enforcement</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534013"><xs:annotation><xs:documentation>Other (Not Listed)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534015"><xs:annotation><xs:documentation>Patient Care Provider</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534017"><xs:annotation><xs:documentation>Rescue</xs:documentation></xs:annotation></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NationalRegistryNumber">
+		<xs:annotation>
+			<xs:documentation>Level of the current National Registry of Emergency Medical Technicians (NREMT) certification.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z][A-Z0-9][0-9]{6}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NationalRegistryCertificationLevel">
 		<xs:annotation>
-			<xs:documentation>Level of the current National Registry of Emergency Medical Technicians (NREMT) certification.</xs:documentation>
+			<xs:documentation>The national registration number associated with the level of certification/licensure obtained through NREMT</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1532901"><xs:annotation><xs:documentation>2009 Advanced Emergency Medical Technician(AEMT)</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+									   <xs:enumeration value="1529901"><xs:annotation><xs:documentation>2009 Advanced Emergency Medical Technician(AEMT)</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1529003"><xs:annotation><xs:documentation>2009 Emergency Medical Responder (EMR)</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1529005"><xs:annotation><xs:documentation>2009 Emergency Medical Technician</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1529007"><xs:annotation><xs:documentation>2009 Paramedic</xs:documentation></xs:annotation>
@@ -986,7 +1030,8 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 		<xs:annotation>
 			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1516001"><xs:annotation><xs:documentation>Agriculture and Natural Resources</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+									   <xs:enumeration value="1516001"><xs:annotation><xs:documentation>Agriculture and Natural Resources</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1516003"><xs:annotation><xs:documentation>Architecture and Related Services</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1516005"><xs:annotation><xs:documentation>Area, Ethnic, Cultural, and Gender Studies</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1516007"><xs:annotation><xs:documentation>Biological and Biomedical Sciences</xs:documentation></xs:annotation>
@@ -1121,22 +1166,6 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 			</xs:enumeration><xs:enumeration value="1517019"><xs:annotation><xs:documentation>Pilot-Fixed Wing Air</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1517021"><xs:annotation><xs:documentation>Snowmobile</xs:documentation></xs:annotation>
 			</xs:enumeration><xs:enumeration value="1517023"><xs:annotation><xs:documentation>Taxi and Livery Class E</xs:documentation></xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="PrimaryJobRole">
-		<xs:annotation>
-			<xs:documentation>The individuals primary/main EMS role at the EMS Agency. This is the function which is performed the majority of the time for the EMS professional.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1534001"><xs:annotation><xs:documentation>Administrator/Manager</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534003"><xs:annotation><xs:documentation>Driver/Pilot</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534005"><xs:annotation><xs:documentation>Educator/Preceptor</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534007"><xs:annotation><xs:documentation>Fire Suppression</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534009"><xs:annotation><xs:documentation>First-Line Supervisor</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534011"><xs:annotation><xs:documentation>Law Enforcement</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534013"><xs:annotation><xs:documentation>Other (Not Listed)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534015"><xs:annotation><xs:documentation>Patient Care Provider</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1534017"><xs:annotation><xs:documentation>Rescue</xs:documentation></xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>

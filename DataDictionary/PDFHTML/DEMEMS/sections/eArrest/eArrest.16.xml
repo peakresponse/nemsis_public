@@ -14,28 +14,32 @@
 <performanceMeasure>Cardiac Arrest</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <enumerations>
-        <choice>
-           <code>3016001</code>
-           <description>DNR</description>
-        </choice>
-        <choice>
-           <code>3016003</code>
-           <description>Medical Control Order</description>
-        </choice>
-        <choice>
-           <code>3016005</code>
-           <description>Obvious Signs of Death</description>
-        </choice>
-        <choice>
-           <code>3016007</code>
-           <description>Protocol/Policy Requirements Completed</description>
-        </choice>
-        <choice>
-           <code>3016009</code>
-           <description>Return of Spontaneous Circulation (pulse or BP noted)</description>
-        </choice>
-     </enumerations>
+  <enumerations>
+    <choice>
+      <code>3016001</code>
+      <description>DNR</description>
+    </choice>
+    <choice>
+      <code>3016003</code>
+      <description>Medical Control Order</description>
+    </choice>
+    <choice>
+      <code>3016005</code>
+      <description>Obvious Signs of Death</description>
+    </choice>
+    <choice>
+      <code>3016007</code>
+      <description>Physically Unable to Perform</description>
+    </choice>
+    <choice>
+      <code>3016009</code>
+      <description>Protocol/Policy Requirements Completed</description>
+    </choice>
+    <choice>
+      <code>3016011</code>
+      <description>Return of Spontaneous Circulation (pulse or BP noted)</description>
+    </choice>
+  </enumerations>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>

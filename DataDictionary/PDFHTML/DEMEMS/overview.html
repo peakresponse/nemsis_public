@@ -1,29 +1,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head><title>NEMSIS Data Dictionary Section Groupin</title>
-  <style type="text/css">
-    body {font-family:arial,helvetica,sans-serif; position:relative;width:7.5in; }
-    .header         {font-size:22px; color:#004080; font-weight:bold; text-align:center;}
-    .subHeader      {font-size:18px; color:#004080; text-align:center;}
-    .section        {font-size:18px; color:#004080;}
-    .subSection     {font-size:16px;}
-    .note           {font-size:12px;}
-    .listItem       {font-size:16px;}
-    .paragraph      {font-size:16px;}
-    .spacer         {height:20px;}
-    .reference      {font-size:x-small;  font-weight:bold; vertical-align:top;color:red;}
-    .listItemOrgBg2  {font-size:16px; font-weight:bold; list-style-image:url('images/orange-8.gif');}
-    .listItemOrgBg  {font-size:16px; font-weight:bold;list-style:none }
-    .listItemOrgSm  {font-size:16px; list-style-image:url('images/orange-5.gif');}
-    .listItemBlu    {font-size:16px; font-weight:normal;list-style-image:url('images/blue-5.gif');}
-  </style>
-  </head>
+<style type="text/css">body {font-family:helvetica,sans-serif; position:relative;font-style: normal; font-weight: normal; text-decoration: none; }   
+a  { font-size: 12; text-decoration: underline; color: #B2B2B2; }                                                             
+td { font-size: 12; }                                                                                                         
+.blueRect       {background:#004080; height:15px;}                                                                            
+.titleMain      {font-size:80px; color:#004080; text-align:center; font-weight:bold;}                                         
+.titleSub       {font-size:50px; color:#004080; text-align:center; font-weight:bold;}                                         
+.nhtsa          {font-size:65px; color:#880015; text-align:center; font-weight:bold;}                                         
+.standard       {font-size:60px; color:#004080; text-align:center; font-weight:bold;}                                         
+.version        {font-size:25px; color:#004080; text-align:center; font-weight:bold;}                                         
+.funded         {font-size:20px; color:#004080; text-align:center; }                                                          
+.fundedby       {font-size:20px; color:#004080; text-align:center; font-weight:bold;}                                         
+.url            {font-size:20px; color:#004080; text-align:center; font-weight:bold;}                                         
+.blueRectBtm    {background:#004080; height:15px;}                                                                            
+.spacer         {height:20px;}                                                                                                
+.spacer50       {height:50px;}                                                                                                
+.spacer40       {height:40px;}                                                                                                
+.spacer30       {height:30px;}                                                                                                
+.spacer20       {height:20px;}                                                                                                
+.spacer15       {height:15px;}                                                                                                
+.spacer10       {height:10px;}                                                                                                
+.spacer5        {height:5px;}                                                                                                 
+.header         {font-size:22px; color:#004080; font-weight:bold; text-align:center;}                                         
+.subHeader      {font-size:18px; color:#004080; text-align:center;}                                                           
+.section        {font-size:18px; color:#004080;}                                                                              
+.subSection     {font-size:16px;}                                                                                             
+.note           {font-size:12px;}                                                                                             
+.listItem       {font-size:16px;}                                                                                             
+.paragraph      {font-size:16px;}                                                                                             
+.reference      {font-size:x-small;  font-weight:bold; vertical-align:top;color:red;}                                         
+.listItemOrgBg2  {font-size:16px; font-weight:bold; list-style-image:url('images/orange-8.gif');}                             
+.listItemOrgBg  {font-size:16px; font-weight:bold;list-style:none; }                                                          
+.listItemOrgSm  {font-size:16px; list-style-image:url('images/orange-5.gif');}                                                
+.listItemBlu    {font-size:16px; font-weight:normal;list-style-image:url('images/blue-5.gif');}                               
+.f1   { font-size: 12px; }                                                                                                    
+.f2   { font-size: 12px; }                                                                                                    
+.f3   { font-size: 14px; }                                                                                                    
+.p1   { font-size: 12px; white-space:nowrap; }                                                                                
+.p2   { font-size: 12px; white-space:nowrap; }                                                                                
+.p3   { font-size: 14px; white-space:nowrap; }                                                                                
+</style></head>
 <body>
-<div class="header">NEMSIS Data Dictionary Version 3.0.5</div>
+<div class="header">NEMSIS Data Dictionary Version 3.1.0</div>
 <div class="subHeader">NEMSIS Overview and Summary</div>
 <div class="spacer"></div>
-<div class="paragraph">This data dictionary represents 24 months of effort collaborating with the EMS industry through web-based reviews, public comment periods, focus groups, industry dialogue, topic focused projects, and consensus. The National EMS Information System Version 3.0.5 represents a revision from the existing version 2.1.1 released in 2005.  Adopting a broad perspective, the initiative to move to a 3rd version of the NEMSIS data dictionary was fueled by the need to improve data quality, enhance our ability to assess EMS performance, augment the flexibility of the standard for state adoption and, prepare for our initial movement of this standard into Health Level 7 (HL7) for approval as an American National Standards Institute (ANSI) standard.  At the time of this initial publication, NEMSIS Version 3.0.5 has passed several ballots within HL7 in an effort to be recognized as a federal and international healthcare information standard.  Final HL7 adoption of NEMSIS Version 3.0.5 is expected in 2012.  HL7 will be the permanent home for the NEMSIS standard once fully adopted and future revisions will occur through the HL7 process.</div>
+<div class="paragraph">This data dictionary represents 24 months of effort collaborating with the EMS industry through web-based reviews, public comment periods, focus groups, industry dialogue, topic focused projects, and consensus. The National EMS Information System Version 3.1.0 represents a revision from the existing version 2.1.1 released in 2005.  Adopting a broad perspective, the initiative to move to a 3rd version of the NEMSIS data dictionary was fueled by the need to improve data quality, enhance our ability to assess EMS performance, augment the flexibility of the standard for state adoption and, prepare for our initial movement of this standard into Health Level 7 (HL7) for approval as an American National Standards Institute (ANSI) standard.  At the time of this initial publication, NEMSIS Version 3.1.0 has passed several ballots within HL7 in an effort to be recognized as a federal and international healthcare information standard.  Final HL7 adoption of NEMSIS Version 3.1.0 is expected in 2012.  HL7 will be the permanent home for the NEMSIS standard once fully adopted and future revisions will occur through the HL7 process.</div>
 <div class="spacer"></div>
-<div class="section">NEMSIS Version 3.0.5 Data Dictionary Content</div>
+<div class="section">NEMSIS Version 3.1.0 Data Dictionary Content</div>
 <div class="note">**Note: The numbers to the right of the content listed below represent the location for each element on the Sample Page of the Data Dictionary (page vi).</div>
 <ul>
   <li class="listItemOrgBg">Data Element Number <span class="reference">(#1)</span>
@@ -68,7 +91,7 @@
   <li class="listItemOrgBg">Version 2 Number <span class="reference">(#7)</span>
     <ul>
       <li class="listItemBlu">The NEMSIS Version 2.2.1 Data Element Number.</li>
-      <li class="listItemBlu">If the Data Element is new to Version 3.0.5, the Version 2 Number will be blank.</li>
+      <li class="listItemBlu">If the Data Element is new to Version 3.1.0, the Version 2 Number will be blank.</li>
     </ul>
   </li>
 </ul>
@@ -288,9 +311,9 @@
     </ul>
   </li>
 </ul>
-<div class="section">NEMSIS Version 3.0.5 Change Summary</div>
+<div class="section">NEMSIS Version 3.1.0 Change Summary</div>
 <ul>
-  <li class="listItemOrgBg">NEMSIS Version 3 includes several new types of information to better describe EMS from an industry, workforce, EMS service delivery, and patient care perspective. Examples of new Version 3.0.5 content include:</li>
+  <li class="listItemOrgBg">NEMSIS Version 3 includes several new types of information to better describe EMS from an industry, workforce, EMS service delivery, and patient care perspective. Examples of new Version 3.1.0 content include:</li>
   <li class="listItemOrgBg"><br/>Demographic (Agency) Content
     <ul>
       <li class="listItemBlu">EMS Agencies can list more than one state in which they offer EMS service delivery.</li>
@@ -326,7 +349,7 @@
   <li class="listItemOrgBg"><br/>General Improvements
     <ul>
       <li class="listItemBlu">Version 3 content has focused on objective performance measures to better describe and evaluate EMS service delivery and patient care.</li>
-      <li class="listItemBlu">State level configuration and customized data elements have been enhanced without changing the NEMSIS Version 3.0.5 Standard.</li>
+      <li class="listItemBlu">State level configuration and customized data elements have been enhanced without changing the NEMSIS Version 3.1.0 Standard.</li>
     </ul>
   </li>
 </ul>

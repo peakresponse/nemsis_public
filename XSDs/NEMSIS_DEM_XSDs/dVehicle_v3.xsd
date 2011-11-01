@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org"  elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dVehicle" id="dVehicle.AgencyVehicleInformation">
 		<xs:sequence>
-			<xs:element name="dVehicle.VehicleGroup" id="dVehicle.VehicleGroup" maxOccurs="unbounded">
+			<xs:element name="dVehicle.VehicleGroup" id="dVehicle.VehicleGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about Vehicle defined information </xs:documentation>
 				</xs:annotation>
@@ -121,7 +121,7 @@
 													<v2Number>D06_04</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasure/>
-													<comment>The new 2009 EMS Educational Levels have been added.</comment>
+													<comment>The new 2009 EMS Educational Levels have been added. The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -246,7 +246,7 @@
 													<name>Year Miles/Kilometers Hours Accrued</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The year the hours and miles/kilometers were accumulated</definition>
+													<definition>The year the hours and miles/kilometers were accumulated.</definition>
 													<v2Number>D06_08</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasure/>
@@ -304,9 +304,8 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					
-												<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-												<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
+					<xs:attribute name="CurrentStatus" type="Status" use="required"/>
+					<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
@@ -327,7 +326,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
-			<xs:maxLength value="17"/>
+			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NumberofPersonnel">
@@ -371,8 +370,8 @@
 			<xs:documentation>The Vendor or company associated with the EMD card set and algorithms</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
+			<xs:minLength value="1"/>
+			<xs:maxLength value="25"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="VehicleType">
@@ -397,7 +396,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="1404007">
 				<xs:annotation>
-					<xs:documentation>Fire Truck</xs:documentation>
+					<xs:documentation>Fire Apparatus</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1404009">
@@ -422,7 +421,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="1404017">
 				<xs:annotation>
-					<xs:documentation>Quick Response Vehicle (Non-Transport Vehicle other than Fire Truck)</xs:documentation>
+					<xs:documentation>Quick Response Vehicle (Non-Transport Vehicle other than Fire Apparatus)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1404019">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:simpleType name="ANSICountryCodesCAMXUS">
 		<xs:annotation>
 			<xs:documentation>ANSI Codes for USA, Mexico, and Canda</xs:documentation>
@@ -27,7 +27,7 @@
 			<xs:documentation>A list of valid Country ANSI Codes </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-		<xs:length value="2"/>
+			<xs:length value="2"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ANSICountyCode">
@@ -35,7 +35,7 @@
 			<xs:documentation>A list of valid US County ANSI Codes by State</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-		<xs:length value="5"/>
+			<xs:length value="5"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ANSIStateCode">
@@ -43,7 +43,7 @@
 			<xs:documentation>A list of valid US County ANSI Codes by State</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-		<xs:length value="2"/>
+			<xs:length value="2"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CardiacRhythm">
@@ -237,18 +237,17 @@
 		<xs:annotation>
 			<xs:documentation>City GNIS Code</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:positiveInteger">
-		</xs:restriction>
+		<xs:restriction base="xs:positiveInteger"/>
 	</xs:simpleType>
 	<xs:simpleType name="CorrelationID">
-			<xs:annotation>
-				<xs:documentation>The correlation ID used to link custom elements</xs:documentation>
-			</xs:annotation>
-			<xs:restriction base="xs:string">
-				<xs:minLength value="0"/>
-				<xs:maxLength value="255"/>
-			</xs:restriction>
-	</xs:simpleType>	
+		<xs:annotation>
+			<xs:documentation>The correlation ID used to link custom elements</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="CrewMemberID">
 		<xs:annotation>
 			<xs:documentation>The State Certification/Licensure ID number assigned to the crew member.</xs:documentation>
@@ -257,7 +256,7 @@
 			<xs:minLength value="2"/>
 			<xs:maxLength value="15"/>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 	<xs:simpleType name="CustomDataType">
 		<xs:annotation>
 			<xs:documentation>The list of potential values associated with the custom data elment.</xs:documentation>
@@ -291,7 +290,10 @@
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CustomDefinition">
-		<xs:restriction base="xs:string"><xs:minLength value="0"/><xs:maxLength value="255"/></xs:restriction>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="255"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CustomResults">
 		<xs:annotation>
@@ -411,7 +413,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
+			<xs:maxLength value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EMSAgencyNumber">
@@ -494,7 +496,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9905023">
 				<xs:annotation>
-					<xs:documentation>Patient</xs:documentation>
+					<xs:documentation>Patient/Lay Person</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9905025">
@@ -510,6 +512,16 @@
 			<xs:enumeration value="9905029">
 				<xs:annotation>
 					<xs:documentation>Student</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9905031">
+				<xs:annotation>
+					<xs:documentation>Critical Care Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9905033">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -554,36 +566,156 @@
 		<xs:annotation>
 			<xs:documentation>The type of graphic file</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">                       <xs:enumeration value="9907001"><xs:annotation><xs:documentation>bmp</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907003"><xs:annotation><xs:documentation>cmx</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907005"><xs:annotation><xs:documentation>cod</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907007"><xs:annotation><xs:documentation>doc</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907009"><xs:annotation><xs:documentation>docx</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907011"><xs:annotation><xs:documentation>gif</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907013"><xs:annotation><xs:documentation>ico</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907015"><xs:annotation><xs:documentation>ief</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907017"><xs:annotation><xs:documentation>jfif</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907019"><xs:annotation><xs:documentation>jpeg</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907021"><xs:annotation><xs:documentation>jpe</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907023"><xs:annotation><xs:documentation>jpg</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907025"><xs:annotation><xs:documentation>mht</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907027"><xs:annotation><xs:documentation>mic</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907029"><xs:annotation><xs:documentation>mhtml</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907031"><xs:annotation><xs:documentation>nws</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907033"><xs:annotation><xs:documentation>pbm</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907035"><xs:annotation><xs:documentation>pdf</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907037"><xs:annotation><xs:documentation>pgm</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907039"><xs:annotation><xs:documentation>png</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907041"><xs:annotation><xs:documentation>pnm</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907043"><xs:annotation><xs:documentation>ppm</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907045"><xs:annotation><xs:documentation>ras</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907047"><xs:annotation><xs:documentation>rgb</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907049"><xs:annotation><xs:documentation>svg</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907051"><xs:annotation><xs:documentation>tif</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907053"><xs:annotation><xs:documentation>tiff</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907055"><xs:annotation><xs:documentation>xbm</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907057"><xs:annotation><xs:documentation>xpm</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="9907059"><xs:annotation><xs:documentation>xwd</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="9907001">
+				<xs:annotation>
+					<xs:documentation>bmp</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907003">
+				<xs:annotation>
+					<xs:documentation>cmx</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907005">
+				<xs:annotation>
+					<xs:documentation>cod</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907007">
+				<xs:annotation>
+					<xs:documentation>doc</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907009">
+				<xs:annotation>
+					<xs:documentation>docx</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907011">
+				<xs:annotation>
+					<xs:documentation>gif</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907013">
+				<xs:annotation>
+					<xs:documentation>ico</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907015">
+				<xs:annotation>
+					<xs:documentation>ief</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907017">
+				<xs:annotation>
+					<xs:documentation>jfif</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907019">
+				<xs:annotation>
+					<xs:documentation>jpeg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907021">
+				<xs:annotation>
+					<xs:documentation>jpe</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907023">
+				<xs:annotation>
+					<xs:documentation>jpg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907025">
+				<xs:annotation>
+					<xs:documentation>mht</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907027">
+				<xs:annotation>
+					<xs:documentation>mic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907029">
+				<xs:annotation>
+					<xs:documentation>mhtml</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907031">
+				<xs:annotation>
+					<xs:documentation>nws</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907033">
+				<xs:annotation>
+					<xs:documentation>pbm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907035">
+				<xs:annotation>
+					<xs:documentation>pdf</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907037">
+				<xs:annotation>
+					<xs:documentation>pgm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907039">
+				<xs:annotation>
+					<xs:documentation>png</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907041">
+				<xs:annotation>
+					<xs:documentation>pnm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907043">
+				<xs:annotation>
+					<xs:documentation>ppm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907045">
+				<xs:annotation>
+					<xs:documentation>ras</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907047">
+				<xs:annotation>
+					<xs:documentation>rgb</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907049">
+				<xs:annotation>
+					<xs:documentation>svg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907051">
+				<xs:annotation>
+					<xs:documentation>tif</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907053">
+				<xs:annotation>
+					<xs:documentation>tiff</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907055">
+				<xs:annotation>
+					<xs:documentation>xbm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907057">
+				<xs:annotation>
+					<xs:documentation>xpm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9907059">
+				<xs:annotation>
+					<xs:documentation>xwd</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
@@ -594,37 +726,37 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="9908001">
 				<xs:annotation>
-					<xs:documentation>Hospital (General)</xs:documentation>
+					<xs:documentation>Behavioral Health</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908003">
 				<xs:annotation>
-					<xs:documentation>Trauma Center Level 1</xs:documentation>
+					<xs:documentation>Burn Center</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908005">
 				<xs:annotation>
-					<xs:documentation>Trauma Center Level 2</xs:documentation>
+					<xs:documentation>Critical Access Hospital</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908007">
 				<xs:annotation>
-					<xs:documentation>Trauma Center Level 3</xs:documentation>
+					<xs:documentation>Hospital (General)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908009">
 				<xs:annotation>
-					<xs:documentation>Trauma Center Level 4</xs:documentation>
+					<xs:documentation>Neonatal Center</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908011">
 				<xs:annotation>
-					<xs:documentation>Trauma Center Level 5</xs:documentation>
+					<xs:documentation>Pediatric Center</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908013">
 				<xs:annotation>
-					<xs:documentation>Rural Access Hospital</xs:documentation>
+					<xs:documentation>STEMI</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908015">
@@ -639,22 +771,32 @@
 			</xs:enumeration>
 			<xs:enumeration value="9908019">
 				<xs:annotation>
-					<xs:documentation>Burn Center</xs:documentation>
+					<xs:documentation>Rehab Center</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908021">
 				<xs:annotation>
-					<xs:documentation>Pediatric Center</xs:documentation>
+					<xs:documentation>Trauma Center Level 1</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908023">
 				<xs:annotation>
-					<xs:documentation>Neonatal Center</xs:documentation>
+					<xs:documentation>Trauma Center Level 2</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908025">
 				<xs:annotation>
-					<xs:documentation>Rehab Center</xs:documentation>
+					<xs:documentation>Trauma Center Level 3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9908027">
+				<xs:annotation>
+					<xs:documentation>Trauma Center Level 4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9908029">
+				<xs:annotation>
+					<xs:documentation>Trauma Center Level 5</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -711,7 +853,7 @@
 			<xs:documentation>ICD10 Code</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[A-Z]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?"/>
+			<xs:pattern value="[0-9A-HJ-NP-Z]([0-9A-Za-z]{1,6})?"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="icd10CodeInjury">
@@ -937,13 +1079,26 @@
 					<xs:documentation>Physician</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9911023">
+				<xs:annotation>
+					<xs:documentation>Critical Care Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9911025">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Medication">
 		<xs:annotation>
 			<xs:documentation>Medication</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:positiveInteger"/>
+		<xs:restriction base="xs:string">
+				<xs:minLength value="2"/>
+				<xs:maxLength value="7"/>
+		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Mileage">
 		<xs:annotation>
@@ -968,8 +1123,7 @@
 			<xs:documentation>Not Applicable</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="7701001">
-			</xs:enumeration>
+			<xs:enumeration value="7701001"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NV.NotRecorded">
@@ -977,8 +1131,7 @@
 			<xs:documentation>Not Recorded</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="7701003">
-			</xs:enumeration>
+			<xs:enumeration value="7701003"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NV.NotReporting">
@@ -986,8 +1139,7 @@
 			<xs:documentation>Not Reporting</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="7701005">
-			</xs:enumeration>
+			<xs:enumeration value="7701005"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OrganizationalType">
@@ -1037,7 +1189,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
-			<xs:maxLength value="35"/>
+			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PersonMiddleName">
@@ -1046,7 +1198,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
-			<xs:maxLength value="25"/>
+			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PersonLastName">
@@ -1190,417 +1342,90 @@
 		<xs:annotation>
 			<xs:documentation>The protocol used by EMS personnel to direct the clinical care of the patient</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="9914001">
-				<xs:annotation>
-					<xs:documentation>Airway</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914003">
-				<xs:annotation>
-					<xs:documentation>Airway-Failed</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914005">
-				<xs:annotation>
-					<xs:documentation>Airway-Obstruction/Foreign Body</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914007">
-				<xs:annotation>
-					<xs:documentation>Airway-Rapid Sequence Induction (RSI-Paralytic)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914009">
-				<xs:annotation>
-					<xs:documentation>Airway-Sedation Assisted (Non-Paralytic)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914011">
-				<xs:annotation>
-					<xs:documentation>Cardiac Arrest-Asystole</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914013">
-				<xs:annotation>
-					<xs:documentation>Cardiac Arrest-Hypothermia-Therapeutic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914015">
-				<xs:annotation>
-					<xs:documentation>Cardiac Arrest-Pulseless Electrical Activity</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914017">
-				<xs:annotation>
-					<xs:documentation>Cardiac Arrest-Ventricular Fibrillation/ Pulseless Ventricular Tachycardia</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914019">
-				<xs:annotation>
-					<xs:documentation>Cardiac Arrest-Post Resuscitation Care</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914021">
-				<xs:annotation>
-					<xs:documentation>Environmental-Altitude Sickness</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914023">
-				<xs:annotation>
-					<xs:documentation>Environmental-Cold Exposure</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914025">
-				<xs:annotation>
-					<xs:documentation>Environmental-Frostbite/Cold Injury</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914027">
-				<xs:annotation>
-					<xs:documentation>Environmental-Heat Exposure/Exhaustion</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914029">
-				<xs:annotation>
-					<xs:documentation>Environmental-Heat Stroke/Hyperthermia</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914031">
-				<xs:annotation>
-					<xs:documentation>Environmental-Hypothermia</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914033">
-				<xs:annotation>
-					<xs:documentation>Exposure-Airway/Inhalation Irritants</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914035">
-				<xs:annotation>
-					<xs:documentation>Exposure-Biological/Infectious</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914037">
-				<xs:annotation>
-					<xs:documentation>Exposure-Blistering Agents</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914039">
-				<xs:annotation>
-					<xs:documentation>Exposure-Carbon Monoxide/Smoke Inhalation</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914041">
-				<xs:annotation>
-					<xs:documentation>Exposure-Chemicals to Eye</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914043">
-				<xs:annotation>
-					<xs:documentation>Exposure-Cyanide</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914045">
-				<xs:annotation>
-					<xs:documentation>Exposure-Explosive/ Blast Injury</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914047">
-				<xs:annotation>
-					<xs:documentation>Exposure-Nerve Agents</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914049">
-				<xs:annotation>
-					<xs:documentation>Exposure-Radiologic Agents</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914051">
-				<xs:annotation>
-					<xs:documentation>General-Back Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914053">
-				<xs:annotation>
-					<xs:documentation>General-Behavioral/Patient Restraint</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914055">
-				<xs:annotation>
-					<xs:documentation>General-Dental Problems</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914057">
-				<xs:annotation>
-					<xs:documentation>General-Epistaxis</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914059">
-				<xs:annotation>
-					<xs:documentation>General-Fever</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914061">
-				<xs:annotation>
-					<xs:documentation>General-Individualized Patient Protocol</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914063">
-				<xs:annotation>
-					<xs:documentation>General-Indwelling Medical Devices/Equipment</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914065">
-				<xs:annotation>
-					<xs:documentation>General-IV Access</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914067">
-				<xs:annotation>
-					<xs:documentation>General-Medical Device Malfunction</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914069">
-				<xs:annotation>
-					<xs:documentation>General-Pain Control</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914071">
-				<xs:annotation>
-					<xs:documentation>General-Spinal Immobilization/Clearance</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914073">
-				<xs:annotation>
-					<xs:documentation>General-Universal Patient Care/ Initial Patient Contact</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914075">
-				<xs:annotation>
-					<xs:documentation>Injury-Amputation</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914077">
-				<xs:annotation>
-					<xs:documentation>Injury-Bites and Envenomations-Land</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914079">
-				<xs:annotation>
-					<xs:documentation>Injury-Bites and Envenomations-Marine</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914081">
-				<xs:annotation>
-					<xs:documentation>Injury-Bleeding/ Hemorrhage Control</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914083">
-				<xs:annotation>
-					<xs:documentation>Injury-Burns-Thermal</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914085">
-				<xs:annotation>
-					<xs:documentation>Injury-Cardiac Arrest</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914087">
-				<xs:annotation>
-					<xs:documentation>Injury-Crush Syndrome</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914089">
-				<xs:annotation>
-					<xs:documentation>Injury-Diving Emergencies</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914091">
-				<xs:annotation>
-					<xs:documentation>Injury-Drowning/Near Drowning</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914093">
-				<xs:annotation>
-					<xs:documentation>Injury-Electrical Injuries</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914095">
-				<xs:annotation>
-					<xs:documentation>Injury-Extremity</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914097">
-				<xs:annotation>
-					<xs:documentation>Injury-Eye</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914099">
-				<xs:annotation>
-					<xs:documentation>Injury-Head</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914101">
-				<xs:annotation>
-					<xs:documentation>Injury-Impaled Object</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914103">
-				<xs:annotation>
-					<xs:documentation>Injury-Multisystem</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914105">
-				<xs:annotation>
-					<xs:documentation>Injury-Spinal Cord</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914107">
-				<xs:annotation>
-					<xs:documentation>Medical-Abdominal Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914109">
-				<xs:annotation>
-					<xs:documentation>Medical-Allergic Reaction/Anaphylaxis</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914111">
-				<xs:annotation>
-					<xs:documentation>Medical-Altered Mental Status</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914113">
-				<xs:annotation>
-					<xs:documentation>Medical-Bradycardia</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914115">
-				<xs:annotation>
-					<xs:documentation>Medical-Cardiac Chest Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914117">
-				<xs:annotation>
-					<xs:documentation>Medical-Diarrhea</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914119">
-				<xs:annotation>
-					<xs:documentation>Medical-Hyperglycemia</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914121">
-				<xs:annotation>
-					<xs:documentation>Medical-Hypertension</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914123">
-				<xs:annotation>
-					<xs:documentation>Medical-Hypoglycemia/Diabetic Emergency</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914125">
-				<xs:annotation>
-					<xs:documentation>Medical-Hypotension/Shock (Non-Trauma)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914127">
-				<xs:annotation>
-					<xs:documentation>Medical-Influenza-Like Illness/ Upper Respiratory Infection</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914129">
-				<xs:annotation>
-					<xs:documentation>Medical-Nausea/Vomiting</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914131">
-				<xs:annotation>
-					<xs:documentation>Medical-Newborn/ Neonatal Resuscitation</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914133">
-				<xs:annotation>
-					<xs:documentation>Medical-Overdose/Poisoning/Toxic Ingestion</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914135">
-				<xs:annotation>
-					<xs:documentation>Medical-Pulmonary Edema/CHF</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914137">
-				<xs:annotation>
-					<xs:documentation>Medical-Respiratory Distress/Asthma/COPD/Croup/Reactive Airway</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914139">
-				<xs:annotation>
-					<xs:documentation>Medical-Seizure</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914141">
-				<xs:annotation>
-					<xs:documentation>Medical-ST-Elevation Myocardial Infarction (STEMI)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914143">
-				<xs:annotation>
-					<xs:documentation>Medical-Stroke/TIA</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914145">
-				<xs:annotation>
-					<xs:documentation>Medical-Supraventricular Tachycardia (Including Atrial Fibrillation)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914147">
-				<xs:annotation>
-					<xs:documentation>Medical-Syncope</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914149">
-				<xs:annotation>
-					<xs:documentation>Medical-Ventricular Tachycardia (With Pulse)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914151">
-				<xs:annotation>
-					<xs:documentation>Not Done</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914153">
-				<xs:annotation>
-					<xs:documentation>OB/GYN-Childbirth/Labor/Delivery</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914155">
-				<xs:annotation>
-					<xs:documentation>OB/GYN-Eclampsia</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914157">
-				<xs:annotation>
-					<xs:documentation>OB/GYN-Gynecologic Emergencies</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914159">
-				<xs:annotation>
-					<xs:documentation>OB/GYN-Pregnancy Related Emergencies</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914161">
-				<xs:annotation>
-					<xs:documentation>OB/GYN-Post-partum Hemorrhage</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="9914163">
-				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
+		<xs:restriction base="xs:string">		
+			<xs:enumeration value="9914001"><xs:annotation><xs:documentation>Airway</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914003"><xs:annotation><xs:documentation>Airway-Failed</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914005"><xs:annotation><xs:documentation>Airway-Obstruction/Foreign Body</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914007"><xs:annotation><xs:documentation>Airway-Rapid Sequence Induction (RSI-Paralytic)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914009"><xs:annotation><xs:documentation>Airway-Sedation Assisted (Non-Paralytic)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914011"><xs:annotation><xs:documentation>Cardiac Arrest-Asystole</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914013"><xs:annotation><xs:documentation>Cardiac Arrest-Hypothermia-Therapeutic</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914015"><xs:annotation><xs:documentation>Cardiac Arrest-Pulseless Electrical Activity</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914017"><xs:annotation><xs:documentation>Cardiac Arrest-Ventricular Fibrillation/ Pulseless Ventricular Tachycardia</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914019"><xs:annotation><xs:documentation>Cardiac Arrest-Post Resuscitation Care</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914021"><xs:annotation><xs:documentation>Environmental-Altitude Sickness</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914023"><xs:annotation><xs:documentation>Environmental-Cold Exposure</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914025"><xs:annotation><xs:documentation>Environmental-Frostbite/Cold Injury</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914027"><xs:annotation><xs:documentation>Environmental-Heat Exposure/Exhaustion</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914029"><xs:annotation><xs:documentation>Environmental-Heat Stroke/Hyperthermia</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914031"><xs:annotation><xs:documentation>Environmental-Hypothermia</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914033"><xs:annotation><xs:documentation>Exposure-Airway/Inhalation Irritants</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914035"><xs:annotation><xs:documentation>Exposure-Biological/Infectious</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914037"><xs:annotation><xs:documentation>Exposure-Blistering Agents</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914039"><xs:annotation><xs:documentation>Exposure-Carbon Monoxide/Smoke Inhalation</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914041"><xs:annotation><xs:documentation>Exposure-Chemicals to Eye</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914043"><xs:annotation><xs:documentation>Exposure-Cyanide</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914045"><xs:annotation><xs:documentation>Exposure-Explosive/ Blast Injury</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914047"><xs:annotation><xs:documentation>Exposure-Nerve Agents</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914049"><xs:annotation><xs:documentation>Exposure-Radiologic Agents</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914051"><xs:annotation><xs:documentation>General-Back Pain</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914053"><xs:annotation><xs:documentation>General-Behavioral/Patient Restraint</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914055"><xs:annotation><xs:documentation>General-Cardiac Arrest</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914057"><xs:annotation><xs:documentation>General-Dental Problems</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914059"><xs:annotation><xs:documentation>General-Epistaxis</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914061"><xs:annotation><xs:documentation>General-Fever</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914063"><xs:annotation><xs:documentation>General-Individualized Patient Protocol</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914065"><xs:annotation><xs:documentation>General-Indwelling Medical Devices/Equipment</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914067"><xs:annotation><xs:documentation>General-IV Access</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914069"><xs:annotation><xs:documentation>General-Medical Device Malfunction</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914071"><xs:annotation><xs:documentation>General-Pain Control</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914073"><xs:annotation><xs:documentation>General-Spinal Immobilization/Clearance</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914075"><xs:annotation><xs:documentation>General-Universal Patient Care/ Initial Patient Contact</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914077"><xs:annotation><xs:documentation>Injury-Amputation</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914079"><xs:annotation><xs:documentation>Injury-Bites and Envenomations-Land</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914081"><xs:annotation><xs:documentation>Injury-Bites and Envenomations-Marine</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914083"><xs:annotation><xs:documentation>Injury-Bleeding/ Hemorrhage Control</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914085"><xs:annotation><xs:documentation>Injury-Burns-Thermal</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914087"><xs:annotation><xs:documentation>Injury-Cardiac Arrest</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914089"><xs:annotation><xs:documentation>Injury-Crush Syndrome</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914091"><xs:annotation><xs:documentation>Injury-Diving Emergencies</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914093"><xs:annotation><xs:documentation>Injury-Drowning/Near Drowning</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914095"><xs:annotation><xs:documentation>Injury-Electrical Injuries</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914097"><xs:annotation><xs:documentation>Injury-Extremity</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914099"><xs:annotation><xs:documentation>Injury-Eye</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914101"><xs:annotation><xs:documentation>Injury-Head</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914103"><xs:annotation><xs:documentation>Injury-Impaled Object</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914105"><xs:annotation><xs:documentation>Injury-Multisystem</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914107"><xs:annotation><xs:documentation>Injury-Spinal Cord</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914109"><xs:annotation><xs:documentation>Medical-Abdominal Pain</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914111"><xs:annotation><xs:documentation>Medical-Allergic Reaction/Anaphylaxis</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914113"><xs:annotation><xs:documentation>Medical-Altered Mental Status</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914115"><xs:annotation><xs:documentation>Medical-Bradycardia</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914117"><xs:annotation><xs:documentation>Medical-Cardiac Chest Pain</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914119"><xs:annotation><xs:documentation>Medical-Diarrhea</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914121"><xs:annotation><xs:documentation>Medical-Hyperglycemia</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914123"><xs:annotation><xs:documentation>Medical-Hypertension</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914125"><xs:annotation><xs:documentation>Medical-Hypoglycemia/Diabetic Emergency</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914127"><xs:annotation><xs:documentation>Medical-Hypotension/Shock (Non-Trauma)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914129"><xs:annotation><xs:documentation>Medical-Influenza-Like Illness/ Upper Respiratory Infection</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914131"><xs:annotation><xs:documentation>Medical-Nausea/Vomiting</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914133"><xs:annotation><xs:documentation>Medical-Newborn/ Neonatal Resuscitation</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914135"><xs:annotation><xs:documentation>Medical-Overdose/Poisoning/Toxic Ingestion</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914137"><xs:annotation><xs:documentation>Medical-Pulmonary Edema/CHF</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914139"><xs:annotation><xs:documentation>Medical-Respiratory Distress/Asthma/COPD/Croup/Reactive Airway</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914141"><xs:annotation><xs:documentation>Medical-Seizure</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914143"><xs:annotation><xs:documentation>Medical-ST-Elevation Myocardial Infarction (STEMI)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914145"><xs:annotation><xs:documentation>Medical-Stroke/TIA</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914147"><xs:annotation><xs:documentation>Medical-Supraventricular Tachycardia (Including Atrial Fibrillation)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914149"><xs:annotation><xs:documentation>Medical-Syncope</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914151"><xs:annotation><xs:documentation>Medical-Ventricular Tachycardia (With Pulse)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914153"><xs:annotation><xs:documentation>Not Done</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914155"><xs:annotation><xs:documentation>OB/GYN-Childbirth/Labor/Delivery</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914157"><xs:annotation><xs:documentation>OB/GYN-Eclampsia</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914159"><xs:annotation><xs:documentation>OB/GYN-Gynecologic Emergencies</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914161"><xs:annotation><xs:documentation>OB/GYN-Pregnancy Related Emergencies</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914163"><xs:annotation><xs:documentation>OB/GYN-Post-partum Hemorrhage</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="9914165"><xs:annotation><xs:documentation>Other</xs:documentation></xs:annotation></xs:enumeration>		
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:attribute name="RecordStatus">
@@ -1739,11 +1564,21 @@
 					<xs:documentation>Physician</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9917021">
+				<xs:annotation>
+					<xs:documentation>Critical Care Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9917023">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="StateRequiredDemographic">
+	<xs:simpleType name="StateRequiredElement">
 		<xs:annotation>
-			<xs:documentation>State Demographic Custom Data Element Title</xs:documentation>
+			<xs:documentation>State Required Element</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
@@ -1755,7 +1590,7 @@
 			<xs:documentation>A mailing or street address</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
+			<xs:minLength value="1"/>
 			<xs:maxLength value="55"/>
 		</xs:restriction>
 	</xs:simpleType>
@@ -1844,27 +1679,32 @@
 			</xs:enumeration>
 			<xs:enumeration value="9920007">
 				<xs:annotation>
-					<xs:documentation>Hazmat</xs:documentation>
+					<xs:documentation>ALS Intercept</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9920009">
 				<xs:annotation>
-					<xs:documentation>Medical Transport (Convalescent)</xs:documentation>
+					<xs:documentation>Critical Care Ground Support</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9920011">
 				<xs:annotation>
-					<xs:documentation>Paramedic Intercept</xs:documentation>
+					<xs:documentation>Hazmat</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9920013">
 				<xs:annotation>
-					<xs:documentation>Rescue</xs:documentation>
+					<xs:documentation>Medical Transport (Convalescent, Interfacility Transfer Hospital and Nursing Home)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9920015">
 				<xs:annotation>
-					<xs:documentation>Specialty Care Transport</xs:documentation>
+					<xs:documentation>Rescue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9920017">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eProtocols">
 		<xs:sequence>
@@ -29,7 +29,11 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Protocols are grouped into Airway, Environmental, Exposure, General, Injury, Medical, and OB/GYN. &lt;br/>&lt;br/>There is a new data element EProtocols.02 to indicate whether the protocol is Adult, Pediatric, or General (both).&lt;br/>&lt;br/>State and Local entities can customize protocols but where possible local protocols should map to these uniform codes.  Additional protocols should be coded using text values or numbers greater than 100.</comment>
+										<comment>Protocols are grouped into Airway, Environmental, Exposure, General, Injury, Medical, and OB/GYN. 
+										
+										&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>There is a new data element EProtocols.02 to indicate whether the protocol is Adult, Pediatric, or General (both).
+										
+										&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>State and local entities can add additional protocols to the list but the additional protocols must map to these uniform codes. The protocol code list should be derived from dConfiguration.05 and/or dConfiguration.10</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>

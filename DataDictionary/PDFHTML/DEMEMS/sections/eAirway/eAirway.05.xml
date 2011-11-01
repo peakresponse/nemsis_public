@@ -3,7 +3,7 @@
 <name>Tube Depth</name>
 <national>No</national>
 <state>No</state>
-<definition>The measurement at the lip of the tube depth in centimeters (cm) of the invasive airway placed.</definition>
+<definition>The measurement at the patient's teeth/lip of the tube depth in centimeters (cm) of the invasive airway placed.</definition>
 <v2Number></v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
@@ -14,16 +14,16 @@
 <performanceMeasure>Airway</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-      <constraints>
-        <dataType>integer</dataType>
-        <constraint>
-          <constraintTitle>minValue</constraintTitle>
-          <constraintValue>8</constraintValue>
-        </constraint>
-        <constraint>
-          <constraintTitle>maxValue</constraintTitle>
-          <constraintValue>30</constraintValue>
-        </constraint>
-      </constraints>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>8</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>32</constraintValue>
+    </constraint>
+  </constraints>
 </restrictions>
 </element>

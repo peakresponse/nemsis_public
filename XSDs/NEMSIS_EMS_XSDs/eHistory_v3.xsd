@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eHistory" id="eHistory.MedicalHistory">
 		<xs:sequence>
@@ -38,16 +38,16 @@
 					<xs:documentation>Group Tag to hold info about practitioner </xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="eHistory.02" type="PersonLastName" id="eHistory.LastNameofPatientsPrimaryPractitioner" minOccurs="0">
+					<xs:sequence>															                
+						<xs:element name="eHistory.02" type="PersonLastName" id="eHistory.LastNameofPatientsPractitioner" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eHistory.02</number>
-										<name>Last Name of Patient's Primary Practitioner</name>
+										<name>Last Name of Patient's Practitioner</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The last name of the patient's primary practitioner</definition>
+										<definition>The last name of the patient's practitioner</definition>
 										<v2Number>E12_06</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
@@ -57,15 +57,15 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eHistory.03" type="PersonFirstName" id="eHistory.FirstNameofPatientsPrimaryPractitioner" minOccurs="0">
+						<xs:element name="eHistory.03" type="PersonFirstName" id="eHistory.FirstNameofPatientsPractitioner" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eHistory.03</number>
-										<name>First Name of Patient's Primary Practitioner</name>
+										<name>First Name of Patient's Practitioner</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The first name of the patient's primary practitioner</definition>
+										<definition>The first name of the patient's practitioner</definition>
 										<v2Number>E12_04</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
@@ -75,15 +75,15 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eHistory.04" type="PersonMiddleName" id="eHistory.MiddleNameInitialofPatientsPrimaryPractitioner" minOccurs="0">
+						<xs:element name="eHistory.04" type="PersonMiddleName" id="eHistory.MiddleNameInitialofPatientsPractitioner" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eHistory.04</number>
-										<name>Middle Name/Initial of Patient's Primary Practitioner</name>
+										<name>Middle Name/Initial of Patient's Practitioner</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The middle name or initial of the patient's primary practitioner.</definition>
+										<definition>The middle name or initial of the patient's practitioner.</definition>
 										<v2Number>E12_05</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
@@ -97,7 +97,7 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eHistory.05" nillable="true" id="eHistory.AdvanceDirectives" maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="eHistory.05" nillable="true" id="eHistory.AdvanceDirectives" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -134,7 +134,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eHistory.06" nillable="true" id="eHistory.MedicationAllergies" maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="eHistory.06" nillable="true" id="eHistory.MedicationAllergies" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -146,14 +146,18 @@
 							<v2Number>E12_08</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasure/>
-							<comment>List of medications based on RxNorm (RXCUI) Code.</comment>
+							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 PCS codes can be used for medication groups. (See suggested NEMSIS list.) 
+							&lt;br/>&lt;br/>
+							&lt;br/>Code list is represented in ICD-10 Codes. 
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a> 
+							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="Medication">
+						<xs:extension base="MedicationAllergies">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
@@ -194,7 +198,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eHistory.08" id="eHistory.MedicalSurgicalHistory" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eHistory.08" id="eHistory.MedicalSurgicalHistory" minOccurs="0" maxOccurs="unbounded" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -204,19 +208,28 @@
 							<state>Yes</state>
 							<definition>The patient's pre-existing medical and surgery history of the patient</definition>
 							<v2Number>E12_10</v2Number>
-							<usage>Optional</usage>
+							<usage>Recommended</usage>
 							<performanceMeasure/>
-							<comment>Code list is represented by ICD-10-CM: Factors influencing health status and contact with health services (Z78.0 – Z99.89).</comment>
+							<comment>Code list is represented by ICD-10-CM: Factors influencing health status and contact with health services (Z78.0 – Z99.89).
+							&lt;br/>&lt;br/>ICD-10-CM
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
+							&lt;br/>Product - UMLS Metathesaurus							
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="icd10Code">
+						<xs:extension base="icd10Code">							
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.NoneReported PN.Refused PN.UnableToComplete"/>
+									<xs:union memberTypes="PN.NoneReported PN.Refused PN.UnableToComplete PN.Unresponsive"/>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
@@ -255,7 +268,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eHistory.10" type="ImmunizationType" id="eHistory.ImmunizationHistory" minOccurs="0" >
+						<xs:element name="eHistory.10" type="ImmunizationType" id="eHistory.ImmunizationHistory" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -295,7 +308,7 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eHistory.CurrentMedsGroup" id="eHistory.CurrentMedsGroup" maxOccurs="unbounded">
+			<xs:element name="eHistory.CurrentMedsGroup" id="eHistory.CurrentMedsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about patient's medication </xs:documentation>
 				</xs:annotation>
@@ -499,7 +512,7 @@
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -560,7 +573,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3105011">
 				<xs:annotation>
-					<xs:documentation>State/EMS DNR Form</xs:documentation>
+					<xs:documentation>State EMS DNR or Medical Order Form</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -987,6 +1000,14 @@
 					<xs:documentation>Plant</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MedicationAllergies">
+		<xs:annotation>
+			<xs:documentation>MedicationAllergies</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Z88(\.[0-9])?|Z91.041"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicalHistoryObtainedFrom">

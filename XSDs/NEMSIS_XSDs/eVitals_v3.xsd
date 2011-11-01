@@ -31,7 +31,7 @@
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -105,7 +105,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eVitals.CardiacRhythmGroup" id="eVitals.CardiacRhythmGroup" maxOccurs="unbounded">
+						<xs:element name="eVitals.CardiacRhythmGroup" id="eVitals.CardiacRhythmGroup" >
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold information of the type and method used for ECG interpretation associated with the cardiac rhythm.</xs:documentation>
 							</xs:annotation>
@@ -116,10 +116,10 @@
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>eVitals.03</number>
-													<name>Cardiac Rhythm and Electrocardiography</name>
+													<name>Cardiac Rhythm / Electrocardiography (ECG)</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The initial cardiac rhythm of the patient as interpreted by EMS personnel.</definition>
+													<definition>The cardiac rhythm / ECG and other electrocardiography findings of the patient as interpreted by EMS personnel.</definition>
 													<v2Number>E14_03</v2Number>
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
@@ -218,7 +218,7 @@
 						</xs:element>
 						<xs:element name="eVitals.BloodPressureGroup" id="eVitals.BloodPressureGroup">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of patient's systolic blood pressure and its procedure.</xs:documentation>
+								<xs:documentation>Group Tag to hold the details of patient's blood pressure.</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -329,30 +329,30 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eVitals.09" type="MAP" id="eVitals.MeanArterialPressure" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>eVitals.09</number>
-										<name>Mean Arterial Pressure</name>
-										<national>No</national>
-										<state>No</state>
-										<definition>The patient's mean arterial pressure.</definition>
-										<v2Number/>
-										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes>Added for additional patient monitoring capability.</v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-						</xs:element>
 						<xs:element name="eVitals.HeartRateGroup" id="eVitals.HeartRateGroup">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of patient's systolic blood pressure and its procedure.</xs:documentation>
+								<xs:documentation>Group Tag to hold the details of patient's heart rate.</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
+									<xs:element name="eVitals.09" type="MAP" id="eVitals.MeanArterialPressure" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eVitals.09</number>
+													<name>Mean Arterial Pressure</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The patient's mean arterial pressure.</definition>
+													<v2Number/>
+													<usage>Optional</usage>
+													<performanceMeasure/>
+													<comment/>
+													<v3Changes>Added for additional patient monitoring capability.</v3Changes>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
 									<xs:element name="eVitals.10" nillable="true" id="eVitals.HeartRate">
 										<xs:annotation>
 											<xs:documentation>
@@ -585,23 +585,39 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eVitals.17" type="CarbonMonoxideLevel" id="eVitals.CarbonMonoxideCO" minOccurs="0">
+						<xs:element name="eVitals.17" id="eVitals.CarbonMonoxideCO" minOccurs="0" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eVitals.17</number>
 										<name>Carbon Monoxide (CO)</name>
 										<national>No</national>
-										<state>No</state>
+										<state>Yes</state>
 										<definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
 										<v2Number/>
-										<usage>Optional</usage>
+										<usage>Recommended</usage>
 										<performanceMeasure/>
 										<comment/>
 										<v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="CarbonMonoxideLevel">
+										<xs:attribute name="PN" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="eVitals.18" nillable="true" id="eVitals.BloodGlucoseLevel">
 							<xs:annotation>
@@ -642,7 +658,7 @@
 						</xs:element>
 						<xs:element name="eVitals.GlasgowScoreGroup" id="eVitals.GlasgowScoreGroup">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of patient's systolic blood pressure and its procedure.</xs:documentation>
+								<xs:documentation>Group Tag to hold the details of patient's glasgow score.</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -707,7 +723,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Definitions now based on the National Trauma Data Standard (NTDS).</comment>
-													<v3Changes>Definitions changed to be consistent with the National Trauma Data Standard.</v3Changes>
+													<v3Changes></v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -736,7 +752,7 @@
 													<name>Glasgow Coma Score-Motor</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>  </definition>
+													<definition>The patient's Glasgow Coma Score Motor</definition>
 													<v2Number>E14_17</v2Number>
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
@@ -748,7 +764,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Definitions now based on the National Trauma Data Standard (NTDS).</comment>
-													<v3Changes>Definitions now based on the National Trauma Data Standard (NTDS).</v3Changes>
+													<v3Changes></v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -789,7 +805,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Definitions now based on the National Trauma Data Standard (NTDS).</comment>
-													<v3Changes>Definitions now based on the National Trauma Data Standard (NTDS).</v3Changes>
+													<v3Changes></v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -850,7 +866,7 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eVitals.TemperatureGroup" id="eVitals.TemperatureGroup">
+						<xs:element name="eVitals.TemperatureGroup" id="eVitals.TemperatureGroup"  minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold information about patient's body temperature.</xs:documentation>
 							</xs:annotation>

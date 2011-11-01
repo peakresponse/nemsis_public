@@ -3,9 +3,9 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dContact" id="dContact.AgencyContact">
 		<xs:sequence>
-			<xs:element name="dContact.ContactInfoGroup" id="dContact.ContactInfoGroup" maxOccurs="unbounded">
+			<xs:element name="dContact.ContactInfoGroup" id="dContact.ContactInfoGroup" maxOccurs="unbounded" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Group tag to hold information about agency contact.</xs:documentation>
+					<xs:documentation>Group tag to hold agency contact information.</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -349,7 +349,7 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="dContact.EMSMedicalDirectorGroup" id="dContact.EMSMedicalDirectorGroup" maxOccurs="unbounded">
+			<xs:element name="dContact.EMSMedicalDirectorGroup" id="dContact.EMSMedicalDirectorGroup" maxOccurs="unbounded" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the EMS Medical Director</xs:documentation>
 				</xs:annotation>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:include schemaLocation="censustracts.xsd"/>
 	<xs:complexType name="eScene" id="eScene.Scene">
@@ -50,7 +50,7 @@
 										<v2Number>E08_01</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>This may be partially populated from a list created within dAgency.26 (Fire Department ID Number).</comment>
+										<comment/>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -68,7 +68,7 @@
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>The ID should be the state ID (licence number) for the EMS agency or ID number for the law enforcement. This may be an ID assigned by the state or created by the EMS agency.</comment>
+										<comment>The ID should be the state ID (license number) for the EMS agency or ID number for the law enforcement. This may be an ID assigned by the state or created by the EMS agency.</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -116,7 +116,7 @@
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -202,12 +202,60 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
-			</xs:element>
-			<xs:element name="eScene.08" nillable="true" id="eScene.IncidentLocationType">
+			</xs:element>			
+			<xs:element name="eScene.08" nillable="true" id="eScene.TriageClassificationforMCIPatient">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eScene.08</number>
+							<name>Triage Classification for MCI Patient</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The color associated with the initial triage assessment/classification of the MCI patient.</definition>
+							<v2Number></v2Number>
+							<usage>Required</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>Response</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>
+This element is documented when eScene.07 (Mass Casualty Incident) = Yes.
+&lt;br/>&lt;br/>
+Examples of triage systems include START and SALT.  
+&lt;br/>&lt;br/>
+&lt;div style="font-size:11px">Adapted from: SALT mass casualty triage: concept endorsed by the American College of Emergency Physicians, American College of Surgeons Committee on Trauma, American Trauma Society, National Association of EMS Physicians, National Disaster Life Support Education Consortium, and State and Territorial Injury Prevention Directors Association. Disaster Med Public Health Prep. 2008 Dec;2(4):245-6.
+&lt;/div>
+&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>
+&lt;div style="font-size:11px">
+START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then SAVE-a new method of dynamic triage for victims of a catastrophic earthquake. Prehospital Disaster Med. 1996; Apr-Jun; 11(2): 117-24							
+&lt;/div>
+							</comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="TriageClassification">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="eScene.09" nillable="true" id="eScene.IncidentLocationType">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eScene.09</number>
 							<name>Incident Location Type</name>
 							<national>Yes</national>
 							<state>Yes</state>
@@ -223,7 +271,11 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Place of Occurrence of the external cause (Y92.0-Y92.9).</comment>
+							<comment>Code list is represented in ICD-10-CM: Place of Occurrence of the external cause (Y92.0-Y92.9).
+							&lt;br/>&lt;br/>ICD-10-CM
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
+							&lt;br/>Product - UMLS Metathesaurus
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -240,11 +292,11 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.09" nillable="true" id="eScene.IncidentFacilityCode" minOccurs="0">
+			<xs:element name="eScene.10" nillable="true" id="eScene.IncidentFacilityCode" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.09</number>
+							<number>eScene.10</number>
 							<name>Incident Facility Code</name>
 							<national>No</national>
 							<state>Yes</state>
@@ -268,11 +320,11 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.10" type="GPSLocation" id="eScene.SceneGPSLocation" minOccurs="0">
+			<xs:element name="eScene.11" type="GPSLocation" id="eScene.SceneGPSLocation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.10</number>
+							<number>eScene.11</number>
 							<name>Scene GPS Location</name>
 							<national>No</national>
 							<state>Yes</state>
@@ -289,19 +341,19 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
-										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimun of -90 and a maximum of 90 with up to 6 decimal places
-										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimun of -180 and a maximum of 180 with up to 6 decimal places						  
+										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
+										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 						  </comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eScene.11" type="USNG" id="eScene.SceneUSNationalGridCoordinates" minOccurs="0">
+			<xs:element name="eScene.12" type="USNG" id="eScene.SceneUSNationalGridCoordinates" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.11</number>
+							<number>eScene.12</number>
 							<name>Scene US National Grid Coordinates</name>
 							<national>No</national>
 							<state>Yes</state>
@@ -315,11 +367,11 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eScene.12" type="IncidentFacilityName" id="eScene.IncidentFacilityorLocationName" minOccurs="0">
+			<xs:element name="eScene.13" type="IncidentFacilityName" id="eScene.IncidentFacilityorLocationName" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.12</number>
+							<number>eScene.13</number>
 							<name>Incident Facility or Location Name</name>
 							<national>No</national>
 							<state>Yes</state>
@@ -333,65 +385,99 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eScene.13" type="MilePostOrMajorRoadway" id="eScene.MilePostOrMajorRoadway" minOccurs="0">
+			<xs:element name="eScene.14" id="eScene.MilePostOrMajorRoadway" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.13</number>
+							<number>eScene.14</number>
 							<name>Mile Post or Major Roadway</name>
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The mile post or major roadway associated with the incident locations</definition>
 							<v2Number/>
-							<usage>Optional</usage>
+							<usage>Recommended</usage>
 							<performanceMeasure/>
-							<comment>Defined by NFIRS 5.0.</comment>
+							<comment></comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="MilePostOrMajorRoadway">						
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.14" type="StreetName" id="eScene.IncidentStreetAddress" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eScene.14</number>
-							<name>Incident Street Address</name>
-							<national>No</national>
-							<state>Yes</state>
-							<definition>The street name only where the patient was found, or, if no patient, the address to which the unit responded. Based on NFIRS 5.0 Street or Highway.</definition>
-							<v2Number>E08_11</v2Number>
-							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment>May be collected in two rows and stored as a single data element.</comment>
-							<v3Changes/>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="eScene.15" type="SceneApartment" id="eScene.SceneApartmentSuiteorRoom" minOccurs="0">
+			<xs:element name="eScene.15" id="eScene.IncidentStreetAddress" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eScene.15</number>
-							<name>Scene Apartment, Suite, or Room</name>
+							<name>Incident Street Address</name>
+							<national>No</national>
+							<state>Yes</state>
+							<definition>“The street address where the patient was found, or, if no patient, the address to which the unit responded.”</definition>
+							<v2Number>E08_11</v2Number>
+							<usage>Recommended</usage>
+							<performanceMeasure/>
+							<comment>This is a CMS standard.  According to the Medicare Claims Processing Manual, Chapter 15 - Ambulance, Ambulance suppliers bill using CMS-1500 form or CMS-1450 form for institution-based ambulance providers.</comment>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="StreetAddress">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="eScene.16" id="eScene.IncidentApartmentSuiteorRoom" minOccurs="0" nillable="true">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eScene.16</number>
+							<name>Incident Apartment, Suite, or Room</name>
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The number of the specific apartment, suite, or room where the incident occurred.</definition>
 							<v2Number/>
-							<usage>Optional</usage>
+							<usage>Recommended</usage>
 							<performanceMeasure/>
 							<comment/>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="SceneApartment">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.16" nillable="true" id="eScene.IncidentCity" minOccurs="0">
+			<xs:element name="eScene.17" nillable="true" id="eScene.IncidentCity" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.16</number>
+							<number>eScene.17</number>
 							<name>Incident City</name>
 							<national>No</national>
 							<state>Yes</state>
@@ -399,8 +485,7 @@
 							<v2Number>E08_12</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasure/>
-							<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
-</comment>
+							<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -417,11 +502,11 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.17" nillable="true" id="eScene.IncidentState">
+			<xs:element name="eScene.18" nillable="true" id="eScene.IncidentState">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.17</number>
+							<number>eScene.18</number>
 							<name>Incident State</name>
 							<national>Yes</national>
 							<state>Yes</state>
@@ -455,11 +540,11 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.18" nillable="true" id="eScene.IncidentZIPCode">
+			<xs:element name="eScene.19" nillable="true" id="eScene.IncidentZIPCode">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.18</number>
+							<number>eScene.19</number>
 							<name>Incident ZIP Code</name>
 							<national>Yes</national>
 							<state>Yes</state>
@@ -494,29 +579,40 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.19" type="SceneCrossStreet" id="eScene.SceneCrossStreetorDirections" minOccurs="0">
+			<xs:element name="eScene.20" id="eScene.SceneCrossStreetorDirections" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.19</number>
+							<number>eScene.20</number>
 							<name>Scene Cross Street or Directions</name>
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The nearest cross street to the incident address or directions from a recognized landmark or the second street name of an intersection.</definition>
 							<v2Number/>
-							<usage>Optional</usage>
+							<usage>Recommended</usage>
 							<performanceMeasure/>
 							<comment/>
 							<v3Changes>Added to better locate/document the scene (incident) location.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="SceneCrossStreet">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.20" nillable="true" id="eScene.IncidentCounty">
+			<xs:element name="eScene.21" nillable="true" id="eScene.IncidentCounty">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.20</number>
+							<number>eScene.21</number>
 							<name>Incident County</name>
 							<national>Yes</national>
 							<state>Yes</state>
@@ -551,11 +647,11 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.21" type="ANSICountryCode" id="eScene.IncidentCountry" minOccurs="0">
+			<xs:element name="eScene.22" type="ANSICountryCode" id="eScene.IncidentCountry" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.21</number>
+							<number>eScene.22</number>
 							<name>Incident Country</name>
 							<national>No</national>
 							<state>No</state>
@@ -570,11 +666,11 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eScene.22" type="CensusTracts" id="eScene.IncidentCensusTract" minOccurs="0">
+			<xs:element name="eScene.23" type="CensusTracts" id="eScene.IncidentCensusTract" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>eScene.22</number>
+							<number>eScene.23</number>
 							<name>Incident Census Tract</name>
 							<national>No</national>
 							<state>No</state>
@@ -622,7 +718,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
-			<xs:maxLength value="30"/>
+			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IncidentFacilityName">
@@ -639,7 +735,7 @@
 			<xs:documentation>The kind of location where the incident happened</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="Y92\.[0-9]"/>
+			<xs:pattern value="Y92(\.[0-9]{1,3})?"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NumberOfPatientsAtScene">
@@ -748,4 +844,36 @@
 			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="TriageClassification">
+		<xs:annotation>
+			<xs:documentation>Other services that were at the scene, if any</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2708001">
+				<xs:annotation>
+					<xs:documentation>Red - Immediate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2708003">
+				<xs:annotation>
+					<xs:documentation>Yellow - Delayed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2708005">
+				<xs:annotation>
+					<xs:documentation>Green - Minimal (Minor)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2708007">
+				<xs:annotation>
+					<xs:documentation>Gray - Expectant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2708009">
+				<xs:annotation>
+					<xs:documentation>Black - Deceased</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>	
 </xs:schema>

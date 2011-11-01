@@ -3,13 +3,13 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eAirways">
 		<xs:sequence>
-			<xs:element name="eAirway.AirwayGroup" id="eAirway.AirwayGroup" maxOccurs="unbounded">
+			<xs:element name="eAirway.AirwayGroup" id="eAirway.AirwayGroup" minOccurs="0" >
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold Airway information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eAirway.01" nillable="true" id="eAirway.IndicationsforInvasiveAirway" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="eAirway.01" nillable="true" id="eAirway.IndicationsforInvasiveAirway" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -41,7 +41,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eAirway.ConfirmationGroup" id="eAirway.ConfirmationGroup" maxOccurs="unbounded">
+						<xs:element name="eAirway.ConfirmationGroup" id="eAirway.ConfirmationGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold info about the confirmation methods.</xs:documentation>
 							</xs:annotation>
@@ -55,7 +55,7 @@
 													<name>Date/Time Airway Device Placement Confirmation</name>
 													<national>No</national>
 													<state>Yes</state>
-													<definition>The date and time the airway device placement was confirmed</definition>
+													<definition>The date and time the airway device placement was confirmed.</definition>
 													<v2Number/>
 													<usage>Recommended</usage>
 													<performanceMeasuresGroup>
@@ -65,7 +65,7 @@
 										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -118,7 +118,7 @@
 														<performanceMeasure>Airway</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment/>
-													<v3Changes>Added to better document airway management.</v3Changes>
+													<v3Changes>Added to better document airway management. SAD means Supraglottic Airway  Device.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -148,7 +148,7 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>If the invasive airway is confirmed via multiple methods each method should be documented invidually by time, method, and type of individual.</comment>
+													<comment>If the invasive airway is confirmed via multiple methods each method should be documented individually by time, method, and type of individual.</comment>
 													<v3Changes>Added to better document airway management.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -173,7 +173,7 @@
 													<name>Tube Depth</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The measurement at the lip of the tube depth in centimeters (cm) of the invasive airway placed.</definition>
+													<definition>The measurement at the patient's teeth/lip of the tube depth in centimeters (cm) of the invasive airway placed.</definition>
 													<v2Number/>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
@@ -216,7 +216,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eAirway.07" id="eAirway.CrewMemberID" nillable="true" minOccurs="0">
+									<xs:element name="eAirway.07" nillable="true" id="eAirway.CrewMemberID" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -248,9 +248,10 @@
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-							</xs:complexType>
+								<xs:attribute name="ProcedureGroupCorrelationID" type="CorrelationID" use="optional"/>
+							</xs:complexType>							
 						</xs:element>
-						<xs:element name="eAirway.08" nillable="true" id="eAirway.AirwayComplicationsEncountered" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="eAirway.08" nillable="true" id="eAirway.AirwayComplicationsEncountered" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -326,7 +327,7 @@
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -370,7 +371,7 @@
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a two-digit numeral that represents the year&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
   &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
@@ -539,7 +540,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4003009">
 				<xs:annotation>
-					<xs:documentation>SAD-King LT</xs:documentation>
+					<xs:documentation>SAD-King</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4003011">
@@ -591,20 +592,25 @@
 			</xs:enumeration>
 			<xs:enumeration value="4004011">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Direct Re-Visualization of Tube in Place</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4004013">
 				<xs:annotation>
-					<xs:documentation>Visualization</xs:documentation>
+					<xs:documentation>Endotracheal Tube Whistle (BAAM, etc)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4004015">
 				<xs:annotation>
-					<xs:documentation>Visualization of Vocal Cords</xs:documentation>
+					<xs:documentation>Other (Not Listed)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4004017">
+				<xs:annotation>
+					<xs:documentation>Visualization of Vocal Cords</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4004019">
 				<xs:annotation>
 					<xs:documentation>Waveform ETCO2</xs:documentation>
 				</xs:annotation>
@@ -706,7 +712,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="8"/>
-			<xs:maxInclusive value="30"/>
+			<xs:maxInclusive value="32"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

@@ -1,0 +1,53 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.04" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>EMS Agency State</name>
+<national>No</national>
+<state>No</state>
+<definition>The state/territory which assigned the EMS agency number.</definition>
+<v2Number>D01_03</v2Number>
+<refNumber>dAgency.04</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.                   <br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>length</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
+  <currentStatus>
+    <choice><code>A</code><description>Active</description></choice>
+    <choice><code>I</code><description>Inactive</description></choice>
+	</currentStatus>
+  <currentStatusDate>
+    <constraints>
+      <dataType>dateTime</dataType>
+      <constraint>
+        <constraintTitle>minInclusive</constraintTitle>
+        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+      </constraint>
+      <constraint>
+        <constraintTitle>maxInclusive</constraintTitle>
+        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+      </constraint>
+      <constraint>
+        <constraintTitle>pattern</constraintTitle>
+        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
+      </constraint>
+      </constraints>
+  </currentStatusDate>
+</restrictions>
+</element>

@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.70" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>First EMS Unit on Scene</name>
+<national>No</national>
+<state>No</state>
+<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
+<v2Number></v2Number>
+<refNumber>eScene.01</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
+</restrictions>
+</element>

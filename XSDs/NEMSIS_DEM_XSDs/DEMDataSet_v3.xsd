@@ -22,23 +22,6 @@
 						<xs:documentation>State Required Demographic Data Elements</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<!--<xs:element name="Header" maxOccurs="unbounded">
-					<xs:annotation>
-						<xs:documentation>Container Tag to hold each instance of a demographic record</xs:documentation>
-					</xs:annotation>
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="dAgencyParent" type="dAgencyParent">
-								<xs:annotation>
-									<xs:documentation>State Required Demographic Data Elements</xs:documentation>
-								</xs:annotation>
-							</xs:element>
-							<xs:element name="dAgencyInformation">
-								<xs:annotation>
-									<xs:documentation>State Required Demographic Data Elements</xs:documentation>
-								</xs:annotation>
-								<xs:complexType>
-									<xs:sequence>-->
 				<xs:element name="dCustomConfiguration" type="dCustomConfiguration" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Contains information for demographic custom elements.</xs:documentation>
@@ -101,10 +84,4 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<!--</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>-->
 </xs:schema>

@@ -1,0 +1,52 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.65" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Race</name>
+<national>No</national>
+<state>No</state>
+<definition>The patient's race as defined by the OMB (US Office of Management and Budget)</definition>
+<v2Number>E06_12</v2Number>
+<refNumber>ePatient.14</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl=2&amp;lvlID=172. Using single multiple choice question methodology to improve the completion of ethnicity information.<br/><br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2514001</code>
+      <description>American Indian or Alaska Native</description>
+    </choice>
+    <choice>
+      <code>2514003</code>
+      <description>Asian</description>
+    </choice>
+    <choice>
+      <code>2514005</code>
+      <description>Black or African American</description>
+    </choice>
+    <choice>
+      <code>2514007</code>
+      <description>Hispanic or Latino</description>
+    </choice>
+    <choice>
+      <code>2514009</code>
+      <description>Native Hawaiian or Other Pacific Islander</description>
+    </choice>
+    <choice>
+      <code>2514011</code>
+      <description>White</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
+</restrictions>
+</element>

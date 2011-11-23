@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/root.xslt"?>
+<section name="DEMDataset">
+	
+	<!--<group number="Header" minOccurs="1" maxOccurs="M">
+	<element number="dAgencyParent" type="dAgencyParent" minOccurs="1" maxOccurs="1">
+		<name>Agency Parent Information</name>
+	</element>	-->
+	
+	<group number="DemographicReport" minOccurs="1" maxOccurs="M">
+		<element number="dAgency" minOccurs="1" maxOccurs="1">
+			<name>Agency Information</name>
+		</element>
+		<element number="dConfiguration"  minOccurs="1" maxOccurs="1">
+			<name>Configuration Information</name>
+		</element>
+	</group>
+</section>

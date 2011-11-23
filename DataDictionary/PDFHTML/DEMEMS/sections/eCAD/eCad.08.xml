@@ -1,0 +1,27 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.08" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>EMS Agency Name</name>
+<national>No</national>
+<state>Yes</state>
+<definition>EMS Agency Name</definition>
+<v2Number></v2Number>
+<refNumber>eResponse.02</refNumber>
+<usage>Recommended</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to better identify the EMS Agency associated with the EMS event.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

@@ -1,0 +1,29 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eScene.01" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>First EMS Unit on Scene</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

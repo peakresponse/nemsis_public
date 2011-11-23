@@ -89,11 +89,14 @@
 										<name>Custom Data Element Usage</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The Usage (Mandatory, Required, or Optional) for the Custom Data Element.</definition>
+										<definition>The Usage (Mandatory, Required, Recommended, or Optional) for the Custom Data Element.</definition>
 										<v2Number/>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment>Mandatory = Must be completed and will not accept null values&lt;br/>Required = Must be completed but will accept null values&lt;br/>Optional = Not required but if collected, it cannot be a null value.</comment>
+										<performanceMeasure/>										
+										<comment>Mandatory = Must be completed and will not accept null values
+										&lt;br/>Required = Must be completed but will accept null values
+										&lt;br/>Recommended = Not required but if collected will accept null values
+										&lt;br/>Optional = Not required but if collected, it cannot be a null value.</comment>
 										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>

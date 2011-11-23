@@ -118,6 +118,7 @@
 							</performanceMeasuresGroup>
 							<comment>Advanced Directive and Do Not Resuscitate are both included in this data element.</comment>
 							<v3Changes/>
+							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -148,7 +149,7 @@
 							<performanceMeasure/>
 							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 PCS codes can be used for medication groups. (See suggested NEMSIS list.) 
 							&lt;br/>&lt;br/>
-							&lt;br/>Code list is represented in ICD-10 Codes. 
+							Code list is represented in ICD-10 Codes. 
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a> 
 							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes/>
@@ -168,6 +169,7 @@
 									<xs:union memberTypes="PN.NoKnownDrugAllergies PN.Refused PN.UnableToComplete"/>
 								</xs:simpleType>
 							</xs:attribute>
+							<xs:attribute name="CodeType" use="required" type="CodeType"/>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
@@ -216,6 +218,7 @@
 							&lt;br/>Product - UMLS Metathesaurus							
 							</comment>
 							<v3Changes/>
+							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -334,6 +337,7 @@
 &lt;br/>Product - RxNorm Full Monthly Release
 										</comment>
 										<v3Changes/>
+										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -447,6 +451,7 @@
 							</performanceMeasuresGroup>
 							<comment/>
 							<v3Changes/>
+							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1007,7 +1012,7 @@
 			<xs:documentation>MedicationAllergies</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="Z88(\.[0-9])?|Z91.041"/>
+			<xs:pattern value="Z88(\.[0-9])?|Z91.041|[A-Za-z0-9]{2,7}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicalHistoryObtainedFrom">

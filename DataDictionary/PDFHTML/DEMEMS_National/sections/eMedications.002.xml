@@ -1,0 +1,486 @@
+<?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
+<section name="eMedications">
+<group number="eMedications.MedicationGroup" minOccurs="1" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<element number="eMedications.01" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Date/Time Medication Administered</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The date/time medication administered to the patient</definition>
+<v2Number>E18_01</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<table  cellspacing="2"><tr><td>							
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>
+  <tr><td align="center">'-'</td><td>separators between parts of the date portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the month</td></tr>
+  <tr><td align="center">dd</td><td>a two-digit numeral that represents the day</td></tr>
+  <tr><td align="center">T</td><td>separator that indicates time-of-day follows</td></tr>
+  <tr><td align="center">hh</td><td>a two-digit numeral that represents the hour</td></tr>
+  <tr><td align="center">':'</td><td>a separator between parts of the time-of-day portion</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minute</td></tr>
+  <tr><td align="center">ss</td><td>a two-integer-digit numeral that represents the whole seconds</td></tr>
+  <tr><td align="center">'.' s+</td><td>(not required) represents the fractional seconds</td></tr>
+  <tr><td align="center">zzzzzz</td><td>(required) represents the timezone (as described below)</td></tr>
+</table> 
+</td></tr></table>
+<br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+<table cellspacing="2"><tr><td>	
+<table border="1px" cellpadding="3px" cellspacing="0">
+  <tr><td align="center">hh</td><td>a two-digit numeral (with leading zeros as required) that represents the hours</td></tr>
+  <tr><td align="center">mm</td><td>a two-digit numeral that represents the minutes</td></tr>
+  <tr><td align="center">'+'</td><td>a nonnegative duration</td></tr>
+  <tr><td align="center">'-'</td><td>a nonpositive duration</td></tr>
+</table>
+</td></tr></table></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+      <patterns>
+        <pattern>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</pattern>
+     </patterns>
+  <constraints>
+    <dataType>dateTime</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
+    </constraint>
+  </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eMedications.02" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Medication Administered Prior to this Units EMS Care</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indicates that the medication administration which is documented was administered prior to this EMS units care</definition>
+<v2Number>E18_02</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is the NEMSIS Version 3 method to document prior aid.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eMedications.03" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Medication Given</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The medication given to the patient</definition>
+<v2Number>E18_03</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>List of medications based on RxNorm (RXCUI) code. See suggested NEMSIS list of medication codes.
+<br/>RxNorm
+<br/>Website - http://uts.nlm.nih.gov
+
+<br/><br/>Product - UMLS Metathesaurus
+<br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
+<br/>Product - RxNorm Full Monthly Release</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801007</code><description>Medication Allergy</description>		</choice>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801009</code><description>Medication Already Taken</description>		</choice>
+		<choice><code>8801001</code><description>Contraindication Noted</description>		</choice>
+		<choice><code>8801003</code><description>Denied By Order</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>7</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><group number="eMedications.DosageGroup" minOccurs="1" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<element number="eMedications.05" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Medication Dosage</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The dose or amount of the medication given to the patient</definition>
+<v2Number>E18_05</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>8</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eMedications.06" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Medication Dosage Units</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The unit of medication dosage given to patient</definition>
+<v2Number>E18_06</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>3706001</code>
+      <description>Grams</description>
+    </choice>
+    <choice>
+      <code>3706003</code>
+      <description>Inches</description>
+    </choice>
+    <choice>
+      <code>3706005</code>
+      <description>International Units</description>
+    </choice>
+    <choice>
+      <code>3706007</code>
+      <description>Keep Vein Open (To Keep Open)</description>
+    </choice>
+    <choice>
+      <code>3706009</code>
+      <description>Liters</description>
+    </choice>
+    <choice>
+      <code>3706011</code>
+      <description>Liters Per Minute</description>
+    </choice>
+    <choice>
+      <code>3706013</code>
+      <description>MDI Puffs</description>
+    </choice>
+    <choice>
+      <code>3706015</code>
+      <description>Micrograms</description>
+    </choice>
+    <choice>
+      <code>3706017</code>
+      <description>Micrograms per Kilogram per Minute</description>
+    </choice>
+    <choice>
+      <code>3706019</code>
+      <description>Milliequivalents</description>
+    </choice>
+    <choice>
+      <code>3706021</code>
+      <description>Milligrams</description>
+    </choice>
+    <choice>
+      <code>3706023</code>
+      <description>Milligrams Per Kilogram Per Minute</description>
+    </choice>
+    <choice>
+      <code>3706025</code>
+      <description>Milliliters</description>
+    </choice>
+    <choice>
+      <code>3706027</code>
+      <description>Milliliters Per Hour</description>
+    </choice>
+    <choice>
+      <code>3706029</code>
+      <description>Other</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element></group>
+<element number="eMedications.07" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Response to Medication</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The patient's response to the medication</definition>
+<v2Number>E18_07</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>9916001</code>
+      <description>Improved</description>
+    </choice>
+    <choice>
+      <code>9916003</code>
+      <description>Unchanged</description>
+    </choice>
+    <choice>
+      <code>9916005</code>
+      <description>Worse</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element><element number="eMedications.08" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Medication Complication</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS</definition>
+<v2Number>E18_08</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>3708001</code>
+      <description>Altered Mental Status</description>
+    </choice>
+    <choice>
+      <code>3708003</code>
+      <description>Apnea</description>
+    </choice>
+    <choice>
+      <code>3708005</code>
+      <description>Bleeding</description>
+    </choice>
+    <choice>
+      <code>3708007</code>
+      <description>Bradycardia</description>
+    </choice>
+    <choice>
+      <code>3708009</code>
+      <description>Bradypnea</description>
+    </choice>
+    <choice>
+      <code>3708011</code>
+      <description>Diarrhea</description>
+    </choice>
+    <choice>
+      <code>3708013</code>
+      <description>Extravasation</description>
+    </choice>
+    <choice>
+      <code>3708015</code>
+      <description>Hypertension</description>
+    </choice>
+    <choice>
+      <code>3708017</code>
+      <description>Hyperthermia</description>
+    </choice>
+    <choice>
+      <code>3708019</code>
+      <description>Hypotension</description>
+    </choice>
+    <choice>
+      <code>3708021</code>
+      <description>Hypothermia</description>
+    </choice>
+    <choice>
+      <code>3708023</code>
+      <description>Hypoxia</description>
+    </choice>
+    <choice>
+      <code>3708025</code>
+      <description>Injury</description>
+    </choice>
+    <choice>
+      <code>3708027</code>
+      <description>Itching/Urticaria</description>
+    </choice>
+    <choice>
+      <code>3708029</code>
+      <description>Nausea</description>
+    </choice>
+    <choice>
+      <code>3708031</code>
+      <description>None</description>
+    </choice>
+    <choice>
+      <code>3708033</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>3708035</code>
+      <description>Respiratory Distress</description>
+    </choice>
+    <choice>
+      <code>3708037</code>
+      <description>Tachycardia</description>
+    </choice>
+    <choice>
+      <code>3708039</code>
+      <description>Tachypnea</description>
+    </choice>
+    <choice>
+      <code>3708041</code>
+      <description>Vomiting</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+  <correlationID>Yes</correlationID>
+</restrictions>
+</element><element number="eMedications.10" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Role/Type of Person Administering Medication</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The type (level) of EMS or Healthcare Professional Administering the Medication. For medications administered prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.
+										<br/><br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</v3Comment>
+<v3Changes>Added to better document the type of healthcare professional who administered the medication.</v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>9905001</code>
+      <description>2009 Advanced Emergency Medical Technician (AEMT)</description>
+    </choice>
+    <choice>
+      <code>9905003</code>
+      <description>2009 Emergency Medical Responder (EMR)</description>
+    </choice>
+    <choice>
+      <code>9905005</code>
+      <description>2009 Emergency Medical Technician (EMT)</description>
+    </choice>
+    <choice>
+      <code>9905007</code>
+      <description>2009 Paramedic</description>
+    </choice>
+    <choice>
+      <code>9905009</code>
+      <description>EMT-Basic</description>
+    </choice>
+    <choice>
+      <code>9905011</code>
+      <description>EMT-Intermediate</description>
+    </choice>
+    <choice>
+      <code>9905013</code>
+      <description>EMT-Paramedic (Based on pre-2009 Curriculum)</description>
+    </choice>
+    <choice>
+      <code>9905015</code>
+      <description>First Responder</description>
+    </choice>
+    <choice>
+      <code>9905017</code>
+      <description>Nurse</description>
+    </choice>
+    <choice>
+      <code>9905019</code>
+      <description>Other Healthcare Professional</description>
+    </choice>
+    <choice>
+      <code>9905021</code>
+      <description>Other Non-Healthcare Professional</description>
+    </choice>
+    <choice>
+      <code>9905023</code>
+      <description>Patient/Lay Person</description>
+    </choice>
+    <choice>
+      <code>9905025</code>
+      <description>Physician</description>
+    </choice>
+    <choice>
+      <code>9905027</code>
+      <description>Respiratory Therapist</description>
+    </choice>
+    <choice>
+      <code>9905029</code>
+      <description>Student</description>
+    </choice>
+    <choice>
+      <code>9905031</code>
+      <description>Critical Care Paramedic</description>
+    </choice>
+    <choice>
+      <code>9905033</code>
+      <description>Community Paramedicine</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element></group>
+</section>

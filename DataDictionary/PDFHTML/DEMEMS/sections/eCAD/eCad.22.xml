@@ -1,0 +1,27 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.22" minOccurs="0" maxOccurs="1" dataType="VehicleDispatchLocation" isNillable="No">
+<name>Vehicle Dispatch Location</name>
+<national>No</national>
+<state>No</state>
+<definition>The EMS Location or healthcare facility name representing the geographic location of the vehicle at the time of dispatch.</definition>
+<v2Number>E02_13</v2Number>
+<refNumber>eResponse.16</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This element can be populated from dLocation.02 EMS Location Name or dFacility information.  Depending on the information the EMS Agency or State is interested in knowing the following elements can be utilized:             <br/>1. dLocation.02 EMS Location Name             <br/>2. dFacility.02 Facility Name             <br/>3. dFacility.03 Facility Code             <br/>4. dFacility.15 Facility GPS Location</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

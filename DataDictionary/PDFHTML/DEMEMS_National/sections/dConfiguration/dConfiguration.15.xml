@@ -1,0 +1,67 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dConfiguration.15" minOccurs="1" maxOccurs="M" isNillable="No">
+<name>Patient Monitoring Capability(s)</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
+<v2Number></v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to identify the patient monitoring capability of the EMS Agency. Associated with each EMS Agency Number (dAgency.02) since each EMS Agency Number may have a different capability within each EMS Agency. Other patient monitoring capability may exist but NEMSIS Version 3 only includes these specific capabilities.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>1215001</code>
+      <description>Capnography-Numeric</description>
+    </choice>
+    <choice>
+      <code>1215003</code>
+      <description>Capnography-Waveform</description>
+    </choice>
+    <choice>
+      <code>1215005</code>
+      <description>ECG-12 Lead or Greater</description>
+    </choice>
+    <choice>
+      <code>1215007</code>
+      <description>ECG-Less than 12 Lead (Cardiac Monitor)</description>
+    </choice>
+    <choice>
+      <code>1215009</code>
+      <description>Oximetry-Carbon Monoxide</description>
+    </choice>
+    <choice>
+      <code>1215011</code>
+      <description>Oximetry-Oxygen</description>
+    </choice>
+    <choice>
+      <code>1215013</code>
+      <description>Pressure Measurement-Invasive (Arterial, CVP, Swan, etc.)</description>
+    </choice>
+    <choice>
+      <code>1215015</code>
+      <description>Pressure Measurement-Non-Invasive (Blood Pressure, etc.)</description>
+    </choice>
+    <choice>
+      <code>1215017</code>
+      <description>Ventilator-Transport</description>
+    </choice>
+    <choice>
+      <code>1215019</code>
+      <description>Vital Sign Monitoring</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
+</restrictions>
+</element>

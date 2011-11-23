@@ -1,0 +1,49 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.26" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Level of Responsiveness (AVPU)</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The patient's highest level of responsiveness.</definition>
+<v2Number>E14_22</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>Yes</pertinentNegative>
+<v3Comment>Definition changed to indicate highest level of responsiveness.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+	<pertinentNegatives>
+		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
+		<choice><code>8801019</code><description>Refused</description>		</choice>
+	</pertinentNegatives>
+  <enumerations>
+    <choice>
+      <code>3326001</code>
+      <description>Alert</description>
+    </choice>
+    <choice>
+      <code>3326003</code>
+      <description>Verbal</description>
+    </choice>
+    <choice>
+      <code>3326005</code>
+      <description>Painful</description>
+    </choice>
+    <choice>
+      <code>3326007</code>
+      <description>Unresponsive</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

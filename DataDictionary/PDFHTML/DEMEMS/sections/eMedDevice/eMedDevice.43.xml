@@ -1,0 +1,27 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.43" minOccurs="0" maxOccurs="1" dataType="DeviceSerialNumber" isNillable="No">
+<name>Medical Device Serial Number</name>
+<national>No</national>
+<state>No</state>
+<definition>The unique manufacturer's serial number associated with a medical device.</definition>
+<v2Number></v2Number>
+<refNumber>eDevice.01</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>50</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>2</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

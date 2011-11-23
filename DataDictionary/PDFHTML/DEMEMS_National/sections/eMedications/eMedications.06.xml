@@ -1,0 +1,81 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedications.06" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Medication Dosage Units</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The unit of medication dosage given to patient</definition>
+<v2Number>E18_06</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>3706001</code>
+      <description>Grams</description>
+    </choice>
+    <choice>
+      <code>3706003</code>
+      <description>Inches</description>
+    </choice>
+    <choice>
+      <code>3706005</code>
+      <description>International Units</description>
+    </choice>
+    <choice>
+      <code>3706007</code>
+      <description>Keep Vein Open (To Keep Open)</description>
+    </choice>
+    <choice>
+      <code>3706009</code>
+      <description>Liters</description>
+    </choice>
+    <choice>
+      <code>3706011</code>
+      <description>Liters Per Minute</description>
+    </choice>
+    <choice>
+      <code>3706013</code>
+      <description>MDI Puffs</description>
+    </choice>
+    <choice>
+      <code>3706015</code>
+      <description>Micrograms</description>
+    </choice>
+    <choice>
+      <code>3706017</code>
+      <description>Micrograms per Kilogram per Minute</description>
+    </choice>
+    <choice>
+      <code>3706019</code>
+      <description>Milliequivalents</description>
+    </choice>
+    <choice>
+      <code>3706021</code>
+      <description>Milligrams</description>
+    </choice>
+    <choice>
+      <code>3706023</code>
+      <description>Milligrams Per Kilogram Per Minute</description>
+    </choice>
+    <choice>
+      <code>3706025</code>
+      <description>Milliliters</description>
+    </choice>
+    <choice>
+      <code>3706027</code>
+      <description>Milliliters Per Hour</description>
+    </choice>
+    <choice>
+      <code>3706029</code>
+      <description>Other</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

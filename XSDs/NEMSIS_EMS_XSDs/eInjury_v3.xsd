@@ -17,10 +17,12 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Suggested code list is represented in ICD-10-CM: External Causes of Morbidity, Injury, Poisoning and Certain Other Consequences of External Causes with the range (S00 through T79.4 and V00 through Y38.9X2). It is not expected that EMS will utilize the 7th digit, often used to describe the type of encounter (A-Initial Encounter, D-Subsequent Encounter, S-Sequela). Thus, S through T and V through Y codes should be limited to 5 or 6 digits at the most. 
-&lt;br/>&lt;br/>Code list is represented in ICD-10 Codes.
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus</comment>
+							<comment>
+							Suggested code list is represented in ICD-10-CM: T36.0xx through T65.91x, T71.11x through T71.9 and, V00.0x through Y38.9xx. It is not expected that EMS will utilize the 7th digit, often used to describe the type of encounter (A-Initial Encounter, D-Subsequent Encounter, S-Sequela).  Thus, T, V and Y codes should be limited to 5 or 6 digits at the most. 
+							&lt;br/>&lt;br/>Code list is represented in ICD-10 Codes.
+							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Product - UMLS Metathesaurus
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -117,6 +119,7 @@
 							</performanceMeasuresGroup>
 							<comment>Added additional mechanism or risk indicators based on CDC Field Triage Decision Scheme Steps 3.</comment>
 							<v3Changes>Added to better evaluate the CDC-ACS Field Triage Guideline.</v3Changes>
+							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -356,30 +359,30 @@
 										<performanceMeasure/>
 										<comment>Based on Vehicular Emergency Data Set:  Incident Date and Time. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group. 
 										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
-&lt;table  cellspacing="2">&lt;tr>&lt;td>							
-&lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">T&lt;/td>&lt;td>separator that indicates time-of-day follows&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral that represents the hour&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">':'&lt;/td>&lt;td>a separator between parts of the time-of-day portion&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minute&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">ss&lt;/td>&lt;td>a two-integer-digit numeral that represents the whole seconds&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'.' s+&lt;/td>&lt;td>(not required) represents the fractional seconds&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">zzzzzz&lt;/td>&lt;td>(required) represents the timezone (as described below)&lt;/td>&lt;/tr>
-&lt;/table> 
-&lt;/td>&lt;/tr>&lt;/table>
-&lt;br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
-&lt;table cellspacing="2">&lt;tr>&lt;td>	
-&lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral (with leading zeros as required) that represents the hours&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minutes&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'+'&lt;/td>&lt;td>a nonnegative duration&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
-&lt;/table>
-&lt;/td>&lt;/tr>&lt;/table></comment>
+									&lt;table  cellspacing="2">&lt;tr>&lt;td>							
+									&lt;table border="1px" cellpadding="3px" cellspacing="0">
+									  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">T&lt;/td>&lt;td>separator that indicates time-of-day follows&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral that represents the hour&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">':'&lt;/td>&lt;td>a separator between parts of the time-of-day portion&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minute&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">ss&lt;/td>&lt;td>a two-integer-digit numeral that represents the whole seconds&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">'.' s+&lt;/td>&lt;td>(not required) represents the fractional seconds&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">zzzzzz&lt;/td>&lt;td>(required) represents the timezone (as described below)&lt;/td>&lt;/tr>
+									&lt;/table> 
+									&lt;/td>&lt;/tr>&lt;/table>
+									&lt;br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+									&lt;table cellspacing="2">&lt;tr>&lt;td>	
+									&lt;table border="1px" cellpadding="3px" cellspacing="0">
+									  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral (with leading zeros as required) that represents the hours&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minutes&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">'+'&lt;/td>&lt;td>a nonnegative duration&lt;/td>&lt;/tr>
+									  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
+									&lt;/table>
+									&lt;/td>&lt;/tr>&lt;/table></comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>

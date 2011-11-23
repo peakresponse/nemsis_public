@@ -1,0 +1,90 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dConfiguration.11" minOccurs="1" maxOccurs="M" isNillable="No">
+<name>EMS Agency Specialty Service Capability</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Special training or services provided by the EMS Agency and available to the EMS service area/community.</definition>
+<v2Number></v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>1211001</code>
+      <description>Air Rescue</description>
+    </choice>
+    <choice>
+      <code>1211003</code>
+      <description>CBRNE</description>
+    </choice>
+    <choice>
+      <code>1211005</code>
+      <description>Community Health Medicine</description>
+    </choice>
+    <choice>
+      <code>1211007</code>
+      <description>Disaster Medical Assistance Team (DMAT)</description>
+    </choice>
+    <choice>
+      <code>1211009</code>
+      <description>Disaster Mortuary (DMORT)</description>
+    </choice>
+    <choice>
+      <code>1211011</code>
+      <description>Dive Rescue</description>
+    </choice>
+    <choice>
+      <code>1211013</code>
+      <description>Farm Rescue</description>
+    </choice>
+    <choice>
+      <code>1211015</code>
+      <description>High Angle Rescue</description>
+    </choice>
+    <choice>
+      <code>1211017</code>
+      <description>Machinery Disentanglement</description>
+    </choice>
+    <choice>
+      <code>1211019</code>
+      <description>None</description>
+    </choice>
+    <choice>
+      <code>1211021</code>
+      <description>Ski / Snow Rescue</description>
+    </choice>
+    <choice>
+      <code>1211023</code>
+      <description>Tactical EMS</description>
+    </choice>
+    <choice>
+      <code>1211025</code>
+      <description>Trench / Confined Space Rescue</description>
+    </choice>
+    <choice>
+      <code>1211027</code>
+      <description>Urban Search and Rescue (USAR)</description>
+    </choice>
+    <choice>
+      <code>1211029</code>
+      <description>Vehicle Extrication</description>
+    </choice>
+    <choice>
+      <code>1211031</code>
+      <description>Veterinary Medical Assistance Team (VMAT)</description>
+    </choice>
+    <choice>
+      <code>1211033</code>
+      <description>Water or Ice Related Rescue (Incl Swift Water)</description>
+    </choice>
+    <choice>
+      <code>1211035</code>
+      <description>Wilderness Search and Rescue</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
+</restrictions>
+</element>

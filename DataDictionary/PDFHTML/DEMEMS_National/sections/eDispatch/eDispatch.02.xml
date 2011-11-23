@@ -1,0 +1,46 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eDispatch.02" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>EMD Performed</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of whether Emergency Medical Dispatch was performed for this EMS event.</definition>
+<v2Number>E03_02</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2302001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>2302003</code>
+      <description>Yes, With Pre-Arrival Instructions</description>
+    </choice>
+    <choice>
+      <code>2302005</code>
+      <description>Yes, Without Pre-Arrival Instructions</description>
+    </choice>
+    <choice>
+      <code>2302007</code>
+      <description>Yes, Unknown if Pre-Arrival Instructions Given</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

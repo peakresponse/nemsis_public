@@ -1,0 +1,50 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eVitals.22" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Glasgow Coma Score-Qualifier</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Documentation of factors which make the GCS score more meaningful.</definition>
+<v2Number>E14_18</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Definitions now based on the National Trauma Data Standard (NTDS).</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>3322001</code>
+      <description>Eye Obstruction Prevents Eye Assessment</description>
+    </choice>
+    <choice>
+      <code>3322003</code>
+      <description>Initial GCS has legitimate values without interventions such as intubation and sedation</description>
+    </choice>
+    <choice>
+      <code>3322005</code>
+      <description>Patient Chemically Paralyzed</description>
+    </choice>
+    <choice>
+      <code>3322007</code>
+      <description>Patient Chemically Sedated</description>
+    </choice>
+    <choice>
+      <code>3322009</code>
+      <description>Patient Intubated</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+  <correlationID>Yes</correlationID>
+</restrictions>
+</element>

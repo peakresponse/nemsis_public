@@ -1,0 +1,73 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eSituation.08" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Chief Complaint Organ System</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The primary organ system of the patient injured or medically affected.</definition>
+<v2Number>E09_12</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Altered to follow the anatomical organ systems as defined by general anatomy. Added Lymphatic/Immune; Merged Skin with Muscular-Skeletal. Changed OB/Gyn to Reproductive.<br/><br/>Retained non-organ system designations for Global/General and Behavioral/Psychiatric.<br/><br/>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2808001</code>
+      <description>Behavioral/Psychiatric</description>
+    </choice>
+    <choice>
+      <code>2808003</code>
+      <description>Cardiovascular</description>
+    </choice>
+    <choice>
+      <code>2808005</code>
+      <description>CNS/Neuro</description>
+    </choice>
+    <choice>
+      <code>2808007</code>
+      <description>Endocrine/Metabolic</description>
+    </choice>
+    <choice>
+      <code>2808009</code>
+      <description>GI</description>
+    </choice>
+    <choice>
+      <code>2808011</code>
+      <description>Global/General</description>
+    </choice>
+    <choice>
+      <code>2808013</code>
+      <description>Lymphatic/Immune</description>
+    </choice>
+    <choice>
+      <code>2808015</code>
+      <description>Musculoskeletal/Skin</description>
+    </choice>
+    <choice>
+      <code>2808017</code>
+      <description>Reproductive</description>
+    </choice>
+    <choice>
+      <code>2808019</code>
+      <description>Pulmonary</description>
+    </choice>
+    <choice>
+      <code>2808021</code>
+      <description>Renal</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

@@ -1,0 +1,27 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.54" minOccurs="0" maxOccurs="1" dataType="PacingRate" isNillable="No">
+<name>Pacing Rate</name>
+<national>No</national>
+<state>No</state>
+<definition>The rate the device was calibrated to pace during the event, if appropriate.</definition>
+<v2Number>E21_11</v2Number>
+<refNumber>eDevice.12</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>1000</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

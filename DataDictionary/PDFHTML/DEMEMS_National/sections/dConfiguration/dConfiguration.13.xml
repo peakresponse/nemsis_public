@@ -1,0 +1,38 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dConfiguration.13" minOccurs="1" maxOccurs="1" isNillable="No">
+<name>Emergency Medical Dispatch (EMD) Provided to EMS Agency Service Area</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication as to whether Emergency Medical Dispatch is provided to the EMS Agency's service area.</definition>
+<v2Number></v2Number>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to better document the implementation of Emergency Medical Dispatch. Associated with each EMS Agency and the specific EMS Agency Number (dAgency.02).</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>1213001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>1213003</code>
+      <description>Yes, 100% of the EMS Agency's Service Area</description>
+    </choice>
+    <choice>
+      <code>1213005</code>
+      <description>Yes, Less than 100% of the EMS Agency's Service Area</description>
+    </choice>
+  </enumerations>
+</restrictions>
+</element>

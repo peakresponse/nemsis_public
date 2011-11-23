@@ -1,0 +1,27 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.61" minOccurs="0" maxOccurs="1" dataType="CustomResults" isNillable="No">
+<name>Custom Data Element Result</name>
+<national>No</national>
+<state>No</state>
+<definition>The actual value or values chosen (if values listed in custom.05) or result (free text, Date/Time, or number) documented for the Custom Data Element</definition>
+<v2Number></v2Number>
+<refNumber>eCustomResults.01</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<restrictions>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>100000</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

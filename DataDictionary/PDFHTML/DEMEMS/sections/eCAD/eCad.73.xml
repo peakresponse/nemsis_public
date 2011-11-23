@@ -1,0 +1,58 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.73" minOccurs="0" maxOccurs="1" dataType="OtherServicesAtScene" isNillable="No">
+<name>Type of Other Service at Scene</name>
+<national>No</national>
+<state>No</state>
+<definition>The type of public safety or EMS service associated with Other Agencies on Scene</definition>
+<v2Number>E08_02</v2Number>
+<refNumber>eScene.04</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Associated with each Other Service in eScene.02</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2704001</code>
+      <description>EMS Mutual Aid</description>
+    </choice>
+    <choice>
+      <code>2704003</code>
+      <description>Fire</description>
+    </choice>
+    <choice>
+      <code>2704005</code>
+      <description>First Responder</description>
+    </choice>
+    <choice>
+      <code>2704007</code>
+      <description>Hazmat</description>
+    </choice>
+    <choice>
+      <code>2704009</code>
+      <description>Law</description>
+    </choice>
+    <choice>
+      <code>2704011</code>
+      <description>Other</description>
+    </choice>
+    <choice>
+      <code>2704013</code>
+      <description>Other EMS Agency</description>
+    </choice>
+    <choice>
+      <code>2704015</code>
+      <description>Other Health Care Provider</description>
+    </choice>
+    <choice>
+      <code>2704017</code>
+      <description>Rescue</description>
+    </choice>
+    <choice>
+      <code>2704019</code>
+      <description>Utilities</description>
+    </choice>
+  </enumerations>
+</restrictions>
+</element>

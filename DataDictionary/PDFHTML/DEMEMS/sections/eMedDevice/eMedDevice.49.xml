@@ -1,0 +1,108 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.49" minOccurs="0" maxOccurs="M" isNillable="No">
+<name>Medical Device ECG Lead</name>
+<national>No</national>
+<state>No</state>
+<definition>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</definition>
+<v2Number>E21_06</v2Number>
+<refNumber>eDevice.07</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Can be displayed in the Vital Signs or Procedure Sections.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>4107001</code>
+      <description>I</description>
+    </choice>
+    <choice>
+      <code>4107003</code>
+      <description>II</description>
+    </choice>
+    <choice>
+      <code>4107005</code>
+      <description>III</description>
+    </choice>
+    <choice>
+      <code>4107007</code>
+      <description>AVR</description>
+    </choice>
+    <choice>
+      <code>4107009</code>
+      <description>AVL</description>
+    </choice>
+    <choice>
+      <code>4107011</code>
+      <description>AVF</description>
+    </choice>
+    <choice>
+      <code>4107013</code>
+      <description>Paddle</description>
+    </choice>
+    <choice>
+      <code>4107013</code>
+      <description>Pads</description>
+    </choice>
+    <choice>
+      <code>4107015</code>
+      <description>V1</description>
+    </choice>
+    <choice>
+      <code>4107017</code>
+      <description>V2</description>
+    </choice>
+    <choice>
+      <code>4107019</code>
+      <description>V3</description>
+    </choice>
+    <choice>
+      <code>4107019</code>
+      <description>V3r</description>
+    </choice>
+    <choice>
+      <code>4107021</code>
+      <description>V4</description>
+    </choice>
+    <choice>
+      <code>4107021</code>
+      <description>V4r</description>
+    </choice>
+    <choice>
+      <code>4107023</code>
+      <description>V5</description>
+    </choice>
+    <choice>
+      <code>4107023</code>
+      <description>V5r</description>
+    </choice>
+    <choice>
+      <code>4107025</code>
+      <description>V6</description>
+    </choice>
+    <choice>
+      <code>4107025</code>
+      <description>V6r</description>
+    </choice>
+    <choice>
+      <code>4107025</code>
+      <description>V7</description>
+    </choice>
+    <choice>
+      <code>4107025</code>
+      <description>V8</description>
+    </choice>
+    <choice>
+      <code>4107025</code>
+      <description>V9</description>
+    </choice>
+  </enumerations>
+  <correlationID>Yes</correlationID>
+</restrictions>
+</element>

@@ -1,0 +1,33 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eProcedures.08" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Response to Procedure</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The patient's response to the procedure</definition>
+<v2Number>E19_08</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>9916001</code>
+      <description>Improved</description>
+    </choice>
+    <choice>
+      <code>9916003</code>
+      <description>Unchanged</description>
+    </choice>
+    <choice>
+      <code>9916005</code>
+      <description>Worse</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

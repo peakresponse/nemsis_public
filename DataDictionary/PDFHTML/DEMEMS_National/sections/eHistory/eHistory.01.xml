@@ -1,0 +1,82 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.01" minOccurs="1" maxOccurs="M" isNillable="Yes">
+<name>Barriers to Patient Care</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
+<v2Number>E12_01</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added Obesity, Sight Impaired, Psychologically Impaired</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>3101001</code>
+      <description>Cultural, Custom, Religious</description>
+    </choice>
+    <choice>
+      <code>3101003</code>
+      <description>Developmentally Impaired</description>
+    </choice>
+    <choice>
+      <code>3101005</code>
+      <description>Hearing Impaired</description>
+    </choice>
+    <choice>
+      <code>3101007</code>
+      <description>Language</description>
+    </choice>
+    <choice>
+      <code>3101009</code>
+      <description>None Noted</description>
+    </choice>
+    <choice>
+      <code>3101011</code>
+      <description>Obesity</description>
+    </choice>
+    <choice>
+      <code>3101013</code>
+      <description>Physical Barrier (Unable to Access Patient)</description>
+    </choice>
+    <choice>
+      <code>3101015</code>
+      <description>Physically Impaired</description>
+    </choice>
+    <choice>
+      <code>3101017</code>
+      <description>Physically Restrained</description>
+    </choice>
+    <choice>
+      <code>3101019</code>
+      <description>Psychologically Impaired</description>
+    </choice>
+    <choice>
+      <code>3101021</code>
+      <description>Sight Impaired</description>
+    </choice>
+    <choice>
+      <code>3101023</code>
+      <description>Speech Impaired</description>
+    </choice>
+    <choice>
+      <code>3101025</code>
+      <description>Unattended or Unsupervised (including minors)</description>
+    </choice>
+    <choice>
+      <code>3101027</code>
+      <description>Unconscious</description>
+    </choice>
+    <choice>
+      <code>3101029</code>
+      <description>Uncooperative</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+  <correlationID>Yes</correlationID>
+</restrictions>
+</element>

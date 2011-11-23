@@ -1,0 +1,38 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedications.02" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Medication Administered Prior to this Units EMS Care</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>Indicates that the medication administration which is documented was administered prior to this EMS units care</definition>
+<v2Number>E18_02</v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This is the NEMSIS Version 3 method to document prior aid.</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>9923001</code>
+      <description>No</description>
+    </choice>
+    <choice>
+      <code>9923003</code>
+      <description>Yes</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

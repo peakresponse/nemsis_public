@@ -1,0 +1,27 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.40" minOccurs="0" maxOccurs="1" dataType="ImagingStudyResults" isNillable="No">
+<name>Imaging Study Results</name>
+<national>No</national>
+<state>No</state>
+<definition>The description or interpretation of the results of the imaging study.</definition>
+<v2Number></v2Number>
+<refNumber>eLabs.06</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes>Added to better describe the EMS Patient Care</v3Changes>
+<restrictions>
+  <constraints>
+    <dataType>string</dataType>
+    <constraint>
+        <constraintTitle>maxLength</constraintTitle>
+      <constraintValue>5000</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minLength</constraintTitle>
+      <constraintValue>3</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

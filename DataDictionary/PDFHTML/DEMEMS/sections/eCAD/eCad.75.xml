@@ -1,0 +1,30 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.75" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Number of Patients at Scene</name>
+<national>No</national>
+<state>No</state>
+<definition>Indicator of how many total patients were at the scene</definition>
+<v2Number>E08_05</v2Number>
+<refNumber>eScene.06</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2707001</code>
+      <description>Multiple</description>
+    </choice>
+    <choice>
+      <code>2707003</code>
+      <description>None</description>
+    </choice>
+    <choice>
+      <code>2707005</code>
+      <description>Single</description>
+    </choice>
+  </enumerations>
+</restrictions>
+</element>

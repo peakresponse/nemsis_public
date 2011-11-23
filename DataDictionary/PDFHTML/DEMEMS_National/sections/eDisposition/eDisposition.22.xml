@@ -1,0 +1,121 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eDisposition.22" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Hospital In-Patient Destination</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The location within the hospital that the patient was taken directly by EMS (e.g. Cath Lab, ICU, etc.)</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>To be documented when in eDisposition.21 "Hospital-In Patient Bed" is selected.</v3Comment>
+<v3Changes>Added to identify the location within the hospital that the patient was directly taken to by EMS.</v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>4222001</code>
+      <description>Hospital-Burn</description>
+    </choice>
+    <choice>
+      <code>4222003</code>
+      <description>Hospital-Cath Lab</description>
+    </choice>
+    <choice>
+      <code>4222005</code>
+      <description>Hospital-CCU</description>
+    </choice>
+    <choice>
+      <code>4222007</code>
+      <description>Hospital-Endoscopy</description>
+    </choice>
+    <choice>
+      <code>4222009</code>
+      <description>Hospital-Hospice</description>
+    </choice>
+    <choice>
+      <code>4222011</code>
+      <description>Hospital-Hyperbaric Oxygen Treatment</description>
+    </choice>
+    <choice>
+      <code>4222013</code>
+      <description>Hospital-ICU</description>
+    </choice>
+    <choice>
+      <code>4222015</code>
+      <description>Hospital-Labor &amp; Delivery</description>
+    </choice>
+    <choice>
+      <code>4222017</code>
+      <description>Hospital-Med/Surg</description>
+    </choice>
+    <choice>
+      <code>4222019</code>
+      <description>Hospital-Mental Health</description>
+    </choice>
+    <choice>
+      <code>4222021</code>
+      <description>Hospital-MICU</description>
+    </choice>
+    <choice>
+      <code>4222023</code>
+      <description>Hospital-NICU</description>
+    </choice>
+    <choice>
+      <code>4222025</code>
+      <description>Hospital-Nursery</description>
+    </choice>
+    <choice>
+      <code>4222027</code>
+      <description>Hospital-Peds (General)</description>
+    </choice>
+    <choice>
+      <code>4222029</code>
+      <description>Hospital-Peds ICU</description>
+    </choice>
+    <choice>
+      <code>4222031</code>
+      <description>Hospital-OR</description>
+    </choice>
+    <choice>
+      <code>4222033</code>
+      <description>Hospital-Orthopedic</description>
+    </choice>
+    <choice>
+      <code>4222035</code>
+      <description>Hospital-Other</description>
+    </choice>
+    <choice>
+      <code>4222037</code>
+      <description>Hospital-Out-Patient Bed</description>
+    </choice>
+    <choice>
+      <code>4222039</code>
+      <description>Hospital-Radiology Services - MRI</description>
+    </choice>
+    <choice>
+      <code>4222041</code>
+      <description>Hospital-Radiology Services - CT/PET</description>
+    </choice>
+    <choice>
+      <code>4222043</code>
+      <description>Hospital-Radiology Services - X-Ray</description>
+    </choice>
+    <choice>
+      <code>4222045</code>
+      <description>Hospital-Radiation</description>
+    </choice>
+    <choice>
+      <code>4222047</code>
+      <description>Hospital-Rehab</description>
+    </choice>
+    <choice>
+      <code>4222049</code>
+      <description>Hospital-SICU</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

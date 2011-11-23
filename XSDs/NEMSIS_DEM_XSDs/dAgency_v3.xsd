@@ -4,12 +4,6 @@
 	<xs:include schemaLocation="censustracts.xsd"/>
 	<xs:complexType name="dAgency">
 		<xs:sequence>
-			<!--<xs:element name="dAgency.AgencyDataGroup" id="dAgency.AgencyDataGroup">
-				<xs:annotation>
-					<xs:documentation>Group Tag to hold general EMS Agency information</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>-->
 			<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID">
 							<xs:annotation>
 								<xs:documentation>

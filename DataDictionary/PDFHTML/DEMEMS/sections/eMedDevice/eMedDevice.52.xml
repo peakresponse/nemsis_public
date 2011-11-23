@@ -1,0 +1,38 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.52" minOccurs="0" maxOccurs="1" dataType="ShockOrPacingEnergy" isNillable="No">
+<name>Shock or Pacing Energy</name>
+<national>No</national>
+<state>No</state>
+<definition>The energy (in joules) used for the shock or pacing (if appropriate for the event)</definition>
+<v2Number>E21_09</v2Number>
+<refNumber>eDevice.10</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <constraints>
+    <dataType>decimal</dataType>
+    <constraint>
+        <constraintTitle>totalDigits</constraintTitle>
+      <constraintValue>5</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>fractionDigits</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>1</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>9000</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

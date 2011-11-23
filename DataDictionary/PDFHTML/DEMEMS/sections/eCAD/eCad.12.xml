@@ -1,0 +1,62 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.12" minOccurs="0" maxOccurs="1" dataType="EMSStandByReason" isNillable="No">
+<name>Standby Purpose</name>
+<national>No</national>
+<state>No</state>
+<definition>The main reason the EMS Unit is on Standby as the Primary Type of Service for the EMS event.</definition>
+<v2Number></v2Number>
+<refNumber>eResponse.06</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added to document the reason for ?Standby? when populated in eResponse.05 (Type of Service Requested). This information will assist in administrative analysis of EMS service delivery, special event coverage, etc.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2206001</code>
+      <description>Disaster Event-Drill/Exercise</description>
+    </choice>
+    <choice>
+      <code>2206003</code>
+      <description>Disaster Event-Live Staging</description>
+    </choice>
+    <choice>
+      <code>2206005</code>
+      <description>Education</description>
+    </choice>
+    <choice>
+      <code>2206007</code>
+      <description>EMS Staging-Improve Coverage</description>
+    </choice>
+    <choice>
+      <code>2206009</code>
+      <description>Fire Support-Rehab</description>
+    </choice>
+    <choice>
+      <code>2206011</code>
+      <description>Fire Support-Standby</description>
+    </choice>
+    <choice>
+      <code>2206013</code>
+      <description>Mass Gathering-Concert/Entertainment Event</description>
+    </choice>
+    <choice>
+      <code>2206015</code>
+      <description>Mass Gathering-Fair/Community Event</description>
+    </choice>
+    <choice>
+      <code>2206017</code>
+      <description>Mass Gathering-Sporting Event</description>
+    </choice>
+    <choice>
+      <code>2206019</code>
+      <description>Other (Not Listed)</description>
+    </choice>
+    <choice>
+      <code>2206021</code>
+      <description>Public Safety Support</description>
+    </choice>
+  </enumerations>
+</restrictions>
+</element>

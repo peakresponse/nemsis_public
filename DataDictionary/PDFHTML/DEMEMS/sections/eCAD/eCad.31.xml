@@ -1,0 +1,187 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.31" minOccurs="1" maxOccurs="1" dataType="ComplaintReportedByDispatch" isNillable="No">
+<name>Complaint Reported by Dispatch</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The complaint dispatch reported to the responding unit.</definition>
+<v2Number>E03_01</v2Number>
+<refNumber>eDispatch.01</refNumber>
+<usage>Mandatory</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Added Pandemic/Epidemic/Outbreak.<br/>Added Automated Crash Notification<br/>Added Healthcare Professional Admission<br/>Added Interfacility/Evaluation/Transfer<br/>- Other entries expanded based on current national EMD Dispatch List</v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2301001</code>
+      <description>Abdominal Pain/Problems</description>
+    </choice>
+    <choice>
+      <code>2301003</code>
+      <description>Allergic Reaction/Stings</description>
+    </choice>
+    <choice>
+      <code>2301005</code>
+      <description>Animal Bite</description>
+    </choice>
+    <choice>
+      <code>2301007</code>
+      <description>Assault</description>
+    </choice>
+    <choice>
+      <code>2301009</code>
+      <description>Automated Crash Notification</description>
+    </choice>
+    <choice>
+      <code>2301011</code>
+      <description>Back Pain (Non-Traumatic)</description>
+    </choice>
+    <choice>
+      <code>2301013</code>
+      <description>Breathing Problem</description>
+    </choice>
+    <choice>
+      <code>2301015</code>
+      <description>Burns/Explosion</description>
+    </choice>
+    <choice>
+      <code>2301017</code>
+      <description>Carbon Monoxide/Hazmat/Inhalation/CBRN</description>
+    </choice>
+    <choice>
+      <code>2301019</code>
+      <description>Cardiac Arrest/Death</description>
+    </choice>
+    <choice>
+      <code>2301021</code>
+      <description>Chest Pain (Non-Traumatic)</description>
+    </choice>
+    <choice>
+      <code>2301023</code>
+      <description>Choking</description>
+    </choice>
+    <choice>
+      <code>2301025</code>
+      <description>Convulsions/Seizure</description>
+    </choice>
+    <choice>
+      <code>2301027</code>
+      <description>Diabetic Problem</description>
+    </choice>
+    <choice>
+      <code>2301029</code>
+      <description>Electrocution/Lightning</description>
+    </choice>
+    <choice>
+      <code>2301031</code>
+      <description>Eye Problem/Injury</description>
+    </choice>
+    <choice>
+      <code>2301033</code>
+      <description>Falls</description>
+    </choice>
+    <choice>
+      <code>2301035</code>
+      <description>Fire</description>
+    </choice>
+    <choice>
+      <code>2301037</code>
+      <description>Headache</description>
+    </choice>
+    <choice>
+      <code>2301039</code>
+      <description>Healthcare Professional/Admission</description>
+    </choice>
+    <choice>
+      <code>2301041</code>
+      <description>Heart Problems/AICD</description>
+    </choice>
+    <choice>
+      <code>2301043</code>
+      <description>Heat/Cold Exposure</description>
+    </choice>
+    <choice>
+      <code>2301045</code>
+      <description>Hemorrhage/Laceration</description>
+    </choice>
+    <choice>
+      <code>2301047</code>
+      <description>Industrial Accident/Inaccessible Incident/Other Entrapments (Non-Vehicle)</description>
+    </choice>
+    <choice>
+      <code>2301049</code>
+      <description>Medical Alarm</description>
+    </choice>
+    <choice>
+      <code>2301051</code>
+      <description>No Other Appropriate Choice</description>
+    </choice>
+    <choice>
+      <code>2301053</code>
+      <description>Overdose/Poisoning/Ingestion</description>
+    </choice>
+    <choice>
+      <code>2301055</code>
+      <description>Pandemic/Epidemic/Outbreak</description>
+    </choice>
+    <choice>
+      <code>2301057</code>
+      <description>Pregnancy/Childbirth/Miscarriage</description>
+    </choice>
+    <choice>
+      <code>2301059</code>
+      <description>Psychiatric Problem/Abnormal Behavior/Suicide Attempt</description>
+    </choice>
+    <choice>
+      <code>2301061</code>
+      <description>Sick Person</description>
+    </choice>
+    <choice>
+      <code>2301063</code>
+      <description>Stab/Gunshot Wound/Penetrating Trauma</description>
+    </choice>
+    <choice>
+      <code>2301065</code>
+      <description>Standby</description>
+    </choice>
+    <choice>
+      <code>2301067</code>
+      <description>Stroke/CVA</description>
+    </choice>
+    <choice>
+      <code>2301069</code>
+      <description>Traffic/Transportation Incident</description>
+    </choice>
+    <choice>
+      <code>2301071</code>
+      <description>Transfer/Interfacility/Palliative Care</description>
+    </choice>
+    <choice>
+      <code>2301073</code>
+      <description>Traumatic Injury</description>
+    </choice>
+    <choice>
+      <code>2301075</code>
+      <description>Well Person Check</description>
+    </choice>
+    <choice>
+      <code>2301077</code>
+      <description>Unconscious/Fainting/Near-Fainting</description>
+    </choice>
+    <choice>
+      <code>2301079</code>
+      <description>Unknown Problem/Person Down</description>
+    </choice>
+  </enumerations>
+</restrictions>
+</element>

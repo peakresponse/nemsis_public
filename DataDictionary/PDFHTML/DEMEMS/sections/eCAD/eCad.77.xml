@@ -1,0 +1,47 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCad.77" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Triage Classification for MCI Patient</name>
+<national>No</national>
+<state>No</state>
+<definition>The color associated with the initial triage assessment/classification of the MCI patient.</definition>
+<v2Number></v2Number>
+<refNumber>eScene.08</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>This element is documented when eScene.07 (Mass Casualty Incident) = Yes.<br/><br/>Examples of triage systems include START and SALT.  <br/><br/><div style="font-size:11px">Adapted from: SALT mass casualty triage: concept endorsed by the American College of Emergency Physicians, American College of Surgeons Committee on Trauma, American Trauma Society, National Association of EMS Physicians, National Disaster Life Support Education Consortium, and State and Territorial Injury Prevention Directors Association. Disaster Med Public Health Prep. 2008 Dec;2(4):245-6.</div><div style="font-size:4px"> </div><div style="font-size:11px">START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then SAVE-a new method of dynamic triage for victims of a catastrophic earthquake. Prehospital Disaster Med. 1996; Apr-Jun; 11(2): 117-24             </div></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>2708001</code>
+      <description>Red - Immediate</description>
+    </choice>
+    <choice>
+      <code>2708003</code>
+      <description>Yellow - Delayed</description>
+    </choice>
+    <choice>
+      <code>2708005</code>
+      <description>Green - Minimal (Minor)</description>
+    </choice>
+    <choice>
+      <code>2708007</code>
+      <description>Gray - Expectant</description>
+    </choice>
+    <choice>
+      <code>2708009</code>
+      <description>Black - Deceased</description>
+    </choice>
+  </enumerations>
+</restrictions>
+</element>

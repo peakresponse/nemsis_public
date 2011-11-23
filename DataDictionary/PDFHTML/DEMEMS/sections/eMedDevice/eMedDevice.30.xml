@@ -1,0 +1,35 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.30" minOccurs="0" maxOccurs="1" isNillable="No">
+<name>Respiratory Rate</name>
+<national>No</national>
+<state>No</state>
+<definition>The patient's respiratory rate expressed as a number per minute.</definition>
+<v2Number>E14_11</v2Number>
+<refNumber>eVitals.14</refNumber>
+<usage>Optional</usage>
+<notValue>No</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <constraints>
+    <dataType>integer</dataType>
+    <constraint>
+        <constraintTitle>minValue</constraintTitle>
+      <constraintValue>0</constraintValue>
+    </constraint>
+    <constraint>
+        <constraintTitle>maxValue</constraintTitle>
+      <constraintValue>300</constraintValue>
+    </constraint>
+  </constraints>
+</restrictions>
+</element>

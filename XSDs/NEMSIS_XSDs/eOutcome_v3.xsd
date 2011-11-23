@@ -23,10 +23,10 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  (For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-&lt;div style="font-size:2px">&amp;nbsp;&lt;/div>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
-&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
-&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
-</comment>
+							&lt;div style="font-size:2px">&amp;nbsp;&lt;/div>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
+							&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
+							&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -63,10 +63,10 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  (For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
-&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
-&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
-</comment>
+							&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
+							&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
+							&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -195,9 +195,11 @@
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus</comment>
+							<comment>
+							Suggested code list is represented in ICD-10-CM: T36.0xx through T65.91x, T71.11x through T71.9 and, V00.0x through Y38.9xx. It is not expected that EMS will utilize the 7th digit, often used to describe the type of encounter (A-Initial Encounter, D-Subsequent Encounter, S-Sequela).  Thus, T, V and Y codes should be limited to 5 or 6 digits at the most.
+							&lt;br/>&lt;br/>Code list is represented in ICD-10-CM: Diagnosis Codes.
+							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -216,8 +218,8 @@
 							<usage>Optional</usage>
 							<performanceMeasure/>
 							<comment>Code list is represented in ICD-10-PCS: Procedure Codes.
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus</comment>
+							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -243,8 +245,8 @@
 							<usage>Optional</usage>
 							<performanceMeasure/>
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus</comment>
+							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -270,30 +272,30 @@
 							<usage>Optional</usage>
 							<performanceMeasure/>
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
-&lt;table  cellspacing="2">&lt;tr>&lt;td>							
-&lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">T&lt;/td>&lt;td>separator that indicates time-of-day follows&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral that represents the hour&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">':'&lt;/td>&lt;td>a separator between parts of the time-of-day portion&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minute&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">ss&lt;/td>&lt;td>a two-integer-digit numeral that represents the whole seconds&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'.' s+&lt;/td>&lt;td>(not required) represents the fractional seconds&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">zzzzzz&lt;/td>&lt;td>(required) represents the timezone (as described below)&lt;/td>&lt;/tr>
-&lt;/table> 
-&lt;/td>&lt;/tr>&lt;/table>
-&lt;br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
-&lt;table cellspacing="2">&lt;tr>&lt;td>	
-&lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral (with leading zeros as required) that represents the hours&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minutes&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'+'&lt;/td>&lt;td>a nonnegative duration&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
-&lt;/table>
-&lt;/td>&lt;/tr>&lt;/table></comment>
+							&lt;table  cellspacing="2">&lt;tr>&lt;td>							
+							&lt;table border="1px" cellpadding="3px" cellspacing="0">
+							  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">T&lt;/td>&lt;td>separator that indicates time-of-day follows&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral that represents the hour&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">':'&lt;/td>&lt;td>a separator between parts of the time-of-day portion&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minute&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">ss&lt;/td>&lt;td>a two-integer-digit numeral that represents the whole seconds&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'.' s+&lt;/td>&lt;td>(not required) represents the fractional seconds&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">zzzzzz&lt;/td>&lt;td>(required) represents the timezone (as described below)&lt;/td>&lt;/tr>
+							&lt;/table> 
+							&lt;/td>&lt;/tr>&lt;/table>
+							&lt;br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+							&lt;table cellspacing="2">&lt;tr>&lt;td>	
+							&lt;table border="1px" cellpadding="3px" cellspacing="0">
+							  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral (with leading zeros as required) that represents the hours&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minutes&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'+'&lt;/td>&lt;td>a nonnegative duration&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
+							&lt;/table>
+							&lt;/td>&lt;/tr>&lt;/table></comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -312,8 +314,8 @@
 							<usage>Optional</usage>
 							<performanceMeasure/>
 							<comment>Code list is represented in ICD-10-PCS: Procedure Codes.
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus</comment>
+							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -339,8 +341,8 @@
 							<usage>Optional</usage>
 							<performanceMeasure/>
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus</comment>
+								&lt;br/>Website - http://uts.nlm.nih.gov  
+								&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -402,30 +404,30 @@
 							<usage>Optional</usage>
 							<performanceMeasure/>
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
-&lt;table  cellspacing="2">&lt;tr>&lt;td>							
-&lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">T&lt;/td>&lt;td>separator that indicates time-of-day follows&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral that represents the hour&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">':'&lt;/td>&lt;td>a separator between parts of the time-of-day portion&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minute&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">ss&lt;/td>&lt;td>a two-integer-digit numeral that represents the whole seconds&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'.' s+&lt;/td>&lt;td>(not required) represents the fractional seconds&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">zzzzzz&lt;/td>&lt;td>(required) represents the timezone (as described below)&lt;/td>&lt;/tr>
-&lt;/table> 
-&lt;/td>&lt;/tr>&lt;/table>
-&lt;br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
-&lt;table cellspacing="2">&lt;tr>&lt;td>	
-&lt;table border="1px" cellpadding="3px" cellspacing="0">
-  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral (with leading zeros as required) that represents the hours&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minutes&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'+'&lt;/td>&lt;td>a nonnegative duration&lt;/td>&lt;/tr>
-  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
-&lt;/table>
-&lt;/td>&lt;/tr>&lt;/table></comment>
+							&lt;table  cellspacing="2">&lt;tr>&lt;td>							
+							&lt;table border="1px" cellpadding="3px" cellspacing="0">
+							  &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>separators between parts of the date portion&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the month&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">dd&lt;/td>&lt;td>a two-digit numeral that represents the day&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">T&lt;/td>&lt;td>separator that indicates time-of-day follows&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral that represents the hour&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">':'&lt;/td>&lt;td>a separator between parts of the time-of-day portion&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minute&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">ss&lt;/td>&lt;td>a two-integer-digit numeral that represents the whole seconds&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'.' s+&lt;/td>&lt;td>(not required) represents the fractional seconds&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">zzzzzz&lt;/td>&lt;td>(required) represents the timezone (as described below)&lt;/td>&lt;/tr>
+							&lt;/table> 
+							&lt;/td>&lt;/tr>&lt;/table>
+							&lt;br/>Timezones, required, are durations with (integer-valued) hour and minute properties in the form: ('+' | '-') hh ':' mm   
+							&lt;table cellspacing="2">&lt;tr>&lt;td>	
+							&lt;table border="1px" cellpadding="3px" cellspacing="0">
+							  &lt;tr>&lt;td align="center">hh&lt;/td>&lt;td>a two-digit numeral (with leading zeros as required) that represents the hours&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">mm&lt;/td>&lt;td>a two-digit numeral that represents the minutes&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'+'&lt;/td>&lt;td>a nonnegative duration&lt;/td>&lt;/tr>
+							  &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
+							&lt;/table>
+							&lt;/td>&lt;/tr>&lt;/table></comment>
 							<v3Changes>Added to better measure patient outcome.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>

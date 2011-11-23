@@ -1,0 +1,42 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eProtocols.02" minOccurs="1" maxOccurs="1" isNillable="Yes">
+<name>Protocol Age Category</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The age group the protocol is written to address</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<notValue>Yes</notValue>
+<pertinentNegative>No</pertinentNegative>
+<v3Comment>Protocols are grouped into Airway, Environmental, Exposure, General, Injury, Medical, and OB/GYN.  -There is a new data element to indicate whether the protocol is Adult, Pediatric, or General (both).</v3Comment>
+<v3Changes>Added to better document protocol use.</v3Changes>
+<performanceMeasuresGroup>
+<performanceMeasure>Airway</performanceMeasure>
+<performanceMeasure>Cardiac Arrest</performanceMeasure>
+<performanceMeasure>Pediatric</performanceMeasure>
+<performanceMeasure>Response</performanceMeasure>
+<performanceMeasure>STEMI</performanceMeasure>
+<performanceMeasure>Stroke</performanceMeasure>
+<performanceMeasure>Trauma</performanceMeasure>
+</performanceMeasuresGroup>
+<restrictions>
+  <enumerations>
+    <choice>
+      <code>3602001</code>
+      <description>Adult Only</description>
+    </choice>
+    <choice>
+      <code>3602003</code>
+      <description>General</description>
+    </choice>
+    <choice>
+      <code>3602005</code>
+      <description>Pediatric Only</description>
+    </choice>
+  </enumerations>
+	<notValues>
+		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
+		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
+	</notValues>
+</restrictions>
+</element>

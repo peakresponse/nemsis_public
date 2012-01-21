@@ -411,7 +411,6 @@
 							<definition>The unique physical vehicle number of the responding unit.</definition>
 							<v2Number>E02_11</v2Number>
 							<usage>Mandatory</usage>
-							<performanceMeasure/>
 							<comment>This is recommended to be the State Vehicle Permit Number if unique to the vehicle.  If the vehicle is not licensed by the state, this should be a unique number only associated with a specific vehicle. This element should be populated from dVehicle.01 -  Unit/Vehicle Number.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
@@ -429,7 +428,6 @@
 							<definition>The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS Unit/Vehicle Number in many agencies.</definition>
 							<v2Number>E02_12</v2Number>
 							<usage>Mandatory</usage>
-							<performanceMeasure/>
 							<comment>"This element could be populated from a list created in dVehicle.03 EMS Unit Call Sign or dConfiguration.16 (Crew Call Sign).</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -443,11 +441,19 @@
 							<name>Level of Care of This Unit</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The level of care (BLS or ALS) the unit is able to provide based on the units’ treatment capabilities for this EMS response.</definition>
+							<definition>The level of care (BLS or ALS) the unit is able to provide based on the units' treatment capabilities for this EMS response.</definition>
 							<v2Number></v2Number>
 							<usage>Mandatory</usage>
-							<performanceMeasure/>
-							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit’s capabilities.  
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>Response</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit's capabilities.  
 								&lt;br/>&lt;br/>For example, if a unit/crew is staffed with an EMT-Intermediate or EMT-Paramedic but the unit is either licensed or stocked at a BLS level the appropriate level of care is "BLS-Basic”. This is because the care provided to patients is limited to BLS skills.
 							</comment>
 							<v3Changes/>
@@ -466,7 +472,6 @@
 							<definition>The EMS Location or healthcare facility name representing the geographic location of the vehicle at the time of dispatch.</definition>
 							<v2Number>E02_13</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
 							<comment>This element can be populated from dLocation.02 EMS Location Name or dFacility information.  Depending on the information the EMS Agency or State is interested in knowing the following elements can be utilized:
 							&lt;br/>1. dLocation.02 EMS Location Name
 							&lt;br/>2. dFacility.02 Facility Name
@@ -511,7 +516,6 @@
 							<definition>The US National Grid Coordinates for the EMS Vehicle's Dispatch Location.</definition>
 							<v2Number/>
 							<usage>Optional</usage>
-							<performanceMeasure/>
 							<comment>Standard found at www.fgdc.gov/usng. Used by the EMS components of US Governmental entities such as national parks and military agencies.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
@@ -529,7 +533,6 @@
 							<definition>The mileage (counter or odometer reading) of the vehicle at the beginning of the call (when the wheels begin moving). If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)</definition>
 							<v2Number>E02_16</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
 							<comment>If a mileage counter is being used instead of an odometer, this value would be 0.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
@@ -547,7 +550,6 @@
 							<definition>The mileage (counter or odometer reading) of the vehicle when it arrives at the scene. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)</definition>
 							<v2Number>E02_17</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
 							<comment>If using a counter, this is the mileage traveled from dispatch to the scene starting from 0.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
@@ -565,7 +567,6 @@
 							<definition>The mileage (counter or odometer reading) of the vehicle when it arrives at the patient's destination. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)</definition>
 							<v2Number>E02_18</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
 							<comment>If using a counter, this is the mileage traveled from dispatch to the patient's transport destination starting from 0.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
@@ -583,7 +584,6 @@
 							<definition>If using a counter, this is the mileage traveled beginning with dispatch through the transport of the patient to their destination and ending when back in service, starting from 0. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16</definition>
 							<v2Number>E02_19</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
 							<comment/>
 							<v3Changes/>
 						</nemsisTacDoc>
@@ -610,7 +610,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Information now split between eResponse.21 (Response Mode to Scene) and eResponse.22 (Additional Response Mode Descriptors)</comment>
+							<comment>Information now split between eResponse.23 (Response Mode to Scene) and eResponse.24 (Additional Response Mode Descriptors)</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>

@@ -123,12 +123,13 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>List of medications based on RxNorm (RXCUI) code. See suggested NEMSIS list of medication codes.
-&lt;br/>RxNorm
-&lt;br/>Website - http://uts.nlm.nih.gov
-
-&lt;br/>&lt;br/>Product - UMLS Metathesaurus
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
+										<comment>
+List of medications based on RxNorm (RXCUI) code. 
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>RxNorm 
+&lt;br/>Website - http://uts.nlm.nih.gov 
+&lt;br/>&lt;br/>Product - UMLS Metathesaurus 
+&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
 										<v3Changes></v3Changes>
@@ -275,7 +276,7 @@
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 											</xs:simpleType>
 										</xs:attribute>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+										
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
@@ -315,7 +316,7 @@
 						
 						
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+					
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>

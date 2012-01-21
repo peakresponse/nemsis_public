@@ -124,19 +124,19 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Procedures which are recorded as a Vital Sign do not have to be documented in the Procedure Section.&lt;br/>&lt;br/>
-										Code list is represented in ICD-10-PCS: Procedure Codes, see suggested NEMSIS list of procedure codes.
-ICD-10-PCS
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus
-</comment>
+										<comment>Procedures which are recorded as a Vital Sign do not have to be documented in the Procedure Section.
+										&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
+										&lt;br/>&lt;br/>SNOMEDCT
+										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
+										&lt;br/>Product: Product - UMLS Metathesaurus
+										</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="icd10Code">
+									<xs:extension base="snomed">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>

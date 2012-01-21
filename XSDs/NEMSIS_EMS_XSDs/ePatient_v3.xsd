@@ -131,7 +131,9 @@
 							<v2Number>E06_04</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment>This is a CMS standard.  According to the Medicare Claims Processing Manual, Chapter 15 - Ambulance, Ambulance suppliers bill using CMS-1500 form or CMS-1450 form for institution-based ambulance providers.  This standard adheres to CMS-1500 and 1450.</comment>
+							<comment>This is a CMS standard.  According to the Medicare Claims Processing Manual, Chapter 15 - Ambulance, Ambulance suppliers bill using CMS-1500 form or CMS-1450 form for institution-based ambulance providers.  This standard adheres to CMS-1500 and 1450.
+								&lt;br/>&lt;br/>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -539,11 +541,12 @@
 							<name>Patient's Phone Number</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The patient's home or primary phone number</definition>
+							<definition>The patient's phone number</definition>
 							<v2Number>E06_17</v2Number>
 							<usage>Optional</usage>
+							<comment>This element contains an attribute to define what type of phone number is being documented i.e. Fax, Home, Mobile, Pager, and Work.
 							<performanceMeasure/>
-							<comment/>
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>

@@ -8,14 +8,14 @@
 <usage>Recommended</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>Code list is represented in ICD-10-CM: Diagnoses Codes.  This list will only contain specific Y codes, see suggested NEMSIS list of activity codes (Y93).
+<v3Comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
 										<br/><br/>Code list is represented in ICD-10 Codes.
 <br/>Website - http://uts.nlm.nih.gov  
 <br/>Product - UMLS Metathesaurus</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
       <patterns>
-        <pattern>Y93(\.[A-Za-z0-9]{1,4})?</pattern>
+        <pattern>Y93\.[A-Za-z0-9]{1,4}</pattern>
      </patterns>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>

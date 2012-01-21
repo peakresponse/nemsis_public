@@ -8,8 +8,8 @@
 <usage>Required</usage>
 <notValue>Yes</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.<br/><br/>Code list is represented in ICD-10-CM: Symptoms, Signs and Abnormal Clinical and Laboratory Findings, (R00-69, R73.9)
-							<br/><br/>Code list is represented in ICD-10-CM Diagnoses Codes.  See suggested NEMSIS list of symptoms and signs codes.
+<v3Comment>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.
+							<br/><br/>Code list is represented in ICD-10-CM Diagnoses Codes. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
 							<br/><br/>ICD-10-CM
 							<br/>Website - <a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov</a>
 							<br/>Product - UMLS Metathesaurus</v3Comment>
@@ -24,7 +24,7 @@
 </performanceMeasuresGroup>
 <restrictions>
       <patterns>
-        <pattern>R[0-6][0-9](\.\d{0,4})?|R73.9|R99</pattern>
+        <pattern>R[0-6][0-9](\.[0-9]{0,4})?|R73.9|R99</pattern>
      </patterns>
 	<notValues>
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>

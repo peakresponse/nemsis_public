@@ -118,7 +118,6 @@
 							</performanceMeasuresGroup>
 							<comment>Advanced Directive and Do Not Resuscitate are both included in this data element.</comment>
 							<v3Changes/>
-							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -147,12 +146,21 @@
 							<v2Number>E12_08</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasure/>
-							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 PCS codes can be used for medication groups. (See suggested NEMSIS list.) 
-							&lt;br/>&lt;br/>
-							Code list is represented in ICD-10 Codes. 
-							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a> 
-							&lt;br/>Product - UMLS Metathesaurus</comment>
+							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 PCS codes can be used for medication groups. 
+
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+
+&lt;br/>&lt;br/>Code list is represented in two separate UMLS datasets:
+&lt;br/>1) ICD-10 Codes. 
+&lt;br/>2) RxNorm
+
+&lt;br/>&lt;br/>Website - http://uts.nlm.nih.gov 
+&lt;br/>Product - UMLS Metathesaurus
+&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
+&lt;br/>Product - RxNorm Full Monthly Release
+</comment>
 							<v3Changes/>
+							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -166,7 +174,7 @@
 							</xs:attribute>
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.NoKnownDrugAllergies PN.Refused PN.UnableToComplete"/>
+									<xs:union memberTypes="PN.NoKnownDrugAllergy PN.Refused PN.UnableToComplete"/>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="CodeType" use="required" type="CodeType"/>
@@ -212,7 +220,7 @@
 							<v2Number>E12_10</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasure/>
-							<comment>Code list is represented by ICD-10-CM: Factors influencing health status and contact with health services (Z78.0 – Z99.89).
+							<comment>Code list is represented by ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html							
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus							
@@ -224,7 +232,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="icd10Code">							
+						<xs:extension base="icd10MedSurge">							
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -329,11 +337,13 @@
 										<v2Number>E12_14</v2Number>
 										<usage>Recommended</usage>
 										<performanceMeasure/>
-										<comment>List of medications based on RxNorm (RXCUI) code. See suggested NEMSIS list of medication codes.
-&lt;br/>&lt;br/>RxNorm
-&lt;br/>Website - &lt;a>http://uts.nlm.nih.gov&lt;/a> 
-&lt;br/>Product - UMLS Metathesaurus
-&lt;br/>&lt;br/>Website - &lt;a>http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>  
+										<comment>
+List of medications based on RxNorm (RXCUI) code. 
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>RxNorm 
+&lt;br/>Website - http://uts.nlm.nih.gov 
+&lt;br/>&lt;br/>Product - UMLS Metathesaurus 
+&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 										</comment>
 										<v3Changes/>
@@ -473,7 +483,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eHistory.18" id="eHistory.Pregnancy" minOccurs="0">
+			<xs:element name="eHistory.18" nillable="true" id="eHistory.Pregnancy" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -487,6 +497,7 @@
 							<performanceMeasure/>
 							<comment/>
 							<v3Changes/>
+							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1012,7 +1023,7 @@
 			<xs:documentation>MedicationAllergies</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="Z88(\.[0-9])?|Z91.041|[A-Za-z0-9]{2,7}"/>
+			<xs:pattern value="(Z88\.[0-9])|([a-zA-Z0-9]{2,7})"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicalHistoryObtainedFrom">

@@ -551,7 +551,8 @@
 										<v2Number>E07_21</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment/>
+										<comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
+										</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -721,7 +722,8 @@
 										<v2Number>E07_28</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment/>
+										<comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
+										</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -813,10 +815,10 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>ePayment.39</number>
-										<name>Patient’s Employer’s Primary Phone Number</name>
+										<name>Patient's Employer's Primary Phone Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The employer’s primary phone number.</definition>
+										<definition>The employer's primary phone number.</definition>
 										<v2Number>E07_32</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
@@ -829,7 +831,6 @@
 								<xs:simpleContent>
 									<xs:extension base="PhoneNumber">
 										<xs:attribute name="PhoneNumberType" type="PhoneNumberType" use="optional"/>
-										<xs:attribute name="CorrelationID" type="CorrelationID"/>
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>

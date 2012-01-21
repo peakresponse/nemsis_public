@@ -67,7 +67,6 @@
       <constraintValue>1</constraintValue>
     </constraint>
   </constraints>
-  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eMedDevice.03" minOccurs="0" maxOccurs="1" isNillable="No">
 <name>EMS Agency Name</name>
@@ -133,27 +132,6 @@
       <constraintValue>2</constraintValue>
     </constraint>
   </constraints>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
 </restrictions>
 </element><element number="eMedDevice.05" minOccurs="0" maxOccurs="1" dataType="DeviceSerialNumber" isNillable="No">
 <name>Medical Device Serial Number</name>
@@ -656,7 +634,7 @@
   </constraints>
 </restrictions>
 </element></group>
-<group number="eMedDevice.VitalsGroup" minOccurs="0" maxOccurs="M" correlationID="No" currentStatus="No" currentStatusDate="No">
+<group number="eMedDevice.VitalsGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eMedDevice.19" minOccurs="0" maxOccurs="1" isNillable="No">
 <name>Date/Time Vital Signs Taken</name>
 <national>No</national>
@@ -1403,7 +1381,7 @@
 </restrictions>
 </element></group>
 </group>
-<group number="eMedDevice.LabsGroup" minOccurs="0" maxOccurs="M" correlationID="No" currentStatus="No" currentStatusDate="No">
+<group number="eMedDevice.LabsGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eMedDevice.36" minOccurs="0" maxOccurs="1" dataType="DateTimeType" isNillable="No">
 <name>Date/Time of Laboratory or Imaging Result</name>
 <national>No</national>
@@ -2577,8 +2555,8 @@
 </element></group>
 </group>
 </group>
-<group number="eCad.CustomGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
-<group number="eCustomConfiguration.CustomGroup" minOccurs="0" maxOccurs="1" correlationID="Yes" currentStatus="No" currentStatusDate="No">
+<group number="eMedDevice.CustomGroup" minOccurs="0" maxOccurs="1" correlationID="No" currentStatus="No" currentStatusDate="No">
+<group number="eMedDevice.eCustomConfiguration.CustomGroup" minOccurs="0" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="eMedDevice.55" minOccurs="0" maxOccurs="1" isNillable="No">
 <name>Custom Data Element Title</name>
 <national>No</national>

@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eOther.07" minOccurs="0" maxOccurs="M" dataType="SuspectedIntentionalOrUnintentionalDisaster" isNillable="No">
+<element number="eOther.07" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Natural, Suspected, Intentional, or Unintentional Disaster</name>
 <national>No</national>
 <state>No</state>
@@ -72,5 +72,6 @@
       <description>Weather</description>
     </choice>
   </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

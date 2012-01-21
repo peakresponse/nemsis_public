@@ -1,34 +1,34 @@
-<xs:schema xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"></xs:include>
 	<xs:include schemaLocation="censustracts.xsd"></xs:include>
 	<xs:complexType name="dAgency">
 		<xs:sequence>
-			<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dAgency.01</number>
-										<name>EMS Agency Unique State ID</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
-										<v2Number></v2Number>
-										<usage>Mandatory</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-											<performanceMeasure>Cardiac Arrest</performanceMeasure>
-											<performanceMeasure>Pediatric</performanceMeasure>
-											<performanceMeasure>Response</performanceMeasure>
-											<performanceMeasure>STEMI</performanceMeasure>
-											<performanceMeasure>Stroke</performanceMeasure>
-											<performanceMeasure>Trauma</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-										<v3Changes></v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-						</xs:element>
+			<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID">			
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>dAgency.01</number>
+							<name>EMS Agency Unique State ID</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
+							<v2Number></v2Number>
+							<usage>Mandatory</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>Response</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
+							<v3Changes></v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="dAgency.02" id="dAgency.EMSAgencyNumber">
 				<xs:annotation>
 					<xs:documentation>
@@ -56,48 +56,43 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="EMSAgencyNumber">
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
-						</xs:extension>
+						<xs:extension base="EMSAgencyNumber"></xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
 			
 			<xs:element name="dAgency.04" id="dAgency.EMSAgencyState">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dAgency.04</number>
-										<name>EMS Agency State</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>The state/territory which assigned the EMS agency number.</definition>
-										<v2Number>D01_03</v2Number>
-										<usage>Mandatory</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-											<performanceMeasure>Cardiac Arrest</performanceMeasure>
-											<performanceMeasure>Pediatric</performanceMeasure>
-											<performanceMeasure>Response</performanceMeasure>
-											<performanceMeasure>STEMI</performanceMeasure>
-											<performanceMeasure>Stroke</performanceMeasure>
-											<performanceMeasure>Trauma</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>dAgency.04</number>
+							<name>EMS Agency State</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The state/territory which assigned the EMS agency number.</definition>
+							<v2Number>D01_03</v2Number>
+							<usage>Mandatory</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>Response</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes></v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="ANSIStateCode">
-										<xs:attribute name="CurrentStatus" type="Status" use="required"></xs:attribute>
-										<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"></xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
+							<v3Changes></v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="ANSIStateCode"></xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="dAgency.AgencyServiceGroup" id="dAgency.AgencyServiceGroup" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the Agency's service information</xs:documentation>
@@ -123,10 +118,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="ANSIStateCode">
-										<xs:attribute name="CurrentStatus" type="Status" use="required"></xs:attribute>
-										<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"></xs:attribute>
-									</xs:extension>
+									<xs:extension base="ANSIStateCode"></xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -159,9 +151,7 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="ANSICountyCode">
-										<xs:attribute name="CurrentStatus" type="Status" use="required"></xs:attribute>
-										<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"></xs:attribute>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+										
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
@@ -186,19 +176,17 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="CensusTracts">
-										<xs:attribute name="CurrentStatus" type="Status" use="required"></xs:attribute>
-										<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"></xs:attribute>
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 											</xs:simpleType>
 										</xs:attribute>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+										
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.08" id="dAgency.EMSAgencyServiceAreaZIPCodes" maxOccurs="unbounded" nillable="true">
+						<xs:element name="dAgency.08" nillable="true" id="dAgency.EMSAgencyServiceAreaZIPCodes" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -228,9 +216,7 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="ZIP">
-										<xs:attribute name="CurrentStatus" type="Status" use="required"></xs:attribute>
-										<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"></xs:attribute>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+										
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -241,7 +227,7 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+					
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="dAgency.09" id="dAgency.PrimaryTypeofService">
@@ -383,8 +369,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="AgencyOrganizationalTaxStatus">
-									</xs:extension>
+						<xs:extension base="AgencyOrganizationalTaxStatus"></xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
@@ -411,7 +396,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dAgency.16" id="dAgency.TotalPrimaryServiceSizeArea" nillable="true">
+						<xs:element name="dAgency.16" nillable="true" id="dAgency.TotalPrimaryServiceSizeArea">
 							<xs:annotation>
 								<xs:documentation>
 									<definition>
@@ -450,7 +435,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.17" id="dAgency.TotalServiceAreaPopulation" nillable="true">
+						<xs:element name="dAgency.17" nillable="true" id="dAgency.TotalServiceAreaPopulation">
 							<xs:annotation>
 								<xs:documentation>
 									<definition>
@@ -489,7 +474,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.18" id="dAgency.NineOneOneEMSCallCenterVolumeperYear" nillable="true">
+						<xs:element name="dAgency.18" nillable="true" id="dAgency.NineOneOneEMSCallCenterVolumeperYear">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -526,7 +511,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.19" id="dAgency.EMSDispatchVolumeperYear" nillable="true">
+						<xs:element name="dAgency.19" nillable="true" id="dAgency.EMSDispatchVolumeperYear">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -563,7 +548,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.20" id="dAgency.EMSPatientTransportVolumeperYear" nillable="true">
+						<xs:element name="dAgency.20" nillable="true" id="dAgency.EMSPatientTransportVolumeperYear">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -600,7 +585,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.21" id="dAgency.EMSPatientContactVolumeperYear" nillable="true">
+						<xs:element name="dAgency.21" nillable="true" id="dAgency.EMSPatientContactVolumeperYear">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -639,7 +624,7 @@
 						</xs:element>
 						
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+					
 				</xs:complexType>
 			</xs:element>
 			
@@ -668,6 +653,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -696,13 +682,12 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="CurrentStatus" type="Status" use="required"></xs:attribute>
-		<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"></xs:attribute>
 	</xs:complexType>
 	
 	<xs:simpleType name="AgencyOrganizationalTaxStatus">

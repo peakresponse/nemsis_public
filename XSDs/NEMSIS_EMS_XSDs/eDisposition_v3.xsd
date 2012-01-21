@@ -548,7 +548,7 @@
 								<performanceMeasure>Pediatric</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment></comment>
+							<comment/>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -825,7 +825,7 @@
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+		<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 	</xs:complexType>
 	<xs:simpleType name="AdditionalTransportModeDescriptors">
 		<xs:annotation>

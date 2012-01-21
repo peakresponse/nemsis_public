@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="dFacility.04" minOccurs="0" maxOccurs="M" dataType="HospitalDesignation" isNillable="No">
+<element number="dFacility.04" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Hospital Designations</name>
 <national>No</national>
 <state>No</state>
@@ -73,5 +73,6 @@
       <description>Trauma Center Level 5</description>
     </choice>
   </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

@@ -202,10 +202,9 @@
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eOther.06" minOccurs="0" maxOccurs="M" isNillable="Yes">
-<name>Type of Suspected EMS Blood/Body Fluid Exposure, Injury, or Death</name>
+<name>The Type of Work-Related Injury, Death or Suspected Exposure</name>
 <national>No</national>
 <state>Yes</state>
 <definition>The type of exposure or unprotected contact with blood or body fluids</definition>
@@ -286,7 +285,7 @@
   <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
-<element number="eOther.07" minOccurs="0" maxOccurs="M" dataType="SuspectedIntentionalOrUnintentionalDisaster" isNillable="No">
+<element number="eOther.07" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Natural, Suspected, Intentional, or Unintentional Disaster</name>
 <national>No</national>
 <state>No</state>
@@ -359,6 +358,7 @@
       <description>Weather</description>
     </choice>
   </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="eOther.08" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Crew Member Completing this Report</name>

@@ -1,0 +1,39 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedications.06"  minOccurs="1"  maxOccurs="1"  dataTypeName="MedicationDosageUnits"  isNillable="Yes">
+<name>Medication Dosage Units</name>
+<national>Yes</national>
+<deprecated></deprecated>
+<state>Yes</state>
+<definition>The unit of medication dosage given to patient</definition>
+<v2Number>E18_06</v2Number>
+<usage>Required</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
+<restrictions>
+  <MedicationDosageUnits baseType="string">
+    <facet name="enumeration" value="3706001" annotation="Grams"/>
+    <facet name="enumeration" value="3706003" annotation="Inches"/>
+    <facet name="enumeration" value="3706005" annotation="International Units"/>
+    <facet name="enumeration" value="3706007" annotation="Keep Vein Open (To Keep Open)"/>
+    <facet name="enumeration" value="3706009" annotation="Liters"/>
+    <facet name="enumeration" value="3706011" annotation="Liters Per Minute"/>
+    <facet name="enumeration" value="3706013" annotation="MDI Puffs"/>
+    <facet name="enumeration" value="3706015" annotation="Micrograms"/>
+    <facet name="enumeration" value="3706017" annotation="Micrograms per Kilogram per Minute"/>
+    <facet name="enumeration" value="3706019" annotation="Milliequivalents"/>
+    <facet name="enumeration" value="3706021" annotation="Milligrams"/>
+    <facet name="enumeration" value="3706023" annotation="Milligrams Per Kilogram Per Minute"/>
+    <facet name="enumeration" value="3706025" annotation="Milliliters"/>
+    <facet name="enumeration" value="3706027" annotation="Milliliters Per Hour"/>
+    <facet name="enumeration" value="3706029" annotation="Other"/>
+  </MedicationDosageUnits>
+</restrictions>
+<attributes>
+  <NV>
+    <NV.NotApplicable><facet name="enumeration" value="7701001" annotation="Not Applicable"/></NV.NotApplicable>
+    <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
+  </NV>
+</attributes>
+</element>

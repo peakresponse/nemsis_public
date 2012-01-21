@@ -195,7 +195,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -235,7 +235,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -273,7 +273,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -314,7 +314,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -350,7 +350,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -366,7 +366,6 @@
 							<definition>The unique physical vehicle number of the responding unit.</definition>
 							<v2Number>E02_11</v2Number>
 							<usage>Mandatory</usage>
-							<performanceMeasure></performanceMeasure>
 							<comment>This is recommended to be the State Vehicle Permit Number if unique to the vehicle.  If the vehicle is not licensed by the state, this should be a unique number only associated with a specific vehicle. This element should be populated from dVehicle.01 -  Unit/Vehicle Number.</comment>
 							<v3Changes></v3Changes>
 						</nemsisTacDoc>
@@ -384,7 +383,6 @@
 							<definition>The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS Unit/Vehicle Number in many agencies.</definition>
 							<v2Number>E02_12</v2Number>
 							<usage>Mandatory</usage>
-							<performanceMeasure></performanceMeasure>
 							<comment>"This element could be populated from a list created in dVehicle.03 EMS Unit Call Sign or dConfiguration.16 (Crew Call Sign).</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -398,11 +396,19 @@
 							<name>Level of Care of This Unit</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The level of care (BLS or ALS) the unit is able to provide based on the units’ treatment capabilities for this EMS response.</definition>
+							<definition>The level of care (BLS or ALS) the unit is able to provide based on the units' treatment capabilities for this EMS response.</definition>
 							<v2Number></v2Number>
 							<usage>Mandatory</usage>
-							<performanceMeasure></performanceMeasure>
-							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit’s capabilities.  
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>Response</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit's capabilities.  
 								&lt;br/>&lt;br/>For example, if a unit/crew is staffed with an EMT-Intermediate or EMT-Paramedic but the unit is either licensed or stocked at a BLS level the appropriate level of care is "BLS-Basic”. This is because the care provided to patients is limited to BLS skills.
 							</comment>
 							<v3Changes></v3Changes>
@@ -437,7 +443,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Information now split between eResponse.21 (Response Mode to Scene) and eResponse.22 (Additional Response Mode Descriptors)</comment>
+							<comment>Information now split between eResponse.23 (Response Mode to Scene) and eResponse.24 (Additional Response Mode Descriptors)</comment>
 							<v3Changes></v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -476,7 +482,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

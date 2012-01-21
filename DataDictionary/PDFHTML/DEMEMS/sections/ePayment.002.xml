@@ -763,7 +763,7 @@
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
   <constraints>
@@ -970,7 +970,7 @@
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
+<v3Comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.</v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
   <constraints>
@@ -1072,10 +1072,10 @@
   </constraints>
 </restrictions>
 </element><element number="ePayment.39" minOccurs="0" maxOccurs="1" isNillable="No">
-<name>Patient’s Employer’s Primary Phone Number</name>
+<name>Patient's Employer's Primary Phone Number</name>
 <national>No</national>
 <state>No</state>
-<definition>The employer’s primary phone number.</definition>
+<definition>The employer's primary phone number.</definition>
 <v2Number>E07_32</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
@@ -1086,7 +1086,6 @@
       <patterns>
         <pattern>[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]</pattern>
      </patterns>
-  <correlationID>Yes</correlationID>
   <phoneNumberType>
     <choice><code>9913001</code><description>Fax</description></choice>
     <choice><code>9913003</code><description>Home</description></choice>
@@ -1499,7 +1498,7 @@ necessity documentation.</v3Comment>
 </performanceMeasuresGroup>
 <restrictions>
       <patterns>
-        <pattern>[0-9A-HJ-NP-Z]([0-9A-Za-z]{1,6})?</pattern>
+        <pattern>[0-9A-HJ-NP-Z][0-9A-Za-z]{1,6}</pattern>
      </patterns>
   <correlationID>Yes</correlationID>
 </restrictions>

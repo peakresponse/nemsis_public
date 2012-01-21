@@ -161,7 +161,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Place of Occurrence of the external cause (Y92.0-Y92.9).
+							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus
@@ -352,7 +352,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 			<xs:documentation>The kind of location where the incident happened</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="Y92(\.[0-9]{1,3})?"></xs:pattern>
+			<xs:pattern value="Y92\.[0-9]{1,3}"></xs:pattern>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NumberOfPatientsAtScene">

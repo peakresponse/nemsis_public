@@ -9,7 +9,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dCustomConfiguration.01" type="CustomTitle" id="dCustomConfiguration.dCustomDataElementTitle" minOccurs="0">
+						<xs:element name="dCustomConfiguration.01" id="dCustomConfiguration.dCustomDataElementTitle" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -26,7 +26,14 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-						</xs:element>
+						    <xs:complexType>
+								<xs:simpleContent>
+								  <xs:extension base="CustomTitle">
+									<xs:attribute name="nemsisElement" type="xs:string" use="optional"/>
+								  </xs:extension>
+								</xs:simpleContent>                                 
+							  </xs:complexType>    
+					    </xs:element>
 						<xs:element name="dCustomConfiguration.02" type="CustomDefinition" id="dCustomConfiguration.dCustomDefinition" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
@@ -121,7 +128,10 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="CustomValue"/>
+									  <xs:extension base="CustomValue">
+										<xs:attribute name="nemsisCode" type="xs:string" use="optional"/>
+										<xs:attribute name="customValueDescription"   type="xs:string" use="optional"/>
+									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>

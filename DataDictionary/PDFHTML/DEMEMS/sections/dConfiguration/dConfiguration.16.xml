@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="dConfiguration.16" minOccurs="1" maxOccurs="M" dataType="AgencyCallSign" isNillable="No">
+<element number="dConfiguration.16" minOccurs="1" maxOccurs="M" isNillable="No">
 <name>Crew Call Sign</name>
 <national>Yes</national>
 <state>Yes</state>
@@ -22,5 +22,6 @@
       <constraintValue>1</constraintValue>
     </constraint>
   </constraints>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element>

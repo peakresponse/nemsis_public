@@ -43,11 +43,14 @@
 							<number>eMedDevice.02</number>
 							<refNumber>dAgency.02</refNumber>
 							<name>EMS Agency Number</name>
-							<national>No</national><!--<national>No</national>-->
-							<state>No</state><!--<state>No</state>-->
+							<national>No</national>
+							<!--<national>No</national>-->
+							<state>No</state>
+							<!--<state>No</state>-->
 							<definition>The state-assigned provider number of the responding agency</definition>
 							<v2Number>D01_01</v2Number>
-							<usage>Optional</usage><!--<usage>Optional</usage>-->
+							<usage>Optional</usage>
+							<!--<usage>Optional</usage>-->
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -64,13 +67,11 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="EMSAgencyNumber">
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-						</xs:extension>
+						<xs:extension base="EMSAgencyNumber"/>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eMedDevice.03"  id="eMedDevice.dAgency.EMSAgencyName" minOccurs="0">
+			<xs:element name="eMedDevice.03" id="eMedDevice.dAgency.EMSAgencyName" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -98,8 +99,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="EMSAgencyName">
-						</xs:extension>
+						<xs:extension base="EMSAgencyName"/>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
@@ -133,8 +133,6 @@
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="ANSIStateCode">
-							<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-							<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -274,7 +272,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eMedDevice.11"  id="eMedDevice.ePatient.LastName" minOccurs="0">
+						<xs:element name="eMedDevice.11" id="eMedDevice.ePatient.LastName" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -294,12 +292,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="PersonLastName">
-									</xs:extension>
+									<xs:extension base="PersonLastName"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.12"  id="eMedDevice.ePatient.FirstName" minOccurs="0">
+						<xs:element name="eMedDevice.12" id="eMedDevice.ePatient.FirstName" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -319,8 +316,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="PersonFirstName">
-									</xs:extension>
+									<xs:extension base="PersonFirstName"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -343,7 +339,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eMedDevice.14"  id="eMedDevice.ePatient.Gender" minOccurs="0">
+						<xs:element name="eMedDevice.14" id="eMedDevice.ePatient.Gender" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -371,12 +367,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="Gender">
-									</xs:extension>
+									<xs:extension base="Gender"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.15"  id="eMedDevice.ePatient.Race" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="eMedDevice.15" id="eMedDevice.ePatient.Race" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -419,7 +414,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eMedDevice.16"  id="eMedDevice.ePatient.Age" minOccurs="0">
+						<xs:element name="eMedDevice.16" id="eMedDevice.ePatient.Age" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -447,12 +442,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="Age">
-									</xs:extension>
+									<xs:extension base="Age"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.17"  id="eMedDevice.ePatient.AgeUnits" minOccurs="0">
+						<xs:element name="eMedDevice.17" id="eMedDevice.ePatient.AgeUnits" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -480,12 +474,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="AgeUnits">
-									</xs:extension>
+									<xs:extension base="AgeUnits"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.18"  id="eMedDevice.ePatient.DateofBirth" minOccurs="0">
+						<xs:element name="eMedDevice.18" id="eMedDevice.ePatient.DateofBirth" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -505,8 +498,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="DateOfBirth">
-									</xs:extension>
+									<xs:extension base="DateOfBirth"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -519,7 +511,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eMedDevice.19"  id="eMedDevice.eVitals.DateTimeVitalSignsTaken" minOccurs="0">
+						<xs:element name="eMedDevice.19" id="eMedDevice.eVitals.DateTimeVitalSignsTaken" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -570,8 +562,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="DateTimeType">
-									</xs:extension>
+									<xs:extension base="DateTimeType"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -581,7 +572,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eMedDevice.20"  id="eMedDevice.eVitals.CardiacRhythmandElectrocardiography" maxOccurs="unbounded" minOccurs="0">
+									<xs:element name="eMedDevice.20" id="eMedDevice.eVitals.CardiacRhythmandElectrocardiography" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -610,7 +601,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eMedDevice.21"  id="eMedDevice.eVitals.ECGType" minOccurs="0">
+									<xs:element name="eMedDevice.21" id="eMedDevice.eVitals.ECGType" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -632,12 +623,11 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="ECGType">
-												</xs:extension>
+												<xs:extension base="ECGType"/>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eMedDevice.22"  id="eMedDevice.eVitals.MethodofECGInterpretation" maxOccurs="unbounded" minOccurs="0">
+									<xs:element name="eMedDevice.22" id="eMedDevice.eVitals.MethodofECGInterpretation" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -674,7 +664,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eMedDevice.23"  id="eMedDevice.eVitals.SBPSystolicBloodPressure" minOccurs="0">
+									<xs:element name="eMedDevice.23" id="eMedDevice.eVitals.SBPSystolicBloodPressure" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -701,12 +691,11 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="SBP">
-												</xs:extension>
+												<xs:extension base="SBP"/>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eMedDevice.24"  id="eMedDevice.eVitals.DBPDiastolicBloodPressure" minOccurs="0">
+									<xs:element name="eMedDevice.24" id="eMedDevice.eVitals.DBPDiastolicBloodPressure" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -726,12 +715,11 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="DBP">
-												</xs:extension>
+												<xs:extension base="DBP"/>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eMedDevice.25"  id="eMedDevice.eVitals.MethodofBloodPressureMeasurement" minOccurs="0">
+									<xs:element name="eMedDevice.25" id="eMedDevice.eVitals.MethodofBloodPressureMeasurement" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -751,8 +739,7 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="BloodPressureMethod">
-												</xs:extension>
+												<xs:extension base="BloodPressureMethod"/>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
@@ -784,7 +771,7 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eMedDevice.27"  id="eMedDevice.eVitals.HeartRate" minOccurs="0">
+									<xs:element name="eMedDevice.27" id="eMedDevice.eVitals.HeartRate" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -811,8 +798,7 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="HeartRate">
-												</xs:extension>
+												<xs:extension base="HeartRate"/>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
@@ -838,7 +824,7 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.29"  id="eMedDevice.eVitals.PulseOximetry" minOccurs="0">
+						<xs:element name="eMedDevice.29" id="eMedDevice.eVitals.PulseOximetry" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -865,12 +851,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="PulseOximetry">
-									</xs:extension>
+									<xs:extension base="PulseOximetry"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.30"  id="eMedDevice.eVitals.RespiratoryRate" minOccurs="0">
+						<xs:element name="eMedDevice.30" id="eMedDevice.eVitals.RespiratoryRate" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -897,12 +882,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="RespiratoryRate">
-									</xs:extension>
+									<xs:extension base="RespiratoryRate"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.31"  id="eMedDevice.eVitals.CarbonDioxideCO2" minOccurs="0">
+						<xs:element name="eMedDevice.31" id="eMedDevice.eVitals.CarbonDioxideCO2" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -929,12 +913,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="CO2">
-									</xs:extension>
+									<xs:extension base="CO2"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.32"  id="eMedDevice.eVitals.CarbonMonoxideCO" minOccurs="0">
+						<xs:element name="eMedDevice.32" id="eMedDevice.eVitals.CarbonMonoxideCO" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -954,12 +937,11 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="CarbonMonoxideLevel">
-									</xs:extension>
+									<xs:extension base="CarbonMonoxideLevel"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.33"  id="eMedDevice.eVitals.BloodGlucoseLevel" minOccurs="0">
+						<xs:element name="eMedDevice.33" id="eMedDevice.eVitals.BloodGlucoseLevel" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -982,8 +964,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="BloodGlucoseLevel">
-									</xs:extension>
+									<xs:extension base="BloodGlucoseLevel"/>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -993,7 +974,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eMedDevice.34"  id="eMedDevice.eVitals.Temperature" minOccurs="0">
+									<xs:element name="eMedDevice.34" id="eMedDevice.eVitals.Temperature" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -1015,8 +996,7 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="BodyTemperature">
-												</xs:extension>
+												<xs:extension base="BodyTemperature"/>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
@@ -1043,6 +1023,7 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="eMedDevice.LabsGroup" id="eMedDevice.LabsGroup" minOccurs="0" maxOccurs="unbounded">
@@ -1565,15 +1546,16 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eCad.CustomGroup" id="eCad.CustomGroup" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eMedDevice.CustomGroup" id="eMedDevice.CustomGroup" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation/>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eCustomConfiguration.CustomGroup" id="eMedDevice.eCustomConfiguration.eCustomGroup" minOccurs="0" >
+						<xs:element name="eMedDevice.eCustomConfiguration.CustomGroup" id="eMedDevice.eCustomConfiguration.eCustomGroup" minOccurs="0" maxOccurs="unbounded" >
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold custom information</xs:documentation>
 							</xs:annotation>
@@ -1770,7 +1752,6 @@
 							</xs:complexType>
 						</xs:element>
 								</xs:sequence>
-								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
 		</xs:sequence>

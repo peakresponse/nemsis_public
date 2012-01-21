@@ -193,8 +193,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.&lt;br/>&lt;br/>Code list is represented in ICD-10-CM: Symptoms, Signs and Abnormal Clinical and Laboratory Findings, (R00-69, R73.9)
-							&lt;br/>&lt;br/>Code list is represented in ICD-10-CM Diagnoses Codes.  See suggested NEMSIS list of symptoms and signs codes.
+							<comment>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.
+							&lt;br/>&lt;br/>Code list is represented in ICD-10-CM Diagnoses Codes. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus							
@@ -234,8 +234,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Symptoms, Signs and Abnormal Clinical and Laboratory Findings, (R00-69, R73.9)
-							&lt;br/>&lt;br/>Code list is represented in ICD-10-CM Diagnoses Codes.  See suggested NEMSIS list of symptoms and signs codes.
+							<comment>Code list is represented in ICD-10-CM.  Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus								
@@ -252,7 +251,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -276,10 +275,10 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Diagnoses Codes, see suggested NEMSIS list of provider impression codes.
+							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html											
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
-							&lt;br/>Product - UMLS Metathesaurus								
+							&lt;br/>Product - UMLS Metathesaurus	
 							</comment>
 							<v3Changes></v3Changes>
 						</nemsisTacDoc>
@@ -316,10 +315,10 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM: Diagnoses Codes, see suggested NEMSIS list of provider impression codes.
+							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
-							&lt;br/>Product - UMLS Metathesaurus								
+							&lt;br/>Product - UMLS Metathesaurus											
 							</comment>
 							<v3Changes></v3Changes>
 						</nemsisTacDoc>
@@ -333,7 +332,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+							
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -385,7 +384,7 @@
 			<xs:documentation>The activity the patient was involved in at the time the patient experienced the onset of symptoms or experienced an injury.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="Y93(\.[A-Za-z0-9]{1,4})?"></xs:pattern>
+			<xs:pattern value="Y93\.[A-Za-z0-9]{1,4}"></xs:pattern>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Complaint">
@@ -803,7 +802,7 @@
 			<xs:documentation>The sign and symptom present in the patient or observed by EMS personnel</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="R[0-6][0-9](\.\d{0,4})?|R73.9|R99"></xs:pattern>
+			<xs:pattern value="R[0-6][0-9](\.[0-9]{0,4})?|R73.9|R99"></xs:pattern>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ProvidersImpression">
@@ -811,7 +810,7 @@
 			<xs:documentation>The EMS personnel's impression of the patient's primary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([A-Z]{1}[0-9]{2}(\.[A-Za-z0-9]{1,4})?)|(S[0-9][0-9]\.([0-8]([0-9]{0,2})?|([0-9]([0-2]([0-9])?)?)))|(T14.9([0-1]([0-9]?))?|T((0[0-9])|(1[0-4]))\.[0-8][0-9]?)|(T((2[0-9]\.[0-9][0-9]{0,2})|(3[0-4]\.((99)|(9([0-8][0-9]?)?)|([0-8][0-9]{0,2})))))|(T7(([0-2]\.[0-9]{1,3})|(3\.[0-8][0-9]{0,2})|3\.9)|T6[6-9]\.[0-9]{1,3})|(T78\.[0-8][0-9]{0,2})"></xs:pattern>
+			<xs:pattern value="(((T73)|(Z((5[5-9])|(6[0-5])|(7[2-4]))))(\.[0-9]{1})?)|((T((6[6-9])|(7(0|8))))(\.[0-9]{1,2})?)|((([A-QS][0-9]{2})|(T(([0-2][0-9])|(3[0-4]))))(\.[0-9]{1,3})?)|(Z77(\.[0-9]{1,3})?)|(T((79)|(8[067]))(\..{1,3})?)|(T88(\.((0)|(1)|(4)|(6)|(7))))"></xs:pattern>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TimeUnitsOfChiefComplaint">

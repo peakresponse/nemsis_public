@@ -29,27 +29,6 @@
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
   <correlationID>Yes</correlationID>
 </restrictions>
 </element>

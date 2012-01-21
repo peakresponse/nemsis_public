@@ -17,68 +17,69 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="dState" type="dState" minOccurs="0">
+				<xs:element name="dState" type="dState" id="dStateSection" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>State Required Demographic Data Elements</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="dCustomConfiguration" type="dCustomConfiguration" minOccurs="0">
+				<xs:element name="dCustomConfiguration" type="dCustomConfiguration" id="dCustomConfigurationSection" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Contains information for demographic custom elements.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="DemographicReport" maxOccurs="unbounded">
+				<xs:element name="DemographicReport" maxOccurs="unbounded" id="DemographicReportGroup">
 					<xs:annotation>
 						<xs:documentation>Container Tag to hold each instance of a demographic record</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="dAgency" type="dAgency">
+							<xs:element name="dAgency" type="dAgency" id="dAgencySection">
 								<xs:annotation>
 									<xs:documentation>Agency Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dContact" type="dContact" minOccurs="0">
+							<xs:element name="dContact" type="dContact" id="dContactSection" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Contact Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dConfiguration" type="dConfiguration">
+							<xs:element name="dConfiguration" type="dConfiguration" id="dConfigurationSection">
 								<xs:annotation>
 									<xs:documentation>Configuration Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dLocation" type="dLocation" minOccurs="0">
+							<xs:element name="dLocation" type="dLocation" id="dLocationSection" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Location Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dVehicle" type="dVehicle" minOccurs="0">
+							<xs:element name="dVehicle" type="dVehicle" id="dVehicleSection" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Vehicle Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dPersonnel" type="dPersonnel" minOccurs="0">
+							<xs:element name="dPersonnel" type="dPersonnel" id="dPersonnelSection" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Personnel Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dDevice" type="dDevice" minOccurs="0">
+							<xs:element name="dDevice" type="dDevice" id="dDeviceSection" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Device Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dFacility" type="dFacility" minOccurs="0">
+							<xs:element name="dFacility" type="dFacility" id="dFacilitySection" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Device Information</xs:documentation>
 								</xs:annotation>
 							</xs:element>
-							<xs:element name="dCustom" type="dCustomResults" minOccurs="0">
+							<xs:element name="dCustomResults" type="dCustomResults" id="dCustomResultsSection" minOccurs="0">
 								<xs:annotation>
 									<xs:documentation>Custom Data Element Results</xs:documentation>
 								</xs:annotation>
 							</xs:element>
 						</xs:sequence>
+						<xs:attribute name="timeStamp" type="xs:date" use="required"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

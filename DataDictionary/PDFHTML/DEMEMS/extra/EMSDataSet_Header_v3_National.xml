@@ -150,8 +150,8 @@
 				<v3Changes/>
 			</element>
 		</group>
-		<group number="ConfigurationGroup" minOccurs="1" maxOccurs="1">
-			<group number="dConfiguration.ProcedureGroup" minOccurs="1" maxOccurs="M">
+		<group number="ConfigurationGroup" minOccurs="0" maxOccurs="1">
+			<group number="dConfiguration.ProcedureGroup" minOccurs="0" maxOccurs="M">
 				<element number="dConfiguration.06" minOccurs="1" maxOccurs="1" dataType="StateCertificationLicensureLevels" isNillable="No">
 					<name>EMS Personnel Level Permitted to Perform the Procedure</name>
 					<national>Yes</national>
@@ -175,7 +175,7 @@
 					<v3Changes/>
 				</element>
 			</group>
-			<group number="dConfiguration.MedicationGroup" minOccurs="1" maxOccurs="M">
+			<group number="dConfiguration.MedicationGroup" minOccurs="0" maxOccurs="M">
 				<element number="dConfiguration.08" minOccurs="1" maxOccurs="1" dataType="StateCertificationLicensureLevels" isNillable="No">
 					<name>Personnel Level Permitted to Administer the Medication</name>
 					<national>Yes</national>
@@ -197,7 +197,7 @@
 					<pertinentNegative>No</pertinentNegative>
 				</element>
 			</group>
-			<element number="dConfiguration.10" minOccurs="1" maxOccurs="M" dataType="ProtocolsUsed" isNillable="No">
+			<element number="dConfiguration.10" minOccurs="0" maxOccurs="M" dataType="ProtocolsUsed" isNillable="No">
 				<name>EMS Agency Protocols</name>
 				<national>Yes</national>
 				<state>Yes</state>

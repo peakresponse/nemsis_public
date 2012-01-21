@@ -65,7 +65,6 @@
       <constraintValue>1</constraintValue>
     </constraint>
   </constraints>
-  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="dAgency.03" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>EMS Agency Name</name>
@@ -134,27 +133,6 @@
       <constraintValue>2</constraintValue>
     </constraint>
   </constraints>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
 </restrictions>
 </element><group number="dAgency.AgencyServiceGroup" minOccurs="1" maxOccurs="M" correlationID="Yes" currentStatus="No" currentStatusDate="No">
 <element number="dAgency.05" minOccurs="1" maxOccurs="1" isNillable="No">
@@ -177,27 +155,6 @@
       <constraintValue>2</constraintValue>
     </constraint>
   </constraints>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
 </restrictions>
 </element><element number="dAgency.06" minOccurs="1" maxOccurs="M" isNillable="No">
 <name>EMS Agency Service Area County(s)</name>
@@ -228,27 +185,6 @@
       <constraintValue>5</constraintValue>
     </constraint>
   </constraints>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
   <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="dAgency.07" minOccurs="1" maxOccurs="M" isNillable="Yes">
@@ -279,27 +215,6 @@
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
   <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="dAgency.08" minOccurs="1" maxOccurs="M" isNillable="Yes">
@@ -332,27 +247,6 @@
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
   <correlationID>Yes</correlationID>
 </restrictions>
 </element></group>
@@ -480,27 +374,6 @@
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
 	</notValues>
-  <currentStatus>
-    <choice><code>A</code><description>Active</description></choice>
-    <choice><code>I</code><description>Inactive</description></choice>
-	</currentStatus>
-  <currentStatusDate>
-    <constraints>
-      <dataType>dateTime</dataType>
-      <constraint>
-        <constraintTitle>minInclusive</constraintTitle>
-        <constraintValue>1950-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>maxInclusive</constraintTitle>
-        <constraintValue>2050-01-01T00:00:00-00:00</constraintValue>
-      </constraint>
-      <constraint>
-        <constraintTitle>pattern</constraintTitle>
-        <constraintValue>[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}</constraintValue>
-      </constraint>
-      </constraints>
-  </currentStatusDate>
   <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="dAgency.11" minOccurs="1" maxOccurs="1" dataType="StateCertificationLicensureLevels" isNillable="No">
@@ -1065,6 +938,7 @@
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="dAgency.26" minOccurs="1" maxOccurs="M" isNillable="Yes">
 <name>Fire Department ID Number</name>
@@ -1093,5 +967,6 @@
 		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element></section>

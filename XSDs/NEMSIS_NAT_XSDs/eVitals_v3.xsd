@@ -144,7 +144,7 @@
 															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 														</xs:simpleType>
 													</xs:attribute>
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+													
 												</xs:extension>
 											</xs:simpleContent>
 										</xs:complexType>
@@ -207,13 +207,13 @@
 															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 														</xs:simpleType>
 													</xs:attribute>
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+													
 												</xs:extension>
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
-								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+								
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="eVitals.BloodPressureGroup" id="eVitals.BloodPressureGroup">
@@ -681,7 +681,7 @@
 															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 														</xs:simpleType>
 													</xs:attribute>
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+													
 												</xs:extension>
 											</xs:simpleContent>
 										</xs:complexType>
@@ -712,17 +712,14 @@
 										</performanceMeasuresGroup>
 										<comment>Definition changed to indicate highest level of responsiveness.</comment>
 										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="PatientsHighestLevelResponsiveness">
-										<xs:attribute name="PN" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="PN.Refused PN.UnableToComplete"></xs:union>
-											</xs:simpleType>
-										</xs:attribute>
+										
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -899,7 +896,7 @@
 						
 						
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+					
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>

@@ -127,7 +127,6 @@
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 											</xs:simpleType>
 										</xs:attribute>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
@@ -137,7 +136,7 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eOther.06</number>
-										<name>Type of Suspected EMS Blood/Body Fluid Exposure, Injury, or Death</name>
+										<name>The Type of Work-Related Injury, Death or Suspected Exposure</name>
 										<national>No</national>
 										<state>Yes</state>
 										<definition>The type of exposure or unprotected contact with blood or body fluids</definition>
@@ -166,7 +165,7 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOther.07" type="SuspectedIntentionalOrUnintentionalDisaster" id="eOther.NaturalSuspectedIntentionalorUnintentionalDisaster" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOther.07" id="eOther.NaturalSuspectedIntentionalorUnintentionalDisaster" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -185,6 +184,13 @@
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="SuspectedIntentionalOrUnintentionalDisaster">
+										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 			</xs:element>
 			<xs:element name="eOther.08" nillable="true" id="eOther.CrewMemberCompletingthisReport" minOccurs="0">
 				<xs:annotation>

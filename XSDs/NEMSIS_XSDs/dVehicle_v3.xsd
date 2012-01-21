@@ -304,8 +304,6 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-					<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>

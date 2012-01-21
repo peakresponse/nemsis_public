@@ -67,7 +67,6 @@
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="EMSAgencyNumber">
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -133,13 +132,11 @@
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="ANSIStateCode">
-							<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-							<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.05" type="DispatchCenterCADNameorID" id="eCad.dConfiguration.DispatchCenterCADNameorID" maxOccurs="unbounded">
+			<xs:element minOccurs="0" name="eCad.05" id="eCad.dConfiguration.DispatchCenterCADNameorID" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -157,6 +154,15 @@
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="DispatchCenterCADNameorID">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+				
+				
 			</xs:element>
 			<xs:element minOccurs="0" name="eCad.06" type="PatientCareReportNumber" id="eCad.eRecord.PatientCareReportNumber">
 				<xs:annotation>
@@ -185,7 +191,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eResponse.AgencyGroup" id="eCad.eResponse.AgencyGroup">
+			<xs:element name="eCAD.AgencyGroup" id="eCad.eResponse.AgencyGroup">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold EMS agency number and name</xs:documentation>
 				</xs:annotation>
@@ -298,7 +304,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eResponse.ServiceGroup" id="eCad.eResponse.ServiceGroup">
+			<xs:element minOccurs="0" name="eCAD.ServiceGroup" id="eCad.eResponse.ServiceGroup">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold details about EMS category of service and the stand by reason</xs:documentation>
 				</xs:annotation>
@@ -1360,7 +1366,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="ePatient.PatientNameGroup" id="eCad.ePatient.PatientNameGroup">
+			<xs:element minOccurs="0" name="eCAD.PatientNameGroup" id="eCad.ePatient.PatientNameGroup">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold patient's name</xs:documentation>
 				</xs:annotation>
@@ -1708,7 +1714,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="ePatient.AgeGroup" id="eCad.ePatient.AgeGroup">
+			<xs:element minOccurs="0" name="eCAD.AgeGroup" id="eCad.ePatient.AgeGroup">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold patient's age information</xs:documentation>
 				</xs:annotation>
@@ -1855,7 +1861,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eScene.ResponderGroup" id="eCad.eScene.ResponderGroup" maxOccurs="unbounded">
+			<xs:element minOccurs="0" name="eCAD.ResponderGroup" id="eCad.eScene.ResponderGroup" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info from all responders to the scene.</xs:documentation>
 				</xs:annotation>
@@ -2412,7 +2418,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eDisposition.DestinationGroup" id="eCad.eDisposition.DestinationGroup">
+			<xs:element minOccurs="0" name="eCAD.DestinationGroup" id="eCad.eDisposition.DestinationGroup">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the Destination and the Disposition details</xs:documentation>
 				</xs:annotation>
@@ -2828,7 +2834,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eDisposition.HospitalTeamActivationGroup" id="eCad.eDisposition.HospitalTeamActivationGroup" maxOccurs="unbounded">
+			<xs:element minOccurs="0" name="eCAD.HospitalTeamActivationGroup" id="eCad.eDisposition.HospitalTeamActivationGroup" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the destination team pre-arrival activation</xs:documentation>
 				</xs:annotation>
@@ -2898,13 +2904,13 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.CustomGroup" id="eCad.CustomGroup" maxOccurs="unbounded">
+			<xs:element minOccurs="0" name="eCad.CustomGroup" id="eCad.CustomGroup">
 				<xs:annotation>
 					<xs:documentation/>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element minOccurs="0" name="eCustomConfiguration.CustomGroup" id="eCad.eCustomConfiguration.eCustomGroup">
+						<xs:element minOccurs="0" name="eCad.eCustomConfiguration.CustomGroup" id="eCad.eCustomConfiguration.eCustomGroup"  maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold custom information</xs:documentation>
 							</xs:annotation>
@@ -3101,9 +3107,10 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
+			
+			
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

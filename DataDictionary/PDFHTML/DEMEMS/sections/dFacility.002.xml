@@ -89,7 +89,7 @@
     </constraint>
   </constraints>
 </restrictions>
-</element><element number="dFacility.04" minOccurs="0" maxOccurs="M" dataType="HospitalDesignation" isNillable="No">
+</element><element number="dFacility.04" minOccurs="0" maxOccurs="M" isNillable="No">
 <name>Hospital Designations</name>
 <national>No</national>
 <state>No</state>
@@ -163,6 +163,7 @@
       <description>Trauma Center Level 5</description>
     </choice>
   </enumerations>
+  <correlationID>Yes</correlationID>
 </restrictions>
 </element><element number="dFacility.05" minOccurs="0" maxOccurs="1" dataType="NationalProviderIdentifier" isNillable="No">
 <name>Facility National Provider Identifier</name>

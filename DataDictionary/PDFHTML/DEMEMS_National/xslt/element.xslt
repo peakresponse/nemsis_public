@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:key name="facetFound" match="element/restrictions/*/facet" use="@name"/>
 <xsl:output method="html" encoding="us-ascii"/>
 <xsl:template match="/">  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -10,8 +11,11 @@
             
       .pageHeadingElement {font-size:20px;}
   
+      
+      .deprecated {width:80px;font-size:14px;text-align:center;color:white;background: PURPLE no-repeat;}
       .national {width:80px;font-size:14px;text-align:center;color:white;background: url(../../images/roundedNational.gif) no-repeat;}
       .state    {width:80px;font-size:14px;text-align:center;color:white;background: url(../../images/roundedState.gif) no-repeat;}
+      
       
       .numberName {font-size:16px;color:white;padding-left:5px; background: url(../../images/roundedNumberName.gif) no-repeat;}
          
@@ -30,6 +34,9 @@
       
       .sectionV3ChangesTitle  {font-size:14px;background:#F0F0F0;color:#004080;}
       .sectionV3ChangesValue  {font-size:12px;}
+      
+      .sectionDeprecatedCommentTitle  {font-size:14px;background:#F0F0F0;color:#004080;}
+      .sectionDeprecatedCommentValue  {font-size:12px;}
       
       .sectionRestrictionsEnumerationCodeTitle        {width:60px;  font-size:12px;font-weight:bold;}
       .sectionRestrictionsEnumerationDescriptionTitle {width:560px; font-size:12px;font-weight:bold;}
@@ -57,24 +64,22 @@
 </head>
 
 <body>
-    
-         
-
-        
-        
-  
 
   <table border="0" cellspacing="0" cellpadding="0" width="675px">    
     <tr><td>
         <table width="675px" border="0" cellspacing="0" cellpadding="0" >
-          <tr>
+          <tr>            
+            <xsl:choose><xsl:when test="element/deprecated/text()='Yes'">
+            <td class="deprecated" height="23px">Deprecated</td>
+            </xsl:when></xsl:choose> 
+            
             <td align="right" class="pageHeadingElement">
               <xsl:value-of select="element/@number"/>
             </td>
           </tr>
         </table>
     </td></tr>     
-    <xsl:choose><xsl:when test="element/state/text()='Yes' or element/national/text()='Yes'">
+    <xsl:choose><xsl:when test="element/state/text()='Yes' or element/national/text()='Yes' or element/deprecated/text()='Yes'">
     <tr><td height="8px;"></td></tr> 
     <tr><td>
         <table border="0" cellspacing="0" cellpadding="0" align="right" >
@@ -88,6 +93,7 @@
             <td class="national" height="23px">National</td>
             <td width="2px;"></td> 
             </xsl:when></xsl:choose>  
+             
           </tr>
         </table>
     </td></tr>  
@@ -228,7 +234,7 @@
                         <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue">                        
                           <xsl:choose>
-                            <xsl:when test="element/restrictions/pertinentNegatives">Yes</xsl:when>
+                            <xsl:when test="element/attributes/PN">Yes</xsl:when>
                             <xsl:otherwise>No</xsl:otherwise>
                           </xsl:choose>    
                         </td>
@@ -327,7 +333,7 @@
                         <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue">
                           <xsl:choose>
-                            <xsl:when test="element/restrictions/notValues">Yes</xsl:when>
+                            <xsl:when test="element/attributes/NV">Yes</xsl:when>
                             <xsl:otherwise>No</xsl:otherwise>
                           </xsl:choose> 
                         </td>
@@ -599,19 +605,7 @@
     
     <!-- ATTRIBUTES --> 
     <xsl:choose>  
-    <xsl:when test="    element/restrictions/notValues 
-                    or  element/restrictions/pertinentNegatives
-                    or  element/restrictions/emailAddressType
-                    or  element/restrictions/phoneNumberType
-                    or  element/restrictions/velocityUnit
-                    or  element/restrictions/distanceUnit
-                    or  element/restrictions/correlationID
-                    or  element/restrictions/currentStatus
-                    or  element/restrictions/currentStatusDate
-                    or  element/restrictions/fileType
-                    or  element/restrictions/streetAddress
-                    or  element/restrictions/codeType
-                    ">
+    <xsl:when test="element/attributes/*">
     <tr><td height="8px;"></td></tr> 
     <tr><td>    
         <table border="0" cellspacing="0" cellpadding="0">
@@ -637,91 +631,186 @@
             </td>
           </tr>
           
-                    
-          <xsl:choose><xsl:when test="element/restrictions/notValues">
+          <xsl:choose><xsl:when test="element/attributes/NV">
           <tr><td height="5px;"></td></tr>  
           <tr>
             <td>
               <table width="667px" cellspacing="0" cellpadding="0" border="0" >
                 <tr>
                   <td width="5px"></td>
-                  <td width="667px" class="attributeName">NOT Values</td>
+                  <td width="667px" class="attributeName">NOT Values (NV)</td>
                 </tr>         
                 <tr>
                   <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/notValues/choice">
-                    <div class="attributeValue" style="float:left;width:180px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
+                  <td>                      
+                    <div class="attributeValue" style="float:left;"> 
+                    <table cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td>
+                        <xsl:for-each select="element/attributes/NV/*/facet">
+                        <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;">
+                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation" disable-output-escaping="yes"/>
+                        </div>
+                        </xsl:for-each> 
+                        </td>
+                      </tr>
+                    </table>
                     </div>
-                  </xsl:for-each> 
                   </td>
                 </tr>  
+              </table>
+            </td>
+          </tr>
+          </xsl:when></xsl:choose>
+          
+          <xsl:choose><xsl:when test="element/attributes/PN">
+          <tr><td height="5px;"></td></tr>  
+          <tr>
+            <td>
+              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
+                <tr>
+                  <td width="5px"></td>
+                  <td width="667px" class="attributeName">Pertinent Negatives (PN)</td>
+                </tr>         
+                <tr>
+                  <td width="5px"></td>
+                  <td>                      
+                    <div class="attributeValue" style="float:left;"> 
+                    <table cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td>
+                        <xsl:for-each select="element/attributes/PN/*/facet">
+                        <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;">
+                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation"/>
+                        </div>
+                        </xsl:for-each> 
+                        </td>
+                      </tr>
+                    </table>
+                    </div>
+                  </td>
+                </tr>  
+              </table>
+            </td>
+          </tr>
+          </xsl:when></xsl:choose>
+          
+
+          <xsl:for-each select="element/attributes/*">
+          <xsl:choose><xsl:when test="name()!='PN' and name()!='NV' and ./facet/@name!='enumeration' and name()!='TIMESTAMP' ">
+          <tr><td style="padding:4px 0 0 0">
+              <table width="667px" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td width="667px" class="attributeName" style="padding:0 0 0 5px"><xsl:value-of select="name()"/></td>
+                </tr>         
+                <tr>
+                  <td style="padding:0 0 0 5px">                      
+                    <div class="attributeValue" style="float:left;"> 
+                    <table cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td class="attributeValue" style="width:150px;"><b>Data Type:</b> String</td>
+                        <xsl:for-each select="./facet">
+                          <xsl:choose><xsl:when test="@name!='pattern'">
+                          <td class="attributeValue" style="width:250px;"><b><xsl:value-of select="@name"/>: </b><xsl:value-of select="@value"/></td>
+                          </xsl:when></xsl:choose>
+                        </xsl:for-each> 
+                      </tr>
+                    </table>
+                    </div>
+                  </td>
+                </tr>  
+              </table>
+            </td>
+          </tr>
+          </xsl:when></xsl:choose>
+          </xsl:for-each> 
+          
+          
+          
+          <xsl:for-each select="element/attributes/*">
+          <xsl:choose><xsl:when test="name()='TIMESTAMP'"> 
+          <tr><td style="padding:4px 0 0 0">
+              <table width="667px" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td width="667px" class="attributeName" style="padding:0 0 0 5px"><xsl:value-of select="name()"/></td>
+                </tr>         
+                <tr>
+                  <td style="padding:0 0 0 5px">                      
+                    <div class="attributeValue" style="float:left;"> 
+                    <table cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td class="attributeValue" style="width:150px;"><b>Data Type: </b><xsl:value-of select="@baseType"/></td>
+                        <xsl:for-each select="./facet">
+                          <xsl:choose><xsl:when test="@name!='pattern'">
+                          <td class="attributeValue" style="width:250px;"><b><xsl:value-of select="@name"/>: </b><xsl:value-of select="@value"/></td>
+                          </xsl:when></xsl:choose>
+                        </xsl:for-each> 
+                      </tr>
+                    </table>
+                    </div>
+                  </td>
+                </tr>  
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:4px 0 5px 5px">
+              <table width="675px" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td width="675px" class="sectionRestrictionsDataTypeTitle">Pattern</td>
+                </tr>         
+                <xsl:for-each select="./facet">
+                <xsl:choose><xsl:when test="@name='pattern'">
+                <tr>
+                  <td class="sectionRestrictionsPattern"> 
+                    <xsl:value-of select="@value"/> 
+                  </td>
+                </tr>
+                </xsl:when></xsl:choose>
+                </xsl:for-each>   
               </table>
             </td>
           </tr>
           </xsl:when></xsl:choose> 
+          </xsl:for-each>        
           
-          <xsl:choose><xsl:when test="element/restrictions/pertinentNegatives">
+          <xsl:for-each select="element/attributes/*">
+          <xsl:choose><xsl:when test="facet/@name='enumeration'">
           <tr><td height="5px;"></td></tr>  
           <tr>
             <td>
               <table width="667px" cellspacing="0" cellpadding="0" border="0" >
                 <tr>
                   <td width="5px"></td>
-                  <td width="667px" class="attributeName">Pertinent Negatives</td>
+                  <td width="667px" class="attributeName"><xsl:value-of select="name()"/></td>
                 </tr>         
                 <tr>
                   <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/pertinentNegatives/choice">
-                    <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
+                  <td>                      
+                    <div class="attributeValue" style="float:left;"> 
+                    <table cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td>
+                        <xsl:for-each select="./facet">                            
+                          <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;">
+                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation"/>
+                          </div>
+                        </xsl:for-each> 
+                        </td>
+                      </tr>
+                    </table>
                     </div>
-                  </xsl:for-each> 
                   </td>
                 </tr>  
               </table>
             </td>
           </tr>
-          </xsl:when></xsl:choose>                     
+          </xsl:when></xsl:choose>
+          </xsl:for-each>           
           
-          <xsl:choose><xsl:when test="element/restrictions/codeType">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Code Type</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/codeType/choice">
-                    <div class="attributeValue" style="float:left;width:130px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                    </div>
-                  </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
+               <!--     
           
           <xsl:choose><xsl:when test="element/restrictions/streetAddress">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Street Address 2</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
                     <div class="attributeValue" style="float:left;width:130px;"> 
                      <b>Data Type: </b> <xsl:value-of select="element/restrictions/streetAddress/constraints/dataType"/> 
                     </div>
@@ -730,149 +819,10 @@
                         <b><xsl:value-of select="constraintTitle"/>: </b> <xsl:value-of select="constraintValue"/> 
                       </div>
                     </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
-          
-          <xsl:choose><xsl:when test="element/restrictions/emailAddressType">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Email Address</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/emailAddressType/choice">
-                    <div class="attributeValue" style="float:left;width:130px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                    </div>
-                  </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
-          
-          <xsl:choose><xsl:when test="element/restrictions/phoneNumberType">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Phone Number</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/phoneNumberType/choice">
-                    <div class="attributeValue" style="float:left;width:130px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                    </div>
-                  </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
-          
-          <xsl:choose><xsl:when test="element/restrictions/velocityUnit">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Velocity Unit</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/velocityUnit/choice">
-                    <div class="attributeValue" style="float:left;width:200px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                    </div>
-                  </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
-          
-          <xsl:choose><xsl:when test="element/restrictions/distanceUnit">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Distance Unit</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/distanceUnit/choice">
-                    <div class="attributeValue" style="float:left;width:200px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                    </div>
-                  </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
-          <xsl:choose><xsl:when test="element/restrictions/currentStatus">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Current Status</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                    <table cellspacing="0" cellpadding="0" border="0">
-                      <tr>
-                      <xsl:for-each select="element/restrictions/currentStatus/choice">
-                        <td class="attributeValue" width="100px">
-                          <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                        </td>
-                      </xsl:for-each> 
-                      </tr>
-                    </table>
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
           
           
           <xsl:choose><xsl:when test="element/restrictions/currentStatusDate">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
                   <td width="667px" class="attributeName">Current Status Date</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
                     <div class="attributeValue" style="float:left;width:130px;"> 
                      <b>Data Type: </b> <xsl:value-of select="element/restrictions/currentStatusDate/constraints/dataType"/> 
                     </div>
@@ -880,64 +830,17 @@
                       <div class="attributeValue" style="float:left;width:250px;white-space: nowrap;"> 
                         <b><xsl:value-of select="constraintTitle"/>: </b> <xsl:value-of select="constraintValue"/> 
                       </div>
-                    </xsl:for-each>                                       
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose>
+                    </xsl:for-each>    
           
-          <xsl:choose><xsl:when test="element/restrictions/correlationID">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">Correlation ID</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                    <table cellspacing="0" cellpadding="0" border="0">
-                      <tr>
-                        <td class="attributeValue" style="width:150px;"><b>Data Type:</b> String</td>
-                        <td class="attributeValue" style="width:150px;"><b>minLength:</b> 0</td>
-                        <td class="attributeValue" style="width:150px;"><b>maxLength:</b> 255 </td>                        
-                      </tr>                       
-                    </table>    
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose> 
-            
+          <xsl:choose><xsl:when test="element/attributes/CorrelationID">  
 
           <xsl:choose><xsl:when test="element/restrictions/fileType">
-          <tr><td height="5px;"></td></tr>  
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="attributeName">File Type</td>
-                </tr>         
-                <tr>
-                  <td width="5px"></td>
-                  <td>
-                  <xsl:for-each select="element/restrictions/fileType/choice">
-                    <div class="attributeValue" style="float:left;width:120px;"> 
-                      <xsl:value-of select="code"/> - <xsl:value-of select="description"/> 
-                    </div>
-                  </xsl:for-each> 
-                  </td>
-                </tr>  
-              </table>
-            </td>
-          </tr>
-          </xsl:when></xsl:choose>             
+          <xsl:choose><xsl:when test="element/restrictions/distanceUnit">
+          <xsl:choose><xsl:when test="element/restrictions/velocityUnit">
+          <xsl:choose><xsl:when test="element/restrictions/phoneNumberType">
+          <xsl:choose><xsl:when test="element/restrictions/emailAddressType">
+          <xsl:choose><xsl:when test="element/restrictions/codeType">
+ -->        
             
             
         </table>          
@@ -948,7 +851,7 @@
     
     <!-- CONSTRAINTS SECTION & PATTERNS --> 
     <xsl:choose>  
-    <xsl:when test="element/restrictions/constraints or element/restrictions/patterns">
+    <xsl:when test="element/restrictions/*/facet/@name!='enumeration' or element/restrictions/*/@baseType='base64Binary'">
     <tr><td height="8px;"></td></tr> 
     <tr><td>    
         <table border="0" cellspacing="0" cellpadding="0">
@@ -973,12 +876,10 @@
               </table>
             </td>
           </tr>
-
           
-          
-          <xsl:choose><xsl:when test="element/restrictions/constraints"> 
+          <xsl:choose><xsl:when test="element/restrictions/*/facet/@name!='pattern'  or element/restrictions/*/@baseType='base64Binary'"> 
           <tr>
-            <td>              
+            <td style="padding-left:5px">              
               <table cellspacing="0" cellpadding="0" border="0" >
                 <tr>
                   <td width="5px"></td>
@@ -989,26 +890,26 @@
                       </tr>
                       <tr>
                       <td class="sectionRestrictionsConstraintValue">
-                        <xsl:value-of select="element/restrictions/constraints/dataType"/>
+                        <xsl:value-of select="element/restrictions/*/@baseType"/>
                       </td>
                       </tr>
                     </table>
                   </td>          
-                  <xsl:for-each select="element/restrictions/constraints/constraint">
-                    <xsl:sort select="constraintTitle" order="descending"/>
+                  <xsl:for-each select="element/restrictions/*/facet">
+                    <xsl:if test="@name!='pattern'">
                     <td>
                         <table cellspacing="0" cellpadding="0">
                         <tr>
-                          <td class="sectionRestrictionsConstraintTitle"><xsl:value-of select="constraintTitle"/></td>   
+                          <td class="sectionRestrictionsConstraintTitle"><xsl:value-of select="@name"/></td>   
                         </tr>
                         <tr>                 
                           <td class="sectionRestrictionsConstraintValue"> 
                             <xsl:choose>  
-                              <xsl:when test="../dataType='positiveInteger' ">
-                                <xsl:value-of select="format-number(number(constraintValue),'###,###')"/>
+                              <xsl:when test="../@baseType='positiveInteger' ">
+                                <xsl:value-of select="format-number(number(@value),'###,###')"/>
                               </xsl:when>
                               <xsl:otherwise>
-                                <xsl:value-of select="constraintValue"/>
+                                <xsl:value-of select="@value"/>
                               </xsl:otherwise>
                             </xsl:choose>  
                           </td>
@@ -1016,6 +917,7 @@
                       </table> 
                     </td>
                     <td width="15px"/>
+                    </xsl:if>
                   </xsl:for-each>       
                 </tr>  
               </table>  
@@ -1023,33 +925,33 @@
           </tr>    
           </xsl:when></xsl:choose> 
           
-          
-          
-          <xsl:choose><xsl:when test="element/restrictions/patterns"> 
-          <xsl:choose><xsl:when test="element/restrictions/constraints">
-          <tr><td height="8px;"></td></tr> 
-          </xsl:when>
-          <xsl:otherwise>
-          <tr><td height="3px;"></td></tr> 
-          </xsl:otherwise></xsl:choose>
-          <tr>
-            <td>
-              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td width="5px"></td>
-                  <td width="667px" class="sectionRestrictionsDataTypeTitle">Pattern</td>
-                </tr>         
-                <xsl:for-each select="element/restrictions/patterns/pattern">
-                <tr>
-                  <td width="5px"></td>
-                  <td class="sectionRestrictionsPattern"> 
-                    <xsl:value-of select="."/> 
-                  </td>
-                </tr>
-                </xsl:for-each>   
-              </table>
-            </td>
-          </tr>
+          <xsl:choose><xsl:when test="element/restrictions/*/facet/@name='pattern'"> 
+            <xsl:choose><xsl:when test="element/restrictions/*">
+              <tr><td height="8px;"></td></tr> 
+            </xsl:when>
+            <xsl:otherwise>
+              <tr><td height="3px;"></td></tr> 
+            </xsl:otherwise></xsl:choose>
+            <tr>
+              <td style="padding-left:5px">
+                <table width="675px" cellspacing="0" cellpadding="0" border="0" >
+                  <tr>
+                    <td width="5px"></td>
+                    <td width="675px" class="sectionRestrictionsDataTypeTitle">Pattern</td>
+                  </tr>         
+                  <xsl:for-each select="element/restrictions/*/facet">
+                  <xsl:choose><xsl:when test="@name='pattern'">
+                  <tr>
+                    <td width="5px"></td>
+                    <td class="sectionRestrictionsPattern"> 
+                      <xsl:value-of select="@value"/> 
+                    </td>
+                  </tr>
+                  </xsl:when></xsl:choose>
+                  </xsl:for-each>   
+                </table>
+              </td>
+            </tr>
           </xsl:when></xsl:choose> 
             
         </table>          
@@ -1059,7 +961,7 @@
         
     <!-- ENUMERATIONS SECTION -->
     <xsl:choose>  
-    <xsl:when test="element/restrictions/enumerations">
+    <xsl:when test="element/restrictions/*/facet/@name='enumeration'">
     <tr><td height="8px;"></td></tr> 
     <tr><td>    
         <table border="0" cellspacing="0" cellpadding="0">
@@ -1094,14 +996,14 @@
                   <td class="sectionRestrictionsEnumerationCodeTitle">Description</td>
                 </tr>
                 <tr><td height="3px"></td></tr>
-                <xsl:for-each select="element/restrictions/enumerations/choice">
+                <xsl:for-each select="element/restrictions/*/facet">
                   <tr>
                     <td width="5px"></td>
                     <td class="sectionRestrictionsEnumerationCodeValue" valign="top">
-                      <xsl:value-of select="code"/>
+                      <xsl:value-of select="@value"/>
                     </td>
                     <td class="sectionRestrictionsEnumerationDescriptionValue">
-                      <xsl:value-of select="description"/>
+                      <xsl:value-of select="@annotation" disable-output-escaping="yes"/>
                     </td>
                   </tr>
                   <tr><td height="3px"></td></tr>
@@ -1146,8 +1048,6 @@
           </tr>
         </table>     
     </td></tr>       
-    <!--</xsl:when>
-    </xsl:choose>     -->
        
     <!-- VERSION 3 CHANGES IMPLEMENTED SECTION -->
     <xsl:choose>  
@@ -1178,6 +1078,41 @@
           </tr>
           <tr>
             <td class="sectionV3ChangesValue" style="padding-left:5px"><xsl:copy-of select="element/v3Changes"/></td>
+          </tr>
+        </table>     
+    </td></tr>       
+    </xsl:when>
+    </xsl:choose>
+    
+    <!-- Deprecated Comment SECTION -->
+    <xsl:choose>  
+    <xsl:when test="string-length(element/deprecatedComment) &gt; 0">
+    <tr><td height="8px;"></td></tr> 
+    <tr><td>    
+        <table border="0" cellspacing="0" cellpadding="0" width="675px">
+          <tr>
+            <td>
+              <table width="675px" cellspacing="0" cellpadding="0" border="0" >
+                <tr>
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
+                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif);"></td>        
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
+                </tr>
+                <tr>
+                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
+                  <td width="667px" class="sectionV3ChangesTitle">Deprecated Comments</td>
+                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
+                </tr>      
+                <tr>
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
+                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="sectionDeprecatedComment" style="padding-left:5px"><xsl:copy-of select="element/deprecatedComment"/></td>
           </tr>
         </table>     
     </td></tr>       

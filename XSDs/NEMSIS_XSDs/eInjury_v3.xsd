@@ -18,7 +18,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>
-							Suggested code list is represented in ICD-10-CM: T36.0xx through T65.91x, T71.11x through T71.9 and, V00.0x through Y38.9xx. It is not expected that EMS will utilize the 7th digit, often used to describe the type of encounter (A-Initial Encounter, D-Subsequent Encounter, S-Sequela).  Thus, T, V and Y codes should be limited to 5 or 6 digits at the most. 
+							Suggested code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html																
 							&lt;br/>&lt;br/>Code list is represented in ICD-10 Codes.
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus
@@ -35,6 +35,7 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
 							</xs:attribute>
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -85,8 +86,8 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>CDC Field Triage Decision Scheme - value choices for Steps 1 and 2. For falls, one story is equal to 10 feet.</comment>
-							<v3Changes>Added to better evaluate the CDC-ACS 2006 Field Triage Decision Scheme. &lt;br/>Website: &lt;a href="www.cdc.gov/FieldTriage">http://www.cdc.gov/FieldTriage/&lt;/a></v3Changes>
+							<comment>2011 Guidelines for the Field Triage of Injured Patients - value choices for Steps 1 and 2. For falls, one story is equal to 10 feet.</comment>
+							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. &lt;br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -117,8 +118,9 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Added additional mechanism or risk indicators based on CDC Field Triage Decision Scheme Steps 3.</comment>
-							<v3Changes>Added to better evaluate the CDC-ACS Field Triage Guideline.</v3Changes>
+							<comment>Added additional mechanism or risk indicators based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3.</comment>
+							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
+							&lt;br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -1212,27 +1214,27 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2903001">
 				<xs:annotation>
-					<xs:documentation>Amputation Proximal to Wrist and Ankle</xs:documentation>
+					<xs:documentation>Amputation proximal to wrist or ankle</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903003">
 				<xs:annotation>
-					<xs:documentation>Crushed, Degloved, or Mangled Extremity</xs:documentation>
+					<xs:documentation>Crushed, degloved, mangled, or pulseless extremity</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903005">
 				<xs:annotation>
-					<xs:documentation>Flail Chest</xs:documentation>
+					<xs:documentation>Chest wall instability or deformity (e.g., flail chest)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903007">
 				<xs:annotation>
-					<xs:documentation>Glasgow Coma Score less than 14</xs:documentation>
+					<xs:documentation>Glasgow Coma Score &lt; 14</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903009">
 				<xs:annotation>
-					<xs:documentation>Open or Depressed Skull Fracture</xs:documentation>
+					<xs:documentation>Open or depressed skull fracture</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903011">
@@ -1242,27 +1244,27 @@
 			</xs:enumeration>
 			<xs:enumeration value="2903013">
 				<xs:annotation>
-					<xs:documentation>Pelvic Fracture(s)</xs:documentation>
+					<xs:documentation>Pelvic fractures</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903015">
 				<xs:annotation>
-					<xs:documentation>Penetrating Injury to Head, Neck, Torso, and Extremities Proximal to Elbow and Knee</xs:documentation>
+					<xs:documentation>All penetrating injuries to  head, neck, torso, and extremities proximal to elbow or knee</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903017">
 				<xs:annotation>
-					<xs:documentation>Respiratory Rate &lt;10 or >29 OR (&lt;20 in infant &lt; one year)</xs:documentation>
+					<xs:documentation>Respiratory Rate  &lt;10 or >29 breaths per minute (&lt;20 in infants aged &lt;1 year) or need for ventilatory support</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903019">
 				<xs:annotation>
-					<xs:documentation>Systolic Blood Pressure less than 90</xs:documentation>
+					<xs:documentation>Systolic Blood Pressure &lt;90 mmHg</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903021">
 				<xs:annotation>
-					<xs:documentation>Two or More Proximal Long-Bone Fractures</xs:documentation>
+					<xs:documentation>Two or more proximal long-bone fractures</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1371,7 +1373,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2904011">
 				<xs:annotation>
-					<xs:documentation>Crash Intrusion: > 12 in. occupant site; > 18 in. any site</xs:documentation>
+					<xs:documentation>Crash Intrusion, including roof: > 12 in. occupant site; > 18 in. any site</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904013">

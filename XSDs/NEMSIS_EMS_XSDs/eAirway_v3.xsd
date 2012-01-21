@@ -14,7 +14,7 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eAirway.01</number>
-										<xs:name>Indications for Invasive Airway</xs:name>
+										<name>Indications for Invasive Airway</name>
 										<national>No</national>
 										<state>Yes</state>
 										<definition>The clinical indication for performing invasive airway management.</definition>
@@ -399,7 +399,7 @@
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>

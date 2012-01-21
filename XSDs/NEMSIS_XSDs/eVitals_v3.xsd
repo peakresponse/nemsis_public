@@ -541,11 +541,11 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="RespiratoryEffort">
-										<xs:attribute name="PN" use="optional">
+										<!--<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="PN.UnableToComplete"/>
 											</xs:simpleType>
-										</xs:attribute>
+										</xs:attribute>-->
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
@@ -964,17 +964,18 @@
 										</performanceMeasuresGroup>
 										<comment>Definition changed to indicate highest level of responsiveness.</comment>
 										<v3Changes/>
+										<!--<PNNil>Yes</PNNil>-->
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="PatientsHighestLevelResponsiveness">
-										<xs:attribute name="PN" use="optional">
+										<!--<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
 											</xs:simpleType>
-										</xs:attribute>
+										</xs:attribute>-->
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -1176,7 +1177,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eVitals.32" id="eVitals.APGAR" minOccurs="0">
+						<xs:element name="eVitals.32" nillable="true" id="eVitals.APGAR" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1190,6 +1191,7 @@
 										<performanceMeasure/>
 										<comment>Recommended to be taken at 1 and 5 minutes after the infants birth</comment>
 										<v3Changes/>
+										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -1205,7 +1207,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eVitals.33" id="eVitals.RevisedTraumaScore" minOccurs="0">
+						<xs:element name="eVitals.33" nillable="true" id="eVitals.RevisedTraumaScore" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1221,6 +1223,7 @@
 										</performanceMeasuresGroup>
 										<comment/>
 										<v3Changes/>
+										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

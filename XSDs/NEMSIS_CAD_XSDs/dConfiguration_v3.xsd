@@ -78,13 +78,12 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This data element should capture all of the procedures permitted by the state for any/all levels of EMS personnel in the state. This is associated with the EMS Agency State (dAgency.01). This is related to the EMS Agency's procedures (dConfiguration.07) which have been implemented within the EMS System.
-										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify ICD-10 PCS procedure codes based on medical direction and their own need.
-										&lt;br/>
-										&lt;br/>Code list is represented in ICD-10-PCS: Procedure Codes, see suggested NEMSIS list of procedure codes.
-										&lt;br/>ICD-10-PCS
-										&lt;br/>Website - http://uts.nlm.nih.gov  
-										&lt;br/>Product - UMLS Metathesaurus	
-										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
+										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify SNOMEDCT procedure codes based on medical direction and their own need.										
+										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html							
+										&lt;br/>&lt;br/>SNOMEDCT
+										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
+										&lt;br/>Product: Product - UMLS Metathesaurus
+										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
@@ -92,7 +91,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="icd10Code">
+									<xs:extension base="snomed">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -125,11 +124,13 @@
 										</performanceMeasuresGroup>
 										<comment>This data element should capture all of the medications permitted by the state for any/all levels of EMS personnel in the state.
 										This should be stored as an RxNorm (RXCUI) Code. This is associated with the EMS Agency State (dAgency.01).
-										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
+										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export. 
+										The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). 
+										Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
 										<v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
-										&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. See suggested NEMSIS list of medication codes.
-										
+										&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. 
+										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html											
 										&lt;br/>&lt;br/>RxNorm
 										&lt;br/>Website - http://uts.nlm.nih.gov
 										
@@ -255,13 +256,12 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. Each procedure is associated with the EMS professional certification levels permitted to perform the procedure.
-&lt;br/>&lt;br/>EMS Agencies may identify additional ICD-10-PCS procedure codes based on medical direction and their own need.  If an agency resides in a state with statewide approved procedures, they should be listed/implemented here.
-
-&lt;br/>&lt;br/>Code list is represented in ICD-10-PCS: Procedure Codes, see suggested NEMSIS list of procedure codes.
-&lt;br/>ICD-10-PCS
-&lt;br/>Website - http://uts.nlm.nih.gov  
-&lt;br/>Product - UMLS Metathesaurus
-													
+&lt;br/>&lt;br/>EMS Agencies may identify additional SNOMEDCT procedure codes based on medical direction and their own need.  If an agency resides in a state with statewide approved procedures, they should be listed/implemented here.
+&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
+										&lt;br/>&lt;br/>SNOMEDCT
+										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
+										&lt;br/>Product: Product - UMLS Metathesaurus
+										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.															
 													</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
@@ -269,7 +269,7 @@
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="icd10Code">
+												<xs:extension base="snomed">
 													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 												</xs:extension>
 											</xs:simpleContent>
@@ -335,7 +335,8 @@
 													</performanceMeasuresGroup>
 													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02)
 since each EMS Agency Number may have different capabilities.
-&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. See suggested NEMSIS list of medication codes.
+&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export. The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). Reference the Demographic Dataset Submission Guide for further details.
+&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
 &lt;br/>&lt;br/>RxNorm
 &lt;br/>Website - http://uts.nlm.nih.gov
 &lt;br/>&lt;br/>Product - UMLS Metathesaurus
@@ -536,7 +537,7 @@ since each EMS Agency Number may have different capabilities.
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>-->
-						<xs:element name="dConfiguration.16" type="AgencyCallSign" id="dConfiguration.AgencyCallSign" maxOccurs="unbounded">
+						<xs:element name="dConfiguration.16"  id="dConfiguration.AgencyCallSign" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -553,8 +554,15 @@ since each EMS Agency Number may have different capabilities.
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="AgencyCallSign">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 						</xs:element>
-						<xs:element name="dConfiguration.17" type="DispatchCenterCADNameorID" id="dConfiguration.DispatchCenterCADNameorID" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="dConfiguration.17"  id="dConfiguration.DispatchCenterCADNameorID" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -571,10 +579,17 @@ since each EMS Agency Number may have different capabilities.
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="DispatchCenterCADNameorID">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-					<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>
+					<!--<xs:attribute name="CurrentStatus" type="Status" use="required"/>
+					<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>-->
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>

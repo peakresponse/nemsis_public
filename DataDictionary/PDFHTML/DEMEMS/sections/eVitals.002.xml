@@ -707,13 +707,10 @@
 <v2Number>E14_12</v2Number>
 <usage>Optional</usage>
 <notValue>No</notValue>
-<pertinentNegative>Yes</pertinentNegative>
+<pertinentNegative>No</pertinentNegative>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-	<pertinentNegatives>
-		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
-	</pertinentNegatives>
   <enumerations>
     <choice>
       <code>3315001</code>
@@ -1206,7 +1203,7 @@
 <v2Number>E14_22</v2Number>
 <usage>Required</usage>
 <notValue>Yes</notValue>
-<pertinentNegative>Yes</pertinentNegative>
+<pertinentNegative>No</pertinentNegative>
 <v3Comment>Definition changed to indicate highest level of responsiveness.</v3Comment>
 <v3Changes></v3Changes>
 <performanceMeasuresGroup>
@@ -1218,10 +1215,6 @@
 <performanceMeasure>Trauma</performanceMeasure>
 </performanceMeasuresGroup>
 <restrictions>
-	<pertinentNegatives>
-		<choice><code>8801023</code><description>Unable to Complete</description>		</choice>
-		<choice><code>8801019</code><description>Refused</description>		</choice>
-	</pertinentNegatives>
   <enumerations>
     <choice>
       <code>3326001</code>
@@ -1448,12 +1441,13 @@
 		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
 	</notValues>
 </restrictions>
-</element><element number="eVitals.32" minOccurs="0" maxOccurs="1" isNillable="No">
+</element><element number="eVitals.32" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>APGAR</name>
 <national>No</national>
 <state>No</state>
 <definition>The patient's total APGAR score (0-10).</definition>
 <v2Number>E14_26</v2Number>
+<PNNil>Yes</PNNil>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>Yes</pertinentNegative>
@@ -1475,12 +1469,13 @@
     </constraint>
   </constraints>
 </restrictions>
-</element><element number="eVitals.33" minOccurs="0" maxOccurs="1" isNillable="No">
+</element><element number="eVitals.33" minOccurs="0" maxOccurs="1" isNillable="Yes">
 <name>Revised Trauma Score</name>
 <national>No</national>
 <state>No</state>
 <definition>The patient's Revised Trauma Score.</definition>
 <v2Number>E14_27</v2Number>
+<PNNil>Yes</PNNil>
 <usage>Optional</usage>
 <notValue>No</notValue>
 <pertinentNegative>Yes</pertinentNegative>

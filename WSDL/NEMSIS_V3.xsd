@@ -304,7 +304,7 @@
 		<xs:sequence>
 			<xs:element name="requestType" type="xs:string" fixed="SubmitData" />
 			<xs:element name="requestHandle" type="xs:string" />
-			<xs:element name="statusCode" type="tns:SubmitDataProcessCodes" />
+			<xs:element name="statusCode" type="tns:SubmitResponseCode" />
 			<xs:element name="reports" type="tns:SubmitDataReport" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>

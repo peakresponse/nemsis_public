@@ -73,7 +73,7 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eVitals.02</number>
-										<name>Obtained Prior to this Units EMS Care</name>
+										<name>Obtained Prior to this Unit's EMS Care</name>
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Indicates that the information which is documented was obtained prior to the documenting EMS units care.</definition>
@@ -294,6 +294,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
+									
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -303,7 +304,6 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									
 									<xs:element name="eVitals.10" nillable="true" id="eVitals.HeartRate">
 										<xs:annotation>
 											<xs:documentation>
@@ -967,7 +967,7 @@
 			<xs:totalDigits value="3"></xs:totalDigits>
 			<xs:fractionDigits value="1"></xs:fractionDigits>
 			<xs:minInclusive value="0"></xs:minInclusive>
-			<xs:maxInclusive value="50.0"></xs:maxInclusive>
+			<xs:maxInclusive value="50"></xs:maxInclusive>
 		</xs:restriction>
 		
 	</xs:simpleType>
@@ -1237,7 +1237,7 @@
 			<xs:documentation>The patient's mean arterial pressure.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:minExclusive value="0"></xs:minExclusive>
+			<xs:minInclusive value="1"></xs:minInclusive>
 			<xs:maxInclusive value="500"></xs:maxInclusive>
 		</xs:restriction>
 		

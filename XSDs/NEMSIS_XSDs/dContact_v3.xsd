@@ -345,11 +345,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="dContact.EMSMedicalDirectorGroup" id="dContact.EMSMedicalDirectorGroup" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="dContact.EMSMedicalDirectorGroup" id="dContact.EMSMedicalDirectorGroup" maxOccurs="1" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the EMS Medical Director</xs:documentation>
 				</xs:annotation>
@@ -451,9 +447,14 @@
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
+					<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
+				</xs:complexType>
+			</xs:element>
+					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
+			
 		</xs:sequence>
 		<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 	</xs:complexType>

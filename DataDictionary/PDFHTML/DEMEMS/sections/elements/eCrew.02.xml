@@ -1,0 +1,39 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eCrew.02"  minOccurs="0"  maxOccurs="1"  dataTypeName="CrewMemberLevel"  isNillable="Yes">
+<name>Crew Member Level</name>
+<national>No</national>
+<state>Yes</state>
+<definition>The functioning level of the crew member ID during this EMS patient encounter.</definition>
+<v2Number>E04_03</v2Number>
+<usage>Recommended</usage>
+<performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
+<v3Comment>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <CrewMemberLevel baseType="string">
+    <facet name="enumeration" value="2302001" annotation="2009 Advanced Emergency Medical Technician (AEMT)"/>
+    <facet name="enumeration" value="2302003" annotation="2009 Emergency Medical Responder (EMR)"/>
+    <facet name="enumeration" value="2302005" annotation="2009 Emergency Medical Technician (EMT)"/>
+    <facet name="enumeration" value="2302007" annotation="2009 Paramedic"/>
+    <facet name="enumeration" value="2302009" annotation="First Responder"/>
+    <facet name="enumeration" value="2302011" annotation="EMT-Basic"/>
+    <facet name="enumeration" value="2302013" annotation="EMT-Intermediate"/>
+    <facet name="enumeration" value="2302015" annotation="EMT-Paramedic"/>
+    <facet name="enumeration" value="2302017" annotation="Nurse"/>
+    <facet name="enumeration" value="2302019" annotation="Other Healthcare Professional"/>
+    <facet name="enumeration" value="2302021" annotation="Other Non-Healthcare Professional"/>
+    <facet name="enumeration" value="2302023" annotation="Physician"/>
+    <facet name="enumeration" value="2302025" annotation="Respiratory Therapist"/>
+    <facet name="enumeration" value="2302027" annotation="Student"/>
+    <facet name="enumeration" value="2302029" annotation="Critical Care Paramedic"/>
+    <facet name="enumeration" value="2302031" annotation="Community Paramedicine"/>
+  </CrewMemberLevel>
+</restrictions>
+<attributes>
+  <NV>
+    <NV.NotApplicable><facet name="enumeration" value="7701001" annotation="Not Applicable"/></NV.NotApplicable>
+    <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
+    <NV.NotReporting><facet name="enumeration" value="7701005" annotation="Not Reporting"/></NV.NotReporting>
+  </NV>
+</attributes>
+</element>

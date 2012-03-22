@@ -258,11 +258,32 @@
 										<name>File Attachment Type</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of file (pdf, jpeg, etc.) that is attached electronically to the patient care report.</definition>
+										<definition>The description of the file attachment stored in File Attachment Image (eOther.11).</definition>
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasure/>
-										<comment>Provides a mechanism for external records to be associated with the PCR.</comment>
+										<comment>The description is defined as the extension of the file type.  
+																	Examples of file name extensions include “doc”, “jpeg”, “tiff”, etc.  For a list of additional extensions reference the following website(s):
+&lt;br/>
+&lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
+&lt;table>
+&lt;tr>&lt;td>3D Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/3d_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Raster Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/raster_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Vector Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/vector_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Video formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/video&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/audio&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Comparison of formats:&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Image: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Audio_file_format&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Container: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>A general list of image formats: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;/td>&lt;/tr>&lt;/table>												
+										</comment>
 										<v3Changes>Added to allow an improved implementation of electronic healthcare records.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -397,12 +418,31 @@
 										<name>Signature File Type</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of graphic file for the signature.</definition>
+										<definition>The description of the file attachment stored in Signature Graphic (eOther.18).</definition>
 										<v2Number/>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<performanceMeasure/>
-										<performanceMeasure/>
+										<comment>The description is defined as the extension of the file type.  
+																	Examples of file name extensions include “doc”, “jpeg”, “tiff”, etc.  For a list of additional extensions reference the following website(s):
+&lt;br/>
+&lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
+&lt;table>
+&lt;tr>&lt;td>3D Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/3d_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Raster Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/raster_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Vector Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/vector_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Video formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/video&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/audio&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Comparison of formats:&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Image: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Audio_file_format&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Container: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>A general list of image formats: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;/td>&lt;/tr>&lt;/table>												
+										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

@@ -1,0 +1,19 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="ePayment.11"  minOccurs="0"  maxOccurs="1"  dataTypeName="InsuranceCompanyBillingPriority"  isNillable="No">
+<name>Insurance Company Billing Priority</name>
+<national>No</national>
+<state>No</state>
+<definition>The billing priority or order for the insurance company.</definition>
+<v2Number>E07_04</v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <InsuranceCompanyBillingPriority baseType="string">
+    <facet name="enumeration" value="2611001" annotation="Other"/>
+    <facet name="enumeration" value="2611003" annotation="Primary"/>
+    <facet name="enumeration" value="2611005" annotation="Secondary"/>
+  </InsuranceCompanyBillingPriority>
+</restrictions>
+</element>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
-	<xs:include schemaLocation="censustracts.xsd"/>
 	<xs:complexType name="eScene" id="eScene.Scene">
 		<xs:sequence>
 			<xs:element name="eScene.01" nillable="true" id="eScene.FirstEMSUnitonScene">
@@ -426,7 +425,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<v2Number>E08_11</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasure/>
-							<comment>This is a CMS standard.  According to the Medicare Claims Processing Manual, Chapter 15 - Ambulance, Ambulance suppliers bill using CMS-1500 form or CMS-1450 form for institution-based ambulance providers.</comment>
+							<comment></comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>

@@ -372,6 +372,14 @@
 			<xs:maxInclusive value="999"></xs:maxInclusive>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="DeltaVelocityOrdinalRanking">
+		<xs:annotation>
+			<xs:documentation>The Automated Collision Notification Delta Velocity (Delta V) force ordinal value. 1 equals first impact, 2 equals second, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"></xs:minInclusive>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="EquipmentUsed">
 		<xs:annotation>
 			<xs:documentation>Documentation of the use of OSHA required equipment associated with the injury.</xs:documentation>

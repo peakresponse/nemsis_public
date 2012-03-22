@@ -1,0 +1,40 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.15"  minOccurs="0"  maxOccurs="1"  dataTypeName="CurrentMedicationAdministrationRoute"  isNillable="No">
+<name>Current Medication Administration Route</name>
+<national>No</national>
+<state>No</state>
+<definition>The administration route (po, SQ, etc.) of the patient's current medication</definition>
+<v2Number>E12_17</v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <CurrentMedicationAdministrationRoute baseType="string">
+    <facet name="enumeration" value="3115001" annotation="Endotracheal Tube"/>
+    <facet name="enumeration" value="3115003" annotation="Gastrostomy/Feeding Tube"/>
+    <facet name="enumeration" value="3115005" annotation="Inhalation"/>
+    <facet name="enumeration" value="3115007" annotation="Intra-Nasal"/>
+    <facet name="enumeration" value="3115009" annotation="Intramuscular (IM)"/>
+    <facet name="enumeration" value="3115011" annotation="Intraocular"/>
+    <facet name="enumeration" value="3115013" annotation="Intraosseous (IO)"/>
+    <facet name="enumeration" value="3115015" annotation="Intravenous (IV)"/>
+    <facet name="enumeration" value="3115017" annotation="Nasal Cannula"/>
+    <facet name="enumeration" value="3115019" annotation="Nasogastric"/>
+    <facet name="enumeration" value="3115021" annotation="Non-Rebreather Mask"/>
+    <facet name="enumeration" value="3115023" annotation="Ophthalmic"/>
+    <facet name="enumeration" value="3115025" annotation="Oral"/>
+    <facet name="enumeration" value="3115027" annotation="Other/miscellaneous"/>
+    <facet name="enumeration" value="3115029" annotation="Otic"/>
+    <facet name="enumeration" value="3115031" annotation="Rectal"/>
+    <facet name="enumeration" value="3115033" annotation="Subcutaneous"/>
+    <facet name="enumeration" value="3115035" annotation="Sublingual"/>
+    <facet name="enumeration" value="3115037" annotation="Topical"/>
+    <facet name="enumeration" value="3115039" annotation="Tracheostomy"/>
+    <facet name="enumeration" value="3115041" annotation="Transdermal"/>
+    <facet name="enumeration" value="3115043" annotation="Urethral"/>
+    <facet name="enumeration" value="3115045" annotation="Ventimask"/>
+    <facet name="enumeration" value="3115047" annotation="Wound"/>
+  </CurrentMedicationAdministrationRoute>
+</restrictions>
+</element>

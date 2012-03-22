@@ -1,0 +1,18 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eMedDevice.03"  minOccurs="0"  maxOccurs="1"  dataTypeName="EMSAgencyName"  isNillable="No">
+<name>EMS Agency Name</name>
+<national>No</national>
+<state>No</state>
+<definition>The formal name of the agency.</definition>
+<v2Number>D01_02</v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <EMSAgencyName baseType="string">
+    <facet name="minLength" value="2"/>
+    <facet name="maxLength" value="100"/>
+  </EMSAgencyName>
+</restrictions>
+</element>

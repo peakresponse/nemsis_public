@@ -74,7 +74,7 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eMedications.02</number>
-										<name>Medication Administered Prior to this Units EMS Care</name>
+										<name>Medication Administered Prior to this Unit's EMS Care</name>
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Indicates that the medication administration which is documented was administered prior to this EMS units care</definition>
@@ -98,7 +98,7 @@
 									<xs:extension base="YesNoValues">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/><!-- NV.NotReporting -->
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>

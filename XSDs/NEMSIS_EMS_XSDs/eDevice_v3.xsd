@@ -116,7 +116,7 @@
 													<name>Medical Device Waveform Graphic Type</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The type of waveform file stored in Waveform Graphic </definition>
+													<definition>The description of the waveform file stored in Waveform Graphic (eDevice.05).</definition>
 													<v2Number>E21_03</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
@@ -124,7 +124,28 @@
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
+													<comment>The description is defined as the extension of the file type.  
+																	Examples of file name extensions include “doc”, “jpeg”, “tiff”, etc.  For a list of additional extensions reference the following website(s):
+&lt;br/>
+&lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
+&lt;table>
+&lt;tr>&lt;td>3D Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/3d_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Raster Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/raster_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Vector Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/vector_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Video formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/video&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/audio&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Comparison of formats:&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Image: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Audio_file_format&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Container: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>A general list of image formats: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;/td>&lt;/tr>&lt;/table>												
+													</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -319,7 +340,7 @@
 		<xs:annotation>
 			<xs:documentation>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:integer">
+		<xs:restriction base="xs:string">
 			<xs:enumeration value="4106001">
 				<xs:annotation>
 					<xs:documentation>Advisory</xs:documentation>

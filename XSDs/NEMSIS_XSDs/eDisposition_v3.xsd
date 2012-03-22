@@ -193,7 +193,7 @@
 									<xs:extension base="ANSICountyCode">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/><!-- NV.NotReporting -->
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -861,7 +861,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="DestinationPrearrivalActivation">
 		<xs:annotation>
-			<xs:documentation/>
+			<xs:documentation>Activation of the Destination Healthcare Facility Team prior to EMS arrival for acute ill or injured patient.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4224001">
@@ -1159,107 +1159,31 @@
 		<xs:annotation>
 			<xs:documentation>Type of disposition treatment and/or transport of the patient by this EMS Unit.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="4212001">
-				<xs:annotation>
-					<xs:documentation>Assist, Agency</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212003">
-				<xs:annotation>
-					<xs:documentation>Assist, Public</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212005">
-				<xs:annotation>
-					<xs:documentation>Assist, Unit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212007">
-				<xs:annotation>
-					<xs:documentation>Canceled (Prior to Arrival At Scene)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212009">
-				<xs:annotation>
-					<xs:documentation>No Patient Contact (Canceled on Scene)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212011">
-				<xs:annotation>
-					<xs:documentation>No Patient Found (Canceled on Scene)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212013">
-				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-No EMS Transport</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212015">
-				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-Transported by EMS</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212017">
-				<xs:annotation>
-					<xs:documentation>Patient Evaluated, No Treatment/Transport Required</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212019">
-				<xs:annotation>
-					<xs:documentation>Patient Refused Evaluation/Care (With Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212021">
-				<xs:annotation>
-					<xs:documentation>Patient Refused Evaluation/Care and (Without Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212023">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Released (AMA)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212025">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Released (per protocol)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212027">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transferred Care to Another EMS Professional</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212029">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by EMS</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212031">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by Law Enforcement</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212033">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by Private Vehicle</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212035">
-				<xs:annotation>
-					<xs:documentation>Standby-No Services or Support Provided</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212037">
-				<xs:annotation>
-					<xs:documentation>Standby-Public Safety, Fire, or EMS Operational Support Provided</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212039">
-				<xs:annotation>
-					<xs:documentation>Transport of Body Parts or Organs Only</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
+		<xs:restriction base="xs:string">	
+			<xs:enumeration value="4212001"><xs:annotation><xs:documentation>Assist, Agency</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212003"><xs:annotation><xs:documentation>Assist, Public</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212005"><xs:annotation><xs:documentation>Assist, Unit</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212007"><xs:annotation><xs:documentation>Canceled (Prior to Arrival At Scene)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212009"><xs:annotation><xs:documentation>No Patient Contact (Canceled on Scene)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212011"><xs:annotation><xs:documentation>No Patient Found (Canceled on Scene)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212013"><xs:annotation><xs:documentation>Patient Dead at Scene-No Resuscitation Attempted</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212015"><xs:annotation><xs:documentation>Patient Dead at Scene-No Resuscitation Attempted (With Transport)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212017"><xs:annotation><xs:documentation>Patient Dead at Scene-No Resuscitation Attempted(Without Transport)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212019"><xs:annotation><xs:documentation>Patient Dead at Scene-Resuscitation Attempted</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212021"><xs:annotation><xs:documentation>Patient Dead at Scene-Resuscitation Attempted (With Transport)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212023"><xs:annotation><xs:documentation>Patient Dead at Scene-Resuscitation Attempted(Without Transport)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212025"><xs:annotation><xs:documentation>Patient Evaluated, No Treatment/Transport Required</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212027"><xs:annotation><xs:documentation>Patient Refused Evaluation/Care (With Transport)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212029"><xs:annotation><xs:documentation>Patient Refused Evaluation/Care and (Without Transport)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212031"><xs:annotation><xs:documentation>Patient Treated, Released (AMA)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212033"><xs:annotation><xs:documentation>Patient Treated, Released (per protocol)</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212035"><xs:annotation><xs:documentation>Patient Treated, Transferred Care to Another EMS Professional</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212037"><xs:annotation><xs:documentation>Patient Treated, Transported by EMS</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212039"><xs:annotation><xs:documentation>Patient Treated, Transported by Law Enforcement</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212041"><xs:annotation><xs:documentation>Patient Treated, Transported by Private Vehicle</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212043"><xs:annotation><xs:documentation>Standby-No Services or Support Provided</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212045"><xs:annotation><xs:documentation>Standby-Public Safety, Fire, or EMS Operational Support Provided</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="4212047"><xs:annotation><xs:documentation>Transport of Body Parts or Organs Only</xs:documentation></xs:annotation></xs:enumeration>		
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NumberOfPatients">

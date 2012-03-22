@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by Greg Chandler (University of Utah) -->
 <xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="dDevice_v3.xsd"/>
 	<xs:include schemaLocation="eRecord_v3.xsd"/>
@@ -6,7 +7,6 @@
 	<xs:include schemaLocation="eDevice_v3.xsd"/>
 	<xs:include schemaLocation="eVitals_v3.xsd"/>
 	<xs:include schemaLocation="eLabs_v3.xsd"/>
-	<xs:include schemaLocation="eCustom_v3.xsd"/>
 	<xs:complexType name="eMedDevice" id="eMedDevice.eMedDevice">
 		<xs:sequence>
 			<xs:element name="eMedDevice.01" type="EMSAgencyStateID" id="eMedDevice.dAgency.EMSAgencyUniqueStateID">
@@ -132,8 +132,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="ANSIStateCode">
-						</xs:extension>
+						<xs:extension base="ANSIStateCode"/>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
@@ -392,7 +391,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl=2&amp;lvlID=172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
+										<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -478,6 +477,10 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
 						<xs:element name="eMedDevice.18" id="eMedDevice.ePatient.DateofBirth" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
@@ -502,9 +505,6 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="eMedDevice.VitalsGroup" id="eMedDevice.VitalsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the Vitals of the Patient</xs:documentation>
@@ -743,15 +743,6 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="eMedDevice.HeartRateGroup" id="eMedDevice.HeartRateGroup" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of Patient's systolic blood pressure and its procedure </xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
 									<xs:element name="eMedDevice.26" type="MAP" id="eMedDevice.eVitals.MeanArterialPressure" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
@@ -771,6 +762,15 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eMedDevice.HeartRateGroup" id="eMedDevice.HeartRateGroup" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Group Tag to hold the details of Patient's systolic blood pressure and its procedure </xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
 									<xs:element name="eMedDevice.27" id="eMedDevice.eVitals.HeartRate" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
@@ -1075,9 +1075,9 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eMedDevice.LabResultGroup" id="eMedDevice.LabResultGroup" minOccurs="0">
+						<xs:element name="eMedDevice.LabResultGroup" id="eMedDevice.LabResultGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation/>
+								<xs:documentation>Group Tag to hold the type of laboratory value and its result.</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -1122,7 +1122,7 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.LabImageGroup" id="eMedDevice.LabImageGroup" minOccurs="0">
+						<xs:element name="eMedDevice.LabImageGroup" id="eMedDevice.LabImageGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold info about Lab Image</xs:documentation>
 							</xs:annotation>
@@ -1166,107 +1166,131 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
+									<xs:element name="eMedDevice.WaveFormGraphicGroup" id="eMedDevice.WaveFormGraphicGroup" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>Group to hold Wave Form Graphic Information</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="eMedDevice.41" type="GraphicType" id="eMedDevice.eLabs.WaveformGraphicType" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>
+															<nemsisTacDoc>
+																<number>eMedDevice.41</number>
+																<refNumber>eLabs.07</refNumber>
+																<name>Imaging Study File or Waveform Graphic Type</name>
+																<national>No</national>
+																<state>No</state>
+																<definition>The description of the image study file or waveform graphic stored in Imaging Study File or Waveform Graphic (eMedDevice.42).</definition>
+																<v2Number/>
+																<usage>Optional</usage>
+																<performanceMeasuresGroup>
+																	<performanceMeasure>Airway</performanceMeasure>
+																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
+																	<performanceMeasure>STEMI</performanceMeasure>
+																</performanceMeasuresGroup>
+																<comment>The description is defined as the extension of the file type.  
+																	Examples of file name extensions include “doc”, “jpeg”, “tiff”, etc.  For a list of additional extensions reference the following website(s):
+&lt;br/>
+&lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
+&lt;table>
+&lt;tr>&lt;td>3D Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/3d_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Raster Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/raster_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Vector Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/vector_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Video formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/video&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/audio&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Comparison of formats:&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Image: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Audio_file_format&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Container: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>A general list of image formats: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;/td>&lt;/tr>&lt;/table>	</comment>
+																<v3Changes/>
+															</nemsisTacDoc>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="eMedDevice.42" type="WaveformGraphic" id="eMedDevice.eLabs.WaveformGraphic" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>
+															<nemsisTacDoc>
+																<number>eMedDevice.42</number>
+																<refNumber>eLabs.08</refNumber>
+																<name>Imaging Study File or Waveform Graphic</name>
+																<national>No</national>
+																<state>No</state>
+																<definition>The imaging study file.</definition>
+																<v2Number/>
+																<usage>Optional</usage>
+																<performanceMeasuresGroup>
+																	<performanceMeasure>Airway</performanceMeasure>
+																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
+																	<performanceMeasure>STEMI</performanceMeasure>
+																</performanceMeasuresGroup>
+																<comment>Added to allow the imaging file to be uploaded and better document patient care.</comment>
+																<v3Changes/>
+															</nemsisTacDoc>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.WaveFormGraphicGroup" id="eMedDevice.WaveFormGraphicGroup" minOccurs="0">
+					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="eMedDevice.DeviceGroup" id="eMedDevice.DeviceGroup" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Group Tag to hold shock information </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="eMedDevice.43" type="DeviceSerialNumber" id="eMedDevice.eDevice.DeviceSerialNumber" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Group to hold Wave Form Graphic Information</xs:documentation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eMedDevice.43</number>
+										<refNumber>eDevice.01</refNumber>
+										<name>Medical Device Serial Number</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The unique manufacturer's serial number associated with a medical device.</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<performanceMeasure/>
+										<performanceMeasure/>
+									</nemsisTacDoc>
+								</xs:documentation>
 							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="eMedDevice.41" type="GraphicType" id="eMedDevice.eLabs.WaveformGraphicType" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.41</number>
-													<refNumber>eLabs.07</refNumber>
-													<name>Imaging Study File or Waveform Graphic Type</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The type of file or waveform the imaging file is stored in.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasuresGroup>
-														<performanceMeasure>Airway</performanceMeasure>
-														<performanceMeasure>Cardiac Arrest</performanceMeasure>
-														<performanceMeasure>STEMI</performanceMeasure>
-													</performanceMeasuresGroup>
-													<comment>Added to better document patient care.  Added to allow the type of imaging file uploaded to be identified.</comment>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.42" type="WaveformGraphic" id="eMedDevice.eLabs.WaveformGraphic" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.42</number>
-													<refNumber>eLabs.08</refNumber>
-													<name>Imaging Study File or Waveform Graphic</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The imaging study file.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasuresGroup>
-														<performanceMeasure>Airway</performanceMeasure>
-														<performanceMeasure>Cardiac Arrest</performanceMeasure>
-														<performanceMeasure>STEMI</performanceMeasure>
-													</performanceMeasuresGroup>
-													<comment>Added to allow the imaging file to be uploaded and better document patient care.</comment>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-								</xs:sequence>
-							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.DeviceGroup" id="eMedDevice.DeviceGroup" minOccurs="0">
+						<xs:element name="eMedDevice.44" type="DateTimeType" id="eMedDevice.eDevice.EventDateTime" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold shock information </xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="eMedDevice.43" type="DeviceSerialNumber" id="eMedDevice.eDevice.DeviceSerialNumber" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.43</number>
-													<refNumber>eDevice.01</refNumber>
-													<name>Medical Device Serial Number</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The unique manufacturer's serial number associated with a medical device.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<performanceMeasure/>
-													<performanceMeasure/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.44" type="DateTimeType" id="eMedDevice.eDevice.EventDateTime" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.44</number>
-													<refNumber>eDevice.02</refNumber>
-													<name>Date/Time of Event (per Medical Device)</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The time of the event recorded by the device's internal clock</definition>
-													<v2Number>E21_01</v2Number>
-													<usage>Optional</usage>
-													<performanceMeasuresGroup>
-														<performanceMeasure>Airway</performanceMeasure>
-														<performanceMeasure>Cardiac Arrest</performanceMeasure>
-														<performanceMeasure>STEMI</performanceMeasure>
-													</performanceMeasuresGroup>
-													<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eMedDevice.44</number>
+										<refNumber>eDevice.02</refNumber>
+										<name>Date/Time of Event (per Medical Device)</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The time of the event recorded by the device's internal clock</definition>
+										<v2Number>E21_01</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
   &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
@@ -1291,469 +1315,280 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.45" id="eMedDevice.eDevice.MedicalDeviceEventName" minOccurs="0" maxOccurs="unbounded">
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="eMedDevice.45" id="eMedDevice.eDevice.MedicalDeviceEventName" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eMedDevice.45</number>
+										<refNumber>eDevice.03</refNumber>
+										<name>Medical Device Event Type</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The type of event documented by the medical device.</definition>
+										<v2Number>E21_02</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="MedicalDeviceEventType">
+										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eMedDevice.WaveGroup" id="eMedDevice.WaveGroup" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Group to hold Waveform Graphic Information</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="eMedDevice.46" type="GraphicType" id="eMedDevice.eDevice.WaveformGraphicType" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
-													<number>eMedDevice.45</number>
-													<refNumber>eDevice.03</refNumber>
-													<name>Medical Device Event Type</name>
+													<number>eMedDevice.46</number>
+													<refNumber>eDevice.04</refNumber>
+													<name>Medical Device Waveform Graphic Type</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The type of event documented by the medical device.</definition>
-													<v2Number>E21_02</v2Number>
+													<definition>The description of the waveform file stored in Medical Device Waveform Graphic (eMedDevice.47).</definition>
+													<v2Number>E21_03</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
+													<comment>The description is defined as the extension of the file type.  
+																	Examples of file name extensions include “doc”, “jpeg”, “tiff”, etc.  For a list of additional extensions reference the following website(s):
+&lt;br/>
+&lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
+&lt;table>
+&lt;tr>&lt;td>3D Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/3d_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Raster Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/raster_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Vector Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/vector_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Video formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/video&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/audio&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Comparison of formats:&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Image: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Audio_file_format&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Container: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>A general list of image formats: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;/td>&lt;/tr>&lt;/table>	</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="MedicalDeviceEventType">
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
 									</xs:element>
-									<xs:element name="eMedDevice.WaveGroup" id="eMedDevice.WaveGroup" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>Group to hold Waveform Graphic Information</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:sequence>
-												<xs:element name="eMedDevice.46" type="GraphicType" id="eMedDevice.eDevice.WaveformGraphicType" minOccurs="0">
-													<xs:annotation>
-														<xs:documentation>
-															<nemsisTacDoc>
-																<number>eMedDevice.46</number>
-																<refNumber>eDevice.04</refNumber>
-																<name>Medical Device Waveform Graphic Type</name>
-																<national>No</national>
-																<state>No</state>
-																<definition>The type of waveform file stored in Waveform Graphic </definition>
-																<v2Number>E21_03</v2Number>
-																<usage>Optional</usage>
-																<performanceMeasuresGroup>
-																	<performanceMeasure>Airway</performanceMeasure>
-																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
-																	<performanceMeasure>STEMI</performanceMeasure>
-																</performanceMeasuresGroup>
-																<comment/>
-																<v3Changes/>
-															</nemsisTacDoc>
-														</xs:documentation>
-													</xs:annotation>
-												</xs:element>
-												<xs:element name="eMedDevice.47" type="WaveformGraphic" id="eMedDevice.eDevice.WaveformGraphic" minOccurs="0">
-													<xs:annotation>
-														<xs:documentation>
-															<nemsisTacDoc>
-																<number>eMedDevice.47</number>
-																<refNumber>eDevice.05</refNumber>
-																<name>Medical Device Waveform Graphic</name>
-																<national>No</national>
-																<state>No</state>
-																<definition>The graphic waveform file.</definition>
-																<v2Number>E21_04</v2Number>
-																<usage>Optional</usage>
-																<performanceMeasuresGroup>
-																	<performanceMeasure>Airway</performanceMeasure>
-																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
-																	<performanceMeasure>STEMI</performanceMeasure>
-																</performanceMeasuresGroup>
-																<comment/>
-																<v3Changes/>
-															</nemsisTacDoc>
-														</xs:documentation>
-													</xs:annotation>
-												</xs:element>
-												<xs:element name="eMedDevice.48" type="AEDPacingOrCO2Mode" id="eMedDevice.eDevice.AEDPacingorC02Mode" minOccurs="0">
-													<xs:annotation>
-														<xs:documentation>
-															<nemsisTacDoc>
-																<number>eMedDevice.48</number>
-																<refNumber>eDevice.06</refNumber>
-																<name>Medical Device Mode (Manual, AED, Pacing, CO2, O2, etc)</name>
-																<national>No</national>
-																<state>No</state>
-																<definition>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)</definition>
-																<v2Number>E21_05</v2Number>
-																<usage>Optional</usage>
-																<performanceMeasure/>
-															</nemsisTacDoc>
-														</xs:documentation>
-													</xs:annotation>
-												</xs:element>
-											</xs:sequence>
-										</xs:complexType>
-									</xs:element>
-									<xs:element name="eMedDevice.49" id="eMedDevice.eDevice.ECGLead" minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="eMedDevice.47" type="WaveformGraphic" id="eMedDevice.eDevice.WaveformGraphic" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
-													<number>eMedDevice.49</number>
-													<refNumber>eDevice.07</refNumber>
-													<name>Medical Device ECG Lead</name>
+													<number>eMedDevice.47</number>
+													<refNumber>eDevice.05</refNumber>
+													<name>Medical Device Waveform Graphic</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</definition>
-													<v2Number>E21_06</v2Number>
+													<definition>The graphic waveform file.</definition>
+													<v2Number>E21_04</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
+													<comment/>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="ECGLead">
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
 									</xs:element>
-									<xs:element name="eMedDevice.50" type="ECGInterpretation" id="eMedDevice.eDevice.ECGInterpretation" minOccurs="0">
+									<xs:element name="eMedDevice.48" type="AEDPacingOrCO2Mode" id="eMedDevice.eDevice.AEDPacingorC02Mode" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
-													<number>eMedDevice.50</number>
-													<refNumber>eDevice.08</refNumber>
-													<name>Medical Device ECG Interpretation</name>
+													<number>eMedDevice.48</number>
+													<refNumber>eDevice.06</refNumber>
+													<name>Medical Device Mode (Manual, AED, Pacing, CO2, O2, etc)</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The interpretation of the rhythm by the device (if appropriate for the event)</definition>
-													<v2Number>E21_07</v2Number>
+													<definition>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)</definition>
+													<v2Number>E21_05</v2Number>
+													<usage>Optional</usage>
+													<performanceMeasure/>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eMedDevice.49" id="eMedDevice.eDevice.ECGLead" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eMedDevice.49</number>
+										<refNumber>eDevice.07</refNumber>
+										<name>Medical Device ECG Lead</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</definition>
+										<v2Number>E21_06</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ECGLead">
+										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eMedDevice.50" type="ECGInterpretation" id="eMedDevice.eDevice.ECGInterpretation" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eMedDevice.50</number>
+										<refNumber>eDevice.08</refNumber>
+										<name>Medical Device ECG Interpretation</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The interpretation of the rhythm by the device (if appropriate for the event)</definition>
+										<v2Number>E21_07</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>The rhythm interpretation text imported from the device.</comment>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="eMedDevice.ShockGroup" id="eMedDevice.ShockGroup" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Group to hold Shock Information</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="eMedDevice.51" type="TypeOfShock" id="eMedDevice.eDevice.TypeOfShock" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eMedDevice.51</number>
+													<refNumber>eDevice.09</refNumber>
+													<name>Type of Shock</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The type of shock used by the device for the defibrillation (if appropriate for the event)</definition>
+													<v2Number>E21_08</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
-														<performanceMeasure>Airway</performanceMeasure>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
-														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>The rhythm interpretation text imported from the device.</comment>
+													<comment/>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eMedDevice.ShockGroup" id="eMedDevice.ShockGroup" minOccurs="0">
+									<xs:element name="eMedDevice.52" type="ShockOrPacingEnergy" id="eMedDevice.eDevice.ShockorPacingEnergy" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>Group to hold Shock Information</xs:documentation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eMedDevice.52</number>
+													<refNumber>eDevice.10</refNumber>
+													<name>Shock or Pacing Energy</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The energy (in joules) used for the shock or pacing (if appropriate for the event)</definition>
+													<v2Number>E21_09</v2Number>
+													<usage>Optional</usage>
+													<performanceMeasuresGroup>
+														<performanceMeasure>Cardiac Arrest</performanceMeasure>
+													</performanceMeasuresGroup>
+													<comment/>
+													<v3Changes/>
+												</nemsisTacDoc>
+											</xs:documentation>
 										</xs:annotation>
-										<xs:complexType>
-											<xs:sequence>
-												<xs:element name="eMedDevice.51" type="TypeOfShock" id="eMedDevice.eDevice.TypeOfShock" minOccurs="0">
-													<xs:annotation>
-														<xs:documentation>
-															<nemsisTacDoc>
-																<number>eMedDevice.51</number>
-																<refNumber>eDevice.09</refNumber>
-																<name>Type of Shock</name>
-																<national>No</national>
-																<state>No</state>
-																<definition>The type of shock used by the device for the defibrillation (if appropriate for the event)</definition>
-																<v2Number>E21_08</v2Number>
-																<usage>Optional</usage>
-																<performanceMeasuresGroup>
-																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
-																</performanceMeasuresGroup>
-																<comment/>
-																<v3Changes/>
-															</nemsisTacDoc>
-														</xs:documentation>
-													</xs:annotation>
-												</xs:element>
-												<xs:element name="eMedDevice.52" type="ShockOrPacingEnergy" id="eMedDevice.eDevice.ShockorPacingEnergy" minOccurs="0">
-													<xs:annotation>
-														<xs:documentation>
-															<nemsisTacDoc>
-																<number>eMedDevice.52</number>
-																<refNumber>eDevice.10</refNumber>
-																<name>Shock or Pacing Energy</name>
-																<national>No</national>
-																<state>No</state>
-																<definition>The energy (in joules) used for the shock or pacing (if appropriate for the event)</definition>
-																<v2Number>E21_09</v2Number>
-																<usage>Optional</usage>
-																<performanceMeasuresGroup>
-																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
-																</performanceMeasuresGroup>
-																<comment/>
-																<v3Changes/>
-															</nemsisTacDoc>
-														</xs:documentation>
-													</xs:annotation>
-												</xs:element>
-												<xs:element name="eMedDevice.53" type="TotalNumberOfShocks" id="eMedDevice.eDevice.TotalNumberofShocksDelivered" minOccurs="0">
-													<xs:annotation>
-														<xs:documentation>
-															<nemsisTacDoc>
-																<number>eMedDevice.53</number>
-																<refNumber>eDevice.11</refNumber>
-																<name>Total Number of Shocks Delivered</name>
-																<national>No</national>
-																<state>No</state>
-																<definition>The number of times the patient was defibrillated, if the patient was defibrillated during the patient encounter.</definition>
-																<v2Number>E21_10</v2Number>
-																<usage>Optional</usage>
-																<performanceMeasuresGroup>
-																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
-																</performanceMeasuresGroup>
-																<comment/>
-																<v3Changes/>
-															</nemsisTacDoc>
-														</xs:documentation>
-													</xs:annotation>
-												</xs:element>
-												<xs:element name="eMedDevice.54" type="PacingRate" id="eMedDevice.eDevice.PacingRate" minOccurs="0">
-													<xs:annotation>
-														<xs:documentation>
-															<nemsisTacDoc>
-																<number>eMedDevice.54</number>
-																<refNumber>eDevice.12</refNumber>
-																<name>Pacing Rate</name>
-																<national>No</national>
-																<state>No</state>
-																<definition>The rate the device was calibrated to pace during the event, if appropriate.</definition>
-																<v2Number>E21_11</v2Number>
-																<usage>Optional</usage>
-																<performanceMeasure/>
-																<comment/>
-																<v3Changes/>
-															</nemsisTacDoc>
-														</xs:documentation>
-													</xs:annotation>
-												</xs:element>
-											</xs:sequence>
-										</xs:complexType>
+									</xs:element>
+									<xs:element name="eMedDevice.53" type="TotalNumberOfShocks" id="eMedDevice.eDevice.TotalNumberofShocksDelivered" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eMedDevice.53</number>
+													<refNumber>eDevice.11</refNumber>
+													<name>Total Number of Shocks Delivered</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The number of times the patient was defibrillated, if the patient was defibrillated during the patient encounter.</definition>
+													<v2Number>E21_10</v2Number>
+													<usage>Optional</usage>
+													<performanceMeasuresGroup>
+														<performanceMeasure>Cardiac Arrest</performanceMeasure>
+													</performanceMeasuresGroup>
+													<comment/>
+													<v3Changes/>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="eMedDevice.54" type="PacingRate" id="eMedDevice.eDevice.PacingRate" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eMedDevice.54</number>
+													<refNumber>eDevice.12</refNumber>
+													<name>Pacing Rate</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The rate the device was calibrated to pace during the event, if appropriate.</definition>
+													<v2Number>E21_11</v2Number>
+													<usage>Optional</usage>
+													<performanceMeasure/>
+													<comment/>
+													<v3Changes/>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
 									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eMedDevice.CustomGroup" id="eMedDevice.CustomGroup" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation/>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="eMedDevice.eCustomConfiguration.CustomGroup" id="eMedDevice.eCustomConfiguration.eCustomGroup" minOccurs="0" maxOccurs="unbounded" >
-							<xs:annotation>
-								<xs:documentation>Group Tag to hold custom information</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="eMedDevice.55" id="eMedDevice.eCustomConfiguration.eCustomDataElementTitle" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.55</number>
-													<refNumber>eCustomConfiguration.01</refNumber>
-													<name>Custom Data Element Title</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment>This is grouped with all data elements in this section and can have multiple instances.</comment>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="CustomTitle">
-													<xs:attribute name="nemsisElement" type="xs:string" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
-									</xs:element>
-									<xs:element name="eMedDevice.56" type="CustomDefinition" id="eMedDevice.eCustomConfiguration.eCustomDefinition" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.56</number>
-													<refNumber>eCustomConfiguration.02</refNumber>
-													<name>Custom Definition</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The definition of the custom element and how it should be used.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.57" type="CustomDataType" id="eMedDevice.eCustomConfiguration.eCustomDataType" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.57</number>
-													<refNumber>eCustomConfiguration.03</refNumber>
-													<name>Custom Data Type</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The data type of the custom element.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.58" type="YesNoValues" id="eMedDevice.eCustomConfiguration.eCustomDataElementRecurrence" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.58</number>
-													<refNumber>eCustomConfiguration.04</refNumber>
-													<name>Custom Data Element Recurrence</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>Indication if the data element will accept multiple values.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.59" type="ElementUsage" id="eMedDevice.eCustomConfiguration.eCustomDataElementUsage" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.59</number>
-													<refNumber>eCustomConfiguration.05</refNumber>
-													<name>Custom Data Element Usage</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The Usage (Mandatory, Required, or Optional) for the Custom Data Element.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment>Mandatory = Must be completed and will not accept null values&lt;br/>Required = Must be completed but will accept null values&lt;br/>Optional = Not required but if collected, it cannot be a null value.</comment>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.60" id="eMedDevice.eCustomConfiguration.eCustomDataElementPotentialValues" minOccurs="0" maxOccurs="unbounded">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.60</number>
-													<refNumber>eCustomConfiguration.06</refNumber>
-													<name>Custom Data Element Potential Values</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="CustomValue">
-													<xs:attribute name="nemsisCode" type="xs:string" use="optional"/>
-													<xs:attribute name="customValueDescription" type="xs:string" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
-									</xs:element>
-									<xs:element name="eMedDevice.61" type="CustomResults" id="eCustomConfiguration.eCustomDataElementResult" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.61</number>
-													<refNumber>eCustomResults.01</refNumber>
-													<name>Custom Data Element Result</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The actual value or values chosen (if values listed in custom.05) or result (free text, Date/Time, or number) documented for the Custom Data Element</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.62" type="CustomResults" id="eMedDevice.eCustomConfiguration.eCustomDataElementReference" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.62</number>
-													<refNumber>eCustomResults.02</refNumber>
-													<name>Custom Data Element Reference</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>Refers to the data element being extended by referencing the correlationID attribute in the element eCustomConfiguration.CustomGroup</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element name="eMedDevice.63" type="CustomResults" id="eMedDevice.eCustomConfiguration.eCustomCorrelationID" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.63</number>
-													<refNumber>eCustomResults.03</refNumber>
-													<name>Custom Correlation ID</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>Correlation id used to map back to set of other elements in other sections.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-								</xs:sequence>
-								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-							</xs:complexType>
-						</xs:element>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

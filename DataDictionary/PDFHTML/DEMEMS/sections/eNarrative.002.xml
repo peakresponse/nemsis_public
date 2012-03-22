@@ -1,32 +1,4 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
 <section name="eNarrative">
-<element number="eNarrative.01" minOccurs="0" maxOccurs="1" isNillable="Yes">
-<name>Patient Care Report Narrative</name>
-<national>No</national>
-<state>Yes</state>
-<definition>The narrative of the patient care report (PCR).</definition>
-<v2Number>E13_01</v2Number>
-<usage>Recommended</usage>
-<notValue>Yes</notValue>
-<pertinentNegative>No</pertinentNegative>
-<v3Comment></v3Comment>
-<v3Changes></v3Changes>
-<restrictions>
-  <constraints>
-    <dataType>string</dataType>
-    <constraint>
-        <constraintTitle>maxLength</constraintTitle>
-      <constraintValue>10000</constraintValue>
-    </constraint>
-    <constraint>
-        <constraintTitle>minLength</constraintTitle>
-      <constraintValue>1</constraintValue>
-    </constraint>
-  </constraints>
-	<notValues>
-		<choice><code>7701003</code><description>Not Recorded</description>		</choice>
-		<choice><code>7701001</code><description>Not Applicable</description>		</choice>
-		<choice><code>7701005</code><description>Not Reporting</description>		</choice>
-	</notValues>
-</restrictions>
-</element></section>
+  <element number="eNarrative.01" minOccurs="0" maxOccurs="1" CorrelationID="" isNillable="Yes" dataType="PCRNarrative"><name>Patient Care Report Narrative</name><refNumber></refNumber><national>No</national><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
+</section>

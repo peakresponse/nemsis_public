@@ -1,0 +1,18 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.11"  minOccurs="0"  maxOccurs="1"  dataTypeName="Year"  isNillable="No">
+<name>Immunization Date</name>
+<national>No</national>
+<state>No</state>
+<definition>The year associated with each immunization type</definition>
+<v2Number>E12_13</v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <Year baseType="integer">
+    <facet name="minInclusive" value="1900"/>
+    <facet name="maxInclusive" value="2050"/>
+  </Year>
+</restrictions>
+</element>

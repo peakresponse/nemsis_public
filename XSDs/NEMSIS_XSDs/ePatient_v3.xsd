@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
-	<xs:include schemaLocation="censustracts.xsd"/>
 	<xs:complexType name="ePatient" id="ePatient.Patient">
 		<xs:sequence>
 			<xs:element name="ePatient.01" type="PatientID" id="ePatient.EMSPatientID" minOccurs="0">
@@ -397,7 +396,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl=2&amp;lvlID=172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
+							<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>

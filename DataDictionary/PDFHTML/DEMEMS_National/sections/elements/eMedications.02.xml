@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eMedications.02"  minOccurs="1"  maxOccurs="1"  dataTypeName="YesNoValues"  isNillable="Yes">
-<name>Medication Administered Prior to this Units EMS Care</name>
+<name>Medication Administered Prior to this Unit's EMS Care</name>
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
@@ -21,7 +21,6 @@
   <NV>
     <NV.NotApplicable><facet name="enumeration" value="7701001" annotation="Not Applicable"/></NV.NotApplicable>
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
-    <NV.NotReporting><facet name="enumeration" value="7701005" annotation="Not Reporting"/></NV.NotReporting>
   </NV>
 </attributes>
 </element>

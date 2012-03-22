@@ -1,0 +1,21 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dAgency.06"  minOccurs="1"  maxOccurs="M"  dataTypeName="ANSICountyCode"  isNillable="No">
+<name>EMS Agency Service Area County(s)</name>
+<national>Yes</national>
+<state>Yes</state>
+<definition>The county(s) within each state for which the agency formally provides service.</definition>
+<v2Number>D01_04</v2Number>
+<usage>Mandatory</usage>
+<performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
+<v3Comment>Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. County codes are based on ISO/ANSI codes.
+													 It is a 5-digit code based on state (2-digit) and county (5-digit). <br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <ANSICountyCode baseType="string">
+    <facet name="length" value="5"/>
+  </ANSICountyCode>
+</restrictions>
+<attributes>
+  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+</attributes>
+</element>

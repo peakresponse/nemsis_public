@@ -74,7 +74,7 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eVitals.02</number>
-										<name>Obtained Prior to this Units EMS Care</name>
+										<name>Obtained Prior to this Unit's EMS Care</name>
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Indicates that the information which is documented was obtained prior to the documenting EMS units care.</definition>
@@ -329,15 +329,6 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="eVitals.HeartRateGroup" id="eVitals.HeartRateGroup">
-							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of patient's heart rate.</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
 									<xs:element name="eVitals.09" type="MAP" id="eVitals.MeanArterialPressure" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
@@ -356,6 +347,15 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eVitals.HeartRateGroup" id="eVitals.HeartRateGroup">
+							<xs:annotation>
+								<xs:documentation>Group Tag to hold the details of patient's heart rate.</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
 									<xs:element name="eVitals.10" nillable="true" id="eVitals.HeartRate">
 										<xs:annotation>
 											<xs:documentation>
@@ -1311,7 +1311,7 @@
 			<xs:totalDigits value="3"/>
 			<xs:fractionDigits value="1"/>
 			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="50.0"/>
+			<xs:maxInclusive value="50"/>
 		</xs:restriction>
 		<!--CriticalRhythm-->
 	</xs:simpleType>
@@ -1581,7 +1581,7 @@
 			<xs:documentation>The patient's mean arterial pressure.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:minExclusive value="0"/>
+			<xs:minInclusive value="1"/>
 			<xs:maxInclusive value="500"/>
 		</xs:restriction>
 		<!--OK-->

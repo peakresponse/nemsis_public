@@ -6,7 +6,7 @@
   <!--
   function changeFrames(section)
   {        
-  var lf = 'sections/'+section+'/element-frame.html';
+  var lf = 'sections/elements/'+section+'-frame.html';
   var df = 'sections/'+section+'.002.xml';
   parent.listFrame.location=lf;
   parent.detailFrame.location=df;        
@@ -24,7 +24,7 @@
 <body>
   <div class="pageHeader1">
     <div class="p4" style="color:#FFFFFF;position:absolute;top:10%;">
-      &nbsp;&nbsp;NEMSIS Data Dictionary<br/>&nbsp;&nbsp;Version&nbsp;3.2.0
+      &nbsp;&nbsp;NEMSIS Data Dictionary<br/>&nbsp;&nbsp;Version&nbsp;3.2.1
     </div>
   </div>
   <div class="spacer5">&nbsp;</div>
@@ -32,24 +32,20 @@
     &nbsp;&nbsp;<a href="overview.html" target="detailFrame">Overview &amp; Summary</a>
   </div>
   <div class="p2">
-    &nbsp;&nbsp;<a href="samplePage.html" target="detailFrame">Sample Element Page</a>
+    &nbsp;&nbsp;<a href="sample.html" target="detailFrame">Sample Element Page</a>
   </div>
   <div style="font-size:10px">&nbsp;</div>
   <div class="p3">
-    &nbsp;&nbsp;DEM & EMS Dataset Grouping
+    &nbsp;&nbsp;Dataset Grouping
   </div>
   <div class="p2">
-    &nbsp;&nbsp;<a href="extra/DEMDataSet_v3.xml" target="detailFrame">DEM Dataset</a>
+    &nbsp;&nbsp;<a href="sections/DEMDataSet_v3.xml" target="detailFrame">DEMDataSet</a>
   </div>
   <div class="p2">
-    &nbsp;&nbsp;<a href="extra/EMSDataSet_Header_v3.xml" target="detailFrame">EMS Dataset Header</a></span>
-  </div>
-  <div class="p2">
-    &nbsp;&nbsp;<a href="extra/EMSDataSet_PCR_v3.xml" target="detailFrame">EMS Dataset Patient Care Report</a>
+    &nbsp;&nbsp;<a href="sections/EMSDataSet_v3.xml" target="detailFrame">EMSDataSet</a>
   </div>
 <div style="font-size:10px">&nbsp;</div>
-<div class="p3">&nbsp;&nbsp;Demographic Sections</div>
-  <div class="p2">
+<div class="p3">&nbsp;&nbsp;DEMDataSet Sections</div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dAgency');">dAgency</a>
   </div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dConfiguration');">dConfiguration</a>
@@ -72,12 +68,10 @@
   </div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('dVehicle');">dVehicle</a>
   </div><div style="font-size:10px">&nbsp;</div>
-    <div class="p3">&nbsp;&nbsp;EMS Sections</div>  <div class="p2">
+<div class="p3">&nbsp;&nbsp;EMSDataSet Sections</div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eAirway');">eAirway</a>
   </div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eArrest');">eArrest</a>
-  </div>  <div class="p2">
-&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eCAD');">eCAD</a>
   </div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eCrew');">eCrew</a>
   </div>  <div class="p2">
@@ -98,8 +92,6 @@
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eInjury');">eInjury</a>
   </div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eLabs');">eLabs</a>
-  </div>  <div class="p2">
-&nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eMedDevice');">eMedDevice</a>
   </div>  <div class="p2">
 &nbsp;&nbsp;<a href="Javascript: void(0);" onclick="changeFrames('eMedications');">eMedications</a>
   </div>  <div class="p2">

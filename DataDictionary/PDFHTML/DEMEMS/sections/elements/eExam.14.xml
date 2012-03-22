@@ -1,0 +1,45 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eExam.14"  minOccurs="0"  maxOccurs="M"  dataTypeName="BackAndSpineAssessment"  isNillable="No">
+<name>Back and Spine Assessment</name>
+<national>No</national>
+<state>No</state>
+<definition>The assessment findings associated with the patient's spine (Cervical, Thoracic, Lumbar, and Sacral) and back exam.</definition>
+<v2Number>E16_14</v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <BackAndSpineAssessment baseType="string">
+    <facet name="enumeration" value="3514001" annotation="Abrasion"/>
+    <facet name="enumeration" value="3514003" annotation="Avulsion"/>
+    <facet name="enumeration" value="3514005" annotation="Bleeding Controlled"/>
+    <facet name="enumeration" value="3514007" annotation="Bleeding Uncontrolled"/>
+    <facet name="enumeration" value="3514009" annotation="Burn-Blistering"/>
+    <facet name="enumeration" value="3514011" annotation="Burn-Charring"/>
+    <facet name="enumeration" value="3514013" annotation="Burn-Redness"/>
+    <facet name="enumeration" value="3514015" annotation="Burn-White/Waxy"/>
+    <facet name="enumeration" value="3514017" annotation="Deformity"/>
+    <facet name="enumeration" value="3514019" annotation="Foreign Body"/>
+    <facet name="enumeration" value="3514021" annotation="Gunshot Wound-Entry"/>
+    <facet name="enumeration" value="3514023" annotation="Gunshot Wound-Exit"/>
+    <facet name="enumeration" value="3514025" annotation="Laceration"/>
+    <facet name="enumeration" value="3514027" annotation="Normal"/>
+    <facet name="enumeration" value="3514029" annotation="Not Done"/>
+    <facet name="enumeration" value="3514031" annotation="Pain"/>
+    <facet name="enumeration" value="3514033" annotation="Pain with Range of Motion"/>
+    <facet name="enumeration" value="3514035" annotation="Puncture/Stab Wound"/>
+    <facet name="enumeration" value="3514037" annotation="Swelling/Bruising/Contusion with Pain"/>
+    <facet name="enumeration" value="3514039" annotation="Swelling/Bruising/Contusion without Pain"/>
+    <facet name="enumeration" value="3514041" annotation="Tenderness Costovertebral Angle"/>
+    <facet name="enumeration" value="3514043" annotation="Tenderness Midline Spinous Process"/>
+    <facet name="enumeration" value="3514045" annotation="Tenderness Paraspinous"/>
+  </BackAndSpineAssessment>
+</restrictions>
+<attributes>
+  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+  <PN>
+    <PN.ExamFindingNotPresent><facet name="enumeration" value="8801005" annotation="Exam Finding Not Present"/></PN.ExamFindingNotPresent>
+  </PN>
+</attributes>
+</element>

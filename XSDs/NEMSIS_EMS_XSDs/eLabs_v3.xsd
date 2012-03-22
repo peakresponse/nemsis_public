@@ -56,7 +56,7 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eLabs.02</number>
-										<name>Study/Result Prior to this Units EMS Care</name>
+										<name>Study/Result Prior to this Unit's EMS Care</name>
 										<national>No</national>
 										<state>No</state>
 										<definition>Indicates that the laboratory result occurred prior to this EMS units care.</definition>
@@ -69,7 +69,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eLabs.LabResultGroup" id="eLabs.LabValue" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eLabs.LabResultGroup" id="eLabs.LabResultGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold the type of laboratory value and its result.</xs:documentation>
 							</xs:annotation>
@@ -171,7 +171,7 @@
 																<name>Imaging Study File or Waveform Graphic Type</name>
 																<national>No</national>
 																<state>No</state>
-																<definition>The type of file or waveform the imaging file is stored in.</definition>
+																<definition>The description of the image study file or waveform graphic stored in Imaging Study File or Waveform Graphic (eLabs.08).</definition>
 																<v2Number/>
 																<usage>Optional</usage>
 																<performanceMeasuresGroup>
@@ -179,7 +179,28 @@
 																	<performanceMeasure>Cardiac Arrest</performanceMeasure>
 																	<performanceMeasure>STEMI</performanceMeasure>
 																</performanceMeasuresGroup>
-																<comment>Added to better document patient care.  Added to allow the type of imaging file uploaded to be identified.</comment>
+																<comment>The description is defined as the extension of the file type.  
+																	Examples of file name extensions include “doc”, “jpeg”, “tiff”, etc.  For a list of additional extensions reference the following website(s):
+&lt;br/>
+&lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
+&lt;table>
+&lt;tr>&lt;td>3D Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/3d_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Raster Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/raster_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Vector Image formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/vector_image&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Video formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/video&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/audio&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>Comparison of formats:&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Image: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Audio: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Audio_file_format&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Container: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
+&lt;tr>&lt;td>A general list of image formats: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Image_file_formats&lt;/span>&lt;/td>&lt;/tr> 
+&lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
+&lt;/table>
+&lt;/td>&lt;/tr>&lt;/table>														
+																</comment>
 																<v3Changes/>
 															</nemsisTacDoc>
 														</xs:documentation>

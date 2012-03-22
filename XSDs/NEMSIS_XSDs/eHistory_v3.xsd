@@ -177,7 +177,7 @@
 									<xs:union memberTypes="PN.NoKnownDrugAllergy PN.Refused PN.UnableToComplete"/>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CodeType" use="required" type="CodeType"/>
+							<xs:attribute name="CodeType" use="optional" type="CodeType"/>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
@@ -195,14 +195,20 @@
 							<v2Number>E12_09</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment/>
+							<comment>
+Data Element Comment Section:
+&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>SNOMEDCT 
+&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html 
+&lt;br/>Product: Product - UMLS Metathesaurus
+							</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="EnvironmentalFoodAllergies">
+						<xs:extension base="snomed">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
@@ -284,10 +290,10 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eHistory.10</number>
-										<name>The Patient's Type of Immunization.</name>
+										<name>The Patient's Type of Immunization</name>
 										<national>No</national>
 										<state>No</state>
-										<definition/>
+										<definition>The immunization type of the patient.</definition>
 										<v2Number>E12_12</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasure/>
@@ -971,53 +977,6 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:fractionDigits value="2"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="EnvironmentalFoodAllergies">
-		<xs:annotation>
-			<xs:documentation>The patient's known allergies to food or environmental agents.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="3107001">
-				<xs:annotation>
-					<xs:documentation>Chemical</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3107003">
-				<xs:annotation>
-					<xs:documentation>Dander/Dust/Mold/Pollen</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3107005">
-				<xs:annotation>
-					<xs:documentation>Food Allergy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3107007">
-				<xs:annotation>
-					<xs:documentation>Insect Sting</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3107009">
-				<xs:annotation>
-					<xs:documentation>Latex</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3107011">
-				<xs:annotation>
-					<xs:documentation>None</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3107013">
-				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3107015">
-				<xs:annotation>
-					<xs:documentation>Plant</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="MedicationAllergies">
 		<xs:annotation>
 			<xs:documentation>MedicationAllergies</xs:documentation>
@@ -1081,6 +1040,11 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:enumeration value="3118009">
 				<xs:annotation>
 					<xs:documentation>Yes, Confirmed Less Than 12 Weeks</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3118011">
+				<xs:annotation>
+					<xs:documentation>Yes, Weeks Unknown</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -1,0 +1,29 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="ePayment.47"  minOccurs="0"  maxOccurs="M"  dataTypeName="AmbulanceConditionsIndicator"  isNillable="No">
+<name>Ambulance Conditions Indicator</name>
+<national>No</national>
+<state>No</state>
+<definition>Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment>Added to improve billing documentation and justification.</v3Comment>
+<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
+<restrictions>
+  <AmbulanceConditionsIndicator baseType="string">
+    <facet name="enumeration" value="1" annotation="Patient was admitted to hospital"/>
+    <facet name="enumeration" value="2" annotation="Patient was bed confined before the ambulance service"/>
+    <facet name="enumeration" value="3" annotation="Patient was bed confined after the ambulance service"/>
+    <facet name="enumeration" value="4" annotation="Patient was moved by stretcher"/>
+    <facet name="enumeration" value="5" annotation="Patient was unconscious or in shock"/>
+    <facet name="enumeration" value="6" annotation="Patient was transported in an emergency situation"/>
+    <facet name="enumeration" value="7" annotation="Patient had to be physically restrained"/>
+    <facet name="enumeration" value="8" annotation="Patient had visible hemorrhaging"/>
+    <facet name="enumeration" value="9" annotation="Ambulance service was medically necessary"/>
+    <facet name="enumeration" value="10" annotation="Transportation was to the nearest facility"/>
+  </AmbulanceConditionsIndicator>
+</restrictions>
+<attributes>
+  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+</attributes>
+</element>

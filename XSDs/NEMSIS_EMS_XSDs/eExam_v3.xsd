@@ -77,7 +77,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eExam.AssessmentGroup" id="eExam.GroupAssessment" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eExam.AssessmentGroup" id="eExam.AssessmentGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold assessment information </xs:documentation>
 				</xs:annotation>
@@ -316,7 +316,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.AbdomenGroup" id="eExam.AssessmentAbdomen" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eExam.AbdomenGroup" id="eExam.AbdomenGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold abdomen assessment findings information </xs:documentation>
 							</xs:annotation>
@@ -404,7 +404,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.SpineGroup" id="eExam.AssessmentSpine" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eExam.SpineGroup" id="eExam.SpineGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold spine assessment findings information </xs:documentation>
 							</xs:annotation>
@@ -462,7 +462,7 @@
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.ExtremityGroup" id="eExam.AssessmentExtremities" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eExam.ExtremityGroup" id="eExam.ExtremityGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold extremity assessment findings information </xs:documentation>
 							</xs:annotation>
@@ -520,7 +520,7 @@
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.EyeGroup" id="eExam.AssessmentEye" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eExam.EyeGroup" id="eExam.EyeGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold eye assessment findings information </xs:documentation>
 							</xs:annotation>
@@ -2777,7 +2777,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3504029">
 				<xs:annotation>
-					<xs:documentation>Red (Erythmatous)</xs:documentation>
+					<xs:documentation>Red (Erythematous)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3504031">

@@ -1,0 +1,17 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="dFacility.08"  minOccurs="0"  maxOccurs="1"  dataTypeName="CityGnisCode"  isNillable="No">
+<name>Facility City</name>
+<national>No</national>
+<state>No</state>
+<definition>The city where the facility is located.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment>Based on GNIS Civil Code or Populated Place code. The information contained within this element could be used to populate the address information within eScene.17 (Incident City) and/or eDisposition.04 (Destination City) as appropriate.
+										<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Changes></v3Changes>
+<restrictions>
+  <CityGnisCode baseType="positiveInteger">
+  </CityGnisCode>
+</restrictions>
+</element>

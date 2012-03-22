@@ -1,0 +1,18 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eScene.23"  minOccurs="0"  maxOccurs="1"  dataTypeName="CensusTracts"  isNillable="No">
+<name>Incident Census Tract</name>
+<national>No</national>
+<state>No</state>
+<definition>The census tract in which the incident occurred.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
+<v3Comment>Census Tract Data Website (files and descriptions): <a>http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html</a></v3Comment>
+<v3Changes>Added to improve the ability to use census and other demographic information within EMS research.</v3Changes>
+<restrictions>
+  <CensusTracts baseType="string">
+    <facet name="maxLength" value="15"/>
+    <facet name="minLength" value="1"/>
+  </CensusTracts>
+</restrictions>
+</element>

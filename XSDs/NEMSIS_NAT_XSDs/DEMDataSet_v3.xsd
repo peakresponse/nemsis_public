@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	
+
 	<xs:include schemaLocation="dAgency_v3.xsd"/>
 	<xs:include schemaLocation="dConfiguration_v3.xsd"/>
+	
+	
 	<xs:element name="DEMDataSet">
 		<xs:annotation>
 			<xs:documentation>Root Tag For Demographic DataSet</xs:documentation>
@@ -26,7 +28,7 @@
 								</xs:annotation>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="timeStamp" type="xs:date" use="required"/>
+						<xs:attribute name="timeStamp" type="DateTimeType" use="required"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

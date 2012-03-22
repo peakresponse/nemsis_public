@@ -11,7 +11,7 @@
 	<xs:include schemaLocation="eTimes_v3.xsd"/>
 	<xs:complexType name="eCAD" id="eCAD">
 		<xs:sequence>
-			<xs:element minOccurs="0" name="eCad.01" type="EMSAgencyStateID" id="eCad.dAgency.EMSAgencyUniqueStateID">
+			<xs:element name="eCad.01" type="EMSAgencyStateID" id="eCad.dAgency.EMSAgencyUniqueStateID" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -38,7 +38,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.02" id="eCad.dAgency.EMSAgencyNumber">
+			<xs:element name="eCad.02" id="eCad.dAgency.EMSAgencyNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -66,12 +66,11 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="EMSAgencyNumber">
-						</xs:extension>
+						<xs:extension base="EMSAgencyNumber"/>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.03" id="eCad.dAgency.EMSAgencyName">
+			<xs:element name="eCad.03" id="eCad.dAgency.EMSAgencyName" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -103,7 +102,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.04" id="eCad.dAgency.EMSAgencyState">
+			<xs:element name="eCad.04" id="eCad.dAgency.EMSAgencyState" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -131,12 +130,11 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="ANSIStateCode">
-						</xs:extension>
+						<xs:extension base="ANSIStateCode"/>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.05" id="eCad.dConfiguration.DispatchCenterCADNameorID" maxOccurs="unbounded">
+			<xs:element name="eCad.05" id="eCad.dConfiguration.DispatchCenterCADNameorID" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -161,10 +159,8 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
-				
-				
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.06" type="PatientCareReportNumber" id="eCad.eRecord.PatientCareReportNumber">
+			<xs:element name="eCad.06" type="PatientCareReportNumber" id="eCad.eRecord.PatientCareReportNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -191,7 +187,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eCAD.AgencyGroup" id="eCad.eResponse.AgencyGroup">
+			<xs:element name="eCad.AgencyGroup" id="eCad.eResponse.AgencyGroup">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold EMS agency number and name</xs:documentation>
 				</xs:annotation>
@@ -224,7 +220,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.08" id="eCad.eResponse.EMSAgencyName">
+						<xs:element name="eCad.08" id="eCad.eResponse.EMSAgencyName" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -250,7 +246,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eCad.09" id="eCad.eResponse.IncidentNumber" nillable="true">
+			<xs:element name="eCad.09" nillable="true" id="eCad.eResponse.IncidentNumber">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -275,12 +271,12 @@
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
-							</xs:attribute>						
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.10" id="eCad.eResponse.EMSResponseNumber">
+			<xs:element name="eCad.10" id="eCad.eResponse.EMSResponseNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -304,13 +300,13 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCAD.ServiceGroup" id="eCad.eResponse.ServiceGroup">
+			<xs:element name="eCad.ServiceGroup" id="eCad.eResponse.ServiceGroup" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold details about EMS category of service and the stand by reason</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element minOccurs="0" name="eCad.11" type="EMSServiceCat" id="eCad.eResponse.TypeofServiceRequested">
+						<xs:element name="eCad.11" type="EMSServiceCat" id="eCad.eResponse.TypeofServiceRequested" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -337,7 +333,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.12" type="EMSStandByReason" id="eCad.eResponse.StandbyPurpose">
+						<xs:element name="eCad.12" type="EMSStandByReason" id="eCad.eResponse.StandbyPurpose" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -359,7 +355,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.13" type="PrimaryRoleOfUnit" id="eCad.eResponse.PrimaryRoleoftheUnit">
+			<xs:element name="eCad.13" type="PrimaryRoleOfUnit" id="eCad.eResponse.PrimaryRoleoftheUnit" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -386,7 +382,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.14" id="eCad.eResponse.TypeofDispatchDelay" maxOccurs="unbounded">
+			<xs:element name="eCad.14" id="eCad.eResponse.TypeofDispatchDelay" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -420,7 +416,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.15" id="eCad.eResponse.TypeofResponseDelay" maxOccurs="unbounded">
+			<xs:element name="eCad.15" id="eCad.eResponse.TypeofResponseDelay" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -454,7 +450,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.16" id="eCad.eResponse.TypeofSceneDelay" maxOccurs="unbounded">
+			<xs:element name="eCad.16" id="eCad.eResponse.TypeofSceneDelay" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -488,7 +484,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.17" id="eCad.eResponse.TypeofTransportDelay" maxOccurs="unbounded">
+			<xs:element name="eCad.17" id="eCad.eResponse.TypeofTransportDelay" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -522,7 +518,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.18" id="eCad.eResponse.TypeofTurnAroundDelay" maxOccurs="unbounded">
+			<xs:element name="eCad.18" id="eCad.eResponse.TypeofTurnAroundDelay" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -550,7 +546,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.19" type="EMSVehicleNumber" id="eCad.eResponse.EMSVehicleUnitNumber">
+			<xs:element name="eCad.19" type="EMSVehicleNumber" id="eCad.eResponse.EMSVehicleUnitNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -569,7 +565,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.20" type="EMSUnitCallSign" id="eCad.eResponse.EMSUnitCallSign">
+			<xs:element name="eCad.20" type="EMSUnitCallSign" id="eCad.eResponse.EMSUnitCallSign" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -587,7 +583,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.21" type="UnitLevelOfCare" id="eCad.eResponse.LevelofCareofThisUnit">
+			<xs:element name="eCad.21" type="UnitLevelOfCare" id="eCad.eResponse.LevelofCareofThisUnit" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -606,7 +602,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.22" type="VehicleDispatchLocation" id="eCad.eResponse.VehicleDispatchLocation">
+			<xs:element name="eCad.22" type="VehicleDispatchLocation" id="eCad.eResponse.VehicleDispatchLocation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -625,7 +621,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.23" type="GPSLocation" id="eCad.eResponse.VehicleDispatchGPSLocation">
+			<xs:element name="eCad.23" type="GPSLocation" id="eCad.eResponse.VehicleDispatchGPSLocation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -646,7 +642,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.24" type="USNG" id="eCad.eResponse.VehicleDispatchUSNationalGridLocation">
+			<xs:element name="eCad.24" type="USNG" id="eCad.eResponse.VehicleDispatchUSNationalGridLocation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -665,7 +661,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.25" type="EMSMileageOdometer" id="eCad.eResponse.BeginningOdometerReadingofRespondingVehicle">
+			<xs:element name="eCad.25" type="EMSMileageOdometer" id="eCad.eResponse.BeginningOdometerReadingofRespondingVehicle" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -684,7 +680,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.26" type="EMSMileageOdometer" id="eCad.eResponse.OnSceneOdometerReadingofRespondingVehicle">
+			<xs:element name="eCad.26" type="EMSMileageOdometer" id="eCad.eResponse.OnSceneOdometerReadingofRespondingVehicle" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -703,7 +699,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.27" type="EMSMileageOdometer" id="eCad.eResponse.PatientDestinationOdometerReadingofRespondingVehicle">
+			<xs:element name="eCad.27" type="EMSMileageOdometer" id="eCad.eResponse.PatientDestinationOdometerReadingofRespondingVehicle" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -722,7 +718,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.28" type="EMSMileageOdometer" id="eCad.eResponse.EndingOdometerReadingofRespondingVehicle">
+			<xs:element name="eCad.28" type="EMSMileageOdometer" id="eCad.eResponse.EndingOdometerReadingofRespondingVehicle" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -741,7 +737,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.29" type="EMSResponseMode" id="eCad.eResponse.ResponseModetoScene">
+			<xs:element name="eCad.29" type="EMSResponseMode" id="eCad.eResponse.ResponseModetoScene" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -768,7 +764,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.30" id="eCad.eResponse.AdditionalResponseModeDescriptors" maxOccurs="unbounded">
+			<xs:element name="eCad.30" id="eCad.eResponse.AdditionalResponseModeDescriptors" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -829,7 +825,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.32" id="eCad.eDispatch.EMDPerformed">
+			<xs:element name="eCad.32" id="eCad.eDispatch.EMDPerformed" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -861,7 +857,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.33" type="EMDCardNumber" id="eCad.eDispatch.EMDCardNumber">
+			<xs:element name="eCad.33" type="EMDCardNumber" id="eCad.eDispatch.EMDCardNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -888,7 +884,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.34" type="ComputerAidedDispatchCADNameorID" id="eCad.eDispatch.ComputerAidedDispatchCADNameorID">
+			<xs:element name="eCad.34" type="ComputerAidedDispatchCADNameorID" id="eCad.eDispatch.ComputerAidedDispatchCADNameorID" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -906,7 +902,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.35" type="DispatchPriority" id="eCad.eDispatch.DispatchPriorityPatientAcuity">
+			<xs:element name="eCad.35" type="DispatchPriority" id="eCad.eDispatch.DispatchPriorityPatientAcuity" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -924,7 +920,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.36" id="eCad.eTimes.PSAPCallDateTime">
+			<xs:element name="eCad.36" id="eCad.eTimes.PSAPCallDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -956,7 +952,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.37" type="DateTimeType" id="eCad.eTimes.DispatchNotifiedDateTime">
+			<xs:element name="eCad.37" type="DateTimeType" id="eCad.eTimes.DispatchNotifiedDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1002,7 +998,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.39" type="DateTimeType" id="eCad.eTimes.DispatchAcknowledgedDateTime">
+			<xs:element name="eCad.39" type="DateTimeType" id="eCad.eTimes.DispatchAcknowledgedDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1021,7 +1017,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.40" id="eCad.eTimes.UnitEnRouteDateTime">
+			<xs:element name="eCad.40" id="eCad.eTimes.UnitEnRouteDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1053,7 +1049,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.41" id="eCad.eTimes.UnitArrivedonSceneDateTime">
+			<xs:element name="eCad.41" id="eCad.eTimes.UnitArrivedonSceneDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1085,7 +1081,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.42" id="eCad.eTimes.ArrivedatPatientDateTime">
+			<xs:element name="eCad.42" id="eCad.eTimes.ArrivedatPatientDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1117,7 +1113,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.43" id="eCad.eTimes.TransferofEMSPatientCareDateTime">
+			<xs:element name="eCad.43" id="eCad.eTimes.TransferofEMSPatientCareDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1148,7 +1144,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.44" id="eCad.eTimes.UnitLeftSceneDateTime">
+			<xs:element name="eCad.44" id="eCad.eTimes.UnitLeftSceneDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1180,7 +1176,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.45" type="DateTimeType" id="eCad.eTimes.ArrivalatDestinationLandingArea">
+			<xs:element name="eCad.45" type="DateTimeType" id="eCad.eTimes.ArrivalatDestinationLandingArea" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1199,7 +1195,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.46" id="eCad.eTimes.PatientArrivedatDestinationDateTime">
+			<xs:element name="eCad.46" id="eCad.eTimes.PatientArrivedatDestinationDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1231,7 +1227,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.47" id="eCad.eTimes.DestinationPatientTransferofCareDateTime">
+			<xs:element name="eCad.47" id="eCad.eTimes.DestinationPatientTransferofCareDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1263,7 +1259,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.48" type="DateTimeType" id="eCad.eTimes.UnitBackinServiceDateTime">
+			<xs:element name="eCad.48" type="DateTimeType" id="eCad.eTimes.UnitBackinServiceDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1284,7 +1280,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.49" type="DateTimeType" id="eCad.eTimes.UnitCanceledDateTime">
+			<xs:element name="eCad.49" type="DateTimeType" id="eCad.eTimes.UnitCanceledDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1305,7 +1301,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.50" type="DateTimeType" id="eCad.eTimes.UnitBackatHomeLocationDateTime">
+			<xs:element name="eCad.50" type="DateTimeType" id="eCad.eTimes.UnitBackatHomeLocationDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1326,7 +1322,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.51" type="DateTimeType" id="eCad.eTimes.EMSCallCompletedDateTime">
+			<xs:element name="eCad.51" type="DateTimeType" id="eCad.eTimes.EMSCallCompletedDateTime" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1347,7 +1343,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.52" type="PatientID" id="eCad.ePatient.EMSPatientID">
+			<xs:element name="eCad.52" type="PatientID" id="eCad.ePatient.EMSPatientID" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1366,13 +1362,13 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCAD.PatientNameGroup" id="eCad.ePatient.PatientNameGroup">
+			<xs:element name="eCad.PatientNameGroup" id="eCad.ePatient.PatientNameGroup" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold patient's name</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element minOccurs="0" name="eCad.53" id="eCad.ePatient.LastName">
+						<xs:element name="eCad.53" id="eCad.ePatient.LastName" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1396,7 +1392,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.54" id="eCad.ePatient.FirstName">
+						<xs:element name="eCad.54" id="eCad.ePatient.FirstName" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1420,7 +1416,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.55" type="PersonMiddleName" id="eCad.ePatient.MiddleInitialName">
+						<xs:element name="eCad.55" type="PersonMiddleName" id="eCad.ePatient.MiddleInitialName" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1442,7 +1438,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.56" id="eCad.ePatient.PatientsHomeAddress">
+			<xs:element name="eCad.56" id="eCad.ePatient.PatientsHomeAddress" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1468,7 +1464,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.57" type="CityGnisCode" id="eCad.ePatient.PatientsHomeCity">
+			<xs:element name="eCad.57" type="CityGnisCode" id="eCad.ePatient.PatientsHomeCity" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1487,7 +1483,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.58" id="eCad.ePatient.PatientsHomeCounty">
+			<xs:element name="eCad.58" id="eCad.ePatient.PatientsHomeCounty" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1519,7 +1515,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.59" id="eCad.ePatient.PatientsHomeState">
+			<xs:element name="eCad.59" id="eCad.ePatient.PatientsHomeState" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1551,7 +1547,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.60" id="eCad.ePatient.PatientsHomeZIPCode">
+			<xs:element name="eCad.60" id="eCad.ePatient.PatientsHomeZIPCode" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1583,7 +1579,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.61" type="ANSICountryCode" id="eCad.ePatient.PatientsHomeCountry">
+			<xs:element name="eCad.61" type="ANSICountryCode" id="eCad.ePatient.PatientsHomeCountry" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1602,7 +1598,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.62" type="CensusTracts" id="eCad.ePatient.PatientHomeCensusTract">
+			<xs:element name="eCad.62" type="CensusTracts" id="eCad.ePatient.PatientHomeCensusTract" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1629,7 +1625,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.63" type="SocialSecurityNumber" id="eCad.ePatient.SocialSecurityNumber">
+			<xs:element name="eCad.63" type="SocialSecurityNumber" id="eCad.ePatient.SocialSecurityNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1648,7 +1644,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.64" id="eCad.ePatient.Gender">
+			<xs:element name="eCad.64" id="eCad.ePatient.Gender" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1680,7 +1676,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.65" id="eCad.ePatient.Race" maxOccurs="unbounded">
+			<xs:element name="eCad.65" id="eCad.ePatient.Race" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1701,7 +1697,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl=2&amp;lvlID=172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
+							<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
 							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -1714,13 +1710,13 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCAD.AgeGroup" id="eCad.ePatient.AgeGroup">
+			<xs:element name="eCad.AgeGroup" id="eCad.ePatient.AgeGroup" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold patient's age information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element minOccurs="0" name="eCad.66" id="eCad.ePatient.Age">
+						<xs:element name="eCad.66" id="eCad.ePatient.Age" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1752,7 +1748,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.67" id="eCad.ePatient.AgeUnits">
+						<xs:element name="eCad.67" id="eCad.ePatient.AgeUnits" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1787,31 +1783,31 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.68" id="eCad.ePatient.DateofBirth">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eCad.68</number>
-							<refNumber>ePatient.17</refNumber>
-							<name>Date of Birth</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The patient's date of birth</definition>
-							<v2Number>E06_16</v2Number>
-							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="DateOfBirth"/>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
-			<xs:element minOccurs="0" name="eCad.69" id="eCad.ePatient.PatientsPhoneNumber" maxOccurs="unbounded">
+						<xs:element name="eCad.68" id="eCad.ePatient.DateofBirth" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eCad.68</number>
+										<refNumber>ePatient.17</refNumber>
+										<name>Date of Birth</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The patient's date of birth</definition>
+										<v2Number>E06_16</v2Number>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="DateOfBirth"/>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+			<xs:element name="eCad.69" id="eCad.ePatient.PatientsPhoneNumber" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1838,7 +1834,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.70" id="eCad.eScene.FirstEMSUnitonScene">
+			<xs:element name="eCad.70" id="eCad.eScene.FirstEMSUnitonScene" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1861,13 +1857,13 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCAD.ResponderGroup" id="eCad.eScene.ResponderGroup" maxOccurs="unbounded">
+			<xs:element name="eCad.ResponderGroup" id="eCad.eScene.ResponderGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info from all responders to the scene.</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element minOccurs="0" name="eCad.71" type="OtherEMSAgenciesAtScene" id="eCad.eScene.OtherEMSorPublicSafetyAgenciesatScene">
+						<xs:element name="eCad.71" type="OtherEMSAgenciesAtScene" id="eCad.eScene.OtherEMSorPublicSafetyAgenciesatScene" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1886,7 +1882,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.72" type="EMSAgencyID" id="eCad.eScene.OtherPublicSafetyorEMSAgencyIDNumber">
+						<xs:element name="eCad.72" type="EMSAgencyID" id="eCad.eScene.OtherPublicSafetyorEMSAgencyIDNumber" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1905,7 +1901,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.73" type="OtherServicesAtScene" id="eCad.eScene.TypeofOtherServiceatScene">
+						<xs:element name="eCad.73" type="OtherServicesAtScene" id="eCad.eScene.TypeofOtherServiceatScene" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1928,7 +1924,7 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.74" type="DateTimeType" id="eCad.eScene.DateTimeInitialResponderArrivedonScene">
+			<xs:element name="eCad.74" type="DateTimeType" id="eCad.eScene.DateTimeInitialResponderArrivedonScene" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1952,7 +1948,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.75" id="eCad.eScene.NumberofPatientsatScene">
+			<xs:element name="eCad.75" id="eCad.eScene.NumberofPatientsatScene" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -1976,7 +1972,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.76" id="eCad.eScene.MassCasualtyIncident">
+			<xs:element name="eCad.76" id="eCad.eScene.MassCasualtyIncident" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2002,7 +1998,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.77" id="eCad.eScene.TriageClassificationforMCIPatient">
+			<xs:element name="eCad.77" id="eCad.eScene.TriageClassificationforMCIPatient" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2034,7 +2030,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.78" id="eCad.eScene.IncidentLocationType">
+			<xs:element name="eCad.78" id="eCad.eScene.IncidentLocationType" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2066,7 +2062,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.79" id="eCad.eScene.IncidentFacilityCode">
+			<xs:element name="eCad.79" id="eCad.eScene.IncidentFacilityCode" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2089,7 +2085,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.80" type="GPSLocation" id="eCad.eScene.SceneGPSLocation">
+			<xs:element name="eCad.80" type="GPSLocation" id="eCad.eScene.SceneGPSLocation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2116,7 +2112,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.81" type="USNG" id="eCad.eScene.SceneUSNationalGridCoordinates">
+			<xs:element name="eCad.81" type="USNG" id="eCad.eScene.SceneUSNationalGridCoordinates" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2135,7 +2131,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.82" type="IncidentFacilityName" id="eCad.eScene.IncidentFacilityorLocationName">
+			<xs:element name="eCad.82" type="IncidentFacilityName" id="eCad.eScene.IncidentFacilityorLocationName" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2154,7 +2150,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.83" id="eCad.eScene.MilePostOrMajorRoadway">
+			<xs:element name="eCad.83" id="eCad.eScene.MilePostOrMajorRoadway" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2178,7 +2174,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.84" id="eCad.eScene.IncidentStreetAddress">
+			<xs:element name="eCad.84" id="eCad.eScene.IncidentStreetAddress" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2204,7 +2200,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.85" id="eCad.eScene.IncidentApartmentSuiteorRoom">
+			<xs:element name="eCad.85" id="eCad.eScene.IncidentApartmentSuiteorRoom" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2228,7 +2224,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.86" id="eCad.eScene.IncidentCity">
+			<xs:element name="eCad.86" id="eCad.eScene.IncidentCity" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2252,7 +2248,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.87" id="eCad.eScene.IncidentState">
+			<xs:element name="eCad.87" id="eCad.eScene.IncidentState" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2284,7 +2280,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.88" id="eCad.eScene.IncidentZIPCode">
+			<xs:element name="eCad.88" id="eCad.eScene.IncidentZIPCode" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2316,7 +2312,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.89" id="eCad.eScene.SceneCrossStreetorDirections">
+			<xs:element name="eCad.89" id="eCad.eScene.SceneCrossStreetorDirections" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2340,7 +2336,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.90" id="eCad.eScene.IncidentCounty">
+			<xs:element name="eCad.90" id="eCad.eScene.IncidentCounty" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2372,7 +2368,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.91" type="ANSICountryCode" id="eCad.eScene.IncidentCountry">
+			<xs:element name="eCad.91" type="ANSICountryCode" id="eCad.eScene.IncidentCountry" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2391,7 +2387,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.92" type="CensusTracts" id="eCad.eScene.IncidentCensusTract">
+			<xs:element name="eCad.92" type="CensusTracts" id="eCad.eScene.IncidentCensusTract" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2418,13 +2414,13 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCAD.DestinationGroup" id="eCad.eDisposition.DestinationGroup">
+			<xs:element name="eCad.DestinationGroup" id="eCad.eDisposition.DestinationGroup" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the Destination and the Disposition details</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element minOccurs="0" name="eCad.93" id="eCad.eDisposition.DestinationTransferredToName">
+						<xs:element name="eCad.93" id="eCad.eDisposition.DestinationTransferredToName" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2455,7 +2451,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.94" id="eCad.eDisposition.DestinationTransferredToCode">
+						<xs:element name="eCad.94" id="eCad.eDisposition.DestinationTransferredToCode" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2486,7 +2482,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.95" id="eCad.eDisposition.DestinationStreetAddress">
+						<xs:element name="eCad.95" id="eCad.eDisposition.DestinationStreetAddress" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2512,7 +2508,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.96" type="CityGnisCode" id="eCad.eDisposition.DestinationCity">
+						<xs:element name="eCad.96" type="CityGnisCode" id="eCad.eDisposition.DestinationCity" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2531,7 +2527,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.97" id="eCad.eDisposition.DestinationState">
+						<xs:element name="eCad.97" id="eCad.eDisposition.DestinationState" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2563,7 +2559,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.98" id="eCad.eDisposition.DestinationCounty">
+						<xs:element name="eCad.98" id="eCad.eDisposition.DestinationCounty" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2595,7 +2591,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.99" id="eCad.eDisposition.DestinationZIPCode">
+						<xs:element name="eCad.99" id="eCad.eDisposition.DestinationZIPCode" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2627,7 +2623,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.100" type="ANSICountryCode" id="eCad.eDisposition.DestinationCountry">
+						<xs:element name="eCad.100" type="ANSICountryCode" id="eCad.eDisposition.DestinationCountry" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2646,7 +2642,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.101" type="GPSLocation" id="eCad.eDisposition.DestinationGPSLocation">
+						<xs:element name="eCad.101" type="GPSLocation" id="eCad.eDisposition.DestinationGPSLocation" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2666,7 +2662,7 @@
 							</xs:annotation>
 							<!--<xs:complexType><xs:attributeGroup ref="GPSLocation"/></xs:complexType>-->
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.102" type="USNG" id="eCad.eDisposition.DispositionLocationUSNationalGridCoordinates">
+						<xs:element name="eCad.102" type="USNG" id="eCad.eDisposition.DispositionLocationUSNationalGridCoordinates" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2688,7 +2684,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.103" id="eCad.eDisposition.NumberofPatientsTransportedinthisEMSUnit">
+			<xs:element name="eCad.103" id="eCad.eDisposition.NumberofPatientsTransportedinthisEMSUnit" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2712,7 +2708,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.104" id="eCad.eDisposition.EMSTransportMethod">
+			<xs:element name="eCad.104" id="eCad.eDisposition.EMSTransportMethod" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2744,7 +2740,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.105" id="eCad.eDisposition.TransportModefromScene">
+			<xs:element name="eCad.105" id="eCad.eDisposition.TransportModefromScene" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2776,7 +2772,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.106" id="eCad.eDisposition.AdditionalTransportModeDescriptors" maxOccurs="unbounded">
+			<xs:element name="eCad.106" id="eCad.eDisposition.AdditionalTransportModeDescriptors" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2802,7 +2798,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.107" id="eCad.eDisposition.TypeofDestination">
+			<xs:element name="eCad.107" id="eCad.eDisposition.TypeofDestination" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -2834,13 +2830,13 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCAD.HospitalTeamActivationGroup" id="eCad.eDisposition.HospitalTeamActivationGroup" maxOccurs="unbounded">
+			<xs:element name="eCad.HospitalTeamActivationGroup" id="eCad.eDisposition.HospitalTeamActivationGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the destination team pre-arrival activation</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element minOccurs="0" name="eCad.108" id="eCad.eDisposition.DestinationTeamPreArrivalActivation">
+						<xs:element name="eCad.108" id="eCad.eDisposition.DestinationTeamPreArrivalActivation" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2869,7 +2865,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element minOccurs="0" name="eCad.109" id="eCad.eDisposition.DestinationPrearrivalActivationDateTime">
+						<xs:element name="eCad.109" id="eCad.eDisposition.DestinationPrearrivalActivationDateTime" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -2904,213 +2900,6 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element minOccurs="0" name="eCad.CustomGroup" id="eCad.CustomGroup">
-				<xs:annotation>
-					<xs:documentation/>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element minOccurs="0" name="eCad.eCustomConfiguration.CustomGroup" id="eCad.eCustomConfiguration.eCustomGroup"  maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>Group Tag to hold custom information</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element minOccurs="0" name="eCad.110" id="eCad.eCustomConfiguration.eCustomDataElementTitle">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.110</number>
-													<refNumber>eCustomConfiguration.01</refNumber>
-													<name>Custom Data Element Title</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment>This is grouped with all data elements in this section and can have multiple instances.</comment>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="CustomTitle">
-													<xs:attribute name="nemsisElement" type="xs:string" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.111" type="CustomDefinition" id="eCad.eCustomConfiguration.eCustomDefinition">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.111</number>
-													<refNumber>eCustomConfiguration.02</refNumber>
-													<name>Custom Definition</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The definition of the custom element and how it should be used.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.112" type="CustomDataType" id="eCad.eCustomConfiguration.eCustomDataType">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.112</number>
-													<refNumber>eCustomConfiguration.03</refNumber>
-													<name>Custom Data Type</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The data type of the custom element.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.113" type="YesNoValues" id="eCad.eCustomConfiguration.eCustomDataElementRecurrence">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.113</number>
-													<refNumber>eCustomConfiguration.04</refNumber>
-													<name>Custom Data Element Recurrence</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>Indication if the data element will accept multiple values.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.114" type="ElementUsage" id="eCad.eCustomConfiguration.eCustomDataElementUsage">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.114</number>
-													<refNumber>eCustomConfiguration.05</refNumber>
-													<name>Custom Data Element Usage</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The Usage (Mandatory, Required, or Optional) for the Custom Data Element.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment>Mandatory = Must be completed and will not accept null values&lt;br/>Required = Must be completed but will accept null values&lt;br/>Optional = Not required but if collected, it cannot be a null value.</comment>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.115" id="eCad.eCustomConfiguration.eCustomDataElementPotentialValues" maxOccurs="unbounded">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.115</number>
-													<refNumber>eCustomConfiguration.06</refNumber>
-													<name>Custom Data Element Potential Values</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="CustomValue">
-													<xs:attribute name="nemsisCode" type="xs:string" use="optional"/>
-													<xs:attribute name="customValueDescription" type="xs:string" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.116" type="CustomResults" id="eCustomConfiguration.eCustomDataElementResult">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.116</number>
-													<refNumber>eCustomResults.01</refNumber>
-													<name>Custom Data Element Result</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The actual value or values chosen (if values listed in custom.05) or result (free text, Date/Time, or number) documented for the Custom Data Element</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.117" type="CustomResults" id="eCad.eCustomConfiguration.eCustomDataElementReference">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.117</number>
-													<refNumber>eCustomResults.02</refNumber>
-													<name>Custom Data Element Reference</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>Refers to the data element being extended by referencing the correlationID attribute in the element eCustomConfiguration.CustomGroup</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-									<xs:element minOccurs="0" name="eCad.118" type="CustomResults" id="eCad.eCustomConfiguration.eCustomCorrelationID">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eCad.118</number>
-													<refNumber>eCustomResults.03</refNumber>
-													<name>Custom Correlation ID</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>Correlation id used to map back to set of other elements in other sections.</definition>
-													<v2Number/>
-													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-									</xs:element>
-								</xs:sequence>
-								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-							</xs:complexType>
-						</xs:element>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-			
-			
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>

@@ -543,6 +543,7 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="DeltaVelocity">
+										<xs:attribute name="DeltaVelocityOrdinal" type="DeltaVelocityOrdinalRanking" use="optional"/>
 										<xs:attribute name="VelocityUnit" type="VelocityUnits" use="optional"/>
 										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 									</xs:extension>
@@ -948,6 +949,14 @@
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="DeltaVelocityOrdinalRanking">
+		<xs:annotation>
+			<xs:documentation>The Automated Collision Notification Delta Velocity (Delta V) force ordinal value. 1 equals first impact, 2 equals second, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EquipmentUsed">

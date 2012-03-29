@@ -567,7 +567,7 @@
     
     <!-- CONSTRAINTS SECTION & PATTERNS --> 
     <xsl:choose>  
-    <xsl:when test="element/restrictions/*/facet/@name!='enumeration'">
+    <xsl:when test="element/restrictions/*/facet/@name!='enumeration' or element/restrictions/*/@baseType='base64Binary'">
     <tr><td style="padding:0 0 5px 0">    
         <table border="0" cellspacing="0" cellpadding="0">
           <tr>
@@ -581,7 +581,7 @@
           </tr>
           <tr><td height="3px;"></td></tr> 
           
-          <xsl:choose><xsl:when test="element/restrictions/*/facet/@name!='pattern'"> 
+          <xsl:choose><xsl:when test="element/restrictions/*/facet/@name!='pattern' or element/restrictions/*/@baseType='base64Binary'"> 
           <tr>
             <td style="padding:0 0 5px 5px">              
               <table cellspacing="0" cellpadding="0" border="0" >

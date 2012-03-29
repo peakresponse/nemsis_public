@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Data Dictionary Version 3.2.1.120321 -->
-<!-- Schematron Version v1.2.1 -->
+<!-- Data Dictionary Version null -->
+<!-- Schematron Version null -->
 <iso:schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:nem="http://www.nemsis.org" queryBinding="xslt2">
     <iso:ns prefix="nem" uri="http://www.nemsis.org"/>
     <iso:ns prefix="xsl" uri="http://www.w3.org/1999/XSL/Transform"/>

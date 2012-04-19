@@ -2,7 +2,6 @@
 <element number="eTimes.07"  minOccurs="1"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="Yes">
 <name>Arrived at Patient Date/Time</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The date/time the responding unit arrived at the patient's side.</definition>
 <v2Number>E05_07</v2Number>
@@ -34,7 +33,6 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

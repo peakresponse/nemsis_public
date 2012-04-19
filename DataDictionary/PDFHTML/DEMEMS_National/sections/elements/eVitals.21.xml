@@ -2,7 +2,6 @@
 <element number="eVitals.21"  minOccurs="1"  maxOccurs="1"  dataTypeName="GlasgowComaScoreMotor"  isNillable="Yes">
 <name>Glasgow Coma Score-Motor</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's Glasgow Coma Score Motor</definition>
 <v2Number>E14_17</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Definitions now based on the National Trauma Data Standard (NTDS).</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <GlasgowComaScoreMotor baseType="string">
     <facet name="enumeration" value="1" annotation="No Motor Response (All Age Groups)"/>
@@ -18,7 +16,7 @@
     <facet name="enumeration" value="3" annotation="Flexion to pain (All Age Groups)"/>
     <facet name="enumeration" value="4" annotation="Withdrawal from pain (All Age Groups)"/>
     <facet name="enumeration" value="5" annotation="Localizing pain (All Age Groups)"/>
-    <facet name="enumeration" value="6" annotation="Obeys commands (&gt;2Years); Appropriate response to stimulation"/>
+    <facet name="enumeration" value="6" annotation="Obeys commands (>2Years); Appropriate response to stimulation"/>
   </GlasgowComaScoreMotor>
 </restrictions>
 <attributes>

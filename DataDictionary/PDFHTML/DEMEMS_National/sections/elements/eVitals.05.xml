@@ -2,7 +2,6 @@
 <element number="eVitals.05"  minOccurs="1"  maxOccurs="M"  dataTypeName="ECGMethod"  isNillable="Yes">
 <name>Method of ECG Interpretation</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The method of ECG interpretation.</definition>
 <v2Number></v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>STEMI</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>"Transmission with no interpretation" may be used by EMS Agency Personnel that are not trained to interpret cardiac rhythms.</v3Comment>
 <v3Changes>Added to better document ECG results.</v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <ECGMethod baseType="string">
     <facet name="enumeration" value="3305001" annotation="Computer Interpretation"/>

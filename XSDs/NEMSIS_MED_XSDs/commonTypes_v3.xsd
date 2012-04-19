@@ -40,7 +40,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="ANSIStateCode">
 		<xs:annotation>
-			<xs:documentation>A list of valid US County ANSI Codes by State</xs:documentation>
+			<xs:documentation>A list of valid ANSI State Codes</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:length value="2"/>

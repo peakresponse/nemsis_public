@@ -2,7 +2,6 @@
 <element number="eOutcome.02"  minOccurs="1"  maxOccurs="1"  dataTypeName="HospitalDisposition"  isNillable="Yes">
 <name>Hospital Disposition</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The known disposition of the patient from the hospital, if admitted.</definition>
 <v2Number>E22_02</v2Number>
@@ -13,7 +12,6 @@
 							<div style="font-size:4px"> </div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
 							<div style="font-size:4px"> </div>Contractor site, Knowledge Trek:  <a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf</a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <HospitalDisposition baseType="string">
     <facet name="enumeration" value="01" annotation="Discharged to home or self care (routine discharge)"/>

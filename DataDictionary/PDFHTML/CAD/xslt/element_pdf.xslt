@@ -404,7 +404,7 @@
                         <td>
                         <xsl:for-each select="element/attributes/NV/*/facet">
                         <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;">
-                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation"/>
+                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation" disable-output-escaping="yes"/>
                         </div>
                         </xsl:for-each> 
                         </td>

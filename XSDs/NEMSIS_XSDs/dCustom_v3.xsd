@@ -9,7 +9,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dCustomConfiguration.01" id="dCustomConfiguration.dCustomDataElementTitle" minOccurs="0">
+						<xs:element name="dCustomConfiguration.01" id="dCustomConfiguration.dCustomDataElementTitle" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -19,22 +19,22 @@
 										<state>No</state>
 										<definition>This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.</definition>
 										<v2Number/>
-										<usage>Optional</usage>
+										<usage>Mandatory</usage>
 										<performanceMeasure/>
 										<comment>This is grouped with all data elements in this section and can have multiple instances.</comment>
 										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-						    <xs:complexType>
+							<xs:complexType>
 								<xs:simpleContent>
-								  <xs:extension base="CustomTitle">
-									<xs:attribute name="nemsisElement" type="xs:string" use="optional"/>
-								  </xs:extension>
-								</xs:simpleContent>                                 
-							  </xs:complexType>    
-					    </xs:element>
-						<xs:element name="dCustomConfiguration.02" type="CustomDefinition" id="dCustomConfiguration.dCustomDefinition" minOccurs="0">
+									<xs:extension base="CustomTitle">
+										<xs:attribute name="nemsisElement" type="xs:string" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="dCustomConfiguration.02" type="CustomDefinition" id="dCustomConfiguration.dCustomDefinition" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -44,7 +44,7 @@
 										<state>No</state>
 										<definition>The definition of the custom element and how it should be used.</definition>
 										<v2Number/>
-										<usage>Optional</usage>
+										<usage>Mandatory</usage>
 										<performanceMeasure/>
 										<comment/>
 										<v3Changes/>
@@ -52,7 +52,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dCustomConfiguration.03" type="CustomDataType" id="dCustomConfiguration.dCustomDataType" minOccurs="0">
+						<xs:element name="dCustomConfiguration.03" type="CustomDataType" id="dCustomConfiguration.dCustomDataType" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -62,7 +62,7 @@
 										<state>No</state>
 										<definition>The data type of the custom element.</definition>
 										<v2Number/>
-										<usage>Optional</usage>
+										<usage>Mandatory</usage>
 										<performanceMeasure/>
 										<comment/>
 										<v3Changes/>
@@ -70,7 +70,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dCustomConfiguration.04" type="YesNoValues" id="dCustomConfiguration.dCustomDataElementRecurrence" minOccurs="0">
+						<xs:element name="dCustomConfiguration.04" type="YesNoValues" id="dCustomConfiguration.dCustomDataElementRecurrence" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -80,7 +80,7 @@
 										<state>No</state>
 										<definition>Indication if the data element will accept multiple values.</definition>
 										<v2Number/>
-										<usage>Optional</usage>
+										<usage>Mandatory</usage>
 										<performanceMeasure/>
 										<comment/>
 										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
@@ -88,7 +88,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dCustomConfiguration.05" type="ElementUsage" id="dCustomConfiguration.dCustomDataElementUsage" minOccurs="0">
+						<xs:element name="dCustomConfiguration.05" type="ElementUsage" id="dCustomConfiguration.dCustomDataElementUsage" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -98,8 +98,8 @@
 										<state>No</state>
 										<definition>The Usage (Mandatory, Required, Recommended, or Optional) for the Custom Data Element.</definition>
 										<v2Number/>
-										<usage>Optional</usage>
-										<performanceMeasure/>										
+										<usage>Mandatory</usage>
+										<performanceMeasure/>
 										<comment>Mandatory = Must be completed and will not accept null values
 										&lt;br/>Required = Must be completed but will accept null values
 										&lt;br/>Recommended = Not required but if collected will accept null values
@@ -128,15 +128,15 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									  <xs:extension base="CustomValue">
+									<xs:extension base="CustomValue">
 										<xs:attribute name="nemsisCode" type="xs:string" use="optional"/>
-										<xs:attribute name="customValueDescription"   type="xs:string" use="optional"/>
+										<xs:attribute name="customValueDescription" type="xs:string" use="optional"/>
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					<xs:attribute name="CustomElementID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -152,7 +152,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dCustomResults.01" type="CustomResults" id="dCustomConfiguration.dCustomDataElementResult" minOccurs="0">
+						<xs:element name="dCustomResults.01" type="CustomResults" id="dCustomConfiguration.dCustomDataElementResult" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -162,24 +162,25 @@
 										<state>No</state>
 										<definition>The actual value or values chosen (if values listed in dCustomConfiguration.06) or result (free text, Date/Time, or number) documented for the Custom Data Element</definition>
 										<v2Number/>
-										<usage>Optional</usage>
+										<usage>Mandatory</usage>
 										<performanceMeasure/>
-										<comment>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</comment>
+										<comment/>
+										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dCustomResults.02" type="CustomResults" id="dCustomConfiguration.dCustomDataElementReference" minOccurs="0">
+						<xs:element name="dCustomResults.02" type="CustomResults" id="dCustomConfiguration.dCustomDataElementReference" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dCustomResults.02</number>
-										<name>Custom Data Element Reference</name>
+										<name>Custom Element ID Referenced</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Refers to the data element being extended by referencing the correlationID attribute in the element dCustomConfiguration.CustomGroup</definition>
+										<definition>References the CustomElementID attribute for eCustomConfiguration.CustomGroup</definition>
 										<v2Number/>
-										<usage>Optional</usage>
+										<usage>Mandatory</usage>
 										<performanceMeasure/>
 										<comment/>
 										<v3Changes/>
@@ -192,10 +193,10 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dCustomResults.03</number>
-										<name>Custom Correlation ID</name>
+										<name>CorrelationID of DemographicReport Element or Group</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Correlation id used to map back to set of other elements in other sections.</definition>
+										<definition>References the CorrelationID attribute of an element or group in the DemographicReport section</definition>
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasure/>

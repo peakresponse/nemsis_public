@@ -2,7 +2,6 @@
 <element number="eProcedures.05"  minOccurs="1"  maxOccurs="1"  dataTypeName="NumberOfProcedureAttempts"  isNillable="Yes">
 <name>Number of Procedure Attempts</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The number of attempts taken to complete a procedure or intervention regardless of success.</definition>
 <v2Number>E19_05</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <NumberOfProcedureAttempts baseType="integer">
     <facet name="minInclusive" value="1"/>

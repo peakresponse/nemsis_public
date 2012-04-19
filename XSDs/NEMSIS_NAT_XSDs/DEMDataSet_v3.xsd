@@ -3,16 +3,13 @@
 
 	<xs:include schemaLocation="dAgency_v3.xsd"/>
 	<xs:include schemaLocation="dConfiguration_v3.xsd"/>
-	
-	
-	
 	<xs:element name="DEMDataSet">
 		<xs:annotation>
 			<xs:documentation>Root Tag For Demographic DataSet</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="DemographicReport" id="DemographicReportGroup" maxOccurs="unbounded">
+				<xs:element name="DemographicReport" maxOccurs="unbounded" id="DemographicReportGroup">
 					<xs:annotation>
 						<xs:documentation>Container Tag to hold each instance of a demographic record</xs:documentation>
 					</xs:annotation>

@@ -2,7 +2,6 @@
 <element number="dConfiguration.03"  minOccurs="1"  maxOccurs="M"  dataTypeName="snomed"  isNillable="Yes">
 <name>Procedures Permitted by the State</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>A list of all of the procedures permitted by the EMS Agency's licensing state.</definition>
 <v2Number></v2Number>
@@ -16,7 +15,6 @@
 										<br/>Product: Product - UMLS Metathesaurus
 										<br/><br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <snomed baseType="integer">
     <facet name="maxInclusive" value="1000000000"/>

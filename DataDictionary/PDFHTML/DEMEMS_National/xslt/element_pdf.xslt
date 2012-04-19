@@ -11,7 +11,6 @@
             
       .pageHeadingElement {font-size:20px;}
   
-      .deprecated {width:80px;font-size:14px;text-align:center;color:white;background: PURPLE no-repeat;}
       .national {width:80px;font-size:14px;text-align:center;color:white;background-color:#E10000;}
       .state    {width:80px;font-size:14px;text-align:center;color:white;background-color:#008000;}
       
@@ -32,10 +31,7 @@
       
       .sectionV3ChangesTitle  {font-size:14px;background:#F0F0F0;color:#004080;padding:2px 0 2px 2px;border:1px solid #004080;}
       .sectionV3ChangesValue  {font-size:12px;}
-
-      .sectionDeprecatedCommentTitle  {font-size:14px;background:#F0F0F0;color:#004080;padding:2px 0 2px 2px;border:1px solid #004080;}
-      .sectionDeprecatedCommentValue  {font-size:12px;}
-            
+      
       .sectionRestrictionsEnumerationCodeTitle        {width:60px;  font-size:12px;font-weight:bold;}
       .sectionRestrictionsEnumerationDescriptionTitle {width:560px; font-size:12px;font-weight:bold;}
       .sectionRestrictionsEnumerationCodeValue        {width:60px;  font-size:12px;}
@@ -80,14 +76,9 @@
             </td>
           </tr>
         </table>
-    </td></tr>  
-    <xsl:choose><xsl:when test="element/deprecated/text()='Yes'">   
-            <tr><td><table><tr width="80px"><td class="deprecated" height="23px" width="40px">Deprecated</td></tr></table></td></tr>
-    </xsl:when></xsl:choose>  
-    
+    </td></tr>     
     <xsl:choose><xsl:when test="element/state/text()='Yes' or element/national/text()='Yes'">
-    <tr>
-      <td style="padding:6px 2px 5px 0;">  
+    <tr><td style="padding:6px 2px 5px 0;">  
         <table border="0" cellspacing="0" cellpadding="0" align="right" >
           <tr>  
             <xsl:choose><xsl:when test="element/state/text()='Yes'">
@@ -689,7 +680,7 @@
                       <xsl:value-of select="@value"/>
                     </td>
                     <td class="sectionRestrictionsEnumerationDescriptionValue">
-                      <xsl:value-of select="@annotation"  disable-output-escaping="yes"/>
+                      <xsl:value-of select="@annotation"/>
                     </td>
                   </tr>
                 </xsl:for-each> 
@@ -727,23 +718,6 @@
           </tr>
           <tr>
             <td class="sectionV3ChangesValue" style="padding:0 0 0 5px"><xsl:copy-of select="element/v3Changes"/></td>
-          </tr>
-        </table>     
-    </td></tr>       
-    </xsl:when>
-    </xsl:choose>
-     
-    <!-- Deprecated Comment SECTION -->
-    <xsl:choose>  
-    <xsl:when test="string-length(element/deprecatedComment) &gt; 0">
-    
-    <tr><td>  
-        <table border="0" cellspacing="0" cellpadding="0" width="675px">
-          <tr>
-            <td width="667px" class="sectionDeprecatedCommentTitle">Deprecated Comment</td>
-          </tr>
-          <tr>
-            <td class="sectionDeprecatedCommentValue" style="padding:0 0 0 5px"><xsl:copy-of select="element/deprecatedComment"/></td>
           </tr>
         </table>     
     </td></tr>       

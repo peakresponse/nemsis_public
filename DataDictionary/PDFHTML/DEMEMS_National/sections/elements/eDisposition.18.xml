@@ -2,7 +2,6 @@
 <element number="eDisposition.18"  minOccurs="1"  maxOccurs="M"  dataTypeName="AdditionalTransportModeDescriptors"  isNillable="Yes">
 <name>Additional Transport Mode Descriptors</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The documentation of transport mode techniques for this EMS response.</definition>
 <v2Number></v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Information now split between eDisposition.17 (Transport Mode from Scene) and eDisposition.18 (Additional Transport Mode Descriptors). Element eDisposition.18  (Additional Transport Mode Descriptors) has been added to document the use of lights and sirens or other descriptive information.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <AdditionalTransportModeDescriptors baseType="string">
     <facet name="enumeration" value="4218001" annotation="Intersection Navigation-Against Normal Light Patterns"/>

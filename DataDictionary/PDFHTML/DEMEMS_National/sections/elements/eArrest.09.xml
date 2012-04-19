@@ -2,7 +2,6 @@
 <element number="eArrest.09"  minOccurs="1"  maxOccurs="M"  dataTypeName="CPRType"  isNillable="Yes">
 <name>Type of CPR Provided</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>Documentation of the type/technique of CPR used by EMS.</definition>
 <v2Number></v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Added to capture special CPR techniques.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <CPRType baseType="string">
     <facet name="enumeration" value="3009001" annotation="Compressions-Continuous"/>

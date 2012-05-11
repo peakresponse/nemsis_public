@@ -2,6 +2,7 @@
 <element number="ePatient.09"  minOccurs="1"  maxOccurs="1"  dataTypeName="ZIP"  isNillable="Yes">
 <name>Patient's Home ZIP Code</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's home ZIP code of residence</definition>
 <v2Number>E06_08</v2Number>
@@ -10,6 +11,7 @@
 <v3Comment>ZIP Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
 <br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ZIP baseType="string">
     <facet name="pattern" value="[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"/>

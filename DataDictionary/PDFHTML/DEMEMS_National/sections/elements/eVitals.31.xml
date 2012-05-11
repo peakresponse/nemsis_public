@@ -2,6 +2,7 @@
 <element number="eVitals.31"  minOccurs="1"  maxOccurs="1"  dataTypeName="ReperfusionChecklist"  isNillable="Yes">
 <name>Reperfusion Checklist</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The results of the patient's Reperfusion Checklist for potential Thrombolysis use.</definition>
 <v2Number>E14_25</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Name changed from Thrombolytic Screen</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ReperfusionChecklist baseType="string">
     <facet name="enumeration" value="3331001" annotation="Definite Contraindications to Thrombolytic Use"/>

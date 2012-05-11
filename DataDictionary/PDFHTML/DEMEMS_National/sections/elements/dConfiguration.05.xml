@@ -2,6 +2,7 @@
 <element number="dConfiguration.05"  minOccurs="1"  maxOccurs="M"  dataTypeName="ProtocolsUsed"  isNillable="Yes">
 <name>Protocols Permitted by the State</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>A list of all of the protocols permitted by the state.</definition>
 <v2Number></v2Number>
@@ -11,6 +12,7 @@
 										<br/><br/>States can add additional protocols to the list but the additional state protocols must map to these uniform codes. <br/><br/>The list is defined by the NASEMSO State Medical Directors.
 										<br/><br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.</v3Comment>
 <v3Changes>Added to better identify states with statewide protocols and define state EMS capability and care.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ProtocolsUsed baseType="string">
     <facet name="enumeration" value="9914001" annotation="Airway"/>

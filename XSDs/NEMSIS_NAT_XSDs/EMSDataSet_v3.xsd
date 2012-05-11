@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+
+	
+	
+		<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:include schemaLocation="dAgency_v3.xsd"/>
 	<xs:include schemaLocation="eRecord_v3.xsd"/>
 	<xs:include schemaLocation="eResponse_v3.xsd"/>
@@ -26,19 +29,19 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Header" maxOccurs="unbounded" id="HeaderGroup">
+				<xs:element name="Header" id="HeaderGroup" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Header for file</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="DemographicGroup"  id="DemographicGroup">
+							<xs:element name="DemographicGroup" id="DemographicGroup">
 								<xs:annotation>
 									<xs:documentation>Demographic information related to this agency</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID2">			
+										<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID2">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
@@ -130,7 +133,7 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="PatientCareReport" maxOccurs="unbounded" id="PatientCareReportGroup">
+							<xs:element name="PatientCareReport" id="PatientCareReportGroup" maxOccurs="unbounded">
 								<xs:annotation>
 									<xs:documentation>Container Tag to hold each instance of a patient care report (PCR)</xs:documentation>
 								</xs:annotation>
@@ -227,6 +230,8 @@
 											</xs:annotation>
 										</xs:element>
 									</xs:sequence>
+									<!--<xs:attribute name="RecordStatus" type="RecordStatus" use="optional"/>
+									<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

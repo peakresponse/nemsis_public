@@ -2,6 +2,7 @@
 <element number="eVitals.16"  minOccurs="1"  maxOccurs="1"  dataTypeName="CO2"  isNillable="Yes">
 <name>Carbon Dioxide (CO2)</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's end-tidal or other CO2 level.</definition>
 <v2Number>E14_13</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CO2 baseType="integer">
     <facet name="minInclusive" value="0"/>

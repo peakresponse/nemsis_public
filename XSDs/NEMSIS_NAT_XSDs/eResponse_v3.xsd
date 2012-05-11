@@ -1012,15 +1012,6 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="EMSUnitCallSign">
-		<xs:annotation>
-			<xs:documentation>The EMS unit number used to dispatch and communicate with the unit.  This may be the same as the EMS Unit/Vehicle Number in many agencies.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="1"></xs:minLength>
-			<xs:maxLength value="50"></xs:maxLength>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="EMSUnitDelayReason">
 		<xs:annotation>
 			<xs:documentation>The response delays, if any, of the unit associated with the patient encounter</xs:documentation>

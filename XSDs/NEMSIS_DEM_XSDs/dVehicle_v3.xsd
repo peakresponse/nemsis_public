@@ -318,15 +318,6 @@
 			<xs:fractionDigits value="1"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="EMSUnitCallSign">
-		<xs:annotation>
-			<xs:documentation>The EMS unit number used to dispatch and communicate with the unit.  This may be the same as the EMS Unit/Vehicle Number in many agencies.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="1"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="NumberofPersonnel">
 		<xs:annotation>
 			<xs:documentation>The number of each personnel level associated with the vehicle crew.</xs:documentation>

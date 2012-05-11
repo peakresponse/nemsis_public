@@ -2,6 +2,7 @@
 <element number="eSituation.07"  minOccurs="1"  maxOccurs="1"  dataTypeName="ComplaintAnatomicLocation"  isNillable="Yes">
 <name>Chief Complaint Anatomic Location</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The primary anatomic location of the chief complaint as identified by EMS personnel</definition>
 <v2Number>E09_11</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ComplaintAnatomicLocation baseType="string">
     <facet name="enumeration" value="2807001" annotation="Abdomen"/>

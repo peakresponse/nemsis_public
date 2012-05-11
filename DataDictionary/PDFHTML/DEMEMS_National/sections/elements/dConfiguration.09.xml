@@ -2,6 +2,7 @@
 <element number="dConfiguration.09"  minOccurs="1"  maxOccurs="M"  dataTypeName="Medication"  isNillable="No">
 <name>EMS Agency Medications</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>A list of all medications the agency has implemented and have available for use.</definition>
 <v2Number>D04_06</v2Number>
@@ -17,6 +18,7 @@ since each EMS Agency Number may have different capabilities.
 <br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
 <br/>Product - RxNorm Full Monthly Release</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <Medication baseType="string">
     <facet name="minLength" value="2"/>

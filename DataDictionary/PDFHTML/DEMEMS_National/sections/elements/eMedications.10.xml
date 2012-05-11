@@ -2,6 +2,7 @@
 <element number="eMedications.10"  minOccurs="1"  maxOccurs="1"  dataTypeName="EMSCaregiverLevel"  isNillable="Yes">
 <name>Role/Type of Person Administering Medication</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The type (level) of EMS or Healthcare Professional Administering the Medication. For medications administered prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
 <v2Number></v2Number>
@@ -10,6 +11,7 @@
 <v3Comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.
 										<br/><br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</v3Comment>
 <v3Changes>Added to better document the type of healthcare professional who administered the medication.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSCaregiverLevel baseType="string">
     <facet name="enumeration" value="9905001" annotation="2009 Advanced Emergency Medical Technician (AEMT)"/>

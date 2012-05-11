@@ -134,6 +134,42 @@
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
+						</xs:element>	
+						<xs:element name="dCustomConfiguration.07" type="NV" id="dCustomConfiguration.eCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>dCustomConfiguration.07</number>
+										<name>Custom Data Element Potential NOT Values (NV)</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>NOT Values (NV) associated with the custom element</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="dCustomConfiguration.08" type="PN" id="dCustomConfiguration.eCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>dCustomConfiguration.08</number>
+										<name>Custom Data Element Potential Pertinent Negative Values (PN)</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>Pertinent Negative Values (PN) associated with the custom element</definition>
+										<v2Number/>
+										<usage>Optional</usage>
+										<performanceMeasure/>
+										<comment/>
+										<v3Changes/>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CustomElementID" type="CorrelationID" use="optional"/>
@@ -152,7 +188,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dCustomResults.01" type="CustomResults" id="dCustomConfiguration.dCustomDataElementResult" minOccurs="1">
+						<xs:element name="dCustomResults.01" id="dCustomConfiguration.dCustomDataElementResult" minOccurs="1" maxOccurs="unbounded" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -169,6 +205,14 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="CustomResults">
+										<xs:attribute name="NV" type="NV" use="optional"/>
+										<xs:attribute name="PN" type="PN" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="dCustomResults.02" type="CustomResults" id="dCustomConfiguration.dCustomDataElementReference" minOccurs="1">
 							<xs:annotation>

@@ -104,7 +104,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="SoftwareCreator">
 		<xs:annotation>
-			<xs:documentation>The Name of the Vendor, Software Manufacturer, or Software Developer</xs:documentation>
+			<xs:documentation>The name of the Vendor, Software Manufacturer, or Software Developer</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"></xs:minLength>
@@ -113,7 +113,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="SoftwareName">
 		<xs:annotation>
-			<xs:documentation>The unique number automatically assigned by the EMS agency for each patient care report(PCR).  This is a unique number to the EMS agency for all of time.</xs:documentation>
+			<xs:documentation>The name of the software used to collect the EMS event</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"></xs:minLength>
@@ -122,7 +122,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="SoftwareVersion">
 		<xs:annotation>
-			<xs:documentation>The unique number automatically assigned by the EMS agency for each patient care report(PCR).  This is a unique number to the EMS agency for all of time.</xs:documentation>
+			<xs:documentation>The version of the software used to collect the EMS event</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"></xs:minLength>

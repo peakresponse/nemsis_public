@@ -2,13 +2,13 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"></xs:include>
 	<xs:complexType name="eMedications">
 		<xs:sequence>
-			<xs:element name="eMedications.MedicationGroup" id="eMedications.eMedications.MedicationGroup" maxOccurs="unbounded">
+			<xs:element name="eMedications.MedicationGroup" id="eMedications.MedicationGroup" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold eMedication information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eMedications.01" nillable="true" id="eMedications.eMedications.DateTimeMedicationAdministered">
+						<xs:element name="eMedications.01" nillable="true" id="eMedications.DateTimeMedicationAdministered">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -68,7 +68,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedications.02" nillable="true" id="eMedications.eMedications.MedicationAdministeredPriortothisUnitsEMSCare">
+						<xs:element name="eMedications.02" nillable="true" id="eMedications.MedicationAdministeredPriortothisUnitsEMSCare">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -104,7 +104,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedications.03" nillable="true" id="eMedications.eMedications.MedicationGiven">
+						<xs:element name="eMedications.03" nillable="true" id="eMedications.MedicationGiven">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -155,13 +155,13 @@ List of medications based on RxNorm (RXCUI) code.
 							</xs:complexType>
 						</xs:element>
 						
-						<xs:element name="eMedications.DosageGroup" id="eMedications.eMedications.DosageGroup">
+						<xs:element name="eMedications.DosageGroup" id="eMedications.DosageGroup">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold info about the medication dosage given to the patient </xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eMedications.05" nillable="true" id="eMedications.eMedications.MedicationDosage">
+									<xs:element name="eMedications.05" nillable="true" id="eMedications.MedicationDosage">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -190,7 +190,7 @@ List of medications based on RxNorm (RXCUI) code.
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eMedications.06" nillable="true" id="eMedications.eMedications.MedicationDosageUnits">
+									<xs:element name="eMedications.06" nillable="true" id="eMedications.MedicationDosageUnits">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -222,7 +222,7 @@ List of medications based on RxNorm (RXCUI) code.
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedications.07" nillable="true" id="eMedications.eMedications.ResponsetoMedication">
+						<xs:element name="eMedications.07" nillable="true" id="eMedications.ResponsetoMedication">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -251,7 +251,7 @@ List of medications based on RxNorm (RXCUI) code.
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedications.08" nillable="true" id="eMedications.eMedications.MedicationComplication" maxOccurs="unbounded">
+						<xs:element name="eMedications.08" nillable="true" id="eMedications.MedicationComplication" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -282,7 +282,7 @@ List of medications based on RxNorm (RXCUI) code.
 							</xs:complexType>
 						</xs:element>
 						
-						<xs:element name="eMedications.10" nillable="true" id="eMedications.eMedications.EMSorHealthcareProfessionalTypeAdministeringMedication">
+						<xs:element name="eMedications.10" nillable="true" id="eMedications.EMSorHealthcareProfessionalTypeAdministeringMedication">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>

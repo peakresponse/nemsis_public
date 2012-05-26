@@ -51,7 +51,7 @@
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID2">			
+										<xs:element name="dAgency.01" type="EMSAgencyStateID" id="EMSDataset.EMSAgencyUniqueStateID">			
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
@@ -77,7 +77,7 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dAgency.02" id="dAgency.EMSAgencyNumber">
+										<xs:element name="dAgency.02" id="EMSDataset.EMSAgencyNumber">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
@@ -108,7 +108,7 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="dAgency.04" id="dAgency.EMSAgencyState">
+										<xs:element name="dAgency.04" id="EMSDataset.EMSAgencyState">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>

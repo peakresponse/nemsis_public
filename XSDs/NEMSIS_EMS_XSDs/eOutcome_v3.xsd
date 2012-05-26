@@ -216,7 +216,10 @@
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment>Code list is represented in ICD-10-PCS: Procedure Codes.
+							<comment>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. 
+							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
+							The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. 
+							The letters O and I are not used in order to avoid confusion with the digits 0 and 1.
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
@@ -225,7 +228,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="icd10Code">
+						<xs:extension base="icd10CodeOutcomeProcedures">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
@@ -312,7 +315,10 @@
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment>Code list is represented in ICD-10-PCS: Procedure Codes.
+							<comment>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. 
+							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
+							The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. 
+							The letters O and I are not used in order to avoid confusion with the digits 0 and 1.
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
@@ -321,7 +327,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="icd10Code">
+						<xs:extension base="icd10CodeOutcomeProcedures">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
@@ -348,7 +354,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="icd10Code">
+						<xs:extension base="icd10CodeOutcomeDiagnosis">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>

@@ -204,8 +204,14 @@
 										<definition>The US census tracts in which the EMS agency formally provides service.</definition>
 										<v2Number/>
 										<usage>Required</usage>
-										<comment>This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
-													&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a>http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html&lt;/a></comment>
+										<comment>
+										This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. 
+										&lt;br/>&lt;br/>The format of the census tract number must be an 11-digit number, based upon the the 2010 census, using the pattern: 
+										&lt;br/>2-digit State Code 3-digit County Code 6-digiit Census Tract Number (no decimal) 
+										&lt;br/>&lt;br/>Example: NEMSIS TAC office (UT, Salt Lake County, Census Tract - located at 295 Chipeta Way, Salt Lake City, UT) 
+										49035101400
+										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html 										
+										</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>

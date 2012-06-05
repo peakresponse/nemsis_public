@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Data Dictionary Version 3.2.5.120525 -->
+<!-- Data Dictionary Version 3.2.6.120604 -->
 <iso:schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:iso="http://purl.oclc.org/dsdl/schematron" xmlns:nem="http://www.nemsis.org" queryBinding="xslt2">
     <iso:ns prefix="nem" uri="http://www.nemsis.org"/>
     <iso:ns prefix="xsl" uri="http://www.w3.org/1999/XSL/Transform"/>

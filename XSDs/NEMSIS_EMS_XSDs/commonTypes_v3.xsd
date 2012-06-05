@@ -238,8 +238,7 @@
 			<xs:documentation>A list of valid Census Tracts</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:maxLength value="15"/>
-			<xs:minLength value="1"/>
+			<xs:pattern value="[0-9]{11}"></xs:pattern>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CityGnisCode">
@@ -760,7 +759,7 @@
 			<xs:documentation>ICD10 Codes for Outcomes Procedures</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9A-HJ-NP-Z]{7}"/>
+			<xs:pattern value="[0-9A-HJ-NP-Z]{3,7}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ImmunizationType">

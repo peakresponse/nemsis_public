@@ -11,8 +11,7 @@
 <v3Changes></v3Changes>
 <restrictions>
   <CensusTracts baseType="string">
-    <facet name="maxLength" value="15"/>
-    <facet name="minLength" value="1"/>
+    <facet name="pattern" value="[0-9]{11}"/>
   </CensusTracts>
 </restrictions>
 </element>

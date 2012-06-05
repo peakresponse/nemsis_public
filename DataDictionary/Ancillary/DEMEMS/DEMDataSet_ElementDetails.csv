@@ -14,7 +14,7 @@
 "DEMDataSet","element","dAgency.04","EMS Agency State","D01_03","National","State","Mandatory","1","1","","ANSIStateCode","","","","","","","","2","","","","","","",
 "DEMDataSet","element","dAgency.05","EMS Agency Service Area States","","National","State","Mandatory","1","1","","ANSIStateCode","","","","","","","","2","","","","","","",
 "DEMDataSet","element","dAgency.06","EMS Agency Service Area County(s)","D01_04","National","State","Mandatory","1","M","","ANSICountyCode","","","","","","","","5","","","","","","",
-"DEMDataSet","element","dAgency.07","EMS Agency Census Tracts","","National","State","Required","1","M","Nillable","CensusTracts","NV","","","NV.NotRecorded; NV.NotApplicable; ","","1","15","","","","","","","",
+"DEMDataSet","element","dAgency.07","EMS Agency Census Tracts","","National","State","Required","1","M","Nillable","CensusTracts","NV","","","NV.NotRecorded; NV.NotApplicable; ","","","","","","","","","","[0-9]{11}",
 "DEMDataSet","element","dAgency.08","EMS Agency Service Area ZIP Codes","","National","State","Required","1","M","Nillable","ZIP","NV","","","NV.NotRecorded; NV.NotApplicable; ","","","","","","","","","","[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]",
 "DEMDataSet","element","dAgency.09","Primary Type of Service","D01_05","National","State","Mandatory","1","1","","TypeOfService","","","","","","","","","","","","","","",
 "DEMDataSet","element","dAgency.10","Other Types of Service","D01_06","","State","Recommended","0","M","Nillable","TypeOfService","NV","","","NV.NotReporting; NV.NotRecorded; NV.NotApplicable; ","","","","","","","","","","",

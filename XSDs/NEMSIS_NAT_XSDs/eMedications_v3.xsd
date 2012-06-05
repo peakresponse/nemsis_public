@@ -580,8 +580,8 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:documentation>The dose or amount of the medication given to the patient</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:decimal">
-			<xs:totalDigits value="8"></xs:totalDigits>
-			<xs:fractionDigits value="2"></xs:fractionDigits>
+			<xs:totalDigits value="9"></xs:totalDigits>
+			<xs:fractionDigits value="3"></xs:fractionDigits>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicationDosageUnits">

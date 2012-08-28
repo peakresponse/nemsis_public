@@ -259,10 +259,10 @@
                         </xs:annotation>
                     </xs:element>
                     <xs:element name="originalRequestType" type="xs:string" minOccurs="0" />
-                    <xs:element name="RetrieveResult" minOccurs="0">
+                    <xs:element name="retrieveResult" minOccurs="0">
                         <xs:complexType>
                             <xs:choice>
-                                <xs:element name="RetrieveSubmitStatus" type="tns:SubmitDataReport" />
+                                <xs:element name="retrieveSubmitStatus" type="tns:SubmitDataReport" />
                             </xs:choice>
                         </xs:complexType>
                     </xs:element>
@@ -277,7 +277,7 @@
             <xs:complexType name="NemsisV3WsQueryLimitResponse">
                 <xs:sequence>
                     <xs:element name="requestType" type="xs:string" fixed="QueryLimit" />
-                    <xs:element name="limt" type="xs:integer">
+                    <xs:element name="limit" type="xs:integer">
                         <xs:annotation>
                             <xs:documentation> The Web Service data submission size limit, expressed in KB (1024 Bytes). This should only apply to data payload, not on the
 						whole SOAP message. Positive value indicates success and negative value indicates error.
@@ -291,7 +291,7 @@
                 <xs:sequence>
                     <xs:group ref="tns:PrivilegeGroup" />
                     <xs:element name="requestType" type="xs:string" fixed="SubmitData" />
-                    <xs:element name="SubmitPayload" type="tns:DataPayload" />
+                    <xs:element name="submitPayload" type="tns:DataPayload" />
                     <xs:element name="requestDataSchema" type="tns:DataSchema" />
                     <xs:element name="schemaVersion" type="xs:string" />
                     <xs:element name="additionalInfo" type="xs:string" />
@@ -307,16 +307,16 @@
             </xs:complexType>
             <xs:complexType name="SubmitDataReport">
                 <xs:sequence>
-                    <xs:element name="XmlValidationErrorReport" type="tns:XmlValidationErrorReport" />
-                    <xs:element name="SchematronReport" minOccurs="0">
+                    <xs:element name="xmlValidationErrorReport" type="tns:XmlValidationErrorReport" />
+                    <xs:element name="schematronReport" minOccurs="0">
                         <xs:complexType>
                             <xs:sequence>
-                                <xs:element name="CompleteSchematronReport" type="tns:CompleteSchematronReport" minOccurs="0" maxOccurs="unbounded" />
-                                <xs:element name="DigestedSchematronReport" type="tns:DigestedSchematronReport" minOccurs="0" maxOccurs="unbounded" />
+                                <xs:element name="completeSchematronReport" type="tns:CompleteSchematronReport" minOccurs="0" maxOccurs="unbounded" />
+                                <xs:element name="digestedSchematronReport" type="tns:DigestedSchematronReport" minOccurs="0" maxOccurs="unbounded" />
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
-                    <xs:element name="CustomReport" type="tns:SingleCustomReport" maxOccurs="unbounded" minOccurs="0" />
+                    <xs:element name="customReport" type="tns:SingleCustomReport" maxOccurs="unbounded" minOccurs="0" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="DataPayload">
@@ -325,9 +325,9 @@
                     </xs:documentation>
                 </xs:annotation>
                 <xs:choice>
-                    <xs:element name="PayloadOfString" type="tns:PayloadOfString" />
-                    <xs:element name="PayloadOfBinary" type="tns:PayloadOfBinary" />
-                    <xs:element name="PayloadOfXmlElement" type="tns:PayloadOfXmlElement" />
+                    <xs:element name="payloadOfString" type="tns:PayloadOfString" />
+                    <xs:element name="payloadOfBinary" type="tns:PayloadOfBinary" />
+                    <xs:element name="payloadOfXmlElement" type="tns:PayloadOfXmlElement" />
                 </xs:choice>
             </xs:complexType>
             <xs:complexType name="PayloadOfString">
@@ -337,6 +337,10 @@
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="PayloadOfBinary">
+                <xs:annotation>
+                    <xs:documentation>The compression algorithm is ZIP.  
+                    </xs:documentation>
+                </xs:annotation>
                 <xs:sequence>
                     <xs:element name="encoding" type="xs:string" fixed="base64Binary" />
                     <xs:element name="compressed" type="xs:boolean" default="true" />
@@ -393,12 +397,12 @@
                     <xs:documentation>The element contains a list of customized reports</xs:documentation>
                 </xs:annotation>
                 <xs:sequence>
-                    <xs:element name="ReportType" type="xs:string">
+                    <xs:element name="reportType" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Describe the customized report type</xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="CustomReport" maxOccurs="unbounded" minOccurs="0" type="tns:DataPayload" />
+                    <xs:element name="customReport" maxOccurs="unbounded" minOccurs="0" type="tns:DataPayload" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="CompleteSchematronReport">
@@ -406,7 +410,7 @@
                     <xs:documentation>The element contains a list of full Schematron validation reports</xs:documentation>
                 </xs:annotation>
                 <xs:sequence>
-                    <xs:element name="CompleteReport" maxOccurs="unbounded" minOccurs="0" type="tns:DataPayload" />
+                    <xs:element name="completeReport" maxOccurs="unbounded" minOccurs="0" type="tns:DataPayload" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="DigestedSchematronReport">
@@ -414,9 +418,9 @@
                     <xs:documentation>This element contains a list of digested Schematron validation reports</xs:documentation>
                 </xs:annotation>
                 <xs:sequence>
-                    <xs:element name="SchematronRuleDefinition" type="tns:SchematronRuleDefinition" />
-                    <xs:element name="ErrorMessage" type="xs:string" />
-                    <xs:element maxOccurs="unbounded" name="ErrorElement" type="tns:XmlElementInfo" />
+                    <xs:element name="schematronRuleDefinition" type="tns:SchematronRuleDefinition" />
+                    <xs:element name="errorMessage" type="xs:string" />
+                    <xs:element name="errorElement" maxOccurs="unbounded" type="tns:XmlElementInfo" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="SchematronRuleDefinition">
@@ -424,16 +428,16 @@
                     <xs:documentation>Metadata for a Schematron rule. Some information might be redudant or overlap.</xs:documentation>
                 </xs:annotation>
                 <xs:sequence>
-                    <xs:element name="RuleFile" minOccurs="0" type="xs:string" />
-                    <xs:element name="RuleFileVersion" minOccurs="0" type="xs:string" />
-                    <xs:element name="RuleID" type="xs:string" />
-                    <xs:element name="RuleVersion" minOccurs="0" type="xs:string" />
-                    <xs:element name="RuleDesc" minOccurs="0" type="xs:string" />
-                    <xs:element name="Location" minOccurs="0" type="xs:string" />
-                    <xs:element name="RuleContext" minOccurs="0" type="xs:string" />
-                    <xs:element name="RuleSyntax" minOccurs="0" type="xs:string" />
-                    <xs:element name="AssertCondition" minOccurs="0" type="xs:string" />
-                    <xs:element name="Severity" type="xs:string" />
+                    <xs:element name="ruleFile" minOccurs="0" type="xs:string" />
+                    <xs:element name="ruleFileVersion" minOccurs="0" type="xs:string" />
+                    <xs:element name="ruleID" type="xs:string" />
+                    <xs:element name="ruleVersion" minOccurs="0" type="xs:string" />
+                    <xs:element name="ruleDesc" minOccurs="0" type="xs:string" />
+                    <xs:element name="location" minOccurs="0" type="xs:string" />
+                    <xs:element name="ruleContext" minOccurs="0" type="xs:string" />
+                    <xs:element name="ruleSyntax" minOccurs="0" type="xs:string" />
+                    <xs:element name="assertCondition" minOccurs="0" type="xs:string" />
+                    <xs:element name="severity" type="xs:string" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="XmlValidationErrorReport">
@@ -443,14 +447,14 @@
                     </xs:documentation>
                 </xs:annotation>
                 <xs:sequence>
-                    <xs:element name="TotalErrorCount" type="xs:integer">
+                    <xs:element name="totalErrorCount" type="xs:integer">
                         <xs:annotation>
                             <xs:documentation>The count of total validation error found by validator. It is not necessary same as the count of errors inlcuded in this
 						report. Value of "zero" indicates no XML validation error.
                             </xs:documentation>
                         </xs:annotation>
                     </xs:element>
-                    <xs:element name="XmlError" type="tns:XmlValidationError" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="xmlError" type="tns:XmlValidationError" minOccurs="0" maxOccurs="unbounded" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="XmlValidationError">
@@ -461,19 +465,19 @@
                         </xs:annotation>
                     </xs:element>
                     <xs:choice>
-                        <xs:element name="XmlGeneralErrorList" type="tns:XmlGeneralErrorList" />
-                        <xs:element name="FailedElementList" type="tns:XmlElementList" />
+                        <xs:element name="xmlGeneralErrorList" type="tns:XmlGeneralErrorList" />
+                        <xs:element name="failedElementList" type="tns:XmlElementList" />
                     </xs:choice>
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="XmlGeneralErrorList">
                 <xs:sequence>
-                    <xs:element name="ErrorMessage" type="xs:string" maxOccurs="unbounded" />
+                    <xs:element name="errorMessage" type="xs:string" maxOccurs="unbounded" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="XmlElementList">
                 <xs:sequence>
-                    <xs:element name="XmlElementInfo" maxOccurs="unbounded" type="tns:XmlElementInfo" />
+                    <xs:element name="xmlElementInfo" maxOccurs="unbounded" type="tns:XmlElementInfo" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="XmlElementInfo">
@@ -481,10 +485,10 @@
                     <xs:documentation />
                 </xs:annotation>
                 <xs:sequence>
-                    <xs:element name="ElementName" type="xs:string" />
+                    <xs:element name="elementName" type="xs:string" />
                     <xs:choice>
-                        <xs:element name="ElementLocation" type="tns:XmlElementLocation" />
-                        <xs:element name="ElementLocationUnknown" type="xs:string" fixed="Yes" />
+                        <xs:element name="elementLocation" type="tns:XmlElementLocation" />
+                        <xs:element name="elementLocationUnknown" type="xs:string" fixed="Yes" />
                     </xs:choice>
                     <xs:element name="value" minOccurs="0" type="xs:string" />
                 </xs:sequence>
@@ -498,7 +502,7 @@
                 <xs:sequence>
                     <xs:element name="line" minOccurs="0" type="xs:integer" />
                     <xs:element name="column" minOccurs="0" type="xs:integer" />
-                    <xs:element name="XPATHlocation" minOccurs="0" type="xs:string" />
+                    <xs:element name="xpathLocation" minOccurs="0" type="xs:string" />
                 </xs:sequence>
             </xs:complexType>
         </xsd:schema>
@@ -534,7 +538,8 @@
         <wsdl:operation name="QueryLimit">
             <wsdl:input message="tns:QueryLimitRequest"></wsdl:input>
             <wsdl:output message="tns:QueryLimitResponse"></wsdl:output>
-        </wsdl:operation>
+        </wsdl:operation>
+
     </wsdl:portType>
     <wsdl:binding name="NemsisWsPortBinding" type="tns:NemsisWsPortType">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />

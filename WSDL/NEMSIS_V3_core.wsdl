@@ -324,27 +324,8 @@
                     <xs:documentation>For data submission and search result, DataPayload is used to include a "file" or root element of XML document.
                     </xs:documentation>
                 </xs:annotation>
-                <xs:choice>
-                    <xs:element name="payloadOfString" type="tns:PayloadOfString" />
-                    <xs:element name="payloadOfBinary" type="tns:PayloadOfBinary" />
+                <xs:sequence>                                      
                     <xs:element name="payloadOfXmlElement" type="tns:PayloadOfXmlElement" />
-                </xs:choice>
-            </xs:complexType>
-            <xs:complexType name="PayloadOfString">
-                <xs:sequence>
-                    <xs:element name="encoding" type="xs:string" fixed="text/xml" />
-                    <xs:element name="payload" type="xs:string" />
-                </xs:sequence>
-            </xs:complexType>
-            <xs:complexType name="PayloadOfBinary">
-                <xs:annotation>
-                    <xs:documentation>The compression algorithm is ZIP.  
-                    </xs:documentation>
-                </xs:annotation>
-                <xs:sequence>
-                    <xs:element name="encoding" type="xs:string" fixed="base64Binary" />
-                    <xs:element name="compressed" type="xs:boolean" default="true" />
-                    <xs:element name="payload" type="xs:base64Binary" />
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="PayloadOfXmlElement">

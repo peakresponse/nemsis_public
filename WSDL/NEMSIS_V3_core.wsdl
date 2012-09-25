@@ -330,7 +330,6 @@
             </xs:complexType>
             <xs:complexType name="PayloadOfXmlElement">
                 <xs:sequence>
-                    <xs:element name="encoding" type="xs:string" fixed="xml" />
                     <xs:any processContents="lax" />
                 </xs:sequence>
             </xs:complexType>

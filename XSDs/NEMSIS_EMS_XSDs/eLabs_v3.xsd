@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eLabs">
 		<xs:sequence>
-			<xs:element name="eLabs.LabGroup" id="eLabs.LabGroup" maxOccurs="unbounded"  minOccurs="0">
+			<xs:element name="eLabs.LabGroup" id="eLabs.LabGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold Lab information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eLabs.01" type="DateTimeType" id="eLabs.DateTimeLaboratoryorImagingResult"  minOccurs="0">
+						<xs:element name="eLabs.01" type="DateTimeType" id="eLabs.DateTimeLaboratoryorImagingResult" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -180,7 +180,7 @@
 																	<performanceMeasure>STEMI</performanceMeasure>
 																</performanceMeasuresGroup>
 																<comment>The description is defined as the extension of the file type.  
-																	Examples of file name extensions include “doc”, “jpeg”, “tiff”, etc.  For a list of additional extensions reference the following website(s):
+																	Examples of file name extensions include "doc", "jpeg", "tiff", etc.  For a list of additional extensions reference the following website(s):
 &lt;br/>
 &lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
 &lt;table>
@@ -281,11 +281,6 @@
 					<xs:documentation>Amylase</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3403011">
-				<xs:annotation>
-					<xs:documentation>Angiography</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3403013">
 				<xs:annotation>
 					<xs:documentation>Aspartate Transaminase</xs:documentation>
@@ -329,11 +324,6 @@
 			<xs:enumeration value="3403029">
 				<xs:annotation>
 					<xs:documentation>Carbon Dioxide-Partial Pressure</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3403031">
-				<xs:annotation>
-					<xs:documentation>CAT Scan</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3403033">
@@ -426,11 +416,6 @@
 					<xs:documentation>Partial Thromboplastin Time</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3403069">
-				<xs:annotation>
-					<xs:documentation>PET Scan</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3403071">
 				<xs:annotation>
 					<xs:documentation>pH-ABG</xs:documentation>
@@ -520,6 +505,11 @@
 			<xs:enumeration value="3405011">
 				<xs:annotation>
 					<xs:documentation>X-ray</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3405013">
+				<xs:annotation>
+					<xs:documentation>Angiography</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

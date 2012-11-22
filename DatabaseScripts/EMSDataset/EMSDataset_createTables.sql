@@ -1018,8 +1018,6 @@ CREATE TABLE [eAirway.ConfirmationGroup] (
 ,    [eAirway.02_NV]    VARCHAR(255)
 ,    [eAirway.03]    VARCHAR(255)
 ,    [eAirway.03_NV]    VARCHAR(255)
-,    [eAirway.04]    VARCHAR(255)
-,    [eAirway.04_NV]    VARCHAR(255)
 ,    [eAirway.05]    VARCHAR(255)
 ,    [eAirway.06]    VARCHAR(255)
 ,    [eAirway.06_NV]    VARCHAR(255)
@@ -1028,16 +1026,23 @@ CREATE TABLE [eAirway.ConfirmationGroup] (
 ,    [eAirway.ConfirmationGroup_ProcedureGroupCorrelationID]    VARCHAR(255)
 )
 
+CREATE TABLE [eAirway.04] ( 
+    [pk_eAirway.04]    INT PRIMARY KEY,
+    [fk_pk_eAirway.ConfirmationGroup]    INT FOREIGN KEY REFERENCES     [eAirway.ConfirmationGroup]([pk_eAirway.ConfirmationGroup])
+,    [eAirway.04]    VARCHAR(255)
+,    [eAirway.04_NV]    VARCHAR(255)
+)
+
 CREATE TABLE [eAirway.08] ( 
     [pk_eAirway.08]    INT PRIMARY KEY,
-    [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
+    [fk_pk_eAirway.ConfirmationGroup]    INT FOREIGN KEY REFERENCES     [eAirway.ConfirmationGroup]([pk_eAirway.ConfirmationGroup])
 ,    [eAirway.08]    VARCHAR(255)
 ,    [eAirway.08_NV]    VARCHAR(255)
 )
 
 CREATE TABLE [eAirway.09] ( 
     [pk_eAirway.09]    INT PRIMARY KEY,
-    [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
+    [fk_pk_eAirway.ConfirmationGroup]    INT FOREIGN KEY REFERENCES     [eAirway.ConfirmationGroup]([pk_eAirway.ConfirmationGroup])
 ,    [eAirway.09]    VARCHAR(255)
 )
 

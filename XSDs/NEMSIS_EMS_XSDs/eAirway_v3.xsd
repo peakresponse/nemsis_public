@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eAirways">
 		<xs:sequence>
-			<xs:element name="eAirway.AirwayGroup" id="eAirway.AirwayGroup" minOccurs="0" >
+			<xs:element name="eAirway.AirwayGroup" id="eAirway.AirwayGroup" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold Airway information</xs:documentation>
 				</xs:annotation>
@@ -134,7 +134,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eAirway.04" nillable="true" id="eAirway.AirwayDevicePlacementConfirmedMethods" minOccurs="0">
+									<xs:element name="eAirway.04" nillable="true" id="eAirway.AirwayDevicePlacementConfirmedMethods" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -246,68 +246,68 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
+									<xs:element name="eAirway.08" nillable="true" id="eAirway.AirwayComplicationsEncountered" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eAirway.08</number>
+													<name>Airway Complications Encountered</name>
+													<national>No</national>
+													<state>Yes</state>
+													<definition>The airway management complications encountered during the patient care episode.</definition>
+													<v2Number/>
+													<usage>Recommended</usage>
+													<performanceMeasuresGroup>
+														<performanceMeasure>Airway</performanceMeasure>
+													</performanceMeasuresGroup>
+													<comment/>
+													<v3Changes>Added to better document airway management.</v3Changes>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="ComplicationsEncountered">
+													<xs:attribute name="NV" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+														</xs:simpleType>
+													</xs:attribute>
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="eAirway.09" id="eAirway.SuspectedReasonsforFailedAirwayProcedure" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eAirway.09</number>
+													<name>Suspected Reasons for Failed Airway Procedure</name>
+													<national>No</national>
+													<state>Yes</state>
+													<definition>The reason(s) the airway was unable to be successfully managed.</definition>
+													<v2Number/>
+													<usage>Optional</usage>
+													<performanceMeasuresGroup>
+														<performanceMeasure>Airway</performanceMeasure>
+													</performanceMeasuresGroup>
+													<comment/>
+													<v3Changes>Added to better document airway management.</v3Changes>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="ReasonsForFailure">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 								<xs:attribute name="ProcedureGroupCorrelationID" type="CorrelationID" use="optional"/>
-							</xs:complexType>							
-						</xs:element>
-						<xs:element name="eAirway.08" nillable="true" id="eAirway.AirwayComplicationsEncountered" minOccurs="0" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>eAirway.08</number>
-										<name>Airway Complications Encountered</name>
-										<national>No</national>
-										<state>Yes</state>
-										<definition>The airway management complications encountered during the patient care episode.</definition>
-										<v2Number/>
-										<usage>Recommended</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes>Added to better document airway management.</v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="ComplicationsEncountered">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="eAirway.09" id="eAirway.SuspectedReasonsforFailedAirwayProcedure" minOccurs="0" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>eAirway.09</number>
-										<name>Suspected Reasons for Failed Airway Procedure</name>
-										<national>No</national>
-										<state>Yes</state>
-										<definition>The reason(s) the airway was unable to be successfully managed.</definition>
-										<v2Number/>
-										<usage>Optional</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes>Added to better document airway management.</v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="ReasonsForFailure">
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-									</xs:extension>
-								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="eAirway.10" type="DateTimeType" id="eAirway.DateTimeDecisiontoManagethePatientwithanInvasiveAirway" minOccurs="0">

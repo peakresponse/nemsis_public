@@ -2,7 +2,6 @@
 <element number="dAgency.18"  minOccurs="1"  maxOccurs="1"  dataTypeName="AnnualAgencyStatistics"  isNillable="Yes">
 <name>911 EMS Call Center Volume per Year</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The number of 911 calls received by the call center during the last calendar year</definition>
 <v2Number>D01_14</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year.</v3Comment>
 <v3Changes>Name Clarified with "Call Center"</v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <AnnualAgencyStatistics baseType="positiveInteger">
     <facet name="minInclusive" value="1"/>

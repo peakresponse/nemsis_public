@@ -2,7 +2,6 @@
 <element number="eDisposition.12"  minOccurs="1"  maxOccurs="1"  dataTypeName="IncidentPatientDisposition"  isNillable="No">
 <name>Incident/Patient Disposition</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>Type of disposition treatment and/or transport of the patient by this EMS Unit.</definition>
 <v2Number>E20_10</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <IncidentPatientDisposition baseType="string">
     <facet name="enumeration" value="4212001" annotation="Assist, Agency"/>

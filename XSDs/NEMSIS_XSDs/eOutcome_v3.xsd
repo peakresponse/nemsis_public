@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eOutcome" id="eOutcome.OutcomeAndLinkage">
 		<xs:sequence>
@@ -437,7 +437,7 @@
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="eOutcome.17" type="OutcomeAtHospitalDischarge" id="eOutcome.OutcomeAtHospitalDischarge" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
@@ -450,8 +450,8 @@
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasure/>
-							<comment></comment>
-							<v3Changes></v3Changes>
+							<comment/>
+							<v3Changes/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -462,7 +462,7 @@
 		<xs:annotation>
 			<xs:documentation>The patient's functional status at time of hospital discharge.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">		
+		<xs:restriction base="xs:string">
 			<xs:enumeration value="4317001">
 				<xs:annotation>
 					<xs:documentation>No Symptoms At All</xs:documentation>
@@ -544,7 +544,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="03">
 				<xs:annotation>
-					<xs:documentation>Discharged/transferred to a skilled nursing facility (SNF) {With Medicare certification in anticipation of covered skilled care.  See Code 61 below.}</xs:documentation>
+					<xs:documentation>Discharged/transferred to a skilled nursing facility (SNF)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="04">
@@ -755,7 +755,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="03">
 				<xs:annotation>
-					<xs:documentation>Discharged/transferred to a skilled nursing facility (SNF) {With Medicare certification in anticipation of covered skilled care.  See Code 61 below.}</xs:documentation>
+					<xs:documentation>Discharged/transferred to a skilled nursing facility (SNF)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="04">

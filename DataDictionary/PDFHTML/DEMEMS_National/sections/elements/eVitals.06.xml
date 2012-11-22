@@ -2,7 +2,6 @@
 <element number="eVitals.06"  minOccurs="1"  maxOccurs="1"  dataTypeName="SBP"  isNillable="Yes">
 <name>SBP (Systolic Blood Pressure)</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's systolic blood pressure.</definition>
 <v2Number>E14_04</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Required for ACS-Field Triage and other patient scoring systems.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <SBP baseType="integer">
     <facet name="minInclusive" value="0"/>

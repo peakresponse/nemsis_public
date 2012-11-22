@@ -38,7 +38,7 @@
 					<xs:documentation>Group Tag to hold info about practitioner </xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
-					<xs:sequence>															                
+					<xs:sequence>
 						<xs:element name="eHistory.02" type="PersonLastName" id="eHistory.LastNameofPatientsPractitioner" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
@@ -177,7 +177,7 @@
 									<xs:union memberTypes="PN.NoKnownDrugAllergy PN.Refused PN.UnableToComplete"/>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CodeType" use="optional" type="CodeType"/>
+							<xs:attribute name="CodeType" type="CodeType" use="optional"/>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
@@ -214,7 +214,7 @@ Data Element Comment Section:
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eHistory.08" id="eHistory.MedicalSurgicalHistory" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			<xs:element name="eHistory.08" nillable="true" id="eHistory.MedicalSurgicalHistory" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -238,7 +238,7 @@ Data Element Comment Section:
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="icd10MedSurge">							
+						<xs:extension base="icd10MedSurge">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -715,133 +715,6 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:enumeration value="3101029">
 				<xs:annotation>
 					<xs:documentation>Uncooperative</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="CurrentMedicationAdministrationRoute">
-		<xs:annotation>
-			<xs:documentation>The administration route (po, SQ, etc.) of the patient's current medication</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="3115001">
-				<xs:annotation>
-					<xs:documentation>Endotracheal Tube</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115003">
-				<xs:annotation>
-					<xs:documentation>Gastrostomy/Feeding Tube</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115005">
-				<xs:annotation>
-					<xs:documentation>Inhalation</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115007">
-				<xs:annotation>
-					<xs:documentation>Intra-Nasal</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115009">
-				<xs:annotation>
-					<xs:documentation>Intramuscular (IM)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115011">
-				<xs:annotation>
-					<xs:documentation>Intraocular</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115013">
-				<xs:annotation>
-					<xs:documentation>Intraosseous (IO)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115015">
-				<xs:annotation>
-					<xs:documentation>Intravenous (IV)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115017">
-				<xs:annotation>
-					<xs:documentation>Nasal Cannula</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115019">
-				<xs:annotation>
-					<xs:documentation>Nasogastric</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115021">
-				<xs:annotation>
-					<xs:documentation>Non-Rebreather Mask</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115023">
-				<xs:annotation>
-					<xs:documentation>Ophthalmic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115025">
-				<xs:annotation>
-					<xs:documentation>Oral</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115027">
-				<xs:annotation>
-					<xs:documentation>Other/miscellaneous</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115029">
-				<xs:annotation>
-					<xs:documentation>Otic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115031">
-				<xs:annotation>
-					<xs:documentation>Rectal</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115033">
-				<xs:annotation>
-					<xs:documentation>Subcutaneous</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115035">
-				<xs:annotation>
-					<xs:documentation>Sublingual</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115037">
-				<xs:annotation>
-					<xs:documentation>Topical</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115039">
-				<xs:annotation>
-					<xs:documentation>Tracheostomy</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115041">
-				<xs:annotation>
-					<xs:documentation>Transdermal</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115043">
-				<xs:annotation>
-					<xs:documentation>Urethral</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115045">
-				<xs:annotation>
-					<xs:documentation>Ventimask</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3115047">
-				<xs:annotation>
-					<xs:documentation>Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

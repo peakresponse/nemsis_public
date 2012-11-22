@@ -228,7 +228,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<name>Who Used AED Prior to EMS Arrival</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>Documentation of who used the AED prior to this EMS unit’s arrival.</definition>
+							<definition>Documentation of who used the AED prior to this EMS unit's arrival.</definition>
 							<v2Number/>
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
@@ -1021,7 +1021,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 	</xs:simpleType>
 	<xs:simpleType name="WhoUsedAED">
 		<xs:annotation>
-			<xs:documentation>Documentation of who performed CPR prior to EMS arrival.</xs:documentation>
+			<xs:documentation>Documentation of who performed AED prior to EMS arrival.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3008001">

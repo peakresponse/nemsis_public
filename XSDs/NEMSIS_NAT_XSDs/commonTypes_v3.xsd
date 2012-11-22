@@ -238,7 +238,7 @@
 			<xs:documentation>A list of valid Census Tracts</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9]{11}"></xs:pattern>
+			<xs:pattern value="[0-9]{11}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CityGnisCode">
@@ -732,7 +732,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="icd10CodeInjury">
 		<xs:annotation>
-			<xs:documentation>ICD10 Code: T36.0 - T65.949, T71.11 – T71.999, T75.00 – T76.929, or V00.0 – Y38.999 with 1 to 3 decimals</xs:documentation>
+			<xs:documentation>ICD10 Code: T36.0 - T65.949, T71.11 - T71.999, T75.00 - T76.929, or V00.0 - Y38.999 with 1 to 3 decimals</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:pattern value="([TV-Y][0-9]{2})((\.[0-9A-Z]{1,7})?)"/>
@@ -2056,11 +2056,6 @@
 					<xs:documentation>ALS Intercept</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="9920009">
-				<xs:annotation>
-					<xs:documentation>Critical Care Ground Support</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="9920011">
 				<xs:annotation>
 					<xs:documentation>Hazmat</xs:documentation>
@@ -2079,6 +2074,11 @@
 			<xs:enumeration value="9920017">
 				<xs:annotation>
 					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9920019">
+				<xs:annotation>
+					<xs:documentation>Critical Care (Ground)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2183,6 +2183,160 @@
 			<xs:enumeration value="9924003">
 				<xs:annotation>
 					<xs:documentation>RxNorm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MemberLevel">
+		<xs:annotation>
+			<xs:documentation> The functioning level of the crew member during this EMS patient encounter</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="9925001">
+				<xs:annotation>
+					<xs:documentation>2009 Advanced Emergency Medical Technician (AEMT)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925003">
+				<xs:annotation>
+					<xs:documentation>2009 Emergency Medical Responder (EMR)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925005">
+				<xs:annotation>
+					<xs:documentation>2009 Emergency Medical Technician (EMT)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925007">
+				<xs:annotation>
+					<xs:documentation>2009 Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925029">
+				<xs:annotation>
+					<xs:documentation>Critical Care Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925011">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925013">
+				<xs:annotation>
+					<xs:documentation>First Responder</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925015">
+				<xs:annotation>
+					<xs:documentation>EMT-Basic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925017">
+				<xs:annotation>
+					<xs:documentation>EMT-Intermediate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925019">
+				<xs:annotation>
+					<xs:documentation>EMT-Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925021">
+				<xs:annotation>
+					<xs:documentation>Nurse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925023">
+				<xs:annotation>
+					<xs:documentation>Other Healthcare Professional</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925025">
+				<xs:annotation>
+					<xs:documentation>Other Non-Healthcare Professional</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925027">
+				<xs:annotation>
+					<xs:documentation>Physician</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925029">
+				<xs:annotation>
+					<xs:documentation>Respiratory Therapist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925031">
+				<xs:annotation>
+					<xs:documentation>Student</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925033">
+				<xs:annotation>
+					<xs:documentation>Critical Care Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925035">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+		
+	</xs:simpleType>
+	<xs:simpleType name="CurrentMedicationAdministrationRoute">
+		<xs:annotation>
+			<xs:documentation> The functioning level of the crew member during this EMS patient encounter</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+<xs:enumeration value="9927001"><xs:annotation><xs:documentation>Blow-By</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="9927003"><xs:annotation><xs:documentation>Buccal</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927005"><xs:annotation><xs:documentation>Endotracheal Tube (ET)</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927007"><xs:annotation><xs:documentation>Gastrostomy Tube</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927009"><xs:annotation><xs:documentation>Inhalation</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927011"><xs:annotation><xs:documentation>Intraarterial</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927013"><xs:annotation><xs:documentation>Intradermal</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927015"><xs:annotation><xs:documentation>Intramuscular (IM)</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927017"><xs:annotation><xs:documentation>Intranasal</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927019"><xs:annotation><xs:documentation>Intraocular</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927021"><xs:annotation><xs:documentation>Intraosseous (IO)</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927023"><xs:annotation><xs:documentation>Intravenous (IV)</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927025"><xs:annotation><xs:documentation>Nasal Cannula</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927027"><xs:annotation><xs:documentation>Nasogastric</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927029"><xs:annotation><xs:documentation>Nasotracheal Tube</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927031"><xs:annotation><xs:documentation>Non-Rebreather Mask</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927033"><xs:annotation><xs:documentation>Ophthalmic</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927035"><xs:annotation><xs:documentation>Oral</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="9927037"><xs:annotation><xs:documentation>Other/miscellaneous</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927039"><xs:annotation><xs:documentation>Otic</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927041"><xs:annotation><xs:documentation>Re-breather mask</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927043"><xs:annotation><xs:documentation>Rectal</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927045"><xs:annotation><xs:documentation>Subcutaneous</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927047"><xs:annotation><xs:documentation>Sublingual</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927049"><xs:annotation><xs:documentation>Topical</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="9927051"><xs:annotation><xs:documentation>Tracheostomy</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927053"><xs:annotation><xs:documentation>Transdermal</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927055"><xs:annotation><xs:documentation>Urethral</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927057"><xs:annotation><xs:documentation>Ventimask</xs:documentation></xs:annotation></xs:enumeration>  
+<xs:enumeration value="9927059"><xs:annotation><xs:documentation>Wound</xs:documentation></xs:annotation></xs:enumeration>  		
+		
+		</xs:restriction>
+	</xs:simpleType>
+		
+	<xs:simpleType name="DistanceUnits">
+		<xs:annotation>
+			<xs:documentation>Distance in miles or kilometers</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="9929001">
+				<xs:annotation>
+					<xs:documentation>Kilometers</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9929003">
+				<xs:annotation>
+					<xs:documentation>Miles</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

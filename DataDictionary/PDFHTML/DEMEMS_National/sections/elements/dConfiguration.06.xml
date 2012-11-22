@@ -2,16 +2,14 @@
 <element number="dConfiguration.06"  minOccurs="1"  maxOccurs="1"  dataTypeName="StateCertificationLicensureLevels"  isNillable="No">
 <name>EMS Certification Levels Permitted to Perform Each Procedure</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>EMS certification levels which are permitted to perform the procedure listed in dConfiguration.07.</definition>
 <v2Number>D04_05</v2Number>
 <usage>Mandatory</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Using each certification level within the agency, indicate the approved procedures allowed utilizing dConfiguration.07 (EMS Agency Procedures).
-													<br/><br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</v3Comment>
+													<br/><br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <StateCertificationLicensureLevels baseType="string">
     <facet name="enumeration" value="9917001" annotation="2009 Advanced Emergency Medical Technician (AEMT)"/>

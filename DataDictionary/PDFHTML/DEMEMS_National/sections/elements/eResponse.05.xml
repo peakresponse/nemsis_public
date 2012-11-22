@@ -2,16 +2,14 @@
 <element number="eResponse.05"  minOccurs="1"  maxOccurs="1"  dataTypeName="EMSServiceCat"  isNillable="No">
 <name>Type of Service Requested</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The type of service or category of service requested of the EMS Agency responding for this specific EMS event</definition>
 <v2Number>E02_04</v2Number>
 <usage>Mandatory</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>“Interfacility Transfer” has been changed to ”Interfacility Transport. “Public Assistance/Other Not Listed” added for EMS 
+<v3Comment>"Interfacility Transfer" has been changed to "Interfacility Transport. "Public Assistance/Other Not Listed" added for EMS 
 										expanded scope events such as elderly assistance, injury prevention, public education, immunization programs, etc.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSServiceCat baseType="string">
     <facet name="enumeration" value="2205001" annotation="911 Response (Scene)"/>

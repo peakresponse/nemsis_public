@@ -22,7 +22,7 @@
                 <xs:union memberTypes="tns:PrivilegeErrorCodes tns:QueryLimitCodes" />
             </xs:simpleType>
             <xs:simpleType name="CommonResponseCode">
-                <xs:union memberTypes="tns:PrivilegeErrorCodes tns:ParameterErrorCodes tns:CustomErrorCodes tns:CustomSuccessCodes" />
+                <xs:union memberTypes="tns:ServerErrorCodes tns:PrivilegeErrorCodes tns:ParameterErrorCodes tns:CustomErrorCodes tns:CustomSuccessCodes"/>
             </xs:simpleType>
             <xs:simpleType name="PrivilegeErrorCodes">
                 <xs:annotation>
@@ -61,6 +61,28 @@
                             <xs:documentation>Invalid parameter combination</xs:documentation>
                         </xs:annotation>
                     </xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+			<xs:simpleType name="ServerErrorCodes">
+                <xs:annotation>
+                    <xs:documentation>Error codes for web service server</xs:documentation>
+                </xs:annotation>
+                <xs:restriction base="xs:integer">
+                    <xs:enumeration value="-20">
+                        <xs:annotation>
+                            <xs:documentation>Generic server error</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="-21">
+                        <xs:annotation>
+                            <xs:documentation>Server error, because of database connection/operation issue</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+					<xs:enumeration value="-22">
+                        <xs:annotation>
+                            <xs:documentation>Server error, because of file system/network/IO issue</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>					
                 </xs:restriction>
             </xs:simpleType>
             <xs:simpleType name="ResultPendingCode">
@@ -108,6 +130,11 @@
                     <xs:enumeration value="-16">
                         <xs:annotation>
                             <xs:documentation>Failed import of a file, because of critical Business Intelligence rule violation</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+					<xs:enumeration value="-30">
+                        <xs:annotation>
+                            <xs:documentation>Failed import of a file, because the size of soap message exceeds the limit</xs:documentation>
                         </xs:annotation>
                     </xs:enumeration>
                     <xs:enumeration value="1">
@@ -307,6 +334,7 @@
             </xs:complexType>
             <xs:complexType name="SubmitDataReport">
                 <xs:sequence>
+					<xs:element name="serverErrorReport" type="tns:ServerErrorReport" minOccurs="0"/>
                     <xs:element name="xmlValidationErrorReport" type="tns:XmlValidationErrorReport" />
                     <xs:element name="schematronReport" minOccurs="0">
                         <xs:complexType>
@@ -371,7 +399,19 @@
                         </xs:annotation>
                     </xs:enumeration>
                 </xs:restriction>
-            </xs:simpleType>
+            </xs:simpleType>			
+			<xs:complexType name="ServerErrorReport">
+                <xs:annotation>
+                    <xs:documentation>The element contains a server error message</xs:documentation>
+                </xs:annotation>
+                <xs:sequence>
+                    <xs:element name="serverErrorMessage" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>The detail of servere error</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
             <xs:complexType name="SingleCustomReport">
                 <xs:annotation>
                     <xs:documentation>The element contains a list of customized reports</xs:documentation>

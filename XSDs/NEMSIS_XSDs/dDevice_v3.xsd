@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dDevice" id="dDevice.MedicalDeviceInformation">
 		<xs:sequence>
-			<xs:element name="dDevice.DeviceGroup" id="dDevice.DeviceGroup" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="dDevice.DeviceGroup" id="dDevice.AgencyDeviceGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the Device</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dDevice.01" type="DeviceSerialNumber" minOccurs="0" id="dDevice.MedicalDeviceSerialNumber">
+						<xs:element name="dDevice.01" type="DeviceSerialNumber" id="dDevice.MedicalDeviceSerialNumber" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -27,7 +27,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dDevice.02" type="DeviceNameorID" minOccurs="0" id="dDevice.DeviceNameorID">
+						<xs:element name="dDevice.02" type="DeviceNameorID" id="dDevice.DeviceNameorID" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -70,7 +70,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dDevice.04" type="DeviceManufacturer" minOccurs="0" id="dDevice.DeviceManufacturer">
+						<xs:element name="dDevice.04" type="DeviceManufacturer" id="dDevice.DeviceManufacturer" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -88,7 +88,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dDevice.05" type="ModelNumber" minOccurs="0" id="dDevice.ModelNumber">
+						<xs:element name="dDevice.05" type="ModelNumber" id="dDevice.ModelNumber" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>

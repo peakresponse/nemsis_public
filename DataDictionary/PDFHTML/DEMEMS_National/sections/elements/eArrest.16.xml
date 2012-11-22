@@ -2,7 +2,6 @@
 <element number="eArrest.16"  minOccurs="1"  maxOccurs="1"  dataTypeName="ReasonCPRDiscontinued"  isNillable="Yes">
 <name>Reason CPR/Resuscitation Discontinued</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The reason that CPR or the resuscitation efforts were discontinued.</definition>
 <v2Number>E11_10</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Added Resuscitation to Title to allow better documentation of disposition.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <ReasonCPRDiscontinued baseType="string">
     <facet name="enumeration" value="3016001" annotation="DNR"/>

@@ -121,7 +121,7 @@
 													<v2Number>D06_04</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasure/>
-													<comment>The new 2009 EMS Educational Levels have been added. The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
+													<comment>The new 2009 EMS Educational Levels have been added. The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -250,7 +250,7 @@
 													<v2Number>D06_08</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasure/>
-													<comment>Multiple entry to allow multiple years to be stored.</comment>
+													<comment>The grouping dVehicle.YearGroup, allows multiple year information to be stored for each EMS vehicle. This includes elements dVehicle.11 - Year Miles/Kilometers Hours Accrued, dVehicle.12 - Annual Vehicle Hours, and dVehicle.13 - Annual Vehicle Miles/Kilometers.</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -294,7 +294,7 @@
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="AnnualOdometerReading">
-													<xs:attribute name="DistanceUnit" type="VelocityUnits" use="optional"/>
+													<xs:attribute name="DistanceUnit" type="DistanceUnits" use="optional"/>
 												</xs:extension>
 											</xs:simpleContent>
 										</xs:complexType>

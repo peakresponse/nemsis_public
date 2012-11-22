@@ -2,7 +2,6 @@
 <element number="eResponse.10"  minOccurs="1"  maxOccurs="M"  dataTypeName="EMSSceneUnitDelayReason"  isNillable="Yes">
 <name>Type of Scene Delay</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The scene delays, if any, of the EMS unit associated with the EMS event.</definition>
 <v2Number>E02_08</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>A scene delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) to the time the unit left the scene (eTimes.09).</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSSceneUnitDelayReason baseType="string">
     <facet name="enumeration" value="2210001" annotation="Awaiting Air Unit"/>

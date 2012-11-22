@@ -40,7 +40,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eExam.02" nillable="true" minOccurs="0" id="eExam.LengthBasedTapeMeasure" >
+			<xs:element name="eExam.02" nillable="true" id="eExam.LengthBasedTapeMeasure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -83,7 +83,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eExam.03" minOccurs="0" id="eExam.DateTimeofAssessment">
+						<xs:element name="eExam.03" id="eExam.DateTimeofAssessment" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -134,7 +134,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.04" minOccurs="0" maxOccurs="unbounded" id="eExam.SkinAssessment" >
+						<xs:element name="eExam.04" id="eExam.SkinAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -163,7 +163,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.05" minOccurs="0" maxOccurs="unbounded" id="eExam.HeadAssessment" >
+						<xs:element name="eExam.05" id="eExam.HeadAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -193,7 +193,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.06" minOccurs="0" maxOccurs="unbounded" id="eExam.FaceAssessment" >
+						<xs:element name="eExam.06" id="eExam.FaceAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -223,7 +223,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.07" minOccurs="0" maxOccurs="unbounded" id="eExam.NeckAssessment" >
+						<xs:element name="eExam.07" id="eExam.NeckAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -253,7 +253,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.08" minOccurs="0" maxOccurs="unbounded" id="eExam.ChestLungsAssessment" >
+						<xs:element name="eExam.08" id="eExam.ChestLungsAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -286,7 +286,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.09" minOccurs="0" maxOccurs="unbounded" id="eExam.HeartAssessment" >
+						<xs:element name="eExam.09" id="eExam.HeartAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -322,7 +322,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eExam.10" type="AbdominalExamFindingLocation" minOccurs="0" id="eExam.AbdominalAssessmentFindingLocation" >
+									<xs:element name="eExam.10" type="AbdominalExamFindingLocation" id="eExam.AbdominalAssessmentFindingLocation" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -340,7 +340,7 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eExam.11" minOccurs="0" maxOccurs="unbounded" id="eExam.AbdomenAssessment" >
+									<xs:element name="eExam.11" id="eExam.AbdomenAssessment" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -373,8 +373,8 @@
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
-						</xs:element>																							
-						<xs:element name="eExam.12" minOccurs="0" maxOccurs="unbounded" id="eExam.PelvisGenitourinaryAssessment" >
+						</xs:element>
+						<xs:element name="eExam.12" id="eExam.PelvisGenitourinaryAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -410,7 +410,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eExam.13" type="BackAndSpineAssessmentLocation" minOccurs="0" id="eExam.BackandSpineAssessmentFindingLocation" >
+									<xs:element name="eExam.13" type="BackAndSpineAssessmentLocation" id="eExam.BackandSpineAssessmentFindingLocation" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -428,7 +428,7 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eExam.14" minOccurs="0" maxOccurs="unbounded" id="eExam.BackandSpineAssessment" >
+									<xs:element name="eExam.14" id="eExam.BackandSpineAssessment" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -468,7 +468,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eExam.15" type="ExtremityAssessmentLocation" minOccurs="0" id="eExam.ExtremityAssessmentFindingLocation" >
+									<xs:element name="eExam.15" type="ExtremityAssessmentLocation" id="eExam.ExtremityAssessmentFindingLocation" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -486,7 +486,7 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eExam.16" minOccurs="0" maxOccurs="unbounded" id="eExam.ExtremitiesAssessment" >
+									<xs:element name="eExam.16" id="eExam.ExtremitiesAssessment" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -526,7 +526,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="eExam.17" type="EyesAssessmentLocation" minOccurs="0" id="eExam.EyeAssessmentFindingLocation" >
+									<xs:element name="eExam.17" type="EyesAssessmentLocation" id="eExam.EyeAssessmentFindingLocation" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -544,7 +544,7 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eExam.18" minOccurs="0" maxOccurs="unbounded" id="eExam.EyeAssessment" >
+									<xs:element name="eExam.18" id="eExam.EyeAssessment" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -578,7 +578,7 @@
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.19" minOccurs="0" maxOccurs="unbounded" id="eExam.MentalStatusAssessment" >
+						<xs:element name="eExam.19" id="eExam.MentalStatusAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -611,7 +611,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eExam.20" minOccurs="0" maxOccurs="unbounded" id="eExam.NeurologicalAssessment" >
+						<xs:element name="eExam.20" id="eExam.NeurologicalAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -770,19 +770,34 @@
 					<xs:documentation>Puncture/Stab Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3511047">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3511049">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3511051">
 				<xs:annotation>
 					<xs:documentation>Tenderness</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3511053">
+				<xs:annotation>
+					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3511055">
+				<xs:annotation>
+					<xs:documentation>Crush Injury</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3511057">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3511059">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3511061">
+				<xs:annotation>
+					<xs:documentation>Deformity</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -919,16 +934,6 @@
 					<xs:documentation>Puncture/Stab Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3514037">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3514039">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3514041">
 				<xs:annotation>
 					<xs:documentation>Tenderness Costovertebral Angle</xs:documentation>
@@ -942,6 +947,31 @@
 			<xs:enumeration value="3514045">
 				<xs:annotation>
 					<xs:documentation>Tenderness Paraspinous</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3514047">
+				<xs:annotation>
+					<xs:documentation>Gunshot Wound-Unknown Entry and Exit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3514049">
+				<xs:annotation>
+					<xs:documentation>Crush Injury</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3514051">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3514053">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3514055">
+				<xs:annotation>
+					<xs:documentation>Tenderness</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1014,6 +1044,11 @@
 			<xs:enumeration value="3513025">
 				<xs:annotation>
 					<xs:documentation>Sacral-Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3513027">
+				<xs:annotation>
+					<xs:documentation>Crush Injury</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1275,16 +1310,6 @@
 					<xs:documentation>Stridor-Right</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3508081">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3508083">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3508085">
 				<xs:annotation>
 					<xs:documentation>Tenderness-Left</xs:documentation>
@@ -1313,6 +1338,26 @@
 			<xs:enumeration value="3508095">
 				<xs:annotation>
 					<xs:documentation>Wheezing-Inspiratory - Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3508097">
+				<xs:annotation>
+					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3508099">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3508101">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3508103">
+				<xs:annotation>
+					<xs:documentation>Tenderness</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1466,6 +1511,21 @@
 			<xs:enumeration value="3518053">
 				<xs:annotation>
 					<xs:documentation>Sluggish</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3518055">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3518057">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3518059">
+				<xs:annotation>
+					<xs:documentation>Puncture/Stab Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1672,19 +1732,24 @@
 					<xs:documentation>Sensation-Normal</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3516071">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3516073">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3516075">
 				<xs:annotation>
 					<xs:documentation>Tenderness</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516077">
+				<xs:annotation>
+					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516079">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516081">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2046,14 +2111,29 @@
 					<xs:documentation>Puncture/Stab Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3506043">
+			<xs:enumeration value="3506047">
 				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
+					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3506045">
+			<xs:enumeration value="3506049">
 				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
+					<xs:documentation>Crush Injury</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3506051">
+				<xs:annotation>
+					<xs:documentation>Tenderness</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3506053">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3506055">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2193,19 +2273,29 @@
 					<xs:documentation>Puncture/Stab Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3512053">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3512055">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3512057">
 				<xs:annotation>
 					<xs:documentation>Tenderness</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3512059">
+				<xs:annotation>
+					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3512061">
+				<xs:annotation>
+					<xs:documentation>Crush Injury</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3512063">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3512065">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2315,14 +2405,29 @@
 					<xs:documentation>Puncture/Stab Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3505041">
+			<xs:enumeration value="3505045">
 				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
+					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3505043">
+			<xs:enumeration value="3505047">
 				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
+					<xs:documentation>Crush Injury</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3505049">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3505051">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3505053">
+				<xs:annotation>
+					<xs:documentation>Tenderness</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2556,16 +2661,6 @@
 					<xs:documentation>Subcutaneous Air</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3507041">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion with Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3507043">
-				<xs:annotation>
-					<xs:documentation>Swelling/Bruising/Contusion without Pain</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3507045">
 				<xs:annotation>
 					<xs:documentation>Tracheal Deviation-Left</xs:documentation>
@@ -2574,6 +2669,36 @@
 			<xs:enumeration value="3507047">
 				<xs:annotation>
 					<xs:documentation>Tracheal Deviation-Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3507049">
+				<xs:annotation>
+					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3507051">
+				<xs:annotation>
+					<xs:documentation>Crush Injury</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3507053">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3507055">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3507057">
+				<xs:annotation>
+					<xs:documentation>Deformity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3507059">
+				<xs:annotation>
+					<xs:documentation>Tenderness</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

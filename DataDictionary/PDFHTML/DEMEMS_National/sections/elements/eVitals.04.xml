@@ -2,7 +2,6 @@
 <element number="eVitals.04"  minOccurs="1"  maxOccurs="1"  dataTypeName="ECGType"  isNillable="Yes">
 <name>ECG Type</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The type of ECG associated with the cardiac rhythm.</definition>
 <v2Number></v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>STEMI</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document ECG results.</v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <ECGType baseType="string">
     <facet name="enumeration" value="3304001" annotation="3 Lead"/>

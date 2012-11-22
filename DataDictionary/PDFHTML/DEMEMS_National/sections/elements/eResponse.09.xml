@@ -2,7 +2,6 @@
 <element number="eResponse.09"  minOccurs="1"  maxOccurs="M"  dataTypeName="EMSUnitDelayReason"  isNillable="Yes">
 <name>Type of Response Delay</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The response delays, if any, of the EMS unit associated with the EMS event.</definition>
 <v2Number>E02_07</v2Number>
@@ -11,7 +10,6 @@
 <v3Comment>Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc to return to service.
 							<br/><br/>A response delay is any time delay that occurs from the time the unit is notified by dispatch (eTimes.03) to the time the unit arrived on scene (eTimes.06).</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSUnitDelayReason baseType="string">
     <facet name="enumeration" value="2209001" annotation="Crowd"/>

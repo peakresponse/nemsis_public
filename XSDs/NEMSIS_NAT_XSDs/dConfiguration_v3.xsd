@@ -41,7 +41,7 @@
 										<v2Number>D04_01</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasure></performanceMeasure>
-										<comment>The new 2009 Education Levels have been added. The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.
+										<comment>The new 2009 Education Levels have been added. The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
 										<v3Changes></v3Changes>
@@ -82,7 +82,7 @@
 										&lt;br/>&lt;br/>SNOMEDCT
 										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
 										&lt;br/>Product: Product - UMLS Metathesaurus
-										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
+										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
 										<v3Changes></v3Changes>
 									</nemsisTacDoc>
@@ -123,7 +123,7 @@
 										</performanceMeasuresGroup>
 										<comment>This data element should capture all of the medications permitted by the state for any/all levels of EMS personnel in the state.
 										This should be stored as an RxNorm (RXCUI) Code. This is associated with the EMS Agency State (dAgency.01).
-										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export. 
+										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. 
 										The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). 
 										Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
@@ -176,7 +176,7 @@
 										<comment>
 										This data element should capture all of the protocols permitted by the state for any/all levels of EMS personnel in the state.  This is associated with the EMS Agency State (dAgency.01).
 										&lt;br/>&lt;br/>States can add additional protocols to the list but the additional state protocols must map to these uniform codes. &lt;br/>&lt;br/>The list is defined by the NASEMSO State Medical Directors.
-										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
+										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
 										<v3Changes>Added to better identify states with statewide protocols and define state EMS capability and care.</v3Changes>
 									</nemsisTacDoc>
@@ -195,7 +195,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dConfiguration.ProcedureGroup" id="dConfiguration.ProcedureGroup" maxOccurs="unbounded">
+						<xs:element name="dConfiguration.ProcedureGroup" id="dConfiguration.AgencyProcedureGroup" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold info about Procedure information </xs:documentation>
 							</xs:annotation>
@@ -222,7 +222,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Using each certification level within the agency, indicate the approved procedures allowed utilizing dConfiguration.07 (EMS Agency Procedures).
-													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.													
+													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.													
 													</comment>
 													<v3Changes></v3Changes>
 												</nemsisTacDoc>
@@ -260,7 +260,7 @@
 										&lt;br/>&lt;br/>SNOMEDCT
 										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
 										&lt;br/>Product: Product - UMLS Metathesaurus
-										&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.															
+										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.															
 													</comment>
 													<v3Changes></v3Changes>
 												</nemsisTacDoc>
@@ -278,7 +278,7 @@
 								
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dConfiguration.MedicationGroup" id="dConfiguration.MedicationGroup" maxOccurs="unbounded">
+						<xs:element name="dConfiguration.MedicationGroup" id="dConfiguration.AgencyMedicationGroup" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold info about Medication information </xs:documentation>
 							</xs:annotation>
@@ -305,7 +305,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Using each certification level within the agency, indicate the approved medications allowed utilizing dConfiguration.09 (EMS Agency Medications).
-													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.
+													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 													</comment>
 													<v3Changes></v3Changes>
 												</nemsisTacDoc>
@@ -334,7 +334,7 @@
 													</performanceMeasuresGroup>
 													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02)
 since each EMS Agency Number may have different capabilities.
-&lt;br/>&lt;br/>The EMS agency should submit “Not Applicable” and “Nil” to the state system for the demographic export. The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). Reference the Demographic Dataset Submission Guide for further details.
+&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). Reference the Demographic Dataset Submission Guide for further details.
 &lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
 &lt;br/>&lt;br/>RxNorm
 &lt;br/>Website - http://uts.nlm.nih.gov
@@ -502,13 +502,13 @@ since each EMS Agency Number may have different capabilities.
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="AgencyCallSign">
-													
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="AgencyCallSign">
+										
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						
 					</xs:sequence>

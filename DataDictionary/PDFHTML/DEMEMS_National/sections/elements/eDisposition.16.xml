@@ -2,7 +2,6 @@
 <element number="eDisposition.16"  minOccurs="1"  maxOccurs="1"  dataTypeName="EMSTransportMethod"  isNillable="Yes">
 <name>EMS Transport Method</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>Transport method by this EMS Unit.</definition>
 <v2Number></v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Required if the patient is transported by EMS.</v3Comment>
 <v3Changes>Added to better describe Air and Ground Transport methods.</v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSTransportMethod baseType="string">
     <facet name="enumeration" value="4216001" annotation="Air Medical-Fixed Wing"/>

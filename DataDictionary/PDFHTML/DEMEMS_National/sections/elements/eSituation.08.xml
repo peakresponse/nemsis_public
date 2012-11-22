@@ -2,7 +2,6 @@
 <element number="eSituation.08"  minOccurs="1"  maxOccurs="1"  dataTypeName="ComplaintOrganSystem"  isNillable="Yes">
 <name>Chief Complaint Organ System</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The primary organ system of the patient injured or medically affected.</definition>
 <v2Number>E09_12</v2Number>
@@ -10,7 +9,6 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Altered to follow the anatomical organ systems as defined by general anatomy. Added Lymphatic/Immune; Merged Skin with Muscular-Skeletal. Changed OB/Gyn to Reproductive.<br/><br/>Retained non-organ system designations for Global/General and Behavioral/Psychiatric.<br/><br/>eSituation.02 (Possible Injury), eSituation.09 (Primary Symptom), eSituation.07 (Chief Complaint Anatomic Location), and eSituation.08 (Chief Complaint Organ System) are grouped together to form the EMS Reason for Encounter.</v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <ComplaintOrganSystem baseType="string">
     <facet name="enumeration" value="2808001" annotation="Behavioral/Psychiatric"/>

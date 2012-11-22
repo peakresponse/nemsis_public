@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org"  elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dPersonnel" id="dPersonnel.GeneralPersonnelInformation">
 		<xs:sequence>
-			<xs:element name="dPersonnel.PersonnelGroup" id="dPersonnel.PersonnelGroup" maxOccurs="unbounded"  minOccurs="0">
-			<xs:annotation><xs:documentation>Group tag to hold info about the personnel</xs:documentation></xs:annotation>
+			<xs:element name="dPersonnel.PersonnelGroup" id="dPersonnel.PersonnelGroup" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Group tag to hold info about the personnel</xs:documentation>
+				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dPersonnel.NameGroup" id="dPersonnel.NameGroup"  minOccurs="0">
+						<xs:element name="dPersonnel.NameGroup" id="dPersonnel.NameGroup" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>Group tag to hold info about the personnel's name</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="dPersonnel.01"  id="dPersonnel.EMSPersonnelsLastName" minOccurs="0"  nillable="true">
+									<xs:element name="dPersonnel.01" nillable="true" id="dPersonnel.EMSPersonnelsLastName" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -30,19 +32,19 @@
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="PersonLastName">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="PersonLastName">
+													<xs:attribute name="NV" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 									</xs:element>
-									<xs:element name="dPersonnel.02" id="dPersonnel.EMSPersonnelsFirstName" minOccurs="0" nillable="true">
+									<xs:element name="dPersonnel.02" nillable="true" id="dPersonnel.EMSPersonnelsFirstName" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -59,19 +61,19 @@
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="PersonFirstName">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="PersonFirstName">
+													<xs:attribute name="NV" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 									</xs:element>
-									<xs:element name="dPersonnel.03"  id="dPersonnel.EMSPersonnelsMiddleNameInitial" minOccurs="0" nillable="true">
+									<xs:element name="dPersonnel.03" nillable="true" id="dPersonnel.EMSPersonnelsMiddleNameInitial" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -88,22 +90,22 @@
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="PersonMiddleName">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="PersonMiddleName">
+													<xs:attribute name="NV" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dPersonnel.AddressGroup" id="dPersonnel.AddressGroup"  minOccurs="0">
+						<xs:element name="dPersonnel.AddressGroup" id="dPersonnel.AddressGroup" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>Group tag to hold info about the personnel's mailing address</xs:documentation>
 							</xs:annotation>
@@ -204,7 +206,6 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-
 						<xs:element name="dPersonnel.09" id="dPersonnel.EMSPersonnelsPhoneNumber" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
@@ -231,7 +232,6 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-
 						<xs:element name="dPersonnel.10" id="dPersonnel.EMSPersonnelsEmailAddress" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
@@ -316,7 +316,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dPersonnel.13" nillable="true" id="dPersonnel.EMSPersonnelsRace" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="dPersonnel.13" nillable="true" id="dPersonnel.EMSPersonnelsRace" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -432,7 +432,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dPersonnel.ImmunizationsGroup" id="dPersonnel.ImmunizationsGroup" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="dPersonnel.ImmunizationsGroup" id="dPersonnel.PersonnelImmunizationsGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold Immunization type and date </xs:documentation>
 							</xs:annotation>
@@ -475,10 +475,10 @@
 										</xs:annotation>
 									</xs:element>
 								</xs:sequence>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dPersonnel.20" id="dPersonnel.EMSPersonnelsForeignLanguageAbility" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="dPersonnel.20" id="dPersonnel.EMSPersonnelsForeignLanguageAbility" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -502,7 +502,7 @@
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
-						</xs:element> 
+						</xs:element>
 						<xs:element name="dPersonnel.21" type="PersonnelAgencyIDNumber" id="dPersonnel.EMSPersonnelsAgencyIDNumber" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
@@ -521,7 +521,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dPersonnel.LicensureGroup" id="dPersonnel.LicensureGroup" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="dPersonnel.LicensureGroup" id="dPersonnel.LicensureGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>Group to hold the licensure information</xs:documentation>
 							</xs:annotation>
@@ -597,14 +597,14 @@
 													<v2Number>D08_15</v2Number>
 													<usage>Recommended</usage>
 													<performanceMeasure/>
-													<comment>Added 2009 EMS Education Levels.&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
+													<comment>Added 2009 EMS Education Levels.&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.&lt;br/>&lt;br/>Some listed health care providers may not have an EMS certification/licensure number, however their level should be indicated from the list above and the state licensure number should be indicated in dPersonnel.23 - EMS Personnel's State's Licensure ID Number. </comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
-												<xs:extension base="StateCertificationLicensureLevels">
+												<xs:extension base="MemberLevel">
 													<xs:attribute name="NV" use="optional">
 														<xs:simpleType>
 															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -681,7 +681,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The National Registry number associated with the level of certification/licensure obtained through NREMT.</definition>
-										<v2Number></v2Number>
+										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasures/>
 										<comment/>
@@ -702,7 +702,7 @@
 										<v2Number/>
 										<usage>Optional</usage>
 										<performanceMeasures/>
-										<comment>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
+										<comment>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.</comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -833,7 +833,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dPersonnel.35" nillable="true" id="dPersonnel.EMSPersonnelsOtherJobResponsibilities" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="dPersonnel.35" nillable="true" id="dPersonnel.EMSPersonnelsOtherJobResponsibilities" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -905,7 +905,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="dPersonnel.38" type="StateCertificationLicensureLevels" id="dPersonnel.EMSProfessionalsPracticeLevel" minOccurs="0">
+									<xs:element name="dPersonnel.38" type="MemberLevel" id="dPersonnel.EMSProfessionalsPracticeLevel" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -917,7 +917,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 													<v2Number>D07_05</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasure/>
-													<comment>The category EMT-Intermediate includes EMS professionals with an “85” or “99” certification level.</comment>
+													<comment>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.</comment>
 													<v3Changes/>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -955,12 +955,36 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 		<xs:annotation>
 			<xs:documentation>The patient's race as defined by the OMB (US Office of Management and Budget)</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1513001"><xs:annotation><xs:documentation>American Indian or Alaska Native</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1513003"><xs:annotation><xs:documentation>Asian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1513005"><xs:annotation><xs:documentation>Black or African American</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1513007"><xs:annotation><xs:documentation>Hispanic or Latino</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1513009"><xs:annotation><xs:documentation>Native Hawaiian or Other Pacific Islander</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1513011"><xs:annotation><xs:documentation>White</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1513001">
+				<xs:annotation>
+					<xs:documentation>American Indian or Alaska Native</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1513003">
+				<xs:annotation>
+					<xs:documentation>Asian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1513005">
+				<xs:annotation>
+					<xs:documentation>Black or African American</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1513007">
+				<xs:annotation>
+					<xs:documentation>Hispanic or Latino</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1513009">
+				<xs:annotation>
+					<xs:documentation>Native Hawaiian or Other Pacific Islander</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1513011">
+				<xs:annotation>
+					<xs:documentation>White</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
@@ -968,10 +992,26 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 		<xs:annotation>
 			<xs:documentation>Personnel's Employment Status for this Agency.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1531001"><xs:annotation><xs:documentation>Full Time Paid Employee</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1531003"><xs:annotation><xs:documentation>Part Time Paid Employee</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1531005"><xs:annotation><xs:documentation>Volunteer</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1531007"><xs:annotation><xs:documentation>Neither an Employee Nor a Volunteer</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1531001">
+				<xs:annotation>
+					<xs:documentation>Full Time Paid Employee</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1531003">
+				<xs:annotation>
+					<xs:documentation>Part Time Paid Employee</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1531005">
+				<xs:annotation>
+					<xs:documentation>Volunteer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1531007">
+				<xs:annotation>
+					<xs:documentation>Neither an Employee Nor a Volunteer</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
@@ -980,15 +1020,51 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 			<xs:documentation>The individuals primary/main EMS role at the EMS Agency. This is the function which is performed the majority of the time for the EMS professional.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1534001"><xs:annotation><xs:documentation>Administrator/Manager</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534003"><xs:annotation><xs:documentation>Driver/Pilot</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534005"><xs:annotation><xs:documentation>Educator/Preceptor</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534007"><xs:annotation><xs:documentation>Fire Suppression</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534009"><xs:annotation><xs:documentation>First-Line Supervisor</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534011"><xs:annotation><xs:documentation>Law Enforcement</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534013"><xs:annotation><xs:documentation>Other (Not Listed)</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534015"><xs:annotation><xs:documentation>Patient Care Provider</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="1534017"><xs:annotation><xs:documentation>Rescue</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="1534001">
+				<xs:annotation>
+					<xs:documentation>Administrator/Manager</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534003">
+				<xs:annotation>
+					<xs:documentation>Driver/Pilot</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534005">
+				<xs:annotation>
+					<xs:documentation>Educator/Preceptor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534007">
+				<xs:annotation>
+					<xs:documentation>Fire Suppression</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534009">
+				<xs:annotation>
+					<xs:documentation>First-Line Supervisor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534011">
+				<xs:annotation>
+					<xs:documentation>Law Enforcement</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534013">
+				<xs:annotation>
+					<xs:documentation>Other (Not Listed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534015">
+				<xs:annotation>
+					<xs:documentation>Patient Care Provider</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1534017">
+				<xs:annotation>
+					<xs:documentation>Rescue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NationalRegistryNumber">
@@ -1004,14 +1080,45 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 			<xs:documentation>The national registration number associated with the level of certification/licensure obtained through NREMT</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-									   <xs:enumeration value="1529901"><xs:annotation><xs:documentation>2009 Advanced Emergency Medical Technician(AEMT)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1529003"><xs:annotation><xs:documentation>2009 Emergency Medical Responder (EMR)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1529005"><xs:annotation><xs:documentation>2009 Emergency Medical Technician</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1529007"><xs:annotation><xs:documentation>2009 Paramedic</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1529009"><xs:annotation><xs:documentation>EMT-Basic</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1529011"><xs:annotation><xs:documentation>EMT-Intermediate</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1529013"><xs:annotation><xs:documentation>EMT-Paramedic</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1529015"><xs:annotation><xs:documentation>First Responder</xs:documentation></xs:annotation>
+			<xs:enumeration value="1529901">
+				<xs:annotation>
+					<xs:documentation>2009 Advanced Emergency Medical Technician(AEMT)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529003">
+				<xs:annotation>
+					<xs:documentation>2009 Emergency Medical Responder (EMR)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529005">
+				<xs:annotation>
+					<xs:documentation>2009 Emergency Medical Technician</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529007">
+				<xs:annotation>
+					<xs:documentation>2009 Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529009">
+				<xs:annotation>
+					<xs:documentation>EMT-Basic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529011">
+				<xs:annotation>
+					<xs:documentation>EMT-Intermediate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529013">
+				<xs:annotation>
+					<xs:documentation>EMT-Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529015">
+				<xs:annotation>
+					<xs:documentation>First Responder</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
@@ -1029,42 +1136,185 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-									   <xs:enumeration value="1516001"><xs:annotation><xs:documentation>Agriculture and Natural Resources</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516003"><xs:annotation><xs:documentation>Architecture and Related Services</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516005"><xs:annotation><xs:documentation>Area, Ethnic, Cultural, and Gender Studies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516007"><xs:annotation><xs:documentation>Biological and Biomedical Sciences</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516009"><xs:annotation><xs:documentation>Business</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516011"><xs:annotation><xs:documentation>Communication, Journalism, and Related Programs</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516013"><xs:annotation><xs:documentation>Communications Technologies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516015"><xs:annotation><xs:documentation>Computer and Information Sciences</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516017"><xs:annotation><xs:documentation>Education</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516019"><xs:annotation><xs:documentation>Emergency Medical Services</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516021"><xs:annotation><xs:documentation>Engineering</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516023"><xs:annotation><xs:documentation>Engineering Technologies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516025"><xs:annotation><xs:documentation>English Language and Literature/Letters</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516027"><xs:annotation><xs:documentation>Family and Consumer Sciences/Human Sciences</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516029"><xs:annotation><xs:documentation>Fire Science</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516031"><xs:annotation><xs:documentation>Foreign Languages, Literatures, and Linguistics</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516033"><xs:annotation><xs:documentation>Health Professions and Related Clinical Sciences, Not Including Emergency Medical Services</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516035"><xs:annotation><xs:documentation>Legal Professions and Studies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516037"><xs:annotation><xs:documentation>Liberal Arts and Sciences, General Studies, and Humanities</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516039"><xs:annotation><xs:documentation>Library Science</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516041"><xs:annotation><xs:documentation>Mathematics and Statistics</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516043"><xs:annotation><xs:documentation>Military Technologies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516045"><xs:annotation><xs:documentation>Multi/Interdisciplinary Studies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516047"><xs:annotation><xs:documentation>Not Classified by Field of Study</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516049"><xs:annotation><xs:documentation>None</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516051"><xs:annotation><xs:documentation>Parks, Recreation, Leisure and Fitness Studies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516053"><xs:annotation><xs:documentation>Philosophy and Religious Studies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516055"><xs:annotation><xs:documentation>Physical Sciences and Science Technologies</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516057"><xs:annotation><xs:documentation>Precision Production</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516059"><xs:annotation><xs:documentation>Psychology</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516061"><xs:annotation><xs:documentation>Public Administration and Social Services</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516063"><xs:annotation><xs:documentation>Security and Protective Services, Not Including Fire Science</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516065"><xs:annotation><xs:documentation>Social Sciences and History</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516067"><xs:annotation><xs:documentation>Theology and Religious Vocations</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516069"><xs:annotation><xs:documentation>Transportation and Materials Moving</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1516071"><xs:annotation><xs:documentation>Visual and Performing Arts</xs:documentation></xs:annotation>
+			<xs:enumeration value="1516001">
+				<xs:annotation>
+					<xs:documentation>Agriculture and Natural Resources</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516003">
+				<xs:annotation>
+					<xs:documentation>Architecture and Related Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516005">
+				<xs:annotation>
+					<xs:documentation>Area, Ethnic, Cultural, and Gender Studies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516007">
+				<xs:annotation>
+					<xs:documentation>Biological and Biomedical Sciences</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516009">
+				<xs:annotation>
+					<xs:documentation>Business</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516011">
+				<xs:annotation>
+					<xs:documentation>Communication, Journalism, and Related Programs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516013">
+				<xs:annotation>
+					<xs:documentation>Communications Technologies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516015">
+				<xs:annotation>
+					<xs:documentation>Computer and Information Sciences</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516017">
+				<xs:annotation>
+					<xs:documentation>Education</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516019">
+				<xs:annotation>
+					<xs:documentation>Emergency Medical Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516021">
+				<xs:annotation>
+					<xs:documentation>Engineering</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516023">
+				<xs:annotation>
+					<xs:documentation>Engineering Technologies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516025">
+				<xs:annotation>
+					<xs:documentation>English Language and Literature/Letters</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516027">
+				<xs:annotation>
+					<xs:documentation>Family and Consumer Sciences/Human Sciences</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516029">
+				<xs:annotation>
+					<xs:documentation>Fire Science</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516031">
+				<xs:annotation>
+					<xs:documentation>Foreign Languages, Literatures, and Linguistics</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516033">
+				<xs:annotation>
+					<xs:documentation>Health Professions and Related Clinical Sciences, Not Including Emergency Medical Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516035">
+				<xs:annotation>
+					<xs:documentation>Legal Professions and Studies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516037">
+				<xs:annotation>
+					<xs:documentation>Liberal Arts and Sciences, General Studies, and Humanities</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516039">
+				<xs:annotation>
+					<xs:documentation>Library Science</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516041">
+				<xs:annotation>
+					<xs:documentation>Mathematics and Statistics</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516043">
+				<xs:annotation>
+					<xs:documentation>Military Technologies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516045">
+				<xs:annotation>
+					<xs:documentation>Multi/Interdisciplinary Studies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516047">
+				<xs:annotation>
+					<xs:documentation>Not Classified by Field of Study</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516049">
+				<xs:annotation>
+					<xs:documentation>None</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516051">
+				<xs:annotation>
+					<xs:documentation>Parks, Recreation, Leisure and Fitness Studies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516053">
+				<xs:annotation>
+					<xs:documentation>Philosophy and Religious Studies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516055">
+				<xs:annotation>
+					<xs:documentation>Physical Sciences and Science Technologies</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516057">
+				<xs:annotation>
+					<xs:documentation>Precision Production</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516059">
+				<xs:annotation>
+					<xs:documentation>Psychology</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516061">
+				<xs:annotation>
+					<xs:documentation>Public Administration and Social Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516063">
+				<xs:annotation>
+					<xs:documentation>Security and Protective Services, Not Including Fire Science</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516065">
+				<xs:annotation>
+					<xs:documentation>Social Sciences and History</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516067">
+				<xs:annotation>
+					<xs:documentation>Theology and Religious Vocations</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516069">
+				<xs:annotation>
+					<xs:documentation>Transportation and Materials Moving</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1516071">
+				<xs:annotation>
+					<xs:documentation>Visual and Performing Arts</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
@@ -1072,56 +1322,256 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 		<xs:annotation>
 			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget)</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="amh"><xs:annotation><xs:documentation>Amharic</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="ara"><xs:annotation><xs:documentation>Arabic</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="arm"><xs:annotation><xs:documentation>Armenian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="ben"><xs:annotation><xs:documentation>Bengali</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="crp"><xs:annotation><xs:documentation>Cajun (Creole and Pidgins)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="chi"><xs:annotation><xs:documentation>Chinese</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="hrv"><xs:annotation><xs:documentation>Croatian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="cze"><xs:annotation><xs:documentation>Czech</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="dan"><xs:annotation><xs:documentation>Danish</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="dut"><xs:annotation><xs:documentation>Dutch</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="fin"><xs:annotation><xs:documentation>Finnish</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="tai"><xs:annotation><xs:documentation>Formosan</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="fre"><xs:annotation><xs:documentation>French</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="cpf"><xs:annotation><xs:documentation>French Creole</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="ger"><xs:annotation><xs:documentation>German</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="gre"><xs:annotation><xs:documentation>Greek</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="guj"><xs:annotation><xs:documentation>Gujarati</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="heb"><xs:annotation><xs:documentation>Hebrew</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="hin"><xs:annotation><xs:documentation>Hindi (Urdu)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="hun"><xs:annotation><xs:documentation>Hungarian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="ilo"><xs:annotation><xs:documentation>Ilocano</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="itl"><xs:annotation><xs:documentation>Italian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="jpn"><xs:annotation><xs:documentation>Japanese</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="kor"><xs:annotation><xs:documentation>Korean</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="kro"><xs:annotation><xs:documentation>Kru</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="lit"><xs:annotation><xs:documentation>Lithuanian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="mal"><xs:annotation><xs:documentation>Malayalam</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="hmn"><xs:annotation><xs:documentation>Miao (Hmong)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="mkh"><xs:annotation><xs:documentation>Mon-Khmer (Cambodian)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="nav"><xs:annotation><xs:documentation>Navaho</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="nno"><xs:annotation><xs:documentation>Norwegian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="pan"><xs:annotation><xs:documentation>Panjabi</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="gem"><xs:annotation><xs:documentation>Pennsylvania Dutch (Germanic Other)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="per"><xs:annotation><xs:documentation>Persian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="pol"><xs:annotation><xs:documentation>Polish</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="por"><xs:annotation><xs:documentation>Portuguese</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="rum"><xs:annotation><xs:documentation>Romanian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="rus"><xs:annotation><xs:documentation>Russian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="smo"><xs:annotation><xs:documentation>Samoan</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="srp"><xs:annotation><xs:documentation>Serbo-Croatian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="slo"><xs:annotation><xs:documentation>Slovak</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="spa"><xs:annotation><xs:documentation>Spanish</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="swe"><xs:annotation><xs:documentation>Swedish</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="syr"><xs:annotation><xs:documentation>Syriac</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="tgl"><xs:annotation><xs:documentation>Tagalog</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="tha"><xs:annotation><xs:documentation>Thai (Laotian)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="tur"><xs:annotation><xs:documentation>Turkish</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="ukr"><xs:annotation><xs:documentation>Ukrainian</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="vie"><xs:annotation><xs:documentation>Vietnamese</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="yid"><xs:annotation><xs:documentation>Yiddish</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="amh">
+				<xs:annotation>
+					<xs:documentation>Amharic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ara">
+				<xs:annotation>
+					<xs:documentation>Arabic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="arm">
+				<xs:annotation>
+					<xs:documentation>Armenian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ben">
+				<xs:annotation>
+					<xs:documentation>Bengali</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="crp">
+				<xs:annotation>
+					<xs:documentation>Cajun (Creole and Pidgins)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="chi">
+				<xs:annotation>
+					<xs:documentation>Chinese</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hrv">
+				<xs:annotation>
+					<xs:documentation>Croatian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cze">
+				<xs:annotation>
+					<xs:documentation>Czech</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="dan">
+				<xs:annotation>
+					<xs:documentation>Danish</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="dut">
+				<xs:annotation>
+					<xs:documentation>Dutch</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fin">
+				<xs:annotation>
+					<xs:documentation>Finnish</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tai">
+				<xs:annotation>
+					<xs:documentation>Formosan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="fre">
+				<xs:annotation>
+					<xs:documentation>French</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="cpf">
+				<xs:annotation>
+					<xs:documentation>French Creole</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ger">
+				<xs:annotation>
+					<xs:documentation>German</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gre">
+				<xs:annotation>
+					<xs:documentation>Greek</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="guj">
+				<xs:annotation>
+					<xs:documentation>Gujarati</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="heb">
+				<xs:annotation>
+					<xs:documentation>Hebrew</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hin">
+				<xs:annotation>
+					<xs:documentation>Hindi (Urdu)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hun">
+				<xs:annotation>
+					<xs:documentation>Hungarian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ilo">
+				<xs:annotation>
+					<xs:documentation>Ilocano</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="itl">
+				<xs:annotation>
+					<xs:documentation>Italian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="jpn">
+				<xs:annotation>
+					<xs:documentation>Japanese</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kor">
+				<xs:annotation>
+					<xs:documentation>Korean</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="kro">
+				<xs:annotation>
+					<xs:documentation>Kru</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="lit">
+				<xs:annotation>
+					<xs:documentation>Lithuanian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mal">
+				<xs:annotation>
+					<xs:documentation>Malayalam</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="hmn">
+				<xs:annotation>
+					<xs:documentation>Miao (Hmong)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="mkh">
+				<xs:annotation>
+					<xs:documentation>Mon-Khmer (Cambodian)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="nav">
+				<xs:annotation>
+					<xs:documentation>Navaho</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="nno">
+				<xs:annotation>
+					<xs:documentation>Norwegian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pan">
+				<xs:annotation>
+					<xs:documentation>Panjabi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="gem">
+				<xs:annotation>
+					<xs:documentation>Pennsylvania Dutch (Germanic Other)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="per">
+				<xs:annotation>
+					<xs:documentation>Persian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="pol">
+				<xs:annotation>
+					<xs:documentation>Polish</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="por">
+				<xs:annotation>
+					<xs:documentation>Portuguese</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rum">
+				<xs:annotation>
+					<xs:documentation>Romanian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="rus">
+				<xs:annotation>
+					<xs:documentation>Russian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="smo">
+				<xs:annotation>
+					<xs:documentation>Samoan</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="srp">
+				<xs:annotation>
+					<xs:documentation>Serbo-Croatian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="slo">
+				<xs:annotation>
+					<xs:documentation>Slovak</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="spa">
+				<xs:annotation>
+					<xs:documentation>Spanish</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="swe">
+				<xs:annotation>
+					<xs:documentation>Swedish</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="syr">
+				<xs:annotation>
+					<xs:documentation>Syriac</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tgl">
+				<xs:annotation>
+					<xs:documentation>Tagalog</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tha">
+				<xs:annotation>
+					<xs:documentation>Thai (Laotian)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="tur">
+				<xs:annotation>
+					<xs:documentation>Turkish</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ukr">
+				<xs:annotation>
+					<xs:documentation>Ukrainian</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="vie">
+				<xs:annotation>
+					<xs:documentation>Vietnamese</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="yid">
+				<xs:annotation>
+					<xs:documentation>Yiddish</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
@@ -1129,22 +1579,86 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 		<xs:annotation>
 			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1515001"><xs:annotation><xs:documentation>No Schooling Completed</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515003"><xs:annotation><xs:documentation>Nursery School to 4th Grade</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515005"><xs:annotation><xs:documentation>5th Grade or 6th Grade</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515007"><xs:annotation><xs:documentation>7th Grade or 8th Grade</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515009"><xs:annotation><xs:documentation>9th Grade</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515011"><xs:annotation><xs:documentation>10th Grade</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515013"><xs:annotation><xs:documentation>11th Grade</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515015"><xs:annotation><xs:documentation>12th Grade, No Diploma</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515017"><xs:annotation><xs:documentation>High School Graduate-Diploma or the Equivalent (GED)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515019"><xs:annotation><xs:documentation>Some College Credit, but Less than 1 Year</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515021"><xs:annotation><xs:documentation>1 or More Years of College, No Degree</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515023"><xs:annotation><xs:documentation>Associate Degree</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515025"><xs:annotation><xs:documentation>Bachelor's Degree</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515027"><xs:annotation><xs:documentation>Master's Degree</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515029"><xs:annotation><xs:documentation>Professional Degree (i.e. MD, DDS, DVM, LLB, JD)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1515031"><xs:annotation><xs:documentation>Doctorate Degree (i.e. PhD, EdD)</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1515001">
+				<xs:annotation>
+					<xs:documentation>No Schooling Completed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515003">
+				<xs:annotation>
+					<xs:documentation>Nursery School to 4th Grade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515005">
+				<xs:annotation>
+					<xs:documentation>5th Grade or 6th Grade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515007">
+				<xs:annotation>
+					<xs:documentation>7th Grade or 8th Grade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515009">
+				<xs:annotation>
+					<xs:documentation>9th Grade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515011">
+				<xs:annotation>
+					<xs:documentation>10th Grade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515013">
+				<xs:annotation>
+					<xs:documentation>11th Grade</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515015">
+				<xs:annotation>
+					<xs:documentation>12th Grade, No Diploma</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515017">
+				<xs:annotation>
+					<xs:documentation>High School Graduate-Diploma or the Equivalent (GED)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515019">
+				<xs:annotation>
+					<xs:documentation>Some College Credit, but Less than 1 Year</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515021">
+				<xs:annotation>
+					<xs:documentation>1 or More Years of College, No Degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515023">
+				<xs:annotation>
+					<xs:documentation>Associate Degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515025">
+				<xs:annotation>
+					<xs:documentation>Bachelor's Degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515027">
+				<xs:annotation>
+					<xs:documentation>Master's Degree</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515029">
+				<xs:annotation>
+					<xs:documentation>Professional Degree (i.e. MD, DDS, DVM, LLB, JD)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1515031">
+				<xs:annotation>
+					<xs:documentation>Doctorate Degree (i.e. PhD, EdD)</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
@@ -1152,18 +1666,66 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 		<xs:annotation>
 			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string"><xs:enumeration value="1517001"><xs:annotation><xs:documentation>All-Terrain Vehicle (ATV)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517003"><xs:annotation><xs:documentation>Commercial Class A</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517005"><xs:annotation><xs:documentation>Commercial Class B</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517007"><xs:annotation><xs:documentation>Commercial Class C</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517009"><xs:annotation><xs:documentation>Motorcycle-Class M</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517011"><xs:annotation><xs:documentation>None</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517013"><xs:annotation><xs:documentation>Operator Class D (Normal)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517015"><xs:annotation><xs:documentation>Other (Not Listed)</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517017"><xs:annotation><xs:documentation>Pilot-Rotor Wing Air</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517019"><xs:annotation><xs:documentation>Pilot-Fixed Wing Air</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517021"><xs:annotation><xs:documentation>Snowmobile</xs:documentation></xs:annotation>
-			</xs:enumeration><xs:enumeration value="1517023"><xs:annotation><xs:documentation>Taxi and Livery Class E</xs:documentation></xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1517001">
+				<xs:annotation>
+					<xs:documentation>All-Terrain Vehicle (ATV)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517003">
+				<xs:annotation>
+					<xs:documentation>Commercial Class A</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517005">
+				<xs:annotation>
+					<xs:documentation>Commercial Class B</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517007">
+				<xs:annotation>
+					<xs:documentation>Commercial Class C</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517009">
+				<xs:annotation>
+					<xs:documentation>Motorcycle-Class M</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517011">
+				<xs:annotation>
+					<xs:documentation>None</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517013">
+				<xs:annotation>
+					<xs:documentation>Operator Class D (Normal)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517015">
+				<xs:annotation>
+					<xs:documentation>Other (Not Listed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517017">
+				<xs:annotation>
+					<xs:documentation>Pilot-Rotor Wing Air</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517019">
+				<xs:annotation>
+					<xs:documentation>Pilot-Fixed Wing Air</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517021">
+				<xs:annotation>
+					<xs:documentation>Snowmobile</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1517023">
+				<xs:annotation>
+					<xs:documentation>Taxi and Livery Class E</xs:documentation>
+				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>

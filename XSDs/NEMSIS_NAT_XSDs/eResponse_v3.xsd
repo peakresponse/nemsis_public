@@ -125,7 +125,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>“Interfacility Transfer” has been changed to ”Interfacility Transport. “Public Assistance/Other Not Listed” added for EMS 
+										<comment>"Interfacility Transfer" has been changed to "Interfacility Transport. "Public Assistance/Other Not Listed" added for EMS 
 										expanded scope events such as elderly assistance, injury prevention, public education, immunization programs, etc.</comment>
 										<v3Changes></v3Changes>
 									</nemsisTacDoc>
@@ -409,7 +409,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit's capabilities.  
-								&lt;br/>&lt;br/>For example, if a unit/crew is staffed with an EMT-Intermediate or EMT-Paramedic but the unit is either licensed or stocked at a BLS level the appropriate level of care is "BLS-Basic”. This is because the care provided to patients is limited to BLS skills.
+								&lt;br/>&lt;br/>For example, if a unit/crew is staffed with an EMT-Intermediate or EMT-Paramedic but the unit is either licensed or stocked at a BLS level the appropriate level of care is "BLS-Basic". This is because the care provided to patients is limited to BLS skills.
 							</comment>
 							<v3Changes></v3Changes>
 						</nemsisTacDoc>
@@ -882,7 +882,7 @@
 				<xs:annotation>
 					<xs:documentation>Other (Not Listed)</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 			<xs:enumeration value="2211015">
 				<xs:annotation>
 					<xs:documentation>Rendezvous Transport Unavailable</xs:documentation>
@@ -1128,6 +1128,11 @@
 					<xs:documentation>BLS-Intermediate</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="2215023">
+				<xs:annotation>
+					<xs:documentation>BLS-Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="2215009">
 				<xs:annotation>
 					<xs:documentation>ALS-AEMT</xs:documentation>
@@ -1162,7 +1167,7 @@
 				<xs:annotation>
 					<xs:documentation>Specialty Critical Care</xs:documentation>
 				</xs:annotation>
-			</xs:enumeration>			
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PrimaryRoleOfUnit">

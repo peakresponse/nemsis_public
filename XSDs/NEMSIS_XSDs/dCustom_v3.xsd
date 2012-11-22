@@ -134,8 +134,8 @@
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
-						</xs:element>	
-						<xs:element name="dCustomConfiguration.07" type="NV" id="dCustomConfiguration.eCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
+						</xs:element>
+						<xs:element name="dCustomConfiguration.07" type="NV" id="dCustomConfiguration.dCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -153,7 +153,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dCustomConfiguration.08" type="PN" id="dCustomConfiguration.eCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="dCustomConfiguration.08" type="PN" id="dCustomConfiguration.dCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -188,7 +188,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dCustomResults.01" id="dCustomConfiguration.dCustomDataElementResult" minOccurs="1" maxOccurs="unbounded" nillable="true">
+						<xs:element name="dCustomResults.01" nillable="true" id="dCustomConfiguration.dCustomDataElementResult" minOccurs="1" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>

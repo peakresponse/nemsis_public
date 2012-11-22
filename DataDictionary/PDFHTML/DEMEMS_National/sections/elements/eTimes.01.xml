@@ -2,7 +2,6 @@
 <element number="eTimes.01"  minOccurs="1"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="Yes">
 <name>PSAP Call Date/Time</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The date/time the phone rings (911 call to public safety answering point or other designated entity) requesting EMS services.</definition>
 <v2Number>E05_02</v2Number>
@@ -35,7 +34,6 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

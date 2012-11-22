@@ -3,19 +3,21 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dState">
 		<xs:sequence>
-			<xs:element name="dState.01" minOccurs="0" id="dState.StateRequiredElement" maxOccurs="unbounded">
-				<xs:annotation><xs:documentation>
-													<nemsisTacDoc>
-										<number>dState.01</number>
-										<name>State Required Element</name>
-										<national>No</national>
-										<state>No</state>
-										<definition>Indicates which elements are required by the state.</definition>
-										<v2Number></v2Number>
-										<usage>Optional</usage>
-										<comment></comment>
-										<v3Changes/>
-									</nemsisTacDoc></xs:documentation>
+			<xs:element name="dState.01" id="dState.dStateRequiredElement" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>dState.01</number>
+							<name>State Required Element</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Indicates which elements are required by the state.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<comment/>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>

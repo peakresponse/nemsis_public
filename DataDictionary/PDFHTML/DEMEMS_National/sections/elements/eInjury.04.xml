@@ -2,7 +2,6 @@
 <element number="eInjury.04"  minOccurs="1"  maxOccurs="M"  dataTypeName="VehicularInjuryIndicators"  isNillable="Yes">
 <name>Vehicular, Pedestrian, or Other Injury Risk Factor</name>
 <national>Yes</national>
-<deprecated></deprecated>
 <state>Yes</state>
 <definition>The kind of risk factor predictors present at the incident</definition>
 <v2Number>E10_04</v2Number>
@@ -11,17 +10,16 @@
 <v3Comment>Added additional mechanism or risk indicators based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3.</v3Comment>
 <v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
 							<br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
-<deprecatedComment></deprecatedComment>
 <restrictions>
   <VehicularInjuryIndicators baseType="string">
-    <facet name="enumeration" value="2904001" annotation="Auto v. Pedestrian/Bicyclist Thrown, Run Over, or &gt; 20 MPH Impact"/>
-    <facet name="enumeration" value="2904003" annotation="Fall Adults: &gt; 20 ft. (one story is equal to 10 ft.)"/>
-    <facet name="enumeration" value="2904005" annotation="Fall Children: &gt; 10 ft. or 2-3 times the height of the child"/>
+    <facet name="enumeration" value="2904001" annotation="Auto v. Pedestrian/Bicyclist Thrown, Run Over, or > 20 MPH Impact"/>
+    <facet name="enumeration" value="2904003" annotation="Fall Adults: > 20 ft. (one story is equal to 10 ft.)"/>
+    <facet name="enumeration" value="2904005" annotation="Fall Children: > 10 ft. or 2-3 times the height of the child"/>
     <facet name="enumeration" value="2904007" annotation="Crash Death in Same Passenger Compartment"/>
     <facet name="enumeration" value="2904009" annotation="Crash Ejection (partial or complete) from vehicle"/>
-    <facet name="enumeration" value="2904011" annotation="Crash Intrusion, including roof: &gt; 12 in. occupant site; &gt; 18 in. any site"/>
+    <facet name="enumeration" value="2904011" annotation="Crash Intrusion, including roof: > 12 in. occupant site; > 18 in. any site"/>
     <facet name="enumeration" value="2904013" annotation="Crash Vehicle Telemetry Data (AACN) Consistent with High Risk of Injury"/>
-    <facet name="enumeration" value="2904015" annotation="Motorcycle Crash &gt; 20 MPH"/>
+    <facet name="enumeration" value="2904015" annotation="Motorcycle Crash > 20 MPH"/>
   </VehicularInjuryIndicators>
 </restrictions>
 <attributes>

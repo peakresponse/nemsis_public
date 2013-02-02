@@ -498,12 +498,12 @@ since each EMS Agency Number may have different capabilities.
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dConfiguration.15" id="dConfiguration.PatientMonitoringCapabilitys" maxOccurs="unbounded">
+						<xs:element name="dConfiguration.15" id="dConfiguration.PatientMonitoringCapabilityies" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dConfiguration.15</number>
-										<name>Patient Monitoring Capability(s)</name>
+										<name>Patient Monitoring Capability(ies)</name>
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
@@ -531,12 +531,6 @@ since each EMS Agency Number may have different capabilities.
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<!--<xs:element name="dConfiguration.CallSignGroup" id="dConfiguration.CallSignGroup" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about Agency Call Sign and Level.</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>-->
 						<xs:element name="dConfiguration.16" id="dConfiguration.AgencyCallSign" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
@@ -589,8 +583,6 @@ since each EMS Agency Number may have different capabilities.
 						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-					<!--<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-					<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>-->
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>

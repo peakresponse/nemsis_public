@@ -134,7 +134,7 @@
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>
-						</xs:element>						
+						</xs:element>
 						<xs:element name="eCustomConfiguration.07" type="NV" id="eCustomConfiguration.eCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
@@ -185,7 +185,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eCustomResults.01" id="eCustomConfiguration.eCustomDataElementResult" minOccurs="1" maxOccurs="unbounded" nillable="true">
+						<xs:element name="eCustomResults.01" nillable="true" id="eCustomConfiguration.eCustomDataElementResult" minOccurs="1" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -211,7 +211,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eCustomResults.02" type="CustomResults" id="eCustomConfiguration.eCustomDataElementReference" minOccurs="1">
+						<xs:element name="eCustomResults.02" type="CorrelationID" id="eCustomConfiguration.eCustomDataElementReference" minOccurs="1">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -219,7 +219,7 @@
 										<name>Custom Element ID Referenced</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>References the CustomElementID attribute for dCustomConfiguration.CustomGroup</definition>
+										<definition>References the CustomElementID attribute for eCustomConfiguration.CustomGroup</definition>
 										<v2Number/>
 										<usage>Mandatory</usage>
 										<performanceMeasure/>
@@ -229,7 +229,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eCustomResults.03" type="CustomResults" id="eCustomConfiguration.eCustomCorrelationID" minOccurs="0">
+						<xs:element name="eCustomResults.03" type="CorrelationID" id="eCustomConfiguration.eCustomCorrelationID" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>

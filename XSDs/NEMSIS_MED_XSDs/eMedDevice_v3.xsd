@@ -480,31 +480,30 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			
-						<xs:element name="eMedDevice.18" id="eMedDevice.ePatient.DateofBirth" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>eMedDevice.18</number>
-										<refNumber>ePatient.17</refNumber>
-										<name>Date of Birth</name>
-										<national>No</national>
-										<state>No</state>
-										<definition>The patient's date of birth</definition>
-										<v2Number>E06_16</v2Number>
-										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="DateOfBirth"/>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
+			<xs:element name="eMedDevice.18" id="eMedDevice.ePatient.DateofBirth" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eMedDevice.18</number>
+							<refNumber>ePatient.17</refNumber>
+							<name>Date of Birth</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The patient's date of birth</definition>
+							<v2Number>E06_16</v2Number>
+							<usage>Optional</usage>
+							<performanceMeasure/>
+							<comment/>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="DateOfBirth"/>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="eMedDevice.VitalsGroup" id="eMedDevice.VitalsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the Vitals of the Patient</xs:documentation>
@@ -968,7 +967,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.BodyTempuratureGroup" id="eMedDevice.BodyTempuratureGroup" minOccurs="0">
+						<xs:element name="eMedDevice.BodyTemperatureGroup" id="eMedDevice.BodyTemperatureGroup" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>Group Tag to hold information about patient's body temperature </xs:documentation>
 							</xs:annotation>

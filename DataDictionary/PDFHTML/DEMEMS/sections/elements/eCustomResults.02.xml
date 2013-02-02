@@ -1,18 +1,18 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eCustomResults.02"  minOccurs="1"  maxOccurs="1"  dataTypeName="CustomResults"  isNillable="No">
+<element number="eCustomResults.02"  minOccurs="1"  maxOccurs="1"  dataTypeName="CorrelationID"  isNillable="No">
 <name>Custom Element ID Referenced</name>
 <national>No</national>
 <state>No</state>
-<definition>References the CustomElementID attribute for dCustomConfiguration.CustomGroup</definition>
+<definition>References the CustomElementID attribute for eCustomConfiguration.CustomGroup</definition>
 <v2Number></v2Number>
 <usage>Mandatory</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
 <restrictions>
-  <CustomResults baseType="string">
-    <facet name="minLength" value="1"/>
-    <facet name="maxLength" value="100000"/>
-  </CustomResults>
+  <CorrelationID baseType="string">
+    <facet name="minLength" value="0"/>
+    <facet name="maxLength" value="255"/>
+  </CorrelationID>
 </restrictions>
 </element>

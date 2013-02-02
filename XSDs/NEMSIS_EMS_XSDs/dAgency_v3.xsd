@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dAgency">
 		<xs:sequence>
-			<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID">			
+			<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -159,15 +159,15 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.06" id="dAgency.EMSAgencyServiceAreaCountys" maxOccurs="unbounded">
+						<xs:element name="dAgency.06" id="dAgency.EMSAgencyServiceAreaCountyies" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dAgency.06</number>
-										<name>EMS Agency Service Area County(s)</name>
+										<name>EMS Agency Service Area County(ies)</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The county(s) within each state for which the agency formally provides service.</definition>
+										<definition>The county(ies) within each state for which the agency formally provides service.</definition>
 										<v2Number>D01_04</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
@@ -179,8 +179,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. County codes are based on ISO/ANSI codes.
-													 It is a 5-digit code based on state (2-digit) and county (5-digit). &lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. County codes are based on ISO/ANSI codes. It is a 5-digit code based on state (2-digit) and county (3-digit). 
+										  &lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 										<v3Changes/>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -333,14 +333,14 @@
 					<xs:simpleContent>
 						<xs:extension base="TypeOfService">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-							<!--<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-							<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>-->
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
+						<!--<xs:attribute name="CurrentStatus" type="Status" use="required"/>
+							<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>-->
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
@@ -807,7 +807,7 @@
 							<name>Fire Department ID Number</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The state assigned Fire Department ID Number for EMS Agency(s) operating within a Fire Department.</definition>
+							<definition>The state assigned Fire Department ID Number for EMS Agency(ies) operating within a Fire Department.</definition>
 							<v2Number/>
 							<usage>Required</usage>
 							<comment>Fire Department ID was added to better integrate Fire Department EMS Agencies and linkage to other EMS related data systems such as NFIRS.</comment>
@@ -918,7 +918,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="FireDepartmentIDNumber">
 		<xs:annotation>
-			<xs:documentation>The state assigned Fire Department ID Number for EMS Agency(s) operating within a Fire Department</xs:documentation>
+			<xs:documentation>The state assigned Fire Department ID Number for EMS Agency(ies) operating within a Fire Department</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>

@@ -2,6 +2,7 @@
 <element number="eRecord.03"  minOccurs="1"  maxOccurs="1"  dataTypeName="SoftwareName"  isNillable="No">
 <name>Software Name</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The name of the application used to create this record.</definition>
 <v2Number>E01_03</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>This is the EMS Agency's software, not the state or other level software which electronically received the data from the local EMS Agency.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <SoftwareName baseType="string">
     <facet name="minLength" value="1"/>

@@ -53,7 +53,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -89,7 +89,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is the NEMSIS Version 3 method to document prior aid.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -130,7 +130,7 @@
 										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -162,9 +162,9 @@
 										<definition>The size of the equipment used in the procedure on the patient</definition>
 										<v2Number>E19_04</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Need business logic to require detail of size appropriate for the procedure.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -188,8 +188,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -224,8 +224,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -257,8 +257,8 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -286,9 +286,9 @@
 										<definition>The patient's response to the procedure</definition>
 										<v2Number>E19_08</v2Number>
 										<usage>Required</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -324,7 +324,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>For an incident that occurs in multiple states, the certification ID number the EMS agency would typically use is based on the EMS agency's state license specific to each EMS professional.  If the incident needs to be reported to each state, then the EMS Agency Number for each state should be submitted as well as the certification ID numbers for each EMS professional on the unit.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -349,7 +349,7 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The type (level) of EMS or Healthcare Professional performing the procedure. For procedures performed prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
-										<v2Number/>
+										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -389,9 +389,9 @@
 										<definition>The type of treatment authorization obtained</definition>
 										<v2Number>E19_10</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -407,9 +407,9 @@
 										<definition>The name of the authorizing physician ordering the procedure, if the order was provided by any manner other than protocol (standing order) in eProcedures.11</definition>
 										<v2Number>E19_11</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -425,9 +425,9 @@
 										<definition>The location of the vascular access site attempt on the patient, if applicable.</definition>
 										<v2Number>E19_12</v2Number>
 										<usage>Recommended</usage>
-										<performanceMeasure/>
+										
 										<comment>This is now associated with the Date/Time of the procedure and therefore changed to single choice. This allows the location to be documented with each procedure and attempt. If the vascular access has been established prior to EMS, this should be documented as such.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

@@ -575,7 +575,7 @@
 			<xs:documentation>Attribute group used to define the GPS Location of the data element.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[0-9]{1,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[0-9]{1,6})?)"/>
+			<xs:pattern value="(\+|-)?(90(\.[0]{1,6})?|([1-8][0-9]|[0-9])(\.[0-9]{1,6})?),(\+|-)?(180(\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\.[0-9]{1,6})?)"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Graphic">

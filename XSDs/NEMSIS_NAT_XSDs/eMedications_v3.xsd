@@ -52,7 +52,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -88,7 +88,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is the NEMSIS Version 3 method to document prior aid.</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -133,7 +133,7 @@ List of medications based on RxNorm (RXCUI) code.
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -173,9 +173,9 @@ List of medications based on RxNorm (RXCUI) code.
 													<definition>The dose or amount of the medication given to the patient</definition>
 													<v2Number>E18_05</v2Number>
 													<usage>Required</usage>
-													<performanceMeasure></performanceMeasure>
-													<comment></comment>
-													<v3Changes></v3Changes>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -202,9 +202,9 @@ List of medications based on RxNorm (RXCUI) code.
 													<definition>The unit of medication dosage given to patient</definition>
 													<v2Number>E18_06</v2Number>
 													<usage>Required</usage>
-													<performanceMeasure></performanceMeasure>
-													<comment></comment>
-													<v3Changes></v3Changes>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -234,9 +234,9 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The patient's response to the medication</definition>
 										<v2Number>E18_07</v2Number>
 										<usage>Required</usage>
-										<performanceMeasure></performanceMeasure>
-										<comment></comment>
-										<v3Changes></v3Changes>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -263,9 +263,9 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS</definition>
 										<v2Number>E18_08</v2Number>
 										<usage>Required</usage>
-										<performanceMeasure></performanceMeasure>
-										<comment></comment>
-										<v3Changes></v3Changes>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -292,9 +292,9 @@ List of medications based on RxNorm (RXCUI) code.
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The type (level) of EMS or Healthcare Professional Administering the Medication. For medications administered prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Required</usage>
-										<performanceMeasure></performanceMeasure>
+										
 										<comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.
 										&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 										</comment>

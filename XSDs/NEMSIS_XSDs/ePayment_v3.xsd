@@ -23,8 +23,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -57,13 +57,13 @@
 										<definition>Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter.</definition>
 										<v2Number>E07_02</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Data Element Name changed from Certificate of Medical Necessity to Physician Certification Statement. The PCS statement and documentation of medical necessity is a requirement of the Centers for Medicare &amp; Medicaid Services. The circumstances are defined in 42 CFR 410.40 (d)(2) and (d)(3). http://www.cms.gov/
 										&lt;br/>&lt;br/>A PCS is required for the following non-emergency transport:
 										&lt;br/>1) Non-Emergency Repetitive Scheduled
 										&lt;br/>2) Non Emergency Non-Repetitive-Scheduled
 										&lt;br/>3) Non Emergency Services - Non Scheduled - Under direct care of a physician</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -77,9 +77,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The date the Physician Certification Statement was signed</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Added to assist in billing documentation. Associated with ePayment.02:  Physician Certification Statement.
 										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
@@ -106,7 +106,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -120,11 +120,11 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The reason for EMS transport noted on the Physician Certification Statement</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Added to assist in billing documentation.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -145,11 +145,11 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The type of healthcare provider who signed the Physician Certification Statement</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -163,11 +163,11 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The last name of the healthcare provider who signed the Physician Certification Statement.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Added to assist in billing documentation.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -181,11 +181,11 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The first name of the healthcare provider who signed the Physician Certification Statement.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Added to assist in billing documentation.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -202,9 +202,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>An indication of whether the patient's current residence is within the EMS agency service area.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to assist in billing documentation.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -227,9 +227,9 @@
 										<definition>The ID Number of the patient's insurance company.</definition>
 										<v2Number>E07_03</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -243,9 +243,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The name of the patient's insurance company.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -261,9 +261,9 @@
 										<definition>The billing priority or order for the insurance company.</definition>
 										<v2Number>E07_04</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -279,9 +279,9 @@
 										<definition>The mailing address of the Insurance Company</definition>
 										<v2Number>E07_05</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -304,10 +304,10 @@
 										<definition>The insurance company's city or township</definition>
 										<v2Number>E07_06</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -323,9 +323,9 @@
 										<definition>The insurance company's state, territory, or province, or District of Columbia.</definition>
 										<v2Number>E07_07</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -341,10 +341,10 @@
 										<definition>The insurance company's ZIP Code</definition>
 										<v2Number>E07_08</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -358,9 +358,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The insurance company's country</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 										<v3Changes>Added to better document international addresses.</v3Changes>
 									</nemsisTacDoc>
@@ -378,9 +378,9 @@
 										<definition>The ID number or name of the patient's insurance group</definition>
 										<v2Number>E07_09</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -396,9 +396,9 @@
 										<definition>The ID number of the patient's insurance policy</definition>
 										<v2Number>E07_10</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -414,9 +414,9 @@
 										<definition>The last (family) name of the person insured by the insurance company.</definition>
 										<v2Number>E07_11</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -432,9 +432,9 @@
 										<definition>The first (given) name of the person insured by the insurance company</definition>
 										<v2Number>E07_12</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -450,9 +450,9 @@
 										<definition>The middle name, if any, of the person insured by the insurance company.</definition>
 										<v2Number>E07_13</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -468,9 +468,9 @@
 										<definition>The relationship of the patient to the primary insured person</definition>
 										<v2Number>E07_14</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -496,9 +496,9 @@
 										<definition>The last (family) name of the patient's closest relative or guardian</definition>
 										<v2Number>E07_18</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -514,9 +514,9 @@
 										<definition>The first (given) name of the patient's closest relative or guardian</definition>
 										<v2Number>E07_19</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -532,9 +532,9 @@
 										<definition>The middle name/initial, if any, of the closest patient's relative or guardian.</definition>
 										<v2Number>E07_20</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -550,10 +550,10 @@
 										<definition>The home street address of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_21</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
 										</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -576,9 +576,9 @@
 										<definition>The home city of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_22</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -594,9 +594,9 @@
 										<definition>The home state of the patient's closest relative or guardian</definition>
 										<v2Number>E07_23</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -612,10 +612,10 @@
 										<definition>The home ZIP Code of the patient's closest relative or guardian</definition>
 										<v2Number>E07_24</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -629,9 +629,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The home country of the patient's closest relative or guardian</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
 </comment>
 										<v3Changes>Added to improve international compatibility.</v3Changes>
@@ -650,9 +650,9 @@
 										<definition>The phone number of the patient's closest relative or guardian</definition>
 										<v2Number>E07_25</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -676,9 +676,9 @@
 										<definition>The relationship of the patient's closest relative or guardian</definition>
 										<v2Number>E07_26</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -703,9 +703,9 @@
 										<definition>The patient's employers Name</definition>
 										<v2Number>E07_27</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -721,10 +721,10 @@
 										<definition>The street address of the patient's employer</definition>
 										<v2Number>E07_28</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
 										</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -747,9 +747,9 @@
 										<definition>The city of the patient's employer</definition>
 										<v2Number>E07_29</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on GNIS Civil Code or Populated Place Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -765,9 +765,9 @@
 										<definition>The state of the patient's employer</definition>
 										<v2Number>E07_30</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -783,10 +783,10 @@
 										<definition>The ZIP Code of the patient's employer</definition>
 										<v2Number>E07_31</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -800,9 +800,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The country of the patient's employer</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
 </comment>
 										<v3Changes>Added to improve international compatibility.</v3Changes>
@@ -821,9 +821,9 @@
 										<definition>The employer's primary phone number.</definition>
 										<v2Number>E07_32</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -849,9 +849,9 @@
 							<definition>The urgency in which the EMS agency began to mobilize resources for this EMS encounter.</definition>
 							<v2Number>E07_33</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>This is for billing documentation.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -865,11 +865,11 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>Documentation of the patient's transport need based on mobility and/or physical capability.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to better justify the medical necessity of the transport. Based on CMS 42 CFR Ch IV (10-1-02 Edition) &amp; 410.40 (d) medical necessity requirement (1)</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -890,11 +890,11 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>Documentation to show the patient care provided to the patient met the Specialty Care Transport Base Rate requirements.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve Specialty Care Transport billing justification. In accordance with CMS requirements Specialty Care Transport (SCT): ""Additional training" means the specific additional training that a State requires a paramedic to complete in order to qualify to furnish specialty care to a critically ill or injured patient during an SCT." </comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -915,12 +915,12 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>Indicator about the type of transport of the patient.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve billing with electronic claims using X12. The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport".  The Accredited Standards Committee X12 organization maintains the standard.  See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:  
 http://ushik.org/dr.ui.drData_Page?system=mdr&amp;Search=xxKEYIDxx&amp;KeyOrgID=18&amp;KeyRID=24821000&amp;Referer=DataElement </comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -934,13 +934,13 @@ http://ushik.org/dr.ui.drData_Page?system=mdr&amp;Search=xxKEYIDxx&amp;KeyOrgID=
 							<national>No</national>
 							<state>No</state>
 							<definition>The CMS Ambulance Transport Reason Code for the transport.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve billing with electronic claims using the ASC X12 Standard. 
 The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport". The Accredited Standards Committee X12 organization maintains the standard. See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:
 http://ushik.ahrq.gov/ViewItemDetails?system=mdr&amp;itemKey=21826000 </comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -961,9 +961,9 @@ http://ushik.ahrq.gov/ViewItemDetails?system=mdr&amp;itemKey=21826000 </comment>
 							<national>No</national>
 							<state>No</state>
 							<definition>Free text description providing the purpose of the round trip EMS transport based on CR109 field for CMS.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve billing documentation for CMS X12 based transactions.
 &lt;br/>&lt;br/>This element should be documented when ePayment.43 (Ambulance Transport Code) code = X (Round Trip).
 &lt;br/>&lt;br/>Ambulance providers can use this field to provide additional information regarding the circumstances of a round trip transport or for other medical 
@@ -983,9 +983,9 @@ necessity documentation.
 							<national>No</national>
 							<state>No</state>
 							<definition>Free Text Documentation providing the reason for use of a stretcher in the EMS patient transport.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve billing using CMS X12 transactions based on CR110.
 							Ambulance providers can use this field to provide additional information regarding the patient's condition that warranted the use of a stretcher or 
 							for other medical necessity documentation.
@@ -1004,9 +1004,9 @@ necessity documentation.
 							<national>No</national>
 							<state>No</state>
 							<definition>Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve billing documentation and justification.</comment>
 							<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
 						</nemsisTacDoc>
@@ -1029,9 +1029,9 @@ necessity documentation.
 							<national>No</national>
 							<state>No</state>
 							<definition>The mileage to the closest hospital facility from the scene. Documented only if the patient was transported to a facility farther away than the closest hospital.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to clarify billing mileage when the patient is not taken to the closest facility.</comment>
 							<v3Changes>Added for improved billing documentation.</v3Changes>
 						</nemsisTacDoc>
@@ -1047,9 +1047,9 @@ necessity documentation.
 							<national>No</national>
 							<state>No</state>
 							<definition>Documentation that the patient required an ALS assessment and it was performed.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve billing justification</comment>
 							<v3Changes>Added to improve billing justification</v3Changes>
 						</nemsisTacDoc>
@@ -1074,8 +1074,8 @@ necessity documentation.
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1113,7 +1113,7 @@ necessity documentation.
 							<comment>Code list is represented in ICD-10-CM Codes: 
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1136,7 +1136,7 @@ necessity documentation.
 							<definition>The CMS Ambulance Fee Schedule Transportation and Air Medical Transportation Indicators are used to better describe why it was necessary for the patient to be transported in a particular way or circumstance.</definition>
 							<v2Number>E07_37</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Name changed from Condition Code Modifier to CMS Transportation Indicator</comment>
 							<v3Changes>Name changed from Condition Code Modifier to CMS Transportation Indicator</v3Changes>
 						</nemsisTacDoc>
@@ -1159,10 +1159,10 @@ necessity documentation.
 							<national>No</national>
 							<state>No</state>
 							<definition>Prior authorization code provided by the insurance carrier/payer.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
+							
+							
 							<v3Changes>Added to improve billing documentation.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -1177,9 +1177,9 @@ necessity documentation.
 							<national>No</national>
 							<state>No</state>
 							<definition>The Payer who has provided the Prior Authorization Code.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to document Prior Authorization Codes for an EMS Transport.</comment>
 							<v3Changes>Added to improve billing documentation.</v3Changes>
 						</nemsisTacDoc>
@@ -1201,9 +1201,9 @@ necessity documentation.
 										<national>No</national>
 										<state>No</state>
 										<definition>The name of the supply used on the patient by the EMS Crew during the EMS event.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Added to track EMS supplies for billing.  The list of supplies would be created by the EMS Agency.  There is no master list of supply items defined.</comment>
 										<v3Changes>Added to track EMS supplies for billing.</v3Changes>
 									</nemsisTacDoc>
@@ -1219,9 +1219,9 @@ necessity documentation.
 										<national>No</national>
 										<state>No</state>
 										<definition>The number of the specific supply item used on the patient by the EMS Crew during the EMS event.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Associated with ePayment.56 (Supply Item Used Name). Used to better track supply items for billing</comment>
 										<v3Changes>Added to track EMS supplies for billing.</v3Changes>
 									</nemsisTacDoc>

@@ -60,7 +60,7 @@
 														<national>Yes</national>
 														<state>Yes</state>
 														<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
-														<v2Number/>
+														
 														<usage>Mandatory</usage>
 														<performanceMeasuresGroup>
 															<performanceMeasure>Airway</performanceMeasure>
@@ -72,7 +72,7 @@
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
 														<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-														<v3Changes/>
+														
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -98,7 +98,7 @@
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
 														<comment>This is the primary identifier for the entire Demographic Section.  Each of the Demographic sections must be associated with an EMS Agency Number. An EMS Agency can have more than one Agency Number within a state. This reflects the ability for an EMS Agency to have a different number for each service type or location (based on state implementation).</comment>
-														<v3Changes/>
+														
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -130,7 +130,7 @@
 														</performanceMeasuresGroup>
 														<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
 																	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-														<v3Changes/>
+														
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>

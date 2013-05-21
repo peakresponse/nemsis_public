@@ -2,6 +2,7 @@
 <element number="eMedications.02"  minOccurs="1"  maxOccurs="1"  dataTypeName="YesNoValues"  isNillable="Yes">
 <name>Medication Administered Prior to this Unit's EMS Care</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>Indicates that the medication administration which is documented was administered prior to this EMS units care</definition>
 <v2Number>E18_02</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>This is the NEMSIS Version 3 method to document prior aid.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <YesNoValues baseType="string">
     <facet name="enumeration" value="9923001" annotation="No"/>

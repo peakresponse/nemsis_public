@@ -23,8 +23,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -46,9 +46,9 @@
 										<definition>The name of the vendor, manufacturer, and developer who designed the application that created this record.</definition>
 										<v2Number>E01_02</v2Number>
 										<usage>Mandatory</usage>
-										<performanceMeasure/>
+										
 										<comment>This is required to document the software used to generate the Patient Care Report. This is not the last software which aggregated/stored the Patient Care Report after it was sent from another software.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -64,9 +64,9 @@
 										<definition>The name of the application used to create this record.</definition>
 										<v2Number>E01_03</v2Number>
 										<usage>Mandatory</usage>
-										<performanceMeasure/>
+										
 										<comment>This is the EMS Agency's software, not the state or other level software which electronically received the data from the local EMS Agency.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -82,9 +82,9 @@
 										<definition>The version of the application used to create this record.</definition>
 										<v2Number>E01_04</v2Number>
 										<usage>Mandatory</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

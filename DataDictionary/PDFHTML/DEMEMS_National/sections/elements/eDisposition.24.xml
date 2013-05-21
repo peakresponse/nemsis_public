@@ -2,6 +2,7 @@
 <element number="eDisposition.24"  minOccurs="1"  maxOccurs="1"  dataTypeName="DestinationPrearrivalActivation"  isNillable="Yes">
 <name>Destination Team Pre-Arrival Activation</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>Activation by EMS of the appropriate destination healthcare facility team. The activation should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document performance measure for acute time dependent illness and injury systems of care.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DestinationPrearrivalActivation baseType="string">
     <facet name="enumeration" value="4224001" annotation="No"/>

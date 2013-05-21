@@ -53,7 +53,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -89,7 +89,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is the NEMSIS Version 3 method to document prior aid.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -126,8 +126,8 @@
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -159,12 +159,12 @@
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>The type of ECG associated with the cardiac rhythm.</definition>
-													<v2Number/>
+													
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
+													
 													<v3Changes>Added to better document ECG results.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -190,7 +190,7 @@
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>The method of ECG interpretation.</definition>
-													<v2Number/>
+													
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>STEMI</performanceMeasure>
@@ -243,7 +243,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Required for ACS-Field Triage and other patient scoring systems.</comment>
-													<v3Changes/>
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -276,9 +276,9 @@
 													<definition>The patient's diastolic blood pressure.</definition>
 													<v2Number>E14_05</v2Number>
 													<usage>Recommended</usage>
-													<performanceMeasure/>
+													
 													<comment>Diastolic blood pressure pattern allows for the following values:&lt;br/>1) A number 0 through 500 &lt;br/>2) P&lt;br/>3) p</comment>
-													<v3Changes/>
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -311,9 +311,9 @@
 													<definition>Indication of method of blood pressure measurement.</definition>
 													<v2Number>E14_06</v2Number>
 													<usage>Required</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -338,10 +338,10 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The patient's mean arterial pressure.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
+													
+													
 													<v3Changes>Added for additional patient monitoring capability.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -376,7 +376,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Pulse Rate and Electronic Monitor Rate have been merged with an additional data element for Method of Heart Rate Measurement.</comment>
-													<v3Changes/>
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -407,9 +407,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor).</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 													<comment>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</comment>
 													<v3Changes>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Changes>
 												</nemsisTacDoc>
@@ -438,8 +438,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -472,9 +472,9 @@
 										<definition>The clinical rhythm of the patient's pulse.</definition>
 										<v2Number>E14_10</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -498,8 +498,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -532,9 +532,9 @@
 										<definition>The patient's respiratory effort.</definition>
 										<v2Number>E14_12</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -569,8 +569,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									    <PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -601,10 +601,10 @@
 										<national>No</national>
 										<state>Yes</state>
 										<definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
-										<v2Number/>
+										
 										<usage>Recommended</usage>
-										<performanceMeasure/>
-										<comment/>
+										
+										
 										<v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
 									    <PNNil>Yes</PNNil>
 									</nemsisTacDoc>
@@ -642,8 +642,8 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									    <PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -691,7 +691,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Definitions now based on the National Trauma Data Standard (NTDS).</comment>
-													<v3Changes/>
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -854,7 +854,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Can be documented or calculated from EVitals.19 (GCS-Eye), EVitals.20 (GCS-Verbal), and EVitals.21 (GCS-Motor).</comment>
-													<v3Changes/>
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -899,8 +899,8 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Pediatric</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -933,9 +933,9 @@
 													<definition>The method used to obtain the patient's body temperature.</definition>
 													<v2Number>E14_21</v2Number>
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -963,7 +963,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Definition changed to indicate highest level of responsiveness.</comment>
-										<v3Changes/>
+										
 										<!--<PNNil>Yes</PNNil>-->
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -1008,7 +1008,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>The Pain Score can be obtained from several pain measurement tools or pain scale types (eVitals.28). The pain scale type used should have a numeric value associated with each diagram as appropriate. If the pain scale type utilizes multiple indicators/categories the total should be calculated and entered for the pain score associated with the patient assessment. </comment>
-													<v3Changes/>
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1039,10 +1039,10 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The type of pain scale used.</definition>
-													<v2Number/>
+													
 													<usage>Recommended</usage>
-													<performanceMeasure/>
-													<comment/>
+													
+													
 													<v3Changes>Added to better document the patient's pain level.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1082,8 +1082,8 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Stroke</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1114,12 +1114,12 @@
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>The type of stroke pain scale used.</definition>
-													<v2Number/>
+													
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Stroke</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
+													
 													<v3Changes>Added to include additional detail on the stroke scale used.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1155,7 +1155,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Name changed from Thrombolytic Screen</comment>
-										<v3Changes/>
+										
 									    <PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -1188,9 +1188,9 @@
 										<definition>The patient's total APGAR score (0-10).</definition>
 										<v2Number>E14_26</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Recommended to be taken at 1 and 5 minutes after the infants birth</comment>
-										<v3Changes/>
+										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -1221,8 +1221,8 @@
 										<performanceMeasuresGroup>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>

@@ -2,6 +2,7 @@
 <element number="dAgency.08"  minOccurs="1"  maxOccurs="M"  dataTypeName="ZIP"  isNillable="Yes">
 <name>EMS Agency Service Area ZIP Codes</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The ZIP codes for the EMS Agency's service area.</definition>
 <v2Number></v2Number>
@@ -11,6 +12,7 @@
 													<br/><br/>Zip Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
 <br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ZIP baseType="string">
     <facet name="pattern" value="[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"/>

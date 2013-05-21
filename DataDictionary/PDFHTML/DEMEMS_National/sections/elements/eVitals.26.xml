@@ -2,6 +2,7 @@
 <element number="eVitals.26"  minOccurs="1"  maxOccurs="1"  dataTypeName="PatientsHighestLevelResponsiveness"  isNillable="Yes">
 <name>Level of Responsiveness (AVPU)</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's highest level of responsiveness.</definition>
 <v2Number>E14_22</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Definition changed to indicate highest level of responsiveness.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <PatientsHighestLevelResponsiveness baseType="string">
     <facet name="enumeration" value="3326001" annotation="Alert"/>

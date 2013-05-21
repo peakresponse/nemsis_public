@@ -24,7 +24,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Added Pandemic/Epidemic/Outbreak.&lt;br/>Added Automated Crash Notification&lt;br/>Added Healthcare Professional Admission&lt;br/>Added Interfacility/Evaluation/Transfer&lt;br/>- Other entries expanded based on current national EMD Dispatch List</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -49,8 +49,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -86,8 +86,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -101,7 +101,7 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
 							<comment>This element can be used to identify the dispatch center (Primary or Secondary Public Safety Answering Point - PSAP) that dispatches the EMS agency.  If the EMS agency is able to populate the Patient Care Report (PCR) with CAD specific details (times, incident address information, crew information, EMD, etc) the name or ID of the dispatch center should be documented.</comment>
 							<v3Changes>Added to the dataset to assist in identifying the CAD / dispatch center providing information to the EMS agency and ePCR when there are multiple dispatch centers sending resources to the same EMS incident.</v3Changes>
@@ -118,7 +118,7 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The actual, apparent, or potential acuity of the patient's condition as determined through information obtained during the EMD process.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
 							<comment>
 The use of priority and acuity values vary by EMS agency.  Some systems may utilize fewer than four priority levels and some more.  The use of four priority levels is to capture the majority and allow for the inclusion of the NHTSA National EMS Core Content definitions for patient acuity, specifically: Critical, Emergent, and Lower Acuity.
@@ -142,7 +142,7 @@ For EMS Agencies and CAD / EMD systems utilizing Alpha-Echo, Omega levels for de
 Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
 &lt;br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf 							
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

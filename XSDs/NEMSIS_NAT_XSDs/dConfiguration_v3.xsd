@@ -17,14 +17,14 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The state associated with the state certification/licensure levels.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Mandatory</usage>
-										<performanceMeasure></performanceMeasure>
+										
 										<comment>Associated with the state (dAgency.01 - EMS Agency State). 
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -40,11 +40,11 @@
 										<definition>All of the potential levels of certification/licensure for EMS personnel recognized by the state.</definition>
 										<v2Number>D04_01</v2Number>
 										<usage>Mandatory</usage>
-										<performanceMeasure></performanceMeasure>
+										
 										<comment>The new 2009 Education Levels have been added. The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -65,7 +65,7 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>A list of all of the procedures permitted by the EMS Agency's licensing state.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -84,7 +84,7 @@
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -110,7 +110,7 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -162,7 +162,7 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>A list of all of the protocols permitted by the state.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -224,7 +224,7 @@
 													<comment>Using each certification level within the agency, indicate the approved procedures allowed utilizing dConfiguration.07 (EMS Agency Procedures).
 													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.													
 													</comment>
-													<v3Changes></v3Changes>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -262,7 +262,7 @@
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.															
 													</comment>
-													<v3Changes></v3Changes>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -307,7 +307,7 @@
 													<comment>Using each certification level within the agency, indicate the approved medications allowed utilizing dConfiguration.09 (EMS Agency Medications).
 													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 													</comment>
-													<v3Changes></v3Changes>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -342,7 +342,7 @@ since each EMS Agency Number may have different capabilities.
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
-													<v3Changes></v3Changes>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -381,7 +381,7 @@ since each EMS Agency Number may have different capabilities.
 										<comment>This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
 										&lt;div style="font-size:6px">&amp;nbsp;&lt;/div>State and local entities  can add additional protocols to the list but the additional protocols must map to these uniform codes. 
 										&lt;div style="font-size:6px">&amp;nbsp;&lt;/div>The list is defined by the NASEMSO State Medical Directors.</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -402,11 +402,11 @@ since each EMS Agency Number may have different capabilities.
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Special training or services provided by the EMS Agency and available to the EMS service area/community.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Mandatory</usage>
-										<performanceMeasure></performanceMeasure>
-										<comment></comment>
-										<v3Changes></v3Changes>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -428,7 +428,7 @@ since each EMS Agency Number may have different capabilities.
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Indication as to whether Emergency Medical Dispatch is provided to the EMS Agency's service area.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -440,7 +440,7 @@ since each EMS Agency Number may have different capabilities.
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Added to better document the implementation of Emergency Medical Dispatch. Associated with each EMS Agency and the specific EMS Agency Number (dAgency.02).</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -460,7 +460,7 @@ since each EMS Agency Number may have different capabilities.
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -472,7 +472,7 @@ since each EMS Agency Number may have different capabilities.
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Added to identify the patient monitoring capability of the EMS Agency. Associated with each EMS Agency Number (dAgency.02) since each EMS Agency Number may have a different capability within each EMS Agency. Other patient monitoring capability may exist but NEMSIS Version 3 only includes these specific capabilities.</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -496,8 +496,8 @@ since each EMS Agency Number may have different capabilities.
 										<v2Number>D04_02</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasures></performanceMeasures>
-										<comment></comment>
-										<v3Changes></v3Changes>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

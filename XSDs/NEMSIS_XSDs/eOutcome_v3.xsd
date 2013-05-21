@@ -27,7 +27,7 @@
 							&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
 							&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -67,7 +67,7 @@
 							&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
 							&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -98,9 +98,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Type of External Report or Record associated with the Report/ID Number.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>This data element is a merge based on the following Version 2.2.1 elements:  E22_03, E22_04, E22_05, and E22_06</comment>
 										<v3Changes>Added to allow documentation of external record and identification numbers.</v3Changes>
 									</nemsisTacDoc>
@@ -116,9 +116,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The ID or Number of the external report or record in eOutcome.03.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>This data element is a merge based on the following Version 2.2.1 elements:  E22_03, E22_04, E22_05, and E22_06</comment>
 										<v3Changes>Added to allow documentation of external record and identification numbers.</v3Changes>
 									</nemsisTacDoc>
@@ -134,11 +134,11 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The type of external report/registry that was documented as "other" in eOutcome.03</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>This element should be used only when other-report or other-registry is used eOutcome.03.</comment>
-										<performanceMeasure/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -156,10 +156,10 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The patient's reason for seeking care or attention, expressed in the terms as close as possible to those used by the patient or responsible informant.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
+							
+							
 							<v3Changes>Added to better evaluate EMS patient care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -174,10 +174,10 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The first recorded Emergency Department Systolic Blood Pressure.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
+							
+							
 							<v3Changes>Added to better evaluate the outcome of EMS care.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -192,9 +192,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The documented cause of injury from the emergency department record.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
 							&lt;br/>&lt;br/>ICD-10-CM 
 							&lt;br/>Website - http://uts.nlm.nih.gov  
@@ -213,9 +213,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The procedures performed on the patient during the emergency department visit.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. 
 							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
 							The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. 
@@ -243,9 +243,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The practitioner's description of the condition or problem for which Emergency Department services were provided.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus</comment>
@@ -270,9 +270,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The date and time the patient was admitted to the hospital.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 							&lt;table  cellspacing="2">&lt;tr>&lt;td>							
 							&lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -312,9 +312,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>Hospital Procedures performed on the patient during the hospital admission.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. 
 							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
 							The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. 
@@ -342,9 +342,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The hospital diagnosis of the patient associated with the hospital admission.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
 								&lt;br/>Website - http://uts.nlm.nih.gov  
 								&lt;br/>Product - UMLS Metathesaurus</comment>
@@ -369,10 +369,10 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The total number of patient days in any ICU (including all ICU episodes).</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
+							
+							
 							<v3Changes>Added to better measure patient outcomes.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -387,10 +387,10 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The total number of patient days spend on a mechanical ventilator (excluding time in the operating room).</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
+							
+							
 							<v3Changes>Added to better measure and define patient outcome.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -405,9 +405,9 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The date the patient was discharged from the hospital.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 							&lt;table  cellspacing="2">&lt;tr>&lt;td>							
 							&lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -447,11 +447,11 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The patient's functional status at time of hospital discharge.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

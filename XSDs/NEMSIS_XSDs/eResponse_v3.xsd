@@ -33,7 +33,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>The EMS Agency Number in eResponse.01 can auto-populate from dAgency.02 EMS Agency Number in the demographic section.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -47,10 +47,10 @@
 										<national>No</national>
 										<state>Yes</state>
 										<definition>EMS Agency Name</definition>
-										<v2Number/>
+										
 										<usage>Recommended</usage>
 										<comment>Added to better identify the EMS Agency associated with the EMS event.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -80,9 +80,9 @@
 							<definition>The incident number assigned by the 911 Dispatch System</definition>
 							<v2Number>E02_02</v2Number>
 							<usage>Required</usage>
-							<performanceMeasure/>
+							
 							<comment>This number can be used to associate multiple EMS responses, dispatch information, and other information to the same EMS event or patient.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -109,9 +109,9 @@
 							<definition>The internal EMS response number which is unique for each EMS Vehicle's (Unit) response to an incident within an EMS Agency.</definition>
 							<v2Number>E02_03</v2Number>
 							<usage>Required</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -155,7 +155,7 @@
 										</performanceMeasuresGroup>
 										<comment>"Interfacility Transfer" has been changed to "Interfacility Transport. "Public Assistance/Other Not Listed" added for EMS 
 										expanded scope events such as elderly assistance, injury prevention, public education, immunization programs, etc.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -169,11 +169,11 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The main reason the EMS Unit is on Standby as the Primary Type of Service for the EMS event.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Added to document the reason for "Standby" when populated in eResponse.05 (Type of Service Requested). This information will assist in administrative analysis of EMS service delivery, special event coverage, etc.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -202,7 +202,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Supervisor clarified to Administrative Only. If the Supervisor is responding to assist, that would be considered Non-Transport. Transport separated into Air and Ground.  In Version 2 there was no way to identify Air Transport.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -228,7 +228,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>A dispatch delay is any time delay that occurs from the time of PSAP call (eTimes.01) to the time the unit is notified by dispatch (eTimes.03).</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -268,7 +268,7 @@
 							<comment>Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc to return to service.
 							&lt;br/>&lt;br/>A response delay is any time delay that occurs from the time the unit is notified by dispatch (eTimes.03) to the time the unit arrived on scene (eTimes.06). 
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -306,7 +306,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>A scene delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) to the time the unit left the scene (eTimes.09). </comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -347,7 +347,7 @@
 							Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc.
 							&lt;br/>&lt;br/>A transport delay is any time delay that occurs from the time the unit left the scene (eTimes.09) to the time the patient arrived at the destination (eTimes.10).
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -383,7 +383,7 @@
 								&lt;br/>&lt;br/>If a patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the patient arrived at the destination (eTimes.10) until the time the unit is back in service (eTimes.13) or unit back at the home location (eTimes15) [whichever is the greater of the two times].
 								&lt;br/>&lt;br/>If no patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) until the unit is back in service (eTimes.13) or the unit back at the home location (eTimes.15) [whichever is the greater of the two times].							
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -412,7 +412,7 @@
 							<v2Number>E02_11</v2Number>
 							<usage>Mandatory</usage>
 							<comment>This is recommended to be the State Vehicle Permit Number if unique to the vehicle.  If the vehicle is not licensed by the state, this should be a unique number only associated with a specific vehicle. This element should be populated from dVehicle.01 -  Unit/Vehicle Number.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -442,7 +442,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The level of care (BLS or ALS) the unit is able to provide based on the units' treatment capabilities for this EMS response.</definition>
-							<v2Number/>
+							
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -456,7 +456,7 @@
 							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit's capabilities.  
 								&lt;br/>&lt;br/>For example, if a unit/crew is staffed with an EMT-Intermediate or EMT-Paramedic but the unit is either licensed or stocked at a BLS level the appropriate level of care is "BLS-Basic". This is because the care provided to patients is limited to BLS skills.
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -477,7 +477,7 @@
 							&lt;br/>2. dFacility.02 Facility Name
 							&lt;br/>3. dFacility.03 Facility Code
 							&lt;br/>4. dFacility.15 Facility GPS Location</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -500,7 +500,7 @@
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
 										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places
 						  </comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -514,10 +514,10 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The US National Grid Coordinates for the EMS Vehicle's Dispatch Location.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
 							<comment>Standard found at www.fgdc.gov/usng. Used by the EMS components of US Governmental entities such as national parks and military agencies.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -534,7 +534,7 @@
 							<v2Number>E02_16</v2Number>
 							<usage>Optional</usage>
 							<comment>If a mileage counter is being used instead of an odometer, this value would be 0.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -551,7 +551,7 @@
 							<v2Number>E02_17</v2Number>
 							<usage>Optional</usage>
 							<comment>If using a counter, this is the mileage traveled from dispatch to the scene starting from 0.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -568,7 +568,7 @@
 							<v2Number>E02_18</v2Number>
 							<usage>Optional</usage>
 							<comment>If using a counter, this is the mileage traveled from dispatch to the patient's transport destination starting from 0.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -584,8 +584,8 @@
 							<definition>If using a counter, this is the mileage traveled beginning with dispatch through the transport of the patient to their destination and ending when back in service, starting from 0. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16</definition>
 							<v2Number>E02_19</v2Number>
 							<usage>Optional</usage>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -611,7 +611,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Information now split between eResponse.23 (Response Mode to Scene) and eResponse.24 (Additional Response Mode Descriptors)</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -625,7 +625,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The documentation of response mode techniques used for this EMS response.</definition>
-							<v2Number/>
+							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -637,7 +637,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Descriptors have been added to better describe the EMS Response.  This includes information on whether the EMS event was schedule or unscheduled.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

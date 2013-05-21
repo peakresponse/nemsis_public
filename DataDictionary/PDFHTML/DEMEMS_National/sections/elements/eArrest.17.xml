@@ -2,6 +2,7 @@
 <element number="eArrest.17"  minOccurs="1"  maxOccurs="M"  dataTypeName="CardiacRhythm"  isNillable="Yes">
 <name>Cardiac Rhythm on Arrival at Destination</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's cardiac rhythm upon delivery or transfer to the destination</definition>
 <v2Number>E11_11</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>This element needs to be documented when the patient has been in cardiac or respiratory arrest and transported to a healthcare facility to show the change in patient condition, if any. The cardiac rhythm list has been updated to be the same for eVitals.03 (Cardiac Rhythm Electrocardiography (ECG)). They are using the common type: CardiacRhythm. ST segment changes consistent (or not consistent) with STEMI criteria should be documented as Ischemia in the appropriate location</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CardiacRhythm baseType="string">
     <facet name="enumeration" value="9901001" annotation="Agonal/Idioventricular"/>

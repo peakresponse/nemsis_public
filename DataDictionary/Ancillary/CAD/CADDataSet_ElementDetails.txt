@@ -29,7 +29,7 @@
 'CADDataSet'|'element'|'eCad.20'|'EMS Unit Call Sign'|'E02_12'|''|''|'Optional'|'0'|'1'|''|'EMSUnitCallSign'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
 'CADDataSet'|'element'|'eCad.21'|'Level of Care of This Unit'|''|''|''|'Optional'|'0'|'1'|''|'UnitLevelOfCare'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'CADDataSet'|'element'|'eCad.22'|'Vehicle Dispatch Location'|'E02_13'|''|''|'Optional'|'0'|'1'|''|'VehicleDispatchLocation'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
-'CADDataSet'|'element'|'eCad.23'|'Vehicle Dispatch GPS Location'|'E02_15'|''|''|'Optional'|'0'|'1'|''|'GPSLocation'|''|''|''|''|''|''|''|''|''|''|''|''|''|'(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[0-9]{1,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[0-9]{1,6})?)'|
+'CADDataSet'|'element'|'eCad.23'|'Vehicle Dispatch GPS Location'|'E02_15'|''|''|'Optional'|'0'|'1'|''|'GPSLocation'|''|''|''|''|''|''|''|''|''|''|''|''|''|'(\+|-)?(90(\.[0]{1,6})?|([1-8][0-9]|[0-9])(\.[0-9]{1,6})?),(\+|-)?(180(\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\.[0-9]{1,6})?)'|
 'CADDataSet'|'element'|'eCad.24'|'Vehicle Dispatch US National Grid Location'|''|''|''|'Optional'|'0'|'1'|''|'USNG'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}'|
 'CADDataSet'|'element'|'eCad.25'|'Beginning Odometer Reading of Responding Vehicle'|'E02_16'|''|''|'Optional'|'0'|'1'|''|'EMSMileageOdometer'|''|''|''|''|''|''|''|''|''|''|''|'8'|'2'|''|
 'CADDataSet'|'element'|'eCad.26'|'On-Scene Odometer Reading of Responding Vehicle'|'E02_17'|''|''|'Optional'|'0'|'1'|''|'EMSMileageOdometer'|''|''|''|''|''|''|''|''|''|''|''|'8'|'2'|''|
@@ -86,7 +86,7 @@
 'CADDataSet'|'element'|'eCad.77'|'Triage Classification for MCI Patient'|''|''|''|'Optional'|'0'|'1'|''|'TriageClassification'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'CADDataSet'|'element'|'eCad.78'|'Incident Location Type'|'E08_07'|''|''|'Optional'|'0'|'1'|''|'IncidentLocationType'|''|''|''|''|''|''|''|''|''|''|''|''|''|'Y92\.[0-9]{1,3}'|
 'CADDataSet'|'element'|'eCad.79'|'Incident Facility Code'|'E08_08'|''|''|'Optional'|'0'|'1'|''|'IncidentFacilityCode'|''|''|''|''|''|'2'|'50'|''|''|''|''|''|''|''|
-'CADDataSet'|'element'|'eCad.80'|'Scene GPS Location'|'E08_10'|''|''|'Optional'|'0'|'1'|''|'GPSLocation'|''|''|''|''|''|''|''|''|''|''|''|''|''|'(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[0-9]{1,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[0-9]{1,6})?)'|
+'CADDataSet'|'element'|'eCad.80'|'Scene GPS Location'|'E08_10'|''|''|'Optional'|'0'|'1'|''|'GPSLocation'|''|''|''|''|''|''|''|''|''|''|''|''|''|'(\+|-)?(90(\.[0]{1,6})?|([1-8][0-9]|[0-9])(\.[0-9]{1,6})?),(\+|-)?(180(\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\.[0-9]{1,6})?)'|
 'CADDataSet'|'element'|'eCad.81'|'Scene US National Grid Coordinates'|''|''|''|'Optional'|'0'|'1'|''|'USNG'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}'|
 'CADDataSet'|'element'|'eCad.82'|'Incident Facility or Location Name'|''|''|''|'Optional'|'0'|'1'|''|'IncidentFacilityName'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
 'CADDataSet'|'element'|'eCad.83'|'Mile Post or Major Roadway'|''|''|''|'Optional'|'0'|'1'|''|'MilePostOrMajorRoadway'|''|''|''|''|''|'2'|'35'|''|''|''|''|''|''|''|
@@ -107,7 +107,7 @@
 'CADDataSet'|'element'|'eCad.98'|'Destination County'|'E20_06'|''|''|'Optional'|'0'|'1'|''|'ANSICountyCode'|''|''|''|''|''|''|''|'5'|''|''|''|''|''|''|
 'CADDataSet'|'element'|'eCad.99'|'Destination ZIP Code'|'E20_07'|''|''|'Optional'|'0'|'1'|''|'ZIP'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]'|
 'CADDataSet'|'element'|'eCad.100'|'Destination Country'|''|''|''|'Optional'|'0'|'1'|''|'ANSICountryCode'|''|''|''|''|''|''|''|'2'|''|''|''|''|''|''|
-'CADDataSet'|'element'|'eCad.101'|'Destination GPS Location'|'E20_08'|''|''|'Optional'|'0'|'1'|''|'GPSLocation'|''|''|''|''|''|''|''|''|''|''|''|''|''|'(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[0-9]{1,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[0-9]{1,6})?)'|
+'CADDataSet'|'element'|'eCad.101'|'Destination GPS Location'|'E20_08'|''|''|'Optional'|'0'|'1'|''|'GPSLocation'|''|''|''|''|''|''|''|''|''|''|''|''|''|'(\+|-)?(90(\.[0]{1,6})?|([1-8][0-9]|[0-9])(\.[0-9]{1,6})?),(\+|-)?(180(\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\.[0-9]{1,6})?)'|
 'CADDataSet'|'element'|'eCad.102'|'Disposition Location US National Grid Coordinates'|''|''|''|'Optional'|'0'|'1'|''|'USNG'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}'|
 'CADDataSet'|'element'|'eCad.103'|'Number of Patients Transported in this EMS Unit'|''|''|''|'Optional'|'0'|'1'|''|'NumberOfPatients'|''|''|''|''|''|''|''|''|'1'|'100'|''|''|''|''|
 'CADDataSet'|'element'|'eCad.104'|'EMS Transport Method'|''|''|''|'Optional'|'0'|'1'|''|'EMSTransportMethod'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|

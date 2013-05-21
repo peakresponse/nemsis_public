@@ -12,11 +12,11 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The unique ID for the patient within the Agency</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>This has been inserted to allow each patient to be tracked across multiple PCRs within an EMS Agency.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -38,9 +38,9 @@
 										<definition>The patient's last (family) name</definition>
 										<v2Number>E06_01</v2Number>
 										<usage>Recommended</usage>
-										<performanceMeasure/>
+										
 										<comment>Pertinent negatives accepted with option of "Unable to Complete" or "Refused".</comment>
-										<v3Changes/>
+										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -73,9 +73,9 @@
 										<definition>The patient's first (given) name</definition>
 										<v2Number>E06_02</v2Number>
 										<usage>Recommended</usage>
-										<performanceMeasure/>
+										
 										<comment>Pertinent negatives accepted with option of "Unable to Complete" or "Refused".</comment>
-										<v3Changes/>
+										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -108,9 +108,9 @@
 										<definition>The patient's middle name, if any</definition>
 										<v2Number>E06_03</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -129,11 +129,11 @@
 							<definition>The patient's home mailing or street address</definition>
 							<v2Number>E06_04</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>This is a CMS standard.  According to the Medicare Claims Processing Manual, Chapter 15 - Ambulance, Ambulance suppliers bill using CMS-1500 form or CMS-1450 form for institution-based ambulance providers.  This standard adheres to CMS-1500 and 1450.
 								&lt;br/>&lt;br/>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -156,9 +156,9 @@
 							<definition>The patient's home city or township or residence</definition>
 							<v2Number>E06_05</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -185,7 +185,7 @@
 							</performanceMeasuresGroup>
 							<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
 							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -222,7 +222,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>The ANSI Code Selection by text but stored as ANSI code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -260,7 +260,7 @@
 							</performanceMeasuresGroup>
 							<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -287,9 +287,9 @@
 							<definition>The country in which the patient lives.</definition>
 							<v2Number>E06_09</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -303,7 +303,7 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The census tract in which the patient lives</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -322,7 +322,7 @@
 										49035101400
 										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html 										
 										</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -338,9 +338,9 @@
 							<definition>The patient's social security number</definition>
 							<v2Number>E06_10</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -365,8 +365,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -403,7 +403,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -446,8 +446,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -483,8 +483,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -514,9 +514,9 @@
 							<definition>The patient's date of birth</definition>
 							<v2Number>E06_16</v2Number>
 							<usage>Recommended</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -550,9 +550,9 @@
 							<v2Number>E06_17</v2Number>
 							<usage>Optional</usage>
 							<comment>This element contains an attribute to define what type of phone number is being documented i.e. Fax, Home, Mobile, Pager, and Work.
-							<performanceMeasure/>
+							
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -574,11 +574,11 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The email address of the patient</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Added to improve follow-up and billing communication.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -602,9 +602,9 @@
 							<definition>The state that issued the drivers license</definition>
 							<v2Number>E06_18</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Stored as the ANSI State Code. &lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -620,9 +620,9 @@
 							<definition>The patient's drivers license number</definition>
 							<v2Number>E06_19</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

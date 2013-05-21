@@ -14,7 +14,7 @@
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 <restrictions>
   <GPSLocation baseType="string">
-    <facet name="pattern" value="(\+|-)?([9][0]|([1-8][0-9]|[0-9]|90)(\.[0-9]{1,6})?),(\+|-)?([1][8][0]|([1][0-7][0-9]|[1-9][0-9]|[0-9]|90)(\.[0-9]{1,6})?)"/>
+    <facet name="pattern" value="(\+|-)?(90(\.[0]{1,6})?|([1-8][0-9]|[0-9])(\.[0-9]{1,6})?),(\+|-)?(180(\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\.[0-9]{1,6})?)"/>
   </GPSLocation>
 </restrictions>
 </element>

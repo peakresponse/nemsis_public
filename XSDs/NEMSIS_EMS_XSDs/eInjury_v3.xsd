@@ -23,7 +23,7 @@
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus
 							</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -54,8 +54,8 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -81,7 +81,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma.</definition>
-							<v2Number/>
+							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
@@ -154,9 +154,9 @@
 							<definition>The area or location of initial impact on the vehicle based on 12-point clock diagram.</definition>
 							<v2Number>E10_05</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>The front of the vehicle is 12, passenger (right) side is 3, rear is 6, etc.&lt;br/>&lt;br/>Based on MMUCC via areas(s) of impact &amp; FARS coding manual clock diagram.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -172,9 +172,9 @@
 							<definition>The seat row location of the vehicle at the time of the crash with the front seat numbered as 1</definition>
 							<v2Number>E10_06</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>MMUCC P6 data element</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -194,7 +194,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>MMUCC P7 data element used as baseline information.  Data element expanded for added definition in non-vehicular settings.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -222,9 +222,9 @@
 							<definition>Indication of Airbag Deployment</definition>
 							<v2Number>E10_09</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>MMUCC P8 data element baseline was used for this element.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -247,9 +247,9 @@
 							<definition>The distance in feet the patient fell, measured from the lowest point of the patient to the ground</definition>
 							<v2Number>E10_10</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>Classify same level falls as 0 feet</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -263,10 +263,10 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>Documentation of the use of OSHA required protective equipment used by the patient at the time of injury.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
+							
+							
 							<v3Changes>Added to better document personal protection equipment used by the patient associated with an injury.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -294,9 +294,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The agency providing the Automated Collision Notification (ACN) Data.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Provider Name. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN) Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -312,9 +312,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Incident ID.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Incident ID. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -330,9 +330,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Call Back Phone Number (US Only).</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Call Back Number. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -356,9 +356,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Incident Date and Time.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Incident Date and Time. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group. 
 										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 									&lt;table  cellspacing="2">&lt;tr>&lt;td>							
@@ -399,9 +399,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification GPS Location.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Location (combining Latitude and Longitude). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.										
 										  The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
@@ -424,9 +424,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Vehicle Body Type.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Body Type. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -442,9 +442,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Vehicle Manufacturer (e.g. General Motors, Ford, BMW).</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Manufacturer. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -460,9 +460,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Vehicle Make (e.g. Cadillac, Ford, BMW).</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Make. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -478,9 +478,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Vehicle Model (e.g. Escalade, Taurus, X6M).</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Model. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -496,9 +496,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Vehicle Model Year (e.g. 2010).</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Year. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -514,9 +514,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Indication of Multiple Impacts associated with the collision.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Multiple Impacts. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -532,9 +532,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Delta Velocity (Delta V) force associated with the crash.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Delta Velocity. The force of impact based on the change in velocity over the duration of the crash pulse. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -559,12 +559,12 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification of the High Probability of Injury.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
+										
 										<!--Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.-->
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -580,9 +580,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Principal Direction of Force (PDOF).</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  PDOF. Principal direction of the force of the impact to nearest o'clock reading.  Values are 1 through 12 (e.g. 12=Frontal collision, 3=passenger side (right) collision, etc). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -598,9 +598,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Automated Collision Notification Indication that the Vehicle Rolled Over.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Based on Vehicular Emergency Data Set:  Rollover. Indicates if the vehicle rolled over during the collision/event (e.g. True=Rollover, False=No Rollover). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
@@ -622,9 +622,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The Automated Collision Notification Indication of the Occupant(s) Seat Location(s) within the vehicle.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 													<comment>Based on Vehicular Emergency Data Set:  Seat - Multiple entry for each seats data. Indicates seatbelt and seat sensor data for individual seat position in the vehicle. These elements come from passenger vehicle. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 													<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 												</nemsisTacDoc>
@@ -645,9 +645,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>Indication if seat is occupied based on seat sensor data.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 													<comment>Based on Vehicular Emergency Data Set:  Occupied - Associated with each seat. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 													<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 												</nemsisTacDoc>
@@ -663,9 +663,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The Automated Collision Notification Indication of Seatbelt use by the occupant(s).</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 													<comment>Based on Vehicular Emergency Data Set:  Belt Fastened - Associated with each Seat. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 													<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 												</nemsisTacDoc>
@@ -681,9 +681,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The Automated Collision Notification Indication of Airbag Deployment.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 													<comment>Based on Vehicular Emergency Data Set:  Deployed - Associated with each seat. Indicates if airbag is deployed. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 													<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 												</nemsisTacDoc>

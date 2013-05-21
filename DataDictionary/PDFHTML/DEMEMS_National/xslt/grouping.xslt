@@ -12,7 +12,9 @@
         .header {width:630px;background:#004080; color:white; padding:1px 2px 4px 5px; margin:0px 0px 0px 0px;font-size:18px;}
         .element {white-space:nowrap;width:5in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
         .elementSmall {white-space:nowrap;width:4.8in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
-        .elementGroup {width:5.5in;float:left;z-index:10;background:#99CC99; padding:1px 1px 3px 5px; margin:3px 0px 3px 0px;font-size:12px; border:solid 1px;;white-space:nowrap;}        
+        .elementGroup {width:5.5in;float:left;z-index:10;background:#99CC99; padding:1px 1px 3px 5px; margin:3px 0px 3px 0px;font-size:12px; border:solid 1px;white-space:nowrap;}        
+        
+        .deprecated {height:12px;background:PURPLE;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px  purple;color:white;}                
         .national {height:12px;background:#E10000;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}                
         .state    {height:12px;background:#FBC723;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}        
         .optional {height:12px;background:#BBBBBB;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}   
@@ -63,6 +65,10 @@
                     <td style="font-size:11px;background:#FBC723;border:solid 0px;" width="11px" align="center" height="18px;" >S</td>
                     <td style="width:2px;"/>    
                     <td style="font-size:11px;">State</td>  
+                    <td style="width:5px;"/>    
+                    <td style="font-size:11px;background:PURPLE;border:solid 0px;color:white" width="11px" align="center" height="18px;" >D</td>
+                    <td style="width:2px;"/>    
+                    <td style="font-size:11px;">Deprecated</td>  
                   </tr>
                 </table>
               </td>
@@ -175,7 +181,10 @@
                   <xsl:value-of select="name"/></a>
                 </div>
             </xsl:if>  
-            <div class="blank"/>          
+            <div class="blank"/>    
+            <xsl:choose><xsl:when test="deprecated/text()='Yes'">
+              <div class="deprecated">D</div>
+            </xsl:when></xsl:choose>      
             <xsl:choose><xsl:when test="national/text()='Yes'">
               <div class="national">N</div>
             </xsl:when></xsl:choose>          

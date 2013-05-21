@@ -2,6 +2,7 @@
 <element number="eRecord.04"  minOccurs="1"  maxOccurs="1"  dataTypeName="SoftwareVersion"  isNillable="No">
 <name>Software Version</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The version of the application used to create this record.</definition>
 <v2Number>E01_04</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <SoftwareVersion baseType="string">
     <facet name="minLength" value="1"/>

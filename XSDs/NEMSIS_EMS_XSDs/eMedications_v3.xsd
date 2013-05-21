@@ -53,7 +53,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -89,7 +89,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is the NEMSIS Version 3 method to document prior aid.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -134,7 +134,7 @@ List of medications based on RxNorm (RXCUI) code.
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -171,10 +171,10 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The route medication was administered to the patient</definition>
 										<v2Number>E18_04</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>This medication route list represents a sub-group of values from the Data Elements for Emergency Department Systems (DEEDS), pertaining to prehospital care. &lt;br/> &lt;br/>
 DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -196,9 +196,9 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 													<definition>The dose or amount of the medication given to the patient</definition>
 													<v2Number>E18_05</v2Number>
 													<usage>Required</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -225,9 +225,9 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 													<definition>The unit of medication dosage given to patient</definition>
 													<v2Number>E18_06</v2Number>
 													<usage>Required</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -257,9 +257,9 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 										<definition>The patient's response to the medication</definition>
 										<v2Number>E18_07</v2Number>
 										<usage>Required</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -286,9 +286,9 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 										<definition>Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS</definition>
 										<v2Number>E18_08</v2Number>
 										<usage>Required</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -325,7 +325,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>How should the state ID for an EMS professional be record when working on an event in 2 states.  The ID used would typically be based on the EMS agency's state license specific to each EMS professional. Used for eProcedures.09 (Procedure Crew Members ID) as well.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -350,9 +350,9 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The type (level) of EMS or Healthcare Professional Administering the Medication. For medications administered prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
-										<v2Number/>
+										
 										<usage>Required</usage>
-										<performanceMeasure/>
+										
 										<comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.
 										&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 										</comment>
@@ -383,9 +383,9 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 										<definition>The type of treatment authorization obtained</definition>
 										<v2Number>E18_10</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -401,9 +401,9 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 										<definition>The name of the authorizing physician ordering the medication administration if the order was provided by any manner other than protocol (standing order) in EMedications.11</definition>
 										<v2Number>E18_11</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

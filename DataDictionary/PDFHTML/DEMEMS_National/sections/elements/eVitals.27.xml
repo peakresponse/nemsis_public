@@ -2,6 +2,7 @@
 <element number="eVitals.27"  minOccurs="1"  maxOccurs="1"  dataTypeName="PainScale"  isNillable="Yes">
 <name>Pain Score</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's indication of pain from a scale of 0-10.</definition>
 <v2Number>E14_23</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>The Pain Score can be obtained from several pain measurement tools or pain scale types (eVitals.28). The pain scale type used should have a numeric value associated with each diagram as appropriate. If the pain scale type utilizes multiple indicators/categories the total should be calculated and entered for the pain score associated with the patient assessment.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <PainScale baseType="integer">
     <facet name="minInclusive" value="0"/>

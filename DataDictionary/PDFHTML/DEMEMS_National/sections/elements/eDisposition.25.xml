@@ -2,6 +2,7 @@
 <element number="eDisposition.25"  minOccurs="1"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="Yes">
 <name>Date/Time of Destination Prearrival Activation</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>Date/Time EMS Notified/Activated the Destination Healthcare Facility Team prior to EMS arrival for acute ill or injured patient.</definition>
 <v2Number></v2Number>
@@ -33,6 +34,7 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes>Added to better document performance measure for acute time dependent illness and injury systems of care.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

@@ -19,7 +19,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
-							<v2Number/>
+							
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -31,7 +31,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -61,7 +61,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This is the primary identifier for the entire Demographic Section.  Each of the Demographic sections must be associated with an EMS Agency Number. An EMS Agency can have more than one Agency Number within a state. This reflects the ability for an EMS Agency to have a different number for each service type or location (based on state implementation).</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -92,8 +92,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -126,7 +126,7 @@
 							</performanceMeasuresGroup>
 							<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -148,9 +148,9 @@
 							<definition>The unique manufacturer's serial number associated with a medical device.</definition>
 							<v2Number>D09_01</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -167,9 +167,9 @@
 							<definition>The local number or configurable Name/ID of the medical device.</definition>
 							<v2Number>D09_02</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -184,11 +184,11 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>The type of medical device.</definition>
-							<v2Number/>
+							
 							<usage>Optional</usage>
-							<performanceMeasure/>
+							
 							<comment>This is multiple choice to allow documentation of various multifunction device configurations.</comment>
-							<v3Changes/>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -212,9 +212,9 @@
 							<definition>The manufacturer of the medical device.</definition>
 							<v2Number>D09_03</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -231,9 +231,9 @@
 							<definition>The specific manufacturer's model number associated with medical device.</definition>
 							<v2Number>D09_04</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -259,8 +259,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment/>
-							<v3Changes/>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -283,9 +283,9 @@
 										<definition>The patient's last (family) name</definition>
 										<v2Number>E06_01</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Pertinent negatives accepted with option of "Unable to Complete" or "Refused".</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -307,9 +307,9 @@
 										<definition>The patient's first (given) name</definition>
 										<v2Number>E06_02</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>Pertinent negatives accepted with option of "Unable to Complete" or "Refused".</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -331,9 +331,9 @@
 										<definition>The patient's middle name, if any</definition>
 										<v2Number>E06_03</v2Number>
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
-										<v3Changes/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -359,8 +359,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -392,7 +392,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -434,8 +434,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -466,8 +466,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -492,9 +492,9 @@
 							<definition>The patient's date of birth</definition>
 							<v2Number>E06_16</v2Number>
 							<usage>Optional</usage>
-							<performanceMeasure/>
-							<comment/>
-							<v3Changes/>
+							
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -555,7 +555,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -587,8 +587,8 @@
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -610,12 +610,12 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The type of ECG associated with the cardiac rhythm.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
+													
 													<v3Changes>Added to better document ECG results.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -636,7 +636,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The method of ECG interpretation.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>STEMI</performanceMeasure>
@@ -684,7 +684,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Required for ACS-Field Triage and other patient scoring systems.</comment>
-													<v3Changes/>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -706,9 +706,9 @@
 													<definition>The patient's diastolic blood pressure.</definition>
 													<v2Number>E14_05</v2Number>
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 													<comment>Diastolic blood pressure pattern allows for the following values:&lt;br/>1) A number 0 through 500 &lt;br/>2) P&lt;br/>3) p</comment>
-													<v3Changes/>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -730,9 +730,9 @@
 													<definition>Indication of method of blood pressure measurement.</definition>
 													<v2Number>E14_06</v2Number>
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -752,10 +752,10 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The patient's mean arterial pressure.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
+													
+													
 													<v3Changes>Added for additional patient monitoring capability.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -791,7 +791,7 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Pulse Rate and Electronic Monitor Rate have been merged with an additional data element for Method of Heart Rate Measurement.</comment>
-													<v3Changes/>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -811,9 +811,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor).</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 													<comment>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</comment>
 													<v3Changes>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Changes>
 												</nemsisTacDoc>
@@ -843,8 +843,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -874,8 +874,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -905,8 +905,8 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -926,10 +926,10 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<comment/>
+										
+										
 										<v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -956,8 +956,8 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment/>
-										<v3Changes/>
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -988,8 +988,8 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Pediatric</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1011,9 +1011,9 @@
 													<definition>The method used to obtain the patient's body temperature.</definition>
 													<v2Number>E14_21</v2Number>
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1041,9 +1041,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The data and time for the specific laboratory result</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
+										
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -1090,10 +1090,10 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The type of the laboratory value.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
+													
+													
 													<v3Changes>Added to provide for the documentation of laboratory results obtained prior to or during and EMS patient encounter.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1109,10 +1109,10 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The value or result of the laboratory test (Units may vary).</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
+													
+													
 													<v3Changes>Added to better document EMS care.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1137,10 +1137,10 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The type of x-ray or imaging study.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
+													
+													
 													<v3Changes>Added to better describe the EMS patient care.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1156,10 +1156,10 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The description or interpretation of the results of the imaging study.</definition>
-													<v2Number/>
+													
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
+													
+													
 													<v3Changes>Added to better describe the EMS Patient Care</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -1181,7 +1181,7 @@
 																<national>No</national>
 																<state>No</state>
 																<definition>The description of the image study file or waveform graphic stored in Imaging Study File or Waveform Graphic (eMedDevice.42).</definition>
-																<v2Number/>
+																
 																<usage>Optional</usage>
 																<performanceMeasuresGroup>
 																	<performanceMeasure>Airway</performanceMeasure>
@@ -1209,7 +1209,7 @@
 &lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table>	</comment>
-																<v3Changes/>
+																
 															</nemsisTacDoc>
 														</xs:documentation>
 													</xs:annotation>
@@ -1224,7 +1224,7 @@
 																<national>No</national>
 																<state>No</state>
 																<definition>The imaging study file.</definition>
-																<v2Number/>
+																
 																<usage>Optional</usage>
 																<performanceMeasuresGroup>
 																	<performanceMeasure>Airway</performanceMeasure>
@@ -1232,7 +1232,7 @@
 																	<performanceMeasure>STEMI</performanceMeasure>
 																</performanceMeasuresGroup>
 																<comment>Added to allow the imaging file to be uploaded and better document patient care.</comment>
-																<v3Changes/>
+																
 															</nemsisTacDoc>
 														</xs:documentation>
 													</xs:annotation>
@@ -1263,11 +1263,11 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The unique manufacturer's serial number associated with a medical device.</definition>
-										<v2Number/>
+										
 										<usage>Optional</usage>
-										<performanceMeasure/>
-										<performanceMeasure/>
-										<performanceMeasure/>
+										
+										
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -1314,7 +1314,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -1337,7 +1337,7 @@
 											<performanceMeasure>STEMI</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -1393,7 +1393,7 @@
 &lt;tr>&lt;td>Mime Types: &lt;span style="color:blue">http://en.wikipedia.org/wiki/Internet_media_type&lt;/span>&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table>	</comment>
-													<v3Changes/>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1415,8 +1415,8 @@
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1433,7 +1433,7 @@
 													<definition>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)</definition>
 													<v2Number>E21_05</v2Number>
 													<usage>Optional</usage>
-													<performanceMeasure/>
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1459,7 +1459,7 @@
 											<performanceMeasure>STEMI</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -1489,7 +1489,7 @@
 											<performanceMeasure>STEMI</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>The rhythm interpretation text imported from the device.</comment>
-										<v3Changes/>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -1515,8 +1515,8 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1536,8 +1536,8 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1557,8 +1557,8 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment/>
-													<v3Changes/>
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -1575,9 +1575,9 @@
 													<definition>The rate the device was calibrated to pace during the event, if appropriate.</definition>
 													<v2Number>E21_11</v2Number>
 													<usage>Optional</usage>
-													<performanceMeasure/>
-													<comment/>
-													<v3Changes/>
+													
+													
+													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>

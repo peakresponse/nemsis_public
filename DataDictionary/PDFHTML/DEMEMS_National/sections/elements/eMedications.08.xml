@@ -2,6 +2,7 @@
 <element number="eMedications.08"  minOccurs="1"  maxOccurs="M"  dataTypeName="MedicationComplication"  isNillable="Yes">
 <name>Medication Complication</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS</definition>
 <v2Number>E18_08</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <MedicationComplication baseType="string">
     <facet name="enumeration" value="3708001" annotation="Altered Mental Status"/>

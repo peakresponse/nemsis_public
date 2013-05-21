@@ -2,6 +2,7 @@
 <element number="eResponse.04"  minOccurs="1"  maxOccurs="1"  dataTypeName="EMSResponseNumber"  isNillable="Yes">
 <name>EMS Response Number</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The internal EMS response number which is unique for each EMS Vehicle's (Unit) response to an incident within an EMS Agency.</definition>
 <v2Number>E02_03</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSResponseNumber baseType="string">
     <facet name="minLength" value="3"/>

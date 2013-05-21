@@ -33,7 +33,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -71,7 +71,7 @@
 										</performanceMeasuresGroup>
 										<comment>May be auto-populated if list created in dFacility.11 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
 							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -110,7 +110,7 @@
 										</performanceMeasuresGroup>
 										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-										<v3Changes></v3Changes>
+										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -153,8 +153,8 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment></comment>
-							<v3Changes></v3Changes>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -171,7 +171,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Transport method by this EMS Unit.</definition>
-							<v2Number></v2Number>
+							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -220,7 +220,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Information now split between eDisposition.17 (Transport Mode from Scene) and eDisposition.18 (Additional Transport Mode Descriptors). Element eDisposition.18  (Additional Transport Mode Descriptors) has been added to document the use of lights and sirens or other descriptive information.</comment>
-							<v3Changes></v3Changes>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -245,11 +245,11 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The documentation of transport mode techniques for this EMS response.</definition>
-							<v2Number></v2Number>
+							
 							<usage>Required</usage>
-							<performanceMeasure></performanceMeasure>
+							
 							<comment>Information now split between eDisposition.17 (Transport Mode from Scene) and eDisposition.18 (Additional Transport Mode Descriptors). Element eDisposition.18  (Additional Transport Mode Descriptors) has been added to document the use of lights and sirens or other descriptive information.</comment>
-							<v3Changes></v3Changes>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -283,8 +283,8 @@
 								<performanceMeasure>Pediatric</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment></comment>
-							<v3Changes></v3Changes>
+							
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -319,7 +319,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Required if Patient Transported</comment>
-							<v3Changes></v3Changes>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -357,7 +357,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Required if Patient Transported by EMS. "Hospital-Non-Emergency Department Bed" includes any location in the hospital except the Emergency Department. Choices include those in eDisposition.22 (Hospital In-Patient Destination). </comment>
-							<v3Changes></v3Changes>
+							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -382,7 +382,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The location within the hospital that the patient was taken directly by EMS (e.g. Cath Lab, ICU, etc.) </definition>
-							<v2Number></v2Number>
+							
 							<usage>Required</usage>
 							<comment>To be documented when in eDisposition.21 "Hospital-Non-Emergency Department Bed" is selected. </comment>
 							<v3Changes>Added to identify the location within the hospital that the patient was directly taken to by EMS.</v3Changes>
@@ -410,9 +410,9 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The designation associated with the hospital for this transport(e.g. Trauma, STEMI, Peds, etc) </definition>
-							<v2Number></v2Number>
+							
 							<usage>Required</usage>
-							<performanceMeasuresGroup></performanceMeasuresGroup>
+							
 							<comment>To be documented when in eDisposition.21 (Type of Destination) equals "4221003: Hospital-Emergency Department" or "4221005: Hospital-In Patient Bed" is selected . </comment>
 							<v3Changes>Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment. </v3Changes>
 						</nemsisTacDoc>
@@ -445,7 +445,7 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Activation by EMS of the appropriate destination healthcare facility team. The activation should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -479,7 +479,7 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Date/Time EMS Notified/Activated the Destination Healthcare Facility Team prior to EMS arrival for acute ill or injured patient.</definition>
-										<v2Number></v2Number>
+										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>

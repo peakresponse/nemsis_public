@@ -2,6 +2,7 @@
 <element number="dFacility.14"  minOccurs="0"  maxOccurs="1"  dataTypeName="USNG"  isNillable="No">
 <name>Facility US National Grid Coordinates</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>Facility US National Grid Coordinates</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Standard found at www.fgdc.gov/usng. The information contained within this element could be used to populate the address information within eScene.11 (Scene US National Grid Coordinates) and/or eDisposition.10 (Disposition Location US National Grid Coordinates) as appropriate.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <USNG baseType="string">
     <facet name="pattern" value="[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"/>

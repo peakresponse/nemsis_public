@@ -2,6 +2,7 @@
 <element number="eProcedures.07"  minOccurs="1"  maxOccurs="M"  dataTypeName="ProcedureComplication"  isNillable="Yes">
 <name>Procedure Complication</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient</definition>
 <v2Number>E19_07</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ProcedureComplication baseType="string">
     <facet name="enumeration" value="3907001" annotation="Altered Mental Status"/>

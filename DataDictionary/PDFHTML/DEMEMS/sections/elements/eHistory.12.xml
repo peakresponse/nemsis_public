@@ -2,6 +2,7 @@
 <element number="eHistory.12"  minOccurs="0"  maxOccurs="1"  dataTypeName="Medication"  isNillable="Yes">
 <name>Current Medications</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The medications the patient currently takes</definition>
 <v2Number>E12_14</v2Number>
@@ -15,6 +16,7 @@
 <br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 <br/>Product - RxNorm Full Monthly Release</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <Medication baseType="string">
     <facet name="minLength" value="2"/>

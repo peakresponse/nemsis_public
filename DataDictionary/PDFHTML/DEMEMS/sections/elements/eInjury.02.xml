@@ -2,6 +2,7 @@
 <element number="eInjury.02"  minOccurs="0"  maxOccurs="M"  dataTypeName="MechanismOfInjury"  isNillable="Yes">
 <name>Mechanism of Injury</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The mechanism of the event which caused the injury</definition>
 <v2Number>E10_03</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <MechanismOfInjury baseType="string">
     <facet name="enumeration" value="2902001" annotation="Blunt"/>

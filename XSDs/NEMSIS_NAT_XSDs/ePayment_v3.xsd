@@ -22,8 +22,6 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -72,8 +70,6 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -83,6 +79,7 @@
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
+									
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
@@ -101,54 +98,44 @@
 			<xs:documentation>Documentation of the CRC03 through CRC07 requirements for CMS billing using X12 transactions.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1">
+			<xs:enumeration value="01">
 				<xs:annotation>
-					<xs:documentation>Patient was admitted to hospital</xs:documentation>
+					<xs:documentation>Patient was admitted to a hospital</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="2">
+			<xs:enumeration value="04">
 				<xs:annotation>
-					<xs:documentation>Patient was bed confined before the ambulance service</xs:documentation>
+					<xs:documentation>Patient was moved by stretcher </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3">
+			<xs:enumeration value="05">
 				<xs:annotation>
-					<xs:documentation>Patient was bed confined after the ambulance service</xs:documentation>
+					<xs:documentation>Patient was unconscious or in shock </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4">
-				<xs:annotation>
-					<xs:documentation>Patient was moved by stretcher</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="5">
-				<xs:annotation>
-					<xs:documentation>Patient was unconscious or in shock</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="6">
+			<xs:enumeration value="06">
 				<xs:annotation>
 					<xs:documentation>Patient was transported in an emergency situation</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="7">
+			<xs:enumeration value="07">
 				<xs:annotation>
 					<xs:documentation>Patient had to be physically restrained</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="8">
+			<xs:enumeration value="08">
 				<xs:annotation>
 					<xs:documentation>Patient had visible hemorrhaging</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="9">
+			<xs:enumeration value="09">
 				<xs:annotation>
 					<xs:documentation>Ambulance service was medically necessary</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="10">
+			<xs:enumeration value="12">
 				<xs:annotation>
-					<xs:documentation>Transportation was to the nearest facility</xs:documentation>
+					<xs:documentation>Patient is confined to a bed or chair (Use code 12 to indicate patient was bedridden during transport.) </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

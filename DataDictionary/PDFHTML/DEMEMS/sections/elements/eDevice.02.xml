@@ -2,6 +2,7 @@
 <element number="eDevice.02"  minOccurs="0"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="No">
 <name>Date/Time of Event (per Medical Device)</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The time of the event recorded by the device's internal clock</definition>
 <v2Number>E21_01</v2Number>
@@ -33,6 +34,7 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

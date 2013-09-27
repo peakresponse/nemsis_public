@@ -2,6 +2,7 @@
 <element number="dDevice.01"  minOccurs="0"  maxOccurs="1"  dataTypeName="DeviceSerialNumber"  isNillable="No">
 <name>Medical Device Serial Number</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The unique manufacturer's serial number associated with a medical device.</definition>
 <v2Number>D09_01</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DeviceSerialNumber baseType="string">
     <facet name="minLength" value="2"/>

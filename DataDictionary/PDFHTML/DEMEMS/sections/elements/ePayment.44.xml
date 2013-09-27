@@ -2,6 +2,7 @@
 <element number="ePayment.44"  minOccurs="0"  maxOccurs="M"  dataTypeName="AmbulanceReasonCode"  isNillable="No">
 <name>Ambulance Transport Reason Code</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The CMS Ambulance Transport Reason Code for the transport.</definition>
 <v2Number></v2Number>
@@ -11,6 +12,7 @@
 The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport". The Accredited Standards Committee X12 organization maintains the standard. See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:
 http://ushik.ahrq.gov/ViewItemDetails?system=mdr&amp;itemKey=21826000</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <AmbulanceReasonCode baseType="string">
     <facet name="enumeration" value="A" annotation="Patient was transported to the nearest facility for care of symptoms, complaints, or both"/>

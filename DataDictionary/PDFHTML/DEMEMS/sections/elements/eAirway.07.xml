@@ -2,6 +2,7 @@
 <element number="eAirway.07"  minOccurs="0"  maxOccurs="1"  dataTypeName="CrewMemberID"  isNillable="Yes">
 <name>Crew Member ID</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The crew member id during this EMS patient encounter at this date and time.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document airway management.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CrewMemberID baseType="string">
     <facet name="minLength" value="2"/>

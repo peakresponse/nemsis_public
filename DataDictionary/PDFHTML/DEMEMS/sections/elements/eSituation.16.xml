@@ -2,6 +2,7 @@
 <element number="eSituation.16"  minOccurs="0"  maxOccurs="1"  dataTypeName="PatientsOccupation"  isNillable="No">
 <name>Patient's Occupation</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The occupation of the patient.</definition>
 <v2Number>E07_17</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Based on the Standard Occupational Classification of the US Bureau of Labor Statistics <br/>(http://www.bls.gov/soc/major_groups.htm)</v3Comment>
 <v3Changes>Added to better describe work related injury.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <PatientsOccupation baseType="string">
     <facet name="enumeration" value="2816001" annotation="Architecture and Engineering Occupations"/>

@@ -2,6 +2,7 @@
 <element number="eMedications.04"  minOccurs="0"  maxOccurs="1"  dataTypeName="CurrentMedicationAdministrationRoute"  isNillable="No">
 <name>Medication Administered Route</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The route medication was administered to the patient</definition>
 <v2Number>E18_04</v2Number>
@@ -10,6 +11,7 @@
 <v3Comment>This medication route list represents a sub-group of values from the Data Elements for Emergency Department Systems (DEEDS), pertaining to prehospital care. <br/> <br/>
 DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/pdf/deeds.pdf.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CurrentMedicationAdministrationRoute baseType="string">
     <facet name="enumeration" value="9927001" annotation="Blow-By"/>

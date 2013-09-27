@@ -26,9 +26,6 @@
 													<definition>The last name of the personnel.</definition>
 													<v2Number>D08_01</v2Number>
 													<usage>Recommended</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -55,9 +52,6 @@
 													<definition>The first name of the personnel.</definition>
 													<v2Number>D08_03</v2Number>
 													<usage>Recommended</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -84,9 +78,6 @@
 													<definition>The middle name or initial of the personnel.</definition>
 													<v2Number>D08_02</v2Number>
 													<usage>Recommended</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -111,7 +102,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="dPersonnel.04" type="StreetAddress" id="dPersonnel.EMSPersonnelsMailingAddress" minOccurs="0">
+									<xs:element name="dPersonnel.04" id="dPersonnel.EMSPersonnelsMailingAddress" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -122,12 +113,17 @@
 													<definition>The Street or PO Box of the personnel's mailing address.</definition>
 													<v2Number>D08_04</v2Number>
 													<usage>Optional</usage>
-													
 													<comment>For individuals living outside the USA the full address can be entered in the address line.</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="StreetAddress">
+													<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 									</xs:element>
 									<xs:element name="dPersonnel.05" type="CityGnisCode" id="dPersonnel.EMSPersonnelsCityofResidence" minOccurs="0">
 										<xs:annotation>
@@ -140,9 +136,7 @@
 													<definition>The city of the personnel's mailing address.</definition>
 													<v2Number>D08_05</v2Number>
 													<usage>Optional</usage>
-													
 													<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -158,9 +152,7 @@
 													<definition>The state of the personnel's mailing address.</definition>
 													<v2Number>D08_06</v2Number>
 													<usage>Optional</usage>
-													
 													<comment>Based on ANSI Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm &lt;/a></comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -176,11 +168,9 @@
 													<definition>The ZIP code of the personnel's mailing address.</definition>
 													<v2Number>D08_07</v2Number>
 													<usage>Optional</usage>
-													
 													<comment>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -194,11 +184,8 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The country of the personnel mailing address.</definition>
-													
 													<usage>Optional</usage>
-													
 													<comment>Based on ANSI Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -217,9 +204,6 @@
 										<definition>The phone number for the personnel.</definition>
 										<v2Number>D08_08</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -243,9 +227,6 @@
 										<definition>The primary email address of the personnel.</definition>
 										<v2Number>D08_10</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -269,9 +250,6 @@
 										<definition>The personnel's date of birth.</definition>
 										<v2Number>D08_11</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -298,9 +276,6 @@
 										<definition>The personnel's gender.</definition>
 										<v2Number>D08_12</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -327,9 +302,7 @@
 										<definition>The personnel's race as defined by the OMB (US Office of Management and Budget).</definition>
 										<v2Number>D08_13</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl=2&amp;lvlID&#61;172. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -355,11 +328,8 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The documentation of the personnel's citizenship.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -373,11 +343,8 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The highest educational degree completed by the personnel.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>Based on Census 2000 Educational Attainment Question.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -391,11 +358,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The area of the personnel's post high-school (post-secondary) degree.</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -416,11 +379,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The type of motor vehicle license (i.e. Class A, B, Pilot, etc.) of the EMS personnel.</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -447,11 +406,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The type of immunization status.</definition>
-													
 													<usage>Optional</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -465,11 +420,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The year associated with each immunization type.</definition>
-													
 													<usage>Optional</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -487,10 +438,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The languages spoken (other than English) by the personnel with at least an elementary level of proficiency.</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to better describe the EMS workforce.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -514,9 +462,7 @@
 										<definition>The local agency ID number for the personnel.</definition>
 										<v2Number>D07_01</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>This is a local ID and not the ID associated with the state credential. This may be the same as the state credential ID depending on the state and local implementation. This should be a unique number and not reused.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -536,11 +482,7 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The state of the certification/licensure ID number assigned to the personnel member.</definition>
-													
 													<usage>Recommended</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -567,9 +509,6 @@
 													<definition>The state's licensure/certification ID number for the personnel.</definition>
 													<v2Number>D07_02</v2Number>
 													<usage>Recommended</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -596,9 +535,7 @@
 													<definition>The personnel's state EMS certification level.</definition>
 													<v2Number>D08_15</v2Number>
 													<usage>Recommended</usage>
-													
 													<comment>Added 2009 EMS Education Levels.&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.&lt;br/>&lt;br/>Some listed health care providers may not have an EMS certification/licensure number, however their level should be indicated from the list above and the state licensure number should be indicated in dPersonnel.23 - EMS Personnel's State's Licensure ID Number. </comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -625,9 +562,7 @@
 													<definition>The date of the personnel's current EMS certification/licensure.</definition>
 													<v2Number>D08_17</v2Number>
 													<usage>Optional</usage>
-													
 													<comment>Clarified as the current certification/licensure.</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -643,9 +578,7 @@
 													<definition>The date on which the EMS personnel's state's EMS certification/licensure was originally issued. This is the date of the first certification/licensure for the EMS level.</definition>
 													<v2Number>D08_18</v2Number>
 													<usage>Optional</usage>
-													
 													<comment>Clarified as the FIRST (original) certification/licensure date.</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -659,11 +592,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The date on which the EMS personnel's (highest) state EMS certification/licensure expires.</definition>
-													
 													<usage>Optional</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -681,11 +610,8 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The National Registry number associated with the level of certification/licensure obtained through NREMT.</definition>
-										
 										<usage>Optional</usage>
 										<performanceMeasures/>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -699,11 +625,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The level of the current National Registry of Emergency Medical Technicians (NREMT) certification.</definition>
-										
 										<usage>Optional</usage>
 										<performanceMeasures/>
 										<comment>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -717,11 +641,8 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires</definition>
-										
 										<usage>Optional</usage>
 										<performanceMeasures/>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -737,9 +658,6 @@
 										<definition>The personnel's primary employment status for this agency.</definition>
 										<v2Number>D07_03</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -766,9 +684,6 @@
 										<definition>The personnel's employment status date.</definition>
 										<v2Number>D07_04</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -793,11 +708,8 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The date the employee was hired by the EMS agency for this current job.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>This is intended to collect information based on the current employment/job.  If the EMS personnel has a come and go status, this should reflect the most recent employment/job.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -811,13 +723,10 @@
 										<national>No</national>
 										<state>Yes</state>
 										<definition>The individuals primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.</definition>
-										
 										<usage>Recommended</usage>
-										
 										<comment>This is a single choice data element which should reflect the EMS Personnel's primary/main job role for which he/she
 functions. It is understood that most EMS personnel perform more than one role as a part of their position. Other roles should
 be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -842,11 +751,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 										<national>No</national>
 										<state>Yes</state>
 										<definition>The EMS personnel's other job responsibilities at the agency beyond their primary role documented in dPersonnel.34 (EMS Personnel's Primary EMS Job Role).</definition>
-										
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -874,9 +779,6 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 										<definition>The personnel's total length of EMS service at any level (years).</definition>
 										<v2Number>D08_19</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -892,9 +794,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 										<definition>The date which the length of EMS service was documented.</definition>
 										<v2Number>D08_20</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Associated with dPersonnel.37 (EMS Personnel's Total Length of Service in Years).</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -916,9 +816,7 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 													<definition>The EMS certification level at which the individual is providing patient care services for the EMS agency.</definition>
 													<v2Number>D07_05</v2Number>
 													<usage>Optional</usage>
-													
 													<comment>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -934,9 +832,6 @@ be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</co
 													<definition>The date that the Certification/Licensure was achieved for the local EMS agency.</definition>
 													<v2Number>D07_06</v2Number>
 													<usage>Optional</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>

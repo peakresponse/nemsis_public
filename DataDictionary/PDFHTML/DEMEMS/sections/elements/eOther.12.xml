@@ -2,6 +2,7 @@
 <element number="eOther.12"  minOccurs="0"  maxOccurs="1"  dataTypeName="SignatureType"  isNillable="No">
 <name>Type of Person Signing</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The individual's signature associated with eOther.15 (Signature Status).</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document disposition and billing information.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <SignatureType baseType="string">
     <facet name="enumeration" value="4512001" annotation="EMS Crew Member (Other)"/>

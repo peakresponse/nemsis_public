@@ -2,6 +2,7 @@
 <element number="dConfiguration.04"  minOccurs="1"  maxOccurs="M"  dataTypeName="Medication"  isNillable="Yes">
 <name>Medications Permitted by the State</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level.</definition>
 <v2Number></v2Number>
@@ -21,6 +22,7 @@
 										<br/><br/>Product - UMLS Metathesaurus
 										<br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
 										<br/>Product - RxNorm Full Monthly Release</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <Medication baseType="string">
     <facet name="minLength" value="2"/>

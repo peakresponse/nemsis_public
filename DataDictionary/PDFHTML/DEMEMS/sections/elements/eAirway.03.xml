@@ -2,6 +2,7 @@
 <element number="eAirway.03"  minOccurs="0"  maxOccurs="1"  dataTypeName="DeviceBeingConfirmed"  isNillable="Yes">
 <name>Airway Device Being Confirmed</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The airway device in which placement is being confirmed.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document airway management. SAD means Supraglottic Airway  Device.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DeviceBeingConfirmed baseType="string">
     <facet name="enumeration" value="4003001" annotation="Cricothyrotomy Tube"/>

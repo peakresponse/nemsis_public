@@ -2,6 +2,7 @@
 <element number="eDisposition.26"  minOccurs="0"  maxOccurs="M"  dataTypeName="DispositionInstruction"  isNillable="No">
 <name>Disposition Instructions Provided</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>Information provided to patient during disposition for patients not transported or treated.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document instructions given to patients not transported by EMS.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DispositionInstruction baseType="string">
     <facet name="enumeration" value="4226001" annotation="Contact 911 or see your Doctor if problem returns"/>

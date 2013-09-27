@@ -2,6 +2,7 @@
 <element number="eAirway.08"  minOccurs="0"  maxOccurs="M"  dataTypeName="ComplicationsEncountered"  isNillable="Yes">
 <name>Airway Complications Encountered</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The airway management complications encountered during the patient care episode.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document airway management.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ComplicationsEncountered baseType="string">
     <facet name="enumeration" value="4008001" annotation="Adverse Event from Facilitating Drugs"/>

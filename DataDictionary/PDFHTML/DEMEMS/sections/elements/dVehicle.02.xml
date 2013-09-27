@@ -2,6 +2,7 @@
 <element number="dVehicle.02"  minOccurs="0"  maxOccurs="1"  dataTypeName="VehicleIdentificationNumber"  isNillable="No">
 <name>Vehicle Identification Number</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The manufacturer's VIN associated with the vehicle.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Consider VIN standard ISO-3779 and ISO-3780.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <VehicleIdentificationNumber baseType="string">
     <facet name="minLength" value="17"/>

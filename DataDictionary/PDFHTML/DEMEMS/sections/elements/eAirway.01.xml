@@ -2,6 +2,7 @@
 <element number="eAirway.01"  minOccurs="0"  maxOccurs="M"  dataTypeName="AirwayIndications"  isNillable="Yes">
 <name>Indications for Invasive Airway</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The clinical indication for performing invasive airway management.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document airway management.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <AirwayIndications baseType="string">
     <facet name="enumeration" value="4001001" annotation="Adequate Airway Reflexes/Effort, Potential for Compromise"/>

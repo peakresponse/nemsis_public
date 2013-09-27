@@ -2,6 +2,7 @@
 <element number="eProcedures.09"  minOccurs="0"  maxOccurs="1"  dataTypeName="CrewMemberID"  isNillable="Yes">
 <name>Procedure Crew Members ID</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The statewide assigned ID number of the EMS crew member performing the procedure on the patient</definition>
 <v2Number>E19_09</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>For an incident that occurs in multiple states, the certification ID number the EMS agency would typically use is based on the EMS agency's state license specific to each EMS professional.  If the incident needs to be reported to each state, then the EMS Agency Number for each state should be submitted as well as the certification ID numbers for each EMS professional on the unit.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CrewMemberID baseType="string">
     <facet name="minLength" value="2"/>

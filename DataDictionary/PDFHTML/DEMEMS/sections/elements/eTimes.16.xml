@@ -2,6 +2,7 @@
 <element number="eTimes.16"  minOccurs="0"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="No">
 <name>EMS Call Completed Date/Time</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The date/time the responding unit completed all tasks associated with the event including transfer of the patient, and such things as cleaning and restocking.</definition>
 <v2Number></v2Number>
@@ -34,6 +35,7 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

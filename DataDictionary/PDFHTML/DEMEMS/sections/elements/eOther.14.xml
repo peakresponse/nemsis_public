@@ -2,6 +2,7 @@
 <element number="eOther.14"  minOccurs="0"  maxOccurs="1"  dataTypeName="RelationshipSignature"  isNillable="No">
 <name>Type Of Patient Representative</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>If Patient Representative is chosen as the owner of the signature, this documents the relationship of the individual signing to the patient.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Required for Billing.</v3Comment>
 <v3Changes>Added to improve documentation on disposition and billing.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <RelationshipSignature baseType="string">
     <facet name="enumeration" value="4514001" annotation="Aunt"/>

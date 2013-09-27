@@ -2,6 +2,7 @@
 <element number="eAirway.06"  minOccurs="0"  maxOccurs="1"  dataTypeName="IndividualDetails"  isNillable="Yes">
 <name>Type of Individual Confirming Airway Device Placement</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The type of individual who confirmed the airway device placement.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better document airway management.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <IndividualDetails baseType="string">
     <facet name="enumeration" value="4006001" annotation="Another Person on the Same Crew"/>

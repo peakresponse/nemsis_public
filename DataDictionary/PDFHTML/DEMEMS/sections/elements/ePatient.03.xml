@@ -2,6 +2,7 @@
 <element number="ePatient.03"  minOccurs="0"  maxOccurs="1"  dataTypeName="PersonFirstName"  isNillable="Yes">
 <name>First Name</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's first (given) name</definition>
 <v2Number>E06_02</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Pertinent negatives accepted with option of "Unable to Complete" or "Refused".</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <PersonFirstName baseType="string">
     <facet name="minLength" value="1"/>

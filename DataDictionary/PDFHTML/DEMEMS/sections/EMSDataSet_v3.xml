@@ -3,9 +3,9 @@
   <group number="eState" minOccurs="0" maxOccurs="1" CorrelationID="" isNillable="No"/>
   <group number="Header" minOccurs="1" maxOccurs="M" CorrelationID="" isNillable="No">
     <group number="DemographicGroup" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="No">
-      <element number="dAgency.01" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="No" dataType="EMSAgencyStateID"><name>EMS Agency Unique State ID</name><refNumber></refNumber><national>Yes</national><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
-      <element number="dAgency.02" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="No" dataType="EMSAgencyNumber"><name>EMS Agency Number</name><refNumber></refNumber><national>Yes</national><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
-      <element number="dAgency.04" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="No" dataType="ANSIStateCode"><name>EMS Agency State</name><refNumber></refNumber><national>Yes</national><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
+      <element number="dAgency.01" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="No" dataType="EMSAgencyStateID"><name>EMS Agency Unique State ID</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
+      <element number="dAgency.02" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="No" dataType="EMSAgencyNumber"><name>EMS Agency Number</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
+      <element number="dAgency.04" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="No" dataType="ANSIStateCode"><name>EMS Agency State</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     </group>
     <group number="eCustomConfiguration" minOccurs="0" maxOccurs="1" CorrelationID="" isNillable="No"/>
     <group number="PatientCareReport" minOccurs="1" maxOccurs="M" CorrelationID="" isNillable="No">

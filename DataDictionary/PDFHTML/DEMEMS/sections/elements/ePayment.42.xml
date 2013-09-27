@@ -2,6 +2,7 @@
 <element number="ePayment.42"  minOccurs="0"  maxOccurs="M"  dataTypeName="TransportCareProvider"  isNillable="No">
 <name>Specialty Care Transport Care Provider</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>Documentation to show the patient care provided to the patient met the Specialty Care Transport Base Rate requirements.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Added to improve Specialty Care Transport billing justification. In accordance with CMS requirements Specialty Care Transport (SCT): ""Additional training" means the specific additional training that a State requires a paramedic to complete in order to qualify to furnish specialty care to a critically ill or injured patient during an SCT."</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <TransportCareProvider baseType="string">
     <facet name="enumeration" value="2642001" annotation="Advanced EMT-Paramedic"/>

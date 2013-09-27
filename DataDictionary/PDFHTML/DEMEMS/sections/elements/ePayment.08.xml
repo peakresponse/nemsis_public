@@ -2,6 +2,7 @@
 <element number="ePayment.08"  minOccurs="0"  maxOccurs="1"  dataTypeName="ResidencyStatusOfThePatient"  isNillable="No">
 <name>Patient Resides in Service Area</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>An indication of whether the patient's current residence is within the EMS agency service area.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Added to assist in billing documentation.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ResidencyStatusOfThePatient baseType="string">
     <facet name="enumeration" value="2608001" annotation="Resident Within EMS Service Area"/>

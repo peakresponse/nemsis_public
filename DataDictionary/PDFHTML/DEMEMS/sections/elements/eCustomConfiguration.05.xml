@@ -2,6 +2,7 @@
 <element number="eCustomConfiguration.05"  minOccurs="1"  maxOccurs="1"  dataTypeName="ElementUsage"  isNillable="No">
 <name>Custom Data Element Usage</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The Usage (Mandatory, Required, Recommended or Optional) for the Custom Data Element.</definition>
 <v2Number></v2Number>
@@ -12,6 +13,7 @@
                     <br/>Recommended = Not required but if collected will accept null values
                     <br/>Optional = Not required but if collected, it cannot be a null value.</v3Comment>
 <v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ElementUsage baseType="string">
     <facet name="enumeration" value="9903001" annotation="Mandatory"/>

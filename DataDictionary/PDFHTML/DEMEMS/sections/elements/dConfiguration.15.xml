@@ -2,6 +2,7 @@
 <element number="dConfiguration.15"  minOccurs="1"  maxOccurs="M"  dataTypeName="PatientMonitoringCapability"  isNillable="No">
 <name>Patient Monitoring Capability(ies)</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Added to identify the patient monitoring capability of the EMS Agency. Associated with each EMS Agency Number (dAgency.02) since each EMS Agency Number may have a different capability within each EMS Agency. Other patient monitoring capability may exist but NEMSIS Version 3 only includes these specific capabilities.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <PatientMonitoringCapability baseType="string">
     <facet name="enumeration" value="1215001" annotation="Capnography-Numeric"/>

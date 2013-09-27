@@ -2,6 +2,7 @@
 <element number="eAirway.11"  minOccurs="0"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="No">
 <name>Date/Time Invasive Airway Placement Attempts Abandoned</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The date and time that the invasive airway attempts were abandoned for the patient.</definition>
 <v2Number></v2Number>
@@ -33,6 +34,7 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes>Added to better document airway management.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

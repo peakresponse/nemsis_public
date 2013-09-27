@@ -2,6 +2,7 @@
 <element number="dAgency.23"  minOccurs="0"  maxOccurs="1"  dataTypeName="EMSAgencyTimeZone"  isNillable="No">
 <name>EMS Agency Time Zone</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The time zone for the EMS Agency.</definition>
 <v2Number>D01_19</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Associated with each of the EMS Agency Number (dAgency.02). If more than one Time Zone is located within the EMS Agency service area, please chose the time zone covering the greatest volume of EMS events.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSAgencyTimeZone baseType="string">
     <facet name="enumeration" value="1027001" annotation="All other time zones"/>

@@ -2,6 +2,7 @@
 <element number="dAgency.10"  minOccurs="0"  maxOccurs="M"  dataTypeName="TypeOfService"  isNillable="Yes">
 <name>Other Types of Service</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The other service type(s) which are provided by the agency.</definition>
 <v2Number>D01_06</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>If no other services are provided beyond the Primary Service Type, Not Applicable should be used. This should include all of the types of services not listed in (dAgency.09) Primary Type of Service.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <TypeOfService baseType="string">
     <facet name="enumeration" value="9920001" annotation="911 Response (Scene) with Transport Capability"/>

@@ -2,6 +2,7 @@
 <element number="eOther.02"  minOccurs="0"  maxOccurs="M"  dataTypeName="PotentialRegistryCandidate"  isNillable="No">
 <name>Potential System of Care/Specialty/Registry Patient</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>An indication if the patient may meet the entry criteria for an injury or illness specific registry</definition>
 <v2Number>E23_02</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <PotentialRegistryCandidate baseType="string">
     <facet name="enumeration" value="4502001" annotation="Airway"/>

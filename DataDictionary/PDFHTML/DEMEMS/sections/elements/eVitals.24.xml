@@ -2,6 +2,7 @@
 <element number="eVitals.24"  minOccurs="0"  maxOccurs="1"  dataTypeName="BodyTemperature"  isNillable="Yes">
 <name>Temperature</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's body temperature in degrees Celsius/centigrade.</definition>
 <v2Number>E14_20</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Pediatric</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <BodyTemperature baseType="decimal">
     <facet name="totalDigits" value="3"/>

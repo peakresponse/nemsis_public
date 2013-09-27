@@ -2,6 +2,7 @@
 <element number="dContact.05"  minOccurs="0"  maxOccurs="1"  dataTypeName="StreetAddress"  isNillable="Yes">
 <name>Agency Contact Address</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The street address of the agency contact's mailing address.</definition>
 <v2Number>D02_04</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <StreetAddress baseType="string">
     <facet name="minLength" value="1"/>

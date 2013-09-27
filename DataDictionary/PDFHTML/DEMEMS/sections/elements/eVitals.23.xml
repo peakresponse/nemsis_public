@@ -2,6 +2,7 @@
 <element number="eVitals.23"  minOccurs="0"  maxOccurs="1"  dataTypeName="TotalGCS"  isNillable="Yes">
 <name>Total Glasgow Coma Score</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's total Glasgow Coma Score.</definition>
 <v2Number>E14_19</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Can be documented or calculated from EVitals.19 (GCS-Eye), EVitals.20 (GCS-Verbal), and EVitals.21 (GCS-Motor).</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <TotalGCS baseType="integer">
     <facet name="minInclusive" value="3"/>

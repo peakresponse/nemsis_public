@@ -2,6 +2,7 @@
 <element number="eCrew.02"  minOccurs="0"  maxOccurs="1"  dataTypeName="MemberLevel"  isNillable="Yes">
 <name>Crew Member Level</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The functioning level of the crew member ID during this EMS patient encounter.</definition>
 <v2Number>E04_03</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <MemberLevel baseType="string">
     <facet name="enumeration" value="9925001" annotation="2009 Advanced Emergency Medical Technician (AEMT)"/>

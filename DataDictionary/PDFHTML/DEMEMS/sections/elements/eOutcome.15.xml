@@ -2,6 +2,7 @@
 <element number="eOutcome.15"  minOccurs="0"  maxOccurs="1"  dataTypeName="TotalVentilatorDays"  isNillable="No">
 <name>Total Ventilator Days</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The total number of patient days spend on a mechanical ventilator (excluding time in the operating room).</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to better measure and define patient outcome.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <TotalVentilatorDays baseType="integer">
     <facet name="minInclusive" value="1"/>

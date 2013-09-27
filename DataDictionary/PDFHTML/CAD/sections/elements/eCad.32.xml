@@ -2,6 +2,7 @@
 <element number="eCad.32"  minOccurs="0"  maxOccurs="1"  dataTypeName="EMDPerformed"  isNillable="No">
 <name>EMD Performed</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>Indication of whether Emergency Medical Dispatch was performed for this EMS event.</definition>
 <v2Number>E03_02</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMDPerformed baseType="string">
     <facet name="enumeration" value="2302001" annotation="No"/>

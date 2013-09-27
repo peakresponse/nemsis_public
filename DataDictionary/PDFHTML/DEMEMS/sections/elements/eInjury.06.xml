@@ -2,6 +2,7 @@
 <element number="eInjury.06"  minOccurs="0"  maxOccurs="1"  dataTypeName="SeatRowLocation"  isNillable="No">
 <name>Location of Patient in Vehicle</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The seat row location of the vehicle at the time of the crash with the front seat numbered as 1</definition>
 <v2Number>E10_06</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>MMUCC P6 data element</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <SeatRowLocation baseType="string">
     <facet name="enumeration" value="2906001" annotation="Front Seat-Left Side (or motorcycle driver)"/>

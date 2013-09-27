@@ -2,6 +2,7 @@
 <element number="eScene.12"  minOccurs="0"  maxOccurs="1"  dataTypeName="USNG"  isNillable="No">
 <name>Scene US National Grid Coordinates</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The US National Grid Coordinates for the Scene.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Standard found at www.fgdc.gov/usng</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <USNG baseType="string">
     <facet name="pattern" value="[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"/>

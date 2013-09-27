@@ -2,6 +2,7 @@
 <element number="eDispatch.05"  minOccurs="0"  maxOccurs="1"  dataTypeName="DispatchPriority"  isNillable="No">
 <name>Dispatch Priority (Patient Acuity)</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The actual, apparent, or potential acuity of the patient's condition as determined through information obtained during the EMD process.</definition>
 <v2Number></v2Number>
@@ -28,6 +29,7 @@ For EMS Agencies and CAD / EMD systems utilizing Alpha-Echo, Omega levels for de
 Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
 <br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DispatchPriority baseType="string">
     <facet name="enumeration" value="2305001" annotation="Priority 1 (Critical)"/>

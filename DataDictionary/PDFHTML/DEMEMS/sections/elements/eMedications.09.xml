@@ -2,6 +2,7 @@
 <element number="eMedications.09"  minOccurs="0"  maxOccurs="1"  dataTypeName="CrewMemberID"  isNillable="Yes">
 <name>Medication Crew (Healthcare Professionals) ID</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The statewide assigned ID number of the EMS crew member giving the treatment to the patient</definition>
 <v2Number>E18_09</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>How should the state ID for an EMS professional be record when working on an event in 2 states.  The ID used would typically be based on the EMS agency's state license specific to each EMS professional. Used for eProcedures.09 (Procedure Crew Members ID) as well.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CrewMemberID baseType="string">
     <facet name="minLength" value="2"/>

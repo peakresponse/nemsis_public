@@ -2,6 +2,7 @@
 <element number="eSituation.04"  minOccurs="0"  maxOccurs="1"  dataTypeName="Complaint"  isNillable="Yes">
 <name>Complaint</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The statement of the problem by the patient or the history provider.</definition>
 <v2Number>E09_05</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <Complaint baseType="string">
     <facet name="minLength" value="1"/>

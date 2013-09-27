@@ -2,6 +2,7 @@
 <element number="dDevice.03"  minOccurs="0"  maxOccurs="M"  dataTypeName="MedicalDeviceType"  isNillable="No">
 <name>Medical Device Type</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The type of medical device.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>This is multiple choice to allow documentation of various multifunction device configurations.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <MedicalDeviceType baseType="string">
     <facet name="enumeration" value="1603001" annotation="Capnography-Numeric"/>

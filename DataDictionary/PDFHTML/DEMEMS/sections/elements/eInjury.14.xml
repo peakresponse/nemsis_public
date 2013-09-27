@@ -2,6 +2,7 @@
 <element number="eInjury.14"  minOccurs="0"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="No">
 <name>Date/Time of ACN Incident</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The Automated Collision Notification Incident Date and Time.</definition>
 <v2Number></v2Number>
@@ -34,6 +35,7 @@
 									</table>
 									</td></tr></table></v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

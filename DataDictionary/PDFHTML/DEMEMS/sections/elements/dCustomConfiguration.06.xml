@@ -2,6 +2,7 @@
 <element number="dCustomConfiguration.06"  minOccurs="0"  maxOccurs="M"  dataTypeName="CustomValue"  isNillable="No">
 <name>Custom Data Element Potential Values</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CustomValue baseType="string">
     <facet name="minLength" value="1"/>

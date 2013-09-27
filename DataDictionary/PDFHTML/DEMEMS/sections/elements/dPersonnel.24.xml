@@ -2,6 +2,7 @@
 <element number="dPersonnel.24"  minOccurs="0"  maxOccurs="1"  dataTypeName="MemberLevel"  isNillable="Yes">
 <name>EMS Personnel's State EMS Certification Licensure Level</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The personnel's state EMS certification level.</definition>
 <v2Number>D08_15</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Added 2009 EMS Education Levels.<br/><br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.<br/><br/>Some listed health care providers may not have an EMS certification/licensure number, however their level should be indicated from the list above and the state licensure number should be indicated in dPersonnel.23 - EMS Personnel's State's Licensure ID Number.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <MemberLevel baseType="string">
     <facet name="enumeration" value="9925001" annotation="2009 Advanced Emergency Medical Technician (AEMT)"/>

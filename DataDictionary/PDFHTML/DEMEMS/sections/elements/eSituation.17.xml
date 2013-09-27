@@ -2,6 +2,7 @@
 <element number="eSituation.17"  minOccurs="0"  maxOccurs="M"  dataTypeName="icd10Activity"  isNillable="Yes">
 <name>Patient Activity</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The activity the patient was involved in at the time the patient experienced the onset of symptoms or experienced an injury.</definition>
 <v2Number></v2Number>
@@ -12,6 +13,7 @@
 <br/>Website - http://uts.nlm.nih.gov  
 <br/>Product - UMLS Metathesaurus</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <icd10Activity baseType="string">
     <facet name="pattern" value="Y93\.[A-Za-z0-9]{1,4}"/>

@@ -2,6 +2,7 @@
 <element number="eCad.12"  minOccurs="0"  maxOccurs="1"  dataTypeName="EMSStandByReason"  isNillable="No">
 <name>Standby Purpose</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The main reason the EMS Unit is on Standby as the Primary Type of Service for the EMS event.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Added to document the reason for ?Standby? when populated in eResponse.05 (Type of Service Requested). This information will assist in administrative analysis of EMS service delivery, special event coverage, etc.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSStandByReason baseType="string">
     <facet name="enumeration" value="2206001" annotation="Disaster Event-Drill/Exercise"/>

@@ -2,6 +2,7 @@
 <element number="eVitals.17"  minOccurs="0"  maxOccurs="1"  dataTypeName="CarbonMonoxideLevel"  isNillable="Yes">
 <name>Carbon Monoxide (CO)</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <CarbonMonoxideLevel baseType="integer">
     <facet name="minInclusive" value="0"/>

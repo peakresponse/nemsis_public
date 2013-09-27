@@ -2,6 +2,7 @@
 <element number="eVitals.11"  minOccurs="0"  maxOccurs="1"  dataTypeName="MethodMeasureHeartRate"  isNillable="No">
 <name>Method of Heart Rate Measurement</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor).</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Comment>
 <v3Changes>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <MethodMeasureHeartRate baseType="string">
     <facet name="enumeration" value="3311001" annotation="Auscultated"/>

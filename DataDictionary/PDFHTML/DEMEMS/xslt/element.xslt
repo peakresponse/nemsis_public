@@ -11,8 +11,11 @@
             
       .pageHeadingElement {font-size:20px;}
   
+      
+      .deprecated {width:80px;font-size:14px;text-align:center;color:white;background: PURPLE no-repeat;}
       .national {width:80px;font-size:14px;text-align:center;color:white;background: url(../../images/roundedNational.gif) no-repeat;}
       .state    {width:80px;font-size:14px;text-align:center;color:white;background: url(../../images/roundedState.gif) no-repeat;}
+      
       
       .numberName {font-size:16px;color:white;padding-left:5px; background: url(../../images/roundedNumberName.gif) no-repeat;}
          
@@ -31,6 +34,9 @@
       
       .sectionV3ChangesTitle  {font-size:14px;background:#F0F0F0;color:#004080;}
       .sectionV3ChangesValue  {font-size:12px;}
+      
+      .sectionDeprecatedCommentTitle  {font-size:14px;background:#F0F0F0;color:#004080;}
+      .sectionDeprecatedCommentValue  {font-size:12px;}
       
       .sectionRestrictionsEnumerationCodeTitle        {width:60px;  font-size:12px;font-weight:bold;}
       .sectionRestrictionsEnumerationDescriptionTitle {width:560px; font-size:12px;font-weight:bold;}
@@ -58,24 +64,22 @@
 </head>
 
 <body>
-    
-         
-
-        
-        
-  
 
   <table border="0" cellspacing="0" cellpadding="0" width="675px">    
     <tr><td>
         <table width="675px" border="0" cellspacing="0" cellpadding="0" >
-          <tr>
+          <tr>            
+            <xsl:choose><xsl:when test="element/deprecated/text()='Yes'">
+            <td class="deprecated" height="23px">Deprecated</td>
+            </xsl:when></xsl:choose> 
+            
             <td align="right" class="pageHeadingElement">
               <xsl:value-of select="element/@number"/>
             </td>
           </tr>
         </table>
     </td></tr>     
-    <xsl:choose><xsl:when test="element/state/text()='Yes' or element/national/text()='Yes'">
+    <xsl:choose><xsl:when test="element/state/text()='Yes' or element/national/text()='Yes' or element/deprecated/text()='Yes'">
     <tr><td height="8px;"></td></tr> 
     <tr><td>
         <table border="0" cellspacing="0" cellpadding="0" align="right" >
@@ -89,6 +93,7 @@
             <td class="national" height="23px">National</td>
             <td width="2px;"></td> 
             </xsl:when></xsl:choose>  
+             
           </tr>
         </table>
     </td></tr>  
@@ -1073,6 +1078,41 @@
           </tr>
           <tr>
             <td class="sectionV3ChangesValue" style="padding-left:5px"><xsl:copy-of select="element/v3Changes"/></td>
+          </tr>
+        </table>     
+    </td></tr>       
+    </xsl:when>
+    </xsl:choose>
+    
+    <!-- Deprecated Comment SECTION -->
+    <xsl:choose>  
+    <xsl:when test="string-length(element/deprecatedComment) &gt; 0">
+    <tr><td height="8px;"></td></tr> 
+    <tr><td>    
+        <table border="0" cellspacing="0" cellpadding="0" width="675px">
+          <tr>
+            <td>
+              <table width="675px" cellspacing="0" cellpadding="0" border="0" >
+                <tr>
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
+                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif);"></td>        
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
+                </tr>
+                <tr>
+                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
+                  <td width="667px" class="sectionV3ChangesTitle">Deprecated Comments</td>
+                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
+                </tr>      
+                <tr>
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
+                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
+                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="sectionDeprecatedComment" style="padding-left:5px"><xsl:copy-of select="element/deprecatedComment"/></td>
           </tr>
         </table>     
     </td></tr>       

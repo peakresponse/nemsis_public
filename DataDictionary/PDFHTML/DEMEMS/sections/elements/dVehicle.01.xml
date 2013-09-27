@@ -2,6 +2,7 @@
 <element number="dVehicle.01"  minOccurs="0"  maxOccurs="1"  dataTypeName="VehicleNumber"  isNillable="Yes">
 <name>Unit/Vehicle Number</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The unique ID number for the unit which is specific for each vehicle. This ID number may be the state's vehicle's permit number.</definition>
 <v2Number>D06_01</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>This element can be used in EMS PCR documentation to document the vehicle. This element should be used to populate eResponse.13 (EMS Vehicle (Unit) Number).</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <VehicleNumber baseType="string">
     <facet name="minLength" value="1"/>

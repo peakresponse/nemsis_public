@@ -2,6 +2,7 @@
 <element number="eSituation.01"  minOccurs="1"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="Yes">
 <name>Date/Time of Symptom Onset/Last Normal</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The date and time the symptom began as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals.</definition>
 <v2Number>E05_01</v2Number>
@@ -34,6 +35,7 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes>Added to better define the EMS patient event.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

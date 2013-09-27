@@ -2,6 +2,7 @@
 <element number="eTimes.02"  minOccurs="0"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="No">
 <name>Dispatch Notified Date/Time</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The date/time dispatch was notified by the 911 call taker (if a separate entity).</definition>
 <v2Number>E05_03</v2Number>
@@ -34,6 +35,7 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

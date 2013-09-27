@@ -2,6 +2,7 @@
 <element number="eProcedures.13"  minOccurs="0"  maxOccurs="1"  dataTypeName="VascularAccessLocation"  isNillable="Yes">
 <name>Vascular Access Location</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The location of the vascular access site attempt on the patient, if applicable.</definition>
 <v2Number>E19_12</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>This is now associated with the Date/Time of the procedure and therefore changed to single choice. This allows the location to be documented with each procedure and attempt. If the vascular access has been established prior to EMS, this should be documented as such.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <VascularAccessLocation baseType="string">
     <facet name="enumeration" value="3913001" annotation="Antecubital-Left"/>

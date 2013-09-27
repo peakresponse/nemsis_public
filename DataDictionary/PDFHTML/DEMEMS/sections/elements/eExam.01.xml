@@ -2,6 +2,7 @@
 <element number="eExam.01"  minOccurs="0"  maxOccurs="1"  dataTypeName="EstimatedBodyWeight"  isNillable="Yes">
 <name>Estimated Body Weight in Kilograms</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The patient's body weight in kilograms either measured or estimated</definition>
 <v2Number>E16_01</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Pediatric</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EstimatedBodyWeight baseType="decimal">
     <facet name="totalDigits" value="4"/>

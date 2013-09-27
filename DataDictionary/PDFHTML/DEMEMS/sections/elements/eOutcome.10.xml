@@ -2,6 +2,7 @@
 <element number="eOutcome.10"  minOccurs="0"  maxOccurs="M"  dataTypeName="icd10Code"  isNillable="No">
 <name>Emergency Department Diagnosis</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The practitioner's description of the condition or problem for which Emergency Department services were provided.</definition>
 <v2Number></v2Number>
@@ -11,6 +12,7 @@
 							<br/>Website - http://uts.nlm.nih.gov  
 							<br/>Product - UMLS Metathesaurus</v3Comment>
 <v3Changes>Added to better evaluate EMS care.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <icd10Code baseType="string">
     <facet name="pattern" value="[A-Z][0-9]{2}((\.[0-9A-Z]{1,3})?)"/>

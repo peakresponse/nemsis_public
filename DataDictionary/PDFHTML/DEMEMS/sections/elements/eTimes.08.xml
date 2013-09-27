@@ -2,6 +2,7 @@
 <element number="eTimes.08"  minOccurs="0"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="Yes">
 <name>Transfer of EMS Patient Care Date/Time</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The date/time the patient was transferred from this EMS agency to another EMS agency for care.</definition>
 <v2Number>E05_08</v2Number>
@@ -33,6 +34,7 @@
 </table>
 </td></tr></table></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <DateTimeType baseType="dateTime">
     <facet name="minInclusive" value="1950-01-01T00:00:00-00:00"/>

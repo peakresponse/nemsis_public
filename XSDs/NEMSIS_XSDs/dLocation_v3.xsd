@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dLocation" id="dLocation.AgencyStationInformation">
 		<xs:sequence>
@@ -18,9 +18,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The type of EMS Location which could be a fixed station or a pre-determined staging area.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>This is associated with the EMS Agency associated with the EMS Agency Number (dAgency.02).</comment>
 										<v3Changes>Added to allow multiple locations to be documented for an EMS Agency.</v3Changes>
 									</nemsisTacDoc>
@@ -38,9 +36,6 @@
 										<definition>The name of the EMS Location.</definition>
 										<v2Number>D05_01</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -56,9 +51,6 @@
 										<definition>The ID number of the EMS Location. </definition>
 										<v2Number>D05_02</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -74,12 +66,10 @@
 										<definition>The GPS coordinate of  the EMS location.</definition>
 										<v2Number>D05_04</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
 										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 										  </comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -96,16 +86,13 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The US National Grid Coordinates of the EMS location.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>For more information go to www.fgdc.gov/usng.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dLocation.06" type="StreetAddress" id="dLocation.EMSLocationAddress" minOccurs="0">
+						<xs:element name="dLocation.06" id="dLocation.EMSLocationAddress" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -116,12 +103,16 @@
 										<definition>The address of the EMS Location.</definition>
 										<v2Number>D05_05</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="StreetAddress">
+										<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="dLocation.07" type="CityGnisCode" id="dLocation.EMSLocationCity" minOccurs="0">
 							<xs:annotation>
@@ -134,9 +125,7 @@
 										<definition>The city of the EMS Location.</definition>
 										<v2Number>D05_06</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -152,9 +141,7 @@
 										<definition>The state of the EMS Location.</definition>
 										<v2Number>D05_07</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Based on the ANSI Code. &lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website:&lt;a>http://geonames.usgs.gov/domestic/download_data.htm &lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -170,10 +157,8 @@
 										<definition>The ZIP code of the EMS Location.</definition>
 										<v2Number>D05_08</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -187,12 +172,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The county of the EMS Location</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>County codes are based on ISO/ANSI codes. A 5-digit code based on state (2-digits) and county (5-digit).
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -206,9 +188,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The country of the EMS location.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country.
 										&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 										<v3Changes>Added to improve international implementations.</v3Changes>
@@ -227,9 +207,6 @@
 										<definition>The phone number of the EMS Location.</definition>
 										<v2Number>D05_09</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

@@ -2,6 +2,7 @@
 <element number="eDevice.07"  minOccurs="0"  maxOccurs="M"  dataTypeName="ECGLead"  isNillable="No">
 <name>Medical Device ECG Lead</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</definition>
 <v2Number>E21_06</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>STEMI</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Can be displayed in the Vital Signs or Procedure Sections.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ECGLead baseType="string">
     <facet name="enumeration" value="4107001" annotation="I"/>

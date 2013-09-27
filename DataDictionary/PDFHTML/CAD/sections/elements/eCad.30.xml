@@ -2,6 +2,7 @@
 <element number="eCad.30"  minOccurs="0"  maxOccurs="M"  dataTypeName="EMSAdditionalResponseMode"  isNillable="No">
 <name>Additional Response Mode Descriptors</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The documentation of response mode techniques used for this EMS response.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Descriptors have been added to better describe the EMS Response.  This includes information on whether the EMS event was schedule or unscheduled.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EMSAdditionalResponseMode baseType="string">
     <facet name="enumeration" value="2224001" annotation="Intersection Navigation-Against Normal Light  Patterns"/>

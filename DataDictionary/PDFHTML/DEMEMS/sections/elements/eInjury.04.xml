@@ -2,6 +2,7 @@
 <element number="eInjury.04"  minOccurs="1"  maxOccurs="M"  dataTypeName="VehicularInjuryIndicators"  isNillable="Yes">
 <name>Vehicular, Pedestrian, or Other Injury Risk Factor</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The kind of risk factor predictors present at the incident</definition>
 <v2Number>E10_04</v2Number>
@@ -10,6 +11,7 @@
 <v3Comment>Added additional mechanism or risk indicators based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3.</v3Comment>
 <v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
 							<br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <VehicularInjuryIndicators baseType="string">
     <facet name="enumeration" value="2904001" annotation="Auto v. Pedestrian/Bicyclist Thrown, Run Over, or > 20 MPH Impact"/>

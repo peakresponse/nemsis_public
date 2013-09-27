@@ -2,6 +2,7 @@
 <element number="eOutcome.09"  minOccurs="0"  maxOccurs="M"  dataTypeName="icd10CodeOutcomeProcedures"  isNillable="No">
 <name>Emergency Department Procedures</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The procedures performed on the patient during the emergency department visit.</definition>
 <v2Number></v2Number>
@@ -14,6 +15,7 @@
 							<br/>Website - http://uts.nlm.nih.gov  
 							<br/>Product - UMLS Metathesaurus</v3Comment>
 <v3Changes>Added to better evaluate EMS care.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <icd10CodeOutcomeProcedures baseType="string">
     <facet name="pattern" value="[0-9A-HJ-NP-Z]{3,7}"/>

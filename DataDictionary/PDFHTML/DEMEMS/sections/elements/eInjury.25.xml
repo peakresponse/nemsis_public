@@ -2,6 +2,7 @@
 <element number="eInjury.25"  minOccurs="0"  maxOccurs="1"  dataTypeName="ACNYesNoType"  isNillable="No">
 <name>ACN Incident Rollover</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The Automated Collision Notification Indication that the Vehicle Rolled Over.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>Based on Vehicular Emergency Data Set:  Rollover. Indicates if the vehicle rolled over during the collision/event (e.g. True=Rollover, False=No Rollover). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</v3Comment>
 <v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ACNYesNoType baseType="string">
     <facet name="enumeration" value="Y" annotation="Yes"/>

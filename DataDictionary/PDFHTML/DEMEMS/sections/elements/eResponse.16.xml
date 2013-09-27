@@ -2,6 +2,7 @@
 <element number="eResponse.16"  minOccurs="0"  maxOccurs="1"  dataTypeName="VehicleDispatchLocation"  isNillable="No">
 <name>Vehicle Dispatch Location</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The EMS Location or healthcare facility name representing the geographic location of the vehicle at the time of dispatch.</definition>
 <v2Number>E02_13</v2Number>
@@ -13,6 +14,7 @@
 							<br/>3. dFacility.03 Facility Code
 							<br/>4. dFacility.15 Facility GPS Location</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <VehicleDispatchLocation baseType="string">
     <facet name="minLength" value="2"/>

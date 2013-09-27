@@ -2,6 +2,7 @@
 <element number="dPersonnel.34"  minOccurs="0"  maxOccurs="1"  dataTypeName="JobResponsibilities"  isNillable="Yes">
 <name>EMS Personnel's Primary EMS Job Role</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The individuals primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.</definition>
 <v2Number></v2Number>
@@ -11,6 +12,7 @@
 functions. It is understood that most EMS personnel perform more than one role as a part of their position. Other roles should
 be documented in dPersonnel.36 (EMS Personnel's Other Job Responsibilities).</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <JobResponsibilities baseType="string">
     <facet name="enumeration" value="1534001" annotation="Administrator/Manager"/>

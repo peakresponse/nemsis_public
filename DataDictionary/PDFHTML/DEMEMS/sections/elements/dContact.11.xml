@@ -2,6 +2,7 @@
 <element number="dContact.11"  minOccurs="0"  maxOccurs="M"  dataTypeName="EmailAddress"  isNillable="Yes">
 <name>Agency Contact Email Address</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The primary email address of the Agency contact.</definition>
 <v2Number>D02_10</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.</v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <EmailAddress baseType="string">
     <facet name="minLength" value="3"/>

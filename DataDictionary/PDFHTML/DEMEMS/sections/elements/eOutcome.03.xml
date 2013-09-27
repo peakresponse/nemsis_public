@@ -2,6 +2,7 @@
 <element number="eOutcome.03"  minOccurs="0"  maxOccurs="1"  dataTypeName="ExternalReportIDType"  isNillable="No">
 <name>External Report ID/Number Type</name>
 <national>No</national>
+<deprecated></deprecated>
 <state>No</state>
 <definition>The Type of External Report or Record associated with the Report/ID Number.</definition>
 <v2Number></v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>This data element is a merge based on the following Version 2.2.1 elements:  E22_03, E22_04, E22_05, and E22_06</v3Comment>
 <v3Changes>Added to allow documentation of external record and identification numbers.</v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <ExternalReportIDType baseType="string">
     <facet name="enumeration" value="4303001" annotation="Disaster Tag"/>

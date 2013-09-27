@@ -2,6 +2,7 @@
 <element number="ePayment.01"  minOccurs="1"  maxOccurs="1"  dataTypeName="PrimaryMethodOfPayment"  isNillable="Yes">
 <name>Primary Method of Payment</name>
 <national>Yes</national>
+<deprecated></deprecated>
 <state>Yes</state>
 <definition>The primary method of payment or type of insurance associated with this EMS encounter</definition>
 <v2Number>E07_01</v2Number>
@@ -9,6 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment></v3Comment>
 <v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
 <restrictions>
   <PrimaryMethodOfPayment baseType="string">
     <facet name="enumeration" value="2601001" annotation="Insurance"/>

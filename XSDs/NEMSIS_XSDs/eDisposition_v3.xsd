@@ -29,7 +29,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Recommended State data element since no national code for destination. May be populated from the list in dFacility.02 (Facility Name).</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -65,7 +64,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>May be populated from list in dFacility.03 (Facility Location Code) or dFacility.05 (Facility National Provider Identifier) if a health care facility. NPI codes can be found on the NEMSIS SharePoint site.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -92,9 +90,7 @@
 										<definition>The street address of the destination the patient was delivered or transferred to.</definition>
 										<v2Number>E20_03</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>May be auto-populated if list created in dFacility.07 (Facility Street Address).</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -114,13 +110,13 @@
 										<name>Destination City</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The city name of the destination the patient was delivered or transferred to.</definition>
+										<definition>The city of the destination the patient was delivered or transferred to (physical address). </definition>
 										<v2Number>E20_04</v2Number>
 										<usage>Optional</usage>
-										
-										<comment>Based on GNIS Civil Code or Populated Place code. May be auto-populated if list created in dFacility.08 (Facility City).
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
+										<comment>
+City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
+  	&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
+  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -146,7 +142,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -184,7 +179,6 @@
 										</performanceMeasuresGroup>
 										<comment>May be auto-populated if list created in dFacility.11 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
 							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -223,7 +217,6 @@
 										</performanceMeasuresGroup>
 										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -248,9 +241,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The country of the destination.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>May be auto-populated if list created in dFacility.12 (Facility Country).&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 										<v3Changes>Added for improved international compatibility.</v3Changes>
 									</nemsisTacDoc>
@@ -268,13 +259,11 @@
 										<definition>The destination GPS Coordinates to which  the patient was delivered or transferred to.</definition>
 										<v2Number>E20_08</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>May be auto-populated if list created in dFacility.13 (Facility GPS Location).
 										  &lt;br/>&lt;br/>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
 										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -291,13 +280,10 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The US National Grid Coordinates for the Disposition Location.  This may be the Healthcare Facility US National Grid Coordinates.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>Standard found at www.fgdc.gov/usng. &lt;br/>
 										Through programming this may be partially auto-populated if the list is created in dFacility.14 (Facility US National Grid Coordinates).									
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -314,9 +300,7 @@
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The number of patients transported by this EMS crew and unit.</definition>
-							
 							<usage>Recommended</usage>
-							
 							<comment>Added to document multiple patients being transported with the same vehicle and crew.</comment>
 							<v3Changes>Added to document multiple patients being transported with the same vehicle and crew.</v3Changes>
 						</nemsisTacDoc>
@@ -354,8 +338,6 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -371,9 +353,6 @@
 							<definition>The method the patient was moved to the ambulance from the scene</definition>
 							<v2Number>E20_11</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -396,9 +375,6 @@
 							<definition>The position of the patient during transport from the scene</definition>
 							<v2Number>E20_12</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -421,9 +397,6 @@
 							<definition>The method the patient was moved from the ambulance to the destination</definition>
 							<v2Number>E20_13</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -437,7 +410,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Transport method by this EMS Unit.</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -486,7 +458,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Information now split between eDisposition.17 (Transport Mode from Scene) and eDisposition.18 (Additional Transport Mode Descriptors). Element eDisposition.18  (Additional Transport Mode Descriptors) has been added to document the use of lights and sirens or other descriptive information.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -511,11 +482,8 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The documentation of transport mode techniques for this EMS response.</definition>
-							
 							<usage>Required</usage>
-							
 							<comment>Information now split between eDisposition.17 (Transport Mode from Scene) and eDisposition.18 (Additional Transport Mode Descriptors). Element eDisposition.18  (Additional Transport Mode Descriptors) has been added to document the use of lights and sirens or other descriptive information.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -549,8 +517,6 @@
 								<performanceMeasure>Pediatric</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -585,7 +551,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Required if Patient Transported</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -623,7 +588,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Required if Patient Transported by EMS. "Hospital-Non-Emergency Department Bed" includes any location in the hospital except the Emergency Department. Choices include those in eDisposition.22 (Hospital In-Patient Destination). </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -648,7 +612,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The location within the hospital that the patient was taken directly by EMS (e.g. Cath Lab, ICU, etc.) </definition>
-							
 							<usage>Required</usage>
 							<comment>To be documented when in eDisposition.21 "Hospital-Non-Emergency Department Bed" is selected. </comment>
 							<v3Changes>Added to identify the location within the hospital that the patient was directly taken to by EMS.</v3Changes>
@@ -675,10 +638,8 @@
 							<name>Hospital Designation</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The designation associated with the hospital for this transport(e.g. Trauma, STEMI, Peds, etc) </definition>
-							
+							<definition>The primary hospital capability associated with the patient's condition for this transport (e.g. Trauma, STEMI, Peds, etc).</definition>
 							<usage>Required</usage>
-							
 							<comment>To be documented when in eDisposition.21 (Type of Destination) equals "4221003: Hospital-Emergency Department" or "4221005: Hospital-In Patient Bed" is selected . </comment>
 							<v3Changes>Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment. </v3Changes>
 						</nemsisTacDoc>
@@ -707,11 +668,10 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eDisposition.24</number>
-										<name>Destination Team Pre-Arrival Activation</name>
+										<name>Destination Team Pre-Arrival Alert or Activation</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Activation by EMS of the appropriate destination healthcare facility team. The activation should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
-										
+										<definition>Indication that an alert (or activation) was called by EMS to the appropriate destination healthcare facility team. The alert (or activation) should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -719,7 +679,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment></comment>
+										<comment/>
 										<v3Changes>Added to better document performance measure for acute time dependent illness and injury systems of care.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -741,11 +701,10 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eDisposition.25</number>
-										<name>Date/Time of Destination Prearrival Activation</name>
+										<name>Date/Time of Destination Prearrival Alert or Activation</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Date/Time EMS Notified/Activated the Destination Healthcare Facility Team prior to EMS arrival for acute ill or injured patient.</definition>
-										
+										<definition>The Date/Time EMS alerted, notified, or activated the Destination Healthcare Facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -809,10 +768,7 @@
 							<national>No</national>
 							<state>No</state>
 							<definition>Information provided to patient during disposition for patients not transported or treated.</definition>
-							
 							<usage>Optional</usage>
-							
-							
 							<v3Changes>Added to better document instructions given to patients not transported by EMS.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -856,6 +812,31 @@
 			<xs:enumeration value="4218009">
 				<xs:annotation>
 					<xs:documentation>Speed-Normal Traffic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4218011">
+				<xs:annotation>
+					<xs:documentation>Lights and Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4218013">
+				<xs:annotation>
+					<xs:documentation>Lights and No Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4218015">
+				<xs:annotation>
+					<xs:documentation>No Lights or Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4218017">
+				<xs:annotation>
+					<xs:documentation>Initial No Lights or Sirens, Upgraded to Lights and Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4218019">
+				<xs:annotation>
+					<xs:documentation>Initial Lights and Sirens, Downgraded to No Lights or Sirens</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -903,6 +884,11 @@
 			<xs:enumeration value="4224015">
 				<xs:annotation>
 					<xs:documentation>Yes-Stroke</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4224017">
+				<xs:annotation>
+					<xs:documentation>Yes-Trauma (General)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1066,7 +1052,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4222015">
 				<xs:annotation>
-					<xs:documentation>Hospital-Labor &amp; Delivery</xs:documentation>
+					<xs:documentation>Hospital-Labor &amp;amp; Delivery</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4222017">
@@ -1183,12 +1169,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="4212009">
 				<xs:annotation>
-					<xs:documentation>No Patient Contact (Canceled on Scene)</xs:documentation>
+					<xs:documentation>Canceled on Scene (No Patient Contact)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212011">
 				<xs:annotation>
-					<xs:documentation>No Patient Found (Canceled on Scene)</xs:documentation>
+					<xs:documentation>Canceled on Scene (No Patient Found)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212013">
@@ -1238,12 +1224,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="4212031">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Transferred Care to Another EMS Professional</xs:documentation>
+					<xs:documentation>Patient Treated, Transferred Care to Another EMS Unit</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212033">
 				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by EMS</xs:documentation>
+					<xs:documentation>Patient Treated, Transported by this EMS Unit</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4212035">
@@ -1268,7 +1254,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4212043">
 				<xs:annotation>
-					<xs:documentation>Transport of Body Parts or Organs Only</xs:documentation>
+					<xs:documentation>Transport Non-Patient, Organs, etc.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1481,6 +1467,16 @@
 			<xs:enumeration value="4221019">
 				<xs:annotation>
 					<xs:documentation>Police/Jail</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221021">
+				<xs:annotation>
+					<xs:documentation>Urgent Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221023">
+				<xs:annotation>
+					<xs:documentation>Freestanding Emergency Department</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

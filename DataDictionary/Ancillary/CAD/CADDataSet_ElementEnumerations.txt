@@ -4,6 +4,7 @@
 'CADDataSet'|'eCustomConfiguration.03'|'Custom Data Type'|'9902005'|'Integer/Number'|
 'CADDataSet'|'eCustomConfiguration.03'|'Custom Data Type'|'9902007'|'Other (Not Listed)'|
 'CADDataSet'|'eCustomConfiguration.03'|'Custom Data Type'|'9902009'|'Text/String'|
+'CADDataSet'|'eCustomConfiguration.03'|'Custom Data Type'|'9902011'|'Boolean'|
 'CADDataSet'|'eCustomConfiguration.04'|'Custom Data Element Recurrence'|'9923001'|'No'|
 'CADDataSet'|'eCustomConfiguration.04'|'Custom Data Element Recurrence'|'9923003'|'Yes'|
 'CADDataSet'|'eCustomConfiguration.05'|'Custom Data Element Usage'|'9903001'|'Mandatory'|
@@ -42,11 +43,13 @@
 'CADDataSet'|'eCad.12'|'Standby Purpose'|'2206017'|'Mass Gathering-Sporting Event'|
 'CADDataSet'|'eCad.12'|'Standby Purpose'|'2206019'|'Other (Not Listed)'|
 'CADDataSet'|'eCad.12'|'Standby Purpose'|'2206021'|'Public Safety Support'|
-'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207001'|'Air Transport'|
+'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207001'|'Air Transport <span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</span>'|
 'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207003'|'Ground Transport'|
 'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207005'|'Non-Transport Administrative (e.g., Supervisor)'|
 'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207007'|'Non-Transport Assistance'|
 'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207009'|'Non-Transport Rescue'|
+'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207011'|'Air Transport-Helicopter'|
+'CADDataSet'|'eCad.13'|'Primary Role of the Unit'|'2207013'|'Air Transport-Fixed Wing'|
 'CADDataSet'|'eCad.14'|'Type of Dispatch Delay'|'2208001'|'Caller (Uncooperative)'|
 'CADDataSet'|'eCad.14'|'Type of Dispatch Delay'|'2208003'|'Diversion/Failure (of previous unit)'|
 'CADDataSet'|'eCad.14'|'Type of Dispatch Delay'|'2208005'|'High Call Volume'|
@@ -71,6 +74,8 @@
 'CADDataSet'|'eCad.15'|'Type of Response Delay'|'2209025'|'Vehicle Crash Involving this Unit'|
 'CADDataSet'|'eCad.15'|'Type of Response Delay'|'2209027'|'Vehicle Failure of this Unit'|
 'CADDataSet'|'eCad.15'|'Type of Response Delay'|'2209029'|'Weather'|
+'CADDataSet'|'eCad.15'|'Type of Response Delay'|'2209031'|'Mechanical Issue-Unit, Equipment, etc.'|
+'CADDataSet'|'eCad.15'|'Type of Response Delay'|'2209033'|'Flight Planning'|
 'CADDataSet'|'eCad.16'|'Type of Scene Delay'|'2210001'|'Awaiting Air Unit'|
 'CADDataSet'|'eCad.16'|'Type of Scene Delay'|'2210003'|'Awaiting Ground Unit'|
 'CADDataSet'|'eCad.16'|'Type of Scene Delay'|'2210005'|'Crowd'|
@@ -90,6 +95,7 @@
 'CADDataSet'|'eCad.16'|'Type of Scene Delay'|'2210033'|'Vehicle Crash Involving this Unit'|
 'CADDataSet'|'eCad.16'|'Type of Scene Delay'|'2210035'|'Vehicle Failure of this Unit'|
 'CADDataSet'|'eCad.16'|'Type of Scene Delay'|'2210037'|'Weather'|
+'CADDataSet'|'eCad.16'|'Type of Scene Delay'|'2210039'|'Mechanical Issue-Unit, Equipment, etc'|
 'CADDataSet'|'eCad.17'|'Type of Transport Delay'|'2211001'|'Crowd'|
 'CADDataSet'|'eCad.17'|'Type of Transport Delay'|'2211003'|'Directions/Unable to Locate'|
 'CADDataSet'|'eCad.17'|'Type of Transport Delay'|'2211005'|'Distance'|
@@ -105,6 +111,7 @@
 'CADDataSet'|'eCad.17'|'Type of Transport Delay'|'2211025'|'Vehicle Crash Involving this Unit'|
 'CADDataSet'|'eCad.17'|'Type of Transport Delay'|'2211027'|'Vehicle Failure of this Unit'|
 'CADDataSet'|'eCad.17'|'Type of Transport Delay'|'2211029'|'Weather'|
+'CADDataSet'|'eCad.17'|'Type of Transport Delay'|'2211031'|'Patient Condition Change (e.g. Unit Stopped)'|
 'CADDataSet'|'eCad.18'|'Type of Turn-Around Delay'|'2212001'|'Clean-up'|
 'CADDataSet'|'eCad.18'|'Type of Turn-Around Delay'|'2212003'|'Decontamination'|
 'CADDataSet'|'eCad.18'|'Type of Turn-Around Delay'|'2212005'|'Distance'|
@@ -121,6 +128,7 @@
 'CADDataSet'|'eCad.18'|'Type of Turn-Around Delay'|'2212027'|'Vehicle Crash of this Unit'|
 'CADDataSet'|'eCad.18'|'Type of Turn-Around Delay'|'2212029'|'Vehicle Failure of this Unit'|
 'CADDataSet'|'eCad.18'|'Type of Turn-Around Delay'|'2212031'|'Weather'|
+'CADDataSet'|'eCad.18'|'Type of Turn-Around Delay'|'2212033'|'EMS Crew Accompanies Patient for Facility Procedure'|
 'CADDataSet'|'eCad.21'|'Level of Care of This Unit'|'2215001'|'BLS-First Responder/EMR'|
 'CADDataSet'|'eCad.21'|'Level of Care of This Unit'|'2215003'|'BLS-Basic /EMT'|
 'CADDataSet'|'eCad.21'|'Level of Care of This Unit'|'2215005'|'BLS-AEMT'|
@@ -144,6 +152,11 @@
 'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224009'|'Speed-Enhanced per Local Policy'|
 'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224011'|'Speed-Normal Traffic'|
 'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224013'|'Unscheduled'|
+'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224015'|'Lights and Sirens'|
+'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224017'|'Lights and No Sirens'|
+'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224019'|'No Lights or Sirens'|
+'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224021'|'Initial No Lights or Sirens, Upgraded to Lights and Sirens'|
+'CADDataSet'|'eCad.30'|'Additional Response Mode Descriptors'|'2224023'|'Initial Lights and Sirens, Downgraded to No Lights or Sirens'|
 'CADDataSet'|'eCad.31'|'Complaint Reported by Dispatch'|'2301001'|'Abdominal Pain/Problems'|
 'CADDataSet'|'eCad.31'|'Complaint Reported by Dispatch'|'2301003'|'Allergic Reaction/Stings'|
 'CADDataSet'|'eCad.31'|'Complaint Reported by Dispatch'|'2301005'|'Animal Bite'|
@@ -185,6 +198,7 @@
 'CADDataSet'|'eCad.31'|'Complaint Reported by Dispatch'|'2301077'|'Unconscious/Fainting/Near-Fainting'|
 'CADDataSet'|'eCad.31'|'Complaint Reported by Dispatch'|'2301079'|'Unknown Problem/Person Down'|
 'CADDataSet'|'eCad.31'|'Complaint Reported by Dispatch'|'2301081'|'Drowning/Diving/SCUBA Accident'|
+'CADDataSet'|'eCad.31'|'Complaint Reported by Dispatch'|'2301083'|'Airmedical Transport'|
 'CADDataSet'|'eCad.32'|'EMD Performed'|'2302001'|'No'|
 'CADDataSet'|'eCad.32'|'EMD Performed'|'2302003'|'Yes, With Pre-Arrival Instructions'|
 'CADDataSet'|'eCad.32'|'EMD Performed'|'2302005'|'Yes, Without Pre-Arrival Instructions'|
@@ -247,6 +261,11 @@
 'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218005'|'Intersection Navigation-With Normal Light Patterns'|
 'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218007'|'Speed-Enhanced per Local Policy'|
 'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218009'|'Speed-Normal Traffic'|
+'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218011'|'Lights and Sirens'|
+'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218013'|'Lights and No Sirens'|
+'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218015'|'No Lights or Sirens'|
+'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218017'|'Initial No Lights or Sirens, Upgraded to Lights and Sirens'|
+'CADDataSet'|'eCad.106'|'Additional Transport Mode Descriptors'|'4218019'|'Initial Lights and Sirens, Downgraded to No Lights or Sirens'|
 'CADDataSet'|'eCad.107'|'Type of Destination'|'4221001'|'Home'|
 'CADDataSet'|'eCad.107'|'Type of Destination'|'4221003'|'Hospital-Emergency Department'|
 'CADDataSet'|'eCad.107'|'Type of Destination'|'4221005'|'Hospital-Non-Emergency Department Bed'|
@@ -257,6 +276,8 @@
 'CADDataSet'|'eCad.107'|'Type of Destination'|'4221015'|'Other EMS Responder (air)'|
 'CADDataSet'|'eCad.107'|'Type of Destination'|'4221017'|'Other EMS Responder (ground)'|
 'CADDataSet'|'eCad.107'|'Type of Destination'|'4221019'|'Police/Jail'|
+'CADDataSet'|'eCad.107'|'Type of Destination'|'4221021'|'Urgent Care'|
+'CADDataSet'|'eCad.107'|'Type of Destination'|'4221023'|'Freestanding Emergency Department'|
 'CADDataSet'|'eCad.108'|'Destination Team Pre-Arrival Activation'|'4224001'|'No'|
 'CADDataSet'|'eCad.108'|'Destination Team Pre-Arrival Activation'|'4224003'|'Yes-Adult Trauma'|
 'CADDataSet'|'eCad.108'|'Destination Team Pre-Arrival Activation'|'4224005'|'Yes-Cardiac Arrest'|
@@ -265,3 +286,4 @@
 'CADDataSet'|'eCad.108'|'Destination Team Pre-Arrival Activation'|'4224011'|'Yes-Pediatric Trauma'|
 'CADDataSet'|'eCad.108'|'Destination Team Pre-Arrival Activation'|'4224013'|'Yes-STEMI'|
 'CADDataSet'|'eCad.108'|'Destination Team Pre-Arrival Activation'|'4224015'|'Yes-Stroke'|
+'CADDataSet'|'eCad.108'|'Destination Team Pre-Arrival Activation'|'4224017'|'Yes-Trauma (General)'|

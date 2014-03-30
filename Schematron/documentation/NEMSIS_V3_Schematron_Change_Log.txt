@@ -1,0 +1,49 @@
+NEMSIS Schematron Change Log
+
+
+
+3.3.4-140319
+
+
+National Patterns and Rules
+
+nemSch_consistency_eDisposition.12: Removed references to unpublished eDisposition.12 code values 4212045, 4212047, and 4212049 (the values were added to the 3.3.4-CR1 XSDs and then removed prior to release)
+
+
+
+3.3.4-140303
+
+
+NEMSIS V3 Schematron Guide
+
+No substantive changes
+
+
+Templates and National Rule Files
+
+Replaced document() function with XSLT variable for nemSch_elements lookup list
+Updated NEMSIS name of elements eDisposition.24 and eDisposition.25
+
+
+National Patterns and Rules
+
+nemSch_consistency_dAgency.05_dAgency.06: corrected "dAgency.04" to "dAgency.05"
+nemSch_consistency_delay: changed punctuation in title
+nemSch_consistency_eArrest: added normalize-space() function in context of rule nemSch_consistency_eArrest.01
+nemSch_consistency_eArrest: added normalize-space() function in context of rule nemSch_consistency_eInjury_eSituation.02
+nemSch_consistency_group: corrected grammatical error in first comment
+nemSch_consistency_group: added normalize-space() function in context of rules
+nemSch_consistency_group: added $eMedications.03 in text of assert nemSch_consistency_eMedications.MedicationGroup_all
+nemSch_consistency_group: added $eProcedures.03 in text of assert nemSch_consistency_eProcedures.ProcedureGroup_all
+nemSch_format_ansi: added "nem" namespace prefix to dAgency.04 in context of rule nemSch_format_ansi_state
+
+
+Documentation Interface
+
+Added listing of rules under each pattern in menu
+
+
+Schemas
+
+nemsis-svrl.rnc/g: restored zero-or-one constraint to (foreign | human-text) in diagnostic-reference when id is not nemsisDiagnostic
+nemsis-svrl.rnc/g: added constraints for diagnostic-reference when id is nemsisDiagnostic

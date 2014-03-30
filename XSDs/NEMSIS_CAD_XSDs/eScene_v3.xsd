@@ -12,10 +12,8 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
-							
 							<usage>Required</usage>
 							<comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -48,9 +46,6 @@
 										<definition>Other EMS agency names that were at the scene, if any</definition>
 										<v2Number>E08_01</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -64,11 +59,8 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The ID number for the EMS Agency or Other Public Safety listed in eScene.02</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>The ID should be the state ID (license number) for the EMS agency or ID number for the law enforcement. This may be an ID assigned by the state or created by the EMS agency.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -84,9 +76,7 @@
 										<definition>The type of public safety or EMS service associated with Other Agencies on Scene</definition>
 										<v2Number>E08_02</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Associated with each Other Service in eScene.02</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -137,7 +127,6 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -153,9 +142,6 @@
 							<definition>Indicator of how many total patients were at the scene</definition>
 							<v2Number>E08_05</v2Number>
 							<usage>Required</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -185,8 +171,6 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -201,7 +185,7 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="eScene.08" nillable="true" id="eScene.TriageClassificationforMCIPatient">
 				<xs:annotation>
 					<xs:documentation>
@@ -211,7 +195,7 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The color associated with the initial triage assessment/classification of the MCI patient.</definition>
-							<v2Number></v2Number>
+							<v2Number/>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -229,12 +213,11 @@ Examples of triage systems include START and SALT.
 &lt;br/>&lt;br/>
 &lt;div style="font-size:11px">Adapted from: SALT mass casualty triage: concept endorsed by the American College of Emergency Physicians, American College of Surgeons Committee on Trauma, American Trauma Society, National Association of EMS Physicians, National Disaster Life Support Education Consortium, and State and Territorial Injury Prevention Directors Association. Disaster Med Public Health Prep. 2008 Dec;2(4):245-6.
 &lt;/div>
-&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>
+&lt;br/>&lt;br/>
 &lt;div style="font-size:11px">
 START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then SAVE-a new method of dynamic triage for victims of a catastrophic earthquake. Prehospital Disaster Med. 1996; Apr-Jun; 11(2): 117-24							
 &lt;/div>
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -275,7 +258,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -303,7 +285,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<v2Number>E08_08</v2Number>
 							<usage>Recommended</usage>
 							<comment>This may be populated from a list created within dFacility.03 (Facility Location Code) or dFacility.05 (Facility National Provider Identifier).</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -343,7 +324,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
 										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 						  </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -357,11 +337,8 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The US National Grid Coordinates for the Scene.</definition>
-							
 							<usage>Optional</usage>
-							
 							<comment>Standard found at www.fgdc.gov/usng</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -375,16 +352,13 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The name of the facility, business, building, etc. associated with the scene of the EMS event.</definition>
-							
 							<usage>Optional</usage>
-							
 							<comment>This element may be populated from a list created within dFacility.02 (Facility Name).</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eScene.14" id="eScene.MilePostOrMajorRoadway" minOccurs="0" nillable="true">
+			<xs:element name="eScene.14" nillable="true" id="eScene.MilePostOrMajorRoadway" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -393,17 +367,14 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The mile post or major roadway associated with the incident locations</definition>
-							
 							<usage>Recommended</usage>
-							
-							<comment></comment>
-							
+							<comment/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="MilePostOrMajorRoadway">						
+						<xs:extension base="MilePostOrMajorRoadway">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -413,7 +384,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.15" id="eScene.IncidentStreetAddress" minOccurs="0" nillable="true">
+			<xs:element name="eScene.15" nillable="true" id="eScene.IncidentStreetAddress" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -424,9 +395,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<definition>The street address where the patient was found, or, if no patient, the address to which the unit responded.</definition>
 							<v2Number>E08_11</v2Number>
 							<usage>Recommended</usage>
-							
-							<comment></comment>
-							
+							<comment/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -443,7 +412,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.16" id="eScene.IncidentApartmentSuiteorRoom" minOccurs="0" nillable="true">
+			<xs:element name="eScene.16" nillable="true" id="eScene.IncidentApartmentSuiteorRoom" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -452,11 +421,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The number of the specific apartment, suite, or room where the incident occurred.</definition>
-							
 							<usage>Recommended</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -483,9 +448,10 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<definition>The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation)</definition>
 							<v2Number>E08_12</v2Number>
 							<usage>Recommended</usage>
-							
-							<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-							
+							<comment>
+City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
+  	&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
+  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -523,7 +489,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							</performanceMeasuresGroup>
 							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -562,7 +527,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -578,7 +542,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eScene.20" id="eScene.SceneCrossStreetorDirections" minOccurs="0" nillable="true">
+			<xs:element name="eScene.20" nillable="true" id="eScene.SceneCrossStreetorDirections" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -587,10 +551,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The nearest cross street to the incident address or directions from a recognized landmark or the second street name of an intersection.</definition>
-							
 							<usage>Recommended</usage>
-							
-							
 							<v3Changes>Added to better locate/document the scene (incident) location.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -630,7 +591,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
 							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -655,9 +615,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<national>No</national>
 							<state>No</state>
 							<definition>The country of the incident location.</definition>
-							
 							<usage>Optional</usage>
-							
 							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
 </comment>
 							<v3Changes>Added for international compatibility.</v3Changes>
@@ -674,7 +632,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<national>No</national>
 							<state>No</state>
 							<definition>The census tract in which the incident occurred.</definition>
-							
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -684,11 +641,11 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>STEMI</performanceMeasure>
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
-							</performanceMeasuresGroup>										
+							</performanceMeasuresGroup>
 							<comment>
 										This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. 
 										&lt;br/>&lt;br/>The format of the census tract number must be an 11-digit number, based upon the 2010 census, using the pattern: 
-										&lt;br/>2-digit State Code 3-digit County Code 6-digiit Census Tract Number (no decimal) 
+										&lt;br/>2-digit State Code 3-digit County Code 6-digit Census Tract Number (no decimal) 
 										&lt;br/>&lt;br/>Example: NEMSIS TAC office (UT, Salt Lake County, Census Tract - located at 295 Chipeta Way, Salt Lake City, UT) 
 										49035101400
 										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html 										
@@ -881,5 +838,5 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 </xs:schema>

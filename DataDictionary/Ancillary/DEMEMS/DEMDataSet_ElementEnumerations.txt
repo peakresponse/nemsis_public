@@ -4,6 +4,7 @@
 'DEMDataSet'|'dCustomConfiguration.03'|'Custom Data Type'|'9902005'|'Integer/Number'|
 'DEMDataSet'|'dCustomConfiguration.03'|'Custom Data Type'|'9902007'|'Other (Not Listed)'|
 'DEMDataSet'|'dCustomConfiguration.03'|'Custom Data Type'|'9902009'|'Text/String'|
+'DEMDataSet'|'dCustomConfiguration.03'|'Custom Data Type'|'9902011'|'Boolean'|
 'DEMDataSet'|'dCustomConfiguration.04'|'Custom Data Element Recurrence'|'9923001'|'No'|
 'DEMDataSet'|'dCustomConfiguration.04'|'Custom Data Element Recurrence'|'9923003'|'Yes'|
 'DEMDataSet'|'dCustomConfiguration.05'|'Custom Data Element Usage'|'9903001'|'Mandatory'|
@@ -44,16 +45,20 @@
 'DEMDataSet'|'dAgency.10'|'Other Types of Service'|'9920019'|'Critical Care (Ground)'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917001'|'2009 Advanced Emergency Medical Technician (AEMT)'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917003'|'2009 Emergency Medical Responder (EMR)'|
-'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917005'|'2009 Emergency Medical Technician'|
+'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917005'|'2009 Emergency Medical Technician (EMT)'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917007'|'2009 Paramedic'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917009'|'First Responder'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917011'|'EMT-Basic'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917013'|'EMT-Intermediate'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917015'|'EMT-Paramedic'|
-'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917017'|'Nurse'|
+'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917017'|'Nurse <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917019'|'Physician'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917021'|'Critical Care Paramedic'|
 'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917023'|'Community Paramedicine'|
+'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917025'|'Nurse Practitioner'|
+'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917027'|'Physician Assistant'|
+'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917029'|'Licensed Practical Nurse (LPN)'|
+'DEMDataSet'|'dAgency.11'|'Level of Service'|'9917031'|'Registered Nurse'|
 'DEMDataSet'|'dAgency.12'|'Organization Status'|'1016001'|'Mixed'|
 'DEMDataSet'|'dAgency.12'|'Organization Status'|'1016003'|'Non-Volunteer'|
 'DEMDataSet'|'dAgency.12'|'Organization Status'|'1016005'|'Volunteer'|
@@ -116,19 +121,23 @@
 'DEMDataSet'|'dContact.15'|'Medical Director Compensation'|'1115003'|'Non-Compensated'|
 'DEMDataSet'|'dContact.16'|'EMS Medical Director Fellowship Trained Status'|'9923001'|'No'|
 'DEMDataSet'|'dContact.16'|'EMS Medical Director Fellowship Trained Status'|'9923003'|'Yes'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911001'|'2009 Advanced Emergency Medical Technician (AEMT)'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911003'|'2009 Emergency Medical Responder (EMR)'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911005'|'2009 Emergency Medical Technician'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911007'|'2009 Paramedic'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911009'|'EMT-Basic'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911011'|'EMT-Intermediate'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911013'|'EMT-Paramedic'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911015'|'First Responder'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911017'|'Nurse'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911019'|'Other'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911021'|'Physician'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911023'|'Critical Care Paramedic'|
-'DEMDataSet'|'dConfiguration.02'|'State Certification Licensure Levels'|'9911025'|'Community Paramedicine'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911001'|'2009 Advanced Emergency Medical Technician (AEMT)'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911003'|'2009 Emergency Medical Responder (EMR)'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911005'|'2009 Emergency Medical Technician (EMT)'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911007'|'2009 Paramedic'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911009'|'EMT-Basic'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911011'|'EMT-Intermediate'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911013'|'EMT-Paramedic'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911015'|'First Responder'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911017'|'Nurse <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911019'|'Other'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911021'|'Physician'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911023'|'Critical Care Paramedic'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911025'|'Community Paramedicine'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911027'|'Nurse Practitioner'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911029'|'Physician Assistant'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911031'|'Licensed Practical Nurse (LPN)'|
+'DEMDataSet'|'dConfiguration.02'|'State Certification/Licensure Levels'|'9911033'|'Registered Nurse'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914001'|'Airway'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914003'|'Airway-Failed'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914005'|'Airway-Obstruction/Foreign Body'|
@@ -148,7 +157,7 @@
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914033'|'Exposure-Airway/Inhalation Irritants'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914035'|'Exposure-Biological/Infectious'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914037'|'Exposure-Blistering Agents'|
-'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914039'|'Exposure-Carbon Monoxide/Smoke Inhalation'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914039'|'Exposure-Carbon Monoxide/Smoke Inhalation <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914041'|'Exposure-Chemicals to Eye'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914043'|'Exposure-Cyanide'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914045'|'Exposure-Explosive/ Blast Injury'|
@@ -212,30 +221,55 @@
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914161'|'OB/GYN-Pregnancy Related Emergencies'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914163'|'OB/GYN-Post-partum Hemorrhage'|
 'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914165'|'Other'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914167'|'Exposure-Carbon Monoxide'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914169'|'Cardiac Arrest-Do Not Resuscitate'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914171'|'Cardiac Arrest-Special Resuscitation Orders'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914173'|'Exposure-Smoke Inhalation'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914175'|'General-Community Paramedicine / Mobile Integrated Healthcare'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914177'|'General-Exception Protocol'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914179'|'General-Extended Care Guidelines'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914181'|'General-Interfacility Transfers'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914183'|'General-Law Enforcement - Blood for Legal Purposes'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914185'|'General-Law Enforcement - Assist with Law Enforcement Activity'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914187'|'General-Neglect or Abuse Suspected'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914189'|'General-Refusal of Care'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914191'|'Injury-Mass/Multiple Casualties'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914193'|'Injury-Thoracic'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914195'|'Medical-Adrenal Insufficiency'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914197'|'Medical-Apparent Life Threatening Event (ALTE)'|
+'DEMDataSet'|'dConfiguration.05'|'Protocols Permitted by the State'|'9914199'|'Medical-Tachycardia'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917001'|'2009 Advanced Emergency Medical Technician (AEMT)'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917003'|'2009 Emergency Medical Responder (EMR)'|
-'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917005'|'2009 Emergency Medical Technician'|
+'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917005'|'2009 Emergency Medical Technician (EMT)'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917007'|'2009 Paramedic'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917009'|'First Responder'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917011'|'EMT-Basic'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917013'|'EMT-Intermediate'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917015'|'EMT-Paramedic'|
-'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917017'|'Nurse'|
+'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917017'|'Nurse <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917019'|'Physician'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917021'|'Critical Care Paramedic'|
 'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917023'|'Community Paramedicine'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917001'|'2009 Advanced Emergency Medical Technician (AEMT)'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917003'|'2009 Emergency Medical Responder (EMR)'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917005'|'2009 Emergency Medical Technician'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917007'|'2009 Paramedic'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917009'|'First Responder'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917011'|'EMT-Basic'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917013'|'EMT-Intermediate'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917015'|'EMT-Paramedic'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917017'|'Nurse'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917019'|'Physician'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917021'|'Critical Care Paramedic'|
-'DEMDataSet'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'9917023'|'Community Paramedicine'|
+'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917025'|'Nurse Practitioner'|
+'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917027'|'Physician Assistant'|
+'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917029'|'Licensed Practical Nurse (LPN)'|
+'DEMDataSet'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'9917031'|'Registered Nurse'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917001'|'2009 Advanced Emergency Medical Technician (AEMT)'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917003'|'2009 Emergency Medical Responder (EMR)'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917005'|'2009 Emergency Medical Technician (EMT)'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917007'|'2009 Paramedic'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917009'|'First Responder'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917011'|'EMT-Basic'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917013'|'EMT-Intermediate'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917015'|'EMT-Paramedic'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917017'|'Nurse <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917019'|'Physician'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917021'|'Critical Care Paramedic'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917023'|'Community Paramedicine'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917025'|'Nurse Practitioner'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917027'|'Physician Assistant'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917029'|'Licensed Practical Nurse (LPN)'|
+'DEMDataSet'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'9917031'|'Registered Nurse'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914001'|'Airway'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914003'|'Airway-Failed'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914005'|'Airway-Obstruction/Foreign Body'|
@@ -255,7 +289,7 @@
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914033'|'Exposure-Airway/Inhalation Irritants'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914035'|'Exposure-Biological/Infectious'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914037'|'Exposure-Blistering Agents'|
-'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914039'|'Exposure-Carbon Monoxide/Smoke Inhalation'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914039'|'Exposure-Carbon Monoxide/Smoke Inhalation <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914041'|'Exposure-Chemicals to Eye'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914043'|'Exposure-Cyanide'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914045'|'Exposure-Explosive/ Blast Injury'|
@@ -319,6 +353,23 @@
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914161'|'OB/GYN-Pregnancy Related Emergencies'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914163'|'OB/GYN-Post-partum Hemorrhage'|
 'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914165'|'Other'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914167'|'Exposure-Carbon Monoxide'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914169'|'Cardiac Arrest-Do Not Resuscitate'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914171'|'Cardiac Arrest-Special Resuscitation Orders'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914173'|'Exposure-Smoke Inhalation'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914175'|'General-Community Paramedicine / Mobile Integrated Healthcare'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914177'|'General-Exception Protocol'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914179'|'General-Extended Care Guidelines'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914181'|'General-Interfacility Transfers'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914183'|'General-Law Enforcement - Blood for Legal Purposes'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914185'|'General-Law Enforcement - Assist with Law Enforcement Activity'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914187'|'General-Neglect or Abuse Suspected'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914189'|'General-Refusal of Care'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914191'|'Injury-Mass/Multiple Casualties'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914193'|'Injury-Thoracic'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914195'|'Medical-Adrenal Insufficiency'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914197'|'Medical-Apparent Life Threatening Event (ALTE)'|
+'DEMDataSet'|'dConfiguration.10'|'EMS Agency Protocols'|'9914199'|'Medical-Tachycardia'|
 'DEMDataSet'|'dConfiguration.11'|'EMS Agency Specialty Service Capability'|'1211001'|'Air Rescue'|
 'DEMDataSet'|'dConfiguration.11'|'EMS Agency Specialty Service Capability'|'1211003'|'CBRNE'|
 'DEMDataSet'|'dConfiguration.11'|'EMS Agency Specialty Service Capability'|'1211005'|'Community Health Medicine'|
@@ -374,16 +425,20 @@
 'DEMDataSet'|'dVehicle.04'|'Vehicle Type'|'1404025'|'Watercraft'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917001'|'2009 Advanced Emergency Medical Technician (AEMT)'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917003'|'2009 Emergency Medical Responder (EMR)'|
-'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917005'|'2009 Emergency Medical Technician'|
+'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917005'|'2009 Emergency Medical Technician (EMT)'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917007'|'2009 Paramedic'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917009'|'First Responder'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917011'|'EMT-Basic'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917013'|'EMT-Intermediate'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917015'|'EMT-Paramedic'|
-'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917017'|'Nurse'|
+'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917017'|'Nurse <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917019'|'Physician'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917021'|'Critical Care Paramedic'|
 'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917023'|'Community Paramedicine'|
+'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917025'|'Nurse Practitioner'|
+'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917027'|'Physician Assistant'|
+'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917029'|'Licensed Practical Nurse (LPN)'|
+'DEMDataSet'|'dVehicle.05'|'Crew State Certification/Licensure Levels'|'9917031'|'Registered Nurse'|
 'DEMDataSet'|'dPersonnel.08'|'EMS Personnel's Country'|'CA'|'Canada'|
 'DEMDataSet'|'dPersonnel.08'|'EMS Personnel's Country'|'MX'|'Mexico'|
 'DEMDataSet'|'dPersonnel.08'|'EMS Personnel's Country'|'US'|'United States'|
@@ -462,7 +517,7 @@
 'DEMDataSet'|'dPersonnel.17'|'EMS Personnel's Motor Vehicle License Type'|'1517023'|'Taxi and Livery Class E'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910001'|'Anthrax'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910003'|'Cholera'|
-'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910005'|'DPT (Diphtheria, Tetanus, Pertussis)'|
+'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910005'|'DPT (Diphtheria, Pertussis, Tetanus)'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910007'|'Hemophilus Influenza B'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910009'|'Hepatitis A'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910011'|'Hepatitis B'|
@@ -479,7 +534,7 @@
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910033'|'Polio'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910035'|'Rabies'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910037'|'Rotavirus'|
-'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910039'|'Shingle'|
+'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910039'|'Shingles'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910041'|'Small Pox'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910043'|'Tetanus'|
 'DEMDataSet'|'dPersonnel.18'|'EMS Personnel's Immunization Status'|'9910045'|'Tuberculosis'|
@@ -544,7 +599,7 @@
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925015'|'EMT-Basic'|
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925017'|'EMT-Intermediate'|
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925019'|'EMT-Paramedic'|
-'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925021'|'Nurse'|
+'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925021'|'Nurse <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925023'|'Other Healthcare Professional'|
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925025'|'Other Non-Healthcare Professional'|
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925027'|'Physician'|
@@ -552,6 +607,10 @@
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925031'|'Student'|
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925033'|'Critical Care Paramedic'|
 'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925035'|'Community Paramedicine'|
+'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925037'|'Nurse Practitioner'|
+'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925039'|'Physician Assistant'|
+'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925041'|'Licensed Practical Nurse (LPN)'|
+'DEMDataSet'|'dPersonnel.24'|'EMS Personnel's State EMS Certification Licensure Level'|'9925043'|'Registered Nurse'|
 'DEMDataSet'|'dPersonnel.29'|'EMS Personnel's National Registry Certification Level'|'1529901'|'2009 Advanced Emergency Medical Technician(AEMT)'|
 'DEMDataSet'|'dPersonnel.29'|'EMS Personnel's National Registry Certification Level'|'1529003'|'2009 Emergency Medical Responder (EMR)'|
 'DEMDataSet'|'dPersonnel.29'|'EMS Personnel's National Registry Certification Level'|'1529005'|'2009 Emergency Medical Technician'|
@@ -590,7 +649,7 @@
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925015'|'EMT-Basic'|
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925017'|'EMT-Intermediate'|
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925019'|'EMT-Paramedic'|
-'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925021'|'Nurse'|
+'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925021'|'Nurse <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925023'|'Other Healthcare Professional'|
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925025'|'Other Non-Healthcare Professional'|
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925027'|'Physician'|
@@ -598,6 +657,10 @@
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925031'|'Student'|
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925033'|'Critical Care Paramedic'|
 'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925035'|'Community Paramedicine'|
+'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925037'|'Nurse Practitioner'|
+'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925039'|'Physician Assistant'|
+'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925041'|'Licensed Practical Nurse (LPN)'|
+'DEMDataSet'|'dPersonnel.38'|'EMS Professional's Practice Level'|'9925043'|'Registered Nurse'|
 'DEMDataSet'|'dDevice.03'|'Medical Device Type'|'1603001'|'Capnography-Numeric'|
 'DEMDataSet'|'dDevice.03'|'Medical Device Type'|'1603003'|'Capnography-Waveform'|
 'DEMDataSet'|'dDevice.03'|'Medical Device Type'|'1603005'|'Chemistry Measurement-Blood or Serum'|
@@ -630,8 +693,8 @@
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908007'|'Hospital (General)'|
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908009'|'Neonatal Center'|
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908011'|'Pediatric Center'|
-'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908013'|'STEMI'|
-'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908015'|'STEMI Center (24/7)'|
+'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908013'|'STEMI <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
+'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908015'|'STEMI Center (24/7) <font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED</font>'|
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908017'|'Stroke Center'|
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908019'|'Rehab Center'|
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908021'|'Trauma Center Level 1'|
@@ -639,6 +702,9 @@
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908025'|'Trauma Center Level 3'|
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908027'|'Trauma Center Level 4'|
 'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908029'|'Trauma Center Level 5'|
+'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908031'|'Cardiac-STEMI/PCI Capable'|
+'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908033'|'Cardiac-STEMI/PCI Capable (24/7)'|
+'DEMDataSet'|'dFacility.04'|'Hospital Designations'|'9908035'|'Cardiac-STEMI/Non-PCI Capable'|
 'DEMDataSet'|'dFacility.12'|'Facility Country'|'CA'|'Canada'|
 'DEMDataSet'|'dFacility.12'|'Facility Country'|'MX'|'Mexico'|
 'DEMDataSet'|'dFacility.12'|'Facility Country'|'US'|'United States'|

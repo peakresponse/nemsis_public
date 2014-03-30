@@ -18,9 +18,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The data and time for the specific laboratory result</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -60,10 +58,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>Indicates that the laboratory result occurred prior to this EMS units care.</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to better document EMS care.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -84,10 +79,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The type of the laboratory value.</definition>
-													
 													<usage>Optional</usage>
-													
-													
 													<v3Changes>Added to provide for the documentation of laboratory results obtained prior to or during and EMS patient encounter.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -102,10 +94,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The value or result of the laboratory test (Units may vary).</definition>
-													
 													<usage>Optional</usage>
-													
-													
 													<v3Changes>Added to better document EMS care.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -130,10 +119,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The type of x-ray or imaging study.</definition>
-													
 													<usage>Optional</usage>
-													
-													
 													<v3Changes>Added to better describe the EMS patient care.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -148,10 +134,7 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The description or interpretation of the results of the imaging study.</definition>
-													
 													<usage>Optional</usage>
-													
-													
 													<v3Changes>Added to better describe the EMS Patient Care</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -172,7 +155,6 @@
 																<national>No</national>
 																<state>No</state>
 																<definition>The description of the image study file or waveform graphic stored in Imaging Study File or Waveform Graphic (eLabs.08).</definition>
-																
 																<usage>Optional</usage>
 																<performanceMeasuresGroup>
 																	<performanceMeasure>Airway</performanceMeasure>
@@ -201,7 +183,6 @@
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table>														
 																</comment>
-																
 															</nemsisTacDoc>
 														</xs:documentation>
 													</xs:annotation>
@@ -215,7 +196,6 @@
 																<national>No</national>
 																<state>No</state>
 																<definition>The imaging study file.</definition>
-																
 																<usage>Optional</usage>
 																<performanceMeasuresGroup>
 																	<performanceMeasure>Airway</performanceMeasure>
@@ -223,7 +203,6 @@
 																	<performanceMeasure>STEMI</performanceMeasure>
 																</performanceMeasuresGroup>
 																<comment>Added to allow the imaging file to be uploaded and better document patient care.</comment>
-																
 															</nemsisTacDoc>
 														</xs:documentation>
 													</xs:annotation>
@@ -461,6 +440,20 @@
 					<xs:documentation>White Blood Cells</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3403089"><xs:annotation><xs:documentation>Ammonia</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403091"><xs:annotation><xs:documentation>Bicarbonate (HCO3)</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403093"><xs:annotation><xs:documentation>Carboxyhemoglobin</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403095"><xs:annotation><xs:documentation>CO2, Total (Bicarbonate)</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403097"><xs:annotation><xs:documentation>CRP (C-Reactive Protein)</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403099"><xs:annotation><xs:documentation>Dilantin</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403101"><xs:annotation><xs:documentation>Leukocytes</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403103"><xs:annotation><xs:documentation>Nitrates</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403105"><xs:annotation><xs:documentation>Phenobarbital</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403107"><xs:annotation><xs:documentation>Protein</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403109"><xs:annotation><xs:documentation>Salicylate</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403111"><xs:annotation><xs:documentation>Specific Gravity</xs:documentation></xs:annotation></xs:enumeration> 
+<xs:enumeration value="3403113"><xs:annotation><xs:documentation>Tylenol</xs:documentation></xs:annotation></xs:enumeration> 
+
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ImagingStudyResults">

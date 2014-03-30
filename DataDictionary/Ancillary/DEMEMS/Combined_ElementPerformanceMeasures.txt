@@ -51,13 +51,13 @@
 'DEMDataSet'|'element'|'dContact.15'|'Medical Director Compensation'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.16'|'EMS Medical Director Fellowship Trained Status'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.01'|'State Associated with the Certification/Licensure Levels'|'National'|'State'|''|''|''|''|''|''|''|
-'DEMDataSet'|'element'|'dConfiguration.02'|'State Certification Licensure Levels'|'National'|'State'|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dConfiguration.02'|'State Certification/Licensure Levels'|'National'|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.03'|'Procedures Permitted by the State'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.04'|'Medications Permitted by the State'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.05'|'Protocols Permitted by the State'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.07'|'EMS Agency Procedures'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dConfiguration.08'|'EMS Certification Level Permitted to Administer Each Medication'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.09'|'EMS Agency Medications'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.10'|'EMS Agency Protocols'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.11'|'EMS Agency Specialty Service Capability'|'National'|'State'|''|''|''|''|''|''|''|
@@ -428,7 +428,7 @@
 'EMSDataSet'|'element'|'eVitals.24'|'Temperature'|''|'State'|''|''|'X'|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.25'|'Temperature Method'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.26'|'Level of Responsiveness (AVPU)'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'EMSDataSet'|'element'|'eVitals.27'|'Pain Score'|'National'|'State'|''|''|'X'|''|'X'|''|'X'|
+'EMSDataSet'|'element'|'eVitals.27'|'Pain Scale Score'|'National'|'State'|''|''|'X'|''|'X'|''|'X'|
 'EMSDataSet'|'element'|'eVitals.28'|'Pain Scale Type'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.29'|'Stroke Scale Score'|'National'|'State'|''|''|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eVitals.30'|'Stroke Scale Type'|'National'|'State'|''|''|''|''|''|'X'|''|
@@ -536,8 +536,8 @@
 'EMSDataSet'|'element'|'eDisposition.21'|'Type of Destination'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.22'|'Hospital In-Patient Destination'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.23'|'Hospital Designation'|'National'|'State'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eDisposition.24'|'Destination Team Pre-Arrival Activation'|'National'|'State'|''|'X'|''|''|'X'|'X'|'X'|
-'EMSDataSet'|'element'|'eDisposition.25'|'Date/Time of Destination Prearrival Activation'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDisposition.24'|'Destination Team Pre-Arrival Alert or Activation'|'National'|'State'|''|'X'|''|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDisposition.25'|'Date/Time of Destination Prearrival Alert or Activation'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.26'|'Disposition Instructions Provided'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOutcome.01'|'Emergency Department Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eOutcome.02'|'Hospital Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|

@@ -17,8 +17,6 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Pediatric</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -54,8 +52,6 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Pediatric</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -124,7 +120,6 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -145,8 +140,8 @@
 										<definition>The assessment findings associated with the patient's skin.</definition>
 										<v2Number>E16_04</v2Number>
 										<usage>Optional</usage>
-										
-										
+										<comment>Element eExam.04 - Skin Assessment represents Version 2.2.1 elements E15_01 NHTSA Injury Matrix External/Skin and E16_04 Skin Assessment. The element value choices have been combined and expanded.
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -174,9 +169,8 @@
 										<definition>The assessment findings associated with the patient's head.</definition>
 										<v2Number>E16_05</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
+										<comment>Element eExam.05 - Head Assessment represents Version 2.2.1 elements E15_02 NHTSA Injury Matrix Head and E16_05 Head/Face Assessment. The element value choices have been combined and expanded.
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -202,11 +196,9 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The assessment findings associated with the patient's face.</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
+										<comment>Element eExam.06 - Face Assessment represents Version 2.2.1 element E15_03 NHTSA Injury Matrix Face  The element value choices have been expanded.
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -234,9 +226,8 @@
 										<definition>The assessment findings associated with the patient's neck.</definition>
 										<v2Number>E16_06</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
+										<comment>Element eExam.07 - Neck Assessment represents Version 2.2.1 elements E15_04 NHTSA Injury Matrix Neck and E16_06 Neck Assessment. The element value choices have been combined and expanded.
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -264,12 +255,12 @@
 										<definition>The assessment findings associated with the patient's chest/lungs.</definition>
 										<v2Number>E16_07</v2Number>
 										<usage>Optional</usage>
+										<comment>Element eExam.08 - Chest/Lungs Assessment represents Version 2.2.1 element E16_07 Chest/Lungs Assessment. The element value choices have been expanded.
+</comment>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 											<performanceMeasure>Pediatric</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -297,9 +288,8 @@
 										<definition>The assessment findings associated with the patient's heart.</definition>
 										<v2Number>E16_08</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
+										<comment>Element eExam.09 - Heart Assessment represents Version 2.2.1 element E16_08 Heart Assessment. The element value choices have been expanded.
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -331,11 +321,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The location of the patient's abdomen assessment findings.</definition>
-													
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>"Element eExam.10 - Abdominal Assessment Finding Location represents Version 2.2.1 elements E15_06 NHTSA Injury Matrix Abdomen AND E16_09 Abdomen Left Upper Assessment, E16_10 Abdomen Left Lower Assessment,E16_11 Abdomen Right Upper Assessment, and E16_12 Abdomen Right Lower Assessment. The element value choices have been combined and expanded."
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -351,9 +339,8 @@
 													<definition>The assessment findings associated with the patient's abdomen.</definition>
 													<v2Number>E16_09</v2Number>
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>"Element eExam.11 - Abdomen Assessment represents Version 2.2.1 elements E15_06 NHTSA Injury Matrix Abdomen AND E16_09 Abdomen Left Upper Assessment, E16_10 Abdomen Left Lower Assessment,E16_11 Abdomen Right Upper Assessment, and E16_12 Abdomen Right Lower Assessment. The element value choices have been combined and expanded."
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -385,9 +372,8 @@
 										<definition>The assessment findings associated with the patient's pelvis/genitourinary.</definition>
 										<v2Number>E16_13</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
+										<comment>Element eExam.12 - Pelvis/Genitourinary Assessment represents Version 2.2.1 elements E15_09 NHTSA Injury Matrix Pelvis and E16_13 GU Assessment. The element value choices have been combined and expanded.
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -419,11 +405,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The location of the patient's back and spine assessment findings.</definition>
-													
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>Element eExam.14 - Back and Spine Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_07  Spine and E15_05 Thorax AND AND E16_14 Back Cervical Assessment, E16_15 Back Thoracic Assessment, and E16_16 Back Lumbar/Sacral Assessment. The element value choices have been combined and expanded.
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -439,9 +423,8 @@
 													<definition>The assessment findings associated with the patient's spine (Cervical, Thoracic, Lumbar, and Sacral) and back exam.</definition>
 													<v2Number>E16_14</v2Number>
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>Element eExam.14 - Back and Spine Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_07  Spine and E15_05 Thorax AND E16_14 Back Cervical Assessment, E16_15 Back Thoracic Assessment, and E16_16 Back Lumbar/Sacral Assessment. The element value choices have been combined and expanded.
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -477,11 +460,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The location of the patient's extremity assessment findings.</definition>
-													
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>Element eExam.16 - Extremities Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_08  Upper Extremities and E15_10 Lower Extremities AND E16_17 Extremities-Right Upper Assessment, E16_18 Extremities-Right Lower Assessment, E16_19 Extremities-Left Upper Assessment, and E16_20 Extremities-Left Lower Assessment. The element value choices have been combined and expanded.
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -497,9 +478,8 @@
 													<definition>The assessment findings associated with the patient's extremities.</definition>
 													<v2Number>E16_17</v2Number>
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>Element eExam.16 - Extremities Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_08  Upper Extremities and E15_10 Lower Extremities AND E16_17 Extremities-Right Upper Assessment, E16_18 Extremities-Right Lower Assessment, E16_19 Extremities-Left Upper Assessment, and E16_20 Extremities-Left Lower Assessment. The element value choices have been combined and expanded.
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -535,11 +515,9 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The location of the patient's eye assessment findings.</definition>
-													
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>Element eExam.17 - Eye Assessment Finding Location represents Version 2.2.1 elements E16_21 Eyes-Left Assessment and E16_22 Eyes-Right Assessment. The eye location value choices have been expanded.
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -555,9 +533,8 @@
 													<definition>The assessment findings of the patient's eye examination.</definition>
 													<v2Number>E16_21</v2Number>
 													<usage>Optional</usage>
-													
-													
-													
+													<comment>Element eExam.18 - Eye Assessment represents Version 2.2.1 elements E16_21 Eyes-Left Assessment and E16_22 Eyes-Right Assessment. The eye assessment value choices have been combined and expanded.
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -589,12 +566,12 @@
 										<definition>The assessment findings of the patient's mental status examination.</definition>
 										<v2Number>E16_23</v2Number>
 										<usage>Optional</usage>
+										<comment>Element eExam.19 - Mental Status Assessment represents Version 2.2.1 element E16_23 Mental Status Assessment. The element value choices have been expanded.
+</comment>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -622,12 +599,12 @@
 										<definition>The assessment findings of the patient's neurological examination.</definition>
 										<v2Number>E16_24</v2Number>
 										<usage>Optional</usage>
+										<comment>Element eExam.20 - Neurological Assessment represents Version 2.2.1 element E16_24 Neurological Assessment. The element value choices have been expanded.
+</comment>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -2558,7 +2535,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="NeckAssessment">
 		<xs:annotation>
-			<xs:documentation>The assessement of the patient's head and neck area on examination</xs:documentation>
+			<xs:documentation>The assessment of the patient's head and neck area on examination</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3507001">
@@ -2821,6 +2798,16 @@
 			<xs:enumeration value="3520045">
 				<xs:annotation>
 					<xs:documentation>Weakness-Right Sided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3520047">
+				<xs:annotation>
+					<xs:documentation>Reported Stroke Symptoms Resolved Prior to EMS Arrival</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3520049">
+				<xs:annotation>
+					<xs:documentation>Reported Stroke Symptoms Resolved in EMS Presence</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

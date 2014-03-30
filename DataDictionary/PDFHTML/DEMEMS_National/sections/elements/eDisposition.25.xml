@@ -1,10 +1,10 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eDisposition.25"  minOccurs="1"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="Yes">
-<name>Date/Time of Destination Prearrival Activation</name>
+<name>Date/Time of Destination Prearrival Alert or Activation</name>
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>Date/Time EMS Notified/Activated the Destination Healthcare Facility Team prior to EMS arrival for acute ill or injured patient.</definition>
+<definition>The Date/Time EMS alerted, notified, or activated the Destination Healthcare Facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>

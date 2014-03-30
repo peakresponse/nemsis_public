@@ -8,7 +8,11 @@
 <v2Number>E03_01</v2Number>
 <usage>Mandatory</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>Added Pandemic/Epidemic/Outbreak.<br/>Added Automated Crash Notification<br/>Added Healthcare Professional Admission<br/>Added Interfacility/Evaluation/Transfer<br/>- Other entries expanded based on current national EMD Dispatch List</v3Comment>
+<v3Comment>Added Pandemic/Epidemic/Outbreak. 
+<br/>Added Automated Crash Notification 
+<br/>Added Healthcare Professional Admission 
+<br/>Added Transfer/Interfacility/Palliative Care 
+<br/>- Other entries expanded based on current national EMD Dispatch List</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -54,6 +58,7 @@
     <facet name="enumeration" value="2301077" annotation="Unconscious/Fainting/Near-Fainting"/>
     <facet name="enumeration" value="2301079" annotation="Unknown Problem/Person Down"/>
     <facet name="enumeration" value="2301081" annotation="Drowning/Diving/SCUBA Accident"/>
+    <facet name="enumeration" value="2301083" annotation="Airmedical Transport"/>
   </ComplaintReportedByDispatch>
 </restrictions>
 </element>

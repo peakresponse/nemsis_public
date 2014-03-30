@@ -1105,6 +1105,15 @@
 		<v3TypeName>EMSResponseMode</v3TypeName>
 	</match>
 	<match>
+		<v2ElementName>E02_20</v2ElementName>
+		<v2TypeName>ResponseModeToScene</v2TypeName>
+		<v3ElementName>eResponse.24</v3ElementName>
+		<v3TypeName>EMSAdditionalResponseMode</v3TypeName>
+		<v3MaxOccurs>unbounded</v3MaxOccurs>
+		<v3HasCorrelationID>true</v3HasCorrelationID>
+		<v3NotValueMemberTypes>NV.NotApplicable NV.NotRecorded</v3NotValueMemberTypes>
+	</match>
+	<match>
 		<v2ElementName>E03_01</v2ElementName>
 		<v2TypeName>ComplaintReportedByDispatch</v2TypeName>
 		<v2HasNulls>true</v2HasNulls>
@@ -3497,6 +3506,16 @@
 		<v2HasNulls>true</v2HasNulls>
 		<v3ElementName>eDisposition.17</v3ElementName>
 		<v3TypeName>TransportModeFromScene</v3TypeName>
+		<v3NotValueMemberTypes>NV.NotApplicable NV.NotRecorded</v3NotValueMemberTypes>
+	</match>
+	<match>
+		<v2ElementName>E20_14</v2ElementName>
+		<v2TypeName>TransportModeFromScene</v2TypeName>
+		<v2HasNulls>true</v2HasNulls>
+		<v3ElementName>eDisposition.18</v3ElementName>
+		<v3TypeName>AdditionalTransportModeDescriptors</v3TypeName>
+		<v3MaxOccurs>unbounded</v3MaxOccurs>
+		<v3HasCorrelationID>true</v3HasCorrelationID>
 		<v3NotValueMemberTypes>NV.NotApplicable NV.NotRecorded</v3NotValueMemberTypes>
 	</match>
 	<match>

@@ -7041,6 +7041,12 @@
 	</match>
 	<match>
 		<v2TypeName>PriorAid</v2TypeName>
+		<v3TypeName>CustomResults</v3TypeName>
+		<v2Pattern>99.615</v2Pattern>
+		<v3Replacement>99.615</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>PriorAid</v2TypeName>
 		<v3TypeName>snomed</v3TypeName>
 		<v2Pattern>1.181</v2Pattern>
 		<v3Replacement>424432007</v3Replacement>
@@ -7600,11 +7606,6 @@
 	<match>
 		<v2TypeName>PriorAid</v2TypeName>
 		<v3TypeName>snomed</v3TypeName>
-		<v2Pattern>99.615</v2Pattern>
-	</match>
-	<match>
-		<v2TypeName>PriorAid</v2TypeName>
-		<v3TypeName>snomed</v3TypeName>
 		<v2Pattern>99.621</v2Pattern>
 		<v3Replacement>426220008</v3Replacement>
 	</match>
@@ -7877,6 +7878,12 @@
 		<v3TypeName>CustomResults</v3TypeName>
 		<v2Pattern>96.992</v2Pattern>
 		<v3Replacement>96.992</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>Procedure</v2TypeName>
+		<v3TypeName>CustomResults</v3TypeName>
+		<v2Pattern>99.615</v2Pattern>
+		<v3Replacement>99.615</v3Replacement>
 	</match>
 	<match>
 		<v2TypeName>Procedure</v2TypeName>
@@ -8541,11 +8548,6 @@
 	<match>
 		<v2TypeName>Procedure</v2TypeName>
 		<v3TypeName>snomed</v3TypeName>
-		<v2Pattern>99.615</v2Pattern>
-	</match>
-	<match>
-		<v2TypeName>Procedure</v2TypeName>
-		<v3TypeName>snomed</v3TypeName>
 		<v2Pattern>99.621</v2Pattern>
 		<v3Replacement>426220008</v3Replacement>
 	</match>
@@ -8703,7 +8705,7 @@
 		<v2TypeName>ProcedureComplication</v2TypeName>
 		<v3TypeName>ProcedureComplication</v3TypeName>
 		<v2Pattern>4520</v2Pattern>
-		<v3Replacement>3907035</v3Replacement>
+		<v3Replacement>3907047</v3Replacement>
 	</match>
 	<match>
 		<v2TypeName>ProcedureComplication</v2TypeName>
@@ -9662,7 +9664,7 @@
 		<v2TypeName>RelationshipToInsured</v2TypeName>
 		<v3TypeName>RelationshipToInsured</v3TypeName>
 		<v2Pattern>785</v2Pattern>
-		<v3Replacement>2622007</v3Replacement>
+		<v3Replacement>2622019</v3Replacement>
 	</match>
 	<match>
 		<v2TypeName>ResearchTitle</v2TypeName>
@@ -9697,6 +9699,30 @@
 		<v2TypeName>RespiratoryEffort</v2TypeName>
 		<v3TypeName>RespiratoryEffort</v3TypeName>
 		<v2Pattern>3205</v2Pattern>
+	</match>
+	<match>
+		<v2TypeName>ResponseModeToScene</v2TypeName>
+		<v3TypeName>EMSAdditionalResponseMode</v3TypeName>
+		<v2Pattern>380</v2Pattern>
+		<v3Replacement>2224023</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>ResponseModeToScene</v2TypeName>
+		<v3TypeName>EMSAdditionalResponseMode</v3TypeName>
+		<v2Pattern>385</v2Pattern>
+		<v3Replacement>2224021</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>ResponseModeToScene</v2TypeName>
+		<v3TypeName>EMSAdditionalResponseMode</v3TypeName>
+		<v2Pattern>390</v2Pattern>
+		<v3Replacement>2224015</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>ResponseModeToScene</v2TypeName>
+		<v3TypeName>EMSAdditionalResponseMode</v3TypeName>
+		<v2Pattern>395</v2Pattern>
+		<v3Replacement>2224019</v3Replacement>
 	</match>
 	<match>
 		<v2TypeName>ResponseModeToScene</v2TypeName>
@@ -10291,6 +10317,30 @@
 		<v3TypeName>TimeUnitsOfChiefComplaint</v3TypeName>
 		<v2Pattern>1300</v2Pattern>
 		<v3Replacement>2806013</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>TransportModeFromScene</v2TypeName>
+		<v3TypeName>AdditionalTransportModeDescriptors</v3TypeName>
+		<v2Pattern>4955</v2Pattern>
+		<v3Replacement>4218019</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>TransportModeFromScene</v2TypeName>
+		<v3TypeName>AdditionalTransportModeDescriptors</v3TypeName>
+		<v2Pattern>4960</v2Pattern>
+		<v3Replacement>4218017</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>TransportModeFromScene</v2TypeName>
+		<v3TypeName>AdditionalTransportModeDescriptors</v3TypeName>
+		<v2Pattern>4965</v2Pattern>
+		<v3Replacement>4218011</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>TransportModeFromScene</v2TypeName>
+		<v3TypeName>AdditionalTransportModeDescriptors</v3TypeName>
+		<v2Pattern>4970</v2Pattern>
+		<v3Replacement>4218015</v3Replacement>
 	</match>
 	<match>
 		<v2TypeName>TransportModeFromScene</v2TypeName>

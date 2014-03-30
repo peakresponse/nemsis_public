@@ -1,0 +1,28 @@
+NEMSIS Version 2 to Version 3 Translation Change Log
+
+Version 1.1 (NEMSIS version 3.3.4)
+March 10, 2014
+
+
+New Mapping
+
+E02_20 Response Mode to Scene -> eResponse.24 Additional Response Mode Descriptors
+E20_14 Transport Mode from Scene -> eDisposition.18 Additional Transport Mode Descriptors
+
+
+Mapping Changes
+
+E19_07 Procedure Complication -> eProcedures.07 Procedure Complication: v2 value 4520 Bradycardia mapping was changed from v3 value 3907035 Other (Not Listed) to new v3 value 3907047 Bradycardia.
+
+E07_14 Relationship to the Insured -> ePayment.22 Relationship to the Insured: v2 value 785 Other mapping was changed from deprecated v3 value 2622007 Other to new v3 value 2622019 Other Relationship.
+
+E02_05 Primary Role of the Unit -> eResponse.07 Primary Role of the Unit: v2 value 75 Transport mapping for air ambulance responses was changed from deprecated v3 value 2207001 Air Transport to new v3 values 2207011 Air Transport-Helicopter or 2207013 Air Transport-Fixed Wing, depending on the value of E07_34 CMS Service Level.
+
+
+Mapping Corrections
+
+D04_04 Procedures -> dConfiguration.07 EMS Agency Procedures: v2 value 99.615 CPR-Stop was incorrectly mapped to blank v3 value. Value mapping was moved to element mapping D04_04 Procedures -> dCustomResults.01 Custom Data Element Result.
+
+E09_01 Prior Aid -> eProcedures.03 Procedure: v2 value 99.615 CPR-Stop was incorrectly mapped to blank v3 value. Value mapping was moved to element mapping E09_01 Prior Aid -> eCustomResults.01 Custom Data Element Result.
+
+E19_03 Procedure -> eProcedures.03 Procedure: v2 value 99.615 CPR-Stop was incorrectly mapped to blank v3 value. Value mapping was moved to element mapping E19_03 Procedure -> eCustomResults.01 Custom Data Element Result.

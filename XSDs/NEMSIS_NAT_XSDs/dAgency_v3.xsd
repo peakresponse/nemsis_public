@@ -11,7 +11,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
-							
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -23,7 +22,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -50,7 +48,6 @@
 							</performanceMeasuresGroup>
 							<comment>This is the primary identifier for the entire Demographic Section.  Each of the Demographic sections must be associated with an EMS Agency Number. An EMS Agency can have more than one Agency Number within a state. This reflects the ability for an EMS Agency to have a different number for each service type or location (based on state implementation).
 							The EMS Agency Number in dAgency.02 can be used to auto-populate eResponse.01 EMS Agency Number in the EMS Event section.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -83,7 +80,6 @@
 							</performanceMeasuresGroup>
 							<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -108,11 +104,10 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The states in which the EMS Agency provides services including the state associated with the EMS Agency Number.</definition>
-										
 										<usage>Mandatory</usage>
-										<comment>Element added to document all of the states in which the EMS agency provides services. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
+										<comment>Each state is captured as a group where the EMS agency provides service. The group includes dAgency.05, dAgency.06, dAgency.07, and Agency.08.
+										      &lt;br/>&lt;br/>Element added to document all of the states in which the EMS agency provides services. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
 													&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -144,7 +139,6 @@
 										</performanceMeasuresGroup>
 										<comment>Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. County codes are based on ISO/ANSI codes. It is a 5-digit code based on state (2-digit) and county (3-digit). 
 										  &lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -165,17 +159,15 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The US census tracts in which the EMS agency formally provides service.</definition>
-										
 										<usage>Required</usage>
 										<comment>
 										This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. 
 										&lt;br/>&lt;br/>The format of the census tract number must be an 11-digit number, based upon the 2010 census, using the pattern: 
-										&lt;br/>2-digit State Code 3-digit County Code 6-digiit Census Tract Number (no decimal) 
+										&lt;br/>2-digit State Code 3-digit County Code 6-digit Census Tract Number (no decimal) 
 										&lt;br/>&lt;br/>Example: NEMSIS TAC office (UT, Salt Lake County, Census Tract - located at 295 Chipeta Way, Salt Lake City, UT) 
 										49035101400
 										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html 										
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -201,7 +193,6 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The ZIP codes for the EMS Agency's service area.</definition>
-										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -215,7 +206,6 @@
 										<comment>This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
 													&lt;br/>&lt;br/>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -257,7 +247,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>The Primary Type of Service is associated with each of the EMS Agency Numbers.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -291,7 +280,6 @@
 							<comment>The Level of Service is associated with the specific EMS Agency Number (dAgency.02) for the EMS Agency. For example a BLS licensed ambulance service (EMT-Basic) with EMT-Intermediate or EMT-Paramedic on staff, the appropriate level of service is "EMT-Basic". This  is because the care provided to patients is limited to BLS skills.
 							&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -317,7 +305,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>The Organizational Status is associated with the EMS Agency and the specific EMS Agency Number (dAgency.02).</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -343,7 +330,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Organizational Type is associated with the EMS Agency and the specific EMS Agency Number (dAgency.02).</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -357,7 +343,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The EMS Agencies business/corporate organizational tax status</definition>
-							
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -369,7 +354,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Associated with the EMS Agency for the specific EMS Agency Number (dAgency.02).</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -397,7 +381,6 @@
 										<v2Number>D01_10</v2Number>
 										<usage>Mandatory</usage>
 										<comment>Added Calendar Year to the definition to remove confusion noted in draft comments. Will allow multiple entry to allow data to be stored on several years. This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02) and elements dAgency.16 through dAgency.22</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -424,7 +407,6 @@
 												<performanceMeasure>Trauma</performanceMeasure>
 											</performanceMeasuresGroup>
 											<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year</comment>
-											
 										</nemsisTacDoc>
 									</definition>
 								</xs:documentation>
@@ -463,7 +445,6 @@
 												<performanceMeasure>Trauma</performanceMeasure>
 											</performanceMeasuresGroup>
 											<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year.</comment>
-											
 										</nemsisTacDoc>
 									</definition>
 								</xs:documentation>
@@ -538,7 +519,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -575,7 +555,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -612,7 +591,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -643,11 +621,12 @@
 							<name>National Provider Identifier</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The National Provider Identifier associated with National Provider System (NPS) and used in all standard HIPPA transactions such as electronic claim filing.</definition>
+							<definition>The National Provider Identifier issued by CMS.</definition>
 							<v2Number>D01_21</v2Number>
 							<usage>Required</usage>
-							
-							
+							<comment>Only EMS Agencies billing for service will have an NPI number. 
+                &lt;br/>&lt;br/>CMS (Centers for Medicare and Medicaid Services) NPI Registry lookup: 
+                &lt;br/>https://npiregistry.cms.hhs.gov/NPPESRegistry/NPIRegistryHome.do</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -673,7 +652,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The state assigned Fire Department ID Number for EMS Agency(ies) operating within a Fire Department.</definition>
-							
 							<usage>Required</usage>
 							<comment>Fire Department ID was added to better integrate Fire Department EMS Agencies and linkage to other EMS related data systems such as NFIRS.</comment>
 							<v3Changes>Added to better associate Fire and EMS licensure and operational identifiers.</v3Changes>

@@ -22,8 +22,13 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Added Pandemic/Epidemic/Outbreak.&lt;br/>Added Automated Crash Notification&lt;br/>Added Healthcare Professional Admission&lt;br/>Added Interfacility/Evaluation/Transfer&lt;br/>- Other entries expanded based on current national EMD Dispatch List</comment>
-							
+							<comment>
+Added Pandemic/Epidemic/Outbreak. 
+&lt;br/>Added Automated Crash Notification 
+&lt;br/>Added Healthcare Professional Admission 
+&lt;br/>Added Transfer/Interfacility/Palliative Care 
+&lt;br/>- Other entries expanded based on current national EMD Dispatch List							
+						</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -48,8 +53,6 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -278,6 +281,11 @@
 			<xs:enumeration value="2301081">
 				<xs:annotation>
 					<xs:documentation>Drowning/Diving/SCUBA Accident</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301083">
+				<xs:annotation>
+					<xs:documentation>Airmedical Transport</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -9,10 +9,8 @@
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Protocols are grouped into Airway, Environmental, Exposure, General, Injury, Medical, and OB/GYN. 
-										
-										<div style="font-size:4px"> </div>There is a new data element EProtocols.02 to indicate whether the protocol is Adult, Pediatric, or General (both).
-										
-										<div style="font-size:4px"> </div>State and local entities can add additional protocols to the list but the additional protocols must map to these uniform codes. The protocol code list should be derived from dConfiguration.05 and/or dConfiguration.10</v3Comment>
+										<br/><br/> There is a new data element EProtocols.02 to indicate whether the protocol is Adult, Pediatric, or General (both).
+										<br/><br/> State and local entities can add additional protocols to the list but the additional protocols must map to these uniform codes. The protocol code list should be derived from dConfiguration.05 and/or dConfiguration.10</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -36,7 +34,7 @@
     <facet name="enumeration" value="9914033" annotation="Exposure-Airway/Inhalation Irritants"/>
     <facet name="enumeration" value="9914035" annotation="Exposure-Biological/Infectious"/>
     <facet name="enumeration" value="9914037" annotation="Exposure-Blistering Agents"/>
-    <facet name="enumeration" value="9914039" annotation="Exposure-Carbon Monoxide/Smoke Inhalation"/>
+    <facet name="enumeration" value="9914039" annotation="Exposure-Carbon Monoxide/Smoke Inhalation &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'&gt;DEPRECATED&lt;/font&gt;"/>
     <facet name="enumeration" value="9914041" annotation="Exposure-Chemicals to Eye"/>
     <facet name="enumeration" value="9914043" annotation="Exposure-Cyanide"/>
     <facet name="enumeration" value="9914045" annotation="Exposure-Explosive/ Blast Injury"/>
@@ -100,6 +98,23 @@
     <facet name="enumeration" value="9914161" annotation="OB/GYN-Pregnancy Related Emergencies"/>
     <facet name="enumeration" value="9914163" annotation="OB/GYN-Post-partum Hemorrhage"/>
     <facet name="enumeration" value="9914165" annotation="Other"/>
+    <facet name="enumeration" value="9914167" annotation="Exposure-Carbon Monoxide"/>
+    <facet name="enumeration" value="9914169" annotation="Cardiac Arrest-Do Not Resuscitate"/>
+    <facet name="enumeration" value="9914171" annotation="Cardiac Arrest-Special Resuscitation Orders"/>
+    <facet name="enumeration" value="9914173" annotation="Exposure-Smoke Inhalation"/>
+    <facet name="enumeration" value="9914175" annotation="General-Community Paramedicine / Mobile Integrated Healthcare"/>
+    <facet name="enumeration" value="9914177" annotation="General-Exception Protocol"/>
+    <facet name="enumeration" value="9914179" annotation="General-Extended Care Guidelines"/>
+    <facet name="enumeration" value="9914181" annotation="General-Interfacility Transfers"/>
+    <facet name="enumeration" value="9914183" annotation="General-Law Enforcement - Blood for Legal Purposes"/>
+    <facet name="enumeration" value="9914185" annotation="General-Law Enforcement - Assist with Law Enforcement Activity"/>
+    <facet name="enumeration" value="9914187" annotation="General-Neglect or Abuse Suspected"/>
+    <facet name="enumeration" value="9914189" annotation="General-Refusal of Care"/>
+    <facet name="enumeration" value="9914191" annotation="Injury-Mass/Multiple Casualties"/>
+    <facet name="enumeration" value="9914193" annotation="Injury-Thoracic"/>
+    <facet name="enumeration" value="9914195" annotation="Medical-Adrenal Insufficiency"/>
+    <facet name="enumeration" value="9914197" annotation="Medical-Apparent Life Threatening Event (ALTE)"/>
+    <facet name="enumeration" value="9914199" annotation="Medical-Tachycardia"/>
   </ProtocolsUsed>
 </restrictions>
 <attributes>

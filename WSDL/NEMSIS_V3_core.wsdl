@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.nemsis.org/"
-	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://ws.nemsis.org/">
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.nemsis.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.nemsis.org/">
     <wsdl:types>
-        <xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:tns="http://ws.nemsis.org/" targetNamespace="http://ws.nemsis.org/">
+        <xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.nemsis.org/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://ws.nemsis.org/">
             <xs:element name="SubmitDataRequest" type="tns:NemsisV3WsSubmitDataRequest" />
             <xs:element name="SubmitDataResponse" type="tns:NemsisV3WsSubmitDataResponse" />
             <xs:element name="RetrieveStatusRequest" type="tns:NemsisV3WsRetrieveStatusRequest" />
@@ -14,15 +11,14 @@
                 <xs:union memberTypes="tns:CommonResponseCode tns:ResultPendingCode tns:SubmitDataProcessCodes" />
             </xs:simpleType>
             <xs:simpleType name="RetrieveResponseCode">
-                <xs:union
-			memberTypes="tns:CommonResponseCode tns:ResultPendingCode tns:SubmitDataProcessCodes tns:RetrieveErrorCode">
+                <xs:union memberTypes="tns:CommonResponseCode tns:ResultPendingCode tns:SubmitDataProcessCodes tns:RetrieveErrorCode">
                 </xs:union>
             </xs:simpleType>
             <xs:simpleType name="QueryLimitResponseCode">
                 <xs:union memberTypes="tns:PrivilegeErrorCodes tns:QueryLimitCodes" />
             </xs:simpleType>
             <xs:simpleType name="CommonResponseCode">
-                <xs:union memberTypes="tns:ServerErrorCodes tns:PrivilegeErrorCodes tns:ParameterErrorCodes tns:CustomErrorCodes tns:CustomSuccessCodes"/>
+                <xs:union memberTypes="tns:ServerErrorCodes tns:PrivilegeErrorCodes tns:ParameterErrorCodes tns:CustomErrorCodes tns:CustomSuccessCodes" />
             </xs:simpleType>
             <xs:simpleType name="PrivilegeErrorCodes">
                 <xs:annotation>
@@ -160,6 +156,11 @@
                     <xs:enumeration value="5">
                         <xs:annotation>
                             <xs:documentation>Successful import of a file, with Business Intelligence warning</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="6">
+                        <xs:annotation>
+                            <xs:documentation>Partially successful import of a file, with [ERROR] level Schematron rule violation reported</xs:documentation>
                         </xs:annotation>
                     </xs:enumeration>
                 </xs:restriction>
@@ -334,13 +335,12 @@
             </xs:complexType>
             <xs:complexType name="SubmitDataReport">
                 <xs:sequence>
-					<xs:element name="serverErrorReport" type="tns:ServerErrorReport" minOccurs="0"/>
+					<xs:element name="serverErrorReport" type="tns:ServerErrorReport" minOccurs="0" />
                     <xs:element name="xmlValidationErrorReport" type="tns:XmlValidationErrorReport" />
                     <xs:element name="schematronReport" minOccurs="0">
                         <xs:complexType>
                             <xs:sequence>
                                 <xs:element name="completeSchematronReport" type="tns:CompleteSchematronReport" minOccurs="0" maxOccurs="unbounded" />
-                                <xs:element name="digestedSchematronReport" type="tns:DigestedSchematronReport" minOccurs="0" maxOccurs="unbounded" />
                             </xs:sequence>
                         </xs:complexType>
                     </xs:element>
@@ -433,16 +433,6 @@
                     <xs:element name="completeReport" maxOccurs="unbounded" minOccurs="0" type="tns:DataPayload" />
                 </xs:sequence>
             </xs:complexType>
-            <xs:complexType name="DigestedSchematronReport">
-                <xs:annotation>
-                    <xs:documentation>This element contains a list of digested Schematron validation reports</xs:documentation>
-                </xs:annotation>
-                <xs:sequence>
-                    <xs:element name="schematronRuleDefinition" type="tns:SchematronRuleDefinition" />
-                    <xs:element name="errorMessage" type="xs:string" />
-                    <xs:element name="errorElement" maxOccurs="unbounded" type="tns:XmlElementInfo" />
-                </xs:sequence>
-            </xs:complexType>
             <xs:complexType name="SchematronRuleDefinition">
                 <xs:annotation>
                     <xs:documentation>Metadata for a Schematron rule. Some information might be redudant or overlap.</xs:documentation>
@@ -529,35 +519,35 @@
     </wsdl:types>
 
     <wsdl:message name="SubmitDataRequest">
-        <wsdl:part name="parameters" element="tns:SubmitDataRequest"></wsdl:part>
+        <wsdl:part name="parameters" element="tns:SubmitDataRequest" />
     </wsdl:message>
     <wsdl:message name="SubmitDataResponse">
-        <wsdl:part name="parameters" element="tns:SubmitDataResponse"></wsdl:part>
+        <wsdl:part name="parameters" element="tns:SubmitDataResponse" />
     </wsdl:message>
     <wsdl:message name="RetrieveStatusRequest">
-        <wsdl:part name="parameters" element="tns:RetrieveStatusRequest"></wsdl:part>
+        <wsdl:part name="parameters" element="tns:RetrieveStatusRequest" />
     </wsdl:message>
     <wsdl:message name="RetrieveStatusResponse">
-        <wsdl:part name="parameters" element="tns:RetrieveStatusResponse"></wsdl:part>
+        <wsdl:part name="parameters" element="tns:RetrieveStatusResponse" />
     </wsdl:message>
     <wsdl:message name="QueryLimitRequest">
-        <wsdl:part name="parameters" element="tns:QueryLimitRequest"></wsdl:part>
+        <wsdl:part name="parameters" element="tns:QueryLimitRequest" />
     </wsdl:message>
     <wsdl:message name="QueryLimitResponse">
-        <wsdl:part name="parameters" element="tns:QueryLimitResponse"></wsdl:part>
+        <wsdl:part name="parameters" element="tns:QueryLimitResponse" />
     </wsdl:message>
     <wsdl:portType name="NemsisWsPortType">
         <wsdl:operation name="SubmitData">
-            <wsdl:input message="tns:SubmitDataRequest"></wsdl:input>
-            <wsdl:output message="tns:SubmitDataResponse"></wsdl:output>
+            <wsdl:input message="tns:SubmitDataRequest" />
+            <wsdl:output message="tns:SubmitDataResponse" />
         </wsdl:operation>
         <wsdl:operation name="RetrieveStatus">
-            <wsdl:input message="tns:RetrieveStatusRequest"></wsdl:input>
-            <wsdl:output message="tns:RetrieveStatusResponse"></wsdl:output>
+            <wsdl:input message="tns:RetrieveStatusRequest" />
+            <wsdl:output message="tns:RetrieveStatusResponse" />
         </wsdl:operation>
         <wsdl:operation name="QueryLimit">
-            <wsdl:input message="tns:QueryLimitRequest"></wsdl:input>
-            <wsdl:output message="tns:QueryLimitResponse"></wsdl:output>
+            <wsdl:input message="tns:QueryLimitRequest" />
+            <wsdl:output message="tns:QueryLimitResponse" />
         </wsdl:operation>
 
     </wsdl:portType>
@@ -593,7 +583,7 @@
     </wsdl:binding>
     <wsdl:service name="NemsisWsService">
         <wsdl:port name="NemsisWsPort" binding="tns:NemsisWsPortBinding">
-            <soap:address location="http://www.example.org/" />
+            <soap:address location="https://www.nemsis.org:443/NemsisV3Validator4/NemsisWsService" />
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>

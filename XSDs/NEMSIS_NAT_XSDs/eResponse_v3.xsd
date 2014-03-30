@@ -32,7 +32,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>The EMS Agency Number in eResponse.01 can auto-populate from dAgency.02 EMS Agency Number in the demographic section.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -52,9 +51,7 @@
 							<definition>The incident number assigned by the 911 Dispatch System</definition>
 							<v2Number>E02_02</v2Number>
 							<usage>Required</usage>
-							
 							<comment>This number can be used to associate multiple EMS responses, dispatch information, and other information to the same EMS event or patient.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -81,9 +78,6 @@
 							<definition>The internal EMS response number which is unique for each EMS Vehicle's (Unit) response to an incident within an EMS Agency.</definition>
 							<v2Number>E02_03</v2Number>
 							<usage>Required</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -127,7 +121,6 @@
 										</performanceMeasuresGroup>
 										<comment>"Interfacility Transfer" has been changed to "Interfacility Transport. "Public Assistance/Other Not Listed" added for EMS 
 										expanded scope events such as elderly assistance, injury prevention, public education, immunization programs, etc.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -157,7 +150,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Supervisor clarified to Administrative Only. If the Supervisor is responding to assist, that would be considered Non-Transport. Transport separated into Air and Ground.  In Version 2 there was no way to identify Air Transport.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -183,7 +175,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>A dispatch delay is any time delay that occurs from the time of PSAP call (eTimes.01) to the time the unit is notified by dispatch (eTimes.03).</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -223,7 +214,6 @@
 							<comment>Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc to return to service.
 							&lt;br/>&lt;br/>A response delay is any time delay that occurs from the time the unit is notified by dispatch (eTimes.03) to the time the unit arrived on scene (eTimes.06). 
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -261,7 +251,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>A scene delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) to the time the unit left the scene (eTimes.09). </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -302,7 +291,6 @@
 							Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc.
 							&lt;br/>&lt;br/>A transport delay is any time delay that occurs from the time the unit left the scene (eTimes.09) to the time the patient arrived at the destination (eTimes.10).
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -338,7 +326,6 @@
 								&lt;br/>&lt;br/>If a patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the patient arrived at the destination (eTimes.10) until the time the unit is back in service (eTimes.13) or unit back at the home location (eTimes15) [whichever is the greater of the two times].
 								&lt;br/>&lt;br/>If no patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) until the unit is back in service (eTimes.13) or the unit back at the home location (eTimes.15) [whichever is the greater of the two times].							
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -367,7 +354,6 @@
 							<v2Number>E02_11</v2Number>
 							<usage>Mandatory</usage>
 							<comment>This is recommended to be the State Vehicle Permit Number if unique to the vehicle.  If the vehicle is not licensed by the state, this should be a unique number only associated with a specific vehicle. This element should be populated from dVehicle.01 -  Unit/Vehicle Number.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -397,7 +383,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The level of care (BLS or ALS) the unit is able to provide based on the units' treatment capabilities for this EMS response.</definition>
-							
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -411,7 +396,6 @@
 							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit's capabilities.  
 								&lt;br/>&lt;br/>For example, if a unit/crew is staffed with an EMT-Intermediate or EMT-Paramedic but the unit is either licensed or stocked at a BLS level the appropriate level of care is "BLS-Basic". This is because the care provided to patients is limited to BLS skills.
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -444,7 +428,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Information now split between eResponse.23 (Response Mode to Scene) and eResponse.24 (Additional Response Mode Descriptors)</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -458,7 +441,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The documentation of response mode techniques used for this EMS response.</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -470,7 +452,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Descriptors have been added to better describe the EMS Response.  This includes information on whether the EMS event was schedule or unscheduled.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -527,6 +508,31 @@
 			<xs:enumeration value="2224013">
 				<xs:annotation>
 					<xs:documentation>Unscheduled</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2224015">
+				<xs:annotation>
+					<xs:documentation>Lights and Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2224017">
+				<xs:annotation>
+					<xs:documentation>Lights and No Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2224019">
+				<xs:annotation>
+					<xs:documentation>No Lights or Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2224021">
+				<xs:annotation>
+					<xs:documentation>Initial No Lights or Sirens, Upgraded to Lights and Sirens</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2224023">
+				<xs:annotation>
+					<xs:documentation>Initial Lights and Sirens, Downgraded to No Lights or Sirens</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -737,6 +743,11 @@
 					<xs:documentation>Weather</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="2210039">
+				<xs:annotation>
+					<xs:documentation>Mechanical Issue-Unit, Equipment, etc</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EMSServiceCat">
@@ -923,6 +934,11 @@
 					<xs:documentation>Weather</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="2211031">
+				<xs:annotation>
+					<xs:documentation>Patient Condition Change (e.g. Unit Stopped)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EMSTurnaroundUnitDelayReason">
@@ -1010,6 +1026,11 @@
 					<xs:documentation>Weather</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="2212033">
+				<xs:annotation>
+					<xs:documentation>EMS Crew Accompanies Patient for Facility Procedure</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EMSUnitDelayReason">
@@ -1090,6 +1111,16 @@
 			<xs:enumeration value="2209029">
 				<xs:annotation>
 					<xs:documentation>Weather</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2209031">
+				<xs:annotation>
+					<xs:documentation>Mechanical Issue-Unit, Equipment, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2209033">
+				<xs:annotation>
+					<xs:documentation>Flight Planning</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1177,7 +1208,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2207001">
 				<xs:annotation>
-					<xs:documentation>Air Transport</xs:documentation>
+					<xs:documentation>Air Transport &lt;span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/span></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2207003">
@@ -1198,6 +1229,16 @@
 			<xs:enumeration value="2207009">
 				<xs:annotation>
 					<xs:documentation>Non-Transport Rescue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2207011">
+				<xs:annotation>
+					<xs:documentation>Air Transport-Helicopter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2207013">
+				<xs:annotation>
+					<xs:documentation>Air Transport-Fixed Wing</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

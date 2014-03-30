@@ -11,10 +11,8 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
-							
 							<usage>Required</usage>
 							<comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -43,9 +41,6 @@
 							<definition>Indicator of how many total patients were at the scene</definition>
 							<v2Number>E08_05</v2Number>
 							<usage>Required</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -75,8 +70,6 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -91,7 +84,7 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
-			</xs:element>			
+			</xs:element>
 			<xs:element name="eScene.08" nillable="true" id="eScene.TriageClassificationforMCIPatient">
 				<xs:annotation>
 					<xs:documentation>
@@ -119,12 +112,11 @@ Examples of triage systems include START and SALT.
 &lt;br/>&lt;br/>
 &lt;div style="font-size:11px">Adapted from: SALT mass casualty triage: concept endorsed by the American College of Emergency Physicians, American College of Surgeons Committee on Trauma, American Trauma Society, National Association of EMS Physicians, National Disaster Life Support Education Consortium, and State and Territorial Injury Prevention Directors Association. Disaster Med Public Health Prep. 2008 Dec;2(4):245-6.
 &lt;/div>
-&lt;div style="font-size:4px">&amp;nbsp;&lt;/div>
+&lt;br/>&lt;br/>
 &lt;div style="font-size:11px">
 START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then SAVE-a new method of dynamic triage for victims of a catastrophic earthquake. Prehospital Disaster Med. 1996; Apr-Jun; 11(2): 117-24							
 &lt;/div>
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -165,7 +157,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -211,7 +202,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							</performanceMeasuresGroup>
 							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -250,7 +240,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -290,7 +279,6 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
 							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -491,5 +479,5 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-	</xs:simpleType>	
+	</xs:simpleType>
 </xs:schema>

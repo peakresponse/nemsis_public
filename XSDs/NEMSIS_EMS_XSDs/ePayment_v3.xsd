@@ -136,6 +136,7 @@
 										<state>No</state>
 										<definition>The type of healthcare provider who signed the Physician Certification Statement</definition>
 										<usage>Optional</usage>
+										<comment>CMS defines the individual signing the PCS as a person who has personal knowledge of the beneficiary's condition at the time the ambulance transport is ordered or the service is furnished.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -205,6 +206,7 @@
 										<definition>The ID Number of the patient's insurance company.</definition>
 										<v2Number>E07_03</v2Number>
 										<usage>Optional</usage>
+										<comment>This element should be used as the Health Plan ID (HPID) field in X12. It is currently under development for X12 and will be a future release.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -268,10 +270,13 @@
 										<name>Insurance Company City</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The insurance company's city or township</definition>
+										<definition>The insurance company's city or township used for mailing purposes.</definition>
 										<v2Number>E07_06</v2Number>
 										<usage>Optional</usage>
-										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+										<comment>
+										City codes are based on GNIS Feature Class. The primary Feature Class to use is ""Civil"" with ""Populated Place"" and ""Military"" code as additional options. 
+  		&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
+  		&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -412,6 +417,7 @@
 										<definition>The relationship of the patient to the primary insured person</definition>
 										<v2Number>E07_14</v2Number>
 										<usage>Optional</usage>
+										<comment>Descriptors are consistent with X12 Loop 2000C PAT01, Specifies the patient's relationship to the person insured.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -479,7 +485,7 @@
 										<name>Closest Relative/ Guardian Street Address</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The home street address of the patient's closest relative or guardian.</definition>
+										<definition>The street address of the residence of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_21</v2Number>
 										<usage>Optional</usage>
 										<comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
@@ -503,10 +509,13 @@
 										<name>Closest Relative/ Guardian City</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The home city of the patient's closest relative or guardian.</definition>
+										<definition>The primary city or township of residence of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_22</v2Number>
 										<usage>Optional</usage>
-										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and ""Military" code as additional options. 
+  	&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
+  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -519,7 +528,7 @@
 										<name>Closest Relative/ Guardian State</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The home state of the patient's closest relative or guardian</definition>
+										<definition>The state of residence of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_23</v2Number>
 										<usage>Optional</usage>
 										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
@@ -535,7 +544,7 @@
 										<name>Closest Relative/ Guardian ZIP Code</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The home ZIP Code of the patient's closest relative or guardian</definition>
+										<definition>The ZIP Code of the residence of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_24</v2Number>
 										<usage>Optional</usage>
 										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
@@ -552,7 +561,7 @@
 										<name>Closest Relative/ Guardian Country</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The home country of the patient's closest relative or guardian</definition>
+										<definition>The country of residence of the patient's closest relative or guardian.</definition>
 										<usage>Optional</usage>
 										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
 </comment>
@@ -655,10 +664,13 @@
 										<name>Patient's Employer's City</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The city of the patient's employer</definition>
+										<definition>The city or township of the patient's employer used for mailing purposes.</definition>
 										<v2Number>E07_29</v2Number>
 										<usage>Optional</usage>
-										<comment>Based on GNIS Civil Code or Populated Place Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
+  	&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
+  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -808,7 +820,7 @@
 							<state>No</state>
 							<deprecated>Yes</deprecated>
 							<definition>Indicator about the type of transport of the patient.</definition>
-							<usage>Optional</usage>							
+							<usage>Optional</usage>
 							<comment>Added to improve billing with electronic claims using X12. The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport".  The Accredited Standards Committee X12 organization maintains the standard.  See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:  
 http://ushik.org/dr.ui.drData_Page?system=mdr&amp;Search=xxKEYIDxx&amp;KeyOrgID=18&amp;KeyRID=24821000&amp;Referer=DataElement </comment>
 							<deprecatedComment>Originally added to improve billing with electronic claims using X12. This element has been retired from the X12 5010 standard.</deprecatedComment>
@@ -870,11 +882,8 @@ necessity documentation.
 							<state>No</state>
 							<definition>Free Text Documentation providing the reason for use of a stretcher in the EMS patient transport.</definition>
 							<usage>Optional</usage>
-							<comment>Added to improve billing using CMS X12 transactions based on CR110.
-							Ambulance providers can use this field to provide additional information regarding the patient's condition that warranted the use of a stretcher or 
-							for other medical necessity documentation.
+							<comment>Added to improve billing using CMS X12 transactions based on CR110. Documentation of Stretcher Purpose Description (ePayment.46) is required when needed to justify use of a stretcher. (X12 - Loop 2300 CR110).
 							</comment>
-							<v3Changes>Added to improve billing with electronic claims using X12</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1208,7 +1217,7 @@ necessity documentation.
 	</xs:simpleType>
 	<xs:simpleType name="AuthorizationCode">
 		<xs:annotation>
-			<xs:documentation>Prior authorization code provided by the insurance carrier/payor.</xs:documentation>
+			<xs:documentation>Prior authorization code provided by the insurance carrier/payer.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
@@ -1258,6 +1267,21 @@ necessity documentation.
 			<xs:enumeration value="2632015">
 				<xs:annotation>
 					<xs:documentation>Spouse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632017">
+				<xs:annotation>
+					<xs:documentation>Employee </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632019">
+				<xs:annotation>
+					<xs:documentation>Life/Domestic Partner </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2632021">
+				<xs:annotation>
+					<xs:documentation>Unknown </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1443,6 +1467,56 @@ services.</xs:documentation>
 					<xs:documentation>Secondary</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="2611007">
+				<xs:annotation>
+					<xs:documentation>Tertiary</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611009">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Four</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611011">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Five</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611013">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Six</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611015">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Seven</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611017">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Eight</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611019">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Nine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611021">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Ten</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611023">
+				<xs:annotation>
+					<xs:documentation>Payer Responsibility Eleven</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2611025">
+				<xs:annotation>
+					<xs:documentation>Unknown</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="InsuranceCompanyID">
@@ -1519,6 +1593,31 @@ services.</xs:documentation>
 			<xs:enumeration value="2601013">
 				<xs:annotation>
 					<xs:documentation>Workers Compensation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601015">
+				<xs:annotation>
+					<xs:documentation>Payment by Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601017">
+				<xs:annotation>
+					<xs:documentation>Contracted Payment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601019">
+				<xs:annotation>
+					<xs:documentation>Community Network</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601021">
+				<xs:annotation>
+					<xs:documentation>No Insurance Identified</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2601023">
+				<xs:annotation>
+					<xs:documentation>Other Payment Option</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1647,7 +1746,37 @@ services.</xs:documentation>
 			</xs:enumeration>
 			<xs:enumeration value="2622007">
 				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
+					<xs:documentation>Other &lt;span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/span></xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622009">
+				<xs:annotation>
+					<xs:documentation>Cadaver Donor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622011">
+				<xs:annotation>
+					<xs:documentation>Employee</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622013">
+				<xs:annotation>
+					<xs:documentation>Life/Domestic Partner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622015">
+				<xs:annotation>
+					<xs:documentation>Organ Donor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622017">
+				<xs:annotation>
+					<xs:documentation>Unknown</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2622019">
+				<xs:annotation>
+					<xs:documentation>Other Relationship</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1763,6 +1892,81 @@ services.</xs:documentation>
 			<xs:enumeration value="2642009">
 				<xs:annotation>
 					<xs:documentation>Physician Assistant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642011">
+				<xs:annotation>
+					<xs:documentation>2009 Emergency Medical Responder (EMR)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642013">
+				<xs:annotation>
+					<xs:documentation>2009 Emergency Medical Technician (EMT)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642015">
+				<xs:annotation>
+					<xs:documentation>2009 Advanced Emergency Medical Technician (AEMT)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642017">
+				<xs:annotation>
+					<xs:documentation>2009 Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642019">
+				<xs:annotation>
+					<xs:documentation>First Responder</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642021">
+				<xs:annotation>
+					<xs:documentation>EMT-Basic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642023">
+				<xs:annotation>
+					<xs:documentation>EMT-Intermediate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642025">
+				<xs:annotation>
+					<xs:documentation>EMT-Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642027">
+				<xs:annotation>
+					<xs:documentation>Other Healthcare Professional</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642029">
+				<xs:annotation>
+					<xs:documentation>Other Non-Healthcare Professional</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642031">
+				<xs:annotation>
+					<xs:documentation>Respiratory Therapist</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642033">
+				<xs:annotation>
+					<xs:documentation>Student</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642035">
+				<xs:annotation>
+					<xs:documentation>Critical Care Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642037">
+				<xs:annotation>
+					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2642039">
+				<xs:annotation>
+					<xs:documentation>Registered Nurse</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The designation associated with the hospital for this transport(e.g. Trauma, STEMI, Peds, etc)</definition>
+<definition>The primary hospital capability associated with the patient's condition for this transport (e.g. Trauma, STEMI, Peds, etc).</definition>
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
@@ -19,8 +19,8 @@
     <facet name="enumeration" value="9908007" annotation="Hospital (General)"/>
     <facet name="enumeration" value="9908009" annotation="Neonatal Center"/>
     <facet name="enumeration" value="9908011" annotation="Pediatric Center"/>
-    <facet name="enumeration" value="9908013" annotation="STEMI"/>
-    <facet name="enumeration" value="9908015" annotation="STEMI Center (24/7)"/>
+    <facet name="enumeration" value="9908013" annotation="STEMI &amp;lt;font style='font-size:8px;background:purple;color:white;padding:1px;'&gt;DEPRECATED&amp;lt;/font&gt;"/>
+    <facet name="enumeration" value="9908015" annotation="STEMI Center (24/7) &amp;lt;font style='font-size:8px;background:purple;color:white;padding:1px;'&gt;DEPRECATED&amp;lt;/font&gt;"/>
     <facet name="enumeration" value="9908017" annotation="Stroke Center"/>
     <facet name="enumeration" value="9908019" annotation="Rehab Center"/>
     <facet name="enumeration" value="9908021" annotation="Trauma Center Level 1"/>
@@ -28,6 +28,9 @@
     <facet name="enumeration" value="9908025" annotation="Trauma Center Level 3"/>
     <facet name="enumeration" value="9908027" annotation="Trauma Center Level 4"/>
     <facet name="enumeration" value="9908029" annotation="Trauma Center Level 5"/>
+    <facet name="enumeration" value="9908031" annotation="Cardiac-STEMI/PCI Capable"/>
+    <facet name="enumeration" value="9908033" annotation="Cardiac-STEMI/PCI Capable (24/7)"/>
+    <facet name="enumeration" value="9908035" annotation="Cardiac-STEMI/Non-PCI Capable"/>
   </HospitalDesignation>
 </restrictions>
 <attributes>

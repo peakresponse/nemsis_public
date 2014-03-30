@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dContact" id="dContact.AgencyContact">
 		<xs:sequence>
-			<xs:element name="dContact.ContactInfoGroup" id="dContact.ContactInfoGroup" maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="dContact.ContactInfoGroup" id="dContact.ContactInfoGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group tag to hold agency contact information.</xs:documentation>
 				</xs:annotation>
@@ -18,11 +18,7 @@
 										<national>No</national>
 										<state>Yes</state>
 										<definition>The contact type within the EMS agency.</definition>
-										
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -49,9 +45,6 @@
 										<definition>The Last Name of the agency's primary contact.</definition>
 										<v2Number>D02_01</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -78,9 +71,6 @@
 										<definition>The first name of the agency's primary contact.</definition>
 										<v2Number>D02_03</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -107,9 +97,6 @@
 										<definition>The middle name or initial of the agency's primary contact.</definition>
 										<v2Number>D02_02</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -125,9 +112,7 @@
 										<definition>The street address of the agency contact's mailing address.</definition>
 										<v2Number>D02_04</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -152,12 +137,14 @@
 										<name>Agency Contact City</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The city of the Agency contact's mailing address.</definition>
+										<definition>The city of the EMS contact's mailing address.</definition>
 										<v2Number>D02_05</v2Number>
 										<usage>Recommended</usage>
-										
-										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.&lt;br/>&lt;br/>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
+										<comment>The city should be the mailing address for each contact type for the EMS agency. The EMS agency primary address information (e.g. City) should be entered for the Agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”.   
+&lt;br/>&lt;br/>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options.   
+&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website.   
+&lt;br/>&lt;br/>GNIS Codes Website: http://geonames.usgs.gov/domestic/download_data.htm
+										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -184,10 +171,8 @@
 										<definition>The state of the Agency contact's mailing address.</definition>
 										<v2Number>D02_06</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency. Based on the state ANSI Code. For individuals living outside the USA full address to be entered in the address line.
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -214,11 +199,9 @@
 										<definition>The ZIP code of the Agency's contact's mailing address.</definition>
 										<v2Number>D02_07</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.&lt;br/>&lt;br/>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition.
 </comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -243,18 +226,15 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Country code of the Agency's contact's mailing address.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country. The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency. For individuals living outside the USA full address to be entered in the address line.
 &lt;br/>&lt;br/>ANSI Country Codes (ISO 3166): &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>										
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="dContact.10" nillable="true" id="dContact.AgencyContactPhoneNumber" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="dContact.10" nillable="true" id="dContact.AgencyContactPhoneNumber" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -265,9 +245,6 @@
 										<definition>Agency contact phone number.</definition>
 										<v2Number>D02_08</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -285,7 +262,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dContact.11" nillable="true" id="dContact.AgencyContactEmailAddress" maxOccurs="unbounded" minOccurs="0">
+						<xs:element name="dContact.11" nillable="true" id="dContact.AgencyContactEmailAddress" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -296,9 +273,7 @@
 										<definition>The primary email address of the Agency contact.</definition>
 										<v2Number>D02_10</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -327,9 +302,7 @@
 										<definition>The primary website address of the agency.</definition>
 										<v2Number>D02_11</v2Number>
 										<usage>Recommended</usage>
-										
-										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency. Web Address is not required for other contact types.</comment>
-										
+										<comment>The EMS agency website address should be entered for the Agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”. The EMS agency website address or other websites are optional for other contact types (e.g. Administrative Assistant, EMS Medical Director, etc.). </comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -345,116 +318,102 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dContact.EMSMedicalDirectorGroup" id="dContact.EMSMedicalDirectorGroup" maxOccurs="1" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about the EMS Medical Director</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="dContact.13" nillable="true" id="dContact.AgencyMedicalDirectorDegree" minOccurs="0">
+						<xs:element name="dContact.EMSMedicalDirectorGroup" id="dContact.EMSMedicalDirectorGroup" minOccurs="0" maxOccurs="1">
 							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dContact.13</number>
-										<name>Agency Medical Director Degree</name>
-										<national>No</national>
-										<state>Yes</state>
-										<definition>The medical school degree type of the EMS Medical Director.</definition>
-										
-										<usage>Recommended</usage>
-										
-										<comment>The Medical Director Information has been merged into Section dContact. This data element is now associated with the Medical Director and Assistant Medical Director Contacts in Section dContact.</comment>
-										
-									</nemsisTacDoc>
-								</xs:documentation>
+								<xs:documentation>Group Tag to hold info about the EMS Medical Director</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="AgencyMedicalDirectorDegree">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
+								<xs:sequence>
+									<xs:element name="dContact.13" nillable="true" id="dContact.AgencyMedicalDirectorDegree" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>dContact.13</number>
+													<name>Agency Medical Director Degree</name>
+													<national>No</national>
+													<state>Yes</state>
+													<definition>The medical school degree type of the EMS Medical Director.</definition>
+													<usage>Recommended</usage>
+													<comment>The Medical Director Information has been merged into Section dContact. This data element is now associated with the Medical Director and Assistant Medical Director Contacts in Section dContact.</comment>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="AgencyMedicalDirectorDegree">
+													<xs:attribute name="NV" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="dContact.14" nillable="true" id="dContact.AgencyMedicalDirectorBoardCertificationType" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>dContact.14</number>
+													<name>Agency Medical Director Board Certification Type</name>
+													<national>No</national>
+													<state>Yes</state>
+													<definition>Documentation of the type of board certification of the EMS Agency Medical Director.</definition>
+													<usage>Recommended</usage>
+													<comment>This is based on the American Board of Medical Specialties List of Certifications. The Medical Director Information from Section D02 of NEMSIS Version 2.2.1 has been merged into Version 3 Section dContact.</comment>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="AgencyMedicalDirectorBoardCertificationType">
+													<xs:attribute name="NV" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+														</xs:simpleType>
+													</xs:attribute>
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="dContact.15" type="MedicalDirectorCompensation" id="dContact.MedicalDirectorCompensation" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>dContact.15</number>
+													<name>Medical Director Compensation</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>Indication of Medical Director's Compensation.</definition>
+													<usage>Optional</usage>
+													<comment>Associated with EMS Medical Directors only.</comment>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="dContact.16" type="YesNoValues" id="dContact.EMSMedicalDirectorFellowshipTrainedStatus" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>dContact.16</number>
+													<name>EMS Medical Director Fellowship Trained Status</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>Indication if the EMS Medical Director is Fellowship trained.</definition>
+													<usage>Optional</usage>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+								<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dContact.14" nillable="true" id="dContact.AgencyMedicalDirectorBoardCertificationType" maxOccurs="unbounded" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dContact.14</number>
-										<name>Agency Medical Director Board Certification Type</name>
-										<national>No</national>
-										<state>Yes</state>
-										<definition>Documentation of the type of board certification of the EMS Agency Medical Director.</definition>
-										
-										<usage>Recommended</usage>
-										
-										<comment>This is based on the American Board of Medical Specialties List of Certifications. The Medical Director Information from Section D02 of NEMSIS Version 2.2.1 has been merged into Version 3 Section dContact.</comment>
-										
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="AgencyMedicalDirectorBoardCertificationType">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="dContact.15" type="MedicalDirectorCompensation" id="dContact.MedicalDirectorCompensation" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dContact.15</number>
-										<name>Medical Director Compensation</name>
-										<national>No</national>
-										<state>No</state>
-										<definition>Indication of Medical Director's Compensation.</definition>
-										
-										<usage>Optional</usage>
-										
-										<comment>Associated with EMS Medical Directors only.</comment>
-										
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-						<xs:element name="dContact.16" type="YesNoValues" id="dContact.EMSMedicalDirectorFellowshipTrainedStatus" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dContact.16</number>
-										<name>EMS Medical Director Fellowship Trained Status</name>
-										<national>No</national>
-										<state>No</state>
-										<definition>Indication if the EMS Medical Director is Fellowship trained.</definition>
-										
-										<usage>Optional</usage>
-										
-										
-										
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-						</xs:element>
-					</xs:sequence>
-					<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
-				</xs:complexType>
-			</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			
 		</xs:sequence>
 		<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 	</xs:complexType>

@@ -18,12 +18,10 @@
 										<national>No</national>
 										<state>Yes</state>
 										<definition>The clinical indication for performing invasive airway management.</definition>
-										
 										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 										</performanceMeasuresGroup>
-										
 										<v3Changes>Added to better document airway management.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -56,7 +54,6 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The date and time the airway device placement was confirmed.</definition>
-													
 													<usage>Recommended</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
@@ -112,12 +109,10 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The airway device in which placement is being confirmed.</definition>
-													
 													<usage>Recommended</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 													</performanceMeasuresGroup>
-													
 													<v3Changes>Added to better document airway management. SAD means Supraglottic Airway  Device.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -143,7 +138,6 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The method used to confirm the airway device placement.</definition>
-													
 													<usage>Recommended</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
@@ -174,13 +168,11 @@
 													<national>No</national>
 													<state>No</state>
 													<definition>The measurement at the patient's teeth/lip of the tube depth in centimeters (cm) of the invasive airway placed.</definition>
-													
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Tube Depth added to better document the initial placement of the airway device and subsequent assessments.</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -194,12 +186,10 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The type of individual who confirmed the airway device placement.</definition>
-													
 													<usage>Recommended</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 													</performanceMeasuresGroup>
-													
 													<v3Changes>Added to better document airway management.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -225,7 +215,6 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The crew member id during this EMS patient encounter at this date and time.</definition>
-													
 													<usage>Recommended</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
@@ -255,12 +244,10 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The airway management complications encountered during the patient care episode.</definition>
-													
 													<usage>Recommended</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 													</performanceMeasuresGroup>
-													
 													<v3Changes>Added to better document airway management.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -287,12 +274,10 @@
 													<national>No</national>
 													<state>Yes</state>
 													<definition>The reason(s) the airway was unable to be successfully managed.</definition>
-													
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Airway</performanceMeasure>
 													</performanceMeasuresGroup>
-													
 													<v3Changes>Added to better document airway management.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -319,7 +304,6 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The date and time the decision was made to manage the patient's airway with an invasive airway device.</definition>
-										
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -363,7 +347,6 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The date and time that the invasive airway attempts were abandoned for the patient.</definition>
-										
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -458,7 +441,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4008003">
 				<xs:annotation>
-					<xs:documentation>Bradycardia (&lt;50)</xs:documentation>
+					<xs:documentation>Bradycardia (&amp;lt;50)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4008005">
@@ -493,7 +476,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4008017">
 				<xs:annotation>
-					<xs:documentation>Oxygen Desaturation (&lt;90%) </xs:documentation>
+					<xs:documentation>Oxygen Desaturation (&amp;lt;90%) </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4008019">

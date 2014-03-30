@@ -4,11 +4,14 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The city of the Agency contact's mailing address.</definition>
+<definition>The city of the EMS contact's mailing address.</definition>
 <v2Number>D02_05</v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
-<v3Comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.<br/><br/>Based on GNIS Civil Code or Populated Place code.<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Comment>The city should be the mailing address for each contact type for the EMS agency. The EMS agency primary address information (e.g. City) should be entered for the Agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”.   
+<br/><br/>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options.   
+<br/><br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website.   
+<br/><br/>GNIS Codes Website: http://geonames.usgs.gov/domestic/download_data.htm</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>

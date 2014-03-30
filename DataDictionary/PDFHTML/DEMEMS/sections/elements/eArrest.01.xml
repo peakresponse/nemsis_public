@@ -4,11 +4,12 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>Indication of the presence of a cardiac arrest at any time.</definition>
+<definition>Indication of the presence of a cardiac arrest at any time during this EMS event.</definition>
 <v2Number>E11_01</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria.</v3Comment>
+<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria. 
+							<br/><br/>If this EMS event is for an interfacility transfer of a patient with a recent history of a cardiac arrest with ROSC, and who does not experience another cardiac arrest during transport, then do not document Cardiac Arrest (eArrest.01) with "Yes, Prior to EMS Arrival".</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>

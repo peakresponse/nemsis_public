@@ -52,7 +52,6 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -88,7 +87,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is the NEMSIS Version 3 method to document prior aid.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -129,7 +127,6 @@
 										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -170,8 +167,6 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -206,8 +201,6 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -239,8 +232,6 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -268,9 +259,6 @@
 										<definition>The patient's response to the procedure</definition>
 										<v2Number>E19_08</v2Number>
 										<usage>Required</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -296,7 +284,6 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The type (level) of EMS or Healthcare Professional performing the procedure. For procedures performed prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
-										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -309,7 +296,7 @@
 										<comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.
 										&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 										</comment>
-										<v3Changes>Added to document the type of healthcare professional administering the medication.</v3Changes>
+										<v3Changes>Added to document the type of healthcare professional performing the procedure.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -463,6 +450,11 @@
 					<xs:documentation>Vomiting</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3907047">
+				<xs:annotation>
+					<xs:documentation>Bradycardia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SizeOfProcedureEquipment">
@@ -566,7 +558,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3913035">
 				<xs:annotation>
-					<xs:documentation>IO-Femoral-Right Distal IO</xs:documentation>
+					<xs:documentation>IO-Femoral-Right Distal</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3913037">
@@ -652,6 +644,26 @@
 			<xs:enumeration value="3913069">
 				<xs:annotation>
 					<xs:documentation>Venous Cutdown-Right Lower Extremity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913071">
+				<xs:annotation>
+					<xs:documentation>Upper Arm-Left</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913073">
+				<xs:annotation>
+					<xs:documentation>Upper Arm-Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913075">
+				<xs:annotation>
+					<xs:documentation>Radial-Left</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913077">
+				<xs:annotation>
+					<xs:documentation>Radial-Right</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

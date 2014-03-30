@@ -18,14 +18,11 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The state associated with the state certification/licensure levels.</definition>
-										
 										<usage>Mandatory</usage>
-										
 										<comment>Associated with the state (dAgency.01 - EMS Agency State). 
 										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -35,17 +32,15 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dConfiguration.02</number>
-										<name>State Certification Licensure Levels</name>
+										<name>State Certification/Licensure Levels</name>
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>All of the potential levels of certification/licensure for EMS personnel recognized by the state.</definition>
 										<v2Number>D04_01</v2Number>
 										<usage>Mandatory</usage>
-										
 										<comment>The new 2009 Education Levels have been added. The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -66,7 +61,6 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>A list of all of the procedures permitted by the EMS Agency's licensing state.</definition>
-										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -85,7 +79,6 @@
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -111,7 +104,6 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level.</definition>
-										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -163,7 +155,6 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>A list of all of the protocols permitted by the state.</definition>
-										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -225,7 +216,6 @@
 													<comment>Using each certification level within the agency, indicate the approved procedures allowed utilizing dConfiguration.07 (EMS Agency Procedures).
 													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.													
 													</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -255,15 +245,17 @@
 														<performanceMeasure>Stroke</performanceMeasure>
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. Each procedure is associated with the EMS professional certification levels permitted to perform the procedure.
-&lt;br/>&lt;br/>EMS Agencies may identify additional SNOMEDCT procedure codes based on medical direction and their own need.  If an agency resides in a state with statewide approved procedures, they should be listed/implemented here.
-&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
-										&lt;br/>&lt;br/>SNOMEDCT
-										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
-										&lt;br/>Product: Product - UMLS Metathesaurus
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.															
+													<comment>
+													This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. Each procedure is associated with the EMS professional certification levels permitted to perform the procedure. 
+
+&lt;br/>&lt;br/>EMS Agencies may identify additional SNOMEDCT procedure codes based on medical direction and their own need. If an agency resides in a state with statewide approved procedures, they should be listed/implemented here. 
+
+&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+
+&lt;br/>&lt;br/>SNOMEDCT 
+&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html 
+&lt;br/>Product: Product - UMLS Metathesaurus 
 													</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -290,7 +282,7 @@
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>dConfiguration.08</number>
-													<name>EMS Certification Level Permitted to Administer Each Medication</name>
+													<name>EMS Certification Levels Permitted to Administer Each Medication</name>
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>All EMS certification levels which are permitted to administer the medications listed in dConfiguration.09 (EMS Agency Medications).</definition>
@@ -308,7 +300,6 @@
 													<comment>Using each certification level within the agency, indicate the approved medications allowed utilizing dConfiguration.09 (EMS Agency Medications).
 													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 													</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -333,17 +324,16 @@
 														<performanceMeasure>Stroke</performanceMeasure>
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02)
-since each EMS Agency Number may have different capabilities.
-&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). Reference the Demographic Dataset Submission Guide for further details.
-&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
-&lt;br/>&lt;br/>RxNorm
-&lt;br/>Website - http://uts.nlm.nih.gov
-&lt;br/>&lt;br/>Product - UMLS Metathesaurus
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
-&lt;br/>Product - RxNorm Full Monthly Release
-</comment>
-													
+													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
+
+&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+
+&lt;br/>&lt;br/>RxNorm 
+&lt;br/>Website - http://uts.nlm.nih.gov 
+
+&lt;br/>&lt;br/>Product - UMLS Metathesaurus 
+&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
+&lt;br/>Product - RxNorm Full Monthly Release </comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -380,9 +370,8 @@ since each EMS Agency Number may have different capabilities.
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
-										&lt;div style="font-size:6px">&amp;nbsp;&lt;/div>State and local entities  can add additional protocols to the list but the additional protocols must map to these uniform codes. 
-										&lt;div style="font-size:6px">&amp;nbsp;&lt;/div>The list is defined by the NASEMSO State Medical Directors.</comment>
-										
+										&lt;br/>&lt;br/>State and local entities  can add additional protocols to the list but the additional protocols must map to these uniform codes. 
+										&lt;br/>&lt;br/>The list is defined by the NASEMSO State Medical Directors.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -403,11 +392,7 @@ since each EMS Agency Number may have different capabilities.
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Special training or services provided by the EMS Agency and available to the EMS service area/community.</definition>
-										
 										<usage>Mandatory</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -430,9 +415,7 @@ since each EMS Agency Number may have different capabilities.
 										<definition>Indication of whether the EMS agency routinely bills for any segment of the patient population.</definition>
 										<v2Number>D04_10</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Billing status is associated with each EMS Agency for the specific EMS Agency Number (dAgency.02).</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -446,7 +429,6 @@ since each EMS Agency Number may have different capabilities.
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>Indication as to whether Emergency Medical Dispatch is provided to the EMS Agency's service area.</definition>
-										
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -458,7 +440,6 @@ since each EMS Agency Number may have different capabilities.
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Added to better document the implementation of Emergency Medical Dispatch. Associated with each EMS Agency and the specific EMS Agency Number (dAgency.02).</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -479,9 +460,6 @@ since each EMS Agency Number may have different capabilities.
 										<definition>The vendor or company associated with the EMD Card set and algorithms.</definition>
 										<v2Number>D04_17</v2Number>
 										<usage>Recommended</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -507,7 +485,6 @@ since each EMS Agency Number may have different capabilities.
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
-										
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -519,7 +496,6 @@ since each EMS Agency Number may have different capabilities.
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Added to identify the patient monitoring capability of the EMS Agency. Associated with each EMS Agency Number (dAgency.02) since each EMS Agency Number may have a different capability within each EMS Agency. Other patient monitoring capability may exist but NEMSIS Version 3 only includes these specific capabilities.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -543,8 +519,6 @@ since each EMS Agency Number may have different capabilities.
 										<v2Number>D04_02</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasures/>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -564,8 +538,7 @@ since each EMS Agency Number may have different capabilities.
 										<name>Dispatch Center (CAD) Name or ID</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable.</definition>
-										
+										<definition>The name or ID of the dispatch center (Primary or Secondary Service Answering Point - PSAP) that dispatches the EMS agency.</definition>
 										<usage>Optional</usage>
 										<performanceMeasures/>
 										<comment>This element can be used to identify the dispatch center (Primary or Secondary Service Answering Point - PSAP) that dispatches the EMS agency.  If the EMS agency is able to populate the Patient Care Report (PCR) with CAD specific details (times, incident address information, crew information, EMD, etc) the name or ID of the dispatch center should be documented. Information in dConfiguration.17 may be used to populate eDispatch.04 - Computer Aided Dispatch (CAD) Name or ID if a CAD integration exists.</comment>

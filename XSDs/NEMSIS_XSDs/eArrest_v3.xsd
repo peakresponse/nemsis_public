@@ -11,14 +11,15 @@
 							<name>Cardiac Arrest</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of the presence of a cardiac arrest at any time.</definition>
+							<definition>Indication of the presence of a cardiac arrest at any time during this EMS event.</definition>
 							<v2Number>E11_01</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>This element is a component of the Utstein Cardiac Arrest Criteria.</comment>
-							
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria. 
+							&lt;br/>&lt;br/>If this EMS event is for an interfacility transfer of a patient with a recent history of a cardiac arrest with ROSC, and who does not experience another cardiac arrest during transport, then do not document Cardiac Arrest (eArrest.01) with "Yes, Prior to EMS Arrival".
+</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -34,7 +35,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.02" id="eArrest.CardiacArrestEtiology" nillable="true">
+			<xs:element name="eArrest.02" nillable="true" id="eArrest.CardiacArrestEtiology">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -49,7 +50,6 @@
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This element is a component of the Utstein Cardiac Arrest Criteria.&lt;br/>&lt;br/>Following the UTSTEIN standard of cardiac arrest etiology the values were determined based on the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports".   http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -80,7 +80,6 @@
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -112,7 +111,6 @@
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -138,13 +136,11 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Documentation of the CPR provided prior to EMS arrival</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -169,7 +165,6 @@
 							<national>No</national>
 							<state>Yes</state>
 							<definition>Documentation of who performed CPR prior to this EMS unit's arrival.</definition>
-							
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -177,7 +172,6 @@
 							<comment>Associated with eArrest.05 (CPR Care Provided Prior to EMS Arrival) but only required if CPR was provided prior to EMS arrival.&lt;br/>&lt;br/>
 This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385							
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -198,13 +192,11 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Documentation of AED use Prior to EMS Arrival</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -229,14 +221,12 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<national>No</national>
 							<state>Yes</state>
 							<definition>Documentation of who used the AED prior to this EMS unit's arrival.</definition>
-							
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Associated with eArrest.07 (AED Use Prior to EMS Arrival).
 							&lt;br/>&lt;br/>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -257,13 +247,11 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Documentation of the type/technique of CPR used by EMS.</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Added to capture special CPR techniques.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -289,13 +277,10 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Documentation of EMS initiation of Therapeutic Hypothermia.</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -328,7 +313,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<comment>Added term "Arrest" to title to clarify this is the arrest rhythm&lt;br/>Values "Other" and "Normal Sinus Rhythm" removed since they are not Cardiac Arrest Rhythms.&lt;br/>Value "Ventricular Tachycardia" has been changed to "Ventricular Tachycardia-Pulseless".
 							&lt;br/>&lt;br/>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385							
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -359,10 +343,10 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>
-							This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385							
-&lt;br/>&lt;br/>This element needs to be documented when the patient has been in cardiac or respiratory arrest and transported to a healthcare facility to show the change in patient condition, if any. The cardiac rhythm list has been updated to be the same for eVitals.03 (Cardiac Rhythm Electrocardiography (ECG)). They are using the common type: CardiacRhythm. ST segment changes consistent (or not consistent) with STEMI criteria should be documented as Ischemia in the appropriate location							
+								This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385 
+								&lt;br/>&lt;br/>This element needs to be documented when the patient has been in cardiac arrest and transported to a healthcare facility to show the change in patient condition, if any. 
+								&lt;br/>&lt;br/>Any ROSC is defined as any brief (approximately >30 seconds) restoration of spontaneous circulation that provides evidence of more than an occasional gasp, occasional fleeting palpable pulse, or arterial waveform. 
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -404,7 +388,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							&lt;br/>&lt;br/>
 							This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385								
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -452,7 +435,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table>
 							  </comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -507,7 +489,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -538,7 +519,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Added Resuscitation to Title to allow better documentation of disposition.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -570,7 +550,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							</performanceMeasuresGroup>
 							<comment>This element needs to be documented when the patient has been in cardiac or respiratory arrest and transported to a healthcare facility to show the change in patient condition, if any. The cardiac rhythm list has been updated to be the same for eVitals.03 (Cardiac Rhythm Electrocardiography (ECG)). They are using the common type: CardiacRhythm. ST segment changes consistent (or not consistent) with STEMI criteria should be documented as Ischemia in the appropriate location						
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -596,12 +575,11 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>The patient's outcome at the end of the EMS event.</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>A resuscitation event is deemed to have ended when death is declared or spontaneous circulation is restored and sustained for 20 minutes or longer.&lt;br/>&lt;br/>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
 							<v3Changes>Added to better identify the outcome of EMS cardiac arrest patients.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -758,6 +736,21 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 					<xs:documentation>Ongoing Resuscitation in ED</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3018007">
+				<xs:annotation>
+					<xs:documentation>ROSC in the Field</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3018009">
+				<xs:annotation>
+					<xs:documentation>ROSC in the ED </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3018011">
+				<xs:annotation>
+					<xs:documentation>Ongoing Resuscitation by Other EMS </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CPRType">
@@ -829,7 +822,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 			</xs:enumeration>
 			<xs:enumeration value="3011003">
 				<xs:annotation>
-					<xs:documentation>Bradycardia</xs:documentation>
+					<xs:documentation>Bradycardia &lt;span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/span></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3011005">

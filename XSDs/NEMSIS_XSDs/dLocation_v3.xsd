@@ -122,10 +122,13 @@
 										<name>EMS Location City</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The city of the EMS Location.</definition>
+										<definition>The city of the EMS location type (e.g. fixed station, sub-station, staging area, etc). </definition>
 										<v2Number>D05_06</v2Number>
 										<usage>Optional</usage>
-										<comment>Based on GNIS Civil Code or Populated Place code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>
+City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
+ 	&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
+ 	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

@@ -357,47 +357,47 @@
   <xsl:function name="n:mapCustomConfiguration">
     <xsl:param name="prefix"/>
 
-    <!-- Create a custom element definition for each custom element that applies to the dataset (d or e). -->
-    <xsl:for-each select="$elementMappingCustomConfigurationVariable/match[starts-with(customElementId, upper-case($prefix))]">
-      <xsl:element name="{concat($prefix, 'CustomConfiguration.CustomGroup')}">
-        <xsl:attribute name="CustomElementID">
-          <xsl:value-of select="customElementId"/>
-        </xsl:attribute>
-        <xsl:element name="{concat($prefix, 'CustomConfiguration.01')}">
-          <xsl:attribute name="nemsisElement">
-            <xsl:value-of select="nemsisElement"/>
+      <!-- Create a custom element definition for each custom element that applies to the dataset (d or e). -->
+      <xsl:for-each select="$elementMappingCustomConfigurationVariable/match[starts-with(customElementId, upper-case($prefix))]">
+        <xsl:element name="{concat($prefix, 'CustomConfiguration.CustomGroup')}">
+          <xsl:attribute name="CustomElementID">
+            <xsl:value-of select="customElementId"/>
           </xsl:attribute>
-          <xsl:value-of select="customTitle"/>
-        </xsl:element>
-        <xsl:element name="{concat($prefix, 'CustomConfiguration.02')}">
-          <xsl:value-of select="customDefinition"/>
-        </xsl:element>
-        <xsl:element name="{concat($prefix, 'CustomConfiguration.03')}">
-          <xsl:value-of select="customDataType"/>
-        </xsl:element>
-        <xsl:element name="{concat($prefix, 'CustomConfiguration.04')}">
-          <xsl:value-of select="customDataElementRecurrence"/>
-        </xsl:element>
-        <xsl:element name="{concat($prefix, 'CustomConfiguration.05')}">
-          <xsl:value-of select="elementUsage"/>
-        </xsl:element>
-        <xsl:for-each select="key('customConfigurationKey', normalize-space(customElementId), $customConfigurationVariable)">
-          <xsl:element name="{concat($prefix, 'CustomConfiguration.06')}">
-            <!-- @nemsisCode: No mapping. -->
-            <xsl:attribute name="customValueDescription">
-              <xsl:value-of select="customValueDescription"/>
+          <xsl:element name="{concat($prefix, 'CustomConfiguration.01')}">
+            <xsl:attribute name="nemsisElement">
+              <xsl:value-of select="nemsisElement"/>
             </xsl:attribute>
-            <xsl:value-of select="customValue"/>
+            <xsl:value-of select="customTitle"/>
           </xsl:element>
-        </xsl:for-each>
-        <xsl:if test="customAcceptableNV='NV'">
-          <xsl:element name="{concat($prefix, 'CustomConfiguration.07')}">7701001</xsl:element>
-          <xsl:element name="{concat($prefix, 'CustomConfiguration.07')}">7701003</xsl:element>
-          <xsl:element name="{concat($prefix, 'CustomConfiguration.07')}">7701005</xsl:element>
-        </xsl:if>
-      </xsl:element>
-      <!-- (d|e)CustomConfiguration.08: No mapping. -->
-    </xsl:for-each>
+          <xsl:element name="{concat($prefix, 'CustomConfiguration.02')}">
+            <xsl:value-of select="customDefinition"/>
+          </xsl:element>
+          <xsl:element name="{concat($prefix, 'CustomConfiguration.03')}">
+            <xsl:value-of select="customDataType"/>
+          </xsl:element>
+          <xsl:element name="{concat($prefix, 'CustomConfiguration.04')}">
+            <xsl:value-of select="customDataElementRecurrence"/>
+          </xsl:element>
+          <xsl:element name="{concat($prefix, 'CustomConfiguration.05')}">
+            <xsl:value-of select="elementUsage"/>
+          </xsl:element>
+          <xsl:for-each select="key('customConfigurationKey', normalize-space(customElementId), $customConfigurationVariable)">
+            <xsl:element name="{concat($prefix, 'CustomConfiguration.06')}">
+              <!-- @nemsisCode: No mapping. -->
+              <xsl:attribute name="customValueDescription">
+                <xsl:value-of select="customValueDescription"/>
+              </xsl:attribute>
+              <xsl:value-of select="customValue"/>
+            </xsl:element>
+          </xsl:for-each>
+          <xsl:if test="customAcceptableNV='NV'">
+            <xsl:element name="{concat($prefix, 'CustomConfiguration.07')}">7701001</xsl:element>
+            <xsl:element name="{concat($prefix, 'CustomConfiguration.07')}">7701003</xsl:element>
+            <xsl:element name="{concat($prefix, 'CustomConfiguration.07')}">7701005</xsl:element>
+          </xsl:if>
+        </xsl:element>
+        <!-- (d|e)CustomConfiguration.08: No mapping. -->
+      </xsl:for-each>
 
   </xsl:function>
 

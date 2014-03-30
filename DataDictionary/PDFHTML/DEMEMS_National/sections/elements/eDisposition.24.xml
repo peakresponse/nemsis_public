@@ -1,10 +1,10 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eDisposition.24"  minOccurs="1"  maxOccurs="1"  dataTypeName="DestinationPrearrivalActivation"  isNillable="Yes">
-<name>Destination Team Pre-Arrival Activation</name>
+<name>Destination Team Pre-Arrival Alert or Activation</name>
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>Activation by EMS of the appropriate destination healthcare facility team. The activation should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
+<definition>Indication that an alert (or activation) was called by EMS to the appropriate destination healthcare facility team. The alert (or activation) should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -21,6 +21,7 @@
     <facet name="enumeration" value="4224011" annotation="Yes-Pediatric Trauma"/>
     <facet name="enumeration" value="4224013" annotation="Yes-STEMI"/>
     <facet name="enumeration" value="4224015" annotation="Yes-Stroke"/>
+    <facet name="enumeration" value="4224017" annotation="Yes-Trauma (General)"/>
   </DestinationPrearrivalActivation>
 </restrictions>
 <attributes>

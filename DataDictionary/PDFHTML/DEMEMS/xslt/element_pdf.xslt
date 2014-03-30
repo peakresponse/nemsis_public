@@ -689,7 +689,7 @@
                       <xsl:value-of select="@value"/>
                     </td>
                     <td class="sectionRestrictionsEnumerationDescriptionValue">
-                      <xsl:value-of select="@annotation"/>
+                      <xsl:value-of select="@annotation"  disable-output-escaping="yes"/>
                     </td>
                   </tr>
                 </xsl:for-each> 

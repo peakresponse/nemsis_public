@@ -23,9 +23,7 @@
 										<definition>Indication of an EMS work related exposure, injury, or death associated with this EMS event.</definition>
 										<v2Number>E23_05</v2Number>
 										<usage>Required</usage>
-										
 										<comment>Associated with eOther.04 (EMS Professional (Crew Member) ID)</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -403,7 +401,7 @@
 		<xs:annotation>
 			<xs:documentation>The signature reason</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">			
+		<xs:restriction base="xs:string">
 			<xs:enumeration value="4513001">
 				<xs:annotation>
 					<xs:documentation>HIPAA acknowledgement/Release </xs:documentation>
@@ -424,6 +422,46 @@
 					<xs:documentation>Transfer of Patient Care </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4513009">
+				<xs:annotation>
+					<xs:documentation>Refusal of Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513011">
+				<xs:annotation>
+					<xs:documentation>Controlled Substance, Administration</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513013">
+				<xs:annotation>
+					<xs:documentation>Controlled Substance, Waste</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513015">
+				<xs:annotation>
+					<xs:documentation>Airway Verification</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513017">
+				<xs:annotation>
+					<xs:documentation>Patient Belongings (Receipt)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513019">
+				<xs:annotation>
+					<xs:documentation>Permission to Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513021">
+				<xs:annotation>
+					<xs:documentation>Refusal of Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513023">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SignatureGraphic">
@@ -434,7 +472,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="SignatureStatus">
 		<xs:annotation>
-			<xs:documentation>Indication that that a signature has been collected or attempted to be collected.</xs:documentation>
+			<xs:documentation>Indication that a signature has been collected or attempted to be collected.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4515001">

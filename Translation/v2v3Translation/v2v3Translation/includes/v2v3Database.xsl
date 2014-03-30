@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-
 <!-- 
 XSLT to transform output from database that will be loaded or imported by main XSL transformation.
-jsl: Dont know whether I need to declare xmlns. Test both ways.
-jsl: MS XSLT is omiting encoding="UTF-8" from xml processing directive. Not critical but would be nice to fix.
 -->
 <xsl:transform xmlns="http://www.nemsis.org"
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -175,9 +172,7 @@ jsl: MS XSLT is omiting encoding="UTF-8" from xml processing directive. Not crit
                   <xsl:sort select="v2TypeName"/>
                   <xsl:sort select="v3TypeName"/>
                   <xsl:element name="xsl:when">
-                    <xsl:attribute name="test">
-                      normalize-space($elementMapping/v2TypeName)='<xsl:value-of select="normalize-space(v2TypeName)"/>' and normalize-space($elementMapping/v3TypeName)='<xsl:value-of select="normalize-space(v3TypeName)"/>'
-                    </xsl:attribute>
+                    <xsl:attribute name="test">normalize-space($elementMapping/v2TypeName)='<xsl:value-of select="normalize-space(v2TypeName)"/>' and normalize-space($elementMapping/v3TypeName)='<xsl:value-of select="normalize-space(v3TypeName)"/>'</xsl:attribute>
                     <xsl:element name="xsl:choose">
                       <!-- Process each row from the database within the group. -->
                       <xsl:for-each select="key('typePair', concat(v2TypeName, '&#8203;', v3TypeName))">
@@ -194,8 +189,7 @@ jsl: MS XSLT is omiting encoding="UTF-8" from xml processing directive. Not crit
                                   <xsl:value-of select="v3Replacement"/>
                                 </xsl:attribute>
                               </xsl:element>
-                            </xsl:element>
-                            <!--/xsl:when-->
+                            </xsl:element><!--/xsl:when-->
                           </xsl:when>
                           <xsl:otherwise>
                             <xsl:element name="xsl:otherwise">
@@ -212,30 +206,21 @@ jsl: MS XSLT is omiting encoding="UTF-8" from xml processing directive. Not crit
                           </xsl:otherwise>
                         </xsl:choose>
                       </xsl:for-each>
-                    </xsl:element>
-                    <!--/xsl:choose-->
-                  </xsl:element>
-                  <!--/xsl:when-->
+                    </xsl:element><!--/xsl:choose-->
+                  </xsl:element><!--/xsl:when-->
                 </xsl:for-each>
-              </xsl:element>
-              <!--/xsl:choose-->
-            </xsl:element>
-            <!--/xsl:element-->
-          </xsl:element>
-          <!--/xsl:for-each-->
-        </xsl:element>
-        <!--/xsl:variable-->
+              </xsl:element><!--/xsl:choose-->
+            </xsl:element><!--/xsl:element-->
+          </xsl:element><!--/xsl:for-each-->
+        </xsl:element><!--/xsl:variable-->
         <xsl:element name="xsl:if">
           <xsl:attribute name="test">$result/v3Replacement!=''</xsl:attribute>
           <xsl:element name="xsl:sequence">
             <xsl:attribute name="select">$result</xsl:attribute>
           </xsl:element>
-        </xsl:element>
-        <!--/xsl:if-->
-      </xsl:element>
-      <!--/xsl:function-->
-    </xsl:element>
-    <!--/xsl:transform-->
+        </xsl:element><!--/xsl:if-->
+      </xsl:element><!--/xsl:function-->
+    </xsl:element><!--/xsl:transform-->
   </xsl:template>
 
 </xsl:transform>

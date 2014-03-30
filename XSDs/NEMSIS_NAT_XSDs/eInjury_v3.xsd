@@ -22,7 +22,6 @@
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -49,7 +48,6 @@
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma.</definition>
-							
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
@@ -80,13 +78,13 @@
 							<name>Vehicular, Pedestrian, or Other Injury Risk Factor</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The kind of risk factor predictors present at the incident</definition>
+							<definition>Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma.</definition>
 							<v2Number>E10_04</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Added additional mechanism or risk indicators based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3.</comment>
+							<comment>Assesses mechanism of injury and evidence of high-energy impact (Step 3) AND Assess special patient or system considerations (Step 4) based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3 and 4. Website: http://www.cdc.gov/FieldTriage/.</comment>
 							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
 							&lt;br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
 							<PNNil>Yes</PNNil>
@@ -655,7 +653,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2903007">
 				<xs:annotation>
-					<xs:documentation>Glasgow Coma Score &lt; 14</xs:documentation>
+					<xs:documentation>Glasgow Coma Score &amp;lt; 14</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903009">
@@ -680,12 +678,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="2903017">
 				<xs:annotation>
-					<xs:documentation>Respiratory Rate  &lt;10 or >29 breaths per minute (&lt;20 in infants aged &lt;1 year) or need for ventilatory support</xs:documentation>
+					<xs:documentation>Respiratory Rate  &amp;lt;10 or >29 breaths per minute (&amp;lt;20 in infants aged &amp;lt;1 year) or need for ventilatory support</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903019">
 				<xs:annotation>
-					<xs:documentation>Systolic Blood Pressure &lt;90 mmHg</xs:documentation>
+					<xs:documentation>Systolic Blood Pressure &amp;lt;90 mmHg</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903021">
@@ -812,6 +810,26 @@
 			<xs:enumeration value="2904015">
 				<xs:annotation>
 					<xs:documentation>Motorcycle Crash > 20 MPH</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904017">
+				<xs:annotation>
+					<xs:documentation>SBP &amp;lt; 110 for age > 65</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904019">
+				<xs:annotation>
+					<xs:documentation>Anticoagulants and Bleeding Disorders</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904021">
+				<xs:annotation>
+					<xs:documentation>Pregnancy > 20 weeks</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904023">
+				<xs:annotation>
+					<xs:documentation>EMS Provider Judgment</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

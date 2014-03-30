@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:simpleType name="ANSICountryCodesCAMXUS">
 		<xs:annotation>
-			<xs:documentation>ANSI Codes for USA, Mexico, and Canda</xs:documentation>
+			<xs:documentation>ANSI Codes for USA, Mexico, and Canada</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="CA">
@@ -295,6 +295,11 @@
 					<xs:documentation>Text/String</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9902011">
+				<xs:annotation>
+					<xs:documentation>Boolean</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CustomDefinition">
@@ -484,7 +489,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9905013">
 				<xs:annotation>
-					<xs:documentation>EMT-Paramedic (Based on pre-2009 Curriculum)</xs:documentation>
+					<xs:documentation>EMT-Paramedic</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9905015">
@@ -494,7 +499,8 @@
 			</xs:enumeration>
 			<xs:enumeration value="9905017">
 				<xs:annotation>
-					<xs:documentation>Nurse</xs:documentation>
+					<xs:documentation>Nurse &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/font>
+					</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9905019">
@@ -537,6 +543,26 @@
 					<xs:documentation>Community Paramedicine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9905035">
+				<xs:annotation>
+					<xs:documentation>Nurse Practitioner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9905037">
+				<xs:annotation>
+					<xs:documentation>Physician Assistant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9905039">
+				<xs:annotation>
+					<xs:documentation>Licensed Practical Nurse (LPN) </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9905041">
+				<xs:annotation>
+					<xs:documentation>Registered Nurse</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EMSUnitCallSign">
@@ -572,7 +598,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="GPSLocation">
 		<xs:annotation>
-			<xs:documentation>Attribute group used to define the GPS Location of the data element.</xs:documentation>
+			<xs:documentation/>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:pattern value="(\+|-)?(90(\.[0]{1,6})?|([1-8][0-9]|[0-9])(\.[0-9]{1,6})?),(\+|-)?(180(\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\.[0-9]{1,6})?)"/>
@@ -630,12 +656,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="9908013">
 				<xs:annotation>
-					<xs:documentation>STEMI</xs:documentation>
+					<xs:documentation>STEMI &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/font></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908015">
 				<xs:annotation>
-					<xs:documentation>STEMI Center (24/7)</xs:documentation>
+					<xs:documentation>STEMI Center (24/7) &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/font></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9908017">
@@ -671,6 +697,21 @@
 			<xs:enumeration value="9908029">
 				<xs:annotation>
 					<xs:documentation>Trauma Center Level 5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9908031">
+				<xs:annotation>
+					<xs:documentation>Cardiac-STEMI/PCI Capable</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9908033">
+				<xs:annotation>
+					<xs:documentation>Cardiac-STEMI/PCI Capable (24/7)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9908035">
+				<xs:annotation>
+					<xs:documentation>Cardiac-STEMI/Non-PCI Capable</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -779,7 +820,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9910005">
 				<xs:annotation>
-					<xs:documentation>DPT (Diphtheria, Tetanus, Pertussis)</xs:documentation>
+					<xs:documentation>DPT (Diphtheria, Pertussis, Tetanus) </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9910007">
@@ -864,7 +905,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9910039">
 				<xs:annotation>
-					<xs:documentation>Shingle</xs:documentation>
+					<xs:documentation>Shingles</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9910041">
@@ -934,7 +975,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9911005">
 				<xs:annotation>
-					<xs:documentation>2009 Emergency Medical Technician</xs:documentation>
+					<xs:documentation>2009 Emergency Medical Technician (EMT)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9911007">
@@ -964,7 +1005,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9911017">
 				<xs:annotation>
-					<xs:documentation>Nurse</xs:documentation>
+					<xs:documentation>Nurse &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/font></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9911019">
@@ -985,6 +1026,26 @@
 			<xs:enumeration value="9911025">
 				<xs:annotation>
 					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9911027">
+				<xs:annotation>
+					<xs:documentation>Nurse Practitioner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9911029">
+				<xs:annotation>
+					<xs:documentation>Physician Assistant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9911031">
+				<xs:annotation>
+					<xs:documentation>Licensed Practical Nurse (LPN)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9911033">
+				<xs:annotation>
+					<xs:documentation>Registered Nurse</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1475,7 +1536,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9914039">
 				<xs:annotation>
-					<xs:documentation>Exposure-Carbon Monoxide/Smoke Inhalation</xs:documentation>
+					<xs:documentation>Exposure-Carbon Monoxide/Smoke Inhalation &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/font></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9914041">
@@ -1793,6 +1854,91 @@
 					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9914167">
+				<xs:annotation>
+					<xs:documentation>Exposure-Carbon Monoxide</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914169">
+				<xs:annotation>
+					<xs:documentation>Cardiac Arrest-Do Not Resuscitate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914171">
+				<xs:annotation>
+					<xs:documentation>Cardiac Arrest-Special Resuscitation Orders</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914173">
+				<xs:annotation>
+					<xs:documentation>Exposure-Smoke Inhalation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914175">
+				<xs:annotation>
+					<xs:documentation>General-Community Paramedicine / Mobile Integrated Healthcare</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914177">
+				<xs:annotation>
+					<xs:documentation>General-Exception Protocol</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914179">
+				<xs:annotation>
+					<xs:documentation>General-Extended Care Guidelines</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914181">
+				<xs:annotation>
+					<xs:documentation>General-Interfacility Transfers</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914183">
+				<xs:annotation>
+					<xs:documentation>General-Law Enforcement - Blood for Legal Purposes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914185">
+				<xs:annotation>
+					<xs:documentation>General-Law Enforcement - Assist with Law Enforcement Activity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914187">
+				<xs:annotation>
+					<xs:documentation>General-Neglect or Abuse Suspected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914189">
+				<xs:annotation>
+					<xs:documentation>General-Refusal of Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914191">
+				<xs:annotation>
+					<xs:documentation>Injury-Mass/Multiple Casualties</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914193">
+				<xs:annotation>
+					<xs:documentation>Injury-Thoracic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914195">
+				<xs:annotation>
+					<xs:documentation>Medical-Adrenal Insufficiency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914197">
+				<xs:annotation>
+					<xs:documentation>Medical-Apparent Life Threatening Event (ALTE)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9914199">
+				<xs:annotation>
+					<xs:documentation>Medical-Tachycardia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="RecordStatus">
@@ -1900,7 +2046,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9917005">
 				<xs:annotation>
-					<xs:documentation>2009 Emergency Medical Technician</xs:documentation>
+					<xs:documentation>2009 Emergency Medical Technician (EMT)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9917007">
@@ -1930,7 +2076,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9917017">
 				<xs:annotation>
-					<xs:documentation>Nurse</xs:documentation>
+					<xs:documentation>Nurse &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/font></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9917019">
@@ -1946,6 +2092,26 @@
 			<xs:enumeration value="9917023">
 				<xs:annotation>
 					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9917025">
+				<xs:annotation>
+					<xs:documentation>Nurse Practitioner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9917027">
+				<xs:annotation>
+					<xs:documentation>Physician Assistant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9917029">
+				<xs:annotation>
+					<xs:documentation>Licensed Practical Nurse (LPN) </xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9917031">
+				<xs:annotation>
+					<xs:documentation>Registered Nurse</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2234,7 +2400,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="9925021">
 				<xs:annotation>
-					<xs:documentation>Nurse</xs:documentation>
+					<xs:documentation>Nurse &lt;font style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/font></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9925023">
@@ -2270,6 +2436,26 @@
 			<xs:enumeration value="9925035">
 				<xs:annotation>
 					<xs:documentation>Community Paramedicine</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925037">
+				<xs:annotation>
+					<xs:documentation>Nurse Practitioner</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925039">
+				<xs:annotation>
+					<xs:documentation>Physician Assistant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925041">
+				<xs:annotation>
+					<xs:documentation>Licensed Practical Nurse (LPN)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9925043">
+				<xs:annotation>
+					<xs:documentation>Registered Nurse</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

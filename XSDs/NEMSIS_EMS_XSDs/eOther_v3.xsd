@@ -14,9 +14,6 @@
 							<definition>Indication of whether the PCR needs review by anyone.</definition>
 							<v2Number>E23_01</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -40,8 +37,6 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -70,9 +65,6 @@
 										<definition>The personal protective equipment which was used by EMS personnel during this EMS patient contact.</definition>
 										<v2Number>E23_03</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -93,9 +85,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The ID number of the EMS Crew Member associated with eOther.03, eOther.05, eOther.06.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>Added to allow documentation of PPE and work related health and safety down to the individual level within each EMS crew.</comment>
 										<v3Changes>Added to better document EMS workplace health and safety issues.</v3Changes>
 									</nemsisTacDoc>
@@ -113,9 +103,7 @@
 										<definition>Indication of an EMS work related exposure, injury, or death associated with this EMS event.</definition>
 										<v2Number>E23_05</v2Number>
 										<usage>Required</usage>
-										
 										<comment>Associated with eOther.04 (EMS Professional (Crew Member) ID)</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -142,9 +130,7 @@
 										<definition>The type of exposure or unprotected contact with blood or body fluids</definition>
 										<v2Number>E23_06</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>Associated witheOther.04 (EMS Professional (Crew Member) ID).</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -180,17 +166,16 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Based on FEMA website</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="SuspectedIntentionalOrUnintentionalDisaster">
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="SuspectedIntentionalOrUnintentionalDisaster">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="eOther.08" nillable="true" id="eOther.CrewMemberCompletingthisReport" minOccurs="0">
 				<xs:annotation>
@@ -203,9 +188,7 @@
 							<definition>The statewide assigned ID number of the EMS crew member which completed this patient care report</definition>
 							<v2Number>E23_10</v2Number>
 							<usage>Recommended</usage>
-							
 							<comment>If the EMS Professional has a specific ID associated with two states, the ID used would typically be based on the EMS Agencies state license.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -236,9 +219,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>Document types which have been electronically stored with PCR.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>Added to allow an improved implementation of electronic healthcare records.</comment>
 										<v3Changes>Added to allow an improved implementation of electronic healthcare records.</v3Changes>
 									</nemsisTacDoc>
@@ -259,9 +240,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The description of the file attachment stored in File Attachment Image (eOther.11).</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>The description is defined as the extension of the file type.  
 																	Examples of file name extensions include "doc", "jpeg", "tiff", etc.  For a list of additional extensions reference the following website(s):
 &lt;br/>
@@ -298,9 +277,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The file that is attached electronically to the patient care report.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>Associated with eOther.09 (External Electronic Documents) and eOther.10 (File Attachment Type).</comment>
 										<v3Changes>Added to allow an improved implementation of electronic healthcare records.</v3Changes>
 									</nemsisTacDoc>
@@ -331,10 +308,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The individual's signature associated with eOther.15 (Signature Status).</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to better document disposition and billing information.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -349,11 +323,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The reason for the individuals signature.</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -367,9 +337,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>If Patient Representative is chosen as the owner of the signature, this documents the relationship of the individual signing to the patient.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>Required for Billing.</comment>
 										<v3Changes>Added to improve documentation on disposition and billing.</v3Changes>
 									</nemsisTacDoc>
@@ -385,10 +353,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>Indication that a patient or patient representative signature has been collected or attempted to be collected.</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to better document disposition and billing.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -403,9 +368,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The name of the graphic file for the signature.</definition>
-										
 										<usage>Optional</usage>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -419,7 +382,6 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The description of the file attachment stored in Signature Graphic (eOther.18).</definition>
-										
 										<usage>Optional</usage>
 										<comment>The description is defined as the extension of the file type.  
 																	Examples of file name extensions include "doc", "jpeg", "tiff", etc.  For a list of additional extensions reference the following website(s):
@@ -456,10 +418,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The graphic file for the signature.</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to better document disposition and billing.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -474,9 +433,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The date and time the signature was captured.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -516,10 +473,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The last name of the individual who signed the associated signature.</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to better document disposition and billing.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -534,10 +488,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The first name of the individual associated with the signature.</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to better document disposition and billing.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -900,7 +851,7 @@
 		<xs:annotation>
 			<xs:documentation>The signature reason</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">			
+		<xs:restriction base="xs:string">
 			<xs:enumeration value="4513001">
 				<xs:annotation>
 					<xs:documentation>HIPAA acknowledgement/Release </xs:documentation>
@@ -921,6 +872,46 @@
 					<xs:documentation>Transfer of Patient Care </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4513009">
+				<xs:annotation>
+					<xs:documentation>Refusal of Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513011">
+				<xs:annotation>
+					<xs:documentation>Controlled Substance, Administration</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513013">
+				<xs:annotation>
+					<xs:documentation>Controlled Substance, Waste</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513015">
+				<xs:annotation>
+					<xs:documentation>Airway Verification</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513017">
+				<xs:annotation>
+					<xs:documentation>Patient Belongings (Receipt)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513019">
+				<xs:annotation>
+					<xs:documentation>Permission to Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513021">
+				<xs:annotation>
+					<xs:documentation>Refusal of Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4513023">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SignatureGraphic">
@@ -931,7 +922,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="SignatureStatus">
 		<xs:annotation>
-			<xs:documentation>Indication that that a signature has been collected or attempted to be collected.</xs:documentation>
+			<xs:documentation>Indication that a signature has been collected or attempted to be collected.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4515001">

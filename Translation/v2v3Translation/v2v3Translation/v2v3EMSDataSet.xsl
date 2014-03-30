@@ -3,11 +3,11 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v2 EMSDataSet to NEMSIS v3 EMSDataSet
 
-Version: 1.0
-Revision Date: October 24, 2013
+Version: 1.1
+Revision Date: March 10, 2014
 
 This product is provided by the NEMIS TAC, without charge, to facilitate a data mapping between
-NEMSIS v2.2.1 and NEMSIS v3.3.3. The primary target audiences are state employees maintaining EMS
+NEMSIS v2.2.1 and NEMSIS v3.3.4. The primary target audiences are state employees maintaining EMS
 databases and software developers interested in enhancing the value of legacy data systems. In
 most instances, mapping between the two standards is straightforward. For those instances in which
 mappings are not direct, the NEMSIS TAC relied on our history and experience to confirm an
@@ -45,7 +45,7 @@ Requires version 2.0 of XSLT.
     <xsl:comment>&#32;This NEMSIS 3 file was generated from a NEMSIS 2 file via an XML Stylesheet Language Transformation (XSLT).&#32;</xsl:comment>
     <xsl:text>&#10;</xsl:text>
 
-    <EMSDataSet xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/XSD_v3/_nemsis_v3.3.3/3.3.3.130926/XSDs/NEMSIS_XSDs_v3.3.3.130926/EMSDataSet_v3.xsd"  xmlns="http://www.nemsis.org">
+    <EMSDataSet xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/XSD_v3/_nemsis_v3.3.4/3.3.4.140305/XSDs/NEMSIS_XSDs_v3.3.4.140305/EMSDataSet_v3.xsd"  xmlns="http://www.nemsis.org">
 
       <!-- eState: No mapping. -->
       
@@ -157,8 +157,7 @@ Requires version 2.0 of XSLT.
             <xsl:copy-of select="n:map('eResponse.21', 'E02_18', E02/E02_18)"/>
             <xsl:copy-of select="n:map('eResponse.22', 'E02_19', E02/E02_19)"/>
             <xsl:copy-of select="n:map('eResponse.23', 'E02_20', E02/E02_20)"/>
-            <!-- eResponse.24: No mapping. -->
-            <eResponse.24 xsi:nil="true" NV="7701003"/>
+            <xsl:copy-of select="n:map('eResponse.24', 'E02_20', E02/E02_20)"/>
           </eResponse>
               
           <eDispatch>
@@ -1028,8 +1027,7 @@ Requires version 2.0 of XSLT.
             <!-- eDisposition.16: No mapping. -->
             <eDisposition.16 xsi:nil="true" NV="7701003"/>
             <xsl:copy-of select="n:map('eDisposition.17', 'E20_14', E20/E20_14)"/>
-            <!-- eDisposition.18: No mapping. -->
-            <eDisposition.18 xsi:nil="true" NV="7701003"/>
+            <xsl:copy-of select="n:map('eDisposition.18', 'E20_14', E20/E20_14)"/>
             <xsl:copy-of select="n:map('eDisposition.19', 'E20_15', E20/E20_15)"/>
             <xsl:copy-of select="n:map('eDisposition.20', 'E20_16', E20/E20_16)"/>
             <xsl:copy-of select="n:map('eDisposition.21', 'E20_17', E20/E20_17)"/>

@@ -203,6 +203,12 @@
 	</match>
 	<match>
 		<v2TypeName>DemographicProcedure</v2TypeName>
+		<v3TypeName>CustomResults</v3TypeName>
+		<v2Pattern>99.615</v2Pattern>
+		<v3Replacement>99.615</v3Replacement>
+	</match>
+	<match>
+		<v2TypeName>DemographicProcedure</v2TypeName>
 		<v3TypeName>PatientMonitoringCapability</v3TypeName>
 		<v3Replacement>1215015</v3Replacement>
 	</match>
@@ -798,11 +804,6 @@
 		<v3TypeName>snomed</v3TypeName>
 		<v2Pattern>99.612</v2Pattern>
 		<v3Replacement>37113006</v3Replacement>
-	</match>
-	<match>
-		<v2TypeName>DemographicProcedure</v2TypeName>
-		<v3TypeName>snomed</v3TypeName>
-		<v2Pattern>99.615</v2Pattern>
 	</match>
 	<match>
 		<v2TypeName>DemographicProcedure</v2TypeName>

@@ -33,7 +33,7 @@
       .sectionV3ChangesTitle  {font-size:14px;background:#F0F0F0;color:#004080;padding:2px 0 2px 2px;border:1px solid #004080;}
       .sectionV3ChangesValue  {font-size:12px;}
 
-      .sectionDeprecatedCommentTitle  {font-size:14px;background:#F0F0F0;color:#004080;}
+      .sectionDeprecatedCommentTitle  {font-size:14px;background:#F0F0F0;color:#004080;padding:2px 0 2px 2px;border:1px solid #004080;}
       .sectionDeprecatedCommentValue  {font-size:12px;}
             
       .sectionRestrictionsEnumerationCodeTitle        {width:60px;  font-size:12px;font-weight:bold;}
@@ -80,9 +80,14 @@
             </td>
           </tr>
         </table>
-    </td></tr>     
+    </td></tr>  
+    <xsl:choose><xsl:when test="element/deprecated/text()='Yes'">   
+            <tr><td><table><tr width="80px"><td class="deprecated" height="23px" width="40px">Deprecated</td></tr></table></td></tr>
+    </xsl:when></xsl:choose>  
+    
     <xsl:choose><xsl:when test="element/state/text()='Yes' or element/national/text()='Yes'">
-    <tr><td style="padding:6px 2px 5px 0;">  
+    <tr>
+      <td style="padding:6px 2px 5px 0;">  
         <table border="0" cellspacing="0" cellpadding="0" align="right" >
           <tr>  
             <xsl:choose><xsl:when test="element/state/text()='Yes'">
@@ -684,7 +689,7 @@
                       <xsl:value-of select="@value"/>
                     </td>
                     <td class="sectionRestrictionsEnumerationDescriptionValue">
-                      <xsl:value-of select="@annotation"/>
+                      <xsl:value-of select="@annotation"  disable-output-escaping="yes"/>
                     </td>
                   </tr>
                 </xsl:for-each> 
@@ -735,10 +740,10 @@
     <tr><td>  
         <table border="0" cellspacing="0" cellpadding="0" width="675px">
           <tr>
-            <td width="667px" class="sectionDeprecatedComment">Deprecated Comment</td>
+            <td width="667px" class="sectionDeprecatedCommentTitle">Deprecated Comment</td>
           </tr>
           <tr>
-            <td class="sectionDeprecatedComment" style="padding:0 0 0 5px"><xsl:copy-of select="element/deprecatedComment"/></td>
+            <td class="sectionDeprecatedCommentValue" style="padding:0 0 0 5px"><xsl:copy-of select="element/deprecatedComment"/></td>
           </tr>
         </table>     
     </td></tr>       

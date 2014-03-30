@@ -52,7 +52,6 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -88,7 +87,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is the NEMSIS Version 3 method to document prior aid.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -125,8 +123,6 @@
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													
-													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -158,12 +154,10 @@
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>The type of ECG associated with the cardiac rhythm.</definition>
-													
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													
 													<v3Changes>Added to better document ECG results.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -189,7 +183,6 @@
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>The method of ECG interpretation.</definition>
-													
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>STEMI</performanceMeasure>
@@ -242,7 +235,6 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Required for ACS-Field Triage and other patient scoring systems.</comment>
-													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -276,9 +268,6 @@
 													<definition>Indication of method of blood pressure measurement.</definition>
 													<v2Number>E14_06</v2Number>
 													<usage>Required</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -324,7 +313,6 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Pulse Rate and Electronic Monitor Rate have been merged with an additional data element for Method of Heart Rate Measurement.</comment>
-													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -369,8 +357,6 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -412,8 +398,6 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -444,9 +428,10 @@
 										<name>Carbon Dioxide (CO2)</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient's end-tidal or other CO2 level.</definition>
+										<definition>The numeric value of the patient's end-tidal CO2 level.</definition>
 										<v2Number>E14_13</v2Number>
 										<usage>Required</usage>
+										<comment>Generally the numeric CO2 level is measured in millimeters of mercury (mmHg). End-tidal is the same as exhaled.</comment>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -455,9 +440,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
-									    <PNNil>Yes</PNNil>
+										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -494,9 +477,7 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
-									    <PNNil>Yes</PNNil>
+										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -519,7 +500,7 @@
 						</xs:element>
 						<xs:element name="eVitals.GlasgowScoreGroup" id="eVitals.GlasgowScoreGroup">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of patient's glasgow score.</xs:documentation>
+								<xs:documentation>Group Tag to hold the details of patient's glasgow scale</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -543,7 +524,6 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>Definitions now based on the National Trauma Data Standard (NTDS).</comment>
-													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -712,20 +692,19 @@
 										</performanceMeasuresGroup>
 										<comment>Definition changed to indicate highest level of responsiveness.</comment>
 										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="PatientsHighestLevelResponsiveness">
-										
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
+									
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -740,7 +719,7 @@
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>eVitals.27</number>
-													<name>Pain Score</name>
+													<name>Pain Scale Score</name>
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>The patient's indication of pain from a scale of 0-10.</definition>
@@ -752,7 +731,6 @@
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
 													<comment>The Pain Score can be obtained from several pain measurement tools or pain scale types (eVitals.28). The pain scale type used should have a numeric value associated with each diagram as appropriate. If the pain scale type utilizes multiple indicators/categories the total should be calculated and entered for the pain score associated with the patient assessment. </comment>
-													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -792,14 +770,12 @@
 													<name>Stroke Scale Score</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The patient's Stroke Scale Results.</definition>
+													<definition>The findings or results of the Stroke Scale Type (eVitals.30) used to assess the patient exhibiting stroke-like symptoms.</definition>
 													<v2Number>E14_24</v2Number>
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Stroke</performanceMeasure>
 													</performanceMeasuresGroup>
-													
-													
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -830,12 +806,10 @@
 													<national>Yes</national>
 													<state>Yes</state>
 													<definition>The type of stroke pain scale used.</definition>
-													
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Stroke</performanceMeasure>
 													</performanceMeasuresGroup>
-													
 													<v3Changes>Added to include additional detail on the stroke scale used.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -871,8 +845,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Name changed from Thrombolytic Screen</comment>
-										
-									    <PNNil>Yes</PNNil>
+										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -1084,7 +1057,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3304015">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed) </xs:documentation>
+					<xs:documentation>Other (AED, Not Listed)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1285,6 +1258,11 @@
 			<xs:enumeration value="3325015">
 				<xs:annotation>
 					<xs:documentation>Urinary Catheter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3325017">
+				<xs:annotation>
+					<xs:documentation>Skin Probe</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1555,7 +1533,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="3330011">
 				<xs:annotation>
-					<xs:documentation>Other Stoke Scale Type</xs:documentation>
+					<xs:documentation>Other Stroke Scale Type</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330013">
+				<xs:annotation>
+					<xs:documentation>F.A.S.T. Exam</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

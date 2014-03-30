@@ -53,7 +53,6 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -89,7 +88,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This is the NEMSIS Version 3 method to document prior aid.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -130,7 +128,6 @@
 										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -162,9 +159,7 @@
 										<definition>The size of the equipment used in the procedure on the patient</definition>
 										<v2Number>E19_04</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Need business logic to require detail of size appropriate for the procedure.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -188,8 +183,6 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -224,8 +217,6 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -257,8 +248,6 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -286,9 +275,6 @@
 										<definition>The patient's response to the procedure</definition>
 										<v2Number>E19_08</v2Number>
 										<usage>Required</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -324,7 +310,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>For an incident that occurs in multiple states, the certification ID number the EMS agency would typically use is based on the EMS agency's state license specific to each EMS professional.  If the incident needs to be reported to each state, then the EMS Agency Number for each state should be submitted as well as the certification ID numbers for each EMS professional on the unit.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -349,7 +334,6 @@
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The type (level) of EMS or Healthcare Professional performing the procedure. For procedures performed prior to EMS arrival, this may be a non-EMS healthcare professional.</definition>
-										
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -362,7 +346,7 @@
 										<comment>Added to document the type of healthcare professional administering the medication.  This could be auto-completed from the crew ID but is necessary to document medication administration prior to EMS arrival. State may maintain an enumerated list but must collapse to the National Standard.
 										&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
 										</comment>
-										<v3Changes>Added to document the type of healthcare professional administering the medication.</v3Changes>
+										<v3Changes>Added to document the type of healthcare professional performing the procedure.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -389,9 +373,6 @@
 										<definition>The type of treatment authorization obtained</definition>
 										<v2Number>E19_10</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -407,9 +388,6 @@
 										<definition>The name of the authorizing physician ordering the procedure, if the order was provided by any manner other than protocol (standing order) in eProcedures.11</definition>
 										<v2Number>E19_11</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -425,9 +403,7 @@
 										<definition>The location of the vascular access site attempt on the patient, if applicable.</definition>
 										<v2Number>E19_12</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>This is now associated with the Date/Time of the procedure and therefore changed to single choice. This allows the location to be documented with each procedure and attempt. If the vascular access has been established prior to EMS, this should be documented as such.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -578,6 +554,11 @@
 					<xs:documentation>Vomiting</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3907047">
+				<xs:annotation>
+					<xs:documentation>Bradycardia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SizeOfProcedureEquipment">
@@ -681,7 +662,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3913035">
 				<xs:annotation>
-					<xs:documentation>IO-Femoral-Right Distal IO</xs:documentation>
+					<xs:documentation>IO-Femoral-Right Distal</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3913037">
@@ -767,6 +748,26 @@
 			<xs:enumeration value="3913069">
 				<xs:annotation>
 					<xs:documentation>Venous Cutdown-Right Lower Extremity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913071">
+				<xs:annotation>
+					<xs:documentation>Upper Arm-Left</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913073">
+				<xs:annotation>
+					<xs:documentation>Upper Arm-Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913075">
+				<xs:annotation>
+					<xs:documentation>Radial-Left</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913077">
+				<xs:annotation>
+					<xs:documentation>Radial-Right</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

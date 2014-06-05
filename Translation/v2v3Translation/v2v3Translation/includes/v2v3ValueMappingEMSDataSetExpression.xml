@@ -72,6 +72,9 @@
 								<xsl:when test=".=9525 and ../E10_02=2025">
 									<xsl:value-of select="'X71'"/>
 								</xsl:when>
+								<xsl:when test=".=9530 and ../E10_02=2020">
+									<xsl:value-of select="'T50.903A'"/>
+								</xsl:when>
 								<xsl:when test=".=9530 and ../E10_02=2025">
 									<xsl:value-of select="'T50.902A'"/>
 								</xsl:when>
@@ -655,6 +658,13 @@
 								</xsl:when>
 							</xsl:choose>
 						</xsl:when>
+						<xsl:when test="normalize-space($elementMapping/v2TypeName)='ProvidersSecondaryImpression' and normalize-space($elementMapping/v3TypeName)='ProvidersImpression'">
+							<xsl:choose>
+								<xsl:when test=".=1830 and ../../E06/E06_14_0/E06_15=700">
+									<xsl:value-of select="'P84'"/>
+								</xsl:when>
+							</xsl:choose>
+						</xsl:when>
 						<xsl:when test="normalize-space($elementMapping/v2TypeName)='PulseOximetry' and normalize-space($elementMapping/v3TypeName)='PulseOximetry'">
 							<xsl:choose>
 								<xsl:when test=".">
@@ -907,7 +917,7 @@
 						</xsl:when>
 						<xsl:when test="normalize-space($elementMapping/v2TypeName)='Zip' and normalize-space($elementMapping/v3TypeName)='ZIP'">
 							<xsl:choose>
-								<xsl:when test="matches(normalize-space(.),'^[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]$')">
+								<xsl:when test="matches(normalize-space(.),'^([0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9])$')">
 									<xsl:value-of select="normalize-space(.)"/>
 								</xsl:when>
 							</xsl:choose>

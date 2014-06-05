@@ -1,5 +1,33 @@
 NEMSIS Version 2 to Version 3 Translation Change Log
 
+
+
+Version 1.2 (NEMSIS version 3.3.4)
+June 4, 2014
+
+
+XSLT Changes
+
+Updated schemaLocation reference to release 3.3.4.140328.
+
+
+Mapping Corrections
+
+E09_16 Provider's Secondary Impression -> eSituation.12 Provider's Secondary Impressions: Added mapping from v2 value 1830 Pregnancy / OB Delivery to v3 value P84 Other problems with newborn when E06_15 Age Units is Hours.
+
+E10_01 Cause of Injury -> eInjury.01 Cause of Injury: Added mapping from v2 value 9530 Drug Posoning [sic] to v3 value T50.903A Poisoning by unspecified drugs, medicaments and biological substances, asssault, initial encounter when E10_02 Intent of the Injury is Intentional, Other (Assaulted).
+
+DemographicZip -> ZIP and Zip -> ZIP: Corrected v2 match pattern.
+
+
+Documentation Corrections
+
+E14_04 SBP (Systolic Blood Pressure) -> eInjury.03 Trauma Center Criteria: Corrected v3 label for v3 value 2903019.
+
+NHTSAInjuryMatrix -> ExtremitiesAssessment: Corrected note for v2 value 3345 Dislocation Fracture mapping to  v3 value 3516027 Dislocation.
+
+
+
 Version 1.1 (NEMSIS version 3.3.4)
 March 10, 2014
 

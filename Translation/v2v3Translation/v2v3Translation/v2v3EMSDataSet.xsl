@@ -3,8 +3,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v2 EMSDataSet to NEMSIS v3 EMSDataSet
 
-Version: 1.1
-Revision Date: March 10, 2014
+Version: 1.2
+Revision Date: June 4, 2014
 
 This product is provided by the NEMIS TAC, without charge, to facilitate a data mapping between
 NEMSIS v2.2.1 and NEMSIS v3.3.4. The primary target audiences are state employees maintaining EMS
@@ -45,7 +45,7 @@ Requires version 2.0 of XSLT.
     <xsl:comment>&#32;This NEMSIS 3 file was generated from a NEMSIS 2 file via an XML Stylesheet Language Transformation (XSLT).&#32;</xsl:comment>
     <xsl:text>&#10;</xsl:text>
 
-    <EMSDataSet xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/XSD_v3/_nemsis_v3.3.4/3.3.4.140305/XSDs/NEMSIS_XSDs_v3.3.4.140305/EMSDataSet_v3.xsd"  xmlns="http://www.nemsis.org">
+    <EMSDataSet xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/XSD_v3/_nemsis_v3.3.4/3.3.4.140328/XSDs/NEMSIS_XSDs_v3.3.4.140328/EMSDataSet_v3.xsd"  xmlns="http://www.nemsis.org">
 
       <!-- eState: No mapping. -->
       

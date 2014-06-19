@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.140319" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.140618" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -1081,7 +1081,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup/*[@PN]">
+  <sch:rule id="nemSch_nilNvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup//*[@PN]">
 
     <!-- This rule fires when an element in eExam.Assessment Group has a Pertinent Negative 
          attribute. Nothing is checked, since the nil and NV attributes are not allowed.  -->

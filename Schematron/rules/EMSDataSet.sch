@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.140618" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.141104" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -816,6 +816,10 @@
 
     <sch:let name="no_transport" value="if($no_patient or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212015, 4212019, 4212021, 4212025, 4212027, 4212029, 4212031)]) then true() else false()"/>
 
+    <!-- no_emstransport: No transport or Transported by Law Enforcement, Transported by Private Vehicle, Transport Non-Patient. -->
+
+    <sch:let name="no_emstransport" value="if($no_transport or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212035, 4212037, 4212043)]) then true() else false()"/>
+
     <!-- Flag each of the following elements if it is empty, contingent upon a flag that was set based on the Disposition. -->
 
     <sch:let name="eDisposition.17" value="if($no_transport or nem:eDisposition/nem:eDisposition.17 != '') then '' else key('nemSch_key_elements', 'eDisposition.17', $nemSch_elements)"/>
@@ -834,7 +838,7 @@
 
     <sch:let name="eTimes.07" value="if($no_patient or nem:eTimes/nem:eTimes.07 != '') then '' else key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>
 
-    <sch:let name="eTimes.09" value="if($no_scene or nem:eTimes/nem:eTimes.09 != '') then '' else key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>
+    <sch:let name="eTimes.09" value="if($no_emstransport or nem:eTimes/nem:eTimes.09 != '') then '' else key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>
 
     <sch:let name="eTimes.11" value="if($no_transport or nem:eTimes/nem:eTimes.11 != '') then '' else key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>
 
@@ -1357,11 +1361,11 @@
 
   <sch:rule id="nemSch_sequence_time_eLabs.01" context="nem:eLabs.01[. != '']">
 
-    <sch:let name="nemsisElements" value="(., nem:eLabs.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
+    <sch:let name="nemsisElements" value="(., ../nem:eLabs.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
 
     <!-- eLabs.01: Unless eLabs.02 Study/Result Prior to this Unit's EMS Care is "Yes", Date/Time of Laboratory or Imaging Result should not occur prior to: Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Arrived at Patient Date/Time. -->
 
-    <sch:assert id="nemSch_sequence_time_eLabs.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eLabs.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
+    <sch:assert id="nemSch_sequence_time_eLabs.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eLabs.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eLabs.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
@@ -1375,15 +1379,15 @@
 
   <sch:rule id="nemSch_sequence_time_eMedications.01" context="nem:eMedications.01[. != '']">
 
-    <sch:let name="nemsisElements" value="(., nem:eMedications.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
+    <sch:let name="nemsisElements" value="(., ../nem:eMedications.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
 
-    <!-- eMedications.03: Unless eMedications.02 Medication Administered Prior to this Unit's EMS Care is "Yes", Date/Time Medication Administered should not occur prior to: Date/Time Initial Responder Arrived on Scene, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Arrived at Patient Date/Time. -->
+    <!-- eMedications.01: Unless eMedications.02 Medication Administered Prior to this Unit's EMS Care is "Yes", Date/Time Medication Administered should not occur prior to: Date/Time Initial Responder Arrived on Scene, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Arrived at Patient Date/Time. -->
 
-    <sch:assert id="nemSch_sequence_time_eMedications.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eMedications.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
+    <sch:assert id="nemSch_sequence_time_eMedications.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eMedications.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
-    <!-- eMedications.03: Date/Time Medication Administered should not occur after: Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Back at Home Location Date/Time. -->
+    <!-- eMedications.01: Date/Time Medication Administered should not occur after: Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Back at Home Location Date/Time. -->
 
     <sch:assert id="nemSch_sequence_time_eMedications.01_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
@@ -1395,15 +1399,15 @@
 
   <sch:rule id="nemSch_sequence_time_eProcedures.01" context="nem:eProcedures.01[. != '']">
 
-    <sch:let name="nemsisElements" value="(., nem:eProcedures.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
+    <sch:let name="nemsisElements" value="(., ../nem:eProcedures.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
 
-    <!-- eProcedures.03: Unless eProcedures.02 Procedure Performed Prior to this Unit's EMS Care is "Yes", Date/Time Procedure Performed should not occur prior to: Date/Time Initial Responder Arrived on Scene, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Arrived at Patient Date/Time. -->
+    <!-- eProcedures.01: Unless eProcedures.02 Procedure Performed Prior to this Unit's EMS Care is "Yes", Date/Time Procedure Performed should not occur prior to: Date/Time Initial Responder Arrived on Scene, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Arrived at Patient Date/Time. -->
 
-    <sch:assert id="nemSch_sequence_time_eProcedures.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eProcedures.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
+    <sch:assert id="nemSch_sequence_time_eProcedures.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eProcedures.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eScene.05', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
-    <!-- eProcedures.03: Date/Time Procedure Performed should not occur after: Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Back at Home Location Date/Time. -->
+    <!-- eProcedures.01: Date/Time Procedure Performed should not occur after: Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Back at Home Location Date/Time. -->
 
     <sch:assert id="nemSch_sequence_time_eProcedures.01_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
@@ -1413,15 +1417,15 @@
 
   <sch:rule id="nemSch_sequence_time_eVitals.01" context="nem:eVitals.01[. != '']">
 
-    <sch:let name="nemsisElements" value="(., nem:eVitals.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13))[. != '']"/>
+    <sch:let name="nemsisElements" value="(., ../nem:eVitals.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13))[. != '']"/>
 
-    <!-- eVitals.03: Unless eVitals.02 Obtained Prior to this Unit's EMS Care is "Yes", Date/Time Vital Signs Taken should not occur prior to: Date/Time Initial Responder Arrived on Scene, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Arrived at Patient Date/Time. -->
+    <!-- eVitals.01: Unless eVitals.02 Obtained Prior to this Unit's EMS Care is "Yes", Date/Time Vital Signs Taken should not occur prior to: Date/Time Initial Responder Arrived on Scene, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Arrived at Patient Date/Time. -->
 
-    <sch:assert id="nemSch_sequence_time_eVitals.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eVitals.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
+    <sch:assert id="nemSch_sequence_time_eVitals.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eVitals.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eVitals.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
-    <!-- eVitals.03: Date/Time Vital Signs Taken should not occur after: Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Back at Home Location Date/Time. -->
+    <!-- eVitals.01: Date/Time Vital Signs Taken should not occur after: Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Back at Home Location Date/Time. -->
 
     <sch:assert id="nemSch_sequence_time_eVitals.01_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.

@@ -2,6 +2,16 @@ NEMSIS Schematron Change Log
 
 
 
+3.3.4-141104
+
+
+National Patterns and Rules
+
+nemSch_consistency_eDiposition.12: Added "no_emstransport" flag and changed validation on eTimes.09 to only apply when a patient is transported by EMS.
+nemSch_sequence_time: In rule nemSch_sequence_time_eLabs.01, fixed XPath references to eLabs.02. In rule nemSch_sequence_time_eMedications.01, fixed XPath references to eMedications.02. In rule nemSch_sequence_time_eProcedures.01, fixed XPath references to eProcedures.02. In rule nemSch_sequence_time_eVitals.01, fixed XPath references to eVitals.02.
+
+
+
 3.3.4-140619
 
 

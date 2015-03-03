@@ -75,7 +75,7 @@
 			</xs:element>
 			<xs:element name="eExam.AssessmentGroup" id="eExam.AssessmentGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold assessment information </xs:documentation>
+					<xs:documentation>Group Tag to hold assessment information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -308,7 +308,7 @@
 						</xs:element>
 						<xs:element name="eExam.AbdomenGroup" id="eExam.AbdomenGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold abdomen assessment findings information </xs:documentation>
+								<xs:documentation>Group Tag to hold abdomen assessment findings information</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -392,7 +392,7 @@
 						</xs:element>
 						<xs:element name="eExam.SpineGroup" id="eExam.SpineGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold spine assessment findings information </xs:documentation>
+								<xs:documentation>Group Tag to hold spine assessment findings information</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -406,7 +406,7 @@
 													<state>No</state>
 													<definition>The location of the patient's back and spine assessment findings.</definition>
 													<usage>Optional</usage>
-													<comment>Element eExam.14 - Back and Spine Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_07  Spine and E15_05 Thorax AND AND E16_14 Back Cervical Assessment, E16_15 Back Thoracic Assessment, and E16_16 Back Lumbar/Sacral Assessment. The element value choices have been combined and expanded.
+													<comment>Element eExam.14 - Back and Spine Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_07 Spine and E15_05 Thorax AND E16_14 Back Cervical Assessment, E16_15 Back Thoracic Assessment, and E16_16 Back Lumbar/Sacral Assessment. The element value choices have been combined and expanded.
 </comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -423,7 +423,7 @@
 													<definition>The assessment findings associated with the patient's spine (Cervical, Thoracic, Lumbar, and Sacral) and back exam.</definition>
 													<v2Number>E16_14</v2Number>
 													<usage>Optional</usage>
-													<comment>Element eExam.14 - Back and Spine Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_07  Spine and E15_05 Thorax AND E16_14 Back Cervical Assessment, E16_15 Back Thoracic Assessment, and E16_16 Back Lumbar/Sacral Assessment. The element value choices have been combined and expanded.
+													<comment>Element eExam.14 - Back and Spine Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_07 Spine and E15_05 Thorax AND E16_14 Back Cervical Assessment, E16_15 Back Thoracic Assessment, and E16_16 Back Lumbar/Sacral Assessment. The element value choices have been combined and expanded.
 </comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -447,7 +447,7 @@
 						</xs:element>
 						<xs:element name="eExam.ExtremityGroup" id="eExam.ExtremityGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold extremity assessment findings information </xs:documentation>
+								<xs:documentation>Group Tag to hold extremity assessment findings information</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -461,7 +461,7 @@
 													<state>No</state>
 													<definition>The location of the patient's extremity assessment findings.</definition>
 													<usage>Optional</usage>
-													<comment>Element eExam.16 - Extremities Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_08  Upper Extremities and E15_10 Lower Extremities AND E16_17 Extremities-Right Upper Assessment, E16_18 Extremities-Right Lower Assessment, E16_19 Extremities-Left Upper Assessment, and E16_20 Extremities-Left Lower Assessment. The element value choices have been combined and expanded.
+													<comment>Element eExam.16 - Extremities Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_08 Upper Extremities and E15_10 Lower Extremities AND E16_17 Extremities-Right Upper Assessment, E16_18 Extremities-Right Lower Assessment, E16_19 Extremities-Left Upper Assessment, and E16_20 Extremities-Left Lower Assessment. The element value choices have been combined and expanded.
 </comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -478,7 +478,7 @@
 													<definition>The assessment findings associated with the patient's extremities.</definition>
 													<v2Number>E16_17</v2Number>
 													<usage>Optional</usage>
-													<comment>Element eExam.16 - Extremities Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_08  Upper Extremities and E15_10 Lower Extremities AND E16_17 Extremities-Right Upper Assessment, E16_18 Extremities-Right Lower Assessment, E16_19 Extremities-Left Upper Assessment, and E16_20 Extremities-Left Lower Assessment. The element value choices have been combined and expanded.
+													<comment>Element eExam.16 - Extremities Assessment represents Version 2.2.1 NHTSA Injury Matrix elements E15_08 Upper Extremities and E15_10 Lower Extremities AND E16_17 Extremities-Right Upper Assessment, E16_18 Extremities-Right Lower Assessment, E16_19 Extremities-Left Upper Assessment, and E16_20 Extremities-Left Lower Assessment. The element value choices have been combined and expanded.
 </comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -502,7 +502,7 @@
 						</xs:element>
 						<xs:element name="eExam.EyeGroup" id="eExam.EyeGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold eye assessment findings information </xs:documentation>
+								<xs:documentation>Group Tag to hold eye assessment findings information</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -625,8 +625,66 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="eExam.21" nillable="true" id="eExam.StrokeCVASymptomsResolved" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eExam.21</number>
+							<name>Stroke/CVA Symptoms Resolved</name>
+							<national>No</national>
+							<state>Yes</state>
+							<definition>Indication if the Stroke/CVA Symptoms resolved and when.</definition>
+							<v2Number/>
+							<usage>Recommended</usage>
+							<comment/>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Stroke</performanceMeasure>
+							</performanceMeasuresGroup>
+							<PNNil>Yes</PNNil>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="StrokeCVASymptomsResolved">
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.UnableToComplete"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="StrokeCVASymptomsResolved">
+		<xs:annotation>
+			<xs:documentation>Indication if the Stroke/CVA Symptoms resolved and when.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3521001">
+				<xs:annotation>
+					<xs:documentation>No</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3521003">
+				<xs:annotation>
+					<xs:documentation>Yes-Resolved Prior to EMS Arrival</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3521005">
+				<xs:annotation>
+					<xs:documentation>Yes-Resolved in EMS Presence</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="AbdomenAssessment">
 		<xs:annotation>
 			<xs:documentation>The assessment findings associated with the patient's abdomen.</xs:documentation>
@@ -697,16 +755,6 @@
 					<xs:documentation>Guarding</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3511027">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3511029">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3511031">
 				<xs:annotation>
 					<xs:documentation>Laceration</xs:documentation>
@@ -754,7 +802,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3511053">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit </xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3511055">
@@ -775,6 +823,16 @@
 			<xs:enumeration value="3511061">
 				<xs:annotation>
 					<xs:documentation>Deformity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3511063">
+				<xs:annotation>
+					<xs:documentation>Rebound Tenderness</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3511065">
+				<xs:annotation>
+					<xs:documentation>Rigidity</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -812,6 +870,11 @@
 			<xs:enumeration value="3510011">
 				<xs:annotation>
 					<xs:documentation>Right Upper Quadrant</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3510013">
+				<xs:annotation>
+					<xs:documentation>Epigastric</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -871,16 +934,6 @@
 					<xs:documentation>Foreign Body</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3514021">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3514023">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3514025">
 				<xs:annotation>
 					<xs:documentation>Laceration</xs:documentation>
@@ -928,7 +981,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3514047">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3514049">
@@ -1021,11 +1074,6 @@
 			<xs:enumeration value="3513025">
 				<xs:annotation>
 					<xs:documentation>Sacral-Right</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3513027">
-				<xs:annotation>
-					<xs:documentation>Crush Injury</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1192,16 +1240,6 @@
 					<xs:documentation>Foreign Body</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3508043">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3508045">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3508047">
 				<xs:annotation>
 					<xs:documentation>Increased Respiratory Effort</xs:documentation>
@@ -1319,7 +1357,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3508097">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3508099">
@@ -1334,7 +1372,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3508103">
 				<xs:annotation>
-					<xs:documentation>Tenderness</xs:documentation>
+					<xs:documentation>Tenderness-General</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1624,16 +1662,6 @@
 					<xs:documentation>Fracture-Open</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3516037">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3516039">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3516041">
 				<xs:annotation>
 					<xs:documentation>Laceration</xs:documentation>
@@ -1716,7 +1744,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3516077">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3516079">
@@ -1727,6 +1755,11 @@
 			<xs:enumeration value="3516081">
 				<xs:annotation>
 					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516083">
+				<xs:annotation>
+					<xs:documentation>Arm Drift</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2028,11 +2061,6 @@
 					<xs:documentation>Burn-White/Waxy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3506019">
-				<xs:annotation>
-					<xs:documentation>Decapitation</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3506021">
 				<xs:annotation>
 					<xs:documentation>Deformity</xs:documentation>
@@ -2046,16 +2074,6 @@
 			<xs:enumeration value="3506025">
 				<xs:annotation>
 					<xs:documentation>Foreign Body</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3506027">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3506029">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3506031">
@@ -2090,7 +2108,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3506047">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3506049">
@@ -2190,16 +2208,6 @@
 					<xs:documentation>Genital Injury</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3512029">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3512031">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3512033">
 				<xs:annotation>
 					<xs:documentation>Laceration</xs:documentation>
@@ -2257,7 +2265,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3512059">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3512061">
@@ -2342,16 +2350,6 @@
 					<xs:documentation>Foreign Body</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3505025">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3505027">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3505029">
 				<xs:annotation>
 					<xs:documentation>Laceration</xs:documentation>
@@ -2384,7 +2382,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3505045">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3505047">
@@ -2531,6 +2529,21 @@
 					<xs:documentation>Unresponsive</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3519023">
+				<xs:annotation>
+					<xs:documentation>Agitation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3519025">
+				<xs:annotation>
+					<xs:documentation>Somnolent</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3519027">
+				<xs:annotation>
+					<xs:documentation>Stupor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="NeckAssessment">
@@ -2588,16 +2601,6 @@
 					<xs:documentation>Foreign Body</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3507021">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Entry</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3507023">
-				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Exit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3507025">
 				<xs:annotation>
 					<xs:documentation>JVD</xs:documentation>
@@ -2650,7 +2653,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3507049">
 				<xs:annotation>
-					<xs:documentation>Gunshot Wound-Unknown if Entry or Exit</xs:documentation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3507051">
@@ -2800,14 +2803,14 @@
 					<xs:documentation>Weakness-Right Sided</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3520047">
+			<xs:enumeration value="3520051">
 				<xs:annotation>
-					<xs:documentation>Reported Stroke Symptoms Resolved Prior to EMS Arrival</xs:documentation>
+					<xs:documentation>Arm Drift-Left</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3520049">
+			<xs:enumeration value="3520053">
 				<xs:annotation>
-					<xs:documentation>Reported Stroke Symptoms Resolved in EMS Presence</xs:documentation>
+					<xs:documentation>Arm Drift-Right</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2900,6 +2903,21 @@
 			<xs:enumeration value="3504033">
 				<xs:annotation>
 					<xs:documentation>Warm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3504035">
+				<xs:annotation>
+					<xs:documentation>Capillary Nail Bed Refill less than 2 seconds</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3504037">
+				<xs:annotation>
+					<xs:documentation>Capillary Nail Bed Refill 2-4 seconds</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3504039">
+				<xs:annotation>
+					<xs:documentation>Capillary Nail Bed Refill more than 4 seconds</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

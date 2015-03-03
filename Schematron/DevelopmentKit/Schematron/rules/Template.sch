@@ -36,7 +36,7 @@
 
   <!-- PHASES -->
 
-  <!-- Places phase elements here (optional). -->
+  <!-- Place phase elements here (optional). -->
 
 
   <!-- PATTERNS -->

@@ -71,8 +71,15 @@ Added Pandemic/Epidemic/Outbreak.
 			
 			
 			
+			
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="UnitDispatchedCADRecordID">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"></xs:minLength>
+			<xs:maxLength value="50"></xs:maxLength>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="ComplaintReportedByDispatch">
 		<xs:annotation>
 			<xs:documentation>The complaint dispatch reported to the responding unit.</xs:documentation>
@@ -306,22 +313,22 @@ Added Pandemic/Epidemic/Outbreak.
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2305001">
 				<xs:annotation>
-					<xs:documentation>Priority 1 (Critical)</xs:documentation>
+					<xs:documentation>Critical</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2305003">
 				<xs:annotation>
-					<xs:documentation>Priority 2 (Emergent)</xs:documentation>
+					<xs:documentation>Emergent</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2305005">
 				<xs:annotation>
-					<xs:documentation>Priority 3 (Lower Acuity)</xs:documentation>
+					<xs:documentation>Lower Acuity</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2305007">
 				<xs:annotation>
-					<xs:documentation>Priority 4 (Non-Acute [e.g. Scheduled Transfer  or Standby]) </xs:documentation>
+					<xs:documentation>Non-Acute [e.g., Scheduled Transfer  or Standby]</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

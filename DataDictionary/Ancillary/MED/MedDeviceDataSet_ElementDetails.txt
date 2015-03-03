@@ -7,28 +7,16 @@
 'MedDeviceDataSet'|'element'|'eCustomConfiguration.06'|'Custom Data Element Potential Values'|''|''|''|'Optional'|'0'|'M'|''|'CustomValue'|''|''|''|''|''|'1'|'100'|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eCustomConfiguration.07'|'Custom Data Element Potential NOT Values (NV)'|''|''|''|'Optional'|'0'|'M'|''|'NV'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eCustomConfiguration.08'|'Custom Data Element Potential Pertinent Negative Values (PN)'|''|''|''|'Optional'|'0'|'M'|''|'PN'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.01'|'EMS Agency Unique State ID'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'EMSAgencyStateID'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.02'|'EMS Agency Number'|'D01_01'|''|''|'Optional'|'0'|'1'|''|'EMSAgencyNumber'|''|''|''|''|''|'1'|'15'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.03'|'EMS Agency Name'|'D01_02'|''|''|'Optional'|'0'|'1'|''|'EMSAgencyName'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.04'|'EMS Agency State'|'D01_03'|''|''|'Optional'|'0'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|'2'|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.05'|'Medical Device Serial Number'|'D09_01'|''|''|'Optional'|'0'|'1'|''|'DeviceSerialNumber'|''|''|''|''|''|'2'|'50'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.06'|'Medical Device Name or ID'|'D09_02'|''|''|'Optional'|'0'|'1'|''|'DeviceNameorID'|''|''|''|''|''|'2'|'50'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.07'|'Medical Device Type'|''|''|''|'Optional'|'0'|'M'|''|'MedicalDeviceType'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.08'|'Medical Device Manufacturer'|'D09_03'|''|''|'Optional'|'0'|'1'|''|'DeviceManufacturer'|''|''|''|''|''|'2'|'50'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.09'|'Medical Device Model Number'|'D09_04'|''|''|'Optional'|'0'|'1'|''|'ModelNumber'|''|''|''|''|''|'2'|'50'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.10'|'Patient Care Report Number'|'E01_01'|'National'|'State'|'Mandatory'|'1'|'1'|''|'PatientCareReportNumber'|''|''|''|''|''|'3'|'32'|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.11'|'Last Name'|'E06_01'|''|''|'Optional'|'0'|'1'|''|'PersonLastName'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
+'MedDeviceDataSet'|'element'|'eCustomConfiguration.09'|'Custom Data Element Grouping ID'|''|''|''|'Optional'|'0'|'1'|''|'CorrelationID'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'MedDeviceDataSet'|'element'|'eMedDevice.10'|'Patient Care Report Number'|'E01_01'|''|''|'Optional'|'0'|'1'|''|'PatientCareReportNumber'|''|''|''|''|''|'3'|'50'|''|''|''|''|''|''|''|
+'MedDeviceDataSet'|'element'|'eMedDevice.11'|'Last Name'|'E06_01'|''|''|'Optional'|'0'|'1'|''|'PersonLastName'|''|''|''|''|''|'1'|'60'|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.12'|'First Name'|'E06_02'|''|''|'Optional'|'0'|'1'|''|'PersonFirstName'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.13'|'Middle Initial/Name'|'E06_03'|''|''|'Optional'|'0'|'1'|''|'PersonMiddleName'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.14'|'Gender'|'E06_11'|''|''|'Optional'|'0'|'1'|''|'Gender'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.15'|'Race'|'E06_12'|''|''|'Optional'|'0'|'M'|''|'Race'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.16'|'Age'|'E06_14'|''|''|'Optional'|'0'|'1'|''|'Age'|''|''|''|''|''|''|''|''|'1'|'120'|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.17'|'Age Units'|'E06_15'|''|''|'Optional'|'0'|'1'|''|'AgeUnits'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.18'|'Date of Birth'|'E06_16'|''|''|'Optional'|'0'|'1'|''|'DateOfBirth'|''|''|''|''|''|''|''|''|'1890-01-01'|'2050-01-01'|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.19'|'Date/Time Vital Signs Taken'|'E14_01'|''|''|'Optional'|'0'|'1'|''|'DateTimeType'|''|''|''|''|''|''|''|''|'1950-01-01T00:00:00-00:00'|'2050-01-01T00:00:00-00:00'|''|''|''|'[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}'|
-'MedDeviceDataSet'|'element'|'eMedDevice.20'|'Cardiac Rhythm / Electrocardiography (ECG)'|'E14_03'|''|''|'Optional'|'0'|'M'|''|'CardiacRhythm'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.21'|'ECG Type'|''|''|''|'Optional'|'0'|'1'|''|'ECGType'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.22'|'Method of ECG Interpretation'|''|''|''|'Optional'|'0'|'M'|''|'ECGMethod'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.23'|'SBP (Systolic Blood Pressure)'|'E14_04'|''|''|'Optional'|'0'|'1'|''|'SBP'|''|''|''|''|''|''|''|''|'0'|'500'|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.24'|'DBP (Diastolic Blood Pressure)'|'E14_05'|''|''|'Optional'|'0'|'1'|''|'DBP'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[5][0][0]|[1-4][0-9][0-9]|[0]|[1-9][0-9]|P|p'|
 'MedDeviceDataSet'|'element'|'eMedDevice.25'|'Method of Blood Pressure Measurement'|'E14_06'|''|''|'Optional'|'0'|'1'|''|'BloodPressureMethod'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
@@ -37,8 +25,8 @@
 'MedDeviceDataSet'|'element'|'eMedDevice.28'|'Method of Heart Rate Measurement'|''|''|''|'Optional'|'0'|'1'|''|'MethodMeasureHeartRate'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.29'|'Pulse Oximetry'|'E14_09'|''|''|'Optional'|'0'|'1'|''|'PulseOximetry'|''|''|''|''|''|''|''|''|'0'|'100'|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.30'|'Respiratory Rate'|'E14_11'|''|''|'Optional'|'0'|'1'|''|'RespiratoryRate'|''|''|''|''|''|''|''|''|'0'|'300'|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.31'|'Carbon Dioxide (CO2)'|'E14_13'|''|''|'Optional'|'0'|'1'|''|'CO2'|''|''|''|''|''|''|''|''|'0'|'100'|''|''|''|''|
-'MedDeviceDataSet'|'element'|'eMedDevice.32'|'Carbon Monoxide (CO)'|''|''|''|'Optional'|'0'|'1'|''|'CarbonMonoxideLevel'|''|''|''|''|''|''|''|''|'0'|'100'|''|''|''|''|
+'MedDeviceDataSet'|'element'|'eMedDevice.31'|'End Tidal Carbon Dioxide (ETCO2)'|'E14_13'|''|''|'Optional'|'0'|'1'|''|'CO2'|''|''|''|''|''|''|''|''|'0'|'200'|''|''|''|''|
+'MedDeviceDataSet'|'element'|'eMedDevice.32'|'Carbon Monoxide (CO)'|''|''|''|'Optional'|'0'|'1'|''|'CarbonMonoxideLevel'|''|''|''|''|''|''|''|''|'0'|'100'|''|'3'|'1'|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.33'|'Blood Glucose Level'|'E14_14'|''|''|'Optional'|'0'|'1'|''|'BloodGlucoseLevel'|''|''|''|''|''|''|''|''|'0'|'2000'|''|''|''|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.34'|'Temperature'|'E14_20'|''|''|'Optional'|'0'|'1'|''|'BodyTemperature'|''|''|''|''|''|''|''|''|'0'|'50'|''|'3'|'1'|''|
 'MedDeviceDataSet'|'element'|'eMedDevice.35'|'Temperature Method'|'E14_21'|''|''|'Optional'|'0'|'1'|''|'MethodBodyTemp'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|

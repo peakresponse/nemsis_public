@@ -190,7 +190,7 @@
 										<name>Procedure Successful</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Indicates that this procedure attempt which was performed on the patient was successful</definition>
+										<definition>Indicates that this individual procedure attempt which was performed on the patient was successful.</definition>
 										<v2Number>E19_06</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -405,11 +405,6 @@
 					<xs:documentation>Injury</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3907029">
-				<xs:annotation>
-					<xs:documentation>Itching/Urticaria</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3907031">
 				<xs:annotation>
 					<xs:documentation>Nausea</xs:documentation>
@@ -422,12 +417,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3907035">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3907037">
-				<xs:annotation>
-					<xs:documentation>Portacath</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3907039">
@@ -453,6 +443,16 @@
 			<xs:enumeration value="3907047">
 				<xs:annotation>
 					<xs:documentation>Bradycardia</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3907049">
+				<xs:annotation>
+					<xs:documentation>Itching</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3907051">
+				<xs:annotation>
+					<xs:documentation>Urticaria</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -608,12 +608,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="3913055">
 				<xs:annotation>
-					<xs:documentation>Other Peripheral (Not Listed)</xs:documentation>
+					<xs:documentation>Other Peripheral</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3913057">
 				<xs:annotation>
-					<xs:documentation>Other Central (PICC, Portacath, Not Listed)</xs:documentation>
+					<xs:documentation>Other Central (PICC, Portacath, etc.)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3913059">

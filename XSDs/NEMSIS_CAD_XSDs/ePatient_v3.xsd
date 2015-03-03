@@ -20,7 +20,7 @@
 			</xs:element>
 			<xs:element name="ePatient.PatientNameGroup" id="ePatient.PatientNameGroup" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold patient's name </xs:documentation>
+					<xs:documentation>Group Tag to hold patient's name</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -263,12 +263,12 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ePatient.10" type="ANSICountryCode" id="ePatient.PatientsHomeCountry" minOccurs="0">
+			<xs:element name="ePatient.10" type="ANSICountryCode" id="ePatient.PatientsCountryOfResidence" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>ePatient.10</number>
-							<name>Patient's Home Country</name>
+							<name>Patient's Country of Residence</name>
 							<national>No</national>
 							<state>Yes</state>
 							<definition>The country of residence of the patient.</definition>
@@ -304,7 +304,7 @@
 										&lt;br/>2-digit State Code 3-digit County Code 6-digit Census Tract Number (no decimal) 
 										&lt;br/>&lt;br/>Example: NEMSIS TAC office (UT, Salt Lake County, Census Tract - located at 295 Chipeta Way, Salt Lake City, UT) 
 										49035101400
-										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): http://www.census.gov/geo/www/2010census/tract_rel/tract_rel.html 										
+										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a href="http://www.census.gov/geo/maps-data/data/tract_rel_download.html" target="_blank">http://www.census.gov/geo/maps-data/data/tract_rel_download.html&lt;/a>																
 										</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -399,7 +399,7 @@
 			</xs:element>
 			<xs:element name="ePatient.AgeGroup" id="ePatient.AgeGroup">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold patient's age information </xs:documentation>
+					<xs:documentation>Group Tag to hold patient's age information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -519,9 +519,7 @@
 							<definition>The patient's phone number</definition>
 							<v2Number>E06_17</v2Number>
 							<usage>Optional</usage>
-							<comment>This element contains an attribute to define what type of phone number is being documented i.e. Fax, Home, Mobile, Pager, and Work.
-							
-							</comment>
+							<comment>This element contains an attribute to define what type of phone number is being documented (e.g., Fax, Home, Mobile, Pager, and Work).</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

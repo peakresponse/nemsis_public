@@ -427,7 +427,6 @@ CREATE TABLE [dFacility.FacilityGroup] (
     [fk_pk_dFacilityGroup]    INT FOREIGN KEY REFERENCES     [dFacilityGroup]([pk_dFacilityGroup])
 ,    [dFacility.02]    VARCHAR(255)
 ,    [dFacility.03]    VARCHAR(255)
-,    [dFacility.05]    VARCHAR(255)
 ,    [dFacility.06]    VARCHAR(255)
 ,    [dFacility.07]    VARCHAR(255)
 ,    [dFacility.07_StreetAddress2]    VARCHAR(255)
@@ -444,5 +443,18 @@ CREATE TABLE [dFacility.04] (
     [pk_dFacility.04]    INT PRIMARY KEY,
     [fk_pk_dFacility.FacilityGroup]    INT FOREIGN KEY REFERENCES     [dFacility.FacilityGroup]([pk_dFacility.FacilityGroup])
 ,    [dFacility.04]    VARCHAR(255)
+)
+
+CREATE TABLE [dFacility.05] ( 
+    [pk_dFacility.05]    INT PRIMARY KEY,
+    [fk_pk_dFacility.FacilityGroup]    INT FOREIGN KEY REFERENCES     [dFacility.FacilityGroup]([pk_dFacility.FacilityGroup])
+,    [dFacility.05]    VARCHAR(255)
+)
+
+CREATE TABLE [dFacility.15] ( 
+    [pk_dFacility.15]    INT PRIMARY KEY,
+    [fk_pk_dFacility.FacilityGroup]    INT FOREIGN KEY REFERENCES     [dFacility.FacilityGroup]([pk_dFacility.FacilityGroup])
+,    [dFacility.15]    VARCHAR(255)
+,    [dFacility.15_PhoneNumberType]    VARCHAR(255)
 )
 

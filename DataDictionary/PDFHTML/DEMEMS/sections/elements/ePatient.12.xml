@@ -12,9 +12,8 @@
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
-  <SocialSecurityNumber baseType="integer">
-    <facet name="maxInclusive" value="999999999"/>
-    <facet name="minInclusive" value="000000000"/>
+  <SocialSecurityNumber baseType="string">
+    <facet name="pattern" value="[0-9]{9}"/>
   </SocialSecurityNumber>
 </restrictions>
 </element>

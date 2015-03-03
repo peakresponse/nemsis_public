@@ -83,7 +83,7 @@
 			</xs:element>
 			<xs:element name="eOutcome.ExternalDataGroup" id="eOutcome.ExternalDataGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold information about external report or record </xs:documentation>
+					<xs:documentation>Group Tag to hold information about external report or record</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -168,7 +168,7 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eOutcome.08" type="icd10CodeInjury" id="eOutcome.EmergencyDepartmentRecordedCauseofInjury" minOccurs="0">
+			<xs:element name="eOutcome.08" type="icd10CodeInjury" id="eOutcome.EmergencyDepartmentRecordedCauseofInjury" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -550,7 +550,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="43">
 				<xs:annotation>
-					<xs:documentation>Discharged/transferred to a Federal Health Care Facility (e.g. VA or federal health care facility)</xs:documentation>
+					<xs:documentation>Discharged/transferred to a Federal Health Care Facility (e.g., VA or federal health care facility)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="50">
@@ -650,7 +650,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4303011">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4303013">
@@ -756,7 +756,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="43">
 				<xs:annotation>
-					<xs:documentation>Discharged/transferred to a Federal Health Care Facility (e.g. VA or federal health care facility)</xs:documentation>
+					<xs:documentation>Discharged/transferred to a Federal Health Care Facility (e.g., VA or federal health care facility)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="50">

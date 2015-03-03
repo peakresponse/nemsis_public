@@ -4,7 +4,7 @@
 		<xs:sequence>
 			<xs:element name="eDisposition.DestinationGroup" id="eDisposition.DestinationGroup">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about the Destination and the Disposition details </xs:documentation>
+					<xs:documentation>Group Tag to hold info about the Destination and the Disposition details</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -256,15 +256,15 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.19" nillable="true" id="eDisposition.ConditionofPatientatDestination">
+			<xs:element name="eDisposition.19" nillable="true" id="eDisposition.FinalPatientAcuity">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDisposition.19</number>
-							<name>Condition of Patient at Destination</name>
+							<name>Final Patient Acuity</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The condition of the patient after care by EMS</definition>
+							<definition>The acuity of the patient's condition after EMS care.</definition>
 							<v2Number>E20_15</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -273,12 +273,14 @@
 								<performanceMeasure>Pediatric</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
+							<comment>Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
+&lt;br/>&lt;a href="http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf" target="_blank">http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="Response">
+						<xs:extension base="FinalPatientAcuity">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -343,7 +345,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Required if Patient Transported by EMS. "Hospital-Non-Emergency Department Bed" includes any location in the hospital except the Emergency Department. Choices include those in eDisposition.22 (Hospital In-Patient Destination). </comment>
+							<comment>Required if Patient Transported by EMS.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -367,9 +369,9 @@
 							<name>Hospital In-Patient Destination</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The location within the hospital that the patient was taken directly by EMS (e.g. Cath Lab, ICU, etc.) </definition>
+							<definition>The location within the hospital that the patient was taken directly by EMS (e.g., Cath Lab, ICU, etc.).</definition>
 							<usage>Required</usage>
-							<comment>To be documented when in eDisposition.21 "Hospital-Non-Emergency Department Bed" is selected. </comment>
+							<comment>To be documented when in eDisposition.21 "Hospital-Non-Emergency Department Bed" is selected.</comment>
 							<v3Changes>Added to identify the location within the hospital that the patient was directly taken to by EMS.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -386,18 +388,18 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.23" nillable="true" id="eDisposition.HospitalDesignation">
+			<xs:element name="eDisposition.23" nillable="true" id="eDisposition.HospitalCapability">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDisposition.23</number>
-							<name>Hospital Designation</name>
+							<name>Hospital Capability</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The primary hospital capability associated with the patient's condition for this transport (e.g. Trauma, STEMI, Peds, etc).</definition>
+							<definition>The primary hospital capability associated with the patient's condition for this transport (e.g., Trauma, STEMI, Peds, etc.).</definition>
 							<usage>Required</usage>
-							<comment>To be documented when in eDisposition.21 (Type of Destination) equals "4221003: Hospital-Emergency Department" or "4221005: Hospital-In Patient Bed" is selected . </comment>
-							<v3Changes>Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment. </v3Changes>
+							<comment>To be documented when eDisposition.21 (Type of Destination) is 1) Hospital-Emergency Department, 2) Hospital-Non-Emergency Department Bed, or 3) Freestanding Emergency Department.</comment>
+							<v3Changes>Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -747,7 +749,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="HospitalInPatientDestination">
 		<xs:annotation>
-			<xs:documentation>The location within the hospital that the patient was taken directly by EMS (e.g. Cath Lab, ICU, etc.) </xs:documentation>
+			<xs:documentation>The location within the hospital that the patient was taken directly by EMS (e.g., Cath Lab, ICU, etc.).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4222001">
@@ -873,6 +875,16 @@
 			<xs:enumeration value="4222049">
 				<xs:annotation>
 					<xs:documentation>Hospital-SICU</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4222051">
+				<xs:annotation>
+					<xs:documentation>Hospital-Oncology</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4222053">
+				<xs:annotation>
+					<xs:documentation>Hospital-Outpatient Surgery</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1030,7 +1042,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4214009">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4214011">
@@ -1055,7 +1067,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4214019">
 				<xs:annotation>
-					<xs:documentation>Trendelenburg  </xs:documentation>
+					<xs:documentation>Trendelenburg</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -1097,7 +1109,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4220013">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4220015">
@@ -1186,7 +1198,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4221013">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4221015">
@@ -1212,6 +1224,33 @@
 			<xs:enumeration value="4221023">
 				<xs:annotation>
 					<xs:documentation>Freestanding Emergency Department</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FinalPatientAcuity">
+		<xs:annotation>
+			<xs:documentation>The patient's response.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4219001">
+				<xs:annotation>
+					<xs:documentation>Critical (Red)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4219003">
+				<xs:annotation>
+					<xs:documentation>Emergent (Yellow)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4219005">
+				<xs:annotation>
+					<xs:documentation>Lower Acuity (Green)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4219007">
+				<xs:annotation>
+					<xs:documentation>Dead without Resuscitation Efforts (Black)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

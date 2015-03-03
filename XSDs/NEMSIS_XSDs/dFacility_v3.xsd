@@ -31,7 +31,7 @@
 						</xs:element>
 						<xs:element name="dFacility.FacilityGroup" id="dFacility.FacilityGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about the Facility and the Facility details </xs:documentation>
+								<xs:documentation>Group Tag to hold info about the Facility and the Facility details</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -61,7 +61,7 @@
 													<definition>The code of the facility as assigned by the state or the EMS agency.</definition>
 													<v2Number>D04_12</v2Number>v2Number>
 													<usage>Optional</usage>
-													<comment>The information contained within this element could be used to populate eScene.09 (Incident Facility Code)  or eDisposition.02 (Destination/Transferred To, Code) via a drop down list created at either the EMS Agency or State level.</comment>
+													<comment>The information contained within this element could be used to populate eScene.10 (Incident Facility Code) or eDisposition.02 (Destination/Transferred To, Code) via a drop down list created at either the EMS Agency or State level.</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -74,7 +74,7 @@
 													<name>Hospital Designations</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc) </definition>
+													<definition>The designation(s) associated with the hospital (e.g., Trauma, STEMI, Peds, etc.)</definition>
 													<v2Number/>
 													<usage>Optional</usage>
 												</nemsisTacDoc>
@@ -88,7 +88,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="dFacility.05" type="NationalProviderIdentifier" id="dFacility.FacilityNationalProviderIdentifier" minOccurs="0">
+									<xs:element name="dFacility.05" type="NationalProviderIdentifier" id="dFacility.FacilityNationalProviderIdentifier" minOccurs="0" maxOccurs="unbounded">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -146,7 +146,7 @@
 													<name>Facility City</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The city where the facility is located (physical address). </definition>
+													<definition>The city where the facility is located (physical address).</definition>
 													<usage>Optional</usage>
 													<comment>
 The information contained within this element could be used to populate the address information within eScene.17 (Incident City) and/or eDisposition.04 (Destination City) as appropriate. 
@@ -241,7 +241,7 @@ The information contained within this element could be used to populate the addr
                       &lt;br/>&lt;br/>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
 										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places
-						        </comment>
+						       </comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -260,6 +260,30 @@ The information contained within this element could be used to populate the addr
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
+									</xs:element>
+									<xs:element name="dFacility.15" id="ePatient.FacilityPhoneNumber" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>dFacility.15</number>
+													<name>Facility Phone Number</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>Facility phone number.</definition>
+													<v2Number/>
+													<usage>Optional</usage>
+													<comment>This element contains an attribute to define what type of phone number is being documented (e.g., Fax, Home, Mobile, Pager, and Work).</comment>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="PhoneNumber">
+													<xs:attribute name="PhoneNumberType" type="PhoneNumberType" use="optional"/>
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
@@ -334,12 +358,27 @@ The information contained within this element could be used to populate the addr
 			</xs:enumeration>
 			<xs:enumeration value="1701009">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1701011">
 				<xs:annotation>
 					<xs:documentation>Urgent Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701013">
+				<xs:annotation>
+					<xs:documentation>Rehabilitation Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701015">
+				<xs:annotation>
+					<xs:documentation>Mental Health Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701017">
+				<xs:annotation>
+					<xs:documentation>Dialysis Center</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

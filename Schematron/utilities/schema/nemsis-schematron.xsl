@@ -7,6 +7,7 @@
                 xmlns:iso="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xhtml="http://www.w3.org/1999/xhtml"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:nem="http://www.nemsis.org"
                 version="2.0"><!--Implementers: please note that overriding process-prolog or process-root is 
     the preferred method for meta-stylesheets to use where possible. -->
    <xsl:param name="archiveDirParameter"/>
@@ -181,13 +182,15 @@
     constraints.
   </svrl:text>
          <svrl:ns-prefix-in-attribute-values uri="http://purl.oclc.org/dsdl/schematron" prefix="sch"/>
+         <svrl:ns-prefix-in-attribute-values uri="http://www.nemsis.org" prefix="nem"/>
+         <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/1999/XSL/Transform" prefix="xsl"/>
          <svrl:active-pattern>
             <xsl:attribute name="document">
                <xsl:value-of select="document-uri(/)"/>
             </xsl:attribute>
             <xsl:apply-templates/>
          </svrl:active-pattern>
-         <xsl:apply-templates select="/" mode="M3"/>
+         <xsl:apply-templates select="/" mode="M5"/>
       </svrl:schematron-output>
    </xsl:template>
 
@@ -198,7 +201,7 @@
 
 
 	  <!--RULE -->
-   <xsl:template match="sch:schema" priority="1004" mode="M3">
+   <xsl:template match="sch:schema" priority="1004" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:schema"/>
 
 		    <!--ASSERT [FATAL]-->
@@ -285,11 +288,11 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="sch:pattern" priority="1003" mode="M3">
+   <xsl:template match="sch:pattern" priority="1003" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:pattern"/>
 
 		    <!--ASSERT [FATAL]-->
@@ -307,11 +310,11 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="sch:rule" priority="1002" mode="M3">
+   <xsl:template match="sch:rule" priority="1002" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:rule"/>
 
 		    <!--ASSERT [FATAL]-->
@@ -346,11 +349,11 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
 
 	  <!--RULE -->
-   <xsl:template match="sch:assert | sch:report" priority="1001" mode="M3">
+   <xsl:template match="sch:assert | sch:report" priority="1001" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                        context="sch:assert | sch:report"/>
 
@@ -387,24 +390,46 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
 
 	  <!--RULE -->
    <xsl:template match="sch:diagnostic[@id='nemsisDiagnostic']"
                  priority="1000"
-                 mode="M3">
+                 mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                        context="sch:diagnostic[@id='nemsisDiagnostic']"/>
-      <xsl:variable name="nemsisDiagnostic"
-                    select="document('../../rules/includes/diagnostic_nemsisDiagnostic.xml')/sch:diagnostic"/>
+      <xsl:variable name="p01"
+                    select="nem:nemsisDiagnostic/nem:record/xsl:copy-of[normalize-space(@select)=normalize-space('ancestor-or-self::*:DemographicReport/*:dAgency/(*:dAgency.01 | *:dAgency.02 | *:dAgency.04)')]"/>
+      <xsl:variable name="p02"
+                    select="nem:nemsisDiagnostic/nem:record/xsl:copy-of[normalize-space(@select)=normalize-space('ancestor-or-self::*:Header/*:DemographicGroup/*')]"/>
+      <xsl:variable name="p03"
+                    select="nem:nemsisDiagnostic/nem:record/xsl:copy-of[normalize-space(@select)=normalize-space('ancestor-or-self::*:PatientCareReport/*:eRecord/*:eRecord.01')]"/>
+      <xsl:variable name="p04"
+                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:attribute[@name='location']/xsl:apply-templates[@select='.' and @mode='schematron-get-full-path']"/>
+      <xsl:variable name="p05"
+                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:for-each[@select='@*']/xsl:attribute[@name='{name()}']/xsl:value-of[@select='.']"/>
+      <xsl:variable name="p06"
+                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:if[@test='not(*)']/xsl:value-of[@select='.']"/>
+      <xsl:variable name="p07"
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:variable[@name='default_context' and @select='.']"/>
+      <xsl:variable name="p08"
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/xsl:variable[@name='parent']"/>
+      <xsl:variable name="p09"
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='parentLocation']/xsl:choose/xsl:when[@test='$parent']/xsl:apply-templates[@select='$parent' and @mode='schematron-get-full-path']"/>
+      <xsl:variable name="p10"
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='parentLocation']/xsl:choose/xsl:otherwise/xsl:apply-templates[@select='$default_context' and @mode='schematron-get-full-path']"/>
+      <xsl:variable name="p11"
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='name']/xsl:value-of[@select='.']"/>
+      <xsl:variable name="deepEqual_nemsisDiagnostic"
+                    select="$p01 and $p02 and $p03 and $p04 and $p05 and $p06 and $p07 and $p08 and $p09 and $p10 and $p11"/>
 
 		    <!--ASSERT [FATAL]-->
       <xsl:choose>
-         <xsl:when test="deep-equal(., $nemsisDiagnostic)"/>
+         <xsl:when test="$deepEqual_nemsisDiagnostic"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="deep-equal(., $nemsisDiagnostic)">
+                                test="$deepEqual_nemsisDiagnostic">
                <xsl:attribute name="role">[FATAL]</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
@@ -415,10 +440,10 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
-   <xsl:template match="text()" priority="-1" mode="M3"/>
-   <xsl:template match="@*|node()" priority="-2" mode="M3">
-      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
+   <xsl:template match="text()" priority="-1" mode="M5"/>
+   <xsl:template match="@*|node()" priority="-2" mode="M5">
+      <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
 </xsl:stylesheet>

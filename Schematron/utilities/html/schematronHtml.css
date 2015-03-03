@@ -3,8 +3,8 @@
 Cascading Style Sheet (CSS) to style NEMSIS v3 Schematron that has been transformed into HTML for 
 documentation purposes
 
-Version: 3.3.4-140303
-Revision Date: March 3, 2014
+Version: 3.4.0-150302
+Revision Date: March 2, 2015
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -73,6 +73,45 @@ div#menu div.contents div
 }
 
 
+/* Overview page */
+
+div#overview div.pattern
+{
+  background-color: #004080;
+  border: 1px solid #004080;
+  border-left: none;
+  color: #ffffff;
+  margin-bottom: 0.2ex;
+  padding: 0.2ex;
+}
+
+div#overview div.pattern a
+{
+  color: #ffffff;
+}
+
+div#overview div.header
+{
+  background-color: #f0f0f0;
+  border-left: none;
+  border-radius: 0px;
+  color: #000000;
+  
+}
+
+div#overview div.section
+{
+  margin-top: 0;
+  font-size: 90%;
+  border-left: 1px solid #000000;
+  margin-right: 2ex;
+}
+
+div#overview div.fullWidthValue
+{
+  border: none;
+}
+
 /* Page */
 
 div.page 
@@ -89,16 +128,7 @@ div.page
   width: 75%;
 }
 
-div.page h1 {text-align: right;}
-
-div.name 
-{
-  color: #004080;
-  font-style: italic;
-  text-transform: capitalize;
-}
-
-div.id
+div.header
 {
   background-color: #004080;
   border: 1px solid #004080;
@@ -108,11 +138,22 @@ div.id
   padding: 0.2ex;
 }
 
+div.name 
+{
+  color: #004080;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
 div.section 
 {
-  margin-bottom: 2ex;
-  margin-left: 2ex;
-  margin-top: 2ex;
+  margin: 2ex;
+}
+
+.abstract
+{
+  font-style: italic;
+  margin-left: 1ex;
 }
 
 .fullWidthTitle   
@@ -134,6 +175,37 @@ div.section
   padding: 0.2ex;
 }
 
+.headerText
+{
+  font-weight: bold;
+  padding-right: 1ex;
+  text-transform: capitalize;
+}
+
+.role
+{
+  color: #000000;
+  float: right;
+  font-size: smaller;
+  padding: 0.2ex;
+  border-radius: 0.4ex;
+}
+
+.fatal
+{
+  background-color: #e10000;
+}
+
+.error
+{
+  background-color: #fbc723;
+}
+
+.warning
+{
+  background-color: #ffffbb;
+}
+
 .summaryTitle   
 {
   background-color: #f0f0f0;
@@ -142,8 +214,9 @@ div.section
   color: #004080;
   display: inline-block;
   margin-bottom: 0.2ex;
-  margin-right: 0.2ex;
   padding: 0.2ex;
+  padding-right: 0.4ex;
+  text-transform: capitalize;
   vertical-align:top;
   width: 20%;
 }
@@ -158,6 +231,15 @@ div.section
   width: 75%;
 }
 
+.value-of 
+{
+  font-style: italic;
+}
+
+.value-of a
+{
+  font-style: normal;
+}
 
 /* Page visibility */
 
@@ -174,6 +256,29 @@ a
 }
 
 a:hover, a:focus {color: #BB7A2A;}
+
+
+/* Print layout */
+
+@media print
+{
+
+  #menu
+  {
+    display: none;
+  }
+ 
+  .page
+  {
+    display: block !important;
+    overflow: visible !important;
+    padding: 0;
+    page-break-after: always !important;
+    position: static !important;
+    width: auto !important;
+  }
+  
+}
 
 
 /* Code */

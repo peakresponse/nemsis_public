@@ -44,6 +44,7 @@ CREATE TABLE [PatientCareReport] (
 ,    [eDispatch.03]    VARCHAR(255)
 ,    [eDispatch.04]    VARCHAR(255)
 ,    [eDispatch.05]    VARCHAR(255)
+,    [eDispatch.06]    VARCHAR(255)
 ,    [eTimes.01]    VARCHAR(255)
 ,    [eTimes.01_NV]    VARCHAR(255)
 ,    [eTimes.02]    VARCHAR(255)
@@ -127,7 +128,6 @@ CREATE TABLE [PatientCareReport] (
 ,    [ePayment.39]    VARCHAR(255)
 ,    [ePayment.39_PhoneNumberType]    VARCHAR(255)
 ,    [ePayment.40]    VARCHAR(255)
-,    [ePayment.43]    VARCHAR(255)
 ,    [ePayment.45]    VARCHAR(255)
 ,    [ePayment.46]    VARCHAR(255)
 ,    [ePayment.48]    VARCHAR(255)
@@ -136,6 +136,7 @@ CREATE TABLE [PatientCareReport] (
 ,    [ePayment.50_NV]    VARCHAR(255)
 ,    [ePayment.53]    VARCHAR(255)
 ,    [ePayment.54]    VARCHAR(255)
+,    [ePayment.57]    VARCHAR(255)
 ,    [eScene.01]    VARCHAR(255)
 ,    [eScene.01_NV]    VARCHAR(255)
 ,    [eScene.05]    VARCHAR(255)
@@ -189,6 +190,7 @@ CREATE TABLE [PatientCareReport] (
 ,    [eSituation.14_NV]    VARCHAR(255)
 ,    [eSituation.15]    VARCHAR(255)
 ,    [eSituation.16]    VARCHAR(255)
+,    [eSituation.18]    VARCHAR(255)
 ,    [eInjury.05]    VARCHAR(255)
 ,    [eInjury.06]    VARCHAR(255)
 ,    [eInjury.09]    VARCHAR(255)
@@ -213,8 +215,6 @@ CREATE TABLE [PatientCareReport] (
 ,    [eArrest.05_NV]    VARCHAR(255)
 ,    [eArrest.07]    VARCHAR(255)
 ,    [eArrest.07_NV]    VARCHAR(255)
-,    [eArrest.10]    VARCHAR(255)
-,    [eArrest.10_NV]    VARCHAR(255)
 ,    [eArrest.11]    VARCHAR(255)
 ,    [eArrest.11_NV]    VARCHAR(255)
 ,    [eArrest.13]    VARCHAR(255)
@@ -226,6 +226,7 @@ CREATE TABLE [PatientCareReport] (
 ,    [eArrest.16_NV]    VARCHAR(255)
 ,    [eArrest.18]    VARCHAR(255)
 ,    [eArrest.18_NV]    VARCHAR(255)
+,    [eArrest.19]    VARCHAR(255)
 ,    [eHistory.16]    VARCHAR(255)
 ,    [eHistory.18]    VARCHAR(255)
 ,    [eHistory.18_PN]    VARCHAR(255)
@@ -238,6 +239,9 @@ CREATE TABLE [PatientCareReport] (
 ,    [eExam.02]    VARCHAR(255)
 ,    [eExam.02_NV]    VARCHAR(255)
 ,    [eExam.02_PN]    VARCHAR(255)
+,    [eExam.21]    VARCHAR(255)
+,    [eExam.21_PN]    VARCHAR(255)
+,    [eExam.21_NV]    VARCHAR(255)
 ,    [eAirway.10]    VARCHAR(255)
 ,    [eAirway.11]    VARCHAR(255)
 ,    [eDisposition.01]    VARCHAR(255)
@@ -278,7 +282,6 @@ CREATE TABLE [PatientCareReport] (
 ,    [eOutcome.02_NV]    VARCHAR(255)
 ,    [eOutcome.06]    VARCHAR(255)
 ,    [eOutcome.07]    VARCHAR(255)
-,    [eOutcome.08]    VARCHAR(255)
 ,    [eOutcome.11]    VARCHAR(255)
 ,    [eOutcome.14]    VARCHAR(255)
 ,    [eOutcome.15]    VARCHAR(255)
@@ -392,6 +395,7 @@ CREATE TABLE [ePayment.InsuranceGroup] (
 ,    [ePayment.20]    VARCHAR(255)
 ,    [ePayment.21]    VARCHAR(255)
 ,    [ePayment.22]    VARCHAR(255)
+,    [ePayment.58]    VARCHAR(255)
 )
 
 CREATE TABLE [ePayment.31] ( 
@@ -512,7 +516,6 @@ CREATE TABLE [eInjury.04] (
     [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
 ,    [eInjury.04]    VARCHAR(255)
 ,    [eInjury.04_NV]    VARCHAR(255)
-,    [eInjury.04_PN]    VARCHAR(255)
 )
 
 CREATE TABLE [eInjury.07] ( 
@@ -1035,14 +1038,14 @@ CREATE TABLE [eAirway.04] (
 
 CREATE TABLE [eAirway.08] ( 
     [pk_eAirway.08]    INT PRIMARY KEY,
-    [fk_pk_eAirway.ConfirmationGroup]    INT FOREIGN KEY REFERENCES     [eAirway.ConfirmationGroup]([pk_eAirway.ConfirmationGroup])
+    [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
 ,    [eAirway.08]    VARCHAR(255)
 ,    [eAirway.08_NV]    VARCHAR(255)
 )
 
 CREATE TABLE [eAirway.09] ( 
     [pk_eAirway.09]    INT PRIMARY KEY,
-    [fk_pk_eAirway.ConfirmationGroup]    INT FOREIGN KEY REFERENCES     [eAirway.ConfirmationGroup]([pk_eAirway.ConfirmationGroup])
+    [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
 ,    [eAirway.09]    VARCHAR(255)
 )
 
@@ -1122,6 +1125,12 @@ CREATE TABLE [eOutcome.ExternalDataGroup] (
 ,    [eOutcome.05]    VARCHAR(255)
 )
 
+CREATE TABLE [eOutcome.08] ( 
+    [pk_eOutcome.08]    INT PRIMARY KEY,
+    [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
+,    [eOutcome.08]    VARCHAR(255)
+)
+
 CREATE TABLE [eOutcome.09] ( 
     [pk_eOutcome.09]    INT PRIMARY KEY,
     [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
@@ -1191,7 +1200,6 @@ CREATE TABLE [eOther.SignatureGroup] (
     [pk_eOther.SignatureGroup]    INT PRIMARY KEY,
     [fk_pk_PatientCareReport]    INT FOREIGN KEY REFERENCES     [PatientCareReport]([pk_PatientCareReport])
 ,    [eOther.12]    VARCHAR(255)
-,    [eOther.13]    VARCHAR(255)
 ,    [eOther.14]    VARCHAR(255)
 ,    [eOther.15]    VARCHAR(255)
 ,    [eOther.16]    VARCHAR(255)
@@ -1200,5 +1208,11 @@ CREATE TABLE [eOther.SignatureGroup] (
 ,    [eOther.19]    VARCHAR(255)
 ,    [eOther.20]    VARCHAR(255)
 ,    [eOther.21]    VARCHAR(255)
+)
+
+CREATE TABLE [eOther.13] ( 
+    [pk_eOther.13]    INT PRIMARY KEY,
+    [fk_pk_eOther.SignatureGroup]    INT FOREIGN KEY REFERENCES     [eOther.SignatureGroup]([pk_eOther.SignatureGroup])
+,    [eOther.13]    VARCHAR(255)
 )
 

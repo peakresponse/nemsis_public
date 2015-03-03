@@ -4,7 +4,7 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The crew member id during this EMS patient encounter at this date and time.</definition>
+<definition>The statewide assigned ID number of the EMS crew member confirming the airway placement.</definition>
 <v2Number></v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure></performanceMeasuresGroup>
@@ -14,7 +14,7 @@
 <restrictions>
   <CrewMemberID baseType="string">
     <facet name="minLength" value="2"/>
-    <facet name="maxLength" value="15"/>
+    <facet name="maxLength" value="50"/>
   </CrewMemberID>
 </restrictions>
 <attributes>

@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eCad.24"  minOccurs="0"  maxOccurs="1"  dataTypeName="USNG"  isNillable="No">
-<name>Vehicle Dispatch US National Grid Location</name>
+<name>Vehicle Dispatch Location US National Grid Coordinates</name>
 <national>No</national>
 <deprecated></deprecated>
 <state>No</state>
@@ -13,7 +13,7 @@
 <deprecatedComment></deprecatedComment>
 <restrictions>
   <USNG baseType="string">
-    <facet name="pattern" value="[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"/>
+    <facet name="pattern" value="[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"/>
   </USNG>
 </restrictions>
 </element>

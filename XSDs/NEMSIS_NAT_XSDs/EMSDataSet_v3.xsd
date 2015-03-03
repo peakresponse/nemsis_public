@@ -26,19 +26,19 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Header" maxOccurs="unbounded" id="HeaderGroup">
+				<xs:element name="Header" id="HeaderGroup" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Header for file</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="DemographicGroup"  id="DemographicGroup">
+							<xs:element name="DemographicGroup" id="DemographicGroup">
 								<xs:annotation>
 									<xs:documentation>Demographic information related to this agency</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="dAgency.01" type="EMSAgencyStateID" id="EMSDataSet.EMSAgencyUniqueStateID">			
+										<xs:element name="dAgency.01" type="EMSAgencyStateID" id="EMSDataset.EMSAgencyUniqueStateID">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
@@ -47,7 +47,6 @@
 														<national>Yes</national>
 														<state>Yes</state>
 														<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
-														<v2Number/>
 														<usage>Mandatory</usage>
 														<performanceMeasuresGroup>
 															<performanceMeasure>Airway</performanceMeasure>
@@ -59,12 +58,11 @@
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
 														<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-														<v3Changes/>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dAgency.02" id="EMSDataSet.EMSAgencyNumber">
+										<xs:element name="dAgency.02" id="EMSDataset.EMSAgencyNumber">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
@@ -85,7 +83,6 @@
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
 														<comment>This is the primary identifier for the entire Demographic Section.  Each of the Demographic sections must be associated with an EMS Agency Number. An EMS Agency can have more than one Agency Number within a state. This reflects the ability for an EMS Agency to have a different number for each service type or location (based on state implementation).</comment>
-														<v3Changes/>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -95,7 +92,7 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="dAgency.04" id="EMSDataSet.EMSAgencyState">
+										<xs:element name="dAgency.04" id="EMSDataset.EMSAgencyState">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
@@ -117,7 +114,6 @@
 														</performanceMeasuresGroup>
 														<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
 																	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-														<v3Changes/>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -130,7 +126,7 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="PatientCareReport" maxOccurs="unbounded" id="PatientCareReportGroup">
+							<xs:element name="PatientCareReport" id="PatientCareReportGroup" maxOccurs="unbounded">
 								<xs:annotation>
 									<xs:documentation>Container Tag to hold each instance of a patient care report (PCR)</xs:documentation>
 								</xs:annotation>
@@ -227,6 +223,8 @@
 											</xs:annotation>
 										</xs:element>
 									</xs:sequence>
+									<!--<xs:attribute name="RecordStatus" type="RecordStatus" use="optional"/>
+									<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

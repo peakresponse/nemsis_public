@@ -145,6 +145,20 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
+						<xs:element name="eCustomConfiguration.09" type="CorrelationID" id="eCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eCustomConfiguration.09</number>
+										<name>Custom Data Element Grouping ID</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>ID for custom element grouping.</definition>
+										<usage>Optional</usage>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CustomElementID" type="CorrelationID" use="required"/>
 				</xs:complexType>

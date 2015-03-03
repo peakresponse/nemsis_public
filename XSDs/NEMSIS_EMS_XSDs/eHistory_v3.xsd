@@ -14,9 +14,7 @@
 							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
 							<v2Number>E12_01</v2Number>
 							<usage>Required</usage>
-							
-							<comment>Added Obesity, Sight Impaired, Psychologically Impaired</comment>
-							
+							<comment></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -35,7 +33,7 @@
 			</xs:element>
 			<xs:element name="eHistory.PractitionerGroup" id="eHistory.PractitionerGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about practitioner </xs:documentation>
+					<xs:documentation>Group Tag to hold info about practitioner</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -50,9 +48,6 @@
 										<definition>The last name of the patient's practitioner</definition>
 										<v2Number>E12_06</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -68,9 +63,6 @@
 										<definition>The first name of the patient's practitioner</definition>
 										<v2Number>E12_04</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -86,9 +78,6 @@
 										<definition>The middle name or initial of the patient's practitioner.</definition>
 										<v2Number>E12_05</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -117,7 +106,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Advanced Directive and Do Not Resuscitate are both included in this data element.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -145,7 +133,6 @@
 							<definition>The patient's medication allergies</definition>
 							<v2Number>E12_08</v2Number>
 							<usage>Recommended</usage>
-							
 							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 CM codes can be used for medication groups. 
 
 &lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
@@ -159,7 +146,6 @@
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -174,7 +160,7 @@
 							</xs:attribute>
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.NoKnownDrugAllergy PN.Refused PN.UnableToComplete"/>
+									<xs:union memberTypes="PN.NoKnownDrugAllergy PN.Refused PN.UnableToComplete PN.Unresponsive"/>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="CodeType" type="CodeType" use="optional"/>
@@ -194,7 +180,6 @@
 							<definition>The patient's known allergies to food or environmental agents.</definition>
 							<v2Number>E12_09</v2Number>
 							<usage>Optional</usage>
-							
 							<comment>
 Data Element Comment Section:
 &lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
@@ -202,7 +187,6 @@ Data Element Comment Section:
 &lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html 
 &lt;br/>Product: Product - UMLS Metathesaurus
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -225,13 +209,20 @@ Data Element Comment Section:
 							<definition>The patient's pre-existing medical and surgery history of the patient</definition>
 							<v2Number>E12_10</v2Number>
 							<usage>Recommended</usage>
-							
-							<comment>Code list is represented by ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html							
-							&lt;br/>&lt;br/>ICD-10-CM
-							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
-							&lt;br/>Product - UMLS Metathesaurus							
+							<comment>
+The Medical/Surgical History pattern has been extended to include ICD-10-CM: Diagnosis Codes and ICD-10-PCS: Procedural Health Intervention Codes. 
+&lt;br/>
+&lt;br/>ICD-10-CM: Diagnosis Codes. 
+&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a> 
+&lt;br/>Product - UMLS Metathesaurus 
+&lt;br/>Please reference the NEMSIS Suggested Lists at: &lt;a href="http://nemsis.org/v3/resources.html" target="_blank">http://nemsis.org/v3/resources.html&lt;/a> 
+&lt;br/>
+&lt;br/>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
+
+&lt;br/>The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. The letters O and I are not used in order to avoid confusion with the digits 0 and 1. There are no decimals in ICD-10-PCS.
+&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov " target="_blank">http://uts.nlm.nih.gov&lt;/a> 
+&lt;br/>Product - UMLS Metathesaurus 
 							</comment>
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -241,7 +232,7 @@ Data Element Comment Section:
 						<xs:extension base="icd10MedSurge">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="PN" use="optional">
@@ -265,9 +256,6 @@ Data Element Comment Section:
 							<definition>Type of person medical history obtained from</definition>
 							<v2Number>E12_11</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -281,7 +269,7 @@ Data Element Comment Section:
 			</xs:element>
 			<xs:element name="eHistory.ImmunizationsGroup" id="eHistory.ImmunizationsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold Immunization type and date </xs:documentation>
+					<xs:documentation>Group Tag to hold Immunization type and date</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -296,27 +284,21 @@ Data Element Comment Section:
 										<definition>The immunization type of the patient.</definition>
 										<v2Number>E12_12</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eHistory.11" type="Year" id="eHistory.ImmunizationDate" minOccurs="0">
+						<xs:element name="eHistory.11" type="Year" id="eHistory.ImmunizationYear" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eHistory.11</number>
-										<name>Immunization Date</name>
+										<name>Immunization Year</name>
 										<national>No</national>
 										<state>No</state>
 										<definition>The year associated with each immunization type</definition>
 										<v2Number>E12_13</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -327,7 +309,7 @@ Data Element Comment Section:
 			</xs:element>
 			<xs:element name="eHistory.CurrentMedsGroup" id="eHistory.CurrentMedsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about patient's medication </xs:documentation>
+					<xs:documentation>Group Tag to hold info about patient's medication</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -342,7 +324,6 @@ Data Element Comment Section:
 										<definition>The medications the patient currently takes</definition>
 										<v2Number>E12_14</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>
 List of medications based on RxNorm (RXCUI) code. 
 &lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
@@ -352,7 +333,6 @@ List of medications based on RxNorm (RXCUI) code.
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 										</comment>
-										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -386,9 +366,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The numeric dose or amount of the patient's current medication</definition>
 										<v2Number>E12_15</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Associated with eHistory.12 (Current Medications)</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -404,9 +382,6 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The dosage unit of the patient's current medication</definition>
 										<v2Number>E12_16</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -422,9 +397,6 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The administration route (po, SQ, etc.) of the patient's current medication</definition>
 										<v2Number>E12_17</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -444,9 +416,6 @@ List of medications based on RxNorm (RXCUI) code.
 							<definition>Indication of the presence of the Emergency Information Form associated with patient's with special healthcare needs.</definition>
 							<v2Number>E12_18</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -465,8 +434,6 @@ List of medications based on RxNorm (RXCUI) code.
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -500,9 +467,6 @@ List of medications based on RxNorm (RXCUI) code.
 							<definition>Indication of the possibility by the patient's history of current pregnancy.</definition>
 							<v2Number>E12_20</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -528,9 +492,7 @@ List of medications based on RxNorm (RXCUI) code.
 							<national>No</national>
 							<state>No</state>
 							<definition>Date and Time of last oral intake.</definition>
-							
 							<usage>Optional</usage>
-							
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -585,7 +547,7 @@ List of medications based on RxNorm (RXCUI) code.
 			</xs:enumeration>
 			<xs:enumeration value="3105007">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3105009">
@@ -717,6 +679,11 @@ List of medications based on RxNorm (RXCUI) code.
 					<xs:documentation>Uncooperative</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3101031">
+				<xs:annotation>
+					<xs:documentation>State of Emotional Distress</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="CurrentMedicationDosageUnit">
@@ -726,117 +693,137 @@ List of medications based on RxNorm (RXCUI) code.
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3114001">
 				<xs:annotation>
-					<xs:documentation>cm</xs:documentation>
+					<xs:documentation>Centimeters (cm)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114003">
 				<xs:annotation>
-					<xs:documentation>gms</xs:documentation>
+					<xs:documentation>Grams (gms)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114005">
 				<xs:annotation>
-					<xs:documentation>gtts (drops)</xs:documentation>
+					<xs:documentation>Drops (gtts)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114007">
 				<xs:annotation>
-					<xs:documentation>inches</xs:documentation>
+					<xs:documentation>Inches (in)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114009">
 				<xs:annotation>
-					<xs:documentation>iu</xs:documentation>
+					<xs:documentation>International Units (IU)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114011">
 				<xs:annotation>
-					<xs:documentation>kvo (keep vein open)</xs:documentation>
+					<xs:documentation>Keep Vein Open (kvo)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114013">
 				<xs:annotation>
-					<xs:documentation>l/min (fluid administration)</xs:documentation>
+					<xs:documentation>Liters Per Minute (l/min [fluid])</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114015">
 				<xs:annotation>
-					<xs:documentation>liters</xs:documentation>
+					<xs:documentation>Liters (l)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114017">
 				<xs:annotation>
-					<xs:documentation>LPM (gas administration)</xs:documentation>
+					<xs:documentation>Liters Per Minute (LPM [gas])</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114019">
 				<xs:annotation>
-					<xs:documentation>mcg</xs:documentation>
+					<xs:documentation>Micrograms (mcg)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114021">
 				<xs:annotation>
-					<xs:documentation>mcg/kg/min</xs:documentation>
+					<xs:documentation>Micrograms per Kilogram per Minute (mcg/kg/min)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114023">
 				<xs:annotation>
-					<xs:documentation>mcg/min</xs:documentation>
+					<xs:documentation>Micrograms per Minute (mcg/min)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114025">
 				<xs:annotation>
-					<xs:documentation>meq</xs:documentation>
+					<xs:documentation>Milliequivalents (mEq)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114027">
 				<xs:annotation>
-					<xs:documentation>metered dose</xs:documentation>
+					<xs:documentation>Metered Dose (MDI)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114029">
 				<xs:annotation>
-					<xs:documentation>mg</xs:documentation>
+					<xs:documentation>Milligrams (mg)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114031">
 				<xs:annotation>
-					<xs:documentation>mg/kg</xs:documentation>
+					<xs:documentation>Milligrams per Kilogram (mg/kg)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114033">
 				<xs:annotation>
-					<xs:documentation>mg/kg/min</xs:documentation>
+					<xs:documentation>Milligrams per Kilogram Per Minute (mg/kg/min)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114035">
 				<xs:annotation>
-					<xs:documentation>mg/min</xs:documentation>
+					<xs:documentation>Milligrams per Minute (mg/min)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114037">
 				<xs:annotation>
-					<xs:documentation>ml</xs:documentation>
+					<xs:documentation>Milliliters (ml)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114039">
 				<xs:annotation>
-					<xs:documentation>ml/hr</xs:documentation>
+					<xs:documentation>Milliliters per Hour (ml/hr)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114041">
 				<xs:annotation>
-					<xs:documentation>other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114043">
 				<xs:annotation>
-					<xs:documentation>puffs</xs:documentation>
+					<xs:documentation>Puffs</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3114045">
 				<xs:annotation>
-					<xs:documentation>units/hr</xs:documentation>
+					<xs:documentation>Units per Hour (units/hr)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3114047">
+				<xs:annotation>
+					<xs:documentation>Micrograms per Kilogram (mcg/kg)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3114049">
+				<xs:annotation>
+					<xs:documentation>Units</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3114051">
+				<xs:annotation>
+					<xs:documentation>Units per Kilogram per Hour (units/kg/hr)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3114053">
+				<xs:annotation>
+					<xs:documentation>Units per Kilogram (units/kg)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

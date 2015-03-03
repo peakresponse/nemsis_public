@@ -4,17 +4,19 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The patient's carbon monoxide level measured in %COHb.</definition>
+<definition>The numeric value of the patient's carbon monoxide level measured as a percentage (%) of carboxyhemoglobin (COHb).</definition>
 <v2Number></v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
-<v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
+<v3Changes>Added to allow use of new patient monitoring devices.</v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
-  <CarbonMonoxideLevel baseType="integer">
+  <CarbonMonoxideLevel baseType="decimal">
     <facet name="minInclusive" value="0"/>
     <facet name="maxInclusive" value="100"/>
+    <facet name="totalDigits" value="3"/>
+    <facet name="fractionDigits" value="1"/>
   </CarbonMonoxideLevel>
 </restrictions>
 <attributes>
@@ -25,6 +27,7 @@
   <NV>
     <NV.NotApplicable><facet name="enumeration" value="7701001" annotation="Not Applicable"/></NV.NotApplicable>
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
+    <NV.NotReporting><facet name="enumeration" value="7701005" annotation="Not Reporting"/></NV.NotReporting>
   </NV>
 </attributes>
 </element>

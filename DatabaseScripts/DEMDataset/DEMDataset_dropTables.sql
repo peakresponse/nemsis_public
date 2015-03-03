@@ -1,3 +1,5 @@
+DROP TABLE [dFacility.15]
+DROP TABLE [dFacility.05]
 DROP TABLE [dFacility.04]
 DROP TABLE [dFacility.FacilityGroup]
 DROP TABLE [dFacilityGroup]

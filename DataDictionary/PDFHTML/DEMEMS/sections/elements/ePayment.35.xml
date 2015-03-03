@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="ePayment.35"  minOccurs="0"  maxOccurs="1"  dataTypeName="CityGnisCode"  isNillable="No">
+<element number="ePayment.35"  minOccurs="0"  maxOccurs="1"  dataTypeName="CityGnisCodePayment"  isNillable="No">
 <name>Patient's Employer's City</name>
 <national>No</national>
 <deprecated></deprecated>
@@ -8,13 +8,13 @@
 <v2Number>E07_29</v2Number>
 <usage>Optional</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
-<v3Comment>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
-  	<br/><br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-  	<br/><br/>GNIS Codes Website: <a>http://geonames.usgs.gov/domestic/download_data.htm</a></v3Comment>
+<v3Comment>The city elements within the ePayment section have been updated to allow free text. This is important for mailing address purposes to submit claims and identify the correct payer.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
-  <CityGnisCode baseType="positiveInteger">
-  </CityGnisCode>
+  <CityGnisCodePayment baseType="string">
+    <facet name="minLength" value="2"/>
+    <facet name="maxLength" value="30"/>
+  </CityGnisCodePayment>
 </restrictions>
 </element>

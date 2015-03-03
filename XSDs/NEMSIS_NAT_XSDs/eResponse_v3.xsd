@@ -7,7 +7,7 @@
 		<xs:sequence>
 			<xs:element name="eResponse.AgencyGroup" id="eResponse.AgencyGroup">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold EMS agency number and name </xs:documentation>
+					<xs:documentation>Group Tag to hold EMS agency number and name</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -95,7 +95,7 @@
 			</xs:element>
 			<xs:element name="eResponse.ServiceGroup" id="eResponse.ServiceGroup">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold details about EMS category of service and the stand by reason </xs:documentation>
+					<xs:documentation>Group Tag to hold details about EMS category of service and the stand by reason</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -211,7 +211,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc to return to service.
+							<comment>Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc. to return to service.
 							&lt;br/>&lt;br/>A response delay is any time delay that occurs from the time the unit is notified by dispatch (eTimes.03) to the time the unit arrived on scene (eTimes.06). 
 							</comment>
 						</nemsisTacDoc>
@@ -250,7 +250,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>A scene delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) to the time the unit left the scene (eTimes.09). </comment>
+							<comment>A scene delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) to the time the unit left the scene (eTimes.09).</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -321,10 +321,9 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Response</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>
-								Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc to return to service.								
-								&lt;br/>&lt;br/>If a patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the patient arrived at the destination (eTimes.10) until the time the unit is back in service (eTimes.13) or unit back at the home location (eTimes15) [whichever is the greater of the two times].
-								&lt;br/>&lt;br/>If no patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) until the unit is back in service (eTimes.13) or the unit back at the home location (eTimes.15) [whichever is the greater of the two times].							
+							<comment>Rendezvous Transport Unavailable added for situations where there is a wait for an EMS Transport Unit, a Ferry, Air Medical, etc. to return to service. 
+&lt;br/>&lt;br/>If a patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the patient arrived at the destination 		(eTimes.11) until the time the unit is back in service (eTimes.13) or unit back at the home location (eTimes.15) [whichever is the greater of the two times]. 
+&lt;br/>&lt;br/>If no patient is being transported by the unit, turn-around delay is any time delay that occurs from the time the unit arrived on scene (eTimes.06) until the unit is back in service (eTimes.13) or the unit back at the home location (eTimes.15) [whichever is the greater of the two times]. 
 							</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -579,7 +578,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2208015">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2208017">
@@ -595,7 +594,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="3"></xs:minLength>
-			<xs:maxLength value="32"></xs:maxLength>
+			<xs:maxLength value="50"></xs:maxLength>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EMSMileageOdometer">
@@ -640,7 +639,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="3"></xs:minLength>
-			<xs:maxLength value="32"></xs:maxLength>
+			<xs:maxLength value="50"></xs:maxLength>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EMSSceneUnitDelayReason">
@@ -695,7 +694,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2210019">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2210021">
@@ -745,7 +744,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2210039">
 				<xs:annotation>
-					<xs:documentation>Mechanical Issue-Unit, Equipment, etc</xs:documentation>
+					<xs:documentation>Mechanical Issue-Unit, Equipment, etc.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -844,7 +843,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2206019">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2206021">
@@ -891,7 +890,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2211013">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2211015">
@@ -936,7 +935,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2211031">
 				<xs:annotation>
-					<xs:documentation>Patient Condition Change (e.g. Unit Stopped)</xs:documentation>
+					<xs:documentation>Patient Condition Change (e.g., Unit Stopped)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -988,7 +987,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2212017">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2212019">
@@ -998,7 +997,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2212021">
 				<xs:annotation>
-					<xs:documentation>Route Obstruction (e.g. Train)</xs:documentation>
+					<xs:documentation>Route Obstruction (e.g., Train)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2212023">
@@ -1070,7 +1069,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2209013">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2209015">
@@ -1080,7 +1079,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2209017">
 				<xs:annotation>
-					<xs:documentation>Route Obstruction (e.g., train)</xs:documentation>
+					<xs:documentation>Route Obstruction (e.g., Train)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2209019">
@@ -1181,7 +1180,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2215015">
 				<xs:annotation>
-					<xs:documentation>ALS-Community Paramedicine </xs:documentation>
+					<xs:documentation>ALS-Community Paramedicine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2215017">
@@ -1206,11 +1205,6 @@
 			<xs:documentation>The Primary role of the EMS Unit which responded to this specific EMS incident.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="2207001">
-				<xs:annotation>
-					<xs:documentation>Air Transport &lt;span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/span></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="2207003">
 				<xs:annotation>
 					<xs:documentation>Ground Transport</xs:documentation>

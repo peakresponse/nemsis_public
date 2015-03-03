@@ -2,6 +2,54 @@ NEMSIS Schematron Change Log
 
 
 
+3.4.0.150302
+
+
+NEMSIS V3 Schematron Guide
+
+Verifying Validity of Schematron files: Added example commands for validating Schematron files.
+XSLT 2 Query Language Binding: Added section.
+XSLT document() Function: Added section.
+NEMSIS Schematron Development Kit: Added section.
+Reference Implementation: Added note about @document attribute in SVRL output. Added note about using APIs.
+
+
+National Patterns and Rules
+
+nemSch_consistency_dAgency.13: Added pattern.
+nemSch_consistency_dAgency.05_dAgency.06: Renamed pattern to nemSch_consistency_dAgency.ServiceGroup. Renamed rule and assert. Added rule nemSch_consistency_dAgency.ServiceGroup_dAgency.07.
+nemSch_consistency_delay: Renamed pattern to nemSch_uniqueness_EMSDataSet. Renamed rules and asserts. Added rules and asserts for other recurring national elements that have an enumerated value choice that is exclusive of other choices.
+nemSch_consistency_eArrest.03_eArrest.09: Renamed asserts. Added asserts to constrain eArrest.09 based on eArrest.03.
+nemSch_consistency_eArrest: Added constraint for eArrest.17.
+nemSch_consistency_eDisposition.12: Added constraints for additional elements that should be recorded based on eDisposition.12.
+nemSch_consistency_eDisposition: Added pattern.
+nemSch_consistency_eInjury: Added exclusion when there is no patient.
+nemSch_consistency_ePatient: Added pattern.
+nemSch_consistency_eScene: Added assert nemSch_consistency_eScene.07_mci_eScene.08. Added rule nemSch_consistency_eScene.21.
+nemSch_consistency_eSituation: Added rule nemSch_consistency_eSituation_injury.
+nemSch_consistency_group: Added rule nemSch_consistency_eMedications.DosageGroup.
+nemSch_consistency_nilNvPn: Removed references to eInjury.04 (no longer allows @PN). Updated text in assert nemSch_nilNvPn_nil_Nv.
+nemSch_format_ansi: Removed pattern.
+nemSch_lookup_elements: Updated element list.
+nemSch_sequence_dAgency.AgencyYearGroup: Added pattern.
+nemSch_sequence_time: Added new elements eArrest.19 and eSituation.18. Added asserts to constrain times to be no later than the current time. Added asserts to constrain eLabs.01, eMedications.01, eProcedures.01, and eVitals.01 to be no later than eTimes.07 when "Prior to This Unit's Care" is "Yes".
+nemSch_uniqueness_DEMDataSet: Added pattern.
+nemSch_uniqueness_NvPn: Added pattern.
+
+
+Documentation Interface
+
+Added Overview page
+Added data dictionary links to NEMSIS element names
+Improved and simplified layout
+
+
+Schemas
+
+nemsis-schematron.sch: Improved validation of nemsisDiagnostic to not be sensitive to differences in whitespace-only text nodes.
+
+
+
 3.3.4-141104
 
 

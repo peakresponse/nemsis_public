@@ -5,7 +5,7 @@
 		<xs:sequence>
 			<xs:element name="dConfiguration.ConfigurationGroup" id="dConfiguration.ConfigurationGroup" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold agency Configuration information </xs:documentation>
+					<xs:documentation>Group Tag to hold agency Configuration information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -189,7 +189,7 @@
 						</xs:element>
 						<xs:element name="dConfiguration.ProcedureGroup" id="dConfiguration.AgencyProcedureGroup" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about Procedure information </xs:documentation>
+								<xs:documentation>Group Tag to hold info about Procedure information</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -273,7 +273,7 @@
 						</xs:element>
 						<xs:element name="dConfiguration.MedicationGroup" id="dConfiguration.AgencyMedicationGroup" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about Medication information </xs:documentation>
+								<xs:documentation>Group Tag to hold info about Medication information</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -333,7 +333,7 @@
 
 &lt;br/>&lt;br/>Product - UMLS Metathesaurus 
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
-&lt;br/>Product - RxNorm Full Monthly Release </comment>
+&lt;br/>Product - RxNorm Full Monthly Release</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -541,7 +541,7 @@
 										<definition>The name or ID of the dispatch center (Primary or Secondary Service Answering Point - PSAP) that dispatches the EMS agency.</definition>
 										<usage>Optional</usage>
 										<performanceMeasures/>
-										<comment>This element can be used to identify the dispatch center (Primary or Secondary Service Answering Point - PSAP) that dispatches the EMS agency.  If the EMS agency is able to populate the Patient Care Report (PCR) with CAD specific details (times, incident address information, crew information, EMD, etc) the name or ID of the dispatch center should be documented. Information in dConfiguration.17 may be used to populate eDispatch.04 - Computer Aided Dispatch (CAD) Name or ID if a CAD integration exists.</comment>
+										<comment>This element can be used to identify the dispatch center (Primary or Secondary Service Answering Point - PSAP) that dispatches the EMS agency. If the EMS agency is able to populate the Patient Care Report (PCR) with CAD specific details (times, incident address information, crew information, EMD, etc.) the name or ID of the dispatch center should be documented. Information in dConfiguration.17 may be used to populate eDispatch.04 - Computer Aided Dispatch (CAD) Name or ID if a CAD integration exists.</comment>
 										<v3Changes>Added to the dataset to assist in identifying the CAD / dispatch center providing information to the EMS agency and ePCR when there are multiple dispatch centers sending resources to the same EMS incident.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -668,7 +668,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="DispatchCenterCADNameorID">
 		<xs:annotation>
-			<xs:documentation>The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable.  </xs:documentation>
+			<xs:documentation>The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>

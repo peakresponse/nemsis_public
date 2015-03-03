@@ -20,9 +20,6 @@
 										<definition>The unique manufacturer's serial number associated with a medical device.</definition>
 										<v2Number>D09_01</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -32,15 +29,12 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dDevice.02</number>
-										<name>Medical Device Name or ID </name>
+										<name>Medical Device Name or ID</name>
 										<national>No</national>
 										<state>No</state>
 										<definition>The local number or configurable Name/ID of the medical device.</definition>
 										<v2Number>D09_02</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -54,11 +48,8 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The type of medical device.</definition>
-										
 										<usage>Optional</usage>
-										
 										<comment>This is multiple choice to allow documentation of various multifunction device configurations.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -75,15 +66,12 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dDevice.04</number>
-										<name>Medical Device Manufacturer </name>
+										<name>Medical Device Manufacturer</name>
 										<national>No</national>
 										<state>No</state>
 										<definition>The manufacturer of the medical device.</definition>
 										<v2Number>D09_03</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -99,9 +87,6 @@
 										<definition>The specific manufacturer's model number associated with medical device.</definition>
 										<v2Number>D09_04</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -117,9 +102,6 @@
 										<definition>The date the device was purchased or placed in service by the EMS agency.</definition>
 										<v2Number>D09_05</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -210,7 +192,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="1603023">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1603025">

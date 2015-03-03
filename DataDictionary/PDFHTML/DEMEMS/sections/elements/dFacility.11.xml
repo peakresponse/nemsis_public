@@ -14,7 +14,7 @@
 <deprecatedComment></deprecatedComment>
 <restrictions>
   <ANSICountyCode baseType="string">
-    <facet name="length" value="5"/>
+    <facet name="pattern" value="[0-9]{5}"/>
   </ANSICountyCode>
 </restrictions>
 </element>

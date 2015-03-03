@@ -4,17 +4,19 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>No</state>
-<definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
+<definition>The numeric value of the patient's carbon monoxide level measured as a percentage (%) of carboxyhemoglobin (COHb).</definition>
 <v2Number></v2Number>
 <usage>Optional</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment></v3Comment>
-<v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
+<v3Changes>Added to allow use of a new patient monitoring devices.</v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
-  <CarbonMonoxideLevel baseType="integer">
+  <CarbonMonoxideLevel baseType="decimal">
     <facet name="minInclusive" value="0"/>
     <facet name="maxInclusive" value="100"/>
+    <facet name="totalDigits" value="3"/>
+    <facet name="fractionDigits" value="1"/>
   </CarbonMonoxideLevel>
 </restrictions>
 </element>

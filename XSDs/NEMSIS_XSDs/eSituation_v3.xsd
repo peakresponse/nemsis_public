@@ -3,15 +3,15 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eSituation" id="eSituation.Situation">
 		<xs:sequence>
-			<xs:element name="eSituation.01" nillable="true" id="eSituation.DateTimeofSymptomOnsetLastNormal">
+			<xs:element name="eSituation.01" nillable="true" id="eSituation.DateTimeofSymptomOnset">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eSituation.01</number>
-							<name>Date/Time of Symptom Onset/Last Normal</name>
+							<name>Date/Time of Symptom Onset</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The date and time the symptom began as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals.</definition>
+							<definition>The date and time the symptom began (or was discovered) as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals.</definition>
 							<v2Number>E05_01</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -23,8 +23,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>For stroke related events, this is the date and time the patient was last seen normal. For cardiac or respiratory arrest related events, this is the date and time the patient was last known to have a pulse or when interaction was had with the patient. For drowning related events, this is the date and time the patient was last seen. The intent of this element is to document the estimate date and time the patient was last known to be in their normal state.
-							  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
   &lt;tr>&lt;td align="center">yyyy&lt;/td>&lt;td>a four-digit numeral that represents the year&lt;/td>&lt;/tr>
@@ -103,7 +102,7 @@
 			</xs:element>
 			<xs:element name="eSituation.PatientComplaintGroup" id="eSituation.PatientComplaintGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold information about patient's complaint </xs:documentation>
+					<xs:documentation>Group Tag to hold information about patient's complaint</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -521,7 +520,7 @@
 			</xs:element>
 			<xs:element name="eSituation.WorkRelatedGroup" id="eSituation.WorkRelatedGroup" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold patient details if the illness or injury is work related </xs:documentation>
+					<xs:documentation>Group Tag to hold patient details if the illness or injury is work related</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -615,6 +614,34 @@
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="eSituation.18" id="eTimes.DateTimeLastKnownWell" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eSituation.18</number>
+							<name>Date/Time Last Known Well</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The estimated date and time the patient was last known to be well or in their usual state of health. This is described or estimated by the patient, family, and/or bystanders.</definition>
+							<usage>Optional</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>For stroke related events, this is the date and time the patient was last seen normal. For cardiac or respiratory arrest related events, this is the date and time the patient was last known to have a pulse or when interaction was had with the patient. For drowning related events, this is the date and time the patient was last seen. For injury or trauma related events, this is the date and time the patient was injured.</comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="DateTimeType"/>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
@@ -763,7 +790,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2803003">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2803005">
@@ -1043,7 +1070,7 @@
 			<xs:documentation>The sign and symptom present in the patient or observed by EMS personnel</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,4})?|(R73\.9)|(R99))|([A-QSTZ][0-9]{2})((\.[0-9A-Z]{1,4})?)"/>
+			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,4})?|(R73\.9)|(R99))|([A-QSTZ][0-9][0-9A-Z])((\.[0-9A-Z]{1,4})?)"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ProvidersImpression">
@@ -1051,7 +1078,7 @@
 			<xs:documentation>The EMS personnel's impression of the patient's primary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,3})?|(R73\.9)|(R99))|([A-QSTZ][0-9]{2})((\.[0-9A-Z]{1,4})?)"/>
+			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,4})?|(R73\.9)|(R99))|([A-QSTZ][0-9][0-9A-Z])((\.[0-9A-Z]{1,4})?)"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TimeUnitsOfChiefComplaint">

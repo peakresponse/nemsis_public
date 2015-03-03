@@ -85,7 +85,7 @@
 'EMSDataSet'|'element'|'eScene.19'|'Incident ZIP Code'|'NV'|
 'EMSDataSet'|'element'|'eScene.20'|'Scene Cross Street or Directions'|'NV'|
 'EMSDataSet'|'element'|'eScene.21'|'Incident County'|'NV'|
-'EMSDataSet'|'element'|'eSituation.01'|'Date/Time of Symptom Onset/Last Normal'|'NV'|
+'EMSDataSet'|'element'|'eSituation.01'|'Date/Time of Symptom Onset'|'NV'|
 'EMSDataSet'|'element'|'eSituation.02'|'Possible Injury'|'NV'|
 'EMSDataSet'|'group'|'eSituation.PatientComplaintGroup'|''|'CorrelationID'|
 'EMSDataSet'|'element'|'eSituation.03'|'Complaint Type'|'NV'|
@@ -111,7 +111,6 @@
 'EMSDataSet'|'element'|'eInjury.03'|'Trauma Center Criteria'|'NV'|
 'EMSDataSet'|'element'|'eInjury.03'|'Trauma Center Criteria'|'CorrelationID'|
 'EMSDataSet'|'element'|'eInjury.04'|'Vehicular, Pedestrian, or Other Injury Risk Factor'|'NV'|
-'EMSDataSet'|'element'|'eInjury.04'|'Vehicular, Pedestrian, or Other Injury Risk Factor'|'PN'|
 'EMSDataSet'|'element'|'eInjury.04'|'Vehicular, Pedestrian, or Other Injury Risk Factor'|'CorrelationID'|
 'EMSDataSet'|'element'|'eInjury.07'|'Use of Occupant Safety Equipment'|'NV'|
 'EMSDataSet'|'element'|'eInjury.07'|'Use of Occupant Safety Equipment'|'CorrelationID'|
@@ -135,7 +134,6 @@
 'EMSDataSet'|'element'|'eArrest.08'|'Who Used AED Prior to EMS Arrival'|'CorrelationID'|
 'EMSDataSet'|'element'|'eArrest.09'|'Type of CPR Provided'|'NV'|
 'EMSDataSet'|'element'|'eArrest.09'|'Type of CPR Provided'|'CorrelationID'|
-'EMSDataSet'|'element'|'eArrest.10'|'Therapeutic Hypothermia Initiated'|'NV'|
 'EMSDataSet'|'element'|'eArrest.11'|'First Monitored Arrest Rhythm of the Patient'|'NV'|
 'EMSDataSet'|'element'|'eArrest.12'|'Any Return of Spontaneous Circulation'|'NV'|
 'EMSDataSet'|'element'|'eArrest.12'|'Any Return of Spontaneous Circulation'|'CorrelationID'|
@@ -189,8 +187,8 @@
 'EMSDataSet'|'element'|'eVitals.12'|'Pulse Oximetry'|'NV'|
 'EMSDataSet'|'element'|'eVitals.14'|'Respiratory Rate'|'PN'|
 'EMSDataSet'|'element'|'eVitals.14'|'Respiratory Rate'|'NV'|
-'EMSDataSet'|'element'|'eVitals.16'|'Carbon Dioxide (CO2)'|'PN'|
-'EMSDataSet'|'element'|'eVitals.16'|'Carbon Dioxide (CO2)'|'NV'|
+'EMSDataSet'|'element'|'eVitals.16'|'End Tidal Carbon Dioxide (ETCO2)'|'PN'|
+'EMSDataSet'|'element'|'eVitals.16'|'End Tidal Carbon Dioxide (ETCO2)'|'NV'|
 'EMSDataSet'|'element'|'eVitals.17'|'Carbon Monoxide (CO)'|'PN'|
 'EMSDataSet'|'element'|'eVitals.17'|'Carbon Monoxide (CO)'|'NV'|
 'EMSDataSet'|'element'|'eVitals.18'|'Blood Glucose Level'|'PN'|
@@ -257,6 +255,8 @@
 'EMSDataSet'|'element'|'eExam.19'|'Mental Status Assessment'|'PN'|
 'EMSDataSet'|'element'|'eExam.20'|'Neurological Assessment'|'CorrelationID'|
 'EMSDataSet'|'element'|'eExam.20'|'Neurological Assessment'|'PN'|
+'EMSDataSet'|'element'|'eExam.21'|'Stroke/CVA Symptoms Resolved'|'PN'|
+'EMSDataSet'|'element'|'eExam.21'|'Stroke/CVA Symptoms Resolved'|'NV'|
 'EMSDataSet'|'group'|'eProtocols.ProtocolGroup'|''|'CorrelationID'|
 'EMSDataSet'|'element'|'eProtocols.01'|'Protocols Used'|'NV'|
 'EMSDataSet'|'element'|'eProtocols.02'|'Protocol Age Category'|'NV'|
@@ -296,7 +296,7 @@
 'EMSDataSet'|'element'|'eAirway.07'|'Crew Member ID'|'NV'|
 'EMSDataSet'|'element'|'eAirway.08'|'Airway Complications Encountered'|'NV'|
 'EMSDataSet'|'element'|'eAirway.08'|'Airway Complications Encountered'|'CorrelationID'|
-'EMSDataSet'|'element'|'eAirway.09'|'Suspected Reasons for Failed Airway Procedure'|'CorrelationID'|
+'EMSDataSet'|'element'|'eAirway.09'|'Suspected Reasons for Failed Airway Management'|'CorrelationID'|
 'EMSDataSet'|'group'|'eDevice.DeviceGroup'|''|'CorrelationID'|
 'EMSDataSet'|'element'|'eDevice.03'|'Medical Device Event Type'|'CorrelationID'|
 'EMSDataSet'|'element'|'eDevice.07'|'Medical Device ECG Lead'|'CorrelationID'|
@@ -313,12 +313,12 @@
 'EMSDataSet'|'element'|'eDisposition.17'|'Transport Mode from Scene'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'CorrelationID'|
-'EMSDataSet'|'element'|'eDisposition.19'|'Condition of Patient at Destination'|'NV'|
+'EMSDataSet'|'element'|'eDisposition.19'|'Final Patient Acuity'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.20'|'Reason for Choosing Destination'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.20'|'Reason for Choosing Destination'|'CorrelationID'|
 'EMSDataSet'|'element'|'eDisposition.21'|'Type of Destination'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.22'|'Hospital In-Patient Destination'|'NV'|
-'EMSDataSet'|'element'|'eDisposition.23'|'Hospital Designation'|'NV'|
+'EMSDataSet'|'element'|'eDisposition.23'|'Hospital Capability'|'NV'|
 'EMSDataSet'|'group'|'eDisposition.HospitalTeamActivationGroup'|''|'CorrelationID'|
 'EMSDataSet'|'element'|'eDisposition.24'|'Destination Team Pre-Arrival Alert or Activation'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.25'|'Date/Time of Destination Prearrival Alert or Activation'|'NV'|

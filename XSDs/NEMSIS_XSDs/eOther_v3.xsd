@@ -50,7 +50,7 @@
 			</xs:element>
 			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about the EMS Crew Member </xs:documentation>
+					<xs:documentation>Group Tag to hold info about the EMS Crew Member</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -210,15 +210,15 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eOther.09" id="eOther.ExternalElectronicDocuments" minOccurs="0">
+						<xs:element name="eOther.09" id="eOther.ExternalElectronicDocumentType" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eOther.09</number>
-										<name>External Electronic Documents</name>
+										<name>External Electronic Document Type</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Document types which have been electronically stored with PCR.</definition>
+										<definition>Document type which has been electronically stored with PCR.</definition>
 										<usage>Optional</usage>
 										<comment>Added to allow an improved implementation of electronic healthcare records.</comment>
 										<v3Changes>Added to allow an improved implementation of electronic healthcare records.</v3Changes>
@@ -295,7 +295,7 @@
 			</xs:element>
 			<xs:element name="eOther.SignatureGroup" id="eOther.SignatureGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold signature details </xs:documentation>
+					<xs:documentation>Group Tag to hold signature details</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -314,7 +314,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eOther.13" type="SignatureReason" id="eOther.SignatureReason" minOccurs="0">
+						<xs:element name="eOther.13" type="SignatureReason" id="eOther.SignatureReason" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -507,7 +507,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4509001">
 				<xs:annotation>
-					<xs:documentation>Audio Recording</xs:documentation>
+					<xs:documentation>Other Audio Recording</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4509003">
@@ -517,7 +517,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4509005">
 				<xs:annotation>
-					<xs:documentation>Diagnostic Image (CT, X-ray, US, etc)</xs:documentation>
+					<xs:documentation>Diagnostic Image (CT, X-ray, US, etc.)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4509007">
@@ -537,12 +537,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="4509013">
 				<xs:annotation>
-					<xs:documentation>Healthcare Record</xs:documentation>
+					<xs:documentation>Other Healthcare Record</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4509015">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4509017">
@@ -557,17 +557,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="4509021">
 				<xs:annotation>
-					<xs:documentation>Picture/Graphic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4509023">
-				<xs:annotation>
-					<xs:documentation>Sound Recording</xs:documentation>
+					<xs:documentation>Other Picture/Graphic</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4509025">
 				<xs:annotation>
-					<xs:documentation>Video/Movie</xs:documentation>
+					<xs:documentation>Other Video/Movie</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -638,7 +633,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4503019">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4503021">
@@ -685,7 +680,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4502011">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4502013">
@@ -817,7 +812,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4514041">
 				<xs:annotation>
-					<xs:documentation>Relative (Not Listed)</xs:documentation>
+					<xs:documentation>Other Relative</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4514043">
@@ -854,7 +849,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4513001">
 				<xs:annotation>
-					<xs:documentation>HIPAA acknowledgement/Release </xs:documentation>
+					<xs:documentation>HIPAA acknowledgement/Release</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4513003">
@@ -869,7 +864,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4513007">
 				<xs:annotation>
-					<xs:documentation>Transfer of Patient Care </xs:documentation>
+					<xs:documentation>Transfer of Patient Care</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4513009">
@@ -1163,7 +1158,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4506005">
 				<xs:annotation>
-					<xs:documentation>Death-Other (Not Listed)</xs:documentation>
+					<xs:documentation>Death-Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4506007">
@@ -1213,7 +1208,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4506025">
 				<xs:annotation>
-					<xs:documentation>Injury-Other (Not Listed)</xs:documentation>
+					<xs:documentation>Injury-Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4506027">
@@ -1223,7 +1218,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4506029">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

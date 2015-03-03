@@ -1,15 +1,14 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eSituation.01"  minOccurs="1"  maxOccurs="1"  dataTypeName="DateTimeType"  isNillable="Yes">
-<name>Date/Time of Symptom Onset/Last Normal</name>
+<name>Date/Time of Symptom Onset</name>
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The date and time the symptom began as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals.</definition>
+<definition>The date and time the symptom began (or was discovered) as it relates to this EMS event. This is described or estimated by the patient, family, and/or healthcare professionals.</definition>
 <v2Number>E05_01</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>For stroke related events, this is the date and time the patient was last seen normal. For cardiac or respiratory arrest related events, this is the date and time the patient was last known to have a pulse or when interaction was had with the patient. For drowning related events, this is the date and time the patient was last seen. The intent of this element is to document the estimate date and time the patient was last known to be in their normal state.
-							  	<br/><br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
+<v3Comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
 <table border="1px" cellpadding="3px" cellspacing="0">
   <tr><td align="center">yyyy</td><td>a four-digit numeral that represents the year</td></tr>

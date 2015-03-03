@@ -396,7 +396,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 						</xs:element>
 						<xs:element name="dPersonnel.ImmunizationsGroup" id="dPersonnel.PersonnelImmunizationsGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold Immunization type and date </xs:documentation>
+								<xs:documentation>Group Tag to hold Immunization type and date</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -538,7 +538,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<definition>The personnel's state EMS certification level.</definition>
 													<v2Number>D08_15</v2Number>
 													<usage>Recommended</usage>
-													<comment>Added 2009 EMS Education Levels.&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.&lt;br/>&lt;br/>Some listed health care providers may not have an EMS certification/licensure number, however their level should be indicated from the list above and the state licensure number should be indicated in dPersonnel.23 - EMS Personnel's State's Licensure ID Number. </comment>
+													<comment>Added 2009 EMS Education Levels.&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.&lt;br/>&lt;br/>Some listed health care providers may not have an EMS certification/licensure number, however their level should be indicated from the list above and the state licensure number should be indicated in dPersonnel.23 - EMS Personnel's State's Licensure ID Number.</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -547,7 +547,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 												<xs:extension base="MemberLevel">
 													<xs:attribute name="NV" use="optional">
 														<xs:simpleType>
-															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 														</xs:simpleType>
 													</xs:attribute>
 												</xs:extension>
@@ -727,7 +727,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<state>Yes</state>
 										<definition>The individuals primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.</definition>
 										<usage>Recommended</usage>
-										<comment>This is a single choice data element which should reflect the EMS Personnel's primary/main job role for which he/she functions. It is understood that most EMS personnel perform more than one role as a part of their position. Other roles should be documented in dPersonnel.35 (EMS Personnel's Other Job Responsibilities). </comment>
+										<comment>This is a single choice data element which should reflect the EMS Personnel's primary/main job role for which he/she functions. It is understood that most EMS personnel perform more than one role as a part of their position. Other roles should be documented in dPersonnel.35 (EMS Personnel's Other Job Responsibilities).</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -806,12 +806,12 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="dPersonnel.38" type="MemberLevel" id="dPersonnel.EMSProfessionalsPracticeLevel" minOccurs="0">
+									<xs:element name="dPersonnel.38" type="MemberLevel" id="dPersonnel.EMSPersonnelsPracticeLevel" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>dPersonnel.38</number>
-													<name>EMS Professional's Practice Level</name>
+													<name>EMS Personnel's Practice Level</name>
 													<national>No</national>
 													<state>No</state>
 													<definition>The EMS certification level at which the individual is providing patient care services for the EMS agency.</definition>
@@ -822,12 +822,12 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="dPersonnel.39" type="DateType" id="dPersonnel.DateofProfessionalsCertificationorLicensureforAgency" minOccurs="0">
+									<xs:element name="dPersonnel.39" type="DateType" id="dPersonnel.DateofPersonnelsCertificationorLicensureforAgency" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>dPersonnel.39</number>
-													<name>Date of Professional's Certification or Licensure for Agency</name>
+													<name>Date of Personnel's Certification or Licensure for Agency</name>
 													<national>No</national>
 													<state>No</state>
 													<definition>The date that the Certification/Licensure was achieved for the local EMS agency.</definition>
@@ -948,7 +948,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 			<xs:enumeration value="1534013">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1534015">
@@ -976,9 +976,9 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			<xs:documentation>The national registration number associated with the level of certification/licensure obtained through NREMT</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="1529901">
+			<xs:enumeration value="1529001">
 				<xs:annotation>
-					<xs:documentation>2009 Advanced Emergency Medical Technician(AEMT)</xs:documentation>
+					<xs:documentation>2009 Advanced Emergency Medical Technician (AEMT)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1529003">
@@ -1600,7 +1600,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 			<xs:enumeration value="1517015">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1517017">

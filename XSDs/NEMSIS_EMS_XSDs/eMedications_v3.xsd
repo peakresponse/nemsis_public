@@ -176,7 +176,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 						</xs:element>
 						<xs:element name="eMedications.DosageGroup" id="eMedications.DosageGroup">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about the medication dosage given to the patient </xs:documentation>
+								<xs:documentation>Group Tag to hold info about the medication dosage given to the patient</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -458,11 +458,6 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 					<xs:documentation>Injury</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3708027">
-				<xs:annotation>
-					<xs:documentation>Itching/Urticaria &lt;span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/span></xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3708029">
 				<xs:annotation>
 					<xs:documentation>Nausea</xs:documentation>
@@ -475,7 +470,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 			</xs:enumeration>
 			<xs:enumeration value="3708033">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3708035">
@@ -526,77 +521,144 @@ DEEDS Version 1.0 was utilized for this list:  http://www.cdc.gov/ncipc/pub-res/
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3706001">
 				<xs:annotation>
-					<xs:documentation>Grams</xs:documentation>
+					<xs:documentation>Grams (gms)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706003">
 				<xs:annotation>
-					<xs:documentation>Inches</xs:documentation>
+					<xs:documentation>Inches (in)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706005">
 				<xs:annotation>
-					<xs:documentation>International Units</xs:documentation>
+					<xs:documentation>International Units (IU)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706007">
 				<xs:annotation>
-					<xs:documentation>Keep Vein Open (To Keep Open)</xs:documentation>
+					<xs:documentation>Keep Vein Open (kvo)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706009">
 				<xs:annotation>
-					<xs:documentation>Liters</xs:documentation>
+					<xs:documentation>Liters (l)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706011">
 				<xs:annotation>
-					<xs:documentation>Liters Per Minute</xs:documentation>
+					<xs:documentation>Liters Per Minute (l/min [fluid])</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706013">
 				<xs:annotation>
-					<xs:documentation>MDI Puffs</xs:documentation>
+					<xs:documentation>Metered Dose (MDI)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706015">
 				<xs:annotation>
-					<xs:documentation>Micrograms</xs:documentation>
+					<xs:documentation>Micrograms (mcg)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706017">
 				<xs:annotation>
-					<xs:documentation>Micrograms per Kilogram per Minute</xs:documentation>
+					<xs:documentation>Micrograms per Kilogram per Minute (mcg/kg/min)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706019">
 				<xs:annotation>
-					<xs:documentation>Milliequivalents</xs:documentation>
+					<xs:documentation>Milliequivalents (mEq)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706021">
 				<xs:annotation>
-					<xs:documentation>Milligrams</xs:documentation>
+					<xs:documentation>Milligrams (mg)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706023">
 				<xs:annotation>
-					<xs:documentation>Milligrams Per Kilogram Per Minute</xs:documentation>
+					<xs:documentation>Milligrams per Kilogram Per Minute (mg/kg/min)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706025">
 				<xs:annotation>
-					<xs:documentation>Milliliters</xs:documentation>
+					<xs:documentation>Milliliters (ml)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706027">
 				<xs:annotation>
-					<xs:documentation>Milliliters Per Hour</xs:documentation>
+					<xs:documentation>Milliliters per Hour (ml/hr)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3706029">
 				<xs:annotation>
 					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			
+			
+			
+			
+			
+			
+			
+			<xs:enumeration value="3706031">
+				<xs:annotation>
+					<xs:documentation>Centimeters (cm)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706033">
+				<xs:annotation>
+					<xs:documentation>Drops (gtts)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706035">
+				<xs:annotation>
+					<xs:documentation>Liters Per Minute (LPM [gas])</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706037">
+				<xs:annotation>
+					<xs:documentation>Micrograms per Minute (mcg/min)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706039">
+				<xs:annotation>
+					<xs:documentation>Milligrams per Kilogram (mg/kg)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706041">
+				<xs:annotation>
+					<xs:documentation>Milligrams per Minute (mg/min)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706043">
+				<xs:annotation>
+					<xs:documentation>Puffs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706045">
+				<xs:annotation>
+					<xs:documentation>Units per Hour (units/hr)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706047">
+				<xs:annotation>
+					<xs:documentation>Micrograms per Kilogram (mcg/kg)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706049">
+				<xs:annotation>
+					<xs:documentation>Units</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706051">
+				<xs:annotation>
+					<xs:documentation>Units per Kilogram per Hour (units/kg/hr)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3706053">
+				<xs:annotation>
+					<xs:documentation>Units per Kilogram (units/kg)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

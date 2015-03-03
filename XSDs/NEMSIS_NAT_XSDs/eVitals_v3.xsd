@@ -420,18 +420,18 @@
 							</xs:complexType>
 						</xs:element>
 						
-						<xs:element name="eVitals.16" nillable="true" id="eVitals.CarbonDioxideCO2">
+						<xs:element name="eVitals.16" nillable="true" id="eVitals.EndTidalCarbonDioxideETCO2">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eVitals.16</number>
-										<name>Carbon Dioxide (CO2)</name>
+										<name>End Tidal Carbon Dioxide (ETCO2)</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The numeric value of the patient's end-tidal CO2 level.</definition>
+										<definition>The numeric value of the patient's exhaled end tidal carbon dioxide (ETCO2) level measured as a unit of pressure in millimeters of mercury (mmHg).</definition>
 										<v2Number>E14_13</v2Number>
 										<usage>Required</usage>
-										<comment>Generally the numeric CO2 level is measured in millimeters of mercury (mmHg). End-tidal is the same as exhaled.</comment>
+										<comment></comment>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -477,6 +477,7 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
+										<Comment>For glucometers with "High" and "Low" readings, report "600" for "High" and "20" for "Low". </Comment>
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -691,7 +692,6 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Definition changed to indicate highest level of responsiveness.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -704,7 +704,6 @@
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
-									
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -730,7 +729,7 @@
 														<performanceMeasure>STEMI</performanceMeasure>
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>The Pain Score can be obtained from several pain measurement tools or pain scale types (eVitals.28). The pain scale type used should have a numeric value associated with each diagram as appropriate. If the pain scale type utilizes multiple indicators/categories the total should be calculated and entered for the pain score associated with the patient assessment. </comment>
+													<comment>The Pain Score can be obtained from several pain measurement tools or pain scale types (eVitals.28). The pain scale type used should have a numeric value associated with each diagram as appropriate. If the pain scale type utilizes multiple indicators/categories the total should be calculated and entered for the pain score associated with the patient assessment.</comment>
 													<PNNil>Yes</PNNil>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -948,9 +947,11 @@
 		<xs:annotation>
 			<xs:documentation>The patient's carboxyhemoglobin level measured as a percentage of carboxyhemoglobin in the blood either from a blood sample or CO-oximeter.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:integer">
+		<xs:restriction base="xs:decimal">
 			<xs:minInclusive value="0"></xs:minInclusive>
 			<xs:maxInclusive value="100"></xs:maxInclusive>
+			<xs:totalDigits value="3"></xs:totalDigits>
+			<xs:fractionDigits value="1"></xs:fractionDigits>
 		</xs:restriction>
 		
 	</xs:simpleType>
@@ -960,7 +961,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="0"></xs:minInclusive>
-			<xs:maxInclusive value="100"></xs:maxInclusive>
+			<xs:maxInclusive value="200"></xs:maxInclusive>
 		</xs:restriction>
 		
 	</xs:simpleType>
@@ -1042,7 +1043,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3304009">
 				<xs:annotation>
-					<xs:documentation>12 Lead-Right Sided </xs:documentation>
+					<xs:documentation>12 Lead-Right Sided</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3304011">
@@ -1394,7 +1395,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3315005">
 				<xs:annotation>
-					<xs:documentation>Mechanically Assisted (BVM, CPAP,etc)</xs:documentation>
+					<xs:documentation>Mechanically Assisted (BVM, CPAP, etc.)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3315007">
@@ -1490,7 +1491,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3328005">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3328007">

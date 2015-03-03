@@ -43,7 +43,7 @@
 							<name>Cardiac Arrest Etiology</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.) </definition>
+							<definition>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.)</definition>
 							<v2Number>E11_02</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -85,7 +85,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="ResucitationAttempted">
+						<xs:extension base="ResuscitationAttempted">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -268,34 +268,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.10" nillable="true" id="eArrest.TherapeuticHypothermiaInitiated">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eArrest.10</number>
-							<name>Therapeutic Hypothermia Initiated</name>
-							<national>Yes</national>
-							<state>Yes</state>
-							<definition>Documentation of EMS initiation of Therapeutic Hypothermia.</definition>
-							<usage>Required</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-							</performanceMeasuresGroup>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="YesNoValues">
-							<xs:attribute name="NV" use="optional">
-								<xs:simpleType>
-									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
-								</xs:simpleType>
-							</xs:attribute>
-						</xs:extension>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="eArrest.11" nillable="true" id="eArrest.FirstMonitoredArrestRhythmofthePatient">
 				<xs:annotation>
 					<xs:documentation>
@@ -434,7 +406,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table>
-							  </comment>
+							 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -458,7 +430,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 							<name>Date/Time Resuscitation Discontinued</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The date/time the CPR was discontinued (or could be time of death)</definition>
+							<definition>The date/time resuscitation was discontinued.</definition>
 							<v2Number>E11_09</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasuresGroup>
@@ -596,6 +568,28 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="eArrest.19" id="eArrest.DateTimeofInitialCPR" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eArrest.19</number>
+							<name>Date/Time of Initial CPR</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The initial date and time that CPR was started by anyone.</definition>
+							<usage>Optional</usage>
+							<performanceMeasuresGroup/>
+							<comment/>
+							<v3Changes/>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="DateTimeType"/>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="AEDUse">
@@ -671,7 +665,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 	</xs:simpleType>
 	<xs:simpleType name="CardiacArrestEtiology">
 		<xs:annotation>
-			<xs:documentation>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.) </xs:documentation>
+			<xs:documentation>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3002001">
@@ -701,7 +695,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 			</xs:enumeration>
 			<xs:enumeration value="3002011">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002013">
@@ -743,12 +737,12 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 			</xs:enumeration>
 			<xs:enumeration value="3018009">
 				<xs:annotation>
-					<xs:documentation>ROSC in the ED </xs:documentation>
+					<xs:documentation>ROSC in the ED</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3018011">
 				<xs:annotation>
-					<xs:documentation>Ongoing Resuscitation by Other EMS </xs:documentation>
+					<xs:documentation>Ongoing Resuscitation by Other EMS</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -785,7 +779,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 			</xs:enumeration>
 			<xs:enumeration value="3009011">
 				<xs:annotation>
-					<xs:documentation>Compressions-Other Device (Not Listed)</xs:documentation>
+					<xs:documentation>Compressions-Other Device</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3009013">
@@ -818,11 +812,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 			<xs:enumeration value="3011001">
 				<xs:annotation>
 					<xs:documentation>Asystole</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3011003">
-				<xs:annotation>
-					<xs:documentation>Bradycardia &lt;span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/span></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3011005">
@@ -916,7 +905,7 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="ResucitationAttempted">
+	<xs:simpleType name="ResuscitationAttempted">
 		<xs:annotation>
 			<xs:documentation>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.)</xs:documentation>
 		</xs:annotation>

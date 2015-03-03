@@ -1,10 +1,10 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eDisposition.10"  minOccurs="0"  maxOccurs="1"  dataTypeName="USNG"  isNillable="No">
-<name>Disposition Location US National Grid Coordinates</name>
+<name>Destination Location US National Grid Coordinates</name>
 <national>No</national>
 <deprecated></deprecated>
 <state>No</state>
-<definition>The US National Grid Coordinates for the Disposition Location.  This may be the Healthcare Facility US National Grid Coordinates.</definition>
+<definition>The US National Grid Coordinates for the Destination Location. This may be the Healthcare Facility US National Grid Coordinates.</definition>
 <v2Number></v2Number>
 <usage>Optional</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
@@ -14,7 +14,7 @@
 <deprecatedComment></deprecatedComment>
 <restrictions>
   <USNG baseType="string">
-    <facet name="pattern" value="[1][0-9][R,S,T,U][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"/>
+    <facet name="pattern" value="[1][0-9][RSTU][ABCDEFGHJKLMNPQRSTUVWXYZ][ABCDEFGHJKLMNPQRSTUV][0-9]{8}"/>
   </USNG>
 </restrictions>
 </element>

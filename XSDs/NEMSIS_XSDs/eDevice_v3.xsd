@@ -18,11 +18,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The unique manufacturer's serial number associated with a medical device.</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -68,7 +64,6 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table></comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -90,7 +85,6 @@
 											<performanceMeasure>STEMI</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -104,7 +98,7 @@
 						</xs:element>
 						<xs:element name="eDevice.WaveformGroup" id="eDevice.WaveformGroup" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about Wave type </xs:documentation>
+								<xs:documentation>Group Tag to hold info about Wave type</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -146,7 +140,6 @@
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table>												
 													</comment>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -167,13 +160,11 @@
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 														<performanceMeasure>STEMI</performanceMeasure>
 													</performanceMeasuresGroup>
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eDevice.06" type="AEDPacingOrCO2Mode" id="eDevice.AEDPacingorC02Mode" minOccurs="0">
+									<xs:element name="eDevice.06" type="AEDPacingOrCO2Mode" id="eDevice.AEDPacingorCO2Mode" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -184,7 +175,6 @@
 													<definition>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)</definition>
 													<v2Number>E21_05</v2Number>
 													<usage>Optional</usage>
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -209,7 +199,6 @@
 											<performanceMeasure>STEMI</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Can be displayed in the Vital Signs or Procedure Sections.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -238,14 +227,13 @@
 											<performanceMeasure>STEMI</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>The rhythm interpretation text imported from the device.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="eDevice.ShockGroup" id="eDevice.ShockGroup" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold shock information </xs:documentation>
+								<xs:documentation>Group Tag to hold shock information</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -263,8 +251,6 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 													</performanceMeasuresGroup>
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -283,8 +269,6 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 													</performanceMeasuresGroup>
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -303,8 +287,6 @@
 													<performanceMeasuresGroup>
 														<performanceMeasure>Cardiac Arrest</performanceMeasure>
 													</performanceMeasuresGroup>
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -320,9 +302,6 @@
 													<definition>The rate the device was calibrated to pace during the event, if appropriate.</definition>
 													<v2Number>E21_11</v2Number>
 													<usage>Optional</usage>
-													
-													
-													
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -391,28 +370,112 @@
 		<xs:annotation>
 			<xs:documentation>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:string">			
-			<xs:enumeration value="4107001"><xs:annotation><xs:documentation>I</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107003"><xs:annotation><xs:documentation>II</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107005"><xs:annotation><xs:documentation>III</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107007"><xs:annotation><xs:documentation>AVR</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107009"><xs:annotation><xs:documentation>AVL</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107011"><xs:annotation><xs:documentation>AVF</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107013"><xs:annotation><xs:documentation>Paddle</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107015"><xs:annotation><xs:documentation>Pads</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107017"><xs:annotation><xs:documentation>V1</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107019"><xs:annotation><xs:documentation>V2</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107021"><xs:annotation><xs:documentation>V3</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107023"><xs:annotation><xs:documentation>V3r</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107025"><xs:annotation><xs:documentation>V4</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107027"><xs:annotation><xs:documentation>V4r</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107029"><xs:annotation><xs:documentation>V5</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107031"><xs:annotation><xs:documentation>V5r</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107033"><xs:annotation><xs:documentation>V6</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107035"><xs:annotation><xs:documentation>V6r</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107037"><xs:annotation><xs:documentation>V7</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107039"><xs:annotation><xs:documentation>V8</xs:documentation></xs:annotation></xs:enumeration>
-			<xs:enumeration value="4107041"><xs:annotation><xs:documentation>V9</xs:documentation></xs:annotation></xs:enumeration>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4107001">
+				<xs:annotation>
+					<xs:documentation>I</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107003">
+				<xs:annotation>
+					<xs:documentation>II</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107005">
+				<xs:annotation>
+					<xs:documentation>III</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107007">
+				<xs:annotation>
+					<xs:documentation>AVR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107009">
+				<xs:annotation>
+					<xs:documentation>AVL</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107011">
+				<xs:annotation>
+					<xs:documentation>AVF</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107013">
+				<xs:annotation>
+					<xs:documentation>Paddle</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107015">
+				<xs:annotation>
+					<xs:documentation>Pads</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107017">
+				<xs:annotation>
+					<xs:documentation>V1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107019">
+				<xs:annotation>
+					<xs:documentation>V2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107021">
+				<xs:annotation>
+					<xs:documentation>V3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107023">
+				<xs:annotation>
+					<xs:documentation>V3r</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107025">
+				<xs:annotation>
+					<xs:documentation>V4</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107027">
+				<xs:annotation>
+					<xs:documentation>V4r</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107029">
+				<xs:annotation>
+					<xs:documentation>V5</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107031">
+				<xs:annotation>
+					<xs:documentation>V5r</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107033">
+				<xs:annotation>
+					<xs:documentation>V6</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107035">
+				<xs:annotation>
+					<xs:documentation>V6r</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107037">
+				<xs:annotation>
+					<xs:documentation>V7</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107039">
+				<xs:annotation>
+					<xs:documentation>V8</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4107041">
+				<xs:annotation>
+					<xs:documentation>V9</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicalDeviceEventType">

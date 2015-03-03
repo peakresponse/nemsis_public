@@ -15,15 +15,12 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-								
 								<performanceMeasure>Pediatric</performanceMeasure>
 								<performanceMeasure>Response</performanceMeasure>
 								<performanceMeasure>STEMI</performanceMeasure>
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -45,9 +42,7 @@
 										<definition>The name of the vendor, manufacturer, and developer who designed the application that created this record.</definition>
 										<v2Number>E01_02</v2Number>
 										<usage>Mandatory</usage>
-										
 										<comment>This is required to document the software used to generate the Patient Care Report. This is not the last software which aggregated/stored the Patient Care Report after it was sent from another software.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -63,9 +58,7 @@
 										<definition>The name of the application used to create this record.</definition>
 										<v2Number>E01_03</v2Number>
 										<usage>Mandatory</usage>
-										
 										<comment>This is the EMS Agency's software, not the state or other level software which electronically received the data from the local EMS Agency.</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -81,9 +74,6 @@
 										<definition>The version of the application used to create this record.</definition>
 										<v2Number>E01_04</v2Number>
 										<usage>Mandatory</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -99,7 +89,7 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="3"></xs:minLength>
-			<xs:maxLength value="32"></xs:maxLength>
+			<xs:maxLength value="50"></xs:maxLength>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="SoftwareCreator">

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (x64) (http://www.altova.com) by Greg Chandler (University of Utah) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="dCustomConfiguration" id="dCustomConfiguration.dCustomHeaderInformation">
@@ -18,9 +19,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.</definition>
-										
 										<usage>Mandatory</usage>
-										
 										<comment>This is grouped with all data elements in this section and can have multiple instances.</comment>
 										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 									</nemsisTacDoc>
@@ -43,11 +42,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The definition of the custom element and how it should be used.</definition>
-										
 										<usage>Mandatory</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -61,11 +56,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The data type of the custom element.</definition>
-										
 										<usage>Mandatory</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -79,10 +70,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>Indication if the data element will accept multiple values.</definition>
-										
 										<usage>Mandatory</usage>
-										
-										
 										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -97,9 +85,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The Usage (Mandatory, Required, Recommended, or Optional) for the Custom Data Element.</definition>
-										
 										<usage>Mandatory</usage>
-										
 										<comment>Mandatory = Must be completed and will not accept null values
 										&lt;br/>Required = Must be completed but will accept null values
 										&lt;br/>Recommended = Not required but if collected will accept null values
@@ -118,10 +104,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
-										
 										<usage>Optional</usage>
-										
-										
 										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -144,11 +127,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>NOT Values (NV) associated with the custom element</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -162,17 +141,27 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>Pertinent Negative Values (PN) associated with the custom element</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="dCustomConfiguration.09" type="CorrelationID" id="dCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>dCustomConfiguration.09</number>
+										<name>Custom Data Element Grouping ID</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>ID for custom element grouping.</definition>
+										<usage>Optional</usage>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
-					<xs:attribute name="CustomElementID" type="CorrelationID" use="optional"/>
+					<xs:attribute name="CustomElementID" type="CorrelationID" use="required"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -197,10 +186,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>The actual value or values chosen (if values listed in dCustomConfiguration.06) or result (free text, Date/Time, or number) documented for the Custom Data Element</definition>
-										
 										<usage>Mandatory</usage>
-										
-										
 										<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -223,11 +209,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>References the CustomElementID attribute for dCustomConfiguration.CustomGroup</definition>
-										
 										<usage>Mandatory</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -241,11 +223,7 @@
 										<national>No</national>
 										<state>No</state>
 										<definition>References the CorrelationID attribute of an element or group in the DemographicReport section</definition>
-										
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

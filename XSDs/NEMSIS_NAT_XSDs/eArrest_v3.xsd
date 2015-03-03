@@ -42,7 +42,7 @@
 							<name>Cardiac Arrest Etiology</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.) </definition>
+							<definition>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.)</definition>
 							<v2Number>E11_02</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -84,7 +84,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="ResucitationAttempted">
+						<xs:extension base="ResuscitationAttempted">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -216,34 +216,6 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.10" nillable="true" id="eArrest.TherapeuticHypothermiaInitiated">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eArrest.10</number>
-							<name>Therapeutic Hypothermia Initiated</name>
-							<national>Yes</national>
-							<state>Yes</state>
-							<definition>Documentation of EMS initiation of Therapeutic Hypothermia.</definition>
-							<usage>Required</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-							</performanceMeasuresGroup>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="YesNoValues">
-							<xs:attribute name="NV" use="optional">
-								<xs:simpleType>
-									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-								</xs:simpleType>
-							</xs:attribute>
-						</xs:extension>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="eArrest.11" nillable="true" id="eArrest.FirstMonitoredArrestRhythmofthePatient">
 				<xs:annotation>
 					<xs:documentation>
@@ -354,7 +326,7 @@
   &lt;tr>&lt;td align="center">'-'&lt;/td>&lt;td>a nonpositive duration&lt;/td>&lt;/tr>
 &lt;/table>
 &lt;/td>&lt;/tr>&lt;/table>
-							  </comment>
+							 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -463,6 +435,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="AEDUse">
@@ -538,7 +511,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="CardiacArrestEtiology">
 		<xs:annotation>
-			<xs:documentation>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.) </xs:documentation>
+			<xs:documentation>Indication of the etiology or cause of the cardiac arrest (classified as cardiac, non-cardiac, etc.)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3002001">
@@ -568,7 +541,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3002011">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002013">
@@ -610,12 +583,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="3018009">
 				<xs:annotation>
-					<xs:documentation>ROSC in the ED </xs:documentation>
+					<xs:documentation>ROSC in the ED</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3018011">
 				<xs:annotation>
-					<xs:documentation>Ongoing Resuscitation by Other EMS </xs:documentation>
+					<xs:documentation>Ongoing Resuscitation by Other EMS</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -652,7 +625,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3009011">
 				<xs:annotation>
-					<xs:documentation>Compressions-Other Device (Not Listed)</xs:documentation>
+					<xs:documentation>Compressions-Other Device</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3009013">
@@ -685,11 +658,6 @@
 			<xs:enumeration value="3011001">
 				<xs:annotation>
 					<xs:documentation>Asystole</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3011003">
-				<xs:annotation>
-					<xs:documentation>Bradycardia &lt;span style='font-size:8px;background:purple;color:white;padding:1px;'>DEPRECATED&lt;/span></xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3011005">
@@ -783,7 +751,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="ResucitationAttempted">
+	<xs:simpleType name="ResuscitationAttempted">
 		<xs:annotation>
 			<xs:documentation>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.)</xs:documentation>
 		</xs:annotation>

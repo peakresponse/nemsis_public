@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by Greg Chandler (University of Utah) -->
+<!-- edited with XMLSpy v2011 rel. 2 (x64) (http://www.altova.com) by Greg Chandler (University of Utah) -->
 <xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="dDevice_v3.xsd"/>
 	<xs:include schemaLocation="eRecord_v3.xsd"/>
@@ -9,226 +9,18 @@
 	<xs:include schemaLocation="eLabs_v3.xsd"/>
 	<xs:complexType name="eMedDevice" id="eMedDevice.eMedDevice">
 		<xs:sequence>
-			<xs:element name="eMedDevice.01" type="EMSAgencyStateID" id="eMedDevice.dAgency.EMSAgencyUniqueStateID">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.01</number>
-							<refNumber>dAgency.01</refNumber>
-							<name>EMS Agency Unique State ID</name>
-							<national>Yes</national>
-							<state>Yes</state>
-							<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
-							<usage>Mandatory</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Airway</performanceMeasure>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-								<performanceMeasure>Pediatric</performanceMeasure>
-								<performanceMeasure>Response</performanceMeasure>
-								<performanceMeasure>STEMI</performanceMeasure>
-								<performanceMeasure>Stroke</performanceMeasure>
-								<performanceMeasure>Trauma</performanceMeasure>
-							</performanceMeasuresGroup>
-							<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="eMedDevice.02" id="eMedDevice.dAgency.EMSAgencyNumber" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.02</number>
-							<refNumber>dAgency.02</refNumber>
-							<name>EMS Agency Number</name>
-							<national>No</national>
-							<!--<national>No</national>-->
-							<state>No</state>
-							<!--<state>No</state>-->
-							<definition>The state-assigned provider number of the responding agency</definition>
-							<v2Number>D01_01</v2Number>
-							<usage>Optional</usage>
-							<!--<usage>Optional</usage>-->
-							<performanceMeasuresGroup>
-								<performanceMeasure>Airway</performanceMeasure>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-								<performanceMeasure>Pediatric</performanceMeasure>
-								<performanceMeasure>Response</performanceMeasure>
-								<performanceMeasure>STEMI</performanceMeasure>
-								<performanceMeasure>Stroke</performanceMeasure>
-								<performanceMeasure>Trauma</performanceMeasure>
-							</performanceMeasuresGroup>
-							<comment>This is the primary identifier for the entire Demographic Section.  Each of the Demographic sections must be associated with an EMS Agency Number. An EMS Agency can have more than one Agency Number within a state. This reflects the ability for an EMS Agency to have a different number for each service type or location (based on state implementation).</comment>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="EMSAgencyNumber"/>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="eMedDevice.03" id="eMedDevice.dAgency.EMSAgencyName" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.03</number>
-							<refNumber>dAgency.03</refNumber>
-							<name>EMS Agency Name</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The formal name of the agency.</definition>
-							<v2Number>D01_02</v2Number>
-							<usage>Optional</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Airway</performanceMeasure>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-								<performanceMeasure>Pediatric</performanceMeasure>
-								<performanceMeasure>Response</performanceMeasure>
-								<performanceMeasure>STEMI</performanceMeasure>
-								<performanceMeasure>Stroke</performanceMeasure>
-								<performanceMeasure>Trauma</performanceMeasure>
-							</performanceMeasuresGroup>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="EMSAgencyName"/>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="eMedDevice.04" id="eMedDevice.dAgency.EMSAgencyState" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.04</number>
-							<refNumber>dAgency.04</refNumber>
-							<name>EMS Agency State</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The state/territory which assigned the EMS agency number.</definition>
-							<v2Number>D01_03</v2Number>
-							<usage>Optional</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Airway</performanceMeasure>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-								<performanceMeasure>Pediatric</performanceMeasure>
-								<performanceMeasure>Response</performanceMeasure>
-								<performanceMeasure>STEMI</performanceMeasure>
-								<performanceMeasure>Stroke</performanceMeasure>
-								<performanceMeasure>Trauma</performanceMeasure>
-							</performanceMeasuresGroup>
-							<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="ANSIStateCode"/>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="eMedDevice.05" type="DeviceSerialNumber" id="eMedDevice.dDevice.MedicalDeviceSerialNumber" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.05</number>
-							<refNumber>dDevice.01</refNumber>
-							<name>Medical Device Serial Number</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The unique manufacturer's serial number associated with a medical device.</definition>
-							<v2Number>D09_01</v2Number>
-							<usage>Optional</usage>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="eMedDevice.06" type="DeviceNameorID" id="eMedDevice.dDevice.DeviceNameorID" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.06</number>
-							<refNumber>dDevice.02</refNumber>
-							<name>Medical Device Name or ID </name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The local number or configurable Name/ID of the medical device.</definition>
-							<v2Number>D09_02</v2Number>
-							<usage>Optional</usage>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="eMedDevice.07" id="eMedDevice.dDevice.MedicalDeviceType" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.07</number>
-							<refNumber>dDevice.03</refNumber>
-							<name>Medical Device Type</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The type of medical device.</definition>
-							<usage>Optional</usage>
-							<comment>This is multiple choice to allow documentation of various multifunction device configurations.</comment>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="MedicalDeviceType">
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-						</xs:extension>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
-			<xs:element name="eMedDevice.08" type="DeviceManufacturer" id="eMedDevice.dDevice.DeviceManufacturer" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.08</number>
-							<refNumber>dDevice.04</refNumber>
-							<name>Medical Device Manufacturer </name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The manufacturer of the medical device.</definition>
-							<v2Number>D09_03</v2Number>
-							<usage>Optional</usage>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="eMedDevice.09" type="ModelNumber" id="eMedDevice.dDevice.ModelNumber" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.09</number>
-							<refNumber>dDevice.05</refNumber>
-							<name>Medical Device Model Number</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The specific manufacturer's model number associated with medical device.</definition>
-							<v2Number>D09_04</v2Number>
-							<usage>Optional</usage>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="eMedDevice.10" type="PatientCareReportNumber" id="eMedDevice.eRecord.PatientCareReportNumber">
+			<xs:element name="eMedDevice.10" type="PatientCareReportNumber" id="eMedDevice.eRecord.PatientCareReportNumber" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eMedDevice.10</number>
 							<refNumber>eRecord.01</refNumber>
 							<name>Patient Care Report Number</name>
-							<national>Yes</national>
-							<state>Yes</state>
+							<national>No</national>
+							<state>No</state>
 							<definition>The unique number automatically assigned by the EMS agency for each Patient Care Report (PCR). This should be a unique number for the EMS agency for all of time.</definition>
 							<v2Number>E01_01</v2Number>
-							<usage>Mandatory</usage>
+							<usage>Optional</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -260,7 +52,7 @@
 										<definition>The patient's last (family) name</definition>
 										<v2Number>E06_01</v2Number>
 										<usage>Optional</usage>
-										<comment></comment>
+										<comment/>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -282,7 +74,7 @@
 										<definition>The patient's first (given) name</definition>
 										<v2Number>E06_02</v2Number>
 										<usage>Optional</usage>
-										<comment></comment>
+										<comment/>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -443,27 +235,6 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eMedDevice.18" id="eMedDevice.ePatient.DateofBirth" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eMedDevice.18</number>
-							<refNumber>ePatient.17</refNumber>
-							<name>Date of Birth</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The patient's date of birth</definition>
-							<v2Number>E06_16</v2Number>
-							<usage>Optional</usage>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="DateOfBirth"/>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="eMedDevice.VitalsGroup" id="eMedDevice.VitalsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the Vitals of the Patient</xs:documentation>
@@ -524,96 +295,9 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.CardiacRhythmGroup" id="eMedDevice.CardiacRhythmGroup" minOccurs="0">
-							<xs:annotation>
-								<xs:documentation>Group Tag to hold information of the type and method used for ECG interpretation associated with the cardiac rhythm</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="eMedDevice.20" id="eMedDevice.eVitals.CardiacRhythmandElectrocardiography" minOccurs="0" maxOccurs="unbounded">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.20</number>
-													<refNumber>eVitals.03</refNumber>
-													<name>Cardiac Rhythm / Electrocardiography (ECG)</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The cardiac rhythm / ECG and other electrocardiography findings of the patient as interpreted by EMS personnel.</definition>
-													<v2Number>E14_03</v2Number>
-													<usage>Optional</usage>
-													<performanceMeasuresGroup>
-														<performanceMeasure>Cardiac Arrest</performanceMeasure>
-														<performanceMeasure>STEMI</performanceMeasure>
-													</performanceMeasuresGroup>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="CardiacRhythm">
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
-									</xs:element>
-									<xs:element name="eMedDevice.21" id="eMedDevice.eVitals.ECGType" minOccurs="0">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.21</number>
-													<refNumber>eVitals.04</refNumber>
-													<name>ECG Type</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The type of ECG associated with the cardiac rhythm.</definition>
-													<usage>Optional</usage>
-													<performanceMeasuresGroup>
-														<performanceMeasure>STEMI</performanceMeasure>
-													</performanceMeasuresGroup>
-													<v3Changes>Added to better document ECG results.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="ECGType"/>
-											</xs:simpleContent>
-										</xs:complexType>
-									</xs:element>
-									<xs:element name="eMedDevice.22" id="eMedDevice.eVitals.MethodofECGInterpretation" minOccurs="0" maxOccurs="unbounded">
-										<xs:annotation>
-											<xs:documentation>
-												<nemsisTacDoc>
-													<number>eMedDevice.22</number>
-													<refNumber>eVitals.05</refNumber>
-													<name>Method of ECG Interpretation</name>
-													<national>No</national>
-													<state>No</state>
-													<definition>The method of ECG interpretation.</definition>
-													<usage>Optional</usage>
-													<performanceMeasuresGroup>
-														<performanceMeasure>STEMI</performanceMeasure>
-													</performanceMeasuresGroup>
-													<comment>"Transmission with no interpretation" may be used by EMS Agency Personnel that are not trained to interpret cardiac rhythms.</comment>
-													<v3Changes>Added to better document ECG results.</v3Changes>
-												</nemsisTacDoc>
-											</xs:documentation>
-										</xs:annotation>
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="ECGMethod">
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
-									</xs:element>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
 						<xs:element name="eMedDevice.BloodPressureGroup" id="eMedDevice.BloodPressureGroup" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of Patient's systolic blood pressure and its procedure </xs:documentation>
+								<xs:documentation>Group Tag to hold the details of Patient's systolic blood pressure and its procedure</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -711,7 +395,7 @@
 						</xs:element>
 						<xs:element name="eMedDevice.HeartRateGroup" id="eMedDevice.HeartRateGroup" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold the details of Patient's systolic blood pressure and its procedure </xs:documentation>
+								<xs:documentation>Group Tag to hold the details of Patient's systolic blood pressure and its procedure</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -823,16 +507,16 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.31" id="eMedDevice.eVitals.CarbonDioxideCO2" minOccurs="0">
+						<xs:element name="eMedDevice.31" id="eMedDevice.eVitals.EndTidalCarbonDioxideETCO2" minOccurs="0" type="CO2">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eMedDevice.31</number>
 										<refNumber>eVitals.16</refNumber>
-										<name>Carbon Dioxide (CO2)</name>
+										<name>End Tidal Carbon Dioxide (ETCO2)</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's end-tidal or other CO2 level.</definition>
+										<definition>The numeric value of the patient’s exhaled end tidal carbon dioxide (ETCO2) level measured as a unit of pressure in millimeters of mercury (mmHg).</definition>
 										<v2Number>E14_13</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -846,11 +530,6 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="CO2"/>
-								</xs:simpleContent>
-							</xs:complexType>
 						</xs:element>
 						<xs:element name="eMedDevice.32" id="eMedDevice.eVitals.CarbonMonoxideCO" minOccurs="0">
 							<xs:annotation>
@@ -861,9 +540,10 @@
 										<name>Carbon Monoxide (CO)</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's carbon monoxide level measured in parts per million (ppm).</definition>
+										<definition>The numeric value of the patient's carbon monoxide level measured as a percentage (%) of carboxyhemoglobin (COHb).</definition>
 										<usage>Optional</usage>
-										<v3Changes>Added to allow use of a new patient monitoring device</v3Changes>
+										<comment></comment>
+										<v3Changes>Added to allow use of a new patient monitoring devices.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -900,7 +580,7 @@
 						</xs:element>
 						<xs:element name="eMedDevice.BodyTemperatureGroup" id="eMedDevice.BodyTemperatureGroup" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold information about patient's body temperature </xs:documentation>
+								<xs:documentation>Group Tag to hold information about patient's body temperature</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -953,7 +633,7 @@
 			</xs:element>
 			<xs:element name="eMedDevice.LabsGroup" id="eMedDevice.LabsGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about the device </xs:documentation>
+					<xs:documentation>Group Tag to hold info about the device</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -1157,7 +837,7 @@
 			</xs:element>
 			<xs:element name="eMedDevice.DeviceGroup" id="eMedDevice.DeviceGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold shock information </xs:documentation>
+					<xs:documentation>Group Tag to hold shock information</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -1320,7 +1000,7 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="eMedDevice.48" type="AEDPacingOrCO2Mode" id="eMedDevice.eDevice.AEDPacingorC02Mode" minOccurs="0">
+									<xs:element name="eMedDevice.48" type="AEDPacingOrCO2Mode" id="eMedDevice.eDevice.AEDPacingorCO2Mode" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>

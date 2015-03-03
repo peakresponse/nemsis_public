@@ -103,7 +103,7 @@ Added Pandemic/Epidemic/Outbreak.
 							<state>No</state>
 							<definition>The name or ID of the dispatch center providing electronic data to the PCR for the EMS agency, if applicable.</definition>
 							<usage>Optional</usage>
-							<comment>This element can be used to identify the dispatch center (Primary or Secondary Public Safety Answering Point - PSAP) that dispatches the EMS agency.  If the EMS agency is able to populate the Patient Care Report (PCR) with CAD specific details (times, incident address information, crew information, EMD, etc) the name or ID of the dispatch center should be documented.</comment>
+							<comment>This element can be used to identify the dispatch center (Primary or Secondary Public Safety Answering Point - PSAP) that dispatches the EMS agency.  If the EMS agency is able to populate the Patient Care Report (PCR) with CAD specific details (times, incident address information, crew information, EMD, etc.) the name or ID of the dispatch center should be documented.</comment>
 							<v3Changes>Added to the dataset to assist in identifying the CAD / dispatch center providing information to the EMS agency and ePCR when there are multiple dispatch centers sending resources to the same EMS incident.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -120,34 +120,54 @@ Added Pandemic/Epidemic/Outbreak.
 							<definition>The actual, apparent, or potential acuity of the patient's condition as determined through information obtained during the EMD process.</definition>
 							<usage>Optional</usage>
 							<comment>
-The use of priority and acuity values vary by EMS agency.  Some systems may utilize fewer than four priority levels and some more.  The use of four priority levels is to capture the majority and allow for the inclusion of the NHTSA National EMS Core Content definitions for patient acuity, specifically: Critical, Emergent, and Lower Acuity.
-&lt;br/>&lt;br/>
-&lt;font style="color:red">Provided below is an example application only. This example bears no relationship to any particular federal, state, or agency billing requirement&lt;/font>
-&lt;br/>&lt;br/>
-For EMS Agencies and CAD / EMD systems utilizing Alpha-Echo, Omega levels for determining the priority level for dispatch of the EMS unit, the recommended mapping is:
-&lt;br/>&lt;br/>
+&lt;br/>The use of acuity values vary by EMS agency. Some systems may utilize fewer than four levels and some more. The use of four levels is to capture the majority and allow for the inclusion of the NHTSA National EMS Core Content definitions for patient acuity, specifically: Critical, Emergent, and Lower Acuity. 
+&lt;br/>
+&lt;br/>&lt;span style="color:red">Provided below is an example application only. This example bears no relationship to any particular federal, state, or agency billing requirement. &lt;/span>
+&lt;br/>
+&lt;br/>For EMS Agencies and CAD / EMD systems utilizing Alpha-Echo, Omega levels for determining the priority level for dispatch of the EMS unit, the recommended mapping is: 
+&lt;br/>
 &lt;table cellpadding="2px" cellspacing="0px" border="1px">
 &lt;tr>
-&lt;td>Echo = Priority 1&lt;/td>&lt;td>Charlie = Priority 2&lt;/td>&lt;td>Alpha = Priority 3&lt;/td>
+&lt;td>Echo = Critical&lt;/td>&lt;td>Charlie = Emergent&lt;/td>&lt;td>Alpha = Lower Acuity&lt;/td>
 &lt;/tr>&lt;tr>
-&lt;td>Delta = Priority 1&lt;/td>&lt;td>Bravo = Priority 2&lt;/td>&lt;td>Omega = Priority 4&lt;/td>
+&lt;td>Delta = Critical&lt;/td>&lt;td>Bravo = Emergent&lt;/td>&lt;td>Omega = Non-Acute&lt;/td>
 &lt;/tr>&lt;/table>
+&lt;br/>Patient Acuity definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
+http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf  
 &lt;br/>
-&lt;br/>Priority 1 is typically an emergent (lights and sirens) response
-&lt;br/>Priority 2 is typically an emergent response without the use lights and sirens
-&lt;br/>Priority 3 is typically a non-emergent response for nursing home, hospital-to-hospital transfers, etc.
-&lt;br/>Priority 4 is typically a scheduled response (scheduled  transfer) or standby event
-&lt;br/>&lt;br/>
-Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
-&lt;br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf 		
-&lt;br/>&lt;br/>For Air Medical Transports the most appropriate values choices should be limited to two: Emergent (Priority 2) and Non-Emergent (Priority 4).					
+&lt;br/>For Air Medical Transports the most appropriate values choices should be limited to two: Emergent and Non-Acute.				
 							</comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="eDispatch.06" type="UnitDispatchedCADRecordID" id="eDispatch.UnitDispatchedCADRecordID" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eDispatch.06</number>
+							<name>Unit Dispatched CAD Record ID</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The unique ID assigned by the CAD system for the specific unit response.</definition>
+							<v2Number/>
+							<usage>Optional</usage>
+							<comment>The Unit Dispatched CAD Record ID is populated from a CAD system. This information will not be known to the EMS professional. 
+  &lt;br/>&lt;br/>
+Use Case: Some CAD systems may use the Unit Dispatched CAD Record ID as the Patient Care Report Number (eRecord.01). This may also be a GUID from a CAD system. A GUID for the CAD push to remain unique as updates are sent from CAD. This could be a stream and unique to the record or patient depending on the capabilities of the CAD system. How the Unit Dispatched CAD Record ID is created could vary as it could be a concatenation of multiple elements or a true GUID.</comment>
+							<performanceMeasuresGroup/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
+	<xs:simpleType name="UnitDispatchedCADRecordID">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
 	<xs:simpleType name="ComplaintReportedByDispatch">
 		<xs:annotation>
 			<xs:documentation>The complaint dispatch reported to the responding unit.</xs:documentation>
@@ -381,22 +401,22 @@ Definitions related to "Critical, Emergent, and Lower Acuity" can be found in th
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2305001">
 				<xs:annotation>
-					<xs:documentation>Priority 1 (Critical)</xs:documentation>
+					<xs:documentation>Critical</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2305003">
 				<xs:annotation>
-					<xs:documentation>Priority 2 (Emergent)</xs:documentation>
+					<xs:documentation>Emergent</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2305005">
 				<xs:annotation>
-					<xs:documentation>Priority 3 (Lower Acuity)</xs:documentation>
+					<xs:documentation>Lower Acuity</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2305007">
 				<xs:annotation>
-					<xs:documentation>Priority 4 (Non-Acute [e.g. Scheduled Transfer  or Standby]) </xs:documentation>
+					<xs:documentation>Non-Acute [e.g., Scheduled Transfer  or Standby]</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

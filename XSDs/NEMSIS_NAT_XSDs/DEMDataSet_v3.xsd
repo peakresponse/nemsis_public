@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
-
 	<xs:include schemaLocation="dAgency_v3.xsd"/>
 	<xs:include schemaLocation="dConfiguration_v3.xsd"/>
 	<xs:element name="DEMDataSet">
@@ -8,8 +7,8 @@
 			<xs:documentation>Root Tag For Demographic DataSet</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="DemographicReport" maxOccurs="unbounded" id="DemographicReportGroup">
+			<xs:sequence>		
+				<xs:element name="DemographicReport" id="DemographicReportGroup" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Container Tag to hold each instance of a demographic record</xs:documentation>
 					</xs:annotation>

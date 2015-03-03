@@ -25,12 +25,12 @@ Scenario: We want to add a new group for collecting when the patient was restrai
 -->
 				
 <EMSDataSet xsi:schemaLocation="http://www.nemsis.org 
-https://www.nemsis.org/media/nemsis_v3/release-v3.3.4.140328/XSDs/NEMSIS_XSDs_v3.3.4.140328//EMSDataSet_v3.xsd" xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3.4.0.150302/EMSDataSet_v3.xsd" xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Header>
 		<DemographicGroup>
 			<dAgency.01>a</dAgency.01>
 			<dAgency.02>a</dAgency.02>
-			<dAgency.04>aa</dAgency.04>
+			<dAgency.04>12</dAgency.04>
 		</DemographicGroup>
 		<eCustomConfiguration>
 		
@@ -81,7 +81,7 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.3.4.140328/XSDs/NEMSIS_XSDs_v3
 				<eResponse.ServiceGroup>
 					<eResponse.05>2205001</eResponse.05>
 				</eResponse.ServiceGroup>
-				<eResponse.07>2207001</eResponse.07>
+				<eResponse.07>2207003</eResponse.07>
 				<eResponse.08>2208001</eResponse.08>
 				<eResponse.09>2209001</eResponse.09>
 				<eResponse.10>2210001</eResponse.10>
@@ -109,8 +109,8 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.3.4.140328/XSDs/NEMSIS_XSDs_v3
 				<eTimes.13>2011-01-01T00:00:00-00:00</eTimes.13>
 			</eTimes>
 			<ePatient>
-				<ePatient.07>aaaaa</ePatient.07>
-				<ePatient.08>aa</ePatient.08>
+				<ePatient.07>12345</ePatient.07>
+				<ePatient.08>45</ePatient.08>
 				<ePatient.09>00000</ePatient.09>
 				<ePatient.13>9906001</ePatient.13>
 				<ePatient.14>2514001</ePatient.14>
@@ -129,9 +129,9 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.3.4.140328/XSDs/NEMSIS_XSDs_v3
 				<eScene.07>9923003</eScene.07>
 				<eScene.08>2708001</eScene.08>
 				<eScene.09>Y92.0</eScene.09>
-				<eScene.18>aa</eScene.18>
+				<eScene.18>45</eScene.18>
 				<eScene.19>00000</eScene.19>
-				<eScene.21>aaaaa</eScene.21>
+				<eScene.21>44444</eScene.21>
 			</eScene>
 			<eSituation>
 				<eSituation.01>2011-01-01T00:00:00-00:00</eSituation.01>
@@ -157,7 +157,6 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.3.4.140328/XSDs/NEMSIS_XSDs_v3
 				<eArrest.05>9923001</eArrest.05>
 				<eArrest.07>3007001</eArrest.07>
 				<eArrest.09>3009001</eArrest.09>
-				<eArrest.10>9923003</eArrest.10>
 				<eArrest.11>3011001</eArrest.11>
 				<eArrest.12>3012001</eArrest.12>
 				<eArrest.14>2011-01-01T00:00:00-00:00</eArrest.14>
@@ -275,15 +274,15 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.3.4.140328/XSDs/NEMSIS_XSDs_v3
 			</eProcedures>
 			<eDisposition>
 				<eDisposition.DestinationGroup>
-					<eDisposition.05>aa</eDisposition.05>
-					<eDisposition.06>aaaaa</eDisposition.06>
+					<eDisposition.05>12</eDisposition.05>
+					<eDisposition.06>12345</eDisposition.06>
 					<eDisposition.07>00000</eDisposition.07>
 				</eDisposition.DestinationGroup>
 				<eDisposition.12>4212001</eDisposition.12>
 				<eDisposition.16>4216001</eDisposition.16>
 				<eDisposition.17>4217001</eDisposition.17>
 				<eDisposition.18>4218001</eDisposition.18>
-				<eDisposition.19>9916005</eDisposition.19>
+				<eDisposition.19>4219001</eDisposition.19>
 				<eDisposition.20>4220001</eDisposition.20>
 				<eDisposition.21>4221001</eDisposition.21>
 				<eDisposition.22>4222001</eDisposition.22>

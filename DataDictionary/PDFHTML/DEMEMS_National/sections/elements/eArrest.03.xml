@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eArrest.03"  minOccurs="1"  maxOccurs="M"  dataTypeName="ResucitationAttempted"  isNillable="Yes">
+<element number="eArrest.03"  minOccurs="1"  maxOccurs="M"  dataTypeName="ResuscitationAttempted"  isNillable="Yes">
 <name>Resuscitation Attempted By EMS</name>
 <national>Yes</national>
 <deprecated></deprecated>
@@ -12,14 +12,14 @@
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
-  <ResucitationAttempted baseType="string">
+  <ResuscitationAttempted baseType="string">
     <facet name="enumeration" value="3003001" annotation="Attempted Defibrillation"/>
     <facet name="enumeration" value="3003003" annotation="Attempted Ventilation"/>
     <facet name="enumeration" value="3003005" annotation="Initiated Chest Compressions"/>
     <facet name="enumeration" value="3003007" annotation="Not Attempted-Considered Futile"/>
     <facet name="enumeration" value="3003009" annotation="Not Attempted-DNR Orders"/>
     <facet name="enumeration" value="3003011" annotation="Not Attempted-Signs of Circulation"/>
-  </ResucitationAttempted>
+  </ResuscitationAttempted>
 </restrictions>
 <attributes>
   <NV>

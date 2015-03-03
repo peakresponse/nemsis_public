@@ -8,7 +8,7 @@
 <v2Number>E20_17</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>Required if Patient Transported by EMS. "Hospital-Non-Emergency Department Bed" includes any location in the hospital except the Emergency Department. Choices include those in eDisposition.22 (Hospital In-Patient Destination).</v3Comment>
+<v3Comment>Required if Patient Transported by EMS.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -19,7 +19,7 @@
     <facet name="enumeration" value="4221007" annotation="Medical Office/Clinic"/>
     <facet name="enumeration" value="4221009" annotation="Morgue/Mortuary"/>
     <facet name="enumeration" value="4221011" annotation="Nursing Home/Assisted Living Facility"/>
-    <facet name="enumeration" value="4221013" annotation="Other (Not Listed)"/>
+    <facet name="enumeration" value="4221013" annotation="Other"/>
     <facet name="enumeration" value="4221015" annotation="Other EMS Responder (air)"/>
     <facet name="enumeration" value="4221017" annotation="Other EMS Responder (ground)"/>
     <facet name="enumeration" value="4221019" annotation="Police/Jail"/>

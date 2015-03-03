@@ -1,10 +1,10 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eMedDevice.31"  minOccurs="0"  maxOccurs="1"  dataTypeName="CO2"  isNillable="No">
-<name>Carbon Dioxide (CO2)</name>
+<name>End Tidal Carbon Dioxide (ETCO2)</name>
 <national>No</national>
 <deprecated></deprecated>
 <state>No</state>
-<definition>The patient's end-tidal or other CO2 level.</definition>
+<definition>The numeric value of the patient’s exhaled end tidal carbon dioxide (ETCO2) level measured as a unit of pressure in millimeters of mercury (mmHg).</definition>
 <v2Number>E14_13</v2Number>
 <usage>Optional</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -14,7 +14,7 @@
 <restrictions>
   <CO2 baseType="integer">
     <facet name="minInclusive" value="0"/>
-    <facet name="maxInclusive" value="100"/>
+    <facet name="maxInclusive" value="200"/>
   </CO2>
 </restrictions>
 </element>

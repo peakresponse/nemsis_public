@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
 <section name="eSituation">
-  <element number="eSituation.01" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="Yes" dataType="DateTimeType"><name>Date/Time of Symptom Onset/Last Normal</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Required</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
+  <element number="eSituation.01" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="Yes" dataType="DateTimeType"><name>Date/Time of Symptom Onset</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Required</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
   <element number="eSituation.02" minOccurs="1" maxOccurs="1" CorrelationID="" isNillable="Yes" dataType="YesNoUnkValues"><name>Possible Injury</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Required</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
   <group number="eSituation.PatientComplaintGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" isNillable="No">
     <element number="eSituation.03" minOccurs="0" maxOccurs="1" CorrelationID="" isNillable="Yes" dataType="ComplaintType"><name>Complaint Type</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
@@ -21,4 +21,5 @@
     <element number="eSituation.16" minOccurs="0" maxOccurs="1" CorrelationID="" isNillable="No" dataType="PatientsOccupation"><name>Patient's Occupation</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
   </group>
   <element number="eSituation.17" minOccurs="0" maxOccurs="M" CorrelationID="Yes" isNillable="Yes" dataType="icd10Activity"><name>Patient Activity</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
+  <element number="eSituation.18" minOccurs="0" maxOccurs="1" CorrelationID="" isNillable="No" dataType="DateTimeType"><name>Date/Time Last Known Well</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
 </section>

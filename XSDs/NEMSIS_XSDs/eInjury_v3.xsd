@@ -117,7 +117,6 @@
 							<comment>Assesses mechanism of injury and evidence of high-energy impact (Step 3) AND Assess special patient or system considerations (Step 4) based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3 and 4. Website: http://www.cdc.gov/FieldTriage/.</comment>
 							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
 							&lt;br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
-							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -127,11 +126,6 @@
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
-								</xs:simpleType>
-							</xs:attribute>
-							<xs:attribute name="PN" use="optional">
-								<xs:simpleType>
-									<xs:union memberTypes="PN.ExamFindingNotPresent"/>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
@@ -265,7 +259,7 @@
 			</xs:element>
 			<xs:element name="eInjury.CollisionGroup" id="eInjury.CollisionGroup" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold the automated collision notification details </xs:documentation>
+					<xs:documentation>Group Tag to hold the automated collision notification details</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -413,7 +407,7 @@
 										<name>ACN Incident Vehicle Manufacturer</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The Automated Collision Notification Vehicle Manufacturer (e.g. General Motors, Ford, BMW).</definition>
+										<definition>The Automated Collision Notification Vehicle Manufacturer (e.g., General Motors, Ford, BMW, etc.).</definition>
 										<usage>Optional</usage>
 										<comment>Based on Vehicular Emergency Data Set:  Manufacturer. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
@@ -429,7 +423,7 @@
 										<name>ACN Incident Vehicle Make</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The Automated Collision Notification Vehicle Make (e.g. Cadillac, Ford, BMW).</definition>
+										<definition>The Automated Collision Notification Vehicle Make (e.g., Cadillac, Ford, BMW, etc.).</definition>
 										<usage>Optional</usage>
 										<comment>Based on Vehicular Emergency Data Set:  Make. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
@@ -445,7 +439,7 @@
 										<name>ACN Incident Vehicle Model</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The Automated Collision Notification Vehicle Model (e.g. Escalade, Taurus, X6M).</definition>
+										<definition>The Automated Collision Notification Vehicle Model (e.g., Escalade, Taurus, X6M, etc.).</definition>
 										<usage>Optional</usage>
 										<comment>Based on Vehicular Emergency Data Set:  Model. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
@@ -461,7 +455,7 @@
 										<name>ACN Incident Vehicle Model Year</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The Automated Collision Notification Vehicle Model Year (e.g. 2010).</definition>
+										<definition>The Automated Collision Notification Vehicle Model Year (e.g., 2010).</definition>
 										<usage>Optional</usage>
 										<comment>Based on Vehicular Emergency Data Set:  Year. Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
@@ -539,7 +533,8 @@
 										<state>No</state>
 										<definition>The Automated Collision Notification Principal Direction of Force (PDOF).</definition>
 										<usage>Optional</usage>
-										<comment>Based on Vehicular Emergency Data Set:  PDOF. Principal direction of the force of the impact to nearest o'clock reading.  Values are 1 through 12 (e.g. 12=Frontal collision, 3=passenger side (right) collision, etc). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
+										<comment>Based on Vehicular Emergency Data Set: PDOF. Principal direction of the force of the impact to nearest o'clock reading. Values are 1 through 12 (e.g., 12=Frontal collision, 3=passenger side (right) collision, etc.). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification 
+(AACN) Joint APCO/NENA Data Standardization Working Group. </comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -555,7 +550,7 @@
 										<state>No</state>
 										<definition>The Automated Collision Notification Indication that the Vehicle Rolled Over.</definition>
 										<usage>Optional</usage>
-										<comment>Based on Vehicular Emergency Data Set:  Rollover. Indicates if the vehicle rolled over during the collision/event (e.g. True=Rollover, False=No Rollover). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.</comment>
+										<comment>Based on Vehicular Emergency Data Set: Rollover. Indicates if the vehicle rolled over during the collision/event (e.g., True=Rollover, False=No Rollover). Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN) Joint APCO/NENA Data Standardization Working Group. </comment>
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -563,7 +558,7 @@
 						</xs:element>
 						<xs:element name="eInjury.SeatGroup" id="eInjury.SeatGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold the seat details </xs:documentation>
+								<xs:documentation>Group Tag to hold the seat details</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -1184,7 +1179,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2903007">
 				<xs:annotation>
-					<xs:documentation>Glasgow Coma Score &amp;lt; 14</xs:documentation>
+					<xs:documentation>Glasgow Coma Score &lt;= 13</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903009">
@@ -1209,12 +1204,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="2903017">
 				<xs:annotation>
-					<xs:documentation>Respiratory Rate  &amp;lt;10 or >29 breaths per minute (&amp;lt;20 in infants aged &amp;lt;1 year) or need for ventilatory support</xs:documentation>
+					<xs:documentation>Respiratory Rate  &lt;10 or >29 breaths per minute (&lt;20 in infants aged &lt;1 year) or need for ventilatory support</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903019">
 				<xs:annotation>
-					<xs:documentation>Systolic Blood Pressure &amp;lt;90 mmHg</xs:documentation>
+					<xs:documentation>Systolic Blood Pressure &lt;90 mmHg</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903021">
@@ -1338,7 +1333,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2904009">
 				<xs:annotation>
-					<xs:documentation>Crash Ejection (partial or complete) from vehicle</xs:documentation>
+					<xs:documentation>Crash Ejection (partial or complete) from automobile</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904011">
@@ -1358,7 +1353,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2904017">
 				<xs:annotation>
-					<xs:documentation>SBP &amp;lt; 110 for age > 65</xs:documentation>
+					<xs:documentation>SBP &lt; 110 for age > 65</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904019">
@@ -1374,6 +1369,16 @@
 			<xs:enumeration value="2904023">
 				<xs:annotation>
 					<xs:documentation>EMS Provider Judgment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904025">
+				<xs:annotation>
+					<xs:documentation>Burn, without other trauma</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904027">
+				<xs:annotation>
+					<xs:documentation>Burn, with trauma mechanism</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

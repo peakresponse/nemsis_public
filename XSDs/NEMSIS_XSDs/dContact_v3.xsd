@@ -140,7 +140,7 @@
 										<definition>The city of the EMS contact's mailing address.</definition>
 										<v2Number>D02_05</v2Number>
 										<usage>Recommended</usage>
-										<comment>The city should be the mailing address for each contact type for the EMS agency. The EMS agency primary address information (e.g. City) should be entered for the Agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”.   
+										<comment>The city should be the mailing address for each contact type for the EMS agency. The EMS agency primary address information (e.g., City) should be entered for the Agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”.   
 &lt;br/>&lt;br/>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options.   
 &lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website.   
 &lt;br/>&lt;br/>GNIS Codes Website: http://geonames.usgs.gov/domestic/download_data.htm
@@ -302,7 +302,7 @@
 										<definition>The primary website address of the agency.</definition>
 										<v2Number>D02_11</v2Number>
 										<usage>Recommended</usage>
-										<comment>The EMS agency website address should be entered for the Agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”. The EMS agency website address or other websites are optional for other contact types (e.g. Administrative Assistant, EMS Medical Director, etc.). </comment>
+										<comment>The EMS agency website address should be entered for the Agency Contact Type (dContact.05) "EMS Agency Director/Chief/Lead Administrator/CEO". The EMS agency website address or other websites are optional for other contact types (e.g., Administrative Assistant, EMS Medical Director, etc.).</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -387,7 +387,7 @@
 													<state>No</state>
 													<definition>Indication of Medical Director's Compensation.</definition>
 													<usage>Optional</usage>
-													<comment>Associated with EMS Medical Directors only.</comment>
+													<comment>This element applies to the Medical Director(s) for an EMS agency (EMS Medical Director and EMS Assistant Medical Director).</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -464,7 +464,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="1101017">
 				<xs:annotation>
-					<xs:documentation>Other (Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -622,7 +622,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="WebAddress">
 		<xs:annotation>
-			<xs:documentation>An URL for a website </xs:documentation>
+			<xs:documentation>An URL for a website</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="3"/>

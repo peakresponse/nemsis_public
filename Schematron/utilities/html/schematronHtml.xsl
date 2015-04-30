@@ -5,7 +5,7 @@ XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron 
 documentation purposes
 
 Version: 3.4.0-150302
-Revision Date: March 2, 2015
+Revision Date: April 29, 2015
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -28,11 +28,12 @@ Schematron files via a user-friendly web-based interface.
           <xsl:value-of select="sch:schema/sch:title"/>
         </title>
 
-        <link rel="stylesheet" type="text/css" href="../utilities/html/schematronHtml.css" />
+        <link rel="stylesheet" type="text/css" href="http://www.nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.css" />
 
         <script type="text/javascript">
           
-          var versionBase = 'http://nemsis.org/media/nemsis_v3/v3.4.0.150302';
+          var version = '<xsl:value-of select="sch:schema/@schemaVersion"/>'.split('.').slice(0, 3).join('.');
+          var versionBase = 'http://www.nemsis.org/media/nemsis_v3/release-' + version;
 
           // Function to clean up value-of elements in overview page
           function cleanValueOf (element) {
@@ -52,7 +53,7 @@ Schematron files via a user-friendly web-based interface.
           // Helper function for linkNemsisElement
           function linkReplace ($1, useName) {
             var elementName = window.nemSch_lookup_elements[$1];
-            return '&lt;a href="' + versionBase + '/DataDictionary/DEMEMS/DataDictionary/sections/elements/' + $1 + '.xml" target="_blank" title="' +
+            return '&lt;a href="' + versionBase + '/DataDictionary/PDFHTML/DEMEMS/sections/elements/' + $1 + '.xml" target="_blank" title="' +
           $1 + ' ' + elementName + '">' + (useName &amp;&amp; elementName ? elementName : $1) + '&lt;/a>';
             }
 
@@ -131,7 +132,7 @@ Schematron files via a user-friendly web-based interface.
 
         <!-- Title page -->
         <div class="page" id="root">
-          <img src="../utilities/html/nemsisLogo.gif"/>
+          <img src="http://www.nemsis.org/images/nemsisLogo.gif"/>
           <div class="blueRect"></div>
           <div class="spacer20"></div>
           <div class="titleMain">NEMSIS</div>

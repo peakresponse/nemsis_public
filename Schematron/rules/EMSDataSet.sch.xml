@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.141104" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.150518" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -804,13 +804,13 @@
 
     <sch:let name="no_scene" value="if(ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = 4212007]) then true() else false()"/>
 
-    <!-- no_patient: No scene or Assist, No Patient, or Standby. -->
+    <!-- no_patient: No scene or Assist, Canceled on Scene (No Patient), Standby, or Transport of Body Parts or Organs Only. -->
 
-    <sch:let name="no_patient" value="if($no_scene or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. &lt;= 4212011 or . = (4212039, 4212041)]) then true() else false()"/>
+    <sch:let name="no_patient" value="if($no_scene or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. &lt;= 4212011 or . = (4212039, 4212041, 4212043)]) then true() else false()"/>
 
-    <!-- no_treatment: No patient or No Resuscitation Attempted, No Treatment/Transport Required, or Transport of Body Parts or Organs only. -->
+    <!-- no_treatment: No patient or No Resuscitation Attempted, Patient Refused Evaluation/Care, or No Treatment/Transport Required. (Note: it is possible but not necessary that treatment was given in the case of Patient Refused Evaluation/Care.) -->
 
-    <sch:let name="no_treatment" value="if($no_patient or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212013, 4212015, 4212021, 4212043)]) then true() else false()"/>
+    <sch:let name="no_treatment" value="if($no_patient or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212013, 4212015, 4212021, 4212023, 4212025)]) then true() else false()"/>
 
     <!-- no_transport: No patient or Without Transport, No Treatment/Transport Required, Released, or Transferred. -->
 
@@ -840,9 +840,9 @@
 
     <sch:let name="eTimes.09" value="if($no_emstransport or nem:eTimes/nem:eTimes.09 != '') then '' else key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>
 
-    <sch:let name="eTimes.11" value="if($no_transport or nem:eTimes/nem:eTimes.11 != '') then '' else key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>
+    <sch:let name="eTimes.11" value="if($no_emstransport or nem:eTimes/nem:eTimes.11 != '') then '' else key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>
 
-    <sch:let name="eTimes.12" value="if($no_transport or nem:eTimes/nem:eTimes.12 != '') then '' else key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>
+    <sch:let name="eTimes.12" value="if($no_emstransport or nem:eTimes/nem:eTimes.12 != '') then '' else key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>
 
     <sch:let name="nemsisElements" value="(nem:eDisposition/nem:eDisposition.12, (nem:eDisposition/(nem:eDisposition.17[not($no_transport)], nem:eDisposition.20[not($no_transport)]), nem:ePatient/(nem:ePatient.13[not($no_patient)], nem:ePatient.AgeGroup/nem:ePatient.15[not($no_patient)]), nem:eScene/nem:eScene.09[not($no_scene)], nem:eTimes/(nem:eTimes.05, nem:eTimes.06, nem:eTimes.07[not($no_patient)], nem:eTimes.09[not($no_scene)], nem:eTimes.11[not($no_transport)], nem:eTimes.12[not($no_transport)]))[. = ''])"/>
 

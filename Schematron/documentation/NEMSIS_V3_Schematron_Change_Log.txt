@@ -2,6 +2,19 @@ NEMSIS Schematron Change Log
 
 
 
+3.4.0.150518
+
+
+National Patterns and Rules
+
+nemSch_consistency_eDisposition.12: Changed no_treatment flag to include Patient Refused Evaluation/Care. Fixed XPath references to eDisposition.05, 06, 07. Changed validation of eSituation elements to not apply when there is no treatment. Changed validation of eTimes.11 and eTimes.12 to only apply when a patient is transported by EMS. Changed validation of eSituation elements to only apply when a patient is treated
+
+nemSch_sequence_time: Fixed XPath reference to eVitals.02.
+
+nemSch_uniqueness_EMSDataSet: Corrected title.
+
+
+
 3.4.0.150302
 
 

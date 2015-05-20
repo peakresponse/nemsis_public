@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.150302" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.150518" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -842,9 +842,11 @@
 
     <sch:let name="no_patient" value="if($no_scene or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. &lt;= 4212011 or . = (4212039, 4212041, 4212043)]) then true() else false()"/>
 
-    <!-- no_treatment: No patient or No Resuscitation Attempted or No Treatment/Transport Required. -->
+    <!-- no_treatment: No patient or No Resuscitation Attempted, Patient Refused Evaluation/Care, 
+                       or No Treatment/Transport Required. (Note: it is possible but not necessary 
+                       that treatment was given in the case of Patient Refused Evaluation/Care.) -->
 
-    <sch:let name="no_treatment" value="if($no_patient or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212013, 4212015, 4212021)]) then true() else false()"/>
+    <sch:let name="no_treatment" value="if($no_patient or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212013, 4212015, 4212021, 4212023, 4212025)]) then true() else false()"/>
 
     <!-- no_transport: No patient or Without Transport, No Treatment/Transport Required, Released, 
                        or Transferred. -->
@@ -867,11 +869,11 @@
     
     <sch:let name="eArrest.16" value="if(not(nem:eDisposition/nem:eDisposition.12 = (4212017, 4212019)) or nem:eArrest/nem:eArrest.16 != '') then '' else key('nemSch_key_elements', 'eArrest.16', $nemSch_elements)"/>
 
-    <sch:let name="eDisposition.05" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.05 != '') then '' else key('nemSch_key_elements', 'eDisposition.05', $nemSch_elements)"/>
+    <sch:let name="eDisposition.05" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.DestinationGroup/nem:eDisposition.05 != '') then '' else key('nemSch_key_elements', 'eDisposition.05', $nemSch_elements)"/>
 
-    <sch:let name="eDisposition.06" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.06 != '') then '' else key('nemSch_key_elements', 'eDisposition.06', $nemSch_elements)"/>
+    <sch:let name="eDisposition.06" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.DestinationGroup/nem:eDisposition.06 != '') then '' else key('nemSch_key_elements', 'eDisposition.06', $nemSch_elements)"/>
 
-    <sch:let name="eDisposition.07" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.07 != '') then '' else key('nemSch_key_elements', 'eDisposition.07', $nemSch_elements)"/>
+    <sch:let name="eDisposition.07" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.DestinationGroup/nem:eDisposition.07 != '') then '' else key('nemSch_key_elements', 'eDisposition.07', $nemSch_elements)"/>
 
     <sch:let name="eDisposition.16" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.16 != '') then '' else key('nemSch_key_elements', 'eDisposition.16', $nemSch_elements)"/>
 
@@ -901,17 +903,17 @@
 
     <sch:let name="eScene.09" value="if($no_scene or nem:eScene/nem:eScene.09 != '') then '' else key('nemSch_key_elements', 'eScene.09', $nemSch_elements)"/>
 
-    <sch:let name="eSituation.02" value="if($no_emstransport or $no_911 or nem:eSituation/nem:eSituation.02 != '') then '' else key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/>
+    <sch:let name="eSituation.02" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.02 != '') then '' else key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/>
 
-    <sch:let name="eSituation.07" value="if($no_emstransport or $no_911 or nem:eSituation/nem:eSituation.07 != '') then '' else key('nemSch_key_elements', 'eSituation.07', $nemSch_elements)"/>
+    <sch:let name="eSituation.07" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.07 != '') then '' else key('nemSch_key_elements', 'eSituation.07', $nemSch_elements)"/>
 
-    <sch:let name="eSituation.08" value="if($no_emstransport or $no_911 or nem:eSituation/nem:eSituation.08 != '') then '' else key('nemSch_key_elements', 'eSituation.08', $nemSch_elements)"/>
+    <sch:let name="eSituation.08" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.08 != '') then '' else key('nemSch_key_elements', 'eSituation.08', $nemSch_elements)"/>
 
-    <sch:let name="eSituation.09" value="if($no_emstransport or $no_911 or nem:eSituation/nem:eSituation.09 != '') then '' else key('nemSch_key_elements', 'eSituation.09', $nemSch_elements)"/>
+    <sch:let name="eSituation.09" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.09 != '') then '' else key('nemSch_key_elements', 'eSituation.09', $nemSch_elements)"/>
 
-    <sch:let name="eSituation.11" value="if($no_emstransport or $no_911 or nem:eSituation/nem:eSituation.11 != '') then '' else key('nemSch_key_elements', 'eSituation.11', $nemSch_elements)"/>
+    <sch:let name="eSituation.11" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.11 != '') then '' else key('nemSch_key_elements', 'eSituation.11', $nemSch_elements)"/>
 
-    <sch:let name="eSituation.13" value="if($no_emstransport or $no_911 or nem:eSituation/nem:eSituation.13 != '') then '' else key('nemSch_key_elements', 'eSituation.13', $nemSch_elements)"/>
+    <sch:let name="eSituation.13" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.13 != '') then '' else key('nemSch_key_elements', 'eSituation.13', $nemSch_elements)"/>
 
     <sch:let name="eTimes.05" value="if($no_scene or nem:eTimes/nem:eTimes.05 != '') then '' else key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>
 
@@ -921,11 +923,11 @@
 
     <sch:let name="eTimes.09" value="if($no_emstransport or nem:eTimes/nem:eTimes.09 != '') then '' else key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>
 
-    <sch:let name="eTimes.11" value="if($no_transport or nem:eTimes/nem:eTimes.11 != '') then '' else key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>
+    <sch:let name="eTimes.11" value="if($no_emstransport or nem:eTimes/nem:eTimes.11 != '') then '' else key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>
 
-    <sch:let name="eTimes.12" value="if($no_transport or nem:eTimes/nem:eTimes.12 != '') then '' else key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>
+    <sch:let name="eTimes.12" value="if($no_emstransport or nem:eTimes/nem:eTimes.12 != '') then '' else key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>
 
-    <sch:let name="nemsisElements" value="nem:eDisposition/nem:eDisposition.12, nem:eArrest.16[$eArrest.16], nem:eDisposition/(nem:eDisposition.05[$eDisposition.05], nem:eDisposition.06[$eDisposition.06], nem:eDisposition.07[$eDisposition.07], nem:eDisposition.16[$eDisposition.16], nem:eDisposition.17[$eDisposition.17], nem:eDisposition.19[$eDisposition.19], nem:eDisposition.20[$eDisposition.20]), nem:eDisposition.21[$eDisposition.21], nem:ePatient/(nem:ePatient.07[$ePatient.07], nem:ePatient.08[$ePatient.08], nem:ePatient.09[$ePatient.09], nem:ePatient.13[$ePatient.13], nem:ePatient.14[$ePatient.14], nem:ePatient.AgeGroup/nem:ePatient.15[$ePatient.15], nem:ePatient.AgeGroup/nem:ePatient.16[$ePatient.16]), nem:ePayment.01[$ePayment.01], nem:eScene/nem:eScene.09[$eScene.09], nem:eSituation/(nem:eSituation.02[$eSituation.02], nem:eSituation.07[$eSituation.07], nem:eSituation.08[$eSituation.08], nem:eSituation.09[$eSituation.09], nem:eSituation.11[$eSituation.11], nem:eSituation.13[$eSituation.13]), nem:eTimes/(nem:eTimes.05[$eTimes.05], nem:eTimes.06[$eTimes.06], nem:eTimes.07[$eTimes.07], nem:eTimes.09[$eTimes.09], nem:eTimes.11[$eTimes.11], nem:eTimes.12[$eTimes.12])"/>
+    <sch:let name="nemsisElements" value="nem:eDisposition/nem:eDisposition.12, nem:eArrest.16[$eArrest.16], nem:eDisposition/(nem:eDisposition.DestinationGroup/(nem:eDisposition.05[$eDisposition.05], nem:eDisposition.06[$eDisposition.06], nem:eDisposition.07[$eDisposition.07]), nem:eDisposition.16[$eDisposition.16], nem:eDisposition.17[$eDisposition.17], nem:eDisposition.19[$eDisposition.19], nem:eDisposition.20[$eDisposition.20]), nem:eDisposition.21[$eDisposition.21], nem:ePatient/(nem:ePatient.07[$ePatient.07], nem:ePatient.08[$ePatient.08], nem:ePatient.09[$ePatient.09], nem:ePatient.13[$ePatient.13], nem:ePatient.14[$ePatient.14], nem:ePatient.AgeGroup/nem:ePatient.15[$ePatient.15], nem:ePatient.AgeGroup/nem:ePatient.16[$ePatient.16]), nem:ePayment.01[$ePayment.01], nem:eScene/nem:eScene.09[$eScene.09], nem:eSituation/(nem:eSituation.02[$eSituation.02], nem:eSituation.07[$eSituation.07], nem:eSituation.08[$eSituation.08], nem:eSituation.09[$eSituation.09], nem:eSituation.11[$eSituation.11], nem:eSituation.13[$eSituation.13]), nem:eTimes/(nem:eTimes.05[$eTimes.05], nem:eTimes.06[$eTimes.06], nem:eTimes.07[$eTimes.07], nem:eTimes.09[$eTimes.09], nem:eTimes.11[$eTimes.11], nem:eTimes.12[$eTimes.12])"/>
 
     <!-- Assert (as error) that none of certain elements above should be flagged. If the assert 
          fails, list the flagged elements.  -->
@@ -1833,7 +1835,7 @@
 
   <sch:rule id="nemSch_sequence_time_eVitals.01" context="nem:eVitals.01[. != '']">
 
-    <sch:let name="eVitals.01_prior" value="if(../nem:Vitals.02 != '9923003' or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))) then false() else true()"/>
+    <sch:let name="eVitals.01_prior" value="if(../nem:eVitals.02 != '9923003' or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))) then false() else true()"/>
 
     <sch:let name="nemsisElements" value="(., ../nem:eVitals.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13))[. != '']"/>
 
@@ -1875,7 +1877,7 @@
   <!-- This pattern validates that values for certain recurring Patient Care Report elements are 
        unique within a list.  -->
 
-  <sch:title>Certain recurring demographic data elements are unique within a list.</sch:title>
+  <sch:title>Certain recurring patient care report data elements are unique within a list.</sch:title>
 
   <sch:rule id="nemSch_uniqueness_EMSDataSet_abstract" abstract="true">
 

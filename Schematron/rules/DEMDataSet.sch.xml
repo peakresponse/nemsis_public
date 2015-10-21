@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.3.4.150518" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.3.4.151028" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -607,7 +607,7 @@
   <!-- This pattern allows the following combinations of nil, NV, and PN attributes:
          * For dCustomResults.01 and eCustomResults.01: Any combination
          * For elements in eExam.AssessmentGroup: PN (nil and NV are not allowed per the XSD)
-         * For eInjury.04, eMedications.03, and eProcedures.03 only: PN and not(nil) and not(NV)
+         * For eMedications.03 and eProcedures.03 only: PN and not(nil) and not(NV)
          * nil and either NV or PN but not both
        If an element has neither nil, NV, nor PN, the rules in this pattern are not fired (other 
        than the dummy rule for CustomResults).
@@ -644,9 +644,9 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Pn_injury_medication_procedure" context="nem:eInjury.04[@PN] | nem:eMedications.03[@PN] | nem:eProcedures.03[@PN]">
+  <sch:rule id="nemSch_nilNvPn_Pn_medication_procedure" context="nem:eMedications.03[@PN] | nem:eProcedures.03[@PN]">
 
-    <!-- This rule fires when eInjury.04 Vehicular, Pedestrian, or Other Injury Risk Factor or eMedications.03 Medication Given or eProcedures.03 Procedure has a Pertinent Negative attribute. -->
+    <!-- This rule fires when eMedications.03 Medication Given or eProcedures.03 Procedure has a Pertinent Negative attribute. -->
 
     <sch:let name="nemsisElements" value="."/>
 

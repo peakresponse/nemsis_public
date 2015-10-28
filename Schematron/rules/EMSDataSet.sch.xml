@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.150518" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.151028" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -1676,7 +1676,7 @@
                           Unit Notified by Dispatch Date/Time. -->
 
     <sch:assert id="nemSch_sequence_time_eDisposition.25_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
     </sch:assert>
 
     <!-- eDisposition.25: Date/Time of Destination Prearrival Alert or Activation should not occur 
@@ -1686,7 +1686,7 @@
                           Unit Back at Home Location Date/Time. -->
 
     <sch:assert id="nemSch_sequence_time_eDisposition.25_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>, <sch:value-of select="key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>, or <sch:value-of select="key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>.
     </sch:assert>
 
   </sch:rule>

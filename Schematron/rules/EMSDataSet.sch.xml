@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.150518" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.151028" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -1061,7 +1061,7 @@
   <!-- This pattern allows the following combinations of nil, NV, and PN attributes:
          * For dCustomResults.01 and eCustomResults.01: Any combination
          * For elements in eExam.AssessmentGroup: PN (nil and NV are not allowed per the XSD)
-         * For eInjury.04, eMedications.03, and eProcedures.03 only: PN and not(nil) and not(NV)
+         * For eMedications.03 and eProcedures.03 only: PN and not(nil) and not(NV)
          * nil and either NV or PN but not both
        If an element has neither nil, NV, nor PN, the rules in this pattern are not fired (other 
        than the dummy rule for CustomResults).
@@ -1098,9 +1098,9 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Pn_injury_medication_procedure" context="nem:eInjury.04[@PN] | nem:eMedications.03[@PN] | nem:eProcedures.03[@PN]">
+  <sch:rule id="nemSch_nilNvPn_Pn_medication_procedure" context="nem:eMedications.03[@PN] | nem:eProcedures.03[@PN]">
 
-    <!-- This rule fires when eInjury.04 Vehicular, Pedestrian, or Other Injury Risk Factor or eMedications.03 Medication Given or eProcedures.03 Procedure has a Pertinent Negative attribute. -->
+    <!-- This rule fires when eMedications.03 Medication Given or eProcedures.03 Procedure has a Pertinent Negative attribute. -->
 
     <sch:let name="nemsisElements" value="."/>
 
@@ -1325,18 +1325,18 @@
 
   <sch:rule id="nemSch_sequence_time_eDisposition.25" context="nem:eDisposition.25[. != '']">
 
-    <sch:let name="nemsisElements" value="(., ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
+    <sch:let name="nemsisElements" value="(., ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
 
     <!-- eDisposition.25: Date/Time of Destination Prearrival Alert or Activation should not occur prior to: Unit Notified by Dispatch Date/Time. -->
 
     <sch:assert id="nemSch_sequence_time_eDisposition.25_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
     </sch:assert>
 
     <!-- eDisposition.25: Date/Time of Destination Prearrival Alert or Activation should not occur after: Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Back at Home Location Date/Time. -->
 
     <sch:assert id="nemSch_sequence_time_eDisposition.25_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>, <sch:value-of select="key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>, or <sch:value-of select="key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>.
     </sch:assert>
 
   </sch:rule>

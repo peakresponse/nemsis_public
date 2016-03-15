@@ -255,10 +255,10 @@
 
 		    <!--ASSERT [WARNING]-->
       <xsl:choose>
-         <xsl:when test="matches(@schemaVersion, '^3\.\d+\.\d+\.\d{6}(_.*)?$')"/>
+         <xsl:when test="matches(@schemaVersion, '^3\.\d+\.\d+\.\d{6}(CP\d+)?(_.*)?$')"/>
          <xsl:otherwise>
             <svrl:failed-assert xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                                test="matches(@schemaVersion, '^3\.\d+\.\d+\.\d{6}(_.*)?$')">
+                                test="matches(@schemaVersion, '^3\.\d+\.\d+\.\d{6}(CP\d+)?(_.*)?$')">
                <xsl:attribute name="role">[WARNING]</xsl:attribute>
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>

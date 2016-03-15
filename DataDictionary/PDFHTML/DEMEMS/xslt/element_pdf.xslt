@@ -689,7 +689,22 @@
                       <xsl:value-of select="@value"/>
                     </td>
                     <td class="sectionRestrictionsEnumerationDescriptionValue">
-                      <xsl:value-of select="@annotation"  disable-output-escaping="yes"/>
+                        
+                        
+                        <!--fix for escaping &lt;-->
+                        <xsl:call-template name="replace-string">
+                            <xsl:with-param name="text" select="@annotation"/>
+                            <xsl:with-param name="replace" select="'&amp;lt;'" />
+                            <xsl:with-param name="with" select="'&lt;'"/>
+                        </xsl:call-template>
+                        <!--<xsl:value-of    disable-output-escaping="no" select="string(@annotation)"/>-->
+                        
+    					
+    									<xsl:choose>  
+    									<xsl:when test="@deprecated='true'">
+                           <span style="background:purple;margin:0 2px;color:white;padding:0 2px">DEPRECATED</span>
+    									</xsl:when>
+    									</xsl:choose>
                     </td>
                   </tr>
                 </xsl:for-each> 
@@ -756,4 +771,29 @@
 </body>
 </html>
 </xsl:template>
+
+
+
+<xsl:template name="replace-string">
+    <xsl:param name="text"/>
+    <xsl:param name="replace"/>
+    <xsl:param name="with"/>
+    <xsl:choose>
+      <xsl:when test="contains($text,$replace)">
+        <xsl:value-of select="substring-before($text,$replace)"/>
+        <xsl:value-of select="$with"/>
+        <xsl:call-template name="replace-string">
+          <xsl:with-param name="text"
+select="substring-after($text,$replace)"/>
+          <xsl:with-param name="replace" select="$replace"/>
+          <xsl:with-param name="with" select="$with"/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$text"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
 </xsl:stylesheet>

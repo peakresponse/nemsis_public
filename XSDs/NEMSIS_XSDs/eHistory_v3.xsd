@@ -14,7 +14,7 @@
 							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
 							<v2Number>E12_01</v2Number>
 							<usage>Required</usage>
-							<comment></comment>
+							<comment/>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -833,8 +833,8 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:documentation>The numeric dose or amount of the patient's current medication</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:decimal">
-			<xs:totalDigits value="8"/>
-			<xs:fractionDigits value="2"/>
+			<xs:totalDigits value="9"/>
+			<xs:fractionDigits value="3"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicationAllergies">

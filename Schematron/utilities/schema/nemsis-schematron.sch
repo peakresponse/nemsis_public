@@ -34,7 +34,7 @@
         In schema, @queryBinding MUST be xslt2.
       </sch:assert>
 
-      <sch:assert role="[WARNING]" test="matches(@schemaVersion, '^3\.\d+\.\d+\.\d{6}(_.*)?$')">
+      <sch:assert role="[WARNING]" test="matches(@schemaVersion, '^3\.\d+\.\d+\.\d{6}(CP\d+)?(_.*)?$')">
         In schema, @schemaVersion SHOULD be the full NEMSIS release version the schema is intended 
         to validate (for example, 3.3.3.130926), which MAY be followed by an underscore and a 
         version number specific to the Schematron file itself.

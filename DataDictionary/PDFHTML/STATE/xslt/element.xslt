@@ -145,7 +145,7 @@
                 <tr>                  
                   <td class="definitionValue" style="padding-left:5px"><xsl:value-of select="element/definition"/></td>
                 </tr>
-              </table>
+              </table>10/2/2015 8:11:11 PM
             </td>        
           </tr>
         </table>
@@ -708,7 +708,7 @@
                     <div class="attributeValue" style="float:left;"> 
                     <table cellspacing="0" cellpadding="0" border="0">
                       <tr>
-                        <td class="attributeValue" style="width:150px;"><b>Data Type:</b> String</td>
+                        <td class="attributeValue" style="width:150px;"><b>Data Type:</b><xsl:value-of select="@baseType"/></td>
                         <xsl:for-each select="./facet">
                           <xsl:choose><xsl:when test="@name!='pattern'">
                           <td class="attributeValue" style="width:250px;"><b><xsl:value-of select="@name"/>: </b><xsl:value-of select="@value"/></td>

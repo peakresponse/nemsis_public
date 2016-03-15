@@ -14,9 +14,7 @@
 							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
 							<v2Number>E12_01</v2Number>
 							<usage>Required</usage>
-							
 							<comment>Added Obesity, Sight Impaired, Psychologically Impaired</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -50,9 +48,6 @@
 										<definition>The last name of the patient's practitioner</definition>
 										<v2Number>E12_06</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -68,9 +63,6 @@
 										<definition>The first name of the patient's practitioner</definition>
 										<v2Number>E12_04</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -86,9 +78,6 @@
 										<definition>The middle name or initial of the patient's practitioner.</definition>
 										<v2Number>E12_05</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -117,7 +106,6 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Advanced Directive and Do Not Resuscitate are both included in this data element.</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -145,7 +133,6 @@
 							<definition>The patient's medication allergies</definition>
 							<v2Number>E12_08</v2Number>
 							<usage>Recommended</usage>
-							
 							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 CM codes can be used for medication groups. 
 
 &lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
@@ -159,7 +146,6 @@
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -194,7 +180,6 @@
 							<definition>The patient's known allergies to food or environmental agents.</definition>
 							<v2Number>E12_09</v2Number>
 							<usage>Optional</usage>
-							
 							<comment>
 Data Element Comment Section:
 &lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
@@ -202,7 +187,6 @@ Data Element Comment Section:
 &lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html 
 &lt;br/>Product: Product - UMLS Metathesaurus
 							</comment>
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -225,13 +209,11 @@ Data Element Comment Section:
 							<definition>The patient's pre-existing medical and surgery history of the patient</definition>
 							<v2Number>E12_10</v2Number>
 							<usage>Recommended</usage>
-							
 							<comment>Code list is represented by ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html							
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus							
 							</comment>
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -265,9 +247,6 @@ Data Element Comment Section:
 							<definition>Type of person medical history obtained from</definition>
 							<v2Number>E12_11</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -296,9 +275,6 @@ Data Element Comment Section:
 										<definition>The immunization type of the patient.</definition>
 										<v2Number>E12_12</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -314,9 +290,6 @@ Data Element Comment Section:
 										<definition>The year associated with each immunization type</definition>
 										<v2Number>E12_13</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -342,7 +315,6 @@ Data Element Comment Section:
 										<definition>The medications the patient currently takes</definition>
 										<v2Number>E12_14</v2Number>
 										<usage>Recommended</usage>
-										
 										<comment>
 List of medications based on RxNorm (RXCUI) code. 
 &lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
@@ -352,7 +324,6 @@ List of medications based on RxNorm (RXCUI) code.
 &lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
 &lt;br/>Product - RxNorm Full Monthly Release
 										</comment>
-										
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -386,9 +357,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The numeric dose or amount of the patient's current medication</definition>
 										<v2Number>E12_15</v2Number>
 										<usage>Optional</usage>
-										
 										<comment>Associated with eHistory.12 (Current Medications)</comment>
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -404,9 +373,6 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The dosage unit of the patient's current medication</definition>
 										<v2Number>E12_16</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -422,9 +388,6 @@ List of medications based on RxNorm (RXCUI) code.
 										<definition>The administration route (po, SQ, etc.) of the patient's current medication</definition>
 										<v2Number>E12_17</v2Number>
 										<usage>Optional</usage>
-										
-										
-										
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -444,9 +407,6 @@ List of medications based on RxNorm (RXCUI) code.
 							<definition>Indication of the presence of the Emergency Information Form associated with patient's with special healthcare needs.</definition>
 							<v2Number>E12_18</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -465,8 +425,6 @@ List of medications based on RxNorm (RXCUI) code.
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -500,9 +458,6 @@ List of medications based on RxNorm (RXCUI) code.
 							<definition>Indication of the possibility by the patient's history of current pregnancy.</definition>
 							<v2Number>E12_20</v2Number>
 							<usage>Optional</usage>
-							
-							
-							
 							<PNNil>Yes</PNNil>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -528,9 +483,7 @@ List of medications based on RxNorm (RXCUI) code.
 							<national>No</national>
 							<state>No</state>
 							<definition>Date and Time of last oral intake.</definition>
-							
 							<usage>Optional</usage>
-							
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
 &lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -846,8 +799,8 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:documentation>The numeric dose or amount of the patient's current medication</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:decimal">
-			<xs:totalDigits value="8"/>
-			<xs:fractionDigits value="2"/>
+			<xs:totalDigits value="9"/>
+			<xs:fractionDigits value="3"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicationAllergies">

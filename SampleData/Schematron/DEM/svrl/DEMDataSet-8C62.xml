@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
+                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                        xmlns:saxon="http://saxon.sf.net/"
+                        xmlns:schold="http://www.ascc.net/xml/schematron"
+                        xmlns:iso="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                        xmlns:nem="http://www.nemsis.org"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        title="NEMSIS National ISO Schematron file for DEMDataSet"
+                        schemaVersion="3.3.4.160316CP1"><!--   
+		   
+		   
+		 -->
+   <svrl:ns-prefix-in-attribute-values uri="http://www.nemsis.org" prefix="nem"/>
+   <svrl:ns-prefix-in-attribute-values uri="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+   <svrl:active-pattern document="DEMDataSet-8C62.xml"
+                        id="nemSch_consistency_nilNvPn"
+                        name="The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate."/>
+   <svrl:fired-rule context="nem:dCustomResults.01 | nem:eCustomResults.01"
+                    id="nemSch_nilNvPn_customResults"/>
+   <svrl:active-pattern document="DEMDataSet-8C62.xml"
+                        id="nemSch_consistency_dAgency.05_dAgency.06"
+                        name="EMS Agency Service Area County belongs to the EMS Agency Service Area State with which it is grouped."/>
+   <svrl:fired-rule context="nem:dAgency.06"
+                    id="nemSch_consistency_dAgency.05_dAgency.06_match"/>
+   <svrl:fired-rule context="nem:dAgency.06"
+                    id="nemSch_consistency_dAgency.05_dAgency.06_match"/>
+   <svrl:fired-rule context="nem:dAgency.06"
+                    id="nemSch_consistency_dAgency.05_dAgency.06_match"/>
+   <svrl:active-pattern document="DEMDataSet-8C62.xml"
+                        id="nemSch_format_ansi"
+                        name="ANSI state and county codes are numeric."/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:failed-assert test=". = '' or . castable as xs:integer"
+                       id="nemSch_format_ansi_countyDigits"
+                       role="[ERROR]"
+                       location="/*:DEMDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:DemographicReport[namespace-uri()='http://www.nemsis.org'][1]/*:dLocation[namespace-uri()='http://www.nemsis.org'][1]/*:dLocation.LocationGroup[namespace-uri()='http://www.nemsis.org'][1]/*:dLocation.10[namespace-uri()='http://www.nemsis.org'][1]">
+      <svrl:text>EMS Location County should be a number representing the ANSI code for the county.
+    </svrl:text>
+      <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
+         <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+            <record>
+               <dAgency.01>0</dAgency.01>
+               <dAgency.02>A</dAgency.02>
+               <dAgency.04>49</dAgency.04>
+            </record>
+            <elements>
+               <element location="/*:DEMDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:DemographicReport[namespace-uri()='http://www.nemsis.org'][1]/*:dLocation[namespace-uri()='http://www.nemsis.org'][1]/*:dLocation.LocationGroup[namespace-uri()='http://www.nemsis.org'][1]/*:dLocation.10[namespace-uri()='http://www.nemsis.org'][1]">UT018</element>
+            </elements>
+            <elementsMissing/>
+         </nemsisDiagnostic>
+      </svrl:diagnostic-reference>
+   </svrl:failed-assert>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+   <svrl:fired-rule context="nem:dAgency.04 | nem:dAgency.05 | nem:dConfiguration.01 | nem:dContact.07 | nem:dFacility.09 | nem:dLocation.08 | nem:dPersonnel.06 | nem:dPersonnel.22 | nem:eDisposition.05 | nem:ePatient.08 | nem:ePatient.20 | nem:ePayment.14 | nem:ePayment.28 | nem:ePayment.36 | nem:eScene.18"
+                    id="nemSch_format_ansi_state"/>
+   <svrl:fired-rule context="nem:dAgency.06 | nem:dFacility.11 | nem:dLocation.10 | nem:eDisposition.06 | nem:ePatient.07 | nem:eScene.21"
+                    id="nemSch_format_ansi_county"/>
+</svrl:schematron-output>

@@ -1,0 +1,36 @@
+NEMSIS V3 Schematron Test Cases for DEMDataSet
+
+File:             DEMDataSet--Base.xml
+ID:               DEMDataSet--Base
+Description:      This test case should pass validation while firing as many rules as possible.
+Expected Result:  [PASS]
+      
+File:             DEMDataSet-1CCD.xml
+ID:               nemSch_consistency_dAgency.05_dAgency.06_match_digits_A
+Description:      EMS Agency Service Area County(ies) should belong to the state with which it is grouped.
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-2DEF.xml
+ID:               nemSch_nilNvPn_nil_Nv_A
+Description:      When (Element) is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting) or a Pertinent Negative (if allowed for the element).
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-32CF.xml
+ID:               nemSch_nilNvPn_Nv_Nil_A
+Description:      When (Element) has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-4AE0.xml
+ID:               nemSch_format_ansi_stateDigits_A
+Description:      (Element) should be a number representing the ANSI code for the state.
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-8C62.xml
+ID:               nemSch_format_ansi_countyDigits_A
+Description:      (Element) should be a number representing the ANSI code for the county.
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-91A.xml
+ID:               nemSch_nilNvPn_customResults_A
+Description:      The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate. * Not checked on dCustomResults.01.
+Expected Result:  [PASS]

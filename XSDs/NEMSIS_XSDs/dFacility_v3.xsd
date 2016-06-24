@@ -88,7 +88,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="dFacility.05" type="NationalProviderIdentifier" id="dFacility.FacilityNationalProviderIdentifier" minOccurs="0">
+									<xs:element name="dFacility.05" id="dFacility.FacilityNationalProviderIdentifier" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
@@ -101,6 +101,14 @@
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="NationalProviderIdentifier">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+										
 									</xs:element>
 									<xs:element name="dFacility.06" type="FacilityRoom" id="dFacility.FacilityRoomSuiteorApartment" minOccurs="0">
 										<xs:annotation>

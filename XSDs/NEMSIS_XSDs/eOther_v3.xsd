@@ -314,7 +314,7 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eOther.13" type="SignatureReason" id="eOther.SignatureReason" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eOther.13" id="eOther.SignatureReason" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -327,6 +327,14 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+															
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="SignatureReason">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
 						</xs:element>
 						<xs:element name="eOther.14" type="RelationshipSignature" id="eOther.TypeOfPatientRepresentative" minOccurs="0">
 							<xs:annotation>

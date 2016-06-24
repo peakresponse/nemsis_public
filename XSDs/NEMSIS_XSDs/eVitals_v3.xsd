@@ -389,7 +389,7 @@
 													<name>Method of Heart Rate Measurement</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor).</definition>
+													<definition>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor.</definition>
 													<usage>Optional</usage>
 													<comment>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</comment>
 													<v3Changes>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Changes>
@@ -1053,7 +1053,7 @@
 													<name>Stroke Scale Type</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The type of stroke pain scale used.</definition>
+													<definition>The type of stroke scale used.</definition>
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
 														<performanceMeasure>Stroke</performanceMeasure>
@@ -1153,6 +1153,7 @@
 										<definition>The patient's Revised Trauma Score.</definition>
 										<v2Number>E14_27</v2Number>
 										<usage>Optional</usage>
+										<comment>The Revised Trauma Score is a physiological scoring system that is based on the first set of vital signs obtained from the patient, and consists of Glasgow Coma Scale, Systolic Blood Pressure and Respiratory Rate.</comment>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>

@@ -1,0 +1,80 @@
+'DatasetName'|'DatasetType'|'ElementNumber'|'ElementName'|'V2Number'|'National'|'State'|'Usage'|'MinOccurs'|'MaxOccurs'|'IsNillable'|'DataType'|'NV'|'PN'|'PNNill'|'NVList'|'PNList'|'minLength'|'maxLength'|'length'|'minInclusive'|'maxInclusive'|'minExclusive'|'totalDigits'|'fractionDigits'|'pattern'|
+'StateDataSet'|'element'|'dConfiguration.01'|'State Associated with the Certification/Licensure Levels'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{2}'|
+'StateDataSet'|'element'|'dCustomConfiguration.01'|'Custom Data Element Title'|''|''|''|'Mandatory'|'0'|'1'|''|'CustomTitle'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.02'|'Custom Definition'|''|''|''|'Mandatory'|'0'|'1'|''|'CustomDefinition'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.03'|'Custom Data Type'|''|''|''|'Mandatory'|'0'|'1'|''|'CustomDataType'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.04'|'Custom Data Element Recurrence'|''|''|''|'Mandatory'|'0'|'1'|''|'YesNoValues'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.05'|'Custom Data Element Usage'|''|''|''|'Mandatory'|'0'|'1'|''|'ElementUsage'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.06'|'Custom Data Element Potential Values'|''|''|''|'Optional'|'0'|'M'|''|'CustomValue'|''|''|''|''|''|'1'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.07'|'Custom Data Element Potential NOT Values (NV)'|''|''|''|'Optional'|'0'|'M'|''|'NV'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.08'|'Custom Data Element Potential Pertinent Negative Values (PN)'|''|''|''|'Optional'|'0'|'M'|''|'PN'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dCustomConfiguration.09'|'Custom Data Element Grouping ID'|''|''|''|'Optional'|'0'|'1'|''|'CorrelationID'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.01'|'Custom Data Element Title'|''|''|''|'Mandatory'|'0'|'1'|''|'CustomTitle'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.02'|'Custom Definition'|''|''|''|'Mandatory'|'0'|'1'|''|'CustomDefinition'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.03'|'Custom Data Type'|''|''|''|'Mandatory'|'0'|'1'|''|'CustomDataType'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.04'|'Custom Data Element Recurrence'|''|''|''|'Mandatory'|'0'|'1'|''|'YesNoValues'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.05'|'Custom Data Element Usage'|''|''|''|'Mandatory'|'0'|'1'|''|'ElementUsage'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.06'|'Custom Data Element Potential Values'|''|''|''|'Optional'|'0'|'M'|''|'CustomValue'|''|''|''|''|''|'1'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.07'|'Custom Data Element Potential NOT Values (NV)'|''|''|''|'Optional'|'0'|'M'|''|'NV'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.08'|'Custom Data Element Potential Pertinent Negative Values (PN)'|''|''|''|'Optional'|'0'|'M'|''|'PN'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eCustomConfiguration.09'|'Custom Data Element Grouping ID'|''|''|''|'Optional'|'0'|'1'|''|'CorrelationID'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dState.01'|'State Required Element'|''|''|''|'Optional'|'0'|'M'|''|'StateRequiredElement'|''|''|''|''|''|'1'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'eState.01'|'State Required Element'|''|''|''|'Optional'|'0'|'M'|''|'StateRequiredElement'|''|''|''|''|''|'1'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.01'|'State Associated with the Certification/Licensure Levels'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{2}'|
+'StateDataSet'|'element'|'dConfiguration.02'|'State Certification/Licensure Levels'|'D04_01'|'National'|'State'|'Mandatory'|'1'|'M'|''|'LicensureLevels'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.03'|'Procedures Permitted by the State'|''|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'snomed'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'100000'|'999999999999999'|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.04'|'Medications Permitted by the State'|''|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'Medication'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|'2'|'7'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.05'|'Protocols Permitted by the State'|''|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'ProtocolsUsed'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'D04_05'|'National'|'State'|'Mandatory'|'1'|'1'|''|'StateCertificationLicensureLevels'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.07'|'EMS Agency Procedures'|'D04_04'|'National'|'State'|'Mandatory'|'1'|'M'|''|'snomed'|''|''|''|''|''|''|''|''|'100000'|'999999999999999'|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'D04_07'|'National'|'State'|'Mandatory'|'1'|'1'|''|'StateCertificationLicensureLevels'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.09'|'EMS Agency Medications'|'D04_06'|'National'|'State'|'Mandatory'|'1'|'M'|''|'Medication'|''|''|''|''|''|'2'|'7'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.10'|'EMS Agency Protocols'|'D04_08'|'National'|'State'|'Mandatory'|'1'|'M'|''|'ProtocolsUsed'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.11'|'EMS Agency Specialty Service Capability'|''|'National'|'State'|'Mandatory'|'1'|'M'|''|'AgencySpecialtyServiceCapability'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.12'|'Billing Status'|'D04_10'|''|''|'Optional'|'0'|'1'|''|'YesNoValues'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.13'|'Emergency Medical Dispatch (EMD) Provided to EMS Agency Service Area'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'EMDtoAgencyServiceArea'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.14'|'EMD Vendor'|'D04_17'|''|'State'|'Recommended'|'0'|'M'|'Nillable'|'EMDVendorType'|'NV'|''|''|'NV.NotReporting; NV.NotRecorded; NV.NotApplicable; '|''|'2'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.15'|'Patient Monitoring Capability(ies)'|''|'National'|'State'|'Mandatory'|'1'|'M'|''|'PatientMonitoringCapability'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.16'|'Crew Call Sign'|'D04_02'|'National'|'State'|'Mandatory'|'1'|'M'|''|'AgencyCallSign'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dConfiguration.17'|'Dispatch Center (CAD) Name or ID'|''|''|''|'Optional'|'0'|'M'|''|'DispatchCenterCADNameorID'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.01'|'EMS Agency Unique State ID'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'EMSAgencyStateID'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.02'|'EMS Agency Number'|'D01_01'|'National'|'State'|'Mandatory'|'1'|'1'|''|'EMSAgencyNumber'|''|''|''|''|''|'1'|'15'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.03'|'EMS Agency Name'|'D01_02'|''|'State'|'Recommended'|'0'|'1'|'Nillable'|'EMSAgencyName'|'NV'|''|''|'NV.NotReporting; NV.NotRecorded; NV.NotApplicable; '|''|'2'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.04'|'EMS Agency State'|'D01_03'|'National'|'State'|'Mandatory'|'1'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{2}'|
+'StateDataSet'|'element'|'dAgency.05'|'EMS Agency Service Area States'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{2}'|
+'StateDataSet'|'element'|'dAgency.06'|'EMS Agency Service Area County(ies)'|'D01_04'|'National'|'State'|'Mandatory'|'1'|'M'|''|'ANSICountyCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{5}'|
+'StateDataSet'|'element'|'dAgency.07'|'EMS Agency Census Tracts'|''|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'CensusTracts'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|'[0-9]{11}'|
+'StateDataSet'|'element'|'dAgency.08'|'EMS Agency Service Area ZIP Codes'|''|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'ZIP'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|'[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]'|
+'StateDataSet'|'element'|'dAgency.09'|'Primary Type of Service'|'D01_05'|'National'|'State'|'Mandatory'|'1'|'1'|''|'TypeOfService'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.10'|'Other Types of Service'|'D01_06'|''|'State'|'Recommended'|'0'|'M'|'Nillable'|'TypeOfService'|'NV'|''|''|'NV.NotReporting; NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.11'|'Level of Service'|'D01_07'|'National'|'State'|'Mandatory'|'1'|'1'|''|'StateCertificationLicensureLevels'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.12'|'Organization Status'|'D01_09'|'National'|'State'|'Mandatory'|'1'|'1'|''|'OrganizationStatus'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.13'|'Organizational Type'|'D01_08'|'National'|'State'|'Mandatory'|'1'|'1'|''|'OrganizationalType'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.14'|'EMS Agency Organizational Tax Status'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'AgencyOrganizationalTaxStatus'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.15'|'Statistical Calendar Year'|'D01_10'|'National'|'State'|'Mandatory'|'1'|'1'|''|'Year'|''|''|''|''|''|''|''|''|'1900'|'2050'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.16'|'Total Primary Service Area Size'|'D01_12'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'AnnualAgencyStatistics'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'4000000'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.17'|'Total Service Area Population'|'D01_13'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'AnnualAgencyStatistics'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'4000000'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.18'|'911 EMS Call Center Volume per Year'|'D01_14'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'AnnualAgencyStatistics'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'4000000'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.19'|'EMS Dispatch Volume per Year'|'D01_15'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'AnnualAgencyStatistics'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'4000000'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.20'|'EMS Patient Transport Volume per Year'|'D01_16'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'AnnualAgencyStatistics'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'4000000'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.21'|'EMS Patient Contact Volume per Year'|'D01_17'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'AnnualAgencyStatistics'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'4000000'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.22'|'EMS Billable Calls per Year'|'D01_18'|''|'State'|'Recommended'|'0'|'1'|'Nillable'|'AnnualAgencyStatistics'|'NV'|''|''|'NV.NotReporting; NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'4000000'|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.23'|'EMS Agency Time Zone'|'D01_19'|''|''|'Optional'|'0'|'1'|''|'EMSAgencyTimeZone'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.24'|'EMS Agency Daylight Savings Time Use'|'D01_20'|''|''|'Optional'|'0'|'1'|''|'YesNoValues'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.25'|'National Provider Identifier'|'D01_21'|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'NationalProviderIdentifier'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|'10'|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dAgency.26'|'Fire Department ID Number'|''|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'FireDepartmentIDNumber'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|'1'|'20'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.01'|'Type of Facility'|'D04_15'|''|''|'Optional'|'0'|'1'|''|'TypeOfFacility'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.02'|'Facility Name'|'D04_11'|''|''|'Optional'|'0'|'1'|''|'FacilityName'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.03'|'Facility Location Code'|'D04_12'|''|''|'Optional'|'0'|'1'|''|'FacilityCode'|''|''|''|''|''|'2'|'50'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.04'|'Hospital Designations'|''|''|''|'Optional'|'0'|'M'|''|'HospitalDesignation'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.05'|'Facility National Provider Identifier'|''|''|''|'Optional'|'0'|'M'|''|'NationalProviderIdentifier'|''|''|''|''|''|''|''|'10'|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.06'|'Facility Room, Suite, or Apartment'|''|''|''|'Optional'|'0'|'1'|''|'FacilityRoom'|''|''|''|''|''|'1'|'15'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.07'|'Facility Street Address'|''|''|''|'Optional'|'0'|'1'|''|'StreetAddress'|''|''|''|''|''|'1'|'255'|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.08'|'Facility City'|''|''|''|'Optional'|'0'|'1'|''|'CityGnisCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.09'|'Facility State'|''|''|''|'Optional'|'0'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{2}'|
+'StateDataSet'|'element'|'dFacility.10'|'Facility ZIP Code'|''|''|''|'Optional'|'0'|'1'|''|'ZIP'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{5}|[0-9]{5}-[0-9]{4}|[0-9]{5}-[0-9]{5}|[A-Z][0-9][A-Z] [0-9][A-Z][0-9]'|
+'StateDataSet'|'element'|'dFacility.11'|'Facility County'|''|''|''|'Optional'|'0'|'1'|''|'ANSICountyCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{5}'|
+'StateDataSet'|'element'|'dFacility.12'|'Facility Country'|''|''|''|'Optional'|'0'|'1'|''|'ANSICountryCodesCAMXUS'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
+'StateDataSet'|'element'|'dFacility.13'|'Facility GPS Location'|''|''|''|'Optional'|'0'|'1'|''|'GPSLocation'|''|''|''|''|''|''|''|''|''|''|''|''|''|'(\+|-)?(90(\.[0]{1,6})?|([1-8][0-9]|[0-9])(\.[0-9]{1,6})?),(\+|-)?(180(\.[0]{1,6})?|(1[0-7][0-9]|[1-9][0-9]|[0-9])(\.[0-9]{1,6})?)'|
+'StateDataSet'|'element'|'dFacility.14'|'Facility US National Grid Coordinates'|''|''|''|'Optional'|'0'|'1'|''|'USNG'|''|''|''|''|''|''|''|''|''|''|''|''|''|'([1-9]|[1-5][0-9]|60)[C-HJ-NP-X][A-HJ-NP-Z][A-HJ-NP-V][0-9]{8}'|
+'StateDataSet'|'element'|'dFacility.15'|'Facility Phone Number'|''|''|''|'Optional'|'0'|'M'|''|'PhoneNumber'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'|

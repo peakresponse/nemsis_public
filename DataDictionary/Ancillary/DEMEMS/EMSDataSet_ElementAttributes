@@ -291,6 +291,7 @@
 'EMSDataSet'|'group'|'eAirway.ConfirmationGroup'|''|'ProcedureGroupCorrelationID'|
 'EMSDataSet'|'element'|'eAirway.02'|'Date/Time Airway Device Placement Confirmation'|'NV'|
 'EMSDataSet'|'element'|'eAirway.03'|'Airway Device Being Confirmed'|'NV'|
+'EMSDataSet'|'element'|'eAirway.04'|'Airway Device Placement Confirmed Method'|'CorrelationID'|
 'EMSDataSet'|'element'|'eAirway.04'|'Airway Device Placement Confirmed Method'|'NV'|
 'EMSDataSet'|'element'|'eAirway.06'|'Type of Individual Confirming Airway Device Placement'|'NV'|
 'EMSDataSet'|'element'|'eAirway.07'|'Crew Member ID'|'NV'|
@@ -326,7 +327,6 @@
 'EMSDataSet'|'element'|'eOutcome.01'|'Emergency Department Disposition'|'NV'|
 'EMSDataSet'|'element'|'eOutcome.02'|'Hospital Disposition'|'NV'|
 'EMSDataSet'|'group'|'eOutcome.ExternalDataGroup'|''|'CorrelationID'|
-'EMSDataSet'|'element'|'eOutcome.08'|'Emergency Department Recorded Cause of Injury'|'CorrelationID'|
 'EMSDataSet'|'element'|'eOutcome.09'|'Emergency Department Procedures'|'CorrelationID'|
 'EMSDataSet'|'element'|'eOutcome.10'|'Emergency Department Diagnosis'|'CorrelationID'|
 'EMSDataSet'|'element'|'eOutcome.12'|'Hospital Procedures'|'CorrelationID'|
@@ -344,4 +344,3 @@
 'EMSDataSet'|'element'|'eOther.08'|'Crew Member Completing this Report'|'NV'|
 'EMSDataSet'|'group'|'eOther.FileGroup'|''|'CorrelationID'|
 'EMSDataSet'|'group'|'eOther.SignatureGroup'|''|'CorrelationID'|
-'EMSDataSet'|'element'|'eOther.13'|'Signature Reason'|'CorrelationID'|

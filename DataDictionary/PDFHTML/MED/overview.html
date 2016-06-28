@@ -44,13 +44,13 @@ td { font-size: 12; }
 <div class="header">NEMSIS Data Dictionary Version 3.3.4</div>
 <div class="subHeader">NEMSIS Overview and Summary</div>
 <div class="spacer"></div>
-<div class="paragraph">The NEMSIS data dictionary was developed through a collaborative effort with the EMS industry including: web-based reviews, public comment periods, focus groups, industry dialogue, topic focused projects, and consensus. The National EMS Information System Version 3 represents a major revision from version 2 released in 2005. Adopting a broad perspective, the initiative to move to a 3rd version of the NEMSIS data dictionary was fueled by the need to improve data quality, enhance our ability to assess EMS performance, augment the flexibility of the standard for state adoption and, to move the NEMSIS standard into the Health Level 7 (HL7) organization for approval as an American National Standards Institute (ANSI) standard.</div>
+<div class="paragraph">This data dictionary represents 24 months of effort collaborating with the EMS industry through web-based reviews, public comment periods, focus groups, industry dialogue, topic focused projects, and consensus. The National EMS Information System Version 3 represents a revision from the existing version 2.1.1 released in 2005.  Adopting a broad perspective, the initiative to move to a 3rd version of the NEMSIS data dictionary was fueled by the need to improve data quality, enhance our ability to assess EMS performance, augment the flexibility of the standard for state adoption and, prepare for our initial movement of this standard into Health Level 7 (HL7) for approval as an American National Standards Institute (ANSI) standard.  At the time of this initial publication, NEMSIS Version 3 has passed several ballots within HL7 in an effort to be recognized as a federal healthcare information standard.  Final HL7 adoption of NEMSIS Version 3 is expected in 2012.  HL7 will be the permanent home for the NEMSIS standard once fully adopted and future revisions will occur through the HL7 process.</div>
 <div class="spacer"></div>
 <div class="section">NEMSIS Version 3 Element Configuration from v2.2.1</div>
 <div><img src="images/Composition1.png"/></div>
 <div class="spacer"></div>
 <div class="section">NEMSIS Version 3 Element Configuration</div>
-<div class="note">Total Elements including the Custom Elements: 585<br/>Excluding the Demographic and EMS (ePCR) Custom Elements: 561</div>
+<div class="note">Total Elements including the Custom Elements: 574<br/>Excluding the Demographic and EMS (ePCR) Custom Elements: 556</div>
 <div><img src="images/Composition2.png"/></div>
 <div class="spacer"></div>
 <div class="section">NEMSIS Version 3.3.4 Data Dictionary Content</div>
@@ -147,7 +147,7 @@ td { font-size: 12; }
           <li class="listItemOrgSm">NOT Values have been condensed in Version 3.
             <ul>
               <li class="listItemBlu">Not Applicable = <i>The data element is not applicable or pertinent to the EMS event.</i></li>
-              <li class="listItemBlu">Not Recorded = <i>The data element is considered applicable to the EMS event, but was left blank. The EMS software should auto-populate it with "Not Recorded".</i></li>
+              <li class="listItemBlu">Not Recorded = <i>If a data element was unintentionally left blank the EMS software should auto-populate it with "Not Recorded".</i></li>
               <li class="listItemBlu">Not Reporting = <i>The data element is not collected by the EMS agency or state.  This NOT value does not apply to National elements where "Usage = Required".</i></li>
             </ul>
           </li>
@@ -165,11 +165,11 @@ td { font-size: 12; }
                        <li class="listItemBlu">If the medication Aspirin is part of the agency protocol for Chest Pain but was not administered by the responding crew, the reason why should be documented.  This is done through the use of Pertinent Negative Values.  If the patient took the Aspirin prior to the EMS arrival on scene, the value "Medication Already Taken" should be documented in addition to "Aspirin".</li>
                    </ul>
               </li>
-              <!--<li class="listItemBlu">Example #2 - Gunshot Wound Entry &amp; Exit Assessment
+              <li class="listItemBlu">Example #2 - Gunshot Wound Entry &amp; Exit Assessment
                    <ul>
                        <li class="listItemBlu">If the patient was injured by a gunshot the assessment should document not only the entry but the exit of the bullet.  In the abdominal assessment if "Gunshot Wound-Entry" was documented in the Right Upper Quadrant the EMS professional should be looking for an exit wound.  If upon assessment of the back/spine no "Gunshot Wound-Exit" was identified then both "Gunshot Wound-Exit" and the pertinent negative value of "Exam Finding Not Present" should be documented.</li>
                    </ul>
-              </li>-->
+              </li>
             </ul>
           </li>
         </ul>
@@ -215,7 +215,7 @@ td { font-size: 12; }
               <li class="listItemBlu">8801005 - Exam Finding Not Present</li>
               <li class="listItemBlu">8801007 - Medication Allergy      </li>
               <li class="listItemBlu">8801009 - Medication Already Taken</li>
-              <li class="listItemBlu">8801013 - No Known Drug Allergy</li>
+              <li class="listItemBlu">8801013 - No Known Drug Allergies </li>
               <li class="listItemBlu">8801015 - None Reported           </li>
               <li class="listItemBlu">8801017 - Not Performed by EMS    </li>
               <li class="listItemBlu">8801019 - Refused                 </li>
@@ -234,17 +234,16 @@ td { font-size: 12; }
           <br/>
           <li class="listItemOrgSm">Nillable xsi:nil="true"</li>
           <br/>
-          <li class="listItemOrgSm">Code Type            
+          <li class="listItemOrgSm">Code Type
             <ul>
-              <li class="listItemBlu">3001001 = No</li>
-              <li class="listItemBlu">3001003 = Yes, Prior to EMS Arrival</li>
-              <li class="listItemBlu">3001005 = Yes, After EMS Arrival</li>
+              <li class="listItemBlu">9924001 - ICD10</li>
+              <li class="listItemBlu">9924003 - RxNorm</li>
             </ul>
           </li>
           <br/>
           <li class="listItemOrgSm">CorrelationID
             <ul>
-              <li class="listItemBlu">Data Type = String</li>
+              <li class="listItemBlu">Date Type = String</li>
               <li class="listItemBlu">minLength = 0</li>
               <li class="listItemBlu">maxLength = 255</li>
             </ul>
@@ -266,19 +265,19 @@ td { font-size: 12; }
           <br/>
           <li class="listItemOrgSm">nemsisCode
             <ul>
-              <li class="listItemBlu">Data Type = String</li>
+              <li class="listItemBlu">Date Type = String</li>
             </ul>
           </li>
           <br/>
           <li class="listItemOrgSm">nemsisElement
             <ul>
-              <li class="listItemBlu">Data Type = String</li>
+              <li class="listItemBlu">Date Type = String</li>
             </ul>
           </li>
           <br/>
           <li class="listItemOrgSm">nemsisValueDescription
             <ul>
-              <li class="listItemBlu">Data Type = String</li>
+              <li class="listItemBlu">Date Type = String</li>
             </ul>
           </li>
           <br/>
@@ -300,15 +299,15 @@ td { font-size: 12; }
           <br/>
           <li class="listItemOrgSm">StreetAddress2
             <ul>
-              <li class="listItemBlu">Data Type = String</li>
+              <li class="listItemBlu">Date Type = String</li>
               <li class="listItemBlu">minLength = 1</li>
-              <li class="listItemBlu">maxLength = 255</li>
+              <li class="listItemBlu">maxLength = 55</li>
             </ul>
           </li>
           <br/>
           <li class="listItemOrgSm">TIMESTAMP
             <ul>
-              <li class="listItemBlu">Data Type = DateTime</li>
+              <li class="listItemBlu">Date Type = DateTime</li>
               <li class="listItemBlu">minValue = 1950-01-01T00:00:00-00:00</li>
               <li class="listItemBlu">maxValue = 2050-01-01T00:00:00-00:00</li>
             </ul>
@@ -316,8 +315,8 @@ td { font-size: 12; }
           <br/>
           <li class="listItemOrgSm">VelocityUnit
             <ul>
-              <li class="listItemBlu">9921001  - Kilometers per Hour</li>
-              <li class="listItemBlu">9921003  - Miles per Hour</li>
+              <li class="listItemBlu">9921001  - Kilometers            </li>
+              <li class="listItemBlu">9921003  - Miles     </li>
             </ul>
           </li>
         </ul>
@@ -360,13 +359,6 @@ td { font-size: 12; }
     </ul>
   </li>
 </ul>
-<ul>
-  <li class="listItemOrgBg">Element Deprecated<span class="reference">(#19)</span>
-    <ul>
-      <li class="listItemBlu">Elements that are signified as "deprecated" will be removed from a future version of the NEMSIS standard. Their use should now be avoided, but will be supported until they are removed from the standard.</li>
-    </ul>
-  </li>
-</ul>
 <div class="section">NEMSIS Version 3.3.4 Change Summary</div>
 <ul>
   <li class="listItemOrgBg">NEMSIS Version 3 includes several new types of information to better describe EMS from an industry, workforce, EMS service delivery, and patient care perspective. Examples of new Version 3 content include:</li>
@@ -398,7 +390,7 @@ td { font-size: 12; }
       <li class="listItemBlu">Improved Work Related Illness and Injury documentation capability.                                                                                 </li>
       <li class="listItemBlu">Disposition information has been enhanced especially associated with Specialty Centers and time dependent illness/injury Systems of Care.          </li>
       <li class="listItemBlu">EMS Response and Transport Modes have been enhanced to better define emergent, non-emergent, scheduled, and non-scheduled variation.               </li>
-      <li class="listItemBlu">Additional EMS Response and Transport Mode Descriptors have been added to allow for documentation of Lights and Sirens Use and Intersection Navigation tools. </li>
+      <li class="listItemBlu">EMS Response and Transport Mode Descriptors have been added to allow for documentation of Lights and Sirens Use and Intersection Navigation tools. </li>
       <li class="listItemBlu">The Payment/Billing section has been greatly expanded to meet current electronic billing requirements.                                             </li>
       <li class="listItemBlu">Outcome information has been expanded to include additional Emergency Department and Hospital Outcome information (often obtained through linkage).</li>
     </ul>

@@ -150,6 +150,7 @@
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="DeviceConfirmedMethods">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 													<xs:attribute name="NV" use="optional">
 														<xs:simpleType>
 															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>

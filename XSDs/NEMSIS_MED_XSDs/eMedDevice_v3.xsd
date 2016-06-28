@@ -438,7 +438,7 @@
 													<name>Method of Heart Rate Measurement</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor.</definition>
+													<definition>The method in which the Heart Rate was measured. Values include auscultated, palpated, electronic monitor).</definition>
 													<usage>Optional</usage>
 													<comment>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</comment>
 													<v3Changes>This data element was added when Pulse Rate and Electronic Monitor Rate were merged as EVitals.10.</v3Changes>
@@ -487,7 +487,7 @@
 										<name>Respiratory Rate</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of stroke scale used.</definition>
+										<definition>The patient's respiratory rate expressed as a number per minute.</definition>
 										<v2Number>E14_11</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -507,7 +507,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedDevice.31" type="CO2" id="eMedDevice.eVitals.EndTidalCarbonDioxideETCO2" minOccurs="0">
+						<xs:element name="eMedDevice.31" id="eMedDevice.eVitals.EndTidalCarbonDioxideETCO2" minOccurs="0" type="CO2">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -542,7 +542,7 @@
 										<state>No</state>
 										<definition>The numeric value of the patient's carbon monoxide level measured as a percentage (%) of carboxyhemoglobin (COHb).</definition>
 										<usage>Optional</usage>
-										<comment/>
+										<comment></comment>
 										<v3Changes>Added to allow use of a new patient monitoring devices.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>

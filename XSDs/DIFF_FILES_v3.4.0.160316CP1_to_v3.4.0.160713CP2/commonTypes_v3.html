@@ -90,9 +90,8 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
     var $lineWidth = 3648
     var $diffs = [
 null,
-{d:'Diff 1: Change 1 line (550, first file) to 1 line (550, second file)',l:[549,549]},
-{d:'Diff 2: Change 1 line (2254, first file) to 1 line (2254, second file)',l:[2253,2253]},
-{d:'Diff 3: Change 1 line (2495, first file) to 1 line (2495, second file)',l:[2494,2494]}
+{d:'Diff 1: Change 1 line (2254, first file) to 1 line (2254, second file)',l:[2253,2253]},
+{d:'Diff 2: Change 1 line (2495, first file) to 1 line (2495, second file)',l:[2494,2494]}
 ];
 
     try {
@@ -3579,7 +3578,7 @@ null,
 <div class="l li"><span class="si">            &lt;xs:documentation&gt;The patient's diastolic blood pressure.&lt;/xs:documentation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:annotation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;xs:restriction base=&quot;xs:string&quot;&gt;</span></div>
-<div class="l lc d1"><span class="sc">            &lt;xs:pattern value=&quot;[</span><span class="sd">5][0][</span><span class="sc">0]|[1-</span><span class="sd">4][0-</span><span class="sc">9][0-9]|[</span><span class="sc2">0</span><span class="sc">]</span><span class="sd">|</span><span class="sc">[</span><span class="sc2">1</span><span class="sc">-9][0-9]|P|p&quot;/&gt;</span></div>
+<div class="l li"><span class="si">            &lt;xs:pattern value=&quot;[5][0][0]|[1-4][0-9][0-9]|[0]|[1-9][0-9]|P|p&quot;/&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:restriction&gt;</span></div>
 <div class="l li"><span class="si">    &lt;/xs:simpleType&gt;</span></div>
 <div class="l li"><span class="si">    &lt;xs:simpleType name=&quot;DeviceSerialNumber&quot;&gt;</span></div>
@@ -5283,7 +5282,7 @@ null,
 <div class="l li"><span class="si">            &lt;xs:documentation&gt;SNOMEDCT&lt;/xs:documentation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:annotation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;xs:restriction base=&quot;xs:integer&quot;&gt;</span></div>
-<div class="l lc d2"><span class="sc">            &lt;xs:maxInclusive value=&quot;</span><span class="sc2">1000000000</span><span class="sc">&quot;/&gt;</span></div>
+<div class="l lc d1"><span class="sc">            &lt;xs:maxInclusive value=&quot;</span><span class="sc2">1000000000</span><span class="sc">&quot;/&gt;</span></div>
 <div class="l li"><span class="si">            &lt;xs:minInclusive value=&quot;100000&quot;/&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:restriction&gt;</span></div>
 <div class="l li"><span class="si">    &lt;/xs:simpleType&gt;</span></div>
@@ -5524,7 +5523,7 @@ null,
 <div class="l li"><span class="si">            &lt;xs:documentation&gt;The US National Grid Coordinates&lt;/xs:documentation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:annotation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;xs:restriction base=&quot;xs:string&quot;&gt;</span></div>
-<div class="l lc d3"><span class="sc">            &lt;xs:pattern value=&quot;[1][0-9][</span><span class="sc2">RSTU</span><span class="sc">][</span><span class="sc2">ABCDEFGHJKLMNPQRSTUVWXYZ</span><span class="sc">][</span><span class="sc2">ABCDEFGHJKLMNPQRSTUV</span><span class="sc">][0-9]{8}&quot;/&gt;</span></div>
+<div class="l lc d2"><span class="sc">            &lt;xs:pattern value=&quot;[1][0-9][</span><span class="sc2">RSTU</span><span class="sc">][</span><span class="sc2">ABCDEFGHJKLMNPQRSTUVWXYZ</span><span class="sc">][</span><span class="sc2">ABCDEFGHJKLMNPQRSTUV</span><span class="sc">][0-9]{8}&quot;/&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:restriction&gt;</span></div>
 <div class="l li"><span class="si">    &lt;/xs:simpleType&gt;</span></div>
 <div class="l li"><span class="si">    &lt;xs:simpleType name=&quot;VelocityUnits&quot;&gt;</span></div>
@@ -8957,7 +8956,7 @@ null,
 <div class="l li"><span class="si">            &lt;xs:documentation&gt;The patient's diastolic blood pressure.&lt;/xs:documentation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:annotation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;xs:restriction base=&quot;xs:string&quot;&gt;</span></div>
-<div class="l lc d1"><span class="sc">            &lt;xs:pattern value=&quot;[0</span><span class="sa">-9</span><span class="sc">]|[1-9][0-9]|[</span><span class="sc2">1</span><span class="sa">-4</span><span class="sc">][</span><span class="sc2">0</span><span class="sc">-9][0-9]|P</span><span class="sa">|D|d</span><span class="sc">|p&quot;/&gt;</span></div>
+<div class="l li"><span class="si">            &lt;xs:pattern value=&quot;[5][0][0]|[1-4][0-9][0-9]|[0]|[1-9][0-9]|P|p&quot;/&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:restriction&gt;</span></div>
 <div class="l li"><span class="si">    &lt;/xs:simpleType&gt;</span></div>
 <div class="l li"><span class="si">    &lt;xs:simpleType name=&quot;DeviceSerialNumber&quot;&gt;</span></div>
@@ -10661,7 +10660,7 @@ null,
 <div class="l li"><span class="si">            &lt;xs:documentation&gt;SNOMEDCT&lt;/xs:documentation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:annotation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;xs:restriction base=&quot;xs:integer&quot;&gt;</span></div>
-<div class="l lc d2"><span class="sc">            &lt;xs:maxInclusive value=&quot;</span><span class="sc2">999999999999999</span><span class="sc">&quot;/&gt;</span></div>
+<div class="l lc d1"><span class="sc">            &lt;xs:maxInclusive value=&quot;</span><span class="sc2">999999999999999</span><span class="sc">&quot;/&gt;</span></div>
 <div class="l li"><span class="si">            &lt;xs:minInclusive value=&quot;100000&quot;/&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:restriction&gt;</span></div>
 <div class="l li"><span class="si">    &lt;/xs:simpleType&gt;</span></div>
@@ -10902,7 +10901,7 @@ null,
 <div class="l li"><span class="si">            &lt;xs:documentation&gt;The US National Grid Coordinates&lt;/xs:documentation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:annotation&gt;</span></div>
 <div class="l li"><span class="si">        &lt;xs:restriction base=&quot;xs:string&quot;&gt;</span></div>
-<div class="l lc d3"><span class="sc">            &lt;xs:pattern value=&quot;</span><span class="sa">(</span><span class="sc">[1</span><span class="sa">-9]|[1-5</span><span class="sc">][0-9]</span><span class="sa">|60)</span><span class="sc">[</span><span class="sc2">C</span><span class="sa">-HJ-NP-X</span><span class="sc">][</span><span class="sc2">A</span><span class="sa">-HJ-NP-Z</span><span class="sc">][</span><span class="sc2">A</span><span class="sa">-HJ-NP-V</span><span class="sc">][0-9]{8}&quot;/&gt;</span></div>
+<div class="l lc d2"><span class="sc">            &lt;xs:pattern value=&quot;</span><span class="sa">(</span><span class="sc">[1</span><span class="sa">-9]|[1-5</span><span class="sc">][0-9]</span><span class="sa">|60)</span><span class="sc">[</span><span class="sc2">C</span><span class="sa">-HJ-NP-X</span><span class="sc">][</span><span class="sc2">A</span><span class="sa">-HJ-NP-Z</span><span class="sc">][</span><span class="sc2">A</span><span class="sa">-HJ-NP-V</span><span class="sc">][0-9]{8}&quot;/&gt;</span></div>
 <div class="l li"><span class="si">        &lt;/xs:restriction&gt;</span></div>
 <div class="l li"><span class="si">    &lt;/xs:simpleType&gt;</span></div>
 <div class="l li"><span class="si">    &lt;xs:simpleType name=&quot;VelocityUnits&quot;&gt;</span></div>
@@ -11126,11 +11125,11 @@ null,
     </div>
 
     <div id="legend">
-        <div id="numDiffs">Number of differences: <b>3</b></div><div id="colors"><div class="sa" title="0 added lines and 9 inline additions in changed lines">Added(0,9)</div><div class="sd" title="0 deleted lines and 3 inline deletions in changed lines">Deleted(0,3)</div><div class="sc" title="3 changed lines">Changed(3)</div><div class="sc2" title="6 inline changes in changed lines">Changed in changed(6)</div><div class="sig" title="Ignored lines and line parts">Ignored</div></div>
+        <div id="numDiffs">Number of differences: <b>2</b></div><div id="colors"><div class="sa" title="0 added lines and 6 inline additions in changed lines">Added(0,6)</div><div class="sd" title="0 deleted lines and 0 inline deletions in changed lines">Deleted(0,0)</div><div class="sc" title="2 changed lines">Changed(2)</div><div class="sc2" title="4 inline changes in changed lines">Changed in changed(4)</div><div class="sig" title="Ignored lines and line parts">Ignored</div></div>
     </div>
 
     <div id="generated_by">
-        Generated on June 29, 2016, 9:07 AM by <a href="http://www.prestosoft.com/edp_examdiffpro.asp?ref=diffreport" target="_blank">ExamDiff Pro</a> 6.0.3.13.
+        Generated on July 7, 2016, 1:42 PM by <a href="http://www.prestosoft.com/edp_examdiffpro.asp?ref=diffreport" target="_blank">ExamDiff Pro</a> 6.0.3.13.
     </div>
 </div>
 </body>

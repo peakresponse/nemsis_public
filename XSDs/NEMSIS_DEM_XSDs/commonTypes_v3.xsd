@@ -547,7 +547,7 @@
 			<xs:documentation>The patient's diastolic blood pressure.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9]|[1-9][0-9]|[1-4][0-9][0-9]|P|D|d|p"/>
+			<xs:pattern value="[5][0][0]|[1-4][0-9][0-9]|[0]|[1-9][0-9]|P|p"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="DeviceSerialNumber">

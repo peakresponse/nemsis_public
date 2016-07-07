@@ -1,0 +1,23 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="ePayment.43"  minOccurs="0"  maxOccurs="1"  dataTypeName="AmbulanceTransportCode"  isNillable="No">
+<name>Ambulance Transport Code</name>
+<national>No</national>
+<deprecated>Yes</deprecated>
+<state>No</state>
+<definition>Indicator about the type of transport of the patient.</definition>
+<v2Number></v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment>Added to improve billing with electronic claims using X12. The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport".  The Accredited Standards Committee X12 organization maintains the standard.  See the X12 website http://www.x12.org or United States Health Information Knowledgebase website for more information:  
+http://ushik.org/dr.ui.drData_Page?system=mdr&amp;Search=xxKEYIDxx&amp;KeyOrgID=18&amp;KeyRID=24821000&amp;Referer=DataElement</v3Comment>
+<v3Changes></v3Changes>
+<deprecatedComment>Originally added to improve billing with electronic claims using X12. This element has been retired from the X12 5010 standard.</deprecatedComment>
+<restrictions>
+  <AmbulanceTransportCode baseType="string">
+    <facet name="enumeration" value="I" annotation="Initial Trip"/>
+    <facet name="enumeration" value="R" annotation="Return Trip"/>
+    <facet name="enumeration" value="X" annotation="Round Trip"/>
+    <facet name="enumeration" value="T" annotation="Transfer Trip"/>
+  </AmbulanceTransportCode>
+</restrictions>
+</element>

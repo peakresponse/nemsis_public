@@ -1,0 +1,41 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eHistory.14"  minOccurs="0"  maxOccurs="1"  dataTypeName="CurrentMedicationDosageUnit"  isNillable="No">
+<name>Current Medication Dosage Unit</name>
+<national>No</national>
+<deprecated></deprecated>
+<state>No</state>
+<definition>The dosage unit of the patient's current medication</definition>
+<v2Number>E12_16</v2Number>
+<usage>Optional</usage>
+<performanceMeasuresGroup></performanceMeasuresGroup>
+<v3Comment></v3Comment>
+<v3Changes></v3Changes>
+<deprecatedComment></deprecatedComment>
+<restrictions>
+  <CurrentMedicationDosageUnit baseType="string">
+    <facet name="enumeration" value="3114001" annotation="cm"/>
+    <facet name="enumeration" value="3114003" annotation="gms"/>
+    <facet name="enumeration" value="3114005" annotation="gtts (drops)"/>
+    <facet name="enumeration" value="3114007" annotation="inches"/>
+    <facet name="enumeration" value="3114009" annotation="iu"/>
+    <facet name="enumeration" value="3114011" annotation="kvo (keep vein open)"/>
+    <facet name="enumeration" value="3114013" annotation="l/min (fluid administration)"/>
+    <facet name="enumeration" value="3114015" annotation="liters"/>
+    <facet name="enumeration" value="3114017" annotation="LPM (gas administration)"/>
+    <facet name="enumeration" value="3114019" annotation="mcg"/>
+    <facet name="enumeration" value="3114021" annotation="mcg/kg/min"/>
+    <facet name="enumeration" value="3114023" annotation="mcg/min"/>
+    <facet name="enumeration" value="3114025" annotation="meq"/>
+    <facet name="enumeration" value="3114027" annotation="metered dose"/>
+    <facet name="enumeration" value="3114029" annotation="mg"/>
+    <facet name="enumeration" value="3114031" annotation="mg/kg"/>
+    <facet name="enumeration" value="3114033" annotation="mg/kg/min"/>
+    <facet name="enumeration" value="3114035" annotation="mg/min"/>
+    <facet name="enumeration" value="3114037" annotation="ml"/>
+    <facet name="enumeration" value="3114039" annotation="ml/hr"/>
+    <facet name="enumeration" value="3114041" annotation="other (Not Listed)"/>
+    <facet name="enumeration" value="3114043" annotation="puffs"/>
+    <facet name="enumeration" value="3114045" annotation="units/hr"/>
+  </CurrentMedicationDosageUnit>
+</restrictions>
+</element>

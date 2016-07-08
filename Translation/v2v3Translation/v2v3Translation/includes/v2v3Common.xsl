@@ -36,7 +36,7 @@
       </xsl:when>
     </xsl:choose>
   </xsl:variable>
-  <xsl:key name="lookupKey" match="/v2v3ValueMappingEMSDemographicDataSet/match|v2v3ValueMappingEMSDataSet/match" use="string-join((normalize-space(v2TypeName), normalize-space(v3TypeName), normalize-space(v2Pattern)), '&#8203;')"/>
+  <xsl:key name="lookupKey" match="/v2v3ValueMappingEMSDemographicDataSet/match|v2v3ValueMappingEMSDataSet/match" use="string-join((normalize-space(v2TypeName), normalize-space(v3TypeName), normalize-space(lower-case(v2Pattern))), '&#8203;')"/>
 
   <!-- Define variable and key for city value mappings. -->
   <xsl:variable name="cityVariable" select="document('v2v3ValueMappingCity.xml')/*"/>
@@ -44,7 +44,7 @@
 
   <!-- Define variable and key for medication value mappings. -->
   <xsl:variable name="medicationVariable" select="document('v2v3ValueMappingMedication.xml')/*"/>
-  <xsl:key name="medicationKey" match="/v2v3ValueMappingMedication/match" use="normalize-space(v2Pattern)"/>
+  <xsl:key name="medicationKey" match="/v2v3ValueMappingMedication/match" use="normalize-space(lower-case(v2Pattern))"/>
 
   <!-- Define variable and key for current medication value mappings (only used for EMSDataSet, but variable must be defined even if not used). -->
   <xsl:variable name="currentMedicationVariable">
@@ -52,7 +52,7 @@
       <xsl:sequence select="document('v2v3ValueMappingCurrentMedication.xml')/*"/>
     </xsl:if>
   </xsl:variable>
-  <xsl:key name="currentMedicationKey" match="/v2v3ValueMappingCurrentMedication/match" use="normalize-space(v2Pattern)"/>
+  <xsl:key name="currentMedicationKey" match="/v2v3ValueMappingCurrentMedication/match" use="normalize-space(lower-case(v2Pattern))"/>
 
   <!-- Define variable and key for current medication value mappings (only used for EMSDataSet, but variable must be defined even if not used). -->
   <xsl:variable name="medicalSurgicalHistoryVariable">
@@ -60,7 +60,7 @@
       <xsl:sequence select="document('v2v3ValueMappingMedicalSurgicalHistory.xml')/*"/>
     </xsl:if>
   </xsl:variable>
-  <xsl:key name="medicalSurgicalHistoryKey" match="/v2v3ValueMappingMedicalSurgicalHistory/match" use="normalize-space(v2Pattern)"/>
+  <xsl:key name="medicalSurgicalHistoryKey" match="/v2v3ValueMappingMedicalSurgicalHistory/match" use="normalize-space(lower-case(v2Pattern))"/>
 
   <!-- Define variable and key for current medication value mappings (only used for EMSDataSet, but variable must be defined even if not used). -->
   <xsl:variable name="medicationAllergyVariable">
@@ -68,7 +68,7 @@
       <xsl:sequence select="document('v2v3ValueMappingMedicationAllergy.xml')/*"/>
     </xsl:if>
   </xsl:variable>
-  <xsl:key name="medicationAllergyKey" match="v2v3ValueMappingMedicationAllergy/match" use="normalize-space(v2Pattern)"/>
+  <xsl:key name="medicationAllergyKey" match="v2v3ValueMappingMedicationAllergy/match" use="normalize-space(lower-case(v2Pattern))"/>
 
   <!-- Define variables and key for (d|e)customConfiguration. -->
   <xsl:variable name="elementMappingCustomConfigurationVariable" select="document('v2v3ElementMappingCustomConfiguration.xml')/*"/>
@@ -234,19 +234,19 @@
       </xsl:when>
 
       <xsl:when test="$lookupList='currentMedication'">
-        <xsl:sequence select="key('currentMedicationKey', normalize-space($v2Element), $currentMedicationVariable)/v3Replacement"/>
+        <xsl:sequence select="key('currentMedicationKey', normalize-space(lower-case($v2Element)), $currentMedicationVariable)/v3Replacement"/>
       </xsl:when>
       <xsl:when test="$lookupList='medicalSurgicalHistory'">
-        <xsl:sequence select="key('medicalSurgicalHistoryKey', normalize-space($v2Element), $medicalSurgicalHistoryVariable)/v3Replacement"/>
+        <xsl:sequence select="key('medicalSurgicalHistoryKey', normalize-space(lower-case($v2Element)), $medicalSurgicalHistoryVariable)/v3Replacement"/>
       </xsl:when>
       <xsl:when test="$lookupList='medication'">
-        <xsl:sequence select="key('medicationKey', normalize-space($v2Element), $medicationVariable)/v3Replacement"/>
+        <xsl:sequence select="key('medicationKey', normalize-space(lower-case($v2Element)), $medicationVariable)/v3Replacement"/>
       </xsl:when>
       <xsl:when test="$lookupList='medicationAllergy'">
-        <xsl:sequence select="key('medicationAllergyKey', normalize-space($v2Element), $medicationAllergyVariable)/v3Replacement"/>
+        <xsl:sequence select="key('medicationAllergyKey', normalize-space(lower-case($v2Element)), $medicationAllergyVariable)/v3Replacement"/>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:sequence select="key('lookupKey', string-join((normalize-space($elementMapping/v2TypeName), normalize-space($elementMapping/v3TypeName), normalize-space($v2Element)), '&#8203;'), $lookupVariable)/v3Replacement"/>
+        <xsl:sequence select="key('lookupKey', string-join((normalize-space($elementMapping/v2TypeName), normalize-space($elementMapping/v3TypeName), normalize-space(lower-case($v2Element))), '&#8203;'), $lookupVariable)/v3Replacement"/>
       </xsl:otherwise>
     </xsl:choose>
 
@@ -292,7 +292,7 @@
     <!-- Generate a copy of the result and add a CorrelationID if the v3 element can have one. -->
     <xsl:for-each select="$result/v3Replacement">
       <xsl:element name="v3Replacement">
-        <xsl:if test="$elementMapping/v3HasCorrelationID='true'">
+        <xsl:if test="$v2Element and $elementMapping/v3HasCorrelationID='true'">
           <xsl:attribute name="CorrelationID">
             <xsl:value-of select="generate-id($v2Element)"/>
           </xsl:attribute>

@@ -3,8 +3,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v2 EMSDataSet to NEMSIS v3 EMSDataSet
 
-Version: 1.2
-Revision Date: June 4, 2014
+Version: 3.3.4.160713CP2_160713
+Revision Date: July 13, 2016
 
 This product is provided by the NEMIS TAC, without charge, to facilitate a data mapping between
 NEMSIS v2.2.1 and NEMSIS v3.3.4. The primary target audiences are state employees maintaining EMS
@@ -45,7 +45,7 @@ Requires version 2.0 of XSLT.
     <xsl:comment>&#32;This NEMSIS 3 file was generated from a NEMSIS 2 file via an XML Stylesheet Language Transformation (XSLT).&#32;</xsl:comment>
     <xsl:text>&#10;</xsl:text>
 
-    <EMSDataSet xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/XSD_v3/_nemsis_v3.3.4/3.3.4.140328/XSDs/NEMSIS_XSDs_v3.3.4.140328/EMSDataSet_v3.xsd"  xmlns="http://www.nemsis.org">
+    <EMSDataSet xsi:schemaLocation="http://www.nemsis.org http://www.nemsis.org/media/nemsis_v3/release-3.3.4/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd"  xmlns="http://www.nemsis.org">
 
       <!-- eState: No mapping. -->
       
@@ -1137,7 +1137,7 @@ Requires version 2.0 of XSLT.
           <xsl:for-each select="E07/E07_35_0/E07_36">
             <eCustomResults.ResultsGroup>
               <xsl:copy-of select="n:map('eCustomResults.01', 'E07_36', .)"/>
-              <eCustomResults.02>D05_03</eCustomResults.02>
+              <eCustomResults.02>E07_36</eCustomResults.02>
               <eCustomResults.03><xsl:value-of select="generate-id(../E07_35)"/></eCustomResults.03>
             </eCustomResults.ResultsGroup>
           </xsl:for-each>
@@ -1233,7 +1233,7 @@ Requires version 2.0 of XSLT.
           <xsl:for-each select="E19/E19_01_0[n:map('eCustomResults.01', 'E19_03', E19_03)!='']">
             <eCustomResults.ResultsGroup>
               <xsl:copy-of select="n:map('eCustomResults.01', 'E19_03', E19_03)"/>
-              <eCustomResults.02>E09_01</eCustomResults.02>
+              <eCustomResults.02>E19_03</eCustomResults.02>
               <eCustomResults.03><xsl:value-of select="generate-id()"/></eCustomResults.03>
             </eCustomResults.ResultsGroup>
           </xsl:for-each>
@@ -1253,7 +1253,7 @@ Requires version 2.0 of XSLT.
           <xsl:if test="E23/E23_07">
             <eCustomResults.ResultsGroup>
               <xsl:copy-of select="n:map('eCustomResults.01', 'E23_07', E23/E23_07)"/>
-              <eCustomResults.02>E15_11</eCustomResults.02>
+              <eCustomResults.02>E23_07</eCustomResults.02>
               <eCustomResults.03><xsl:value-of select="concat(generate-id(), '.eOther.EMSCrewMemberGroup')"/></eCustomResults.03>
             </eCustomResults.ResultsGroup>
           </xsl:if>

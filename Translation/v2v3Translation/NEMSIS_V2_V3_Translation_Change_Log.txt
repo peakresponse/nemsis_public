@@ -2,6 +2,53 @@ NEMSIS Version 2 to Version 3 Translation Change Log
 
 
 
+Version 3.3.4.160713CP2_160713 (NEMSIS version 3.3.4)
+July 13, 2016
+
+
+XSLT Corrections
+
+D04_04_0 -> dConfiguration.ProcedureGroup: Added case for when D04_05 is not present.
+
+D04_06 -> dConfiguration.09: Corrected current-group to current-group().
+
+D04_06_0 -> dConfiguration.MedicationGroup: Added case for when D04_07 is not present.
+
+Add @CorrelationID to v3 element only if v2 element is present.
+
+E07_36 -> eCustomResults.01: Corrected eCustomResults.02 value.
+
+E19_03 -> eCustomResults.01: Corrected eCustomResults.02 value.
+
+E23_07 -> eCustomResults.01: Corrected eCustomResults.02 value.
+
+
+XSLT Changes
+
+Changed lookup translations to be case-insensitive.
+
+
+Mapping Corrections
+
+DemographicStateCertificationLicensureLevels -> StateCertificationLicensureLevels: Corrected default mapping (when v2 value is not present and v3 element is mandatory) from v3 value 9917001 2009 Advanced Emergency Medical Technician (AEMT) to 9917011 EMT-Basic.
+
+E02_02 Incident Number -> eResponse.03 Incident Number: Corrected v3 value to have minimum length of 3.
+
+Added @CorrelationID to the following v3 element:
+* eHistory.06 Medication Allergies
+
+
+Mapping Changes
+
+Mappings using v3 snomed type: Improved mappings based on recent additions to SNOMED:
+* 99.621 Defibrillation-Automated (AED): Changed from v3 value 426220008 External ventricular defibrillation to 450661000124102 Defibrillation using automated external cardiac defibrillator
+* 96.053 Airway-King LT Blind Insertion Airway Device: Changed from v3 value 427753009 Insertion of esophageal tracheal double lumen supraglottic airway to 450611000124100 Insertion of Single Lumen Supraglottic Airway Device
+
+Added @CorrelationID to the following v3 element:
+* eAirway.04 Airway Device Placement Confirmed Method
+
+
+
 Version 1.2 (NEMSIS version 3.3.4)
 June 4, 2014
 

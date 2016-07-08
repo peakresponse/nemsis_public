@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.160316CP1" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.160713CP2" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -611,7 +611,7 @@
 
   <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.13.xml?><sch:pattern id="nemSch_consistency_dAgency.13">
 
-  <!-- This pattern validates that eAgency.26 Fire Department ID Number is recorded when dAgency.13 Organizational Type is "Fire Department" and is not recorded when dAgency.13 Organizational Type is not "Fire Department". -->
+  <!-- This pattern validates that dAgency.26 Fire Department ID Number is recorded when dAgency.13 Organizational Type is "Fire Department" and is not recorded when dAgency.13 Organizational Type is not "Fire Department". -->
 
   <sch:title>Fire Department ID Number is recorded when Organizational Type is "Fire Department" and is not recorded when Organizational Type is not "Fire Department".</sch:title>
 
@@ -632,7 +632,7 @@
 </sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_dAgency.13.xml?>
   <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.ServiceGroup.xml?><sch:pattern id="nemSch_consistency_dAgency.ServiceGroup">
 
-  <!-- This pattern validates that each instance of dAgency.06 EMS Agency Service Area County(ies) belongs within the state recorded in dAgency.04 EMS Agency Service Area States and each instance of dAgency.07 EMS Agency Census Tracts belongs within a county recorded in dAgency.06 EMS Agency Service Area County(ies) within the state recorded in dAgency.04 EMS Agency Service Area States. -->
+  <!-- This pattern validates that each instance of dAgency.06 EMS Agency Service Area County(ies) belongs within the state recorded in dAgency.05 EMS Agency Service Area States and each instance of dAgency.07 EMS Agency Census Tracts belongs within a county recorded in dAgency.06 EMS Agency Service Area County(ies) within the state recorded in dAgency.04 EMS Agency Service Area States. -->
 
   <sch:title>EMS Agency Service Area County belongs to the EMS Agency Service Area State with which it is grouped and EMS Agency Service Area Census Tract belongs to an EMS Agency Service Area County and the EMS Agency Service Area State with which it is grouped.</sch:title>
 

@@ -2,6 +2,22 @@ NEMSIS Schematron Change Log
 
 
 
+3.4.0.160713CP2
+
+
+National Patterns and Rules
+
+nemSch_consistency_dAgency.13: Corrected typo in comment from "eAgency.26" to "dAgency.26" (no impact on validation). (JForum 521)
+nemSch_sequence_time_eTimes: Removed eDisposition.25 from validation of eTimes.15, since eTimes.15 is checked in the validation of eDisposition.25 (removes redudant validation message when eTimes.15 and eDisposition.25 are out of sequence). (JForum 508)
+nemSch_consistency_dAgency.ServiceGroup: Corrected typo in comment from "dAgency.04" to "dAgency.05" (no impact on validation). (Jforum 507)
+
+
+Documentation Interface
+
+Improved and simplified Overview pages.
+
+
+
 3.4.0.160316CP1
 
 

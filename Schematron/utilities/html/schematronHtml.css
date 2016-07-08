@@ -3,8 +3,8 @@
 Cascading Style Sheet (CSS) to style NEMSIS v3 Schematron that has been transformed into HTML for 
 documentation purposes
 
-Version: 3.4.0.160316CP1
-Revision Date: March 16, 2016
+Version: 3.4.0.160713CP2_160713
+Revision Date: July 13, 2016
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -75,41 +75,26 @@ div#menu div.contents div
 
 /* Overview page */
 
-div#overview div.pattern
+.overviewTable
 {
-  background-color: #004080;
+  margin-top: 2em;
+}
+
+.overviewTable td
+{
+  vertical-align: top;
+}
+
+.overviewTable .role 
+{
   border: 1px solid #004080;
-  border-left: none;
-  color: #ffffff;
-  margin-bottom: 0.2ex;
-  padding: 0.2ex;
+  float: none;
 }
 
-div#overview div.pattern a
-{
-  color: #ffffff;
-}
-
-div#overview div.header
-{
-  background-color: #f0f0f0;
-  border-left: none;
-  border-radius: 0px;
-  color: #000000;
-  
-}
-
-div#overview div.section
-{
-  margin-top: 0;
-  font-size: 90%;
-  border-left: 1px solid #000000;
-  margin-right: 2ex;
-}
-
-div#overview div.fullWidthValue
+.overviewTable div.fullWidthValue
 {
   border: none;
+  padding-bottom: 1em;
 }
 
 /* Page */
@@ -189,6 +174,8 @@ div.section
   font-size: smaller;
   padding: 0.2ex;
   border-radius: 0.4ex;
+  text-align: center;
+  width: 8ex;
 }
 
 .fatal
@@ -229,6 +216,8 @@ div.section
   margin-bottom: 0.2ex;
   padding: 0.2ex;
   width: 75%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .value-of 
@@ -271,11 +260,10 @@ a:hover, a:focus {color: #BB7A2A;}
   .page
   {
     display: block !important;
-    overflow: visible !important;
     padding: 0;
     page-break-after: always !important;
     position: static !important;
-    width: auto !important;
+    width: 100% !important;
   }
   
 }

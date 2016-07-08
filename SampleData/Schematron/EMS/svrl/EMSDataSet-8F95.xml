@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.4.0.160316CP1"><!--   
+                        schemaVersion="3.4.0.160713CP2"><!--   
 		   
 		   
 		 -->
@@ -112,55 +112,6 @@
                         id="nemSch_sequence_time"
                         name="The sequence of date/time elements is appropriate."/>
    <svrl:fired-rule context="nem:eTimes" id="nemSch_sequence_time_eTimes"/>
-   <svrl:failed-assert test="not($eAirway.10 or $eAirway.11 or $eOutcome.11 or $eOutcome.16 or $eTimes.02 or $eTimes.03 or $eTimes.04 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.08 or $eTimes.09 or $eTimes.10 or $eTimes.11 or $eTimes.12 or $eTimes.13 or $eTimes.14 or $eTimes.15 or $eTimes.16)"
-                       id="nemSch_sequence_time_eTimes_order"
-                       role="[WARNING]"
-                       location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]">
-      <svrl:text>
-      Date/Times should be in order. The following times are too early:
-      Unit Back at Home Location Date/Time</svrl:text>
-      <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
-         <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
-            <record>
-               <dAgency.01>0</dAgency.01>
-               <dAgency.02>A</dAgency.02>
-               <dAgency.04>49</dAgency.04>
-               <eRecord.01>g59</eRecord.01>
-            </record>
-            <elements>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eAirway[namespace-uri()='http://www.nemsis.org'][1]/*:eAirway.AirwayGroup[namespace-uri()='http://www.nemsis.org'][1]/*:eAirway.10[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:36:22-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eAirway[namespace-uri()='http://www.nemsis.org'][1]/*:eAirway.AirwayGroup[namespace-uri()='http://www.nemsis.org'][1]/*:eAirway.11[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:36:22-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eArrest[namespace-uri()='http://www.nemsis.org'][1]/*:eArrest.14[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T11:01:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eArrest[namespace-uri()='http://www.nemsis.org'][1]/*:eArrest.15[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:36:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eArrest[namespace-uri()='http://www.nemsis.org'][1]/*:eArrest.19[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:36:22-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eHistory[namespace-uri()='http://www.nemsis.org'][1]/*:eHistory.19[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T10:00:22-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eInjury[namespace-uri()='http://www.nemsis.org'][1]/*:eInjury.CollisionGroup[namespace-uri()='http://www.nemsis.org'][1]/*:eInjury.14[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T11:01:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eOutcome[namespace-uri()='http://www.nemsis.org'][1]/*:eOutcome.11[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:36:22-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eOutcome[namespace-uri()='http://www.nemsis.org'][1]/*:eOutcome.16[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T15:00:00-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eScene[namespace-uri()='http://www.nemsis.org'][1]/*:eScene.05[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:01:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eSituation[namespace-uri()='http://www.nemsis.org'][1]/*:eSituation.01[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T11:01:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eSituation[namespace-uri()='http://www.nemsis.org'][1]/*:eSituation.18[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T11:01:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.01[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:01:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.02[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:02:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.03[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:03:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.04[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:04:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.05[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:05:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.06[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:06:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.07[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:07:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.08[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:08:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.09[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:09:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.10[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:10:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.11[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:11:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.12[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:12:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.13[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:13:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.14[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T12:14:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.15[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:15:21-00:00</element>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes[namespace-uri()='http://www.nemsis.org'][1]/*:eTimes.16[namespace-uri()='http://www.nemsis.org'][1]">2015-02-12T13:16:21-00:00</element>
-            </elements>
-            <elementsMissing/>
-         </nemsisDiagnostic>
-      </svrl:diagnostic-reference>
-   </svrl:failed-assert>
    <svrl:fired-rule context="nem:eVitals.01[. != '']" id="nemSch_sequence_time_eVitals.01"/>
    <svrl:fired-rule context="nem:eVitals.01[. != '']" id="nemSch_sequence_time_eVitals.01"/>
    <svrl:fired-rule context="nem:eVitals.01[. != '']" id="nemSch_sequence_time_eVitals.01"/>

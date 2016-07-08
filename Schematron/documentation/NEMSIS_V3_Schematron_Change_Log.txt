@@ -2,6 +2,24 @@ NEMSIS Schematron Change Log
 
 
 
+3.3.4.160713CP2
+
+
+National Patterns and Rules
+
+nemSch_consistency_dAgency.05_dAgency.06: Corrected typo in comment from "dAgency.04" to "dAgency.05" (no impact on validation). (Jforum 507)
+nemSch_consistency_eInjury: Added exclusion when there is no patient.
+nemSch_sequence_time_eTimes: Removed eDisposition.25 from validation of eTimes.15, since eTimes.15 is checked in the validation of eDisposition.25 (removes redudant validation message when eTimes.15 and eDisposition.25 are out of sequence). (JForum 508)
+nemSch_consistency_eSituation: Corrected typo in text of assertions from "be not be" to "not be" (no impact on validation logic). (JForum 519)
+nemSch_consistency_nilNvPn: Modified text of assert nemSch_nilNvPn_nil_Nv to clarify options for resolving validation failure (no impact on validation logic).
+
+
+Documentation Interface
+
+Improved and simplified Overview pages.
+
+
+
 3.3.4.160316CP1
 
 

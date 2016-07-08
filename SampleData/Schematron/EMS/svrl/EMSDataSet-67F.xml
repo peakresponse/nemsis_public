@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.3.4.160316CP1"><!--   
+                        schemaVersion="3.3.4.160713CP2"><!--   
 		   
 		   
 		 -->
@@ -54,7 +54,7 @@
                     id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24"/>
    <svrl:active-pattern document="EMSDataSet-67F.xml"
                         id="nemSch_consistency_eInjury"
-                        name="When eSituation.02 Possible Injury is &#34;Yes&#34;, elements in the eInjury section are recorded, and when eSituation.02 Possible Injury is not &#34;Yes&#34;, elements in the eInjury section are not recorded."/>
+                        name="When eSituation.02 Possible Injury is &#34;Yes&#34; (and eDisposition.12 Incident/Patient Disposition indicates patient contact), elements in the eInjury section are recorded, and when eSituation.02 Possible Injury is not &#34;Yes&#34;, elements in the eInjury section are not recorded."/>
    <svrl:fired-rule context="nem:eInjury[../nem:eSituation/nem:eSituation.02 = '9922005']"
                     id="nemSch_consistency_eInjury_all"/>
    <svrl:active-pattern document="EMSDataSet-67F.xml"

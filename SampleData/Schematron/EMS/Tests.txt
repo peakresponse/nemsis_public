@@ -22,7 +22,7 @@ Expected Result:  [WARNING]
 
 File:             EMSDataSet-2EF0.xml
 ID:               nemSch_nilNvPn_nil_Nv_B
-Description:      When (Element) is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting) or a Pertinent Negative (if allowed for the element).
+Description:      When (Element) is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
 Expected Result:  [ERROR]
 
 File:             EMSDataSet-3298.xml
@@ -102,7 +102,7 @@ Expected Result:  [WARNING]
 
 File:             EMSDataSet-64F.xml
 ID:               nemSch_consistency_eSituation.09_eSituation.10_A
-Description:      When Primary Symptom is empty, Other Associated Symptoms should be not be recorded.
+Description:      When Primary Symptom is empty, Other Associated Symptoms should not be recorded.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-6529.xml
@@ -172,7 +172,7 @@ Expected Result:  [PASS]
 
 File:             EMSDataSet-8F95.xml
 ID:               nemSch_sequence_time_eDisposition.25_before_A
-Description:      Date/Time of Destination Prearrival Alert or Activation should be no later than Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, or Unit Back at Home Location Date/Time. (This test also fails nemSch_sequence_time_eTimes_order; see https://jforum.nemsis.org/jforum/posts/list/508.page .)
+Description:      Date/Time of Destination Prearrival Alert or Activation should be no later than Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, or Unit Back at Home Location Date/Time.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-91A.xml
@@ -187,7 +187,7 @@ Expected Result:  [WARNING]
 
 File:             EMSDataSet-954A.xml
 ID:               nemSch_consistency_eSituation.11_eSituation.12_A
-Description:      When Provider's Primary Impression is empty, Provider's Secondary Impressions should be not be recorded.
+Description:      When Provider's Primary Impression is empty, Provider's Secondary Impressions should not be recorded.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-A1.xml

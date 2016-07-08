@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.3.4.160316CP1" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.3.4.160713CP2" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -683,7 +683,7 @@
          because if it was present, one of the rules above would have fired instead of this one. -->
 
     <sch:assert id="nemSch_nilNvPn_nil_Nv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting) or a Pertinent Negative (if allowed for the element).
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
     </sch:assert>
 
   </sch:rule>
@@ -706,7 +706,7 @@
 </sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_NilNvPn.xml?>
   <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.05_dAgency.06.xml?><sch:pattern id="nemSch_consistency_dAgency.05_dAgency.06">
 
-  <!-- This pattern validates that each instance of dAgency.06 EMS Agency Service Area County(ies) belongs within the state recorded in dAgency.04 EMS Agency Service Area States. -->
+  <!-- This pattern validates that each instance of dAgency.06 EMS Agency Service Area County(ies) belongs within the state recorded in dAgency.05 EMS Agency Service Area States. -->
 
   <sch:title>EMS Agency Service Area County belongs to the EMS Agency Service Area State with which it is grouped.</sch:title>
 

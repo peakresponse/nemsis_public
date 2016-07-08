@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for DEMDataSet"
-                        schemaVersion="3.3.4.160316CP1"><!--   
+                        schemaVersion="3.3.4.160713CP2"><!--   
 		   
 		   
 		 -->
@@ -24,7 +24,7 @@
                        role="[ERROR]"
                        location="/*:DEMDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:DemographicReport[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency.03[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
-      When EMS Agency Name is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting) or a Pertinent Negative (if allowed for the element).
+      When EMS Agency Name is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">

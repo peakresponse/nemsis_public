@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.160316CP1" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.3.4.160713CP2" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -898,15 +898,21 @@
        the eInjury section should only be recorded when (and only when) eSituation.02 Possible 
        Injury is "Yes". -->
 
-  <sch:title>When eSituation.02 Possible Injury is "Yes", elements in the eInjury section are recorded, and when eSituation.02 Possible Injury is not "Yes", elements in the eInjury section are not recorded.</sch:title>
+  <sch:title>When eSituation.02 Possible Injury is "Yes" (and eDisposition.12 Incident/Patient Disposition indicates patient contact), elements in the eInjury section are recorded, and when eSituation.02 Possible Injury is not "Yes", elements in the eInjury section are not recorded.</sch:title>
 
   <sch:rule id="nemSch_consistency_eInjury_all" context="nem:eInjury[../nem:eSituation/nem:eSituation.02 = '9922005']">
 
     <!-- This rule fires when eSituation.02 Possible Injury is "Yes". -->
 
+    <!-- Set no_patient flag based on eDisposition.12 Incident/Patient Disposition. -->
+
+    <!-- no_patient: Assist, Canceled, Standby, or Transport of Body Parts or Organs Only. -->
+
+    <sch:let name="no_patient" value="if(ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. &lt;= 4212011 or . = (4212039, 4212041, 4212043)]) then true() else false()"/>
+
     <!-- Flag each of the following elements if it is empty. -->
 
-    <sch:let name="eInjury.01" value="if(nem:eInjury.01 != '') then '' else key('nemSch_key_elements', 'eInjury.01', $nemSch_elements)"/>
+    <sch:let name="eInjury.01" value="if($no_patient or nem:eInjury.01 != '') then '' else key('nemSch_key_elements', 'eInjury.01', $nemSch_elements)"/>
 
     <sch:let name="nemsisElements" value="(../nem:eSituation/nem:eSituation.02, (nem:eInjury.01)[. = ''])"/>
 
@@ -968,7 +974,7 @@
     <!-- Assert that there should be no non-empty instances of eSituation.10 Other Associated Symptoms.  -->
 
     <sch:assert id="nemSch_consistency_eSituation.09_eSituation.10" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eSituation.10 != '')">
-      When <sch:value-of select="key('nemSch_key_elements', 'eSituation.09', $nemSch_elements)"/> is empty, <sch:value-of select="key('nemSch_key_elements', 'eSituation.10', $nemSch_elements)"/> should be not be recorded.
+      When <sch:value-of select="key('nemSch_key_elements', 'eSituation.09', $nemSch_elements)"/> is empty, <sch:value-of select="key('nemSch_key_elements', 'eSituation.10', $nemSch_elements)"/> should not be recorded.
     </sch:assert>
 
   </sch:rule>
@@ -979,10 +985,10 @@
 
     <sch:let name="nemsisElements" value="(., ../nem:eSituation.12)"/>
 
-    <!-- Assert that there should be no non-empty instances of eSituation.12 Proviers's Secondary Impressions.  -->
+    <!-- Assert that there should be no non-empty instances of eSituation.12 Providers's Secondary Impressions.  -->
 
     <sch:assert id="nemSch_consistency_eSituation.11_eSituation.12" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eSituation.12 != '')">
-      When <sch:value-of select="key('nemSch_key_elements', 'eSituation.11', $nemSch_elements)"/> is empty, <sch:value-of select="key('nemSch_key_elements', 'eSituation.12', $nemSch_elements)"/> should be not be recorded.
+      When <sch:value-of select="key('nemSch_key_elements', 'eSituation.11', $nemSch_elements)"/> is empty, <sch:value-of select="key('nemSch_key_elements', 'eSituation.12', $nemSch_elements)"/> should not be recorded.
     </sch:assert>
 
   </sch:rule>
@@ -1137,7 +1143,7 @@
          because if it was present, one of the rules above would have fired instead of this one. -->
 
     <sch:assert id="nemSch_nilNvPn_nil_Nv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting) or a Pertinent Negative (if allowed for the element).
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
     </sch:assert>
 
   </sch:rule>
@@ -1284,9 +1290,9 @@
 
     <sch:let name="eTimes.14" value="if(not(nem:eTimes.14)                                         or (every $element in (nem:eTimes.03)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.14)))                                         then '' else key('nemSch_key_elements', 'eTimes.14', $nemSch_elements)"/>
 
-    <!-- eTimes.15: Unit Back at Home Location Date/Time should not occur prior to: Date/Time Decision to Manage the Patient with an Invasive Airway, Date/Time Invasive Airway Placement Attempts Abandoned, Date/Time of Cardiac Arrest, Date/Time Resuscitation Discontinued, Date/Time of Destination Prearrival Alert or Activation, Last Oral Intake, Date/Time of ACN Incident, Date/Time Initial Responder Arrived on Scene, Date/Time of Symptom Onset/Last Normal, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Unit En Route Date/Time, Unit Arrived on Scene Date/Time, Arrived at Patient Date/Time, Unit Left Scene Date/Time, Arrival at Destination Landing Area Date/Time, Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Canceled Date/Time. -->
+    <!-- eTimes.15: Unit Back at Home Location Date/Time should not occur prior to: Date/Time Decision to Manage the Patient with an Invasive Airway, Date/Time Invasive Airway Placement Attempts Abandoned, Date/Time of Cardiac Arrest, Date/Time Resuscitation Discontinued, Last Oral Intake, Date/Time of ACN Incident, Date/Time Initial Responder Arrived on Scene, Date/Time of Symptom Onset/Last Normal, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Unit En Route Date/Time, Unit Arrived on Scene Date/Time, Arrived at Patient Date/Time, Unit Left Scene Date/Time, Arrival at Destination Landing Area Date/Time, Transfer of EMS Patient Care Date/Time, Destination Patient Transfer of Care Date/Time, Unit Canceled Date/Time. -->
 
-    <sch:let name="eTimes.15" value="if(not(nem:eTimes.15)                                         or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.10, ../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.11, ../nem:eArrest/nem:eArrest.14, ../nem:eArrest/nem:eArrest.15, ../nem:eDisposition/nem:eDisposition.HospitalTeamActivationGroup/nem:eDisposition.25, ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/nem:eSituation.01, nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12, nem:eTimes.14)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.15)))                                         then '' else key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>
+    <sch:let name="eTimes.15" value="if(not(nem:eTimes.15)                                         or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.10, ../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.11, ../nem:eArrest/nem:eArrest.14, ../nem:eArrest/nem:eArrest.15, ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/nem:eSituation.01, nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12, nem:eTimes.14)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.15)))                                         then '' else key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>
 
     <!-- eTimes.16: EMS Call Completed Date/Time should not occur prior to: Unit Back in Service Date/Time. -->
 

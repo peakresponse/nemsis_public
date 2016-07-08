@@ -3,8 +3,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v2 EMSDemographicDataSet to NEMSIS v3 DEMDataSet
 
-Version: 3.4.0.150302_150803
-Revision Date: August 3, 2015
+Version: 3.4.0.160713CP2_160713
+Revision Date: July 13, 2016
 
 This product is provided by the NEMIS TAC, without charge, to facilitate a data mapping between
 NEMSIS v2.2.1 and NEMSIS v3.4.0. The primary target audiences are state employees maintaining EMS
@@ -207,6 +207,13 @@ Requires version 2.0 of XSLT.
                 </dConfiguration.ProcedureGroup>
               </xsl:for-each-group>
 
+              <xsl:if test="../../D04/D04_04_0[not(D04_05)]">
+                <dConfiguration.ProcedureGroup>
+                  <xsl:copy-of select="n:map('dConfiguration.06', 'D04_05', '')"/>
+                  <xsl:copy-of select="n:map('dConfiguration.07', 'D04_04', ../../D04/D04_04_0[not(D04_05)]/D04_04)"/>
+                </dConfiguration.ProcedureGroup>
+              </xsl:if>
+
               <xsl:if test="not(../../D04/D04_04_0)">
                 <dConfiguration.ProcedureGroup>
                   <xsl:copy-of select="n:map('dConfiguration.06', 'D04_05', '')"/>
@@ -217,9 +224,16 @@ Requires version 2.0 of XSLT.
               <xsl:for-each-group select="../../D04/D04_06_0" group-by="D04_07">
                 <dConfiguration.MedicationGroup CorrelationID="{generate-id()}">
                   <xsl:copy-of select="n:map('dConfiguration.08', 'D04_07', current-grouping-key())"/>
-                  <xsl:copy-of select="n:map('dConfiguration.09', 'D04_06', current-group/D04_06)"/>
+                  <xsl:copy-of select="n:map('dConfiguration.09', 'D04_06', current-group()/D04_06)"/>
                 </dConfiguration.MedicationGroup>
               </xsl:for-each-group>
+
+              <xsl:if test="../../D04/D04_06_0[not(D04_07)]">
+                <dConfiguration.MedicationGroup>
+                  <xsl:copy-of select="n:map('dConfiguration.08', 'D04_07', '')"/>
+                  <xsl:copy-of select="n:map('dConfiguration.09', 'D04_06', ../../D04/D04_06_0[not(D04_07)]/D04_06)"/>
+                </dConfiguration.MedicationGroup>
+              </xsl:if>
 
               <xsl:if test="not(../../D04/D04_06_0)">
                 <dConfiguration.MedicationGroup>

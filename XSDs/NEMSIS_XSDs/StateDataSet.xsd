@@ -23,7 +23,7 @@
 						</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="dCustomConfiguration" minOccurs="0">
+				<xs:element name="dCustomConfiguration" id="dCustomConfigurationSection" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="dCustomConfiguration.CustomGroup" id="dCustomConfiguration.dCustomGroup" minOccurs="0" maxOccurs="unbounded">
@@ -189,7 +189,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="eCustomConfiguration" minOccurs="0">
+				<xs:element name="eCustomConfiguration" id="eCustomConfigurationSection"  minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="eCustomConfiguration.CustomGroup" id="eCustomConfiguration.eCustomGroup" minOccurs="0" maxOccurs="unbounded">

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (x64) (http://www.altova.com) by Greg Chandler (University of Utah) -->
+<xs:schema xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+	
+	<xs:include schemaLocation="dConfiguration_v3.xsd"/>
+	<xs:element name="StateDataSet">
+		<xs:complexType>
+			<xs:sequence>
+			
+							<xs:element name="dConfiguration" type="dConfiguration" id="dConfigurationSection">
+								<xs:annotation>
+									<xs:documentation>Configuration Information</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							
+
+			</xs:sequence>
+			<xs:attribute name="timestamp" type="DateTimeType"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="FacilityCode">
+		<xs:annotation>
+			<xs:documentation>The code of the facility as assigned by the state or the EMS agency.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FacilityDepartment">
+		<xs:annotation>
+			<xs:documentation>The name or number of the facility department.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FacilityName">
+		<xs:annotation>
+			<xs:documentation>The name of the facility.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="FacilityRoom">
+		<xs:annotation>
+			<xs:documentation>The number of the specific room, suite, or apartment.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TypeOfFacility">
+		<xs:annotation>
+			<xs:documentation>The type of facility.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="1701001">
+				<xs:annotation>
+					<xs:documentation>Assisted Living Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701003">
+				<xs:annotation>
+					<xs:documentation>Clinic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701005">
+				<xs:annotation>
+					<xs:documentation>Hospital</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701007">
+				<xs:annotation>
+					<xs:documentation>Nursing Home</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701009">
+				<xs:annotation>
+					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701011">
+				<xs:annotation>
+					<xs:documentation>Urgent Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701013">
+				<xs:annotation>
+					<xs:documentation>Rehabilitation Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701015">
+				<xs:annotation>
+					<xs:documentation>Mental Health Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701017">
+				<xs:annotation>
+					<xs:documentation>Dialysis Center</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

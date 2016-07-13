@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes_v3.xsd"/>
+	<xs:include schemaLocation="dAgency_v3.xsd"/>
+	<xs:include schemaLocation="eCustomConfiguration_v3.xsd"/>
+	<xs:include schemaLocation="dCustomConfiguration_v3.xsd"/>
+	<xs:include schemaLocation="eState_v3.xsd"/>
+	<xs:include schemaLocation="dState_v3.xsd"/>
+	<xs:include schemaLocation="dConfiguration_v3.xsd"/>
+	<xs:include schemaLocation="dFacility_v3.xsd"/>
+	<!--
+	<xs:include schemaLocation="eResponse_v3.xsd"/>
+	<xs:include schemaLocation="eDispatch_v3.xsd"/>
+	<xs:include schemaLocation="eCrew_v3.xsd"/>
+	<xs:include schemaLocation="eTimes_v3.xsd"/>
+	<xs:include schemaLocation="ePatient_v3.xsd"/>
+	<xs:include schemaLocation="ePayment_v3.xsd"/>
+	<xs:include schemaLocation="eScene_v3.xsd"/>
+	<xs:include schemaLocation="eSituation_v3.xsd"/>
+	<xs:include schemaLocation="eInjury_v3.xsd"/>
+	<xs:include schemaLocation="eArrest_v3.xsd"/>
+	<xs:include schemaLocation="eHistory_v3.xsd"/>
+	<xs:include schemaLocation="eNarrative_v3.xsd"/>
+	<xs:include schemaLocation="eVitals_v3.xsd"/>
+	<xs:include schemaLocation="eLabs_v3.xsd"/>
+	<xs:include schemaLocation="eExam_v3.xsd"/>
+	<xs:include schemaLocation="eProtocols_v3.xsd"/>
+	<xs:include schemaLocation="eMedications_v3.xsd"/>
+	<xs:include schemaLocation="eProcedures_v3.xsd"/>
+	<xs:include schemaLocation="eDisposition_v3.xsd"/>
+	<xs:include schemaLocation="eDevice_v3.xsd"/>
+	<xs:include schemaLocation="eOutcome_v3.xsd"/>
+	<xs:include schemaLocation="eOther_v3.xsd"/>
+	<xs:include schemaLocation="eAirway_v3.xsd"/>-->
+	<xs:element name="StateDataSet">
+		<xs:annotation>
+			<xs:documentation>Root Tag For Dataset</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="dConfiguration.01" type="ANSIStateCode" id="dConfiguration.StateAssociatedwiththeCertificationLicensureLevels">
+					<xs:annotation>
+						<xs:documentation>
+							<nemsisTacDoc>
+								<number>dConfiguration.01</number>
+								<name>State Associated with the Certification/Licensure Levels</name>
+								<national>Yes</national>
+								<state>Yes</state>
+								<definition>The state associated with the state certification/licensure levels.</definition>
+								<usage>Mandatory</usage>
+								<comment>Associated with the state (dAgency.01 - EMS Agency State). 
+										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
+										</comment>
+							</nemsisTacDoc>
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dCustomConfiguration" type="dCustomConfiguration" id="dCustomConfigurationSection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>dCustomConfiguration Information</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eCustomConfiguration" type="eCustomConfiguration" id="eCustomConfigurationSection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>dCustomConfiguration Information</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dState" type="dState" id="dStateSection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>dState Required Elements</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="eState" type="eState" id="eStateSection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>eState Required Elements</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dConfiguration" type="dConfiguration" id="dConfigurationSection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>dConfiguration Elements</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dAgency" type="dAgency" id="dAgencySection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>dAgency Elements</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="dFacility" type="dFacility" id="dFacilitySection" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>dFacility Elements</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -3,13 +3,13 @@
 
 NEMSIS V3 Schematron Test Case
 ID:               nemSch_sequence_time_eDisposition.25_before_A
-Description:      Date/Time of Destination Prearrival Alert or Activation should be no later than Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, or Unit Back at Home Location Date/Time. (This test also fails nemSch_sequence_time_eTimes_order; see https://jforum.nemsis.org/jforum/posts/list/508.page .)
+Description:      Date/Time of Destination Prearrival Alert or Activation should be no later than Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, or Unit Back at Home Location Date/Time.
 Expected Result:  [WARNING]
 
 -->
 <EMSDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.4.0.160316CP1/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.4.0.160713CP2/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>0</dAgency.01>

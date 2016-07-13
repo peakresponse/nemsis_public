@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.160316CP1" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.160713CP2" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -1577,7 +1577,6 @@
                     Date/Time of Cardiac Arrest, 
                     Date/Time Resuscitation Discontinued, 
                     Date/Time of Initial CPR, 
-                    Date/Time of Destination Prearrival Alert or Activation, 
                     Last Oral Intake, 
                     Date/Time of ACN Incident, 
                     Date/Time Initial Responder Arrived on Scene, 
@@ -1594,7 +1593,7 @@
                     Destination Patient Transfer of Care Date/Time, 
                     Unit Canceled Date/Time. -->
 
-    <sch:let name="eTimes.15" value="if(not(nem:eTimes.15)                                         or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/(nem:eAirway.10, nem:eAirway.11), ../nem:eArrest/(nem:eArrest.14, nem:eArrest.15, nem:eArrest.19), ../nem:eDisposition/nem:eDisposition.HospitalTeamActivationGroup/nem:eDisposition.25, ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/(nem:eSituation.01, nem:eSituation.18), nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12, nem:eTimes.14)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.15)))                                         then '' else key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>
+    <sch:let name="eTimes.15" value="if(not(nem:eTimes.15)                                         or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/(nem:eAirway.10, nem:eAirway.11), ../nem:eArrest/(nem:eArrest.14, nem:eArrest.15, nem:eArrest.19), ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/(nem:eSituation.01, nem:eSituation.18), nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12, nem:eTimes.14)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.15)))                                         then '' else key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>
 
     <!-- eTimes.16: EMS Call Completed Date/Time should not occur prior to: 
                     Unit Back in Service Date/Time. -->

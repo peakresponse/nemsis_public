@@ -3,7 +3,7 @@
 
 NEMSIS V3 Schematron Test Case
 ID:               nemSch_consistency_eDisposition.12_all_error_A
-Description:      Based on Incident/Patient Disposition, the following should be recorded: (EMS Transport Method, Transport Mode from Scene, Final Patient Acuity, Reason for Choosing Destination, Type of Destination)
+Description:      Based on Incident/Patient Disposition, the following should be recorded: (EMS Transport Method, Transport Mode from Scene, Reason for Choosing Destination, Type of Destination)
 Expected Result:  [ERROR]
 
 -->
@@ -1226,7 +1226,7 @@ Expected Result:  [ERROR]
             <eDisposition.16 xsi:nil="true" NV="7701003"/>
             <eDisposition.17 xsi:nil="true" NV="7701003"/>
             <eDisposition.18 xsi:nil="true" NV="7701003"/>
-            <eDisposition.19 xsi:nil="true" NV="7701003"/>
+            <eDisposition.19>4219007</eDisposition.19>
             <eDisposition.20 xsi:nil="true" NV="7701003"/>
             <eDisposition.21 xsi:nil="true" NV="7701003"/>
             <eDisposition.22 xsi:nil="true" NV="7701001"/>

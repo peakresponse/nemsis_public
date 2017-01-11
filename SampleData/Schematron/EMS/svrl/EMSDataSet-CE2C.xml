@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.4.0.160713CP2"><!--   
+                        schemaVersion="3.4.0.170111"><!--   
 		   
 		   
 		 -->
@@ -47,13 +47,13 @@
                         name="Certain elements are recorded, based on eDisposition.12 Incident/Patient Disposition."/>
    <svrl:fired-rule context="nem:PatientCareReport"
                     id="nemSch_consistency_eDisposition.12_all"/>
-   <svrl:failed-assert test="not($eDisposition.16 or $eDisposition.17 or $eDisposition.19 or $eDisposition.20 or $eDisposition.21)"
+   <svrl:failed-assert test="not($eDisposition.16 or $eDisposition.17 or $eDisposition.20 or $eDisposition.21)"
                        id="nemSch_consistency_eDisposition.12_all_error"
                        role="[ERROR]"
                        location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
       Based on Incident/Patient Disposition, the following should be recorded:
-      EMS Transport Method, Transport Mode from Scene, Final Patient Acuity, Reason for Choosing Destination, Type of Destination</svrl:text>
+      EMS Transport Method, Transport Mode from Scene, Reason for Choosing Destination, Type of Destination</svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <record>
@@ -68,9 +68,6 @@
                         xsi:nil="true"
                         NV="7701003"/>
                <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.17[namespace-uri()='http://www.nemsis.org'][1]"
-                        xsi:nil="true"
-                        NV="7701003"/>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.19[namespace-uri()='http://www.nemsis.org'][1]"
                         xsi:nil="true"
                         NV="7701003"/>
                <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.20[namespace-uri()='http://www.nemsis.org'][1]"
@@ -140,7 +137,6 @@
                         id="nemSch_consistency_nilNvPn"
                         name="The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate."/>
    <svrl:fired-rule context="*[@PN]" id="nemSch_nilNvPn_Pn"/>
-   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>

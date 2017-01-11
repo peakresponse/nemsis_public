@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.160713CP2" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.170111" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -932,17 +932,17 @@
     <!-- Assert (as error) that none of certain elements above should be flagged. If the assert 
          fails, list the flagged elements.  -->
 
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_error" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not($eDisposition.16 or $eDisposition.17 or $eDisposition.19 or $eDisposition.20 or $eDisposition.21)">
+    <sch:assert id="nemSch_consistency_eDisposition.12_all_error" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not($eDisposition.16 or $eDisposition.17 or $eDisposition.20 or $eDisposition.21)">
       Based on <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/>, the following should be recorded:
-      <sch:value-of select="string-join(($eDisposition.16, $eDisposition.17, $eDisposition.19, $eDisposition.20, $eDisposition.21)[. != ''], ', ')"/>
+      <sch:value-of select="string-join(($eDisposition.16, $eDisposition.17, $eDisposition.20, $eDisposition.21)[. != ''], ', ')"/>
     </sch:assert>
 
     <!-- Assert (as warning) that none of certain elements above should be flagged. If the assert 
          fails, list the flagged elements.  -->
 
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eArrest.16 or $eDisposition.05 or $eDisposition.06 or $eDisposition.07 or $ePatient.07 or $ePatient.08 or $ePatient.09 or $ePatient.13 or $ePatient.14 or $ePatient.15 or $ePatient.16 or $ePayment.01 or $eScene.09 or $eSituation.02 or $eSituation.07 or $eSituation.08 or $eSituation.09 or $eSituation.11 or $eSituation.13 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.09 or $eTimes.11 or $eTimes.12)">
+    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eArrest.16 or $eDisposition.05 or $eDisposition.06 or $eDisposition.07 or $eDisposition.19 or $ePatient.07 or $ePatient.08 or $ePatient.09 or $ePatient.13 or $ePatient.14 or $ePatient.15 or $ePatient.16 or $ePayment.01 or $eScene.09 or $eSituation.02 or $eSituation.07 or $eSituation.08 or $eSituation.09 or $eSituation.11 or $eSituation.13 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.09 or $eTimes.11 or $eTimes.12)">
       Based on <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/>, the following should be recorded:
-      <sch:value-of select="string-join(($eArrest.16, $eDisposition.05, $eDisposition.06, $eDisposition.07, $ePatient.07, $ePatient.08, $ePatient.09, $ePatient.13, $ePatient.14, $ePatient.15, $ePatient.16, $ePayment.01, $eScene.09, $eSituation.02, $eSituation.07, $eSituation.08, $eSituation.09, $eSituation.11, $eSituation.13, $eTimes.05, $eTimes.06, $eTimes.07, $eTimes.09, $eTimes.11, $eTimes.12)[. != ''], ', ')"/>
+      <sch:value-of select="string-join(($eArrest.16, $eDisposition.05, $eDisposition.06, $eDisposition.07, $eDisposition.19, $ePatient.07, $ePatient.08, $ePatient.09, $ePatient.13, $ePatient.14, $ePatient.15, $ePatient.16, $ePayment.01, $eScene.09, $eSituation.02, $eSituation.07, $eSituation.08, $eSituation.09, $eSituation.11, $eSituation.13, $eTimes.05, $eTimes.06, $eTimes.07, $eTimes.09, $eTimes.11, $eTimes.12)[. != ''], ', ')"/>
     </sch:assert>
 
   </sch:rule>

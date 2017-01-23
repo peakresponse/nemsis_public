@@ -2,6 +2,32 @@ NEMSIS Version 2 to Version 3 Translation Change Log
 
 
 
+Version 3.4.0.160713CP2_170120 (NEMSIS version 3.4.0)
+January 20, 2017
+
+
+XSLT Corrections
+
+eAirway.01: Removed (it was incorrectly hard-coded to 4001005 Apnea or Agonal Respirations).
+
+
+Mapping Changes
+
+Mappings using v3 medication type: Updated mappings based on recent changes to RxNorm:
+Glucose (Oral): Changed from v3 value 4850 Glucose to 377980 Glucose Oral Gel
+Oral Glucose: Changed from v3 value 4850 Glucose to 377980 Glucose Oral Gel
+Insulin: Changed from v3 value 5856 Insulin to 1605101 Insulin, Isophane (value 5856 retired)
+Lactated Ringers: Changed from v3 value 35629 Lactated Ringer's Solution to 1008377 Calcium Chloride / Lactate / Potassium Chloride / Sodium Chloride (value 35629 retired)
+Epi-Pen Adult: Changed from v3 value 328316 Epinephrine 1 MG/ML to 727345 0.3 ML Epinephrine 1 MG/ML Auto-Injector
+
+
+Documentation Changes
+
+Updated NEMSIS logo
+Mappings using v3 medication type: Values mapped to v3 value 313002 Sodium Chloride 0.9% Injectable Solution: Replaced reference to "125464 Normal saline" with "373902 Sodium Chloride Irrigation Solution" in note
+
+
+
 Version 3.4.0.160713CP2_160713 (NEMSIS version 3.4.0)
 July 13, 2016
 

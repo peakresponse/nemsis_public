@@ -12,7 +12,7 @@ Schematron files via a user-friendly web-based interface.
 
 -->
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:nem="http://www.nemsis.org">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:nem="//www.nemsis.org">
   <xsl:output method="html" encoding="UTF-8"/>
 
   <xsl:variable name="apos">'</xsl:variable>
@@ -32,12 +32,12 @@ Schematron files via a user-friendly web-based interface.
           <xsl:value-of select="sch:schema/sch:title"/>
         </title>
 
-        <link rel="stylesheet" type="text/css" href="http://www.nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.css" />
+        <link rel="stylesheet" type="text/css" href="//nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.css" />
 
         <script type="text/javascript">
           
           var version = '<xsl:value-of select="sch:schema/@schemaVersion"/>'.split('.').slice(0, 3).join('.');
-          var versionBase = 'http://www.nemsis.org/media/nemsis_v3/release-' + version;
+          var versionBase = '//www.nemsis.org/media/nemsis_v3/release-' + version;
 
           // Function to clean up value-of elements in overview page
           function cleanValueOf (element) {
@@ -142,7 +142,7 @@ Schematron files via a user-friendly web-based interface.
         <!-- Title page -->
 
         <div class="page" id="root">
-          <img src="http://www.nemsis.org/images/nemsisLogo.gif"/>
+          <img src="//www.nemsis.org/wp-content/themes/firetoss_seed/img/nemsis-logo.png" />
           <div class="blueRect"></div>
           <div class="spacer20"></div>
           <div class="titleMain">NEMSIS</div>
@@ -675,7 +675,7 @@ Schematron files via a user-friendly web-based interface.
 
   <xsl:variable name="nemsisElements">
     <nemsisElements>
-      <DEMDataSet xmlns="http://www.nemsis.org" nemsisName="Root Tag For Demographic DataSet">
+      <DEMDataSet xmlns="//www.nemsis.org" nemsisName="Root Tag For Demographic DataSet">
         <dState nemsisName="State Required Demographic Data Elements">
           <dState.01 nemsisName="State Required Element"/>
         </dState>
@@ -902,7 +902,7 @@ Schematron files via a user-friendly web-based interface.
           </dCustomResults>
         </DemographicReport>
       </DEMDataSet>
-      <EMSDataSet xmlns="http://www.nemsis.org" nemsisName="EMS Agency Unique State ID">
+      <EMSDataSet xmlns="//www.nemsis.org" nemsisName="EMS Agency Unique State ID">
         <eState nemsisName="State Required Elements">
           <eState.01 nemsisName="State Required Element"/>
         </eState>

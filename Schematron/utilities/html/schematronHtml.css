@@ -3,8 +3,8 @@
 Cascading Style Sheet (CSS) to style NEMSIS v3 Schematron that has been transformed into HTML for 
 documentation purposes
 
-Version: 3.4.0.160713CP2_160713
-Revision Date: July 13, 2016
+Version: 3.4.0.170111_170907
+Revision Date: September 7, 2017
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -14,22 +14,20 @@ Schematron files via a user-friendly web-based interface.
 
 /* Body */
 
-body 
-{
-  background-color: #ffffff;
-  font-family: arial, helvetica, sans-serif;
+body {
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
 /* Menu */
 
-div#menu 
-{
+div#menu {
   border-right: 1ex solid #ddd;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   bottom: 0;
-  font-size: x-small;
+  font-size: 75%;
   left: 0;
   overflow: auto;
   position: fixed;
@@ -39,7 +37,7 @@ div#menu
 
 div#menu h1 
 {
-  background-color: #5e779e;
+  background-color: #00456b;
   color: #ffffff;
   font-size: medium;
   margin: 0;
@@ -60,10 +58,19 @@ div#menu h2
 div#menu div.contents a 
 {
   display: block;
-  padding-top: 1ex;
+  padding-top: 3ex;
 }
 
-div.contents {padding: 1ex;}
+div#menu div.contents h2 a 
+{
+  display: block;
+  padding-bottom: 1ex;
+  padding-top: 0;
+}
+
+div.contents {
+  padding: 2ex;
+}
 
 div#menu div.contents div 
 {
@@ -87,7 +94,7 @@ div#menu div.contents div
 
 .overviewTable .role 
 {
-  border: 1px solid #004080;
+  border: 1px solid #00456b;
   float: none;
 }
 
@@ -115,8 +122,8 @@ div.page
 
 div.header
 {
-  background-color: #004080;
-  border: 1px solid #004080;
+  background-color: #00456b;
+  border: 1px solid #00456b;
   border-radius: 0.4ex;
   color: #ffffff;
   margin-bottom: 0.2ex;
@@ -125,7 +132,7 @@ div.header
 
 div.name 
 {
-  color: #004080;
+  color: #00456b;
   font-style: italic;
   text-transform: capitalize;
 }
@@ -144,9 +151,9 @@ div.section
 .fullWidthTitle   
 {
   background-color: #f0f0f0;
-  border: 1px solid #004080;
+  border: 1px solid #00456b;
   border-radius: 0.4ex;
-  color: #004080;
+  color: #00456b;
   margin-bottom: 0.2ex;
   padding: 0.2ex;
   text-transform: capitalize;
@@ -154,7 +161,7 @@ div.section
 
 .fullWidthValue
 {
-  border: 1px solid #004080;
+  border: 1px solid #00456b;
   border-radius: 0.4ex;
   margin-bottom: 0.2ex;
   padding: 0.2ex;
@@ -196,9 +203,9 @@ div.section
 .summaryTitle   
 {
   background-color: #f0f0f0;
-  border: 1px solid #004080;
+  border: 1px solid #00456b;
   border-radius: 0.4ex;
-  color: #004080;
+  color: #00456b;
   display: inline-block;
   margin-bottom: 0.2ex;
   padding: 0.2ex;
@@ -210,7 +217,7 @@ div.section
 
 .summaryValue
 {
-  border: 1px solid #004080;
+  border: 1px solid #00456b;
   border-radius: 0.4ex;
   display: inline-block;
   margin-bottom: 0.2ex;
@@ -232,19 +239,24 @@ div.section
 
 /* Page visibility */
 
-div.page, div.page:target ~ div#root {display: none;}
+div.page, div.page:target ~ div#root {
+  display: none;
+}
 
-div#root, div.page:target {display: block;}
+div#root, div.page:target {
+  display: block;
+}
 
 
 /* Anchor */
-a
-{
-  color: #24409A;
+a {
+  color: #00456b;
   text-decoration: none;
 }
 
-a:hover, a:focus {color: #BB7A2A;}
+a:hover, a:focus {
+  color: #BB7A2A;
+}
 
 
 /* Print layout */
@@ -280,17 +292,17 @@ a:hover, a:focus {color: #BB7A2A;}
 
 /* Title page elements */
 
-.blueRect       {background:#004080; height:15px;}                                                                            
-.titleMain      {font-size:80px; color:#004080; text-align:center; font-weight:bold;}                                         
-.titleSub       {font-size:50px; color:#004080; text-align:center; font-weight:bold;}                                         
-.nhtsa          {font-size:65px; color:#880015; text-align:center; font-weight:bold;}                                               
-.nhtsa2         {font-size:40px; color:#880015; text-align:center; font-weight:bold;}                                   
-.standard       {font-size:60px; color:#004080; text-align:center; font-weight:bold;}                                         
-.version        {font-size:25px; color:#004080; text-align:center; font-weight:bold;}                                         
-.funded         {font-size:20px; color:#004080; text-align:center; }                                                          
-.fundedby       {font-size:20px; color:#004080; text-align:center; font-weight:bold;}                                         
-.url            {font-size:20px; color:#004080; text-align:center; font-weight:bold;}                                         
-.blueRectBtm    {background:#004080; height:15px;}                                                                            
+.blueRect       {background:#00456b; height:15px;}                                                                            
+.titleMain      {font-size:80px; color:#00456b; text-align:center; font-weight:bold;}                                         
+.titleSub       {font-size:50px; color:#00456b; text-align:center; font-weight:bold;}                                         
+.nhtsa          {font-size:65px; color:#c1272d; text-align:center; font-weight:bold;}                                               
+.nhtsa2         {font-size:40px; color:#c1272d; text-align:center; font-weight:bold;}                                   
+.standard       {font-size:60px; color:#00456b; text-align:center; font-weight:bold;}                                         
+.version        {font-size:25px; color:#00456b; text-align:center; font-weight:bold;}                                         
+.funded         {font-size:20px; color:#00456b; text-align:center; }                                                          
+.fundedby       {font-size:20px; color:#00456b; text-align:center; font-weight:bold;}                                         
+.url            {font-size:20px; color:#00456b; text-align:center; font-weight:bold;}                                         
+.blueRectBtm    {background:#00456b; height:15px;}                                                                            
 .spacer         {height:20px;}                                                                                                
 .spacer50       {height:50px;}                                                                                                
 .spacer40       {height:40px;}                                                                                                

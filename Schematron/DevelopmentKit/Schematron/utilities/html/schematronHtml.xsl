@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.4.0.160713CP2_160713
-Revision Date: July 13, 2016
+Version: 3.4.0.170111_170907
+Revision Date: September 7, 2017
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -32,7 +32,9 @@ Schematron files via a user-friendly web-based interface.
           <xsl:value-of select="sch:schema/sch:title"/>
         </title>
 
-        <link rel="stylesheet" type="text/css" href="http://www.nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
+
+        <link rel="stylesheet" type="text/css" href="https://nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.css" />
 
         <script type="text/javascript">
           
@@ -95,6 +97,15 @@ Schematron files via a user-friendly web-based interface.
           <xsl:copy-of select="$nemsisElements"/>
         </script>
 
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-1013393-2', 'auto');
+          ga('send', 'pageview');
+        </script>
+      
       </head>
 
       <body>
@@ -142,7 +153,7 @@ Schematron files via a user-friendly web-based interface.
         <!-- Title page -->
 
         <div class="page" id="root">
-          <img src="http://www.nemsis.org/images/nemsisLogo.gif"/>
+          <img src="https://nemsis.org/wp-content/themes/firetoss_seed/img/nemsis-logo.png"/>
           <div class="blueRect"></div>
           <div class="spacer20"></div>
           <div class="titleMain">NEMSIS</div>
@@ -270,23 +281,21 @@ Schematron files via a user-friendly web-based interface.
         <xsl:text>#</xsl:text>
         <xsl:call-template name="generate-id"/>
       </xsl:attribute>
-      <xsl:choose>
-        <xsl:when test="@id!=''">
-          <xsl:value-of select="@id"/>
-        </xsl:when>
-        <xsl:otherwise>
-          unnamed <xsl:value-of select="local-name()"/>
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:if test="@id!=''">
+        <xsl:value-of select="@id"/>
+      </xsl:if>
+      <xsl:if test="not(@id!='') and sch:title!=''">
+        <xsl:value-of select="sch:title"/>
+      </xsl:if>
+      <xsl:if test="not(@id!='' or sch:title!='')">
+        unnamed <xsl:value-of select="local-name()"/>
+      </xsl:if>
     </a>
-    <xsl:apply-templates select="sch:rule" mode="menu"/>
-  </xsl:template>
-
-  <!-- Rule -->
-  <xsl:template match="sch:rule" mode="menu">
-    <div>
-      <xsl:value-of select="@id"/>
-    </div>
+    <xsl:if test="local-name() = 'pattern' and @id!='' and sch:title!=''">
+      <div>
+        <xsl:value-of select="sch:title"/>
+      </div>
+    </xsl:if>
   </xsl:template>
 
 

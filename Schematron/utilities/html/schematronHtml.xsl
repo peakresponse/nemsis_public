@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.4.0.170111_170907
-Revision Date: September 7, 2017
+Version: 3.4.0.170111_180103
+Revision Date: January 3, 2018
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -70,11 +70,18 @@ Schematron files via a user-friendly web-based interface.
             element.innerHTML = element.innerHTML.replace(regEx, function(match, $1) {return linkReplace($1, useName);});
           }
           
-          window.addEventListener('load', setTimeout(function() {
+          var nemsisElements = document.getElementById('nemsisElements');
+
+          setTimeout(window.addEventListener('load', function() {
+
+            //Depending on how the XSLT was called (directly vs repository.html), nemsisElements may be empty. If so, re-assign it now.
+            if (!nemsisElements) nemsisElements = document.getElementById('nemsisElements');
+
             // Create a NEMSIS element/name lookup list
             window.nemSch_lookup_elements = [];
+
             var parser = new DOMParser();
-            var nemSch_lookup_elements_source = parser.parseFromString(document.getElementById('nemsisElements').textContent, "application/xml").getElementsByTagName('*');
+            var nemSch_lookup_elements_source = parser.parseFromString(nemsisElements.textContent, "application/xml").getElementsByTagName('*');
             for (var i = 0; i &lt; nemSch_lookup_elements_source.length; i++) {
               if (nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName'))
                 window.nemSch_lookup_elements[nemSch_lookup_elements_source[i].localName] = nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName').value;
@@ -90,7 +97,7 @@ Schematron files via a user-friendly web-based interface.
             targets = document.getElementsByClassName('linkable');
             for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], false);
 
-          }, 0), false);
+          }, false), 0);
         </script>
 
         <script id="nemsisElements" type="application/xml">

@@ -28,7 +28,7 @@
 
       <!-- To test: Remove all but one instance of agency annual statistics to generate the error. -->
         
-      <sch:assert id="compliance_dAgency.AgencyYearGroup_dAgency.15_2015" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:dAgency.AgencyYearGroup[2]">
+      <sch:assert id="compliance_dAgency.AgencyYearGroup_dAgency.15_two" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:dAgency.AgencyYearGroup[2]">
         There should be at least two sets of agency annual statistics.
       </sch:assert>
 

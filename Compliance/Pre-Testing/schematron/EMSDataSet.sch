@@ -7,6 +7,15 @@
   <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
   <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
 
+  <!-- "Initialize" variables used by nemsisDiagnostic. -->
+  <sch:let name="nemsisElements" value="()"/>
+  <sch:let name="nemsisElementsMissing" value="''"/>
+  <sch:let name="nemsisElementsMissingContext" value="()"/>
+
+  <!-- PHASES -->
+
+  <!-- No phases used. -->
+
   <!-- PATTERNS -->
 
   <sch:pattern id="compliance_sequence_odometer">
@@ -19,8 +28,8 @@
 
       <!-- To test: Set two of the odometer readings to the same value as each other to trigger the error. -->
 
-      <sch:assert id="compliance_sequence_odometer_0" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:eResponse.19 = (nem:eResponse.20, nem:eResponse.21, nem:eResponse.22) or nem:eResponse.20 = (nem:eResponse.21, nem:eResponse.22) or nem:eResponse.21 = nem:eResponse.22">
-        No two odometer readings should be the same as each other.
+      <sch:assert id="compliance_sequence_odometer_0" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(nem:eResponse.19 = (nem:eResponse.20, nem:eResponse.21) or nem:eResponse.20 = nem:eResponse.21)">
+        Beginning, on-scene, and patient destination odometer readings should not be the same as each other.
       </sch:assert>
 
       <!-- To test: Set the odometer readings so that the difference between the lowest and highest readings is more than 1,000 to trigger the warning. -->

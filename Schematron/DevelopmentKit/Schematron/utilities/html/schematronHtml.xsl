@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.4.0.170111_180103
-Revision Date: January 3, 2018
+Version: 3.4.0.170111_1800326
+Revision Date: March 26, 2018
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -123,7 +123,7 @@ Schematron files via a user-friendly web-based interface.
 
           <a href="#">
             <h1>
-              NEMSIS Schematron Business Rules<br/>
+              NEMSIS Schematron Validation Rules<br/>
               Version: <xsl:value-of select="sch:schema/@schemaVersion"/>
             </h1>
           </a>
@@ -164,7 +164,7 @@ Schematron files via a user-friendly web-based interface.
           <div class="blueRect"></div>
           <div class="spacer20"></div>
           <div class="titleMain">NEMSIS</div>
-          <div class="titleSub">Schematron Business Rules</div>
+          <div class="titleSub">Schematron Validation Rules</div>
           <div class="spacer50"></div>
           <div class="nhtsa">
             <xsl:value-of select="sch:schema/@id"/>

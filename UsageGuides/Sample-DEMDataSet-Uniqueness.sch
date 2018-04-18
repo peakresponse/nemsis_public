@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//www.nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.160713CP2_uniqueness170127" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.160713CP2_uniqueness180418" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>Sample NEMSIS ISO Schematron file for DEMDataSet for Uniqueness Constraints</sch:title>
 
@@ -642,8 +642,8 @@
 
     <!-- The XSD schema requires dAgency.01, dAgency.02, and dAgency.04 to be present and non-empty. -->
 
-    <sch:assert id="sample_uniqueness_DemographicReport_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(                 every $element in nem:dAgency/(nem:dAgency.01, nem:dAgency.02, nem:dAgency.04) satisfies                  normalize-space($element) = preceding-sibling::nem:DemographicReport/nem:dAgency/*[local-name()=local-name($element)]/normalize-space()                 )">
-      Each EMS Agency should have a unique combination of the following: 
+    <sch:assert id="sample_uniqueness_DemographicReport_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(preceding-sibling::nem:DemographicReport[                 nem:dAgency/normalize-space(nem:dAgency.01) = current()/nem:dAgency/normalize-space(nem:dAgency.01) and                 nem:dAgency/normalize-space(nem:dAgency.02) = current()/nem:dAgency/normalize-space(nem:dAgency.02) and                 nem:dAgency/normalize-space(nem:dAgency.04) = current()/nem:dAgency/normalize-space(nem:dAgency.04)                 ])">
+      Each EMS Agency should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dAgency.01', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dAgency.02', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dAgency.04', $nemSch_elements)"/>.
@@ -658,7 +658,7 @@
 
     <!-- The XSD schema requires dAgency.05 to be present and non-empty. -->
 
-    <sch:assert id="sample_uniqueness_dAgency.AgencyServiceGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="normalize-space(nem:dAgency.05) = '' or                  not(normalize-space(nem:dAgency.05) = preceding-sibling::nem:dAgency.AgencyServiceGroup/normalize-space(nem:dAgency.05))">
+    <sch:assert id="sample_uniqueness_dAgency.AgencyServiceGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(nem:dAgency.05) = preceding-sibling::nem:dAgency.AgencyServiceGroup/normalize-space(nem:dAgency.05))">
       Each EMS Agency Service Area should have a unique value for <sch:value-of select="key('nemSch_key_elements', 'dAgency.05', $nemSch_elements)"/>.
     </sch:assert>
 
@@ -682,7 +682,7 @@
       <sch:value-of select="key('nemSch_key_elements', 'dContact.04', $nemSch_elements)"/>.
     </sch:assert>
 
-    <sch:assert id="sample_uniqueness_dContact.ContactInfoGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dContact.01, nem:dContact.02, nem:dContact.03, nem:dContact.04) satisfies normalize-space($element) != '') or                  not(                 every $element in (nem:dContact.01, nem:dContact.02, nem:dContact.03, nem:dContact.04) satisfies                  normalize-space($element) = preceding-sibling::nem:dContact.ContactInfoGroup/*[local-name()=local-name($element)]/normalize-space()                 )">
+    <sch:assert id="sample_uniqueness_dContact.ContactInfoGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dContact.01, nem:dContact.02, nem:dContact.03, nem:dContact.04) satisfies normalize-space($element) != '') or                  not(preceding-sibling::nem:dContact.ContactInfoGroup[                 normalize-space(nem:dContact.01) = current()/normalize-space(nem:dContact.01) and                 normalize-space(nem:dContact.02) = current()/normalize-space(nem:dContact.02) and                 normalize-space(nem:dContact.03) = current()/normalize-space(nem:dContact.03) and                 normalize-space(nem:dContact.04) = current()/normalize-space(nem:dContact.04)                 ])">
       Each Agency Contact should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dContact.01', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dContact.02', $nemSch_elements)"/>,
@@ -699,7 +699,7 @@
     <!-- The XSD schema requires dConfiguration.01 to be present and non-empty. -->
 
     <sch:assert id="sample_uniqueness_dConfiguration.ConfigurationGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(nem:dConfiguration.01) = preceding-sibling::nem:dConfiguration.ConfigurationGroup/normalize-space(nem:dConfiguration.01))">
-      Each Agency Configuration Group should have a unique <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.01', $nemSch_elements)"/>.
+      Each Agency Configuration Group should have a unique value for <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.01', $nemSch_elements)"/>.
     </sch:assert>
 
   </sch:rule>
@@ -741,7 +741,7 @@
       <sch:value-of select="key('nemSch_key_elements', 'dLocation.03', $nemSch_elements)"/>.
     </sch:assert>
 
-    <sch:assert id="sample_uniqueness_dLocation.LocationGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dLocation.02, nem:dLocation.03) satisfies normalize-space($element) != '') or                  not(                 every $element in (nem:dLocation.02, nem:dLocation.03) satisfies                  normalize-space($element) = preceding-sibling::nem:dLocation.LocationGroup/*[local-name()=local-name($element)]/normalize-space()                 )">
+    <sch:assert id="sample_uniqueness_dLocation.LocationGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dLocation.02, nem:dLocation.03) satisfies normalize-space($element) != '') or                  not(preceding-sibling::nem:dLocation.LocationGroup[                 normalize-space(nem:dLocation.02) = current()/normalize-space(nem:dLocation.02) and                 normalize-space(nem:dLocation.03) = current()/normalize-space(nem:dLocation.03)                 ])">
       Each EMS Location should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dLocation.02', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dLocation.03', $nemSch_elements)"/>.
@@ -762,7 +762,7 @@
       <sch:value-of select="key('nemSch_key_elements', 'dVehicle.02', $nemSch_elements)"/>.
     </sch:assert>
 
-    <sch:assert id="sample_uniqueness_dVehicle.VehicleGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dVehicle.01, nem:dVehicle.02) satisfies normalize-space($element) != '') or                  not(                 every $element in (nem:dVehicle.01, nem:dVehicle.02) satisfies                  normalize-space($element) = preceding-sibling::nem:dVehicle.VehicleGroup/*[local-name()=local-name($element)]/normalize-space()                 )">
+    <sch:assert id="sample_uniqueness_dVehicle.VehicleGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dVehicle.01, nem:dVehicle.02) satisfies normalize-space($element) != '') or                  not(preceding-sibling::nem:dVehicle.VehicleGroup[                 normalize-space(nem:dVehicle.01) = current()/normalize-space(nem:dVehicle.01) and                 normalize-space(nem:dVehicle.02) = current()/normalize-space(nem:dVehicle.02)                 ])">
       Each Vehicle should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dVehicle.01', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dVehicle.02', $nemSch_elements)"/>.
@@ -810,14 +810,6 @@
       If Personnel information is included, <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.23', $nemSch_elements)"/> should be recorded, where <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.22', $nemSch_elements)"/> is this state.
     </sch:assert>
 
-    <!-- A Personnel may have multiple Licensure Groups with the same State and Licensure ID, but
-         no Personnel can have a Licensure Group with the same State and Licensure ID as another 
-         Personnel. -->
-    
-    <sch:assert id="sample_uniqueness_dPersonnel.PersonnelGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(nem:dPersonnel.LicensureGroup[normalize-space(nem:dPersonnel.22) = ancestor::nem:DemographicReport/nem:dAgency/normalize-space(nem:dAgency.04)]/normalize-space(nem:dPersonnel.23) != '') or                  not(nem:dPersonnel.LicensureGroup/normalize-space(nem:dPersonnel.23) = preceding-sibling::nem:dPersonnel.PersonnelGroup/nem:dPersonnel.LicensureGroup[normalize-space(nem:dPersonnel.22) = ancestor::nem:DemographicReport/nem:dAgency/normalize-space(nem:dAgency.04)]/normalize-space(nem:dPersonnel.23))">
-      Each Personnel should have a unique value for <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.23', $nemSch_elements)"/> where <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.22', $nemSch_elements)"/> is this state.
-    </sch:assert>
-
   </sch:rule>
 
   <sch:rule id="sample_uniqueness_dPersonnel.ImmunizationsGroup" context="nem:dPersonnel.ImmunizationsGroup[* != '']">
@@ -828,7 +820,7 @@
     <!-- At least one of the key elements must be recorded, but the rule will not fire unless that 
          is the case, so a "present" assert is not needed. -->
 
-    <sch:assert id="sample_uniqueness_dPersonnel.ImmunizationsGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(                 every $element in (nem:dPersonnel.18, nem:dPersonnel.19) satisfies                  normalize-space($element) = preceding-sibling::nem:dPersonnel.ImmunizationsGroup/*[local-name()=local-name($element)]/normalize-space()                 )">
+    <sch:assert id="sample_uniqueness_dPersonnel.ImmunizationsGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(preceding-sibling::nem:dPersonnel.ImmunizationsGroup[                 normalize-space(nem:dPersonnel.18) = current()/normalize-space(nem:dPersonnel.18) and                 normalize-space(nem:dPersonnel.19) = current()/normalize-space(nem:dPersonnel.19)                 ])">
       Each Personnel Immunization group should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.18', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.19', $nemSch_elements)"/>.
@@ -851,12 +843,19 @@
       <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.27', $nemSch_elements)"/>.
     </sch:assert>
 
-    <sch:assert id="sample_uniqueness_dPersonnel.LicensureGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dPersonnel.22, nem:dPersonnel.23, nem:dPersonnel.24, nem:dPersonel.27) satisfies normalize-space($element) != '') or                  not(                 every $element in (nem:dPersonnel.22, nem:dPersonnel.23, nem:dPersonnel.24, nem:dPersonel.27) satisfies                  normalize-space($element) = preceding-sibling::nem:dPersonnel.LicensureGroup/*[local-name()=local-name($element)]/normalize-space()                 )">
+    <sch:assert id="sample_uniqueness_dPersonnel.LicensureGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (nem:dPersonnel.22, nem:dPersonnel.23, nem:dPersonnel.24, nem:dPersonel.27) satisfies normalize-space($element) != '') or                  not(preceding-sibling::nem:dPersonnel.LicensureGroup[                 normalize-space(nem:dPersonnel.22) = current()/normalize-space(nem:dPersonnel.22) and                 normalize-space(nem:dPersonnel.23) = current()/normalize-space(nem:dPersonnel.23) and                 normalize-space(nem:dPersonnel.24) = current()/normalize-space(nem:dPersonnel.24) and                 normalize-space(nem:dPersonnel.27) = current()/normalize-space(nem:dPersonnel.27)                 ])">
       Each Personnel Licensure group should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.22', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.23', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.24', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.27', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <!-- Personnel cannot have a Licensure Group with the same Licensure ID as another Personnel
+         (in this state). -->
+    
+    <sch:assert id="sample_uniqueness_dPersonnel.PersonnelGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(nem:dPersonnel.22) = ancestor::nem:DemographicReport/nem:dAgency/normalize-space(nem:dAgency.04) and normalize-space(nem:dPersonnel.23) != '') or                  not(../preceding-sibling::nem:dPersonnel.PersonnelGroup/nem:dPersonnel.LicensureGroup[                 normalize-space(nem:dPersonnel.22) = current()/normalize-space(nem:dPersonnel.22) and                 normalize-space(nem:dPersonnel.23) = current()/normalize-space(nem:dPersonnel.23)                 ])">
+      Each Personnel should have a unique value for <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.23', $nemSch_elements)"/> where <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.22', $nemSch_elements)"/> is this state.
     </sch:assert>
 
   </sch:rule>
@@ -871,7 +870,7 @@
     </sch:assert>
 
     <sch:assert id="sample_uniqueness_dPersonnel.CertificationLevelGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="normalize-space(nem:dPersonnel.38) = '' or                  not(normalize-space(nem:dPersonnel.38) = preceding-sibling::nem:dPersonnel.CertificationLevelGroup/normalize-space(nem:dPersonnel.38))">
-      Each Personnel Agency Certification Level group should have a unique <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.38', $nemSch_elements)"/>.
+      Each Personnel Agency Certification Level group should have a unique value for <sch:value-of select="key('nemSch_key_elements', 'dPersonnel.38', $nemSch_elements)"/>.
     </sch:assert>
 
   </sch:rule>
@@ -886,7 +885,7 @@
     </sch:assert>
 
     <sch:assert id="sample_uniqueness_dDevice.DeviceGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="normalize-space(nem:dDevice.01) = '' or not(normalize-space(nem:dDevice.01) = preceding-sibling::nem:dDevice.DeviceGroup/normalize-space(nem:dDevice.01))">
-      Each Medical Device should have a unique <sch:value-of select="key('nemSch_key_elements', 'dDevice.01', $nemSch_elements)"/>.
+      Each Medical Device should have a unique value for <sch:value-of select="key('nemSch_key_elements', 'dDevice.01', $nemSch_elements)"/>.
     </sch:assert>
 
   </sch:rule>
@@ -907,7 +906,7 @@
       <sch:value-of select="key('nemSch_key_elements', 'dFacility.09', $nemSch_elements)"/>.
     </sch:assert>
 
-    <sch:assert id="sample_uniqueness_dFacility.FacilityGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (../nem:dFacility.01, nem:dFacility.03, nem:dFacility.07, nem:dFacility.08, nem:dFacility.09) satisfies normalize-space($element) != '') or                  not((                 every $element in (nem:dFacility.03, nem:dFacility.07, nem:dFacility.08, nem:dFacility.09) satisfies                  normalize-space($element) = preceding-sibling::nem:dFacility.FacilityGroup/*[local-name()=local-name($element)]/normalize-space() or                  normalize-space($element) = ../preceding-sibling::nem:dFacilityGroup[nem:dFacility.01 = current()/../nem:dFacility.01]/nem:dFacility.FacilityGroup/*[local-name()=local-name($element)]/normalize-space())                 )">
+    <sch:assert id="sample_uniqueness_dFacility.FacilityGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(some $element in (../nem:dFacility.01, nem:dFacility.03, nem:dFacility.07, nem:dFacility.08, nem:dFacility.09) satisfies normalize-space($element) != '') or                  not(preceding-sibling::nem:dFacility.FacilityGroup[                 normalize-space(nem:dFacility.03) = current()/normalize-space(nem:dFacility.03) and                 normalize-space(nem:dFacility.07) = current()/normalize-space(nem:dFacility.07) and                 normalize-space(nem:dFacility.08) = current()/normalize-space(nem:dFacility.08) and                 normalize-space(nem:dFacility.09) = current()/normalize-space(nem:dFacility.09)                 ] or                 ../preceding-sibling::nem:dFacilityGroup[                 normalize-space(nem:dFacility.01) = current()/../normalize-space(nem:dFacility.01) and                 nem:dFacility.FacilityGroup[                 normalize-space(nem:dFacility.03) = current()/normalize-space(nem:dFacility.03) and                 normalize-space(nem:dFacility.07) = current()/normalize-space(nem:dFacility.07) and                 normalize-space(nem:dFacility.08) = current()/normalize-space(nem:dFacility.08) and                 normalize-space(nem:dFacility.09) = current()/normalize-space(nem:dFacility.09)                 ]])">
       Each Facility should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dFacility.01', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dFacility.03', $nemSch_elements)"/>,
@@ -930,7 +929,7 @@
       If Custom Element Result information is included, <sch:value-of select="key('nemSch_key_elements', 'dCustomResults.02', $nemSch_elements)"/> should be recorded.
     </sch:assert>
 
-    <sch:assert id="sample_uniqueness_dCustomResults.ResultsGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="normalize-space(nem:dCustomResults.02) = '' or                  not(                 every $element in (nem:dCustomResults.02, nem:dCustomResults.03) satisfies                  normalize-space($element) = preceding-sibling::nem:dCustomResults.ResultsGroup/*[local-name()=local-name($element)]/normalize-space()                 )">
+    <sch:assert id="sample_uniqueness_dCustomResults.ResultsGroup_unique" role="[ERROR]" diagnostics="nemsisDiagnostic" test="normalize-space(nem:dCustomResults.02) = '' or                  not(preceding-sibling::nem:dCustomResults.ResultsGroup[                 normalize-space(nem:dCustomResults.02) = current()/normalize-space(nem:dCustomResults.02) and                 normalize-space(nem:dCustomResults.03) = current()/normalize-space(nem:dCustomResults.03)                 ])">
       Each Custom Element Result group should have a unique combination of the following:
       <sch:value-of select="key('nemSch_key_elements', 'dCustomResults.02', $nemSch_elements)"/>,
       <sch:value-of select="key('nemSch_key_elements', 'dCustomResults.03', $nemSch_elements)"/>.

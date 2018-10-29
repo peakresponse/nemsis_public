@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from 3.3.4 to v3.4.0
 
-Version: 3.3.4.160713CP2_3.4.0.160713CP2_180108
-Revision Date: January 8, 2018
+Version: 3.3.4.160713CP2_3.4.0.160713CP2_181026
+Revision Date: October 26, 2018
 
 -->
 
@@ -293,8 +293,8 @@ Revision Date: January 8, 2018
         <!-- Improved -->
         <xsl:when test=". = '9916001'">
           <xsl:choose>
-            <!-- Dead without Resuscitation Efforts (Black) => Critical (Red) -->
-            <xsl:when test="../../n:eSituation/n:eSituation.13 = '2813007'">4219001</xsl:when>
+            <!-- Dead without Resuscitation Efforts (Black) => Dead without Resuscitation Efforts (Black) -->
+            <xsl:when test="../../n:eSituation/n:eSituation.13 = '2813007'">4219007</xsl:when>
             <!-- Critical (Red) => Emergent (Yellow) -->
             <xsl:when test="../../n:eSituation/n:eSituation.13 = '2813001'">4219003</xsl:when>
             <!-- Otherwise => Lower Acuity (Green) -->
@@ -321,8 +321,11 @@ Revision Date: January 8, 2018
             <xsl:when test="../../n:eSituation/n:eSituation.13 = '2813005'">4219003</xsl:when>
             <!-- Emergent (Yellow) => Critical (Red) -->
             <xsl:when test="../../n:eSituation/n:eSituation.13 = '2813003'">4219001</xsl:when>
-            <!-- Critical (Red) => Dead without Resuscitation Efforts (Black) -->
-            <xsl:when test="../../n:eSituation/n:eSituation.13 = '2813001'">4219007</xsl:when>
+            <!-- Critical (Red) => Not Recorded (unable to map) -->
+            <xsl:when test="../../n:eSituation/n:eSituation.13 = '2813001'">
+              <xsl:attribute name="xsi:nil">true</xsl:attribute>
+              <xsl:attribute name="NV">7701003</xsl:attribute>
+            </xsl:when>
             <!-- Otherwise => Dead without Resuscitation Efforts (Black) -->
             <xsl:otherwise>9916005</xsl:otherwise>
           </xsl:choose>

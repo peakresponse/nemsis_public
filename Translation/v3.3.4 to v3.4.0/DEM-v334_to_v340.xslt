@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS DEMDataSet from 3.3.4 to v3.4.0
 
-Version: 3.3.4.160713CP2_3.4.0.160713CP2_180108
-Revision Date: January 8, 2018
+Version: 3.3.4.160713CP2_3.4.0.160713CP2_181026
+Revision Date: October 26, 2018
 
 -->
 

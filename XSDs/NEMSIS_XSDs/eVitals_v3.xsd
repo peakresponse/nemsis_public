@@ -602,7 +602,6 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
-										<Comment>For glucometers with "High" and "Low" readings, report "600" for "High" and "20" for "Low". </Comment>
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -1192,9 +1191,8 @@
 		<xs:annotation>
 			<xs:documentation>The Patient's Blood Glucose Level</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:integer">
-			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="2000"/>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[2][0][0][0]|[1][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[0-9]|High|Low"/>
 		</xs:restriction>
 		<!--BloodPressureMethod Indication of method of blood pressure measurement.-->
 	</xs:simpleType>

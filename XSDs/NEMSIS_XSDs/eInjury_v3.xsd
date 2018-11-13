@@ -100,12 +100,12 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eInjury.04" nillable="true" id="eInjury.VehicularPedestrianorOtherInjuryRiskFactor" maxOccurs="unbounded">
+			<xs:element name="eInjury.04" nillable="true" id="eInjury.TraumaTriageCriteriaSteps3and4" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eInjury.04</number>
-							<name>Vehicular, Pedestrian, or Other Injury Risk Factor</name>
+							<name>Trauma Triage Criteria (Steps 3 and 4)</name>
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Mechanism and Special Considerations Field Trauma Triage Criteria (steps 3 and 4) as defined by the Centers for Disease Control.</definition>
@@ -122,7 +122,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="VehicularInjuryIndicators">
+						<xs:extension base="TraumaTriageCriteriaSteps3and4">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -1306,7 +1306,7 @@
 			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="VehicularInjuryIndicators">
+	<xs:simpleType name="TraumaTriageCriteriaSteps3and4">
 		<xs:annotation>
 			<xs:documentation>The kind of risk factor predictors present at the incident</xs:documentation>
 		</xs:annotation>

@@ -527,9 +527,14 @@
 					<xs:documentation>Diagnostic Image (CT, X-ray, US, etc.)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4509007">
+			<xs:enumeration value="4509006">
 				<xs:annotation>
-					<xs:documentation>DNR/Living Will</xs:documentation>
+					<xs:documentation>DNR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4509008">
+				<xs:annotation>
+					<xs:documentation>Living Will</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4509009">
@@ -570,6 +575,11 @@
 			<xs:enumeration value="4509025">
 				<xs:annotation>
 					<xs:documentation>Other Video/Movie</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4509027">
+				<xs:annotation>
+					<xs:documentation>ePCR</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

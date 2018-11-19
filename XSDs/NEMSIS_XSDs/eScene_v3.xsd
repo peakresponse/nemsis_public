@@ -804,7 +804,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
+			<xs:maxLength value="255"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TriageClassification">

@@ -104,15 +104,15 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedications.03" nillable="true" id="eMedications.MedicationGiven">
+						<xs:element name="eMedications.03" nillable="true" id="eMedications.MedicationAdministered">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eMedications.03</number>
-										<name>Medication Given</name>
+										<name>Medication Administered</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The medication given to the patient</definition>
+										<definition>The medication administered to the patient</definition>
 										<v2Number>E18_03</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -176,7 +176,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 						</xs:element>
 						<xs:element name="eMedications.DosageGroup" id="eMedications.DosageGroup">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about the medication dosage given to the patient</xs:documentation>
+								<xs:documentation>Group Tag to hold info about the medication dosage administered to the patient</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -188,7 +188,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 													<name>Medication Dosage</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The dose or amount of the medication given to the patient</definition>
+													<definition>The dose or amount of the medication administered to the patient</definition>
 													<v2Number>E18_05</v2Number>
 													<usage>Required</usage>
 												</nemsisTacDoc>
@@ -214,7 +214,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 													<name>Medication Dosage Units</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The unit of medication dosage given to patient</definition>
+													<definition>The unit of medication dosage administered to patient</definition>
 													<v2Number>E18_06</v2Number>
 													<usage>Required</usage>
 												</nemsisTacDoc>
@@ -507,7 +507,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 	</xs:simpleType>
 	<xs:simpleType name="MedicationDosage">
 		<xs:annotation>
-			<xs:documentation>The dose or amount of the medication given to the patient</xs:documentation>
+			<xs:documentation>The dose or amount of the medication administered to the patient</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:decimal">
 			<xs:totalDigits value="9"/>
@@ -516,7 +516,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 	</xs:simpleType>
 	<xs:simpleType name="MedicationDosageUnits">
 		<xs:annotation>
-			<xs:documentation>The unit of medication dosage given to patient</xs:documentation>
+			<xs:documentation>The unit of medication dosage administered to patient</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3706001">

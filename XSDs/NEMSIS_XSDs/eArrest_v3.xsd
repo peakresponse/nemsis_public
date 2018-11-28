@@ -670,12 +670,12 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3002001">
 				<xs:annotation>
-					<xs:documentation>Cardiac (Presumed)</xs:documentation>
+					<xs:documentation>Medical (Presumed cardiac or unknown other medical etiologies)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002003">
 				<xs:annotation>
-					<xs:documentation>Drowning/Submersion</xs:documentation>
+					<xs:documentation>Drowning</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002005">
@@ -688,24 +688,14 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 					<xs:documentation>Electrocution</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3002009">
-				<xs:annotation>
-					<xs:documentation>Exsanguination</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="3002011">
-				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="3002013">
 				<xs:annotation>
-					<xs:documentation>Respiratory/Asphyxia</xs:documentation>
+					<xs:documentation>Asphyxial (External Causes)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002015">
 				<xs:annotation>
-					<xs:documentation>Trauma</xs:documentation>
+					<xs:documentation>Traumatic Cause</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

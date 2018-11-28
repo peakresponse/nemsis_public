@@ -443,7 +443,7 @@ List of medications based on RxNorm (RXCUI) code.
 						<xs:extension base="AlcoholDrugUseIndicators">
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.NoneReported PN.Refused PN.UnableToComplete"/>
+									<xs:union memberTypes="PN.NoneReported PN.UnableToComplete"/>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="NV" use="optional">
@@ -592,9 +592,9 @@ List of medications based on RxNorm (RXCUI) code.
 					<xs:documentation>Positive Level known from Law Enforcement or Hospital Record</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3117011">
+			<xs:enumeration value="3117013">
 				<xs:annotation>
-					<xs:documentation>Smell of Alcohol on Breath</xs:documentation>
+					<xs:documentation>Physical exam indicates suspected alcohol or drug use.</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

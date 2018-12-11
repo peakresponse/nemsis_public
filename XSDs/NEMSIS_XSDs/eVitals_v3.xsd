@@ -1324,6 +1324,11 @@
 			<xs:documentation>The type of ECG associated with the cardiac rhythm.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="3304000">
+				<xs:annotation>
+					<xs:documentation>2 Lead ECG (pads or paddles)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="3304001">
 				<xs:annotation>
 					<xs:documentation>3 Lead</xs:documentation>
@@ -1361,7 +1366,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3304015">
 				<xs:annotation>
-					<xs:documentation>Other (AED, Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

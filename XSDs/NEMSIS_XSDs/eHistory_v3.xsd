@@ -273,7 +273,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eHistory.10" type="ImmunizationType" id="eHistory.ImmunizationHistory" minOccurs="0">
+						<xs:element name="eHistory.10" id="eHistory.ImmunizationHistory" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -287,6 +287,17 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ImmunizationType">
+										<xs:attribute name="PN" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="PN.NotImmunized"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="eHistory.11" type="Year" id="eHistory.ImmunizationYear" minOccurs="0">
 							<xs:annotation>

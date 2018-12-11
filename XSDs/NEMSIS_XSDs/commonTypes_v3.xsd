@@ -1129,6 +1129,11 @@
 					<xs:documentation>Yellow Fever</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="9910053">
+				<xs:annotation>
+					<xs:documentation>None</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="Latitude">
@@ -1486,6 +1491,11 @@
 					<xs:documentation>Unable to Complete</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8801025">
+				<xs:annotation>
+					<xs:documentation>Not Immunized</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PN.ContraindicationNoted">
@@ -1616,6 +1626,18 @@
 			<xs:enumeration value="8801023">
 				<xs:annotation>
 					<xs:documentation>Unable to Complete</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PN.NotImmunized">
+		<xs:annotation>
+			<xs:documentation>Not Immunized</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="8801025">
+				<xs:annotation>
+					<xs:documentation>Not Immunized</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

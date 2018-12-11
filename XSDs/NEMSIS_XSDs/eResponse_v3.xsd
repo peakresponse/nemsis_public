@@ -715,7 +715,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2208009">
 				<xs:annotation>
-					<xs:documentation>Location (Inability to Obtain)</xs:documentation>
+					<xs:documentation>Incomplete Address Information Provided</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2208011">
@@ -736,6 +736,21 @@
 			<xs:enumeration value="2208017">
 				<xs:annotation>
 					<xs:documentation>Technical Failure (Computer, Phone etc.)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2208019">
+				<xs:annotation>
+					<xs:documentation>Communication Specialist-Assignment Error</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2208021">
+				<xs:annotation>
+					<xs:documentation>No Receiving MD, Bed, Hospital</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2208023">
+				<xs:annotation>
+					<xs:documentation>Specialty Team Delay</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

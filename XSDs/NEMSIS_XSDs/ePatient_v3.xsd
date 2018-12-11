@@ -508,7 +508,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ePatient.18" id="ePatient.PatientsPhoneNumber" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ePatient.18" id="ePatient.PatientsPhoneNumber" minOccurs="0" maxOccurs="unbounded" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -528,6 +528,11 @@
 						<xs:extension base="PhoneNumber">
 							<xs:attribute name="PhoneNumberType" type="PhoneNumberType" use="optional"/>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.UnableToComplete"/>
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

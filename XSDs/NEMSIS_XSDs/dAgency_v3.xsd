@@ -461,7 +461,6 @@
 						<xs:element name="dAgency.16" nillable="true" id="dAgency.TotalPrimaryServiceSizeArea">
 							<xs:annotation>
 								<xs:documentation>
-									<definition>
 										<nemsisTacDoc>
 											<number>dAgency.16</number>
 											<name>Total Primary Service Area Size</name>
@@ -480,8 +479,7 @@
 												<performanceMeasure>Trauma</performanceMeasure>
 											</performanceMeasuresGroup>
 											<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year</comment>
-										</nemsisTacDoc>
-									</definition>
+										</nemsisTacDoc>						
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
@@ -499,7 +497,6 @@
 						<xs:element name="dAgency.17" nillable="true" id="dAgency.TotalServiceAreaPopulation">
 							<xs:annotation>
 								<xs:documentation>
-									<definition>
 										<nemsisTacDoc>
 											<number>dAgency.17</number>
 											<name>Total Service Area Population</name>
@@ -519,7 +516,6 @@
 											</performanceMeasuresGroup>
 											<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year.</comment>
 										</nemsisTacDoc>
-									</definition>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>

@@ -1552,6 +1552,11 @@
 					<xs:documentation>Not Immunized</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="8801027">
+				<xs:annotation>
+					<xs:documentation>Order Criteria Not Met</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PN.ContraindicationNoted">
@@ -1694,6 +1699,18 @@
 			<xs:enumeration value="8801025">
 				<xs:annotation>
 					<xs:documentation>Not Immunized</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PN.OrderCriteriaNotMet">
+		<xs:annotation>
+			<xs:documentation>Order Criteria Not Met</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="8801027">
+				<xs:annotation>
+					<xs:documentation>Order Criteria Not Met</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

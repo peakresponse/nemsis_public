@@ -141,7 +141,7 @@
 										</xs:attribute>
 										<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="PN.ContraindicationNoted PN.DeniedByOrder PN.Refused PN.UnableToComplete"/>
+												<xs:union memberTypes="PN.ContraindicationNoted PN.DeniedByOrder PN.Refused PN.UnableToComplete PN.OrderCriteriaNotMet"/>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>

@@ -386,12 +386,12 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.15" type="HowPatientWasMovedToFromAmbulance" id="eDisposition.HowPatientWasTransportedFromAmbulance" minOccurs="0">
+			<xs:element name="eDisposition.15" type="HowPatientWasMovedToFromAmbulance" id="eDisposition.HowPatientWasMovedFromAmbulance" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDisposition.15</number>
-							<name>How Patient Was Transported From Ambulance</name>
+							<name>How Patient Was Moved From Ambulance</name>
 							<national>No</national>
 							<state>No</state>
 							<definition>The method the patient was moved from the ambulance to the destination</definition>

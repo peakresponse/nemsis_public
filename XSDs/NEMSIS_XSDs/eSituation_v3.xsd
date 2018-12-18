@@ -60,6 +60,11 @@
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
 							</xs:attribute>
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.UnableToComplete PN.Approximate"/>
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

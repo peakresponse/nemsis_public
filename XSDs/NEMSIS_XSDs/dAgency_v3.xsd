@@ -436,27 +436,38 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="dAgency.AgencyYearGroup" id="dAgency.AgencyYearGroup" maxOccurs="unbounded">
+			<xs:element name="dAgency.AgencyYearGroup" id="dAgency.AgencyYearGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold information about EMS agency annual statistics.</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dAgency.15" type="Year" id="dAgency.StatisticalCalendarYear">
+						<xs:element name="dAgency.15" id="dAgency.StatisticalCalendarYear" minOccurs="0" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dAgency.15</number>
 										<name>Statistical Calendar Year</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>The calendar year to which the information pertains for the EMS Agency and the specific EMS Agency Number (dAgency.02).</definition>
 										<v2Number>D01_10</v2Number>
-										<usage>Mandatory</usage>
+										<usage>Recommended</usage>
 										<comment>Added Calendar Year to the definition to remove confusion noted in draft comments. Will allow multiple entry to allow data to be stored on several years. This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02) and elements dAgency.16 through dAgency.22</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="Year">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="dAgency.16" nillable="true" id="dAgency.TotalPrimaryServiceSizeArea">
 							<xs:annotation>

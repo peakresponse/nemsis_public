@@ -289,17 +289,17 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eVitals.08" nillable="true" id="eVitals.MethodofBloodPressureMeasurement">
+									<xs:element name="eVitals.08" nillable="true" id="eVitals.MethodofBloodPressureMeasurement" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>eVitals.08</number>
 													<name>Method of Blood Pressure Measurement</name>
-													<national>Yes</national>
+													<national>No</national>
 													<state>Yes</state>
 													<definition>Indication of method of blood pressure measurement.</definition>
 													<v2Number>E14_06</v2Number>
-													<usage>Required</usage>
+													<usage>Recommended</usage>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -308,7 +308,7 @@
 												<xs:extension base="BloodPressureMethod">
 													<xs:attribute name="NV" use="optional">
 														<xs:simpleType>
-															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 														</xs:simpleType>
 													</xs:attribute>
 												</xs:extension>

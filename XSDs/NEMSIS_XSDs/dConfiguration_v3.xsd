@@ -481,16 +481,16 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dConfiguration.15" id="dConfiguration.PatientMonitoringCapabilityies" maxOccurs="unbounded">
+						<xs:element name="dConfiguration.15" id="dConfiguration.PatientMonitoringCapabilityies" minOccurs="0" maxOccurs="unbounded" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dConfiguration.15</number>
 										<name>Patient Monitoring Capability(ies)</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
-										<usage>Mandatory</usage>
+										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -507,6 +507,11 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="PatientMonitoringCapability">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
 										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 									</xs:extension>
 								</xs:simpleContent>

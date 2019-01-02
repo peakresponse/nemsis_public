@@ -505,17 +505,17 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.17" nillable="true" id="dAgency.TotalServiceAreaPopulation">
+						<xs:element name="dAgency.17" nillable="true" id="dAgency.TotalServiceAreaPopulation" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 										<nemsisTacDoc>
 											<number>dAgency.17</number>
 											<name>Total Service Area Population</name>
-											<national>Yes</national>
+											<national>No</national>
 											<state>Yes</state>
 											<definition>The total population in the agency's service area based if possible on year 2010 census data.</definition>
 											<v2Number>D01_13</v2Number>
-											<usage>Required</usage>
+											<usage>Recommended</usage>
 											<performanceMeasuresGroup>
 												<performanceMeasure>Airway</performanceMeasure>
 												<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -534,7 +534,7 @@
 									<xs:extension base="AnnualAgencyStatistics">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+												<xs:union memberTypes="NV.NotApplicable NV.NotReporting NV.NotRecorded"/>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>

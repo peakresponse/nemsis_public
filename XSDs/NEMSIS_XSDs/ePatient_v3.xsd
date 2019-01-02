@@ -671,15 +671,6 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="DateOfBirth">
-		<xs:annotation>
-			<xs:documentation>The Date on an event or occurrence.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:date">
-			<xs:minInclusive value="1890-01-01"/>
-			<xs:maxInclusive value="2050-01-01"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="DriversLicenseNumber">
 		<xs:annotation>
 			<xs:documentation>The patient's drivers license number</xs:documentation>

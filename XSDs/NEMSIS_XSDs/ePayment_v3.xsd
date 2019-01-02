@@ -458,6 +458,20 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
+						<xs:element name="ePayment.60" type="DateOfBirth" id="ePayment.DateOfBirthOfTheInsured" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePayment.60</number>
+										<name>Date of Birth of the Insured</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The date of birth of the person insured by the insurance company.</definition>
+										<usage>Optional</usage>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>

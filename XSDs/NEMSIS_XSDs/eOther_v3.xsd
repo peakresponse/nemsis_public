@@ -48,7 +48,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" maxOccurs="unbounded">
+			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the EMS Crew Member</xs:documentation>
 				</xs:annotation>
@@ -92,17 +92,17 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eOther.05" nillable="true" id="eOther.SuspectedEMSWorkRelatedExposureInjuryorDeath">
+						<xs:element name="eOther.05" nillable="true" id="eOther.SuspectedEMSWorkRelatedExposureInjuryorDeath" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eOther.05</number>
 										<name>Suspected EMS Work Related Exposure, Injury, or Death</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>Indication of an EMS work related exposure, injury, or death associated with this EMS event.</definition>
 										<v2Number>E23_05</v2Number>
-										<usage>Required</usage>
+										<usage>Recommended</usage>
 										<comment>Associated with eOther.04 (EMS Professional (Crew Member) ID)</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -112,7 +112,7 @@
 									<xs:extension base="YesNoValues">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>

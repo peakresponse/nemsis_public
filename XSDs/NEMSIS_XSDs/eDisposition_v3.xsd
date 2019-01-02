@@ -632,7 +632,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.23" nillable="true" id="eDisposition.HospitalCapability">
+			<xs:element name="eDisposition.23" nillable="true" id="eDisposition.HospitalCapability" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>

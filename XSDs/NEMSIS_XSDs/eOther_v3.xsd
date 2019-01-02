@@ -1007,11 +1007,6 @@
 					<xs:documentation>Physical Signature/Paper Copy Obtained</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4515029">
-				<xs:annotation>
-					<xs:documentation>Refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="4515031">
 				<xs:annotation>
 					<xs:documentation>Signed</xs:documentation>
@@ -1020,6 +1015,21 @@
 			<xs:enumeration value="4515033">
 				<xs:annotation>
 					<xs:documentation>Signed-Not Patient</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4515035">
+				<xs:annotation>
+					<xs:documentation>Not Signed-Illiterate (Unable to Read)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4515037">
+				<xs:annotation>
+					<xs:documentation>Not Signed-Restrained</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4515039">
+				<xs:annotation>
+					<xs:documentation>Not Signed-Combative or Uncooperative</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

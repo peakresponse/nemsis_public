@@ -383,22 +383,27 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dConfiguration.11" id="dConfiguration.EMSAgencySpecialtyServiceCapability" maxOccurs="unbounded">
+						<xs:element name="dConfiguration.11" id="dConfiguration.EMSAgencySpecialtyServiceCapability" minOccurs="0" maxOccurs="unbounded" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dConfiguration.11</number>
 										<name>EMS Agency Specialty Service Capability</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>Special training or services provided by the EMS Agency and available to the EMS service area/community.</definition>
-										<usage>Mandatory</usage>
+										<usage>Recommended</usage>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="AgencySpecialtyServiceCapability">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
 										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 									</xs:extension>
 								</xs:simpleContent>

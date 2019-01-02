@@ -650,17 +650,17 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.21" nillable="true" id="dAgency.EMSPatientContactVolumeperYear">
+						<xs:element name="dAgency.21" nillable="true" id="dAgency.EMSPatientContactVolumeperYear" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dAgency.21</number>
 										<name>EMS Patient Contact Volume per Year</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>The number of EMS patient contacts per year based on last calendar year.</definition>
 										<v2Number>D01_17</v2Number>
-										<usage>Required</usage>
+										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -679,7 +679,7 @@
 									<xs:extension base="AnnualAgencyStatistics">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>

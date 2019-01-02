@@ -622,16 +622,16 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eSituation.18" id="eTimes.DateTimeLastKnownWell" minOccurs="0">
+			<xs:element name="eSituation.18" id="eTimes.DateTimeLastKnownWell" minOccurs="1" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eSituation.18</number>
 							<name>Date/Time Last Known Well</name>
-							<national>No</national>
-							<state>No</state>
+							<national>Yes</national>
+							<state>Yes</state>
 							<definition>The estimated date and time the patient was last known to be well or in their usual state of health. This is described or estimated by the patient, family, and/or bystanders.</definition>
-							<usage>Optional</usage>
+							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -646,7 +646,18 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="DateTimeType"/>
+						<xs:extension base="DateTimeType">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.UnableToComplete"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>

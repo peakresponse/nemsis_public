@@ -157,22 +157,33 @@ List of medications based on RxNorm (RXCUI) code.
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eMedications.04" type="CurrentMedicationAdministrationRoute" id="eMedications.MedicationAdministeredRoute" minOccurs="0">
+						<xs:element name="eMedications.04" id="eMedications.MedicationAdministeredRoute" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eMedications.04</number>
 										<name>Medication Administered Route</name>
-										<national>No</national>
+										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The route medication was administered to the patient</definition>
 										<v2Number>E18_04</v2Number>
-										<usage>Optional</usage>
+										<usage>Required</usage>
 										<comment>This medication route list represents a sub-group of values from the Data Elements for Emergency Department Systems (DEEDS), pertaining to prehospital care. &lt;br/> &lt;br/>
 DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/science/article/pii/S0196064498703178.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="CurrentMedicationAdministrationRoute">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="eMedications.DosageGroup" id="eMedications.DosageGroup">
 							<xs:annotation>

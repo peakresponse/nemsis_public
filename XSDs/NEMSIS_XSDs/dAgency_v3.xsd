@@ -578,17 +578,17 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dAgency.19" nillable="true" id="dAgency.EMSDispatchVolumeperYear">
+						<xs:element name="dAgency.19" nillable="true" id="dAgency.EMSDispatchVolumeperYear" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dAgency.19</number>
 										<name>EMS Dispatch Volume per Year</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>The number of EMS dispatches during the last calendar year</definition>
 										<v2Number>D01_15</v2Number>
-										<usage>Required</usage>
+										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -607,7 +607,7 @@
 									<xs:extension base="AnnualAgencyStatistics">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>

@@ -47,16 +47,16 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eProtocols.02" nillable="true" id="eProtocols.ProtocolAgeCategory">
+						<xs:element name="eProtocols.02" nillable="true" id="eProtocols.ProtocolAgeCategory" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eProtocols.02</number>
 										<name>Protocol Age Category</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>The age group the protocol is written to address</definition>
-										<usage>Required</usage>
+										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -76,7 +76,7 @@
 									<xs:extension base="ProtocolAgeCategory">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>

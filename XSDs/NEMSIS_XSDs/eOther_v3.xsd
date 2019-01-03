@@ -289,6 +289,20 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
+						<xs:element name="eOther.22" type="FileName" id="eOther.FileAttachmentName" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eOther.22</number>
+										<name>File Attachment Name</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The name of the attached file.</definition>
+										<usage>Optional</usage>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
@@ -592,7 +606,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="FileName">
 		<xs:annotation>
-			<xs:documentation>The name of the graphic file for the signature.</xs:documentation>
+			<xs:documentation>The name of the attached file.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="255"/>

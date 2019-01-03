@@ -119,7 +119,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eOther.06" nillable="true" id="eOther.TypeofSuspectedEMSBloodBodyFluidExposureInjuryorDeath" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eOther.06" nillable="true" id="eOther.TypeOfWorkRelatedInjuryDeathOrSuspectedExposure" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -136,7 +136,7 @@
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="TypeOfSuspectedExposureToBodilyFluids">
+									<xs:extension base="TypeOfInjuryDeathOrSuspectedExposure">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
@@ -1198,9 +1198,9 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="TypeOfSuspectedExposureToBodilyFluids">
+	<xs:simpleType name="TypeOfInjuryDeathOrSuspectedExposure">
 		<xs:annotation>
-			<xs:documentation>The type of exposure or unprotected contact with blood or body fluids</xs:documentation>
+			<xs:documentation>The type of injury, death, or exposure to blood or body fluids</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4506001">

@@ -412,6 +412,20 @@ List of medications based on RxNorm (RXCUI) code.
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
+						<xs:element name="eHistory.20" type="CurrentMedicationFrequency" id="eHistory.CurrentMedicationFrequency" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eHistory.20</number>
+										<name>Current Medication Frequency</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The frequency of administration of the patient's current medication</definition>
+										<usage>Optional</usage>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
@@ -857,6 +871,88 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:totalDigits value="9"/>
 			<xs:fractionDigits value="3"/>
 		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CurrentMedicationFrequency">
+		<xs:annotation>
+			<xs:documentation>The frequency of the patient's current medication</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3116001">
+				<xs:annotation>
+					<xs:documentation>qi (every hour)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116003">
+				<xs:annotation>
+					<xs:documentation>q2h (every 2 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116005">
+				<xs:annotation>
+					<xs:documentation>q3h (every 3 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116007">
+				<xs:annotation>
+					<xs:documentation>q4h (every 4 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116009">
+				<xs:annotation>
+					<xs:documentation>qid (four times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116011">
+				<xs:annotation>
+					<xs:documentation>tad (three times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116013">
+				<xs:annotation>
+					<xs:documentation>ac (before meals)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116015">
+				<xs:annotation>
+					<xs:documentation>pc (after meals)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116017">
+				<xs:annotation>
+					<xs:documentation>bid (twice a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116019">
+				<xs:annotation>
+					<xs:documentation>qd (every day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116021">
+				<xs:annotation>
+					<xs:documentation>qd-am (every day in the morning)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116023">
+				<xs:annotation>
+					<xs:documentation>qd-pm (every day in the evening)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116025">
+				<xs:annotation>
+					<xs:documentation>has (at bedtime)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116027">
+				<xs:annotation>
+					<xs:documentation>sod (every other day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3116029">
+				<xs:annotation>
+					<xs:documentation>prn (as needed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicationAllergies">
 		<xs:annotation>

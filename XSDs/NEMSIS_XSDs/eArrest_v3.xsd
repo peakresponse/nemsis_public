@@ -127,33 +127,6 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.06" id="eArrest.WhoProvidedCPRPriortoEMSArrival" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eArrest.06</number>
-							<name>Who Provided CPR Prior to EMS Arrival</name>
-							<national>No</national>
-							<state>Yes</state>
-							<definition>Documentation of who performed CPR prior to this EMS unit's arrival.</definition>
-							<usage>Optional</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-							</performanceMeasuresGroup>
-							<comment>Associated with eArrest.05 (CPR Care Provided Prior to EMS Arrival) but only required if CPR was provided prior to EMS arrival.&lt;br/>&lt;br/>
-This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385							
-							</comment>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="WhoProvided">
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-						</xs:extension>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="eArrest.07" nillable="true" id="eArrest.AEDUsePriortoEMSArrival">
 				<xs:annotation>
 					<xs:documentation>

@@ -17,8 +17,22 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>This element is a component of the Utstein Cardiac Arrest Criteria. 
-							&lt;br/>&lt;br/>If this EMS event is for an interfacility transfer of a patient with a recent history of a cardiac arrest with ROSC, and who does not experience another cardiac arrest during transport, then do not document Cardiac Arrest (eArrest.01) with "Yes, Prior to EMS Arrival".
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria.
+								&lt;br/>&lt;br/>
+								If this EMS event is for an interfacility transfer of a patient with a recent history of a cardiac arrest with ROSC, and who does not experience another cardiac arrest during transport, then do not document Cardiac Arrest (eArrest.01) with "Yes, Prior to Any EMS Arrival (includes Transport EMS &amp; Medical First Responders)".
+								&lt;br/>&lt;br/>
+								EMS is defined as Emergency Medical Services personnel and Medical First Responder personnel who respond to a medical emergency in an official capacity as part of an organized medical response team. By this definition, physicians, nurses, or paramedics who witness a cardiac arrest and initiate CPR, but are not part of the organized medical response
+								team are characterized as bystanders and are not part of the EMS system.
+								&lt;br/>&lt;br/>
+								Medical First Responders are defined as personnel who are dispatched through the 911 system, respond in an official capacity, have the capability and/or training to provide emergency medical care, but are not the designated transporter of the patient. Thus, law enforcement officers who respond in an official capacity to a cardiac arrest, have the
+								capability and/or training to provide emergency medical care (e.g., carry AEDs in their patrol vehicles, hold EMR licensure, are CPR certified, etc.) are considered Medical First Responders for the purposes of this data element.
+								&lt;br/>&lt;br/>
+								Responders dispatched through the 911 system with no capability of providing emergency medical care are not considered Medical First Responders. For example, towing and wrecking responding to a vehicle crash, or law enforcement officers who do not provide any emergency medical care would not be considered Medical First Responders.
+								&lt;br/>&lt;br/>
+								For States and Local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), “Any EMS Arrival” includes 911 Responders (First Responder or EMS) as defined by CARES in the CARES Data Dictionary.
+								&lt;br/>&lt;br/>
+								This NEMSIS data element is used to answer CARES data element #20 Arrest After Arrival of 911 Responder.
+								&lt;br/>&lt;br/>
 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -571,12 +585,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="3001003">
 				<xs:annotation>
-					<xs:documentation>Yes, Prior to EMS Arrival</xs:documentation>
+					<xs:documentation>Yes, Prior to Any EMS Arrival (includes Transport EMS &amp; Medical First Responders)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3001005">
 				<xs:annotation>
-					<xs:documentation>Yes, After EMS Arrival</xs:documentation>
+					<xs:documentation>Yes, After Any EMS Arrival (includes Transport EMS &amp; Medical First Responders)l</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -212,32 +212,6 @@ This element is a component of the Utstein Cardiac Arrest Criteria as identified
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eArrest.08" id="eArrest.WhoUsedAEDPriortoEMSArrival" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eArrest.08</number>
-							<name>Who Used AED Prior to EMS Arrival</name>
-							<national>No</national>
-							<state>Yes</state>
-							<definition>Documentation of who used the AED prior to this EMS unit's arrival.</definition>
-							<usage>Optional</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-							</performanceMeasuresGroup>
-							<comment>Associated with eArrest.07 (AED Use Prior to EMS Arrival).
-							&lt;br/>&lt;br/>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="WhoUsedAED">
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-						</xs:extension>
-					</xs:simpleContent>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="eArrest.09" nillable="true" id="eArrest.TypeofCPRProvided" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>

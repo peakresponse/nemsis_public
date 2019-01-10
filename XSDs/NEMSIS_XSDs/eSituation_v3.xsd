@@ -506,8 +506,9 @@
 							<comment>Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
 							&lt;br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf 
 							&lt;br/>&lt;br/>Dead without Resuscitation Efforts would be appropriate if resuscitation was initiated by non-EMS personnel but discontinued immediately upon evaluation by first arriving EMS personnel.
+							&lt;br/>&lt;br/>"Non-Acute/Routine" added for use with patients with no clinical issues-such as refusal for a life assist-or for routine transfers.
 							</comment>
-							<v3Changes/>
+							<v3Changes>With the release of V3.5.0 additional values were added to meet the needs of EMS.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -955,6 +956,11 @@
 			<xs:enumeration value="2813007">
 				<xs:annotation>
 					<xs:documentation>Dead without Resuscitation Efforts (Black)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2813009">
+				<xs:annotation>
+					<xs:documentation>Non-Acute/Routine</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

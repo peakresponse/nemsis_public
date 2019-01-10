@@ -199,6 +199,24 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="eArrest.10" type="YesNoValues" id="eArrestTherapeuticHypothemiaInitiated" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eArrest.10</number>
+							<name>Therapeutic Hypothermia by EMS</name>
+							<national>No</national>
+							<state>No</state>
+							<defintion>Documentation of EMS initiation of Therapetic Hypothermia</defintion>
+							<usage>Optional</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eArrest.10 is the equivalent of CARES data element #32: Was Hypothermia Care Provided in the Field as defined by CARES in the CARES 2018 Data Dictionary.</comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="eArrest.11" nillable="true" id="eArrest.FirstMonitoredArrestRhythmofthePatient">
 				<xs:annotation>
 					<xs:documentation>

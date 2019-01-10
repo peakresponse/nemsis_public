@@ -145,8 +145,10 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>"Interfacility Transfer" has been changed to "Interfacility Transport. "Public Assistance/Other Not Listed" added for EMS 
-										expanded scope events such as elderly assistance, injury prevention, public education, immunization programs, etc.</comment>
+										<comment>
+											Values for "911 Response (Scene)", "Intercept", and "Mutual Aid" have been relabeled to start with "Emergency Response" to more easily identify these options. "Interfacility Transport" was relabeled to "Hospital-to-Hospital Transfer" to be more accurate; options for "Sending Hospital Staff" and "Critical or Specialty Care" were added to better track resource utilization at local and state levels and support reimbursement levels. "Medical Transport" was relabeled to "Other Medical Needs Transport" to cover any other medical transports such as transports to and from dialysis, doctor appointments, return home, or nursing homes. Values added to consolidate types of service previously captured in "Primary Role of Unit" and eDisposition.12 as found in V3.4.0. Additional values added to reflect emerging service types.
+										</comment>
+										<v3changes>With the release of v3.5.0 values were added to meet the needs of EMS</v3changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -923,37 +925,93 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2205001">
 				<xs:annotation>
-					<xs:documentation>911 Response (Scene)</xs:documentation>
+					<xs:documentation>Emergency Reponse (Primary Response Area)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2205003">
 				<xs:annotation>
-					<xs:documentation>Intercept</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2205005">
-				<xs:annotation>
-					<xs:documentation>Interfacility Transport</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2205007">
-				<xs:annotation>
-					<xs:documentation>Medical Transport</xs:documentation>
+					<xs:documentation>Emergency Reponse (Intercept)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2205009">
 				<xs:annotation>
-					<xs:documentation>Mutual Aid</xs:documentation>
+					<xs:documentation>Emergency Reponse (Mutual Aid)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="2205005">
+				<xs:annotation>
+					<xs:documentation>Hospital-to-Hospital Transfer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205015">
+				<xs:annotation>
+					<xs:documentation>Hospital to Non-Hospital Facility Transfer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205017">
+				<xs:annotation>
+					<xs:documentation>Non-Hospital Facility to Non-Hospital Facility Transfer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205019">
+				<xs:annotation>
+					<xs:documentation>Non-Hospital Facility to Hospital Transfer</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205007">
+				<xs:annotation>
+					<xs:documentation>Other Routine Medical Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+
 			<xs:enumeration value="2205011">
 				<xs:annotation>
-					<xs:documentation>Public Assistance/Other Not Listed</xs:documentation>
+					<xs:documentation>Public Assistance</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2205013">
 				<xs:annotation>
 					<xs:documentation>Standby</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205021">
+				<xs:annotation>
+					<xs:documentation>Support Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205023">
+				<xs:annotation>
+					<xs:documentation>Non-Patient Care Rescue/Extrication</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205025">
+				<xs:annotation>
+					<xs:documentation>Crew Transport Only</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205027">
+				<xs:annotation>
+					<xs:documentation>Transport of Organs or Body Parts</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205029">
+				<xs:annotation>
+					<xs:documentation>Mortuary Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205031">
+				<xs:annotation>
+					<xs:documentation>Mobile Integrated Health Care Encounter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205033">
+				<xs:annotation>
+					<xs:documentation>Evaluation for Special Referral/Intake Programs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2205035">
+				<xs:annotation>
+					<xs:documentation>Administrative Operations</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -675,7 +675,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3009001">
 				<xs:annotation>
-					<xs:documentation>Compressions-Continuous</xs:documentation>
+					<xs:documentation>Compressions-Manual</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3009003">
@@ -703,6 +703,11 @@
 					<xs:documentation>Compressions-Other Device</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3009021">
+				<xs:annotation>
+					<xs:documentation>Compressions-Hands Only CPR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="3009013">
 				<xs:annotation>
 					<xs:documentation>Ventilation-Bag Valve Mask</xs:documentation>
@@ -721,6 +726,21 @@
 			<xs:enumeration value="3009019">
 				<xs:annotation>
 					<xs:documentation>Ventilation-Pocket Mask</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3009023">
+				<xs:annotation>
+					<xs:documentation>Ventilation-with OPA/NPA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3009025">
+				<xs:annotation>
+					<xs:documentation>Ventilation-Advanced Airway Device</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3009027">
+				<xs:annotation>
+					<xs:documentation>Ventilation-Passive Ventilation with Oxygen</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

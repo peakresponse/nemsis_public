@@ -555,6 +555,58 @@
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
+						<xs:element name="eExam.LungGroup" id="eExam.LungGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Group Tag to hold lung assessment findings information</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="eExam.22" type="LungAssessmentLocation" id="eExam.LungAssessmentFindingLocation" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eExam.22</number>
+													<name>Lung Assessment Finding Location</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The location of the patient's lung assessment findings.</definition>
+													<v2Number></v2Number>
+													<usage>Optional</usage>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="eExam.23" id="eExam.LungAssessment" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eExam.23</number>
+													<name>Lung Assessment</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The assessment findings associated with the patient's lungs.</definition>
+													<v2Number></v2Number>
+													<usage>Optional</usage>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="LungAssessment">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+													<xs:attribute name="PN" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="PN.ExamFindingNotPresent" />
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						
 						<xs:element name="eExam.19" id="eExam.MentalStatusAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
@@ -3023,6 +3075,115 @@
 			<xs:enumeration value="3504039">
 				<xs:annotation>
 					<xs:documentation>Capillary Nail Bed Refill more than 4 seconds</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LungAssessmentLocation">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3522001">
+				<xs:annotation>
+					<xs:documentation>Left</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3522003">
+				<xs:annotation>
+					<xs:documentation>Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3522005">
+				<xs:annotation>
+					<xs:documentation>Bilateral</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LungAssessment">
+		<xs:annotation>
+			<xs:documentation></xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3523001">
+				<xs:annotation>
+					<xs:documentation>Breath Sounds-Absent</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523003">
+				<xs:annotation>
+					<xs:documentation>Breath Sounds-Decreased</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523005">
+				<xs:annotation>
+					<xs:documentation>Breath Sounds-Equal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523007">
+				<xs:annotation>
+					<xs:documentation>Breath Sounds-Normal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523009">
+				<xs:annotation>
+					<xs:documentation>Foreign Body</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523011">
+				<xs:annotation>
+					<xs:documentation>Increased Respiratory Effort</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523013">
+				<xs:annotation>
+					<xs:documentation>Normal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523015">
+				<xs:annotation>
+					<xs:documentation>Not Done</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523017">
+				<xs:annotation>
+					<xs:documentation>Pain</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523019">
+				<xs:annotation>
+					<xs:documentation>Pain with Inspiraton/Expiration</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523021">
+				<xs:annotation>
+					<xs:documentation>Rales</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523023">
+				<xs:annotation>
+					<xs:documentation>Rhonchi</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523025">
+				<xs:annotation>
+					<xs:documentation>Rhonchi/Wheezing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523027">
+				<xs:annotation>
+					<xs:documentation>Stridor</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523029">
+				<xs:annotation>
+					<xs:documentation>Wheezing-Expiratory</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523031">
+				<xs:annotation>
+					<xs:documentation>Wheezing-Inspiratory</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

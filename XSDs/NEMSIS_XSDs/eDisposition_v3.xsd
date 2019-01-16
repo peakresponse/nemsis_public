@@ -737,6 +737,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Required if Patient Transported by EMS.</comment>
+							<v3Changes>With the release of v3.5.0 additional values were added to meet the needs of EMS.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1477,17 +1478,12 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 			<xs:enumeration value="4221007">
 				<xs:annotation>
-					<xs:documentation>Medical Office/Clinic</xs:documentation>
+					<xs:documentation>Clinic</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4221009">
 				<xs:annotation>
 					<xs:documentation>Morgue/Mortuary</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4221011">
-				<xs:annotation>
-					<xs:documentation>Nursing Home/Assisted Living Facility</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4221013">
@@ -1518,6 +1514,51 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			<xs:enumeration value="4221023">
 				<xs:annotation>
 					<xs:documentation>Freestanding Emergency Department</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221025">
+				<xs:annotation>
+					<xs:documentation>Dialysis Center</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221027">
+				<xs:annotation>
+					<xs:documentation>Diagnostic Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221029">
+				<xs:annotation>
+					<xs:documentation>Assisted Living Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221031">
+				<xs:annotation>
+					<xs:documentation>Mental Health Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221033">
+				<xs:annotation>
+					<xs:documentation>Nursing Home</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221035">
+				<xs:annotation>
+					<xs:documentation>Other Recurring Care Center</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221037">
+				<xs:annotation>
+					<xs:documentation>Physical Rehabilitation Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221039">
+				<xs:annotation>
+					<xs:documentation>Drug and/or Alcohol Rehabilitation Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4221041">
+				<xs:annotation>
+					<xs:documentation>Skilled Nursing Facility</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -194,10 +194,10 @@
 						<nemsisTacDoc>
 							<number>eCad.13</number>
 							<refNumber>eResponse.07</refNumber>
-							<name>Primary Role of the Unit</name>
+							<name>Unit Transport and Equipment Capability</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The Primary role of the EMS Unit which responded to this specific EMS event</definition>
+							<definition>The transport and equipment capabilities of the EMS Unit which responded to this specific EMS event</definition>
 							<v2Number>E02_05</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
@@ -513,16 +513,16 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eCad.31" type="ComplaintReportedByDispatch" id="eCad.eDispatch.ComplaintReportedbyDispatch" minOccurs="0">
+			<xs:element name="eCad.31" type="DispatchReason" id="eCad.eDispatch.DispatchReason" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eCad.31</number>
 							<refNumber>eDispatch.01</refNumber>
-							<name>Complaint Reported by Dispatch</name>
+							<name>Dispatch Reason</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The complaint dispatch reported to the responding unit.</definition>
+							<definition>The dispatch reason reported to the responding unit.</definition>
 							<v2Number>E03_01</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>

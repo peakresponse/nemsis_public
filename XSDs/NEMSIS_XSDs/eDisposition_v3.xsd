@@ -188,7 +188,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
-												<!-- NV.NotReporting -->
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -267,9 +266,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<!--<xs:complexType>
-								<xs:attributeGroup ref="GPSLocation"/>
-							</xs:complexType>-->
 						</xs:element>
 						<xs:element name="eDisposition.10" type="USNG" id="eDisposition.DestinationLocationUSNationalGridCoordinates" minOccurs="0">
 							<xs:annotation>
@@ -318,29 +314,177 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.12" type="IncidentPatientDisposition" id="eDisposition.IncidentPatientDisposition">
+			<xs:element name="eDisposition.IncidentDispositionGroup" id="eDisposition.IncidentDispositionGroup">
 				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eDisposition.12</number>
-							<name>Incident/Patient Disposition</name>
-							<national>Yes</national>
-							<state>Yes</state>
-							<definition>Type of disposition treatment and/or transport of the patient by this EMS Unit.</definition>
-							<v2Number>E20_10</v2Number>
-							<usage>Mandatory</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Airway</performanceMeasure>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-								<performanceMeasure>Pediatric</performanceMeasure>
-								<performanceMeasure>Response</performanceMeasure>
-								<performanceMeasure>STEMI</performanceMeasure>
-								<performanceMeasure>Stroke</performanceMeasure>
-								<performanceMeasure>Trauma</performanceMeasure>
-							</performanceMeasuresGroup>
-						</nemsisTacDoc>
-					</xs:documentation>
+					<xs:documentation>Group Tag to hold info about the incident disposition details</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="eDisposition.27" id="eDisposition.UnitDisposition" type="UnitDisposition">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eDisposition.27</number>
+										<name>Unit Disposition</name>
+										<national>Yes</national>
+										<state>Yes</state>
+										<definition>The patient disposition for an EMS event identifying whether patient contact was made.</definition>
+										<v2Number/>
+										<usage>Mandatory</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>Pediatric</performanceMeasure>
+											<performanceMeasure>Response</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+											<performanceMeasure>Stroke</performanceMeasure>
+											<performanceMeasure>Trauma</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>Grouped with Incident and Transport dispositions. Who provided care or services is defined in Incident Dispostion.</comment>
+										<v3Changes>Element added with the release of v3.5.0</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="eDisposition.28" id="eDisposition.PatientEvaluationCare" nillable="true">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eDisposition.28</number>
+										<name>Patient Evaluation/Care</name>
+										<national>Yes</national>
+										<state>Yes</state>
+										<definition>The patient disposition for na EMS event identifying whether a patient was evaluated and care or services were provided.</definition>
+										<v2Number />
+										<usage>Required</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>Pediatric</performanceMeasure>
+											<performanceMeasure>Response</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+											<performanceMeasure>Stroke</performanceMeasure>
+											<performanceMeasure>Trauma</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>Grouped with Incident and Transport Dispositions. Who provided care ro services is defined in Incident Disposition.</comment>
+										<v3Changes>Element added with the release of v3.5.0</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="PatientEvaluationCare">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eDisposition.29" id="eDisposition.CrewIncidentDispostion" nillable="true">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eDisposition.29</number>
+										<name>Crew Incident Disposition</name>
+										<national>Yes</national>
+										<state>Yes</state>
+										<definition>The crew disposition for this EMS event identifying which crew provided primary patient care or whether support services were required.</definition>
+										<v2Number />
+										<usage>Required</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>Pediatric</performanceMeasure>
+											<performanceMeasure>Response</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+											<performanceMeasure>Stroke</performanceMeasure>
+											<performanceMeasure>Trauma</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>Grouped with Patient and Transport Dispositions. A "Referral Agency" is intended for use with specialty referral programs (such as "Safe Baby Haven", mental health or addiction, or similar programs) where EMS provides an initial medical screening as part of the intake process for the various services or programs. Depending on context of the Value, "Unit" could be Vehicle or Service/Agency.</comment>
+										<v3Changes>Element added with the release of v3.5.0</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="CrewIncidentDisposition">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eDisposition.30" id="eDisposition.TransportDisposition" nillable="true">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eDisposition.30</number>
+										<name>Transport Disposition</name>
+										<national>Yes</national>
+										<state>Yes</state>
+										<definition>The transport disposition for an EMS event identifying whether a transport occurred and by which unit.</definition>
+										<v2Number />
+										<usage>Required</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>Pediatric</performanceMeasure>
+											<performanceMeasure>Response</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+											<performanceMeasure>Stroke</performanceMeasure>
+											<performanceMeasure>Trauma</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>Grouped with Patient and Incident Dispostions. Provides a rapid filter for transport or no transport for incident evaluation, business entry rules and Schematron rules.</comment>
+										<v3Changes>Element added with the release of v3.5.0</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="TransportDisposition">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eDisposition.31" id="eDisposition.ReasonForRefusalRelease" type="ReasonForRefusalRelease" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eDisposition.31</number>
+										<name>Reason for Refusal/Release</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>Describes reason(s) for the patient's refusal of care/transport OR the EMS clinician's decision to release the patient.</definition>
+										<v2Number />
+										<usage>Optional</usage>
+										<performanceMeasuresGroup>
+											<performanceMeasure>Airway</performanceMeasure>
+											<performanceMeasure>Cardiac Arrest</performanceMeasure>
+											<performanceMeasure>Pediatric</performanceMeasure>
+											<performanceMeasure>Response</performanceMeasure>
+											<performanceMeasure>STEMI</performanceMeasure>
+											<performanceMeasure>Stroke</performanceMeasure>
+											<performanceMeasure>Trauma</performanceMeasure>
+										</performanceMeasuresGroup>
+										<comment>This works in combination with the dispositions and signatures to provide general categories fo rthe paitent refusal. Specific legal refusal language should be developed by the agency's legal counsel and provided to the patient or guardian upon refusal per local policies.</comment>
+										<v3Changes>Element added with the release of v3.5.0</v3Changes>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="eDisposition.13" id="eDisposition.HowPatientWasMovedtoAmbulance" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
@@ -784,7 +928,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 	</xs:complexType>
 	<xs:simpleType name="AdditionalTransportModeDescriptors">
 		<xs:annotation>
@@ -1154,123 +1297,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="IncidentPatientDisposition">
-		<xs:annotation>
-			<xs:documentation>Type of disposition treatment and/or transport of the patient by this EMS Unit.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="4212001">
-				<xs:annotation>
-					<xs:documentation>Assist, Agency</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212003">
-				<xs:annotation>
-					<xs:documentation>Assist, Public</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212005">
-				<xs:annotation>
-					<xs:documentation>Assist, Unit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212007">
-				<xs:annotation>
-					<xs:documentation>Canceled (Prior to Arrival At Scene)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212009">
-				<xs:annotation>
-					<xs:documentation>Canceled on Scene (No Patient Contact)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212011">
-				<xs:annotation>
-					<xs:documentation>Canceled on Scene (No Patient Found)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212013">
-				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-No Resuscitation Attempted (With Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212015">
-				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-No Resuscitation Attempted (Without Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212017">
-				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-Resuscitation Attempted (With Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212019">
-				<xs:annotation>
-					<xs:documentation>Patient Dead at Scene-Resuscitation Attempted (Without Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212021">
-				<xs:annotation>
-					<xs:documentation>Patient Evaluated, No Treatment/Transport Required</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212023">
-				<xs:annotation>
-					<xs:documentation>Patient Refused Evaluation/Care (With Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212025">
-				<xs:annotation>
-					<xs:documentation>Patient Refused Evaluation/Care (Without Transport)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212027">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Released (AMA)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212029">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Released (per protocol)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212031">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transferred Care to Another EMS Unit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212033">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by this EMS Unit</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212035">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by Law Enforcement</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212037">
-				<xs:annotation>
-					<xs:documentation>Patient Treated, Transported by Private Vehicle</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212039">
-				<xs:annotation>
-					<xs:documentation>Standby-No Services or Support Provided</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212041">
-				<xs:annotation>
-					<xs:documentation>Standby-Public Safety, Fire, or EMS Operational Support Provided</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="4212043">
-				<xs:annotation>
-					<xs:documentation>Transport Non-Patient, Organs, etc.</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="NumberOfPatients">
 		<xs:annotation>
 			<xs:documentation>The number of patients transported by this EMS crew and unit.</xs:documentation>
@@ -1521,6 +1547,206 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			<xs:enumeration value="4219009">
 				<xs:annotation>
 					<xs:documentation>Dead with Resuscitation Efforts (Black)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UnitDisposition">
+		<xs:annotation>
+			<xs:documentation>The patient disposition for an EMS event identifying whether patient contact was made</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4227001">
+				<xs:annotation>
+					<xs:documentation>Patient Contact Made</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4227003">
+				<xs:annotation>
+					<xs:documentation>Cancelled on Scene</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4227005">
+				<xs:annotation>
+					<xs:documentation>Cancelled Prior to Arrival at Scene</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4227007">
+				<xs:annotation>
+					<xs:documentation>No Patient Contact</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4227009">
+				<xs:annotation>
+					<xs:documentation>No Patient Found</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4227011">
+				<xs:annotation>
+					<xs:documentation>Non-Patient Incident (Not Otherwise Listed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PatientEvaluationCare">
+		<xs:annotation>
+			<xs:documentation>The patient disposition for an EMS event identiying whether a patient was evaluated and care or services were provided.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4228001">
+				<xs:annotation>
+					<xs:documentation>Patient Evaluated and Care Provided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4228003">
+				<xs:annotation>
+					<xs:documentation>Patient Evaluated and Refused Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4228005">
+				<xs:annotation>
+					<xs:documentation>Patient Evaluated, No Care Required</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4228007">
+				<xs:annotation>
+					<xs:documentation>Patient Refused Evaluation/Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4228009">
+				<xs:annotation>
+					<xs:documentation>Patient Support Services Provided</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CrewIncidentDisposition">
+		<xs:annotation>
+			<xs:documentation>The crew disposition for this EMS event identifying which crew provided primary patient care or whether support services were required.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4229001">
+				<xs:annotation>
+					<xs:documentation>Initiated and Continued Primary Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4229003">
+				<xs:annotation>
+					<xs:documentation>Initiated Primary Care and Transferred to Another EMS Crew</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4229005">
+				<xs:annotation>
+					<xs:documentation>Provided Care Supporting Primary EMS Crew</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4229007">
+				<xs:annotation>
+					<xs:documentation>Assumed Primary Care from Another EMS Crew</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4229009">
+				<xs:annotation>
+					<xs:documentation>Incident Support Services Provided (Including Standby)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4229011">
+				<xs:annotation>
+					<xs:documentation>Back in Service, No Care/Support Services Required</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4229013">
+				<xs:annotation>
+					<xs:documentation>Back in Service, Care/Support Services Refused</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransportDisposition">
+		<xs:annotation>
+			<xs:documentation>The transport disposition for an EMS event idetifying whether a transport occurred and by which unit.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4230001">
+				<xs:annotation>
+					<xs:documentation>Transport by This EMS Unit (This Crew Only)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4230003">
+				<xs:annotation>
+					<xs:documentation>Transport by This EMS Unit, with a Member of Another Crew</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4230005">
+				<xs:annotation>
+					<xs:documentation>Transport by Another EMS Unit</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4230007">
+				<xs:annotation>
+					<xs:documentation>Transport by Another EMS Unit, with a Member of This Crew</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4230009">
+				<xs:annotation>
+					<xs:documentation>Patient Refused Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4230011">
+				<xs:annotation>
+					<xs:documentation>Non-Patient Transport (Not Otherwise Listed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4230013">
+				<xs:annotation>
+					<xs:documentation>No Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ReasonForRefusalRelease">
+		<xs:annotation>
+			<xs:documentation>Describes reason(s) for the patient's refusal of care/transport or the EMS clinician's decision to release the patient.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4231001">
+				<xs:annotation>
+					<xs:documentation>Against Medical Advice</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231003">
+				<xs:annotation>
+					<xs:documentation>Patient/Guardian Indicates Ambulance Transport is Not Necessary</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231005">
+				<xs:annotation>
+					<xs:documentation>Released Following Protocol Guidelines</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231007">
+				<xs:annotation>
+					<xs:documentation>Released to Law Enforcement</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231009">
+				<xs:annotation>
+					<xs:documentation>Patient/Guardian States Intent to Transport by Other Means</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231011">
+				<xs:annotation>
+					<xs:documentation>DNR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231013">
+				<xs:annotation>
+					<xs:documentation>Medical/Physician Orders for Life Sustaining Treatment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231015">
+				<xs:annotation>
+					<xs:documentation>Other, Not Listed</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

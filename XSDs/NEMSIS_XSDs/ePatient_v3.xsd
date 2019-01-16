@@ -336,15 +336,15 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ePatient.13" nillable="true" id="ePatient.Gender">
+			<xs:element name="ePatient.13" nillable="true" id="ePatient.Sex">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>ePatient.13</number>
-							<name>Gender</name>
+							<name>Sex</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The Patient's Gender</definition>
+							<definition>The Patient's Sex</definition>
 							<v2Number>E06_11</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -361,7 +361,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="Gender">
+						<xs:extension base="Sex">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>

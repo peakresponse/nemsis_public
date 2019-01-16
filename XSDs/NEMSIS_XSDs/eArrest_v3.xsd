@@ -606,6 +606,43 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="eArrest.22" id="eArrest.WhoFirstDefibrillated" nillable="true">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eArrest.22</number>
+							<name>Who First Defibrillated the Patient</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>Who first defibrillated the patient</definition>
+							<usage>Required</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment>Bystanders are defined as persons who are not responding as part of an organized emergency response system to a cardiac arrest. Physicians, nurses, and paramedics may be described as perfoming bystander CPR if they are not part of the emergency response system involved in the victim's resuscitation. Friends and aquaintances are considered bystanders.
+								&lt;br/>&lt;br/>Family members are defined as the patient's relatives.
+								&lt;br/>&lt;br/>Healthcare Provider (non-EMS) includes physicians, nurses, paramedics, and other types of heathcare professionals who are not part of the organized emergency response system.
+								&lt;br/>&lt;br/>First Responders are defined as personnel who are dispatched through the 911 system, respond as part of an organized emergencvy response system, and have the capability and/or training to provide emergency medical care, but are not the desinated transporters of the patient.
+								&lt;br/>&lt;br/>First Responder (EMS) is defined as EMS personnel who are part of an EMS response agency, respond as aprt of an organized emergency response system, but are not the designated transporter of the patient. For example, First Responser (EMS) includes EMS personnel who arrive by quick response EMS units, fire apparatus that is part of an EMS response agency, and supervisor/administrative vehicles operated by the transport EMS agency.
+								&lt;br/>&lt;br/>First Responder (Law Enforcement) is defined as public safety officers who are not part of an EMS response agency and act in an organized, official capacity to enforce the law.
+								&lt;br/>&lt;br/>First Responder (non-EMS Fire) is defined as fire department personnel who are not part of an EMS response agency amd are not the designated transporter of the patient.
+								&lt;br/>&lt;br/>EMS Responder (transport) is defined as EMS personnel who are the designated transporter of the patient.
+								&lt;br/>&lt;br/>For states and local agenices that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eArrest.22 is the equivalent of CARES data element #28 Who First Defibrillated the Patient as defined by CARES in the CARES 2018 Data Dictionary.</comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="WhoFirstDefibrillated">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="AEDUse">
@@ -1072,7 +1109,49 @@
 					<xs:documentation>First Responder (non-EMS Fire)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3020013">
+			<xs:enumeration value="3021013">
+				<xs:annotation>
+					<xs:documentation>EMS Responder (transport EMS)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WhoFirstDefibrillated">
+		<xs:annotation>
+			<xs:documentation>Documentation of who first defibrillated the patient.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3022001">
+				<xs:annotation>
+					<xs:documentation>Bystander</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3022003">
+				<xs:annotation>
+					<xs:documentation>Family Member</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3022005">
+				<xs:annotation>
+					<xs:documentation>Healthcare Provider (non-EMS)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3022007">
+				<xs:annotation>
+					<xs:documentation>First Responder (EMS)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3022009">
+				<xs:annotation>
+					<xs:documentation>First Responder (Law Enforcement)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3022011">
+				<xs:annotation>
+					<xs:documentation>First Responder (non-EMS Fire)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3022013">
 				<xs:annotation>
 					<xs:documentation>EMS Responder (transport EMS)</xs:documentation>
 				</xs:annotation>

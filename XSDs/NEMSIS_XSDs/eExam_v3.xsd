@@ -606,7 +606,57 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						
+						<xs:element name="eExam.ChestGroup" id="eExam.ChestGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Group Tag to hold chest assessment findings information</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="eExam.24" type="ChestAssessmentLocation" id="eExam.ChestAssessmentFindingLocation" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eExam.24</number>
+													<name>Chest Assessment Finding Location</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The location of the patient's chest assessment findings.</definition>
+													<v2Number></v2Number>
+													<usage>Optional</usage>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="eExam.25" id="eExam.ChestAssessment" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eExam.25</number>
+													<name>Chest Assessment</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The assessment findings associated with the patient's chest.</definition>
+													<v2Number></v2Number>
+													<usage>Optional</usage>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="ChestAssessment">
+													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"></xs:attribute>
+													<xs:attribute name="PN" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="PN.ExamFindingNotPresent" />
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
 						<xs:element name="eExam.19" id="eExam.MentalStatusAssessment" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
@@ -3081,7 +3131,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="LungAssessmentLocation">
 		<xs:annotation>
-			<xs:documentation></xs:documentation>
+			<xs:documentation>The location of the Lung Exam Finding.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3522001">
@@ -3103,7 +3153,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="LungAssessment">
 		<xs:annotation>
-			<xs:documentation></xs:documentation>
+			<xs:documentation>The assessment of the patient's lungs on examination</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3523001">
@@ -3184,6 +3234,185 @@
 			<xs:enumeration value="3523031">
 				<xs:annotation>
 					<xs:documentation>Wheezing-Inspiratory</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ChestAssessmentLocation">
+		<xs:annotation>
+			<xs:documentation>The location of the Chest Exam Finding.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3524001">
+				<xs:annotation>
+					<xs:documentation>Left - Anterior</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3524003">
+				<xs:annotation>
+					<xs:documentation>Left - Posterior</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3524005">
+				<xs:annotation>
+					<xs:documentation>Right - Anterior</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3524007">
+				<xs:annotation>
+					<xs:documentation>Right - Posterior</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3524009">
+				<xs:annotation>
+					<xs:documentation>General - Anterior</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3524011">
+				<xs:annotation>
+					<xs:documentation>General - Posterior</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3524013">
+				<xs:annotation>
+					<xs:documentation>Left - Side</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3524015">
+				<xs:annotation>
+					<xs:documentation>Right - Side</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ChestAssessment">
+		<xs:annotation>
+			<xs:documentation>The assessment of the patient's chest on examination</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3525001">
+				<xs:annotation>
+					<xs:documentation>Abrasion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525003">
+				<xs:annotation>
+					<xs:documentation>Avulsion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525005">
+				<xs:annotation>
+					<xs:documentation>Accessory Muscles Used with Breathing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525007">
+				<xs:annotation>
+					<xs:documentation>Bleeding Controlled</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525009">
+				<xs:annotation>
+					<xs:documentation>Bleeding Uncontrolled</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525011">
+				<xs:annotation>
+					<xs:documentation>Burn-Blistering</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525013">
+				<xs:annotation>
+					<xs:documentation>Burn-Charing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525015">
+				<xs:annotation>
+					<xs:documentation>Burn-Redness</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525017">
+				<xs:annotation>
+					<xs:documentation>Burn-White/Waxy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525019">
+				<xs:annotation>
+					<xs:documentation>Crush Injury</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525021">
+				<xs:annotation>
+					<xs:documentation>Deformity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525023">
+				<xs:annotation>
+					<xs:documentation>Flail Segment</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525025">
+				<xs:annotation>
+					<xs:documentation>Implanted Device</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525027">
+				<xs:annotation>
+					<xs:documentation>Laceration</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523029">
+				<xs:annotation>
+					<xs:documentation>Normal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525031">
+				<xs:annotation>
+					<xs:documentation>Not Done</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525033">
+				<xs:annotation>
+					<xs:documentation>Pain</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525035">
+				<xs:annotation>
+					<xs:documentation>Pain with Inspiration/Expiration</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525037">
+				<xs:annotation>
+					<xs:documentation>Puncture/Stab Wound</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523039">
+				<xs:annotation>
+					<xs:documentation>Retraction</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525041">
+				<xs:annotation>
+					<xs:documentation>Tenderness</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525043">
+				<xs:annotation>
+					<xs:documentation>Gunshot Wound</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525045">
+				<xs:annotation>
+					<xs:documentation>Swelling</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3525047">
+				<xs:annotation>
+					<xs:documentation>Contusion</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3523049">
+				<xs:annotation>
+					<xs:documentation>Tenderness-General</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

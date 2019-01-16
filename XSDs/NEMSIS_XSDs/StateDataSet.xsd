@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 (x64) (http://www.altova.com) by Greg Chandler (University of Utah) -->
 <xs:schema xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://www.ascc.net/xml/schematron" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:element name="StateDataSet">
@@ -497,7 +496,7 @@
 														</performanceMeasuresGroup>
 														<comment>This data element should capture all of the procedures permitted by the state for any/all levels of EMS personnel in the state. This is associated with the EMS Agency State (dAgency.01). This is related to the EMS Agency's procedures (dConfiguration.07) which have been implemented within the EMS System.
 										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify SNOMEDCT procedure codes based on medical direction and their own need.										
-										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html							
+										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/							
 										&lt;br/>&lt;br/>SNOMEDCT
 										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
 										&lt;br/>Product: Product - UMLS Metathesaurus
@@ -581,7 +580,7 @@
 										</comment>
 														<v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
 										&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. 
-										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html											
+										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/											
 										&lt;br/>&lt;br/>RxNorm
 										&lt;br/>Website - http://uts.nlm.nih.gov
 										

@@ -1186,7 +1186,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="10"/>
 		</xs:restriction>
-		<!--CarbonMonoxideLevel-->
 	</xs:simpleType>
 	<xs:simpleType name="BloodGlucoseLevel">
 		<xs:annotation>
@@ -1195,7 +1194,6 @@
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[2][0][0][0]|[1][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[0-9]|High|Low"/>
 		</xs:restriction>
-		<!--BloodPressureMethod Indication of method of blood pressure measurement.-->
 	</xs:simpleType>
 	<xs:simpleType name="BloodPressureMethod">
 		<xs:annotation>
@@ -1233,7 +1231,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--MethodBodyTemp-->
 	</xs:simpleType>
 	<xs:simpleType name="BodyTemperature">
 		<xs:annotation>
@@ -1245,7 +1242,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="50"/>
 		</xs:restriction>
-		<!--CriticalRhythm-->
 	</xs:simpleType>
 	<xs:simpleType name="CarbonMonoxideLevel">
 		<xs:annotation>
@@ -1257,7 +1253,6 @@
 			<xs:totalDigits value="3"/>
 			<xs:fractionDigits value="1"/>
 		</xs:restriction>
-		<!--APGAR-->
 	</xs:simpleType>
 	<xs:simpleType name="CO2">
 		<xs:annotation>
@@ -1267,7 +1262,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="750"/>
 		</xs:restriction>
-		<!--OK-->
 	</xs:simpleType>
 	<xs:simpleType name="PulseRhythm">
 		<xs:annotation>
@@ -1290,7 +1284,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--ReperfusionChecklist-->
 	</xs:simpleType>
 	<xs:simpleType name="ECGMethod">
 		<xs:annotation>
@@ -1318,7 +1311,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--BloodGlucoseLevel-->
 	</xs:simpleType>
 	<xs:simpleType name="ECGType">
 		<xs:annotation>
@@ -1371,7 +1363,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--ECGType-->
 	</xs:simpleType>
 	<xs:simpleType name="GlasgowComaScoreEyes">
 		<xs:annotation>
@@ -1399,7 +1390,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GlasgowComaScoreMotor-->
 	</xs:simpleType>
 	<xs:simpleType name="GlasgowComaScoreMotor">
 		<xs:annotation>
@@ -1437,7 +1427,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--ECGMethod-->
 	</xs:simpleType>
 	<xs:simpleType name="GlasgowComaScoreVerbal">
 		<xs:annotation>
@@ -1470,7 +1459,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GlasgowComaScoreEyes-->
 	</xs:simpleType>
 	<xs:simpleType name="GCSScoreQualifier">
 		<xs:annotation>
@@ -1503,7 +1491,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GlasgowComaScoreVerbal-->
 	</xs:simpleType>
 	<xs:simpleType name="HeartRate">
 		<xs:annotation>
@@ -1513,7 +1500,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="500"/>
 		</xs:restriction>
-		<!--StrokeScaleType-->
 	</xs:simpleType>
 	<xs:simpleType name="MAP">
 		<xs:annotation>
@@ -1523,7 +1509,6 @@
 			<xs:minInclusive value="1"/>
 			<xs:maxInclusive value="500"/>
 		</xs:restriction>
-		<!--OK-->
 	</xs:simpleType>
 	<xs:simpleType name="MethodBodyTemp">
 		<xs:annotation>
@@ -1576,7 +1561,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--PainScale-->
 	</xs:simpleType>
 	<xs:simpleType name="MethodMeasureHeartRate">
 		<xs:annotation>
@@ -1614,7 +1598,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--CardiacRhythm-->
 	</xs:simpleType>
 	<xs:simpleType name="PainScale">
 		<xs:annotation>
@@ -1624,7 +1607,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="10"/>
 		</xs:restriction>
-		<!--TotalGCS-->
 	</xs:simpleType>
 	<xs:simpleType name="PatientsHighestLevelResponsiveness">
 		<xs:annotation>
@@ -1652,7 +1634,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--MethodMeasureHeartRate-->
 	</xs:simpleType>
 	<xs:simpleType name="PulseOximetry">
 		<xs:annotation>
@@ -1662,7 +1643,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="100"/>
 		</xs:restriction>
-		<!---RespiratoryEffort-->
 	</xs:simpleType>
 	<xs:simpleType name="ReperfusionChecklist">
 		<xs:annotation>
@@ -1685,7 +1665,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--TypePainScale-->
 	</xs:simpleType>
 	<xs:simpleType name="RespiratoryEffort">
 		<xs:annotation>
@@ -1728,7 +1707,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GCSScoreMoreMeaningful-->
 	</xs:simpleType>
 	<xs:simpleType name="RespiratoryRate">
 		<xs:annotation>
@@ -1738,7 +1716,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="300"/>
 		</xs:restriction>
-		<!--BodyTemperature-->
 	</xs:simpleType>
 	<xs:simpleType name="RTS">
 		<xs:annotation>
@@ -1748,7 +1725,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="12"/>
 		</xs:restriction>
-		<!--PulseOximetry-->
 	</xs:simpleType>
 	<xs:simpleType name="StrokeScale">
 		<xs:annotation>
@@ -1771,7 +1747,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--TypeOfPainScale-->
 	</xs:simpleType>
 	<xs:simpleType name="TotalGCS">
 		<xs:annotation>
@@ -1781,7 +1756,6 @@
 			<xs:minInclusive value="3"/>
 			<xs:maxInclusive value="15"/>
 		</xs:restriction>
-		<!--HeartRate-->
 	</xs:simpleType>
 	<xs:simpleType name="TypeOfPainScale">
 		<xs:annotation>
@@ -1809,7 +1783,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--RTS-->
 	</xs:simpleType>
 	<xs:simpleType name="TypeOfStrokeScale">
 		<xs:annotation>
@@ -1887,7 +1860,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--RespiratoryRate-->
 	</xs:simpleType>
 	<xs:simpleType name="ETCO2Type">
 		<xs:annotation>

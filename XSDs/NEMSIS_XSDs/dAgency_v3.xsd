@@ -325,8 +325,6 @@
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
-						<!--<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-							<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>-->
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
@@ -809,9 +807,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--</xs:element>
-		</xs:sequence>
-	</xs:complexType>-->
 	<xs:simpleType name="AgencyOrganizationalTaxStatus">
 		<xs:annotation>
 			<xs:documentation>The EMS Agencies business/corporate organizational tax status</xs:documentation>

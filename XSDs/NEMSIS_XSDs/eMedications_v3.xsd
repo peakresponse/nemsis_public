@@ -97,7 +97,6 @@
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
-												<!-- NV.NotReporting -->
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -149,11 +148,6 @@ List of medications based on RxNorm (RXCUI) code.
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
-									<!--										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>-->
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>

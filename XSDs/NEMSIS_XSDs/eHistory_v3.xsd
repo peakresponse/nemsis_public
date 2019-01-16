@@ -354,7 +354,6 @@ List of medications based on RxNorm (RXCUI) code.
 										<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="PN.NoneReported PN.Refused PN.Unresponsive PN.UnableToComplete"/>
-												<!-- PN.NoAnticoagulantsOrBleedingDisorder -->
 											</xs:simpleType>
 										</xs:attribute>
 										<xs:attribute name="NV" use="optional">

@@ -379,9 +379,6 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<!--<xs:complexType>
-								<xs:attributeGroup ref="GPSLocation"/>
-							</xs:complexType>-->
 						</xs:element>
 						<xs:element name="eInjury.16" type="BodyType" id="eInjury.ACNIncidentVehicleBodyType" minOccurs="0">
 							<xs:annotation>
@@ -687,11 +684,6 @@
 					<xs:documentation>No Airbag Present</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!--<xs:enumeration value="2908011">
-				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="AreaOfVehicleImpact">
@@ -1289,21 +1281,6 @@
 					<xs:documentation>Shoulder Belt Only Used</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!--<xs:enumeration value="2907011">
-				<xs:annotation>
-					<xs:documentation>Lap Belt With Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2907013">
-				<xs:annotation>
-					<xs:documentation>Lap Belt Without Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
-			<!--<xs:enumeration value="2907025">
-				<xs:annotation>
-					<xs:documentation>Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TraumaTriageCriteriaSteps3and4">

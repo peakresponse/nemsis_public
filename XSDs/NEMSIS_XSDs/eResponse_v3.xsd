@@ -419,32 +419,6 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eResponse.15" type="UnitLevelOfCare" id="eResponse.LevelofCareofThisUnit">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eResponse.15</number>
-							<name>Level of Care of This Unit</name>
-							<national>Yes</national>
-							<state>Yes</state>
-							<definition>The level of care (BLS or ALS) the unit is able to provide based on the units' treatment capabilities for this EMS response.</definition>
-							<usage>Mandatory</usage>
-							<performanceMeasuresGroup>
-								<performanceMeasure>Airway</performanceMeasure>
-								<performanceMeasure>Cardiac Arrest</performanceMeasure>
-								<performanceMeasure>Pediatric</performanceMeasure>
-								<performanceMeasure>Response</performanceMeasure>
-								<performanceMeasure>STEMI</performanceMeasure>
-								<performanceMeasure>Stroke</performanceMeasure>
-								<performanceMeasure>Trauma</performanceMeasure>
-							</performanceMeasuresGroup>
-							<comment>Added to identify the level of care (license level) the EMS unit/crew can provide regardless of patient need, based on this unit's capabilities.  
-								&lt;br/>&lt;br/>For example, if a unit/crew is staffed with an EMT-Intermediate or EMT-Paramedic but the unit is either licensed or stocked at a BLS level the appropriate level of care is "BLS-Basic". This is because the care provided to patients is limited to BLS skills.
-							</comment>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="eResponse.16" type="VehicleDispatchLocation" id="eResponse.VehicleDispatchLocation" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
@@ -1360,73 +1334,6 @@
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
 			<xs:maxLength value="25"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="UnitLevelOfCare">
-		<xs:annotation>
-			<xs:documentation>The Primary role of the EMS Unit which responded to this specific EMS incident.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="2215001">
-				<xs:annotation>
-					<xs:documentation>BLS-First Responder/EMR</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215003">
-				<xs:annotation>
-					<xs:documentation>BLS-Basic /EMT</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215005">
-				<xs:annotation>
-					<xs:documentation>BLS-AEMT</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215007">
-				<xs:annotation>
-					<xs:documentation>BLS-Intermediate</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215023">
-				<xs:annotation>
-					<xs:documentation>BLS-Community Paramedicine</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215009">
-				<xs:annotation>
-					<xs:documentation>ALS-AEMT</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215011">
-				<xs:annotation>
-					<xs:documentation>ALS-Intermediate</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215013">
-				<xs:annotation>
-					<xs:documentation>ALS-Paramedic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215015">
-				<xs:annotation>
-					<xs:documentation>ALS-Community Paramedicine</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215017">
-				<xs:annotation>
-					<xs:documentation>ALS-Nurse</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215019">
-				<xs:annotation>
-					<xs:documentation>ALS-Physician</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2215021">
-				<xs:annotation>
-					<xs:documentation>Specialty Critical Care</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="UnitTransportEquipmentCapability">

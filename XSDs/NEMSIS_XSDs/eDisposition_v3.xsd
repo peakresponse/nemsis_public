@@ -477,7 +477,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>This works in combination with the dispositions and signatures to provide general categories fo rthe paitent refusal. Specific legal refusal language should be developed by the agency's legal counsel and provided to the patient or guardian upon refusal per local policies.</comment>
+										<comment>This works in combination with the dispositions and signatures to provide general categories for the paitent refusal. Specific legal refusal language should be developed by the agency's legal counsel and provided to the patient or guardian upon refusal per local policies.</comment>
 										<v3Changes>Element added with the release of v3.5.0</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -927,6 +927,33 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					<xs:simpleContent>
 						<xs:extension base="DispositionInstruction">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="eDisposition.32" id="eDisposition.LevelofCareProvidedperProtocol" nillable="true">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eDisposition.32</number>
+							<name>Level of Care Provided per Protocol</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The general level of care provided to this patient as defined per provider level in local EMS protocols or clinical guidelines.</definition>
+							<usage>Required</usage>
+							<comment>The level of care should be defined by the situation, medications, and procedures provided ot the paitent based on what is allowed in the local EMS protocols. This definition can vary between regions; what may be allowed for BLS providers in one region may be considered ALS care in another. This is not a reflection of the provider levels providing care, but the actual care given-for example, BLS care provided by a paramedic would be entered as "BLS". This element benefits reviews of performance, resource demand and utilization, and reimbursement coding.</comment>
+							<v3Changes>Element added wit the release of v3.5.0</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="LevelofCareProvidedperProtocol">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -1796,6 +1823,48 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			<xs:enumeration value="4231015">
 				<xs:annotation>
 					<xs:documentation>Other, Not Listed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="LevelofCareProvidedperProtocol">
+		<xs:annotation>
+			<xs:documentation>The general level of care provided to this patient as defined per provider level in local EMS protocols or clinical guidelines.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="4232001">
+				<xs:annotation>
+					<xs:documentation>BLS - All Levels</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4232003">
+				<xs:annotation>
+					<xs:documentation>ALS - AEMT/Intermediate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4232005">
+				<xs:annotation>
+					<xs:documentation>ALS - Paramedic</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4232007">
+				<xs:annotation>
+					<xs:documentation>EMS and Other Health-Care Staff</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4232009">
+				<xs:annotation>
+					<xs:documentation>Critical Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4232011">
+				<xs:annotation>
+					<xs:documentation>Integrated Health Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4232013">
+				<xs:annotation>
+					<xs:documentation>No Care Provided</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

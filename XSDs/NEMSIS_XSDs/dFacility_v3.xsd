@@ -9,7 +9,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dFacility.01" id="dFacility.TypeofFacility" minOccurs="0">
+						<xs:element name="dFacility.01" id="dFacility.TypeofFacility" minOccurs="0" type="TypeOfFacility">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -23,11 +23,6 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="TypeOfFacility"/>
-								</xs:simpleContent>
-							</xs:complexType>
 						</xs:element>
 						<xs:element name="dFacility.FacilityGroup" id="dFacility.FacilityGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
@@ -375,7 +370,7 @@ The information contained within this element could be used to populate the addr
 			</xs:enumeration>
 			<xs:enumeration value="1701013">
 				<xs:annotation>
-					<xs:documentation>Rehabilitation Facility</xs:documentation>
+					<xs:documentation>Physical Rehabilitation Facility</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1701015">
@@ -386,6 +381,51 @@ The information contained within this element could be used to populate the addr
 			<xs:enumeration value="1701017">
 				<xs:annotation>
 					<xs:documentation>Dialysis Center</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701019">
+				<xs:annotation>
+					<xs:documentation>Diagnostic Services</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701021">
+				<xs:annotation>
+					<xs:documentation>Freestanding Emergency Department</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701023">
+				<xs:annotation>
+					<xs:documentation>Morgue/Mortuary</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701025">
+				<xs:annotation>
+					<xs:documentation>Police/Jail</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701027">
+				<xs:annotation>
+					<xs:documentation>Other EMS Responder (air)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701029">
+				<xs:annotation>
+					<xs:documentation>Other EMS Responder (ground)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701031">
+				<xs:annotation>
+					<xs:documentation>Other Recurring Care Center</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701033">
+				<xs:annotation>
+					<xs:documentation>Drug and/or Alcohol Rehabilitation Facility</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1701035">
+				<xs:annotation>
+					<xs:documentation>Skilled Nursing Facility</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

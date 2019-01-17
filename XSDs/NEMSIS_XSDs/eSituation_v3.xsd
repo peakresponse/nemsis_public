@@ -690,6 +690,33 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="eSituation.20" id="eSituation.ReasonforInterfacilityTransferMedicalTransport" nillable="true">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eSituation.20</number>
+							<name>Reason for Interfacility Transfer/Medical Transport</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The general categories of th reason for an interfacility transfer/medical transport.</definition>
+							<usage>Required</usage>
+							<comment>This supports and works in combination with eSituation.19 Justification for Transfer or Encounter to provide defined categories for an interfacility transfer or other medical transport. This documentation provides support for reimbursement and a means for regions and states to evaluate transfer patterns and types.</comment>
+							<v3Changes>Element added with the release of v3.5.0</v3Changes>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="ReasonforInterfacilityTransfer">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="icd10Activity">
@@ -1180,6 +1207,93 @@
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>
 			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ReasonforInterfacilityTransfer">
+		<xs:annotation>
+			<xs:documentation>The general categories of the reason for an interfacility transfer/medical transport.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2820001">
+				<xs:annotation>
+					<xs:documentation>Cardiac Specialty</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820003">
+				<xs:annotation>
+					<xs:documentation>Convenience Transfer (Patient Request)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820005">
+				<xs:annotation>
+					<xs:documentation>Diagnostic Testing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820007">
+				<xs:annotation>
+					<xs:documentation>Dialysis</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820009">
+				<xs:annotation>
+					<xs:documentation>Drug and/or Alcohol Rehabilitation Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820011">
+				<xs:annotation>
+					<xs:documentation>Extended Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820013">
+				<xs:annotation>
+					<xs:documentation>Maternal/Neonatal</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820015">
+				<xs:annotation>
+					<xs:documentation>Medical Specialty Care (Other, Not Listed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820017">
+				<xs:annotation>
+					<xs:documentation>Neurological Specialty Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820019">
+				<xs:annotation>
+					<xs:documentation>Palliative/Hospice Care (Home or Facility)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820021">
+				<xs:annotation>
+					<xs:documentation>Pediatric Specialty Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820023">
+				<xs:annotation>
+					<xs:documentation>Psychiatric/Behavioral Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820025">
+				<xs:annotation>
+					<xs:documentation>Physical Rehabilitation Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820027">
+				<xs:annotation>
+					<xs:documentation>Return to Home/Residence</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820029">
+				<xs:annotation>
+					<xs:documentation>Surgical Specialty Care (Other, Not Listed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2820031">
+				<xs:annotation>
+					<xs:documentation>Trauma/Orthopedic Specialty Care</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

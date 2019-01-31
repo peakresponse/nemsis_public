@@ -175,6 +175,11 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 											</xs:simpleType>
 										</xs:attribute>
+										<xs:attribute name="PN" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="PN.UnableToComplete"/>
+											</xs:simpleType>
+										</xs:attribute>
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>

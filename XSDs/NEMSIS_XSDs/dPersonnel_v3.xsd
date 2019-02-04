@@ -603,6 +603,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								<xs:attribute name="UUID" type="UUID" use="required" />
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="dPersonnel.28" type="NationalRegistryNumber" id="dPersonnel.NationalRegistryNumber" minOccurs="0">

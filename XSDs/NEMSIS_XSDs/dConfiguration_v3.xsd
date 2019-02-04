@@ -109,6 +109,7 @@
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								<xs:attribute name="UUID" type="UUID" use="required" />
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="dConfiguration.MedicationGroup" id="dConfiguration.AgencyMedicationGroup" maxOccurs="unbounded">

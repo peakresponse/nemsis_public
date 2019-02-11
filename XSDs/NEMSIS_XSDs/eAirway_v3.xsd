@@ -699,7 +699,7 @@
 			<xs:documentation>The measurement at the lip of the tube depth in centimeters (cm) of the invasive airway placed.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:minInclusive value="8"/>
+			<xs:minInclusive value="4"/>
 			<xs:maxInclusive value="32"/>
 		</xs:restriction>
 	</xs:simpleType>

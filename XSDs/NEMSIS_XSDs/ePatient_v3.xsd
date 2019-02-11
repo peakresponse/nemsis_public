@@ -134,7 +134,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ePatient.06" type="CityGnisCode" id="ePatient.PatientsHomeCity" minOccurs="0">
+			<xs:element name="ePatient.06" id="ePatient.PatientsHomeCity" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -153,6 +153,13 @@
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="CityGnisCode">
+							<xs:attribute name="PN" type="PN.UnableToComplete" use="optional" />
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="ePatient.07" nillable="true" id="ePatient.PatientsHomeCounty">
 				<xs:annotation>

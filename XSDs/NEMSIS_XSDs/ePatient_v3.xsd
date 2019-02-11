@@ -129,7 +129,11 @@
 					<xs:simpleContent>
 						<xs:extension base="StreetAddress">
 							<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
-							<xs:attribute name="PN" type="PN.UnableToComplete" use="optional" />
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.UnableToComplete" />
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
@@ -156,7 +160,11 @@
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="CityGnisCode">
-							<xs:attribute name="PN" type="PN.UnableToComplete" use="optional" />
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.UnableToComplete" />
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

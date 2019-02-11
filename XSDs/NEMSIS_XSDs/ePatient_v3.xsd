@@ -108,7 +108,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ePatient.05" id="ePatient.PatientsHomeAddress" minOccurs="0">
+			<xs:element name="ePatient.05" id="ePatient.PatientsHomeAddress" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -129,6 +129,7 @@
 					<xs:simpleContent>
 						<xs:extension base="StreetAddress">
 							<xs:attribute name="StreetAddress2" type="StreetAddress" use="optional"/>
+							<xs:attribute name="PN" type="PN.UnableToComplete" use="optional" />
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

@@ -273,18 +273,19 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dPersonnel.12</number>
-										<name>EMS Personnel's Sex</name>
+										<name>EMS Personnel's Gender</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The personnel's sex.</definition>
+										<definition>The personnel's gender.</definition>
 										<v2Number>D08_12</v2Number>
 										<usage>Recommended</usage>
+										<comment>Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="Sex">
+									<xs:extension base="Gender">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>

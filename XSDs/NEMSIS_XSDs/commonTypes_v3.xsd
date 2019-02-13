@@ -833,9 +833,9 @@
 			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="Sex">
+	<xs:simpleType name="Gender">
 		<xs:annotation>
-			<xs:documentation>Sex</xs:documentation>
+			<xs:documentation>Gender</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="9906001">
@@ -848,7 +848,22 @@
 					<xs:documentation>Male</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="9906005">
+			<xs:enumeration value="9906007">
+				<xs:annotation>
+					<xs:documentation>Female-to-Male, Transgender Male</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9906009">
+				<xs:annotation>
+					<xs:documentation>Male-to-Female, Transgeder Female</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9906011">
+				<xs:annotation>
+					<xs:documentation>Other, neither exclusively male or female</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9906013">
 				<xs:annotation>
 					<xs:documentation>Unknown (Unable to Determine)</xs:documentation>
 				</xs:annotation>

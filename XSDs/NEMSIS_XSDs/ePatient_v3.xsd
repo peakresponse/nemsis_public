@@ -357,10 +357,10 @@
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>ePatient.13</number>
-							<name>Sex</name>
+							<name>Gender</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The Patient's Sex</definition>
+							<definition>The Patient's Gender</definition>
 							<v2Number>E06_11</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -372,12 +372,13 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
+							<comment>Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="Sex">
+						<xs:extension base="Gender">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>

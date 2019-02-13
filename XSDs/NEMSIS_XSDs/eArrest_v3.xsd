@@ -63,7 +63,7 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Cardiac Arrest</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>This element is a component of the Utstein Cardiac Arrest Criteria.&lt;br/>&lt;br/>Following the UTSTEIN standard of cardiac arrest etiology the values were determined based on the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports".   http://circ.ahajournals.org/cgi/content/full/110/21/3385</comment>
+							<comment>This element is a component of the Utstein Cardiac Arrest Criteria.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -723,12 +723,12 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3002001">
 				<xs:annotation>
-					<xs:documentation>Medical (Presumed cardiac or unknown other medical etiologies)</xs:documentation>
+					<xs:documentation>Cardiac (Presumed)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002003">
 				<xs:annotation>
-					<xs:documentation>Drowning</xs:documentation>
+					<xs:documentation>Drowning/Submersion</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002005">
@@ -741,9 +741,14 @@
 					<xs:documentation>Electrocution</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3002009">
+				<xs:annotation>
+					<xs:documentation>Exsanguination-Medical (Non-Traumatic)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="3002013">
 				<xs:annotation>
-					<xs:documentation>Asphyxial (External Causes)</xs:documentation>
+					<xs:documentation>Respiratory/Asphyxia</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3002015">

@@ -147,6 +147,11 @@ List of medications based on RxNorm (RXCUI) code.
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="Medication">
+										<xs:attribute name="CodeType" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="CodeType.RxNorm CodeType.SNOMED" />
+											</xs:simpleType>
+										</xs:attribute>
 										<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="PN.ContraindicationNoted PN.DeniedByOrder PN.MedicationAllergy PN.MedicationAlreadyTaken PN.Refused PN.UnableToComplete PN.OrderCriteriaNotMet"/>

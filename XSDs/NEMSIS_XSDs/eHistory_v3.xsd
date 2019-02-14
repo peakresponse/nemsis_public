@@ -163,7 +163,11 @@
 									<xs:union memberTypes="PN.NoKnownDrugAllergy PN.Refused PN.UnableToComplete PN.Unresponsive"/>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CodeType" type="CodeType" use="optional"/>
+							<xs:attribute name="CodeType" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="CodeType.ICD10 CodeType.RxNorm" />
+								</xs:simpleType>
+							</xs:attribute>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>

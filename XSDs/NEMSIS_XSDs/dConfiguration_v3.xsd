@@ -167,20 +167,36 @@
 													</performanceMeasuresGroup>
 													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
 
-&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/
-
+&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. 
+List of medications based on RxNorm (RXCUI) code. 
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a>
 &lt;br/>&lt;br/>RxNorm 
-&lt;br/>Website - http://uts.nlm.nih.gov 
+&lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
+&lt;br/>Product - RxNorm Full Monthly Release
+&lt;br/>&lt;br/>SNOMED-CT 
+&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a>
+&lt;br/>Product: Product - UMLS Metathesaurus.
 
-&lt;br/>&lt;br/>Product - UMLS Metathesaurus 
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
-&lt;br/>Product - RxNorm Full Monthly Release</comment>
+&lt;br/>&lt;br/>Allowable SNOMED-CT codes are:
+&lt;br/>116762002 Administration of blood product
+&lt;br/>116795008 Transfusion of cryoprecipitate
+&lt;br/>116861002 Transfusion of fresh frozen plasma
+&lt;br/>116865006 Administration of albumin
+&lt;br/>180208003 Intravenous blood transfusion of platelets
+&lt;br/>33389009 Transfusion of whole blood
+&lt;br/>71493000 Transfusion of packed red blood cells
+													</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="Medication">
+													<xs:attribute name="CodeType" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="CodeType.RxNorm CodeType.SNOMED" />
+														</xs:simpleType>
+													</xs:attribute>
 													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 												</xs:extension>
 											</xs:simpleContent>

@@ -268,17 +268,49 @@
 	</xs:simpleType>
 	<xs:simpleType name="CodeType">
 		<xs:annotation>
-			<xs:documentation>Identifier if the code used for patient medication allergies is based on an RxNorm code or an ICD-10 code.</xs:documentation>
+			<xs:documentation>Identifier if the code used is based on an RxNorm code, an ICD-10 code, or a SNOMED-CT code.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="9924001">
 				<xs:annotation>
-					<xs:documentation>ICD10</xs:documentation>
+					<xs:documentation>ICD-10</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9924003">
 				<xs:annotation>
 					<xs:documentation>RxNorm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="9924005">
+				<xs:annotation>
+					<xs:documentation>SNOMED-CT</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CodeType.ICD10">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="9924001">
+				<xs:annotation>
+					<xs:documentation>ICD-10</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CodeType.RxNorm">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="9924003">
+				<xs:annotation>
+					<xs:documentation>RxNorm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CodeType.SNOMED">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="9924005">
+				<xs:annotation>
+					<xs:documentation>SNOMED-CT</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

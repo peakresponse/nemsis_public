@@ -17,11 +17,6 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="dState" type="dState" id="dStateSection" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>State Required Demographic Data Elements</xs:documentation>
-					</xs:annotation>
-				</xs:element>
 				<xs:element name="dCustomConfiguration" type="dCustomConfiguration" id="dCustomConfigurationSection" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Contains information for demographic custom elements.</xs:documentation>

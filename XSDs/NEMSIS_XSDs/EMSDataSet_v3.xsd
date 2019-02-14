@@ -34,11 +34,6 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="eState" type="eState" id="eStateSection" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>State Required Elements</xs:documentation>
-					</xs:annotation>
-				</xs:element>
 				<xs:element name="Header" id="HeaderGroup" maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>Header for file</xs:documentation>

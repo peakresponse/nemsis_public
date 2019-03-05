@@ -2664,7 +2664,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="UUID">
 		<xs:annotation>
-			<xs:documentation>A universall unique identifier used to track persistant objects over time.</xs:documentation>
+			<xs:documentation>A universally unique identifier used to track persistent objects over time.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[1-5][a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}"/>

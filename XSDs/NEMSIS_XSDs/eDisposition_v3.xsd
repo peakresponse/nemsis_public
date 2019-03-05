@@ -141,7 +141,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -178,7 +178,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>May be auto-populated if list created in dFacility.11 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
-							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -214,7 +214,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -241,7 +241,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<state>No</state>
 										<definition>The country of the destination.</definition>
 										<usage>Optional</usage>
-										<comment>May be auto-populated if list created in dFacility.12 (Facility Country).&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<comment>May be auto-populated if list created in dFacility.12 (Facility Country).&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 										<v3Changes>Added for improved international compatibility.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -662,7 +662,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
-							&lt;br/>&lt;a>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf&lt;/a>
+								&lt;br/>&lt;a href="http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf" target="_blank">http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf&lt;/a>
 							&lt;br/>&lt;br/>Dead without Resuscitation Efforts would be appropriate if resuscitation was initiated by non-EMS personnel but discontinued immediately upon evaluation by first arriving EMS personnel.
 							&lt;br/>&lt;br/>"Non-Acute/Routine" added for use with patients with no clinical issues-such as a refusal for a life assist-or for routine transfers. "Dead with Resuscitation Efforts (Black)" added for EMS units that arrived and provided resuscitation to a critical patient, but who was deceased at the end of the event (such as in a cardiac arrest).</comment>
 							<v3Changes>With the release of v3.5.0 additional values were added to meet the needs of EMS.</v3Changes>
@@ -791,7 +791,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<definition>The primary hospital capability associated with the patient's condition for this transport (e.g., Trauma, STEMI, Peds, etc.).</definition>
 							<usage>Required</usage>
 							<comment>To be documented when eDisposition.21 (Type of Destination) is 1) Hospital-Emergency Department, 2) Hospital-Non-Emergency Department Bed, or 3) Freestanding Emergency Department.
-								&lt;br/>&lt;br/>Stroke Center classifications based on Join Commission stroke certification: &lt;a>https://www.jointcommission.org/facts_about_joint_commission_stroke_certification/&lt;/a></comment>
+								&lt;br/>&lt;br/>Stroke Center classifications based on Join Commission stroke certification: &lt;a href="https://www.jointcommission.org/facts_about_joint_commission_stroke_certification/" target="_blank">https://www.jointcommission.org/facts_about_joint_commission_stroke_certification/&lt;/a></comment>
 							<v3Changes>Added to aid in determining if patients are transported to the appropriate hospital based on provider impression, assessment, and treatment.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>

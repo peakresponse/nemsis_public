@@ -47,7 +47,7 @@
 										<v2Number>E08_01</v2Number>
 										<usage>Optional</usage>
 										<comment>For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.02 and eScene.03 are used to populate CARES data element
-											#16 Fire/First Responder as defined by CARES in the CARES 2018 Data Dictionary: &lt;a>https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf&lt;/a></comment>
+											#16 Fire/First Responder as defined by CARES in the CARES 2018 Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf" target="_blank">https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -64,7 +64,7 @@
 										<usage>Optional</usage>
 										<comment>The ID should be the state ID (license number) for the EMS agency or ID number for the law enforcement. This may be an ID assigned by the state or created by the EMS agency.
 											&lt;br />&lt;br />For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.02 and eScene.03 are used to populate CARES data element
-											#16 Fire/First Responder as defined by CARES in the CARES 2018 Data Dictionary: &lt;a>https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf&lt;/a></comment>
+											#16 Fire/First Responder as defined by CARES in the CARES 2018 Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf" target="_blank">https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -96,7 +96,7 @@
 										<definition>When there are multiple other EMS agencies or Public Safety Agencies at the scene, this element documents the other EMS or public safety agency that was first to provide care to the patient</definition>
 										<usage>Optional</usage>
 										<comment>For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.24 is used to populate CARES data element 
-											#16 Fire/First Responder as defined by CARES in the CARES 2018 Data Dictionary: &lt;a>https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf&lt;/a></comment>
+											#16 Fire/First Responder as defined by CARES in the CARES 2018 Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf" target="_blank">https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -482,7 +482,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<comment>
 City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
   	&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -518,7 +518,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -555,7 +555,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+							<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
 						</nemsisTacDoc>
@@ -620,7 +620,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
-							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -647,7 +647,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<state>No</state>
 							<definition>The country of the incident location.</definition>
 							<usage>Optional</usage>
-							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
+							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
 </comment>
 							<v3Changes>Added for international compatibility.</v3Changes>
 						</nemsisTacDoc>

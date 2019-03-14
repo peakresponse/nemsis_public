@@ -11,7 +11,7 @@
 							<name>First EMS Unit on Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
+							<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene.</definition>
 							<usage>Required</usage>
 							<comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</comment>
 						</nemsisTacDoc>
@@ -43,7 +43,7 @@
 										<name>Other EMS or Public Safety Agencies at Scene</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Other EMS agency names that were at the scene, if any</definition>
+										<definition>Other EMS agency names that were at the scene, if any.</definition>
 										<v2Number>E08_01</v2Number>
 										<usage>Optional</usage>
 										<comment>For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.02 and eScene.03 are used to populate CARES data element
@@ -60,7 +60,7 @@
 										<name>Other EMS or Public Safety Agency ID Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The ID number for the EMS Agency or Other Public Safety listed in eScene.02</definition>
+										<definition>The ID number for the EMS Agency or Other Public Safety listed in eScene.02.</definition>
 										<usage>Optional</usage>
 										<comment>The ID should be the state ID (license number) for the EMS agency or ID number for the law enforcement. This may be an ID assigned by the state or created by the EMS agency.
 											&lt;br />&lt;br />For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.02 and eScene.03 are used to populate CARES data element
@@ -77,7 +77,7 @@
 										<name>Type of Other Service at Scene</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of public safety or EMS service associated with Other Agencies on Scene</definition>
+										<definition>The type of public safety or EMS service associated with Other Agencies on Scene.</definition>
 										<v2Number>E08_02</v2Number>
 										<usage>Optional</usage>
 										<comment>Associated with each Other Service in eScene.02</comment>
@@ -93,7 +93,7 @@
 										<name>First Other EMS or Public Safety Agency at Scene to Provide Patient Care</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>When there are multiple other EMS Agencies or Public Safety Agencies at the scene, this element documents the other EMS or public safety agency that was first to provide care to the patient</definition>
+										<definition>When there are multiple other EMS Agencies or Public Safety Agencies at the scene, this element documents the other EMS or public safety agency that was first to provide care to the patient.</definition>
 										<usage>Optional</usage>
 										<comment>For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.24 is used to populate CARES data element 
 											#16 Fire/First Responder as defined by CARES in the CARES 2018 Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf" target="_blank">https://mycares.net/sitepages/uploads/2018/Data%20Dictionary%20(2018).pdf&lt;/a></comment>
@@ -170,7 +170,7 @@
 							<name>Number of Patients at Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indicator of how many total patients were at the scene</definition>
+							<definition>Indicator of how many total patients were at the scene.</definition>
 							<v2Number>E08_05</v2Number>
 							<usage>Required</usage>
 						</nemsisTacDoc>
@@ -196,7 +196,7 @@
 							<name>Mass Casualty Incident</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources)</definition>
+							<definition>Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources).</definition>
 							<v2Number>E08_06</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -272,7 +272,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident Location Type</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The kind of location where the incident happened</definition>
+							<definition>The kind of location where the incident happened.</definition>
 							<v2Number>E08_07</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -397,7 +397,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Mile Post or Major Roadway</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The mile post or major roadway associated with the incident locations</definition>
+							<definition>The mile post or major roadway associated with the incident locations.</definition>
 							<usage>Recommended</usage>
 							<comment/>
 						</nemsisTacDoc>
@@ -476,7 +476,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident City</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_12</v2Number>
 							<usage>Recommended</usage>
 							<comment>
@@ -506,7 +506,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Incident State</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The state, territory, or province where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The state, territory, or province where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_14</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -543,7 +543,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Incident ZIP Code</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The ZIP code of the incident location</definition>
+							<definition>The ZIP code of the incident location.</definition>
 							<v2Number>E08_15</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -607,7 +607,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Incident County</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The county or parish where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The county or parish where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_13</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>

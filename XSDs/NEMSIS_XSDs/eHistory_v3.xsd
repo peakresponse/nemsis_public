@@ -11,7 +11,7 @@
 							<name>Barriers to Patient Care</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
+							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene.</definition>
 							<v2Number>E12_01</v2Number>
 							<usage>Required</usage>
 							<comment/>
@@ -45,7 +45,7 @@
 										<name>Last Name of Patient's Practitioner</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The last name of the patient's practitioner</definition>
+										<definition>The last name of the patient's practitioner.</definition>
 										<v2Number>E12_06</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -60,7 +60,7 @@
 										<name>First Name of Patient's Practitioner</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The first name of the patient's practitioner</definition>
+										<definition>The first name of the patient's practitioner.</definition>
 										<v2Number>E12_04</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -130,7 +130,7 @@
 							<name>Medication Allergies</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The patient's medication allergies</definition>
+							<definition>The patient's medication allergies.</definition>
 							<v2Number>E12_08</v2Number>
 							<usage>Recommended</usage>
 							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 CM codes can be used for medication groups. 
@@ -210,7 +210,7 @@ Data Element Comment Section:
 							<name>Medical/Surgical History</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The patient's pre-existing medical and surgery history of the patient</definition>
+							<definition>The patient's pre-existing medical and surgery history of the patient.</definition>
 							<v2Number>E12_10</v2Number>
 							<usage>Recommended</usage>
 							<comment>
@@ -257,7 +257,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 							<name>Medical History Obtained From</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>Type of person medical history obtained from</definition>
+							<definition>Type of person medical history obtained from.</definition>
 							<v2Number>E12_11</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -311,7 +311,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 										<name>Immunization Year</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The year associated with each immunization type</definition>
+										<definition>The year associated with each immunization type.</definition>
 										<v2Number>E12_13</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -336,7 +336,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 										<name>Current Medications</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The medications the patient currently takes</definition>
+										<definition>The medications the patient currently takes.</definition>
 										<v2Number>E12_14</v2Number>
 										<usage>Recommended</usage>
 										<comment>
@@ -377,7 +377,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<name>Current Medication Dose</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The numeric dose or amount of the patient's current medication</definition>
+										<definition>The numeric dose or amount of the patient's current medication.</definition>
 										<v2Number>E12_15</v2Number>
 										<usage>Optional</usage>
 										<comment>Associated with eHistory.12 (Current Medications)</comment>
@@ -393,7 +393,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<name>Current Medication Dosage Unit</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The dosage unit of the patient's current medication</definition>
+										<definition>The dosage unit of the patient's current medication.</definition>
 										<v2Number>E12_16</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -408,7 +408,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<name>Current Medication Administration Route</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The administration route (po, SQ, etc.) of the patient's current medication</definition>
+										<definition>The administration route (po, SQ, etc.) of the patient's current medication.</definition>
 										<v2Number>E12_17</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -423,7 +423,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<name>Current Medication Frequency</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The frequency of administration of the patient's current medication</definition>
+										<definition>The frequency of administration of the patient's current medication.</definition>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
 								</xs:documentation>

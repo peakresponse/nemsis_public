@@ -9,17 +9,17 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dConfiguration.01" type="ANSIStateCode" id="dConfiguration.StateAssociatedwiththeCertificationLicensureLevels">
+						<xs:element name="dConfiguration.01" type="ANSIStateCode" id="dConfiguration.StateAssociatedwiththisConfiguration">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dConfiguration.01</number>
-										<name>State Associated with the Certification/Licensure Levels</name>
+										<name>State Associated with this Configuration</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The state associated with the state certification/licensure levels.</definition>
+										<definition>The state associated with this configuration.</definition>
 										<usage>Mandatory</usage>
-										<comment>Associated with the state (dAgency.01 - EMS Agency State). 
+										<comment>Associated with the state (dAgency.04 - EMS Agency State). 
 											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>

@@ -4,38 +4,39 @@
 	<xs:element name="StateDataSet">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="dConfiguration.01" type="ANSIStateCode" id="dConfiguration.StateAssociatedwiththeCertificationLicensureLevels">
+				<xs:element name="sState.01" type="ANSIStateCode" id="sConfiguration.StateAssociatedwiththeCertificationLicensureLevels">
 					<xs:annotation>
 						<xs:documentation>
 							<nemsisTacDoc>
-								<number>dConfiguration.01</number>
-								<name>State Associated with the Certification/Licensure Levels</name>
+								<number>sState.01</number>
+								<name>State</name>
 								<national>Yes</national>
 								<state>Yes</state>
-								<definition>The state associated with the state certification/licensure levels.</definition>
+								<definition>The state associated with the state data set.</definition>
 								<usage>Mandatory</usage>
-								<comment>Associated with the state (dAgency.01 - EMS Agency State). 
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
-										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
+								<comment>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+										&lt;br/>&lt;br/>Used to populate the following data elements:
+										&lt;br/>dAgency.04 EMS Agency State
+										&lt;br/>dConfiguration.01 State Associated with this Configuration.
 										</comment>
 							</nemsisTacDoc>
 						</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="dCustomConfiguration" id="dCustomConfigurationSection" minOccurs="0">
+				<xs:element name="sCustomConfiguration" id="sCustomConfigurationSection" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="dCustomConfiguration.CustomGroup" id="dCustomConfiguration.dCustomGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sCustomConfiguration.CustomGroup" id="sCustomConfiguration.dCustomGroup" minOccurs="0" maxOccurs="unbounded">
 								<xs:annotation>
 									<xs:documentation>Group Tag to hold custom information</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="dCustomConfiguration.01" id="dCustomConfiguration.dCustomDataElementTitle" minOccurs="0">
+										<xs:element name="sCustomConfiguration.01" id="sCustomConfiguration.dCustomDataElementTitle" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.01</number>
+														<number>sCustomConfiguration.01</number>
 														<name>Custom Data Element Title</name>
 														<national>No</national>
 														<state>No</state>
@@ -54,11 +55,11 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.02" type="CustomDefinition" id="dCustomConfiguration.dCustomDefinition" minOccurs="0">
+										<xs:element name="sCustomConfiguration.02" type="CustomDefinition" id="sCustomConfiguration.dCustomDefinition" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.02</number>
+														<number>sCustomConfiguration.02</number>
 														<name>Custom Definition</name>
 														<national>No</national>
 														<state>No</state>
@@ -68,11 +69,11 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.03" type="CustomDataType" id="dCustomConfiguration.dCustomDataType" minOccurs="0">
+										<xs:element name="sCustomConfiguration.03" type="CustomDataType" id="sCustomConfiguration.dCustomDataType" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.03</number>
+														<number>sCustomConfiguration.03</number>
 														<name>Custom Data Type</name>
 														<national>No</national>
 														<state>No</state>
@@ -82,11 +83,11 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.04" type="YesNoValues" id="dCustomConfiguration.dCustomDataElementRecurrence" minOccurs="0">
+										<xs:element name="sCustomConfiguration.04" type="YesNoValues" id="sCustomConfiguration.dCustomDataElementRecurrence" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.04</number>
+														<number>sCustomConfiguration.04</number>
 														<name>Custom Data Element Recurrence</name>
 														<national>No</national>
 														<state>No</state>
@@ -97,11 +98,11 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.05" type="ElementUsage" id="dCustomConfiguration.dCustomDataElementUsage" minOccurs="0">
+										<xs:element name="sCustomConfiguration.05" type="ElementUsage" id="sCustomConfiguration.dCustomDataElementUsage" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.05</number>
+														<number>sCustomConfiguration.05</number>
 														<name>Custom Data Element Usage</name>
 														<national>No</national>
 														<state>No</state>
@@ -116,11 +117,11 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.06" id="dCustomConfiguration.dCustomDataElementPotentialValues" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sCustomConfiguration.06" id="sCustomConfiguration.dCustomDataElementPotentialValues" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.06</number>
+														<number>sCustomConfiguration.06</number>
 														<name>Custom Data Element Potential Values</name>
 														<national>No</national>
 														<state>No</state>
@@ -139,11 +140,11 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.07" type="NV" id="dCustomConfiguration.dCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sCustomConfiguration.07" type="NV" id="sCustomConfiguration.dCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.07</number>
+														<number>sCustomConfiguration.07</number>
 														<name>Custom Data Element Potential NOT Values (NV)</name>
 														<national>No</national>
 														<state>No</state>
@@ -153,11 +154,11 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.08" type="PN" id="dCustomConfiguration.dCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sCustomConfiguration.08" type="PN" id="sCustomConfiguration.dCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.08</number>
+														<number>sCustomConfiguration.08</number>
 														<name>Custom Data Element Potential Pertinent Negative Values (PN)</name>
 														<national>No</national>
 														<state>No</state>
@@ -167,11 +168,11 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="dCustomConfiguration.09" type="CorrelationID" id="dCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
+										<xs:element name="sCustomConfiguration.09" type="CorrelationID" id="sCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dCustomConfiguration.09</number>
+														<number>sCustomConfiguration.09</number>
 														<name>Custom Data Element Grouping ID</name>
 														<national>No</national>
 														<state>No</state>
@@ -411,47 +412,61 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="dConfiguration" id="dConfigurationSection" minOccurs="0">
+				<xs:element name="sConfiguration" id="sConfigurationSection">
+					<xs:annotation>
+						<xs:documentation>Configuration Information</xs:documentation>
+					</xs:annotation>
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="dConfiguration.02" id="dConfiguration.StateCertificationLicensureLevels" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sConfiguration.01" id="sConfiguration.StateCertificationLicensureLevels" maxOccurs="unbounded" nillable="true">
 								<xs:annotation>
 									<xs:documentation>
 										<nemsisTacDoc>
-											<number>dConfiguration.02</number>
+											<number>sConfiguration.01</number>
 											<name>State Certification/Licensure Levels</name>
 											<national>Yes</national>
 											<state>Yes</state>
-											<definition>All of the potential levels of certification/licensure for EMS personnel recognized by the state.</definition>
+											<definition>The levels of certification/licensure for EMS personnel recognized by the state.</definition>
 											<v2Number>D04_01</v2Number>
-											<usage>Mandatory</usage>
-											<comment>The new 2009 Education Levels have been added. The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
-										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
-										</comment>
+											<usage>Required</usage>
+											<comment>Used to populate EMS-related values in the following data elements (some data elements contain additional non-EMS-related values, such as "Student" or "Patient" that should be allowed unless specifically instructed otherwise by the state):
+												&lt;br/>dAgency.11 Level of Service
+												&lt;br/>dConfiguration.06 EMS Certification Levels Permitted to Perform Each Procedure
+												&lt;br/>dConfiguration.08 EMS Certification Levels Permitted to Administer Each Medication
+												&lt;br/>dVehicle.05 Crew State Certification/Licensure Levels
+												&lt;br/>dPersonnel.24 EMS Personnel's State EMS Certification Licensure Level
+												&lt;br/>dPersonnel.38 EMS Personnel's Practice Level
+												&lt;br/>ePayment.42 Specialty Care Transport Care Provider</comment>
 										</nemsisTacDoc>
 									</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:simpleContent>
-										<xs:extension base="LicensureLevels"/>
+										<xs:extension base="StateCertificationLicensureLevels">
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="dConfiguration.ProcedureGroup" id="dConfiguration.AgencyProcedureGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sConfiguration.ProcedureGroup" id="sConfiguration.AgencyProcedureGroup" maxOccurs="unbounded">
 								<xs:annotation>
-									<xs:documentation>Group Tag to hold info about Procedure information </xs:documentation>
+									<xs:documentation>Group tag to hold information about procedures permitted by the state for a certification/licensure level.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="dConfiguration.06" id="dConfiguration.EMSPersonnelLevelPermittedtoPerformtheProcedure" minOccurs="0">
+										<xs:element name="sConfiguration.02" id="sConfiguration.EMSPersonnelLevelPermittedtoPerformtheProcedure" nillable="true">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dConfiguration.06</number>
+														<number>sConfiguration.02</number>
 														<name>EMS Certification Levels Permitted to Perform Each Procedure</name>
 														<national>Yes</national>
 														<state>Yes</state>
-														<definition>EMS certification levels which are permitted to perform the procedure listed in dConfiguration.07.</definition>
+														<definition>The certification/licensure level that is permitted to perform the procedures listed in sConfiguration.03.</definition>
 														<v2Number>D04_05</v2Number>
 														<usage>Mandatory</usage>
 														<performanceMeasuresGroup>
@@ -463,27 +478,32 @@
 															<performanceMeasure>Stroke</performanceMeasure>
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
-														<comment>Using each certification level within the agency, indicate the approved procedures allowed utilizing dConfiguration.07 (EMS Agency Procedures).
-													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.													
-													</comment>
+														<comment>Used to populate dConfiguration.06 EMS Certification Levls Permitted to Perform Each Procedure.</comment>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 											<xs:complexType>
 												<xs:simpleContent>
-													<xs:extension base="StateCertificationLicensureLevels"/>
+													<xs:extension base="StateCertificationLicensureLevels">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="dConfiguration.03" nillable="true" id="dConfiguration.ProceduresPermittedbytheState" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sConfiguration.03" nillable="true" id="sConfiguration.ProceduresPermittedbytheState" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dConfiguration.03</number>
+														<number>sConfiguration.03</number>
 														<name>Procedures Permitted by the State</name>
 														<national>Yes</national>
 														<state>Yes</state>
-														<definition>A list of all of the procedures permitted by the EMS Agency's licensing state.</definition>
+														<definition>Procedures permitted by the state for the certification/licensure level listed in sConfiguration.02.</definition>
+														<comment>Used to populate dConfiguration.07 EMS Agency Procedures.</comment>
 														<usage>Required</usage>
 														<performanceMeasuresGroup>
 															<performanceMeasure>Airway</performanceMeasure>
@@ -494,14 +514,6 @@
 															<performanceMeasure>Stroke</performanceMeasure>
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
-														<comment>This data element should capture all of the procedures permitted by the state for any/all levels of EMS personnel in the state. This is associated with the EMS Agency State (dAgency.01). This is related to the EMS Agency's procedures (dConfiguration.07) which have been implemented within the EMS System.
-										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify SNOMEDCT procedure codes based on medical direction and their own need.										
-										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/							
-										&lt;br/>&lt;br/>SNOMEDCT
-										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
-										&lt;br/>Product: Product - UMLS Metathesaurus
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
-										</comment>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -520,48 +532,22 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="dConfiguration.MedicationGroup" id="dConfiguration.AgencyMedicationGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sConfiguration.MedicationGroup" id="sConfiguration.AgencyMedicationGroup" maxOccurs="unbounded">
 								<xs:annotation>
-									<xs:documentation>Group Tag to hold info about Medication information </xs:documentation>
+									<xs:documentation>Group tag to hold information about medications permitted by the state for a certification/licensure level.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="dConfiguration.08" type="StateCertificationLicensureLevels" id="dConfiguration.PersonnelLevelPermittedtoAdministertheMedication" minOccurs="0">
+										<xs:element name="sConfiguration.04" id="sConfiguration.PersonnelLevelPermittedtoAdministertheMedication" nillable="true">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dConfiguration.08</number>
+														<number>sConfiguration.04</number>
 														<name>EMS Certification Levels Permitted to Administer Each Medication</name>
 														<national>Yes</national>
 														<state>Yes</state>
-														<definition>All EMS certification levels which are permitted to administer the medications listed in dConfiguration.09 (EMS Agency Medications).</definition>
+														<definition>The certification/licensure level that is permitted to administer the medications listed in sConfiguration.05.</definition>
 														<v2Number>D04_07</v2Number>
-														<usage>Mandatory</usage>
-														<performanceMeasuresGroup>
-															<performanceMeasure>Airway</performanceMeasure>
-															<performanceMeasure>Cardiac Arrest</performanceMeasure>
-															<performanceMeasure>Pediatric</performanceMeasure>
-															<performanceMeasure>Response</performanceMeasure>
-															<performanceMeasure>STEMI</performanceMeasure>
-															<performanceMeasure>Stroke</performanceMeasure>
-															<performanceMeasure>Trauma</performanceMeasure>
-														</performanceMeasuresGroup>
-														<comment>Using each certification level within the agency, indicate the approved medications allowed utilizing dConfiguration.09 (EMS Agency Medications).
-													&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
-													</comment>
-													</nemsisTacDoc>
-												</xs:documentation>
-											</xs:annotation>
-										</xs:element>
-										<xs:element name="dConfiguration.04" nillable="true" id="dConfiguration.MedicationsPermittedbytheState" minOccurs="0" maxOccurs="unbounded">
-											<xs:annotation>
-												<xs:documentation>
-													<nemsisTacDoc>
-														<number>dConfiguration.04</number>
-														<name>Medications Permitted by the State</name>
-														<national>Yes</national>
-														<state>Yes</state>
-														<definition>A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level.</definition>
 														<usage>Required</usage>
 														<performanceMeasuresGroup>
 															<performanceMeasure>Airway</performanceMeasure>
@@ -572,22 +558,42 @@
 															<performanceMeasure>Stroke</performanceMeasure>
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
-														<comment>This data element should capture all of the medications permitted by the state for any/all levels of EMS personnel in the state.
-										This should be stored as an RxNorm (RXCUI) Code. This is associated with the EMS Agency State (dAgency.01).
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. 
-										The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). 
-										Reference the Demographic Dataset Submission Guide for further details.										
-										</comment>
-														<v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
-										&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. 
-										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/											
-										&lt;br/>&lt;br/>RxNorm
-										&lt;br/>Website - http://uts.nlm.nih.gov
-										
-										&lt;br/>&lt;br/>Product - UMLS Metathesaurus
-										&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
-										&lt;br/>Product - RxNorm Full Monthly Release
-										</v3Changes>
+														<comment>Used to populate dConfiguration.08 EMS Certification Levels Permitted to Administer Each Medication.</comment>
+													</nemsisTacDoc>
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="StateCertificationLicensureLevels">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded" />
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="sConfiguration.05" nillable="true" id="sConfiguration.MedicationsPermittedbytheState" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>
+													<nemsisTacDoc>
+														<number>sConfiguration.05</number>
+														<name>Medications Permitted by the State</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>Medications permitted by the state for the certification/licensure level listed in sConfiguration.04.</definition>
+														<usage>Required</usage>
+														<performanceMeasuresGroup>
+															<performanceMeasure>Airway</performanceMeasure>
+															<performanceMeasure>Cardiac Arrest</performanceMeasure>
+															<performanceMeasure>Pediatric</performanceMeasure>
+															<performanceMeasure>Response</performanceMeasure>
+															<performanceMeasure>STEMI</performanceMeasure>
+															<performanceMeasure>Stroke</performanceMeasure>
+															<performanceMeasure>Trauma</performanceMeasure>
+														</performanceMeasuresGroup>
+														<comment>Used to populate dConfiguration.09 EMS Agency Medications</comment>													
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -606,11 +612,11 @@
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
-							<xs:element name="dConfiguration.05" nillable="true" id="dConfiguration.ProtocolsPermittedbytheState" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sConfiguration.06" nillable="true" id="sConfiguration.ProtocolsPermittedbytheState" maxOccurs="unbounded">
 								<xs:annotation>
 									<xs:documentation>
 										<nemsisTacDoc>
-											<number>dConfiguration.05</number>
+											<number>sConfiguration.06</number>
 											<name>Protocols Permitted by the State</name>
 											<national>Yes</national>
 											<state>Yes</state>
@@ -625,11 +631,7 @@
 												<performanceMeasure>Stroke</performanceMeasure>
 												<performanceMeasure>Trauma</performanceMeasure>
 											</performanceMeasuresGroup>
-											<comment>
-										This data element should capture all of the protocols permitted by the state for any/all levels of EMS personnel in the state.  This is associated with the EMS Agency State (dAgency.01).
-										&lt;br/>&lt;br/>States can add additional protocols to the list but the additional state protocols must map to these uniform codes. &lt;br/>&lt;br/>The list is defined by the NASEMSO State Medical Directors.
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
-										</comment>
+											<comment>Used to populate dConfiguration.10 EMS Agency Protocols.</comment>
 											<v3Changes>Added to better identify states with statewide protocols and define state EMS capability and care.</v3Changes>
 										</nemsisTacDoc>
 									</xs:documentation>

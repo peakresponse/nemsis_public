@@ -377,56 +377,31 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="dState" id="dStateSection" minOccurs="0">
+				<xs:element name="sElement" id="sElementSection">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="dState.01" id="dState.dStateRequiredElement" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sElement.01" id="sElement.sStateCollectedElement" nillable="true" maxOccurs="unbounded">
 								<xs:annotation>
 									<xs:documentation>
 										<nemsisTacDoc>
-											<number>dState.01</number>
-											<name>State Required Element</name>
+											<number>sElement.01</number>
+											<name>State Collected Element</name>
 											<national>Yes</national>
 											<state>Yes</state>
-											<definition>Indicates which elements are required by the state.</definition>
-											<usage>Optional</usage>
-											<comment>This element was created to document elements required by the state. The TIMESTAMP attribute describes the active date of the element. </comment>
+											<definition>The data elements that the state collects or requires.</definition>
+											<usage>Required</usage>
+											<comment>Used to configure the agency demographic and patient care report data elements that are to be collected and reported to the state by EMS agencies within the state.</comment>
 										</nemsisTacDoc>
 									</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="StateRequiredElement">
-											<xs:attribute name="TIMESTAMP" type="TimeStampType" use="optional"/>
-										</xs:extension>
-									</xs:simpleContent>
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="eState" id="eStateSection" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="eState.01" id="eState.StateRequiredElement" minOccurs="0" maxOccurs="unbounded">
-								<xs:annotation>
-									<xs:documentation>
-										<nemsisTacDoc>
-											<number>eState.01</number>
-											<name>State Required Element</name>
-											<national>Yes</national>
-											<state>Yes</state>
-											<definition>Indicates which elements are required by the state</definition>
-											<v2Number/>
-											<usage>Optional</usage>
-											<comment>This element was created to document elements required by the state. The TIMESTAMP attribute describes the active date of the element. </comment>
-										</nemsisTacDoc>
-									</xs:documentation>
-								</xs:annotation>
-								<xs:complexType>
-									<xs:simpleContent>
-										<xs:extension base="StateRequiredElement">
-											<xs:attribute name="TIMESTAMP" type="TimeStampType" use="optional"/>
+											<xs:attribute name="NV" use="optional">
+												<xs:simpleType>
+													<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+												</xs:simpleType>
+											</xs:attribute>
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>

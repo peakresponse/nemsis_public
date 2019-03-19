@@ -23,26 +23,29 @@
 						</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="sCustomConfiguration" id="sCustomConfigurationSection" minOccurs="0">
+				<xs:element name="sdCustomConfiguration" id="sdCustomConfigurationSection" minOccurs="0">
 					<xs:complexType>
+						<xs:annotation>
+							<xs:documentation>Demographic Custom Elements</xs:documentation>
+						</xs:annotation>
 						<xs:sequence>
-							<xs:element name="sCustomConfiguration.CustomGroup" id="sCustomConfiguration.dCustomGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sdCustomConfiguration.CustomGroup" id="sdCustomConfiguration.dCustomGroup" minOccurs="0" maxOccurs="unbounded">
 								<xs:annotation>
-									<xs:documentation>Group Tag to hold custom information</xs:documentation>
+									<xs:documentation>Group tag to hold an agency demographic custom element configuration.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="sCustomConfiguration.01" id="sCustomConfiguration.dCustomDataElementTitle" minOccurs="0">
+										<xs:element name="sdCustomConfiguration.01" id="sdCustomConfiguration.dCustomDataElementTitle">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.01</number>
-														<name>Custom Data Element Title</name>
-														<national>No</national>
-														<state>No</state>
+														<number>sdCustomConfiguration.01</number>
+														<name>Agency Demographic Custom Data Element Title</name>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.</definition>
 														<usage>Mandatory</usage>
-														<comment>This is grouped with all data elements in this section and can have multiple instances.</comment>
+														<comment>Used to populate dCustomConfiguration.01 Custom Data Element Title.</comment>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 													</nemsisTacDoc>
 												</xs:documentation>
@@ -55,77 +58,82 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.02" type="CustomDefinition" id="sCustomConfiguration.dCustomDefinition" minOccurs="0">
+										<xs:element name="sdCustomConfiguration.02" type="CustomDefinition" id="sdCustomConfiguration.dCustomDefinition">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.02</number>
-														<name>Custom Definition</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>The definition of the custom element and how it should be used.</definition>
+														<number>sdCustomConfiguration.02</number>
+														<name>Agency Demographic Custom Definition</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>The definition of the agency demographic custom data element and how it should be used.</definition>
+														<comment>Used to populate dCustomConfigration.02 Custom Definition.</comment>
 														<usage>Mandatory</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.03" type="CustomDataType" id="sCustomConfiguration.dCustomDataType" minOccurs="0">
+										<xs:element name="sdCustomConfiguration.03" type="CustomDataType" id="sdCustomConfiguration.dCustomDataType">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.03</number>
-														<name>Custom Data Type</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>The data type of the custom element.</definition>
+														<number>sdCustomConfiguration.03</number>
+														<name>Agency Demographic Custom Data Type</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>The data type of the agency demographic custom element.</definition>
+														<comment>Used to populate dCustomConfiguration.03 Custom Data Type.</comment>
 														<usage>Mandatory</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.04" type="YesNoValues" id="sCustomConfiguration.dCustomDataElementRecurrence" minOccurs="0">
+										<xs:element name="sdCustomConfiguration.04" type="YesNoValues" id="sdCustomConfiguration.dCustomDataElementRecurrence">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.04</number>
-														<name>Custom Data Element Recurrence</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>Indication if the data element will accept multiple values.</definition>
+														<number>sdCustomConfiguration.04</number>
+														<name>Agency Demographic Custom Data Element Recurrence</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>Indication if the agency demographic custom data element will accept multiple values.</definition>
+														<comment>Used to populate dCustomConfiguration.04 Custom Data Element Recurrence.</comment>
 														<usage>Mandatory</usage>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.05" type="ElementUsage" id="sCustomConfiguration.dCustomDataElementUsage" minOccurs="0">
+										<xs:element name="sdCustomConfiguration.05" type="ElementUsage" id="sdCustomConfiguration.dCustomDataElementUsage">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.05</number>
-														<name>Custom Data Element Usage</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>The Usage (Mandatory, Required, Recommended, or Optional) for the Custom Data Element.</definition>
+														<number>sdCustomConfiguration.05</number>
+														<name>Agency Demographic Custom Data Element Usage</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>The Usage (Mandatory, Required, Recommended, or Optional) for the agency demographic custom data element.</definition>
 														<usage>Mandatory</usage>
 														<comment>Mandatory = Must be completed and will not accept null values
 										&lt;br/>Required = Must be completed but will accept null values
 										&lt;br/>Recommended = Not required but if collected will accept null values
-										&lt;br/>Optional = Not required but if collected, it cannot be a null value.</comment>
+										&lt;br/>Optional = Not required but if collected, it cannot be a null value.
+										&lt;br/>&lt;br/>Used to populate dCustomConfiguration.05 Custom Data Element Usage.</comment>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.06" id="sCustomConfiguration.dCustomDataElementPotentialValues" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sdCustomConfiguration.06" id="sdCustomConfiguration.dCustomDataElementPotentialValues" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.06</number>
-														<name>Custom Data Element Potential Values</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
+														<number>sdCustomConfiguration.06</number>
+														<name>Agency Demographic Custom Data Element Potential Values</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>The values which are associated with the agency demographic custom data element. Values would be the choices provided to the user when they document the custom data element.</definition>
+														<comment>Used to populate dCustomConfiguration.06 Custom Data Element Potential Values.</comment>
 														<usage>Optional</usage>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 													</nemsisTacDoc>
@@ -140,43 +148,46 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.07" type="NV" id="sCustomConfiguration.dCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sdCustomConfiguration.07" type="NV" id="sdCustomConfiguration.dCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.07</number>
-														<name>Custom Data Element Potential NOT Values (NV)</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>NOT Values (NV) associated with the custom element</definition>
+														<number>sdCustomConfiguration.07</number>
+														<name>Agency Demographic Custom Data Element Potential NOT Values (NV)</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>NOT Values (NV) associated with the agency demographic custom element.</definition>
+														<comment>Used to populate dCustomConfiguration.07 Custom Data Element Potential NOT Values (NV).</comment>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.08" type="PN" id="sCustomConfiguration.dCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sdCustomConfiguration.08" type="PN" id="sdCustomConfiguration.dCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.08</number>
-														<name>Custom Data Element Potential Pertinent Negative Values (PN)</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>Pertinent Negative Values (PN) associated with the custom element</definition>
+														<number>sdCustomConfiguration.08</number>
+														<name>Agency Demographic Custom Data Element Potential Pertinent Negative Values (PN)</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>Pertinent Negative Values (PN) associated with the agency demographic custom element.</definition>
+														<comment>Used to populate dCustomConfiguration.08 Custom Data Element Potential Pertinent Negative Values (PN).</comment>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="sCustomConfiguration.09" type="CorrelationID" id="sCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
+										<xs:element name="sdCustomConfiguration.09" type="CorrelationID" id="sdCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>sCustomConfiguration.09</number>
-														<name>Custom Data Element Grouping ID</name>
-														<national>No</national>
-														<state>No</state>
-														<definition>ID for custom element grouping.</definition>
+														<number>sdCustomConfiguration.09</number>
+														<name>Agency Demographic Custom Data Element Grouping ID</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>ID for agency demographic custom element grouping.</definition>
+														<comment>Used to populate dCustomConfiguration.09 Custom Data Element Grouping ID.</comment>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
@@ -189,23 +200,26 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="eCustomConfiguration" id="eCustomConfigurationSection"  minOccurs="0">
+				<xs:element name="seCustomConfiguration" id="seCustomConfigurationSection"  minOccurs="0">
 					<xs:complexType>
+						<xs:annotation>
+							<xs:documentation>Patient Care Report Custom Elements</xs:documentation>
+						</xs:annotation>
 						<xs:sequence>
-							<xs:element name="eCustomConfiguration.CustomGroup" id="eCustomConfiguration.eCustomGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="seCustomConfiguration.CustomGroup" id="seCustomConfiguration.eCustomGroup" minOccurs="0" maxOccurs="unbounded">
 								<xs:annotation>
 									<xs:documentation>Group Tag to hold custom information</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="eCustomConfiguration.01" id="eCustomConfiguration.eCustomDataElementTitle" minOccurs="0">
+										<xs:element name="seCustomConfiguration.01" id="seCustomConfiguration.eCustomDataElementTitle" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.01</number>
+														<number>seCustomConfiguration.01</number>
 														<name>Custom Data Element Title</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>This is the title of the custom data element created to collect information that is not defined formally in NEMSIS Version 3.</definition>
 														<usage>Mandatory</usage>
 														<comment>This is grouped with all data elements in this section and can have multiple instances.</comment>
@@ -221,42 +235,42 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.02" type="CustomDefinition" id="eCustomConfiguration.eCustomDefinition" minOccurs="0">
+										<xs:element name="seCustomConfiguration.02" type="CustomDefinition" id="seCustomConfiguration.eCustomDefinition" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.02</number>
+														<number>seCustomConfiguration.02</number>
 														<name>Custom Definition</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>The definition of the custom element and how it should be used.</definition>
 														<usage>Mandatory</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.03" type="CustomDataType" id="eCustomConfiguration.eCustomDataType" minOccurs="0">
+										<xs:element name="seCustomConfiguration.03" type="CustomDataType" id="seCustomConfiguration.eCustomDataType" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.03</number>
+														<number>seCustomConfiguration.03</number>
 														<name>Custom Data Type</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>The data type of the custom element.</definition>
 														<usage>Mandatory</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.04" type="YesNoValues" id="eCustomConfiguration.eCustomDataElementRecurrence" minOccurs="0">
+										<xs:element name="seCustomConfiguration.04" type="YesNoValues" id="seCustomConfiguration.eCustomDataElementRecurrence" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.04</number>
+														<number>seCustomConfiguration.04</number>
 														<name>Custom Data Element Recurrence</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>Indication if the data element will accept multiple values.</definition>
 														<usage>Mandatory</usage>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
@@ -264,14 +278,14 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.05" type="ElementUsage" id="eCustomConfiguration.eCustomDataElementUsage" minOccurs="0">
+										<xs:element name="seCustomConfiguration.05" type="ElementUsage" id="seCustomConfiguration.eCustomDataElementUsage" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.05</number>
+														<number>seCustomConfiguration.05</number>
 														<name>Custom Data Element Usage</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>The Usage (Mandatory, Required, Recommended or Optional) for the Custom Data Element.</definition>
 														<usage>Mandatory</usage>
 														<comment>Mandatory = Must be completed and will not accept null values
@@ -283,14 +297,14 @@
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.06" id="eCustomConfiguration.eCustomDataElementPotentialValues" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="seCustomConfiguration.06" id="seCustomConfiguration.eCustomDataElementPotentialValues" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.06</number>
+														<number>seCustomConfiguration.06</number>
 														<name>Custom Data Element Potential Values</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
 														<usage>Optional</usage>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
@@ -306,42 +320,42 @@
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.07" type="NV" id="eCustomConfiguration.eCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="seCustomConfiguration.07" type="NV" id="seCustomConfiguration.eCustomAcceptableNV" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.07</number>
+														<number>seCustomConfiguration.07</number>
 														<name>Custom Data Element Potential NOT Values (NV)</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>NOT Values (NV) associated with the custom element</definition>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.08" type="PN" id="eCustomConfiguration.eCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="seCustomConfiguration.08" type="PN" id="seCustomConfiguration.eCustomAcceptablePN" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.08</number>
+														<number>seCustomConfiguration.08</number>
 														<name>Custom Data Element Potential Pertinent Negative Values (PN)</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>Pertinent Negative Values (PN) associated with the custom element</definition>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eCustomConfiguration.09" type="CorrelationID" id="eCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
+										<xs:element name="seCustomConfiguration.09" type="CorrelationID" id="seCustomConfiguration.CustomDataElementGroupingID" minOccurs="0">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>eCustomConfiguration.09</number>
+														<number>seCustomConfiguration.09</number>
 														<name>Custom Data Element Grouping ID</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>ID for custom element grouping.</definition>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
@@ -364,8 +378,8 @@
 										<nemsisTacDoc>
 											<number>dState.01</number>
 											<name>State Required Element</name>
-											<national>No</national>
-											<state>No</state>
+											<national>Yes</national>
+											<state>Yes</state>
 											<definition>Indicates which elements are required by the state.</definition>
 											<usage>Optional</usage>
 											<comment>This element was created to document elements required by the state. The TIMESTAMP attribute describes the active date of the element. </comment>
@@ -392,8 +406,8 @@
 										<nemsisTacDoc>
 											<number>eState.01</number>
 											<name>State Required Element</name>
-											<national>No</national>
-											<state>No</state>
+											<national>Yes</national>
+											<state>Yes</state>
 											<definition>Indicates which elements are required by the state</definition>
 											<v2Number/>
 											<usage>Optional</usage>
@@ -468,7 +482,7 @@
 														<state>Yes</state>
 														<definition>The certification/licensure level that is permitted to perform the procedures listed in sConfiguration.03.</definition>
 														<v2Number>D04_05</v2Number>
-														<usage>Mandatory</usage>
+														<usage>Required</usage>
 														<performanceMeasuresGroup>
 															<performanceMeasure>Airway</performanceMeasure>
 															<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -620,7 +634,7 @@
 											<name>Protocols Permitted by the State</name>
 											<national>Yes</national>
 											<state>Yes</state>
-											<definition>A list of all of the protocols permitted by the state.</definition>
+											<definition>Protocols permitted by the state.</definition>
 											<usage>Required</usage>
 											<performanceMeasuresGroup>
 												<performanceMeasure>Airway</performanceMeasure>
@@ -718,7 +732,7 @@
 													<nemsisTacDoc>
 														<number>dAgency.03</number>
 														<name>EMS Agency Name</name>
-														<national>No</national>
+														<national>Yes</national>
 														<state>Yes</state>
 														<definition>The formal name of the agency.</definition>
 														<v2Number>D01_02</v2Number>
@@ -768,8 +782,8 @@
 													<nemsisTacDoc>
 														<number>dFacility.01</number>
 														<name>Type of Facility</name>
-														<national>No</national>
-														<state>No</state>
+														<national>Yes</national>
+														<state>Yes</state>
 														<definition>The type of facility (healthcare or other) that the EMS agency transports patients to or from.</definition>
 														<v2Number>D04_15</v2Number>
 														<usage>Optional</usage>
@@ -794,8 +808,8 @@
 																<nemsisTacDoc>
 																	<number>dFacility.02</number>
 																	<name>Facility Name</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The name of the facility.</definition>
 																	<v2Number>D04_11</v2Number>
 																	<usage>Optional</usage>
@@ -809,8 +823,8 @@
 																<nemsisTacDoc>
 																	<number>dFacility.03</number>
 																	<name>Facility Location Code</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The code of the facility as assigned by the state or the EMS agency.</definition>
 																	<v2Number>D04_12</v2Number>v2Number>
 													<usage>Optional</usage>
@@ -827,8 +841,8 @@ list created at either the EMS Agency or State level.</comment>
 																<nemsisTacDoc>
 																	<number>dFacility.04</number>
 																	<name>Hospital Designations</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc) </definition>
 																	<v2Number/>
 																	<usage>Optional</usage>
@@ -847,8 +861,8 @@ list created at either the EMS Agency or State level.</comment>
 																<nemsisTacDoc>
 																	<number>dFacility.05</number>
 																	<name>Facility National Provider Identifier</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The facility National Provider Identifier associated with National Provider System (NPS).</definition>
 																	<usage>Optional</usage>
 																</nemsisTacDoc>
@@ -861,8 +875,8 @@ list created at either the EMS Agency or State level.</comment>
 																<nemsisTacDoc>
 																	<number>dFacility.06</number>
 																	<name>Facility Room, Suite, or Apartment</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The number of the specific room, suite, or apartment of the facility.</definition>
 																	<usage>Optional</usage>
 																</nemsisTacDoc>
@@ -875,8 +889,8 @@ list created at either the EMS Agency or State level.</comment>
 																<nemsisTacDoc>
 																	<number>dFacility.07</number>
 																	<name>Facility Street Address</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The address where the facility is located.</definition>
 																	<usage>Optional</usage>
 																	<comment>The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.03 (Destination Street Address)  as appropriate.</comment>
@@ -897,8 +911,8 @@ list created at either the EMS Agency or State level.</comment>
 																<nemsisTacDoc>
 																	<number>dFacility.08</number>
 																	<name>Facility City</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The city where the facility is located (physical address). </definition>
 																	<usage>Optional</usage>
 																	<comment>
@@ -917,8 +931,8 @@ The information contained within this element could be used to populate the addr
 																<nemsisTacDoc>
 																	<number>dFacility.09</number>
 																	<name>Facility State</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The state where the facility is located.</definition>
 																	<usage>Optional</usage>
 																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.05 (Destination State) as appropriate.
@@ -934,8 +948,8 @@ The information contained within this element could be used to populate the addr
 																<nemsisTacDoc>
 																	<number>dFacility.10</number>
 																	<name>Facility ZIP Code</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The zip code where the facility is located.</definition>
 																	<usage>Optional</usage>
 													>
@@ -952,8 +966,8 @@ The information contained within this element could be used to populate the addr
 																<nemsisTacDoc>
 																	<number>dFacility.11</number>
 																	<name>Facility County</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The county where the facility is located.</definition>
 																	<usage>Optional</usage>
 																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.21 (Incident County) and/or eDisposition.06 (Destination County) as appropriate.
@@ -969,8 +983,8 @@ The information contained within this element could be used to populate the addr
 																<nemsisTacDoc>
 																	<number>dFacility.12</number>
 																	<name>Facility Country</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The country where the facility is located.</definition>
 																	<usage>Optional</usage>
 																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.22 (Incident Country) and/or eDisposition.08 (Destination Country) as appropriate.
@@ -986,8 +1000,8 @@ The information contained within this element could be used to populate the addr
 																<nemsisTacDoc>
 																	<number>dFacility.13</number>
 																	<name>Facility GPS Location</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>The facility GPS Coordinates.</definition>
 																	<usage>Optional</usage>
 																	<comment>The information contained within this element could be used to populate the address information within eScene.10 (Scene GPS Location) and/or eDisposition.09 (Destination GPS Location) as appropriate.
@@ -1005,8 +1019,8 @@ The information contained within this element could be used to populate the addr
 																<nemsisTacDoc>
 																	<number>dFacility.14</number>
 																	<name>Facility US National Grid Coordinates</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>Facility US National Grid Coordinates</definition>
 																	<usage>Optional</usage>
 																	<comment>Standard found at www.fgdc.gov/usng. The information contained within this element could be used to populate the address information within eScene.11 (Scene US National Grid Coordinates) and/or eDisposition.10 (Disposition Location US National Grid Coordinates) as appropriate.</comment>
@@ -1020,8 +1034,8 @@ The information contained within this element could be used to populate the addr
 																<nemsisTacDoc>
 																	<number>dFacility.15</number>
 																	<name>Facility Phone Number</name>
-																	<national>No</national>
-																	<state>No</state>
+																	<national>Yes</national>
+																	<state>Yes</state>
 																	<definition>Facility phone number.</definition>
 																	<v2Number/>
 																	<usage>Optional</usage>

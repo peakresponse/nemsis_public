@@ -648,22 +648,25 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="dAgency" id="dAgencySection" minOccurs="0">
+				<xs:element name="sAgency" id="sAgencySection" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="dAgencyGroup"  id="dAgencyGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sAgencyGroup"  id="sAgencyGroup" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
+									<xs:annotation>
+										<xs:documentation>Group tag to hold information about an EMS agency.</xs:documentation>
+									</xs:annotation>
 									<xs:sequence>
-										<xs:element name="dAgency.01" type="EMSAgencyStateID" id="dAgency.EMSAgencyUniqueStateID" minOccurs="0">
+										<xs:element name="sAgency.01" id="dAgency.EMSAgencyUniqueStateID" minOccurs="0" nillable="true">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dAgency.01</number>
+														<number>sAgency.01</number>
 														<name>EMS Agency Unique State ID</name>
 														<national>Yes</national>
 														<state>Yes</state>
 														<definition>The unique ID assigned to the EMS Agency which is associated with all state licensure numbers and information.</definition>
-														<usage>Mandatory</usage>
+														<usage>Recommended</usage>
 														<performanceMeasuresGroup>
 															<performanceMeasure>Airway</performanceMeasure>
 															<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -673,51 +676,72 @@
 															<performanceMeasure>Stroke</performanceMeasure>
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
-														<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS Agency.</comment>
-													</nemsisTacDoc>
-												</xs:documentation>
-											</xs:annotation>
-										</xs:element>
-										<xs:element name="dAgency.02" id="dAgency.EMSAgencyNumber" minOccurs="0">
-											<xs:annotation>
-												<xs:documentation>
-													<nemsisTacDoc>
-														<number>dAgency.02</number>
-														<name>EMS Agency Number</name>
-														<national>Yes</national>
-														<state>Yes</state>
-														<definition>The state-assigned provider number of the responding agency</definition>
-														<v2Number>D01_01</v2Number>
-														<usage>Mandatory</usage>
-														<performanceMeasuresGroup>
-															<performanceMeasure>Airway</performanceMeasure>
-															<performanceMeasure>Cardiac Arrest</performanceMeasure>
-															<performanceMeasure>Pediatric</performanceMeasure>
-															<performanceMeasure>Response</performanceMeasure>
-															<performanceMeasure>STEMI</performanceMeasure>
-															<performanceMeasure>Stroke</performanceMeasure>
-															<performanceMeasure>Trauma</performanceMeasure>
-														</performanceMeasuresGroup>
-														<comment>This is the primary identifier for the entire Demographic Section.  Each of the Demographic sections must be associated with an EMS Agency Number. An EMS Agency can have more than one Agency Number within a state. This reflects the ability for an EMS Agency to have a different number for each service type or location (based on state implementation).
-							The EMS Agency Number in dAgency.02 can be used to auto-populate eResponse.01 EMS Agency Number in the EMS Event section.</comment>
+														<comment>Used to populate dAgency.01 EMS Agency Unique State ID.</comment>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 											<xs:complexType>
 												<xs:simpleContent>
-													<xs:extension base="EMSAgencyNumber"/>
+													<xs:extension base="EMSAgencyStateID">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="dAgency.03" nillable="true" id="dAgency.EMSAgencyName" minOccurs="0">
+										<xs:element name="sAgency.02" id="sAgency.EMSAgencyNumber" minOccurs="0" nillable="true">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dAgency.03</number>
+														<number>sAgency.02</number>
+														<name>EMS Agency Number</name>
+														<national>Yes</national>
+														<state>Yes</state>
+														<definition>The state-assigned provider number of the EMS agency.</definition>
+														<v2Number>D01_01</v2Number>
+														<usage>Recommended</usage>
+														<performanceMeasuresGroup>
+															<performanceMeasure>Airway</performanceMeasure>
+															<performanceMeasure>Cardiac Arrest</performanceMeasure>
+															<performanceMeasure>Pediatric</performanceMeasure>
+															<performanceMeasure>Response</performanceMeasure>
+															<performanceMeasure>STEMI</performanceMeasure>
+															<performanceMeasure>Stroke</performanceMeasure>
+															<performanceMeasure>Trauma</performanceMeasure>
+														</performanceMeasuresGroup>
+														<comment>This may be the EMS Agency Name or a unique number assigned by the state EMS office. This is required to document multiple license types and numbers associated with the same EMS agency.
+															&lt;br/>&lt;br/>
+															&lt;br/>Used to populate the following data elements:
+															&lt;br/>dAgency.02 EMS Agency Number
+															&lt;br/>eScene.03 Other EMS or Public Safety Agency ID Number
+															&lt;br/>eDisposition.02 Destination/Transferred To, Code (for transfer of EMS care)</comment>
+													</nemsisTacDoc>
+												</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="EMSAgencyNumber">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="sAgency.03" nillable="true" id="sAgency.EMSAgencyName" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>
+													<nemsisTacDoc>
+														<number>sAgency.03</number>
 														<name>EMS Agency Name</name>
 														<national>Yes</national>
 														<state>Yes</state>
-														<definition>The formal name of the agency.</definition>
+														<definition>The formal name of the EMS agency.</definition>
 														<v2Number>D01_02</v2Number>
 														<usage>Recommended</usage>
 														<performanceMeasuresGroup>
@@ -729,6 +753,12 @@
 															<performanceMeasure>Stroke</performanceMeasure>
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
+														<comment>An EMS agency can have more than one Agency Number within a state. This reflects the ability for an EMS agency to have a different number for each service type or location (based on state implementation).
+															&lt;br/>&lt;br/>
+															&lt;br/>Used to populate the following data elements:
+															&lt;br/>dAgency.03 EMS Agency Name
+															&lt;br/>eScene.02 - Other EMS or Public Safety Agencies at Scene
+															&lt;br/>eDisposition.01 - Destination/Transferred To, Name (for transfer of EMS care)</comment>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -750,133 +780,173 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="dFacility"  id="dFacilitySection" minOccurs="0">
+				<xs:element name="sFacility"  id="sFacilitySection" minOccurs="0">
 					<xs:complexType>
+						<xs:annotation>
+							<xs:documentation>Facility Information</xs:documentation>
+						</xs:annotation>
 						<xs:sequence>
-							<xs:element name="dFacilityGroup" id="dFacility.dFacilityGroup" minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="sFacilityGroup" id="sFacility.sFacilityGroup" minOccurs="0" maxOccurs="unbounded">
 								<xs:annotation>
-									<xs:documentation>Group Tag to hold info about Facility Information and Facility Type</xs:documentation>
+									<xs:documentation>Group Tag to hold info about a facility type and facilities.</xs:documentation>
 								</xs:annotation>
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="dFacility.01" id="dFacility.TypeofFacility" minOccurs="0">
+										<xs:element name="sFacility.01" id="sFacility.TypeofFacility" minOccurs="0" nillable="true">
 											<xs:annotation>
 												<xs:documentation>
 													<nemsisTacDoc>
-														<number>dFacility.01</number>
+														<number>sFacility.01</number>
 														<name>Type of Facility</name>
 														<national>Yes</national>
 														<state>Yes</state>
 														<definition>The type of facility (healthcare or other) that the EMS agency transports patients to or from.</definition>
+														<comment>Used to populate dFacility.01 Type of Facility.</comment>
 														<v2Number>D04_15</v2Number>
-														<usage>Optional</usage>
+														<usage>Recommended</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
 											<xs:complexType>
 												<xs:simpleContent>
-													<xs:extension base="TypeOfFacility"/>
+													<xs:extension base="TypeOfFacility">
+														<xs:attribute name="NV" use="optional">
+															<xs:simpleType>
+																<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="dFacility.FacilityGroup" id="dFacility.FacilityGroup" minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="sFacility.FacilityGroup" id="sFacility.FacilityGroup" minOccurs="0" maxOccurs="unbounded">
 											<xs:annotation>
-												<xs:documentation>Group Tag to hold info about the Facility and the Facility details </xs:documentation>
+												<xs:documentation>Group Tag to hold info about a facility.</xs:documentation>
 											</xs:annotation>
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="dFacility.02" type="FacilityName" id="dFacility.FacilityName" minOccurs="0">
+													<xs:element name="sFacility.02" id="sFacility.FacilityName" minOccurs="0" nillable="true">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.02</number>
+																	<number>sFacility.02</number>
 																	<name>Facility Name</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
 																	<definition>The name of the facility.</definition>
+																	<comment>Used to populate dFacility.02 Facility Name</comment>
 																	<v2Number>D04_11</v2Number>
-																	<usage>Optional</usage>
-																</nemsisTacDoc>
-															</xs:documentation>
-														</xs:annotation>
-													</xs:element>
-													<xs:element name="dFacility.03" type="FacilityCode" id="dFacility.FacilityCode" minOccurs="0">
-														<xs:annotation>
-															<xs:documentation>
-																<nemsisTacDoc>
-																	<number>dFacility.03</number>
-																	<name>Facility Location Code</name>
-																	<national>Yes</national>
-																	<state>Yes</state>
-																	<definition>The code of the facility as assigned by the state or the EMS agency.</definition>
-																	<v2Number>D04_12</v2Number>v2Number>
-													<usage>Optional</usage>
-																	<comment>The information contained within this element could be used to populate eScene.10
-(Incident Facility Code) or eDisposition.02 (Destination/Transferred To, Code) via a drop down
-list created at either the EMS Agency or State level.</comment>
-																</nemsisTacDoc>
-															</xs:documentation>
-														</xs:annotation>
-													</xs:element>
-													<xs:element name="dFacility.04" id="dFacility.HospitalDesignation" minOccurs="0" maxOccurs="unbounded">
-														<xs:annotation>
-															<xs:documentation>
-																<nemsisTacDoc>
-																	<number>dFacility.04</number>
-																	<name>Hospital Designations</name>
-																	<national>Yes</national>
-																	<state>Yes</state>
-																	<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc) </definition>
-																	<v2Number/>
-																	<usage>Optional</usage>
+																	<usage>Recommended</usage>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
 														<xs:complexType>
 															<xs:simpleContent>
-																<xs:extension base="HospitalDesignation"/>
+																<xs:extension base="FacilityName">
+																	<xs:attribute name="NV" use="optional">
+																		<xs:simpleType>
+																			<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:extension>
 															</xs:simpleContent>
 														</xs:complexType>
 													</xs:element>
-													<xs:element name="dFacility.05" type="NationalProviderIdentifier" id="dFacility.FacilityNationalProviderIdentifier" minOccurs="0" maxOccurs="unbounded">
+													<xs:element name="sFacility.03" id="sFacility.FacilityCode" minOccurs="0" nillable="true">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.05</number>
+																	<number>sFacility.03</number>
+																	<name>Facility Location Code</name>
+																	<national>Yes</national>
+																	<state>Yes</state>
+																	<definition>The code of the facility as assigned by the state.</definition>
+																	<comment>Used to populate dFacility.03 Facility Location Code.</comment>
+																	<v2Number>D04_12</v2Number>v2Number>
+																	<usage>Recommended</usage>
+																</nemsisTacDoc>
+															</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="FacilityCode">
+																	<xs:attribute name="NV" use="optional">
+																		<xs:simpleType>
+																			<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="sFacility.04" id="sFacility.HospitalDesignation" minOccurs="0" maxOccurs="unbounded" nillable="true">
+														<xs:annotation>
+															<xs:documentation>
+																<nemsisTacDoc>
+																	<number>sFacility.04</number>
+																	<name>Hospital Designations</name>
+																	<national>Yes</national>
+																	<state>Yes</state>
+																	<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc).</definition>
+																	<comment>Used to populate dFacility.04 Hospital Designations.</comment>
+																	<v2Number/>
+																	<usage>Recommended</usage>
+																</nemsisTacDoc>
+															</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="HospitalDesignation">
+																	<xs:attribute name="NV" use="optional">
+																		<xs:simpleType>
+																			<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="sFacility.05" type="NationalProviderIdentifier" id="sFacility.FacilityNationalProviderIdentifier" minOccurs="0" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>
+																<nemsisTacDoc>
+																	<number>sFacility.05</number>
 																	<name>Facility National Provider Identifier</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
-																	<definition>The facility National Provider Identifier associated with National Provider System (NPS).</definition>
+																	<definition>The facility National Provider Identifier(s) associated with National Provider System (NPS).</definition>
+																	<comment>Used to populate dFacility.05 Facility National Provider Identifier.</comment>
 																	<usage>Optional</usage>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
 													</xs:element>
-													<xs:element name="dFacility.06" type="FacilityRoom" id="dFacility.FacilityRoomSuiteorApartment" minOccurs="0">
+													<xs:element name="sFacility.06" type="FacilityRoom" id="sFacility.FacilityRoomSuiteorApartment" minOccurs="0">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.06</number>
+																	<number>sFacility.06</number>
 																	<name>Facility Room, Suite, or Apartment</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
 																	<definition>The number of the specific room, suite, or apartment of the facility.</definition>
+																	<comment>Used to populate dFacility.06 Facility Room, Suite, or Apartment.</comment>
 																	<usage>Optional</usage>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
 													</xs:element>
-													<xs:element name="dFacility.07" id="dFacility.FacilityStreetAddress" minOccurs="0">
+													<xs:element name="sFacility.07" id="sFacility.FacilityStreetAddress" minOccurs="0">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.07</number>
+																	<number>sFacility.07</number>
 																	<name>Facility Street Address</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
-																	<definition>The address where the facility is located.</definition>
+																	<definition>The street address where the facility is located.</definition>
 																	<usage>Optional</usage>
-																	<comment>The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.03 (Destination Street Address)  as appropriate.</comment>
+																	<comment>Used to populate dFacility.07 Facility Street Address.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
@@ -888,141 +958,176 @@ list created at either the EMS Agency or State level.</comment>
 															</xs:simpleContent>
 														</xs:complexType>
 													</xs:element>
-													<xs:element name="dFacility.08" type="CityGnisCode" id="dFacility.FacilityCity" minOccurs="0">
+													<xs:element name="sFacility.08" type="CityGnisCode" id="sFacility.FacilityCity" minOccurs="0">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.08</number>
+																	<number>sFacility.08</number>
 																	<name>Facility City</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
-																	<definition>The city where the facility is located (physical address). </definition>
+																	<definition>The city where the facility is located (physical address).</definition>
 																	<usage>Optional</usage>
-																	<comment>
-The information contained within this element could be used to populate the address information within eScene.17 (Incident City) and/or eDisposition.04 (Destination City) as appropriate. 
-&lt;br/>&lt;br/>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
-&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
-													</comment>
+																	<comment>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options.
+																		&lt;br/>&lt;br/>
+																		Definitions for each GNIS City Feature Class can be found on the GNIS Codes website.
+																		&lt;br/>&lt;br/>
+																		GNIS Codes Website: <a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm</a>
+																		&lt;br&lt;br/>
+																		Used to populate dFacility.08 Facility City.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
 													</xs:element>
-													<xs:element name="dFacility.09" type="ANSIStateCode" id="dFacility.FacilityState" minOccurs="0">
+													<xs:element name="sFacility.09" id="sFacility.FacilityState" minOccurs="0" nillable="true">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.09</number>
+																	<number>sFacility.09</number>
 																	<name>Facility State</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
 																	<definition>The state where the facility is located.</definition>
-																	<usage>Optional</usage>
-																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.05 (Destination State) as appropriate.
-								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
-										</comment>
+																	<usage>Recommended</usage>
+																	<comment>GNIS Codes Website: <a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm</a>
+																		&lt;br&lt;br/>
+																		Used to populate dFacility.09 Facility State.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ANSIStateCode">
+																	<xs:attribute name="NV" use="optional">
+																		<xs:simpleType>
+																			<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
 													</xs:element>
-													<xs:element name="dFacility.10" type="ZIP" id="dFacility.FacilityZIPCode" minOccurs="0">
+													<xs:element name="sFacility.10" id="sFacility.FacilityZIPCode" minOccurs="0">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.10</number>
+																	<number>sFacility.10</number>
 																	<name>Facility ZIP Code</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
 																	<definition>The zip code where the facility is located.</definition>
-																	<usage>Optional</usage>
-													>
-										<comment>The information contained within this element could be used to populate the address information within eScene.19 (Incident ZIP Code) and/or eDisposition.07 (Destination ZIP Code) as appropriate.
-										&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
-&lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
+																	<usage>Recommended</usage>
+																	<comment>ZIP Codes Product Website: <a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+																		Product: USA - 5-digit ZIP Code Database, Commercial Edition
+																		&lt;br&lt;br/>
+																		Used to populate dFacility.10 Facility ZIP Code.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ZIP">
+																	<xs:attribute name="NV" use="optional">
+																		<xs:simpleType>
+																			<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
 													</xs:element>
-													<xs:element name="dFacility.11" type="ANSICountyCode" id="dFacility.FacilityCounty" minOccurs="0">
+													<xs:element name="sFacility.11" id="sFacility.FacilityCounty" minOccurs="0" nillable="true">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.11</number>
+																	<number>sFacility.11</number>
 																	<name>Facility County</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
 																	<definition>The county where the facility is located.</definition>
-																	<usage>Optional</usage>
-																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.21 (Incident County) and/or eDisposition.06 (Destination County) as appropriate.
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>										
-										</comment>
+																	<usage>Recommended</usage>
+																	<comment>GNIS Codes Website: <a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm</a>
+																		&lt;br/>&lt;br/>
+																		Used to populate dFacility.11 Facility County.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="ANSICountyCode">
+																	<xs:attribute name="NV" use="optional">
+																		<xs:simpleType>
+																			<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
 													</xs:element>
-													<xs:element name="dFacility.12" type="ANSICountryCodesCAMXUS" id="dFacility.FacilityCountry" minOccurs="0">
+													<xs:element name="sFacility.12" type="ANSICountryCodesCAMXUS" id="sFacility.FacilityCountry" minOccurs="0">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.12</number>
+																	<number>sFacility.12</number>
 																	<name>Facility Country</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
 																	<definition>The country where the facility is located.</definition>
 																	<usage>Optional</usage>
-																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.22 (Incident Country) and/or eDisposition.08 (Destination Country) as appropriate.
-										&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm &lt;/a>
-										</comment>
+																	<comment>ANSI Country Codes (ISO 3166) Website: <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a>
+																		&lt;br&lt;br/>
+																		Used to populate dFacility.12 Facility Country.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
 													</xs:element>
-													<xs:element name="dFacility.13" type="GPSLocation" id="dFacility.FacilityGPSLocation" minOccurs="0">
+													<xs:element name="sFacility.13" type="GPSLocation" id="sFacility.FacilityGPSLocation" minOccurs="0">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.13</number>
+																	<number>sFacility.13</number>
 																	<name>Facility GPS Location</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
 																	<definition>The facility GPS Coordinates.</definition>
 																	<usage>Optional</usage>
-																	<comment>The information contained within this element could be used to populate the address information within eScene.10 (Scene GPS Location) and/or eDisposition.09 (Destination GPS Location) as appropriate.
-                      &lt;br/>&lt;br/>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
+																	<comment>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
 										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places
-						        </comment>
+										  &lt;br/>&lt;br/>Used to populated dFacility.13 Facility GPS Location.
+						        								</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
 													</xs:element>
-													<xs:element name="dFacility.14" type="USNG" id="dFacility.FacilityUSNationalGridCoordinates" minOccurs="0">
+													<xs:element name="sFacility.14" type="USNG" id="sFacility.FacilityUSNationalGridCoordinates" minOccurs="0">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.14</number>
+																	<number>sFacility.14</number>
 																	<name>Facility US National Grid Coordinates</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
-																	<definition>Facility US National Grid Coordinates</definition>
+																	<definition>The facility US National Grid Coordinates</definition>
 																	<usage>Optional</usage>
-																	<comment>Standard found at www.fgdc.gov/usng. The information contained within this element could be used to populate the address information within eScene.11 (Scene US National Grid Coordinates) and/or eDisposition.10 (Disposition Location US National Grid Coordinates) as appropriate.</comment>
+																	<comment>Standard found at <a href="www.fgdc.gov/usng">www.fgdc.gov/usng</a>.
+																		&lt;br/>&lt;br/>Used to populate dFacility.14 Facility US National Grid Coordinates.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
 													</xs:element>
-													<xs:element name="dFacility.15" id="dPatient.FacilityPhoneNumber" minOccurs="0" maxOccurs="unbounded">
+													<xs:element name="sFacility.15" id="sFacility.FacilityPhoneNumber" minOccurs="0" maxOccurs="unbounded">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
-																	<number>dFacility.15</number>
+																	<number>sFacility.15</number>
 																	<name>Facility Phone Number</name>
 																	<national>Yes</national>
 																	<state>Yes</state>
-																	<definition>Facility phone number.</definition>
-																	<v2Number/>
+																	<definition>The facility phone number(s).</definition>
 																	<usage>Optional</usage>
-																	<comment>This element contains an attribute to define what type of phone number is being documented (e.g., Fax, Home, Mobile, Pager, and Work).</comment>
+																	<comment>This element contains an attribute to define what type of phone number is being documented (e.g., Fax, Home, Mobile, Pager, and Work).
+																	&lt;br/>&lt;br/>Used to populate dFacility.15 Facility Phone Number.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>
@@ -1030,7 +1135,6 @@ The information contained within this element could be used to populate the addr
 															<xs:simpleContent>
 																<xs:extension base="PhoneNumber">
 																	<xs:attribute name="PhoneNumberType" type="PhoneNumberType" use="optional"/>
-																	<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 																</xs:extension>
 															</xs:simpleContent>
 														</xs:complexType>
@@ -1048,92 +1152,4 @@ The information contained within this element could be used to populate the addr
 			<xs:attribute name="timestamp" type="DateTimeType"/>
 		</xs:complexType>
 	</xs:element>
-	<xs:simpleType name="FacilityCode">
-		<xs:annotation>
-			<xs:documentation>The code of the facility as assigned by the state or the EMS agency.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FacilityDepartment">
-		<xs:annotation>
-			<xs:documentation>The name or number of the facility department.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FacilityName">
-		<xs:annotation>
-			<xs:documentation>The name of the facility.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="100"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FacilityRoom">
-		<xs:annotation>
-			<xs:documentation>The number of the specific room, suite, or apartment.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="1"/>
-			<xs:maxLength value="15"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TypeOfFacility">
-		<xs:annotation>
-			<xs:documentation>The type of facility.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="1701001">
-				<xs:annotation>
-					<xs:documentation>Assisted Living Facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701003">
-				<xs:annotation>
-					<xs:documentation>Clinic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701005">
-				<xs:annotation>
-					<xs:documentation>Hospital</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701007">
-				<xs:annotation>
-					<xs:documentation>Nursing Home</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701009">
-				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701011">
-				<xs:annotation>
-					<xs:documentation>Urgent Care</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701013">
-				<xs:annotation>
-					<xs:documentation>Rehabilitation Facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701015">
-				<xs:annotation>
-					<xs:documentation>Mental Health Facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701017">
-				<xs:annotation>
-					<xs:documentation>Dialysis Center</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
 </xs:schema>

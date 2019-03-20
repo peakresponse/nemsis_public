@@ -972,8 +972,8 @@
 																		&lt;br/>&lt;br/>
 																		Definitions for each GNIS City Feature Class can be found on the GNIS Codes website.
 																		&lt;br/>&lt;br/>
-																		GNIS Codes Website: <a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm</a>
-																		&lt;br&lt;br/>
+																		GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+																		&lt;br/>&lt;br/>
 																		Used to populate dFacility.08 Facility City.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -989,8 +989,8 @@
 																	<state>Yes</state>
 																	<definition>The state where the facility is located.</definition>
 																	<usage>Recommended</usage>
-																	<comment>GNIS Codes Website: <a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm</a>
-																		&lt;br&lt;br/>
+																	<comment>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+																		&lt;br/>&lt;br/>
 																		Used to populate dFacility.09 Facility State.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -1007,7 +1007,7 @@
 															</xs:simpleContent>
 														</xs:complexType>
 													</xs:element>
-													<xs:element name="sFacility.10" id="sFacility.FacilityZIPCode" minOccurs="0">
+													<xs:element name="sFacility.10" id="sFacility.FacilityZIPCode" minOccurs="0" nillable="true">
 														<xs:annotation>
 															<xs:documentation>
 																<nemsisTacDoc>
@@ -1017,9 +1017,9 @@
 																	<state>Yes</state>
 																	<definition>The zip code where the facility is located.</definition>
 																	<usage>Recommended</usage>
-																	<comment>ZIP Codes Product Website: <a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+																	<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 																		Product: USA - 5-digit ZIP Code Database, Commercial Edition
-																		&lt;br&lt;br/>
+																		&lt;br/>&lt;br/>
 																		Used to populate dFacility.10 Facility ZIP Code.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -1046,7 +1046,7 @@
 																	<state>Yes</state>
 																	<definition>The county where the facility is located.</definition>
 																	<usage>Recommended</usage>
-																	<comment>GNIS Codes Website: <a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm</a>
+																	<comment>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 																		&lt;br/>&lt;br/>
 																		Used to populate dFacility.11 Facility County.</comment>
 																</nemsisTacDoc>
@@ -1074,8 +1074,8 @@
 																	<state>Yes</state>
 																	<definition>The country where the facility is located.</definition>
 																	<usage>Optional</usage>
-																	<comment>ANSI Country Codes (ISO 3166) Website: <a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</a>
-																		&lt;br&lt;br/>
+																	<comment>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
+																		&lt;br/>&lt;br/>
 																		Used to populate dFacility.12 Facility Country.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -1110,7 +1110,7 @@
 																	<state>Yes</state>
 																	<definition>The facility US National Grid Coordinates</definition>
 																	<usage>Optional</usage>
-																	<comment>Standard found at <a href="www.fgdc.gov/usng">www.fgdc.gov/usng</a>.
+																	<comment>Standard found at &lt;a href="http://www.fgdc.gov/usng">http://www.fgdc.gov/usng&lt;/a>.
 																		&lt;br/>&lt;br/>Used to populate dFacility.14 Facility US National Grid Coordinates.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>

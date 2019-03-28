@@ -494,7 +494,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>How Patient Was Moved to Ambulance</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The method the patient was moved to the ambulance from the scene.</definition>
+							<definition>The method by which the patient was moved to the ambulance from the scene.</definition>
 							<v2Number>E20_11</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -538,7 +538,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>How Patient Was Moved From Ambulance</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The method the patient was moved from the ambulance to the destination.</definition>
+							<definition>The method by which the patient was moved from the ambulance to the destination.</definition>
 							<v2Number>E20_13</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -553,7 +553,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>EMS Transport Method</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Transport method by this EMS Unit.</definition>
+							<definition>The method of transport by this EMS Unit.</definition>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -699,7 +699,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Required if Patient Transported</comment>
+							<comment>Required if the patient was transported.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

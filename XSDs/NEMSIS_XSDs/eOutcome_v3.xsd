@@ -138,21 +138,6 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.07" type="SBP" id="eOutcome.FirstEDSystolicBloodPressure" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eOutcome.07</number>
-							<name>First ED Systolic Blood Pressure</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The first recorded Emergency Department Systolic Blood Pressure.</definition>
-							<usage>Optional</usage>
-							<v3Changes>Added to better evaluate the outcome of EMS care.</v3Changes>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="eOutcome.09" id="eOutcome.EmergencyDepartmentProcedures" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>

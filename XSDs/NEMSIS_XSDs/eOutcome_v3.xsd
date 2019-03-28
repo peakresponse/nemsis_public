@@ -138,21 +138,6 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.06" type="EmergencyDepartmentChiefComplaint" id="eOutcome.EmergencyDepartmentChiefComplaint" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eOutcome.06</number>
-							<name>Emergency Department Chief Complaint</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The patient's reason for seeking care or attention, expressed in the terms as close as possible to those used by the patient or responsible informant.</definition>
-							<usage>Optional</usage>
-							<v3Changes>Added to better evaluate EMS patient care.</v3Changes>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="eOutcome.07" type="SBP" id="eOutcome.FirstEDSystolicBloodPressure" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>

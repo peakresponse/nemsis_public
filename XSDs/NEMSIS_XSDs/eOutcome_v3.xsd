@@ -168,33 +168,6 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="eOutcome.08" id="eOutcome.EmergencyDepartmentRecordedCauseofInjury" minOccurs="0" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eOutcome.08</number>
-							<name>Emergency Department Recorded Cause of Injury</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The documented cause of injury from the emergency department record.</definition>
-							<usage>Optional</usage>
-							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/
-							&lt;br/>&lt;br/>ICD-10-CM 
-							&lt;br/>Website - http://uts.nlm.nih.gov  
-							&lt;br/>Product - UMLS Metathesaurus</comment>
-							<v3Changes>Added to better evaluate EMS care.</v3Changes>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-												
-										<xs:complexType>
-											<xs:simpleContent>
-												<xs:extension base="icd10CodeInjury">
-													<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-												</xs:extension>
-											</xs:simpleContent>
-										</xs:complexType>
-			</xs:element>
 			<xs:element name="eOutcome.09" id="eOutcome.EmergencyDepartmentProcedures" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>

@@ -285,16 +285,16 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.13" id="eOutcome.HospitalDiagnosis" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOutcome.13" id="eOutcome.HospitalDiagnosis" minOccurs="0" maxOccurs="unbounded" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eOutcome.13</number>
 							<name>Hospital Diagnosis</name>
-							<national>No</national>
-							<state>No</state>
+							<national>Yes</national>
+							<state>Yes</state>
 							<definition>The hospital diagnosis of the patient associated with the hospital admission.</definition>
-							<usage>Optional</usage>
+							<usage>Required</usage>
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
 								&lt;br/>Website - http://uts.nlm.nih.gov  
 								&lt;br/>Product - UMLS Metathesaurus</comment>
@@ -306,6 +306,11 @@
 					<xs:simpleContent>
 						<xs:extension base="icd10Code">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

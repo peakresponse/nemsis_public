@@ -201,16 +201,16 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.11" type="DateTimeType" id="eOutcome.HospitalAdmissionDateTime" minOccurs="0">
+			<xs:element name="eOutcome.11" id="eOutcome.HospitalAdmissionDateTime" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eOutcome.11</number>
 							<name>Date/Time of Hospital Admission</name>
-							<national>No</national>
-							<state>No</state>
+							<national>Yes</national>
+							<state>Yes</state>
 							<definition>The date and time the patient was admitted to the hospital.</definition>
-							<usage>Optional</usage>
+							<usage>Required</usage>
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 							&lt;table  cellspacing="2">&lt;tr>&lt;td>							
 							&lt;table border="1px" cellpadding="3px" cellspacing="0">
@@ -240,6 +240,17 @@
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="DateTimeType">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="eOutcome.12" id="eOutcome.HospitalProcedures" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>

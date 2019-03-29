@@ -315,21 +315,6 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.15" type="TotalVentilatorDays" id="eOutcome.TotalVentilatorDays" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eOutcome.15</number>
-							<name>Total Ventilator Days</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The total number of patient days spend on a mechanical ventilator (excluding time in the operating room).</definition>
-							<usage>Optional</usage>
-							<v3Changes>Added to better measure and define patient outcome.</v3Changes>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="eOutcome.16" id="eOutcome.HospitalDischargeDateTime" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>

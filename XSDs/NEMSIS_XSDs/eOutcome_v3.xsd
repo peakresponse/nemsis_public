@@ -164,23 +164,23 @@
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.10" id="eOutcome.EmergencyDepartmentDiagnosis" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOutcome.10" id="eOutcome.EmergencyDepartmentDiagnosis" minOccurs="0" maxOccurs="unbounded" nilllable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eOutcome.10</number>
 							<name>Emergency Department Diagnosis</name>
-							<national>No</national>
-							<state>No</state>
+							<national>Yes</national>
+							<state>Yes</state>
 							<definition>The practitioner's description of the condition or problem for which Emergency Department services were provided.</definition>
-							<usage>Optional</usage>
+							<usage>Required</usage>
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus</comment>
@@ -192,6 +192,11 @@
 					<xs:simpleContent>
 						<xs:extension base="icd10Code">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

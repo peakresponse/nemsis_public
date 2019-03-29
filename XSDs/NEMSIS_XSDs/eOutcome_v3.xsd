@@ -252,16 +252,16 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.12" id="eOutcome.HospitalProcedures" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOutcome.12" id="eOutcome.HospitalProcedures" minOccurs="0" maxOccurs="unbounded" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eOutcome.12</number>
 							<name>Hospital Procedures</name>
-							<national>No</national>
-							<state>No</state>
+							<national>Yes</national>
+							<state>Yes</state>
 							<definition>Hospital Procedures performed on the patient during the hospital admission.</definition>
-							<usage>Optional</usage>
+							<usage>Required</usage>
 							<comment>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. 
 							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
 							The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. 
@@ -276,6 +276,11 @@
 					<xs:simpleContent>
 						<xs:extension base="icd10CodeOutcomeProcedures">
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+								</xs:simpleType>
+							</xs:attribute>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

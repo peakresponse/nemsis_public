@@ -315,21 +315,6 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.14" type="LengthOfStay" id="eOutcome.TotalICULengthofStay" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eOutcome.14</number>
-							<name>Total ICU Length of Stay</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The total number of patient days in any ICU (including all ICU episodes).</definition>
-							<usage>Optional</usage>
-							<v3Changes>Added to better measure patient outcomes.</v3Changes>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="eOutcome.15" type="TotalVentilatorDays" id="eOutcome.TotalVentilatorDays" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>

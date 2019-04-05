@@ -2969,15 +2969,6 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="PatientCareReportNumber">
-		<xs:annotation>
-			<xs:documentation>The unique number automatically assigned by the EMS agency for each patient care report(PCR).  This is a unique number to the EMS agency for all of time.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="3"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:simpleType name="SoftwareCreator">
 		<xs:annotation>
 			<xs:documentation>The name of the Vendor, Software Manufacturer, or Software Developer</xs:documentation>

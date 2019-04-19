@@ -26,8 +26,8 @@
         In schema, @defaultPhase MUST be undefined.
       </sch:assert>
 
-      <sch:assert role="[WARNING]" test="@id = ('DEMDataSet', 'EMSDataSet')">
-        In schema, @id SHOULD be DEMDataSet or EMSDataSet.
+      <sch:assert role="[WARNING]" test="@id = ('DEMDataSet', 'EMSDataSet', 'StateDataSet')">
+        In schema, @id SHOULD be DEMDataSet, EMSDataSet, or StateDataSet.
       </sch:assert>
 
       <sch:assert role="[FATAL]" test="@queryBinding = 'xslt2'">

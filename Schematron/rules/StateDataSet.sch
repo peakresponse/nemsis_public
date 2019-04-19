@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.190419_CR" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="StateDataSet" schemaVersion="3.5.0.190419_CR" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
-  <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
+  <sch:title>NEMSIS National ISO Schematron file for StateDataSet</sch:title>
 
   <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
   <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -665,212 +665,319 @@
 
   <!-- PATTERNS -->
 
-  <?DSDL_INCLUDE_START includes/pattern_dNilNvPn.xml?><sch:pattern id="nemSch_dNilNvPn">
+  <?DSDL_INCLUDE_START includes/pattern_sNilNvPn.xml?><sch:pattern id="nemSch_sNilNvPn">
 
-  <sch:title>DEMDataSet / Nil/Not Value Attributes</sch:title>
+  <sch:title>StateDataSet / Nil/Not Value Attributes</sch:title>
 
-  <sch:rule id="nemSch_dNilNvPn_rule_1" context="nem:dCustomResults.01 | nem:eCustomResults.01">
-
-    <!-- This rule fires on dCustomResults.01 to prevent subsequent rules from firing. Nothing is checked. dCustomResults should be validated based on information contained in dCustomConfiguration. -->
+  <sch:rule id="nemSch_sNilNvPn_rule_1" context="*[@xsi:nil = 'true']">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      This rule enforces no constraints on the combination of xsi:nil, Not Value, and Pertinent Negative attributes on dCustomResults.01.
-    </sch:report>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_dNilNvPn_rule_2" context="*[@xsi:nil = 'true']">
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <sch:assert id="nemSch_d001" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
+    <sch:assert id="nemSch_s001" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element), or it should be omitted (if the element is optional).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_dNilNvPn_rule_3" context="*[@NV]">
+  <sch:rule id="nemSch_sNilNvPn_rule_2" context="*[@NV]">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d002" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil='true'">
+    <sch:assert id="nemSch_s002" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil='true'">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dNilNvPn.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_dNvPn.xml?><sch:pattern id="nemSch_dNvPn">
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sNilNvPn.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_sNvPn.xml?><sch:pattern id="nemSch_sNvPn">
 
   <sch:title>DEMDataSet / Not Value/Pertinent Negative Uniqueness</sch:title>
 
-  <sch:rule id="nemSch_dNvPn_rule_1" context="nem:dCustomResults.01">
-
-    <!-- This rule fires on dCustomResults.01 to prevent subsequent rules from firing. Nothing is checked. dCustomResults should be validated based on information contained in dCustomConfiguration. -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      This rule enforces no constraints on the uniqueness of dCustomResults.01 with Not Value or Pertinent Negative attribute.
-    </sch:report>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_dNvPn_rule_2" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
+  <sch:rule id="nemSch_sNvPn_rule_1" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
 
     <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
 
-    <sch:assert id="nemSch_d003" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_s003" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value, no other value should be recorded.
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dNvPn.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_dUuid.xml?><sch:pattern id="nemSch_uuid">
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sNvPn.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_StateDataSet.xml?><sch:pattern id="nemSch_StateDataSet">
 
-  <sch:title>DEMDataSet / UUIDs</sch:title>
+  <sch:title>StateDataSet</sch:title>
 
-  <sch:rule id="nemSch_uuid_rule_1" context="*[@UUID]">
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <sch:assert id="nemSch_d005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="count(ancestor-or-self::nem:DemographicReport/descendant-or-self::*[@UUID = current()/@UUID]) = 1">
-      UUID must be universally unique.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dUuid.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_DemographicReport.xml?><sch:pattern id="nemSch_DemographicReport">
-
-  <sch:title>DEMDataSet / Demographic Report</sch:title>
-
-  <sch:rule id="nemSch_DemographicReport_rule_1" context="nem:DemographicReport">
+  <sch:rule id="nemSch_StateDataSet_rule_1" context="nem:StateDataSet">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d004" role="[ERROR]" diagnostics="nemsisDiagnostic" test="xs:dateTime(@timeStamp) &lt; current-dateTime() + xs:dayTimeDuration('PT1H')">
-      The timestamp of the DemographicReport should not be in the future (the current time according to this system is <sch:value-of select="format-dateTime(current-dateTime(),'[MNn] [D1], [Y0001], [H01]:[m01] [ZN]')"/>).
+    <sch:assert id="nemSch_s004" role="[ERROR]" diagnostics="nemsisDiagnostic" test="xs:dateTime(@timestamp) &lt; current-dateTime() + xs:dayTimeDuration('PT1H')">
+      The timestamp of the StateDataSet should not be in the future (the current time according to this system is <sch:value-of select="format-dateTime(current-dateTime(),'[MNn] [D1], [Y0001], [H01]:[m01] [ZN]')"/>).
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_DemographicReport.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_dAgency.xml?><sch:pattern id="nemSch_dAgency">
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_StateDataSet.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_sdCustomConfiguration.xml?><sch:pattern id="nemSch_sdCustomConfiguration">
 
-  <sch:title>DEMDataSet / Agency Information</sch:title>
+  <sch:title>StateDataSet / Demographic Custom Elements</sch:title>
 
-  <sch:rule id="nemSch_dAgency_rule_1" context="nem:dAgency.06">
+  <sch:rule id="nemSch_sdCustomConfiguration_rule_1" context="nem:sdCustomConfiguration.CustomGroup">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d006" role="[ERROR]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05" test="starts-with(., ../nem:dAgency.05)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to the state with which it is grouped.
+    <sch:assert id="nemSch_s005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(@CustomElementID) = preceding-sibling::nem:sdCustomConfiguration.CustomGroup/normalize-space(@CustomElementID))">
+      The Custom Element ID for each Agency Demographic Custom Data Element should be unique (the same ID should not be used more than once).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_dAgency_rule_2" context="nem:dAgency.07[. != '']">
+  <sch:rule id="nemSch_sdCustomConfiguration_rule_2" context="nem:sdCustomConfiguration.06">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05, ../nem:dAgency.06" test="starts-with(., ../nem:dAgency.06)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to a county recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.06', $nemSch_elements)"/> in the state with which it is grouped.
+    <sch:assert id="nemSch_s006" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(.) = preceding-sibling::nem:sdCustomConfiguration.06/normalize-space(.))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same value should not be listed more than once).
+    </sch:assert>
+
+    <sch:assert id="nemSch_s007" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(@customValueDescription) = preceding-sibling::nem:sdCustomConfiguration.06/normalize-space(@customValueDescription))">
+      The Custom Value Description for <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same description should not be listed more than once).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_dAgency_rule_3" context="nem:dAgency.13">
-
-    <sch:let name="nemsisElements" value="., ../nem:dAgency.26"/>
-
-    <sch:assert id="nemSch_d008" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". != '9912001' or ../nem:dAgency.26 != ''">
-      <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
-    </sch:assert>
-
-    <sch:assert id="nemSch_d009" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = '9912001' or not(../nem:dAgency.26 != '')">
-      <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dAgency.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_dConfiguration.xml?><sch:pattern id="nemSch_dConfiguration">
-
-  <sch:title>DEMDataSet / Configuration Information</sch:title>
-
-  <sch:rule id="nemSch_dConfiguration_rule_1" context="nem:dAgency.04">
-
-    <sch:let name="nemsisElements" value="., ancestor-or-self::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01"/>
-
-    <sch:assert id="nemSch_d010" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = ancestor-or-self::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01">
-      There should be a configuration group where <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.01', $nemSch_elements)"/> is the state recorded in <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_dConfiguration_rule_2" context="nem:dConfiguration.01">
+  <sch:rule id="nemSch_sdCustomConfiguration_rule_3" context="nem:sdCustomConfiguration.07">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d011" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = ../preceding-sibling::nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same state should not be listed more than once).
+    <sch:assert id="nemSch_s008" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:sdCustomConfiguration.07)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same value should not be listed more than once).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_dConfiguration_rule_3" context="nem:dAgency[nem:dAgency.04 = ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01]">
-
-    <sch:let name="nemsisElements" value="nem:dAgency.04, nem:dAgency.11, ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup[nem:dConfiguration.01 = current()/nem:dAgency.04]/(nem:dConfiguration.01, nem:dConfiguration.ProcedureGroup/nem:dConfiguration.06, nem:dConfiguration.MedicationGroup/nem:dConfiguration.08)"/>
-
-    <sch:assert id="nemSch_d012" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:dAgency.11 = ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup[nem:dConfiguration.01 = current()/nem:dAgency.04]/nem:dConfiguration.ProcedureGroup/nem:dConfiguration.06">
-      <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.06', $nemSch_elements)"/>, within the configuration group for the state recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.04', $nemSch_elements)"/>, should include the level recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.11', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <sch:assert id="nemSch_d013" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:dAgency.11 = ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup[nem:dConfiguration.01 = current()/nem:dAgency.04]/nem:dConfiguration.MedicationGroup/nem:dConfiguration.08">
-      <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.08', $nemSch_elements)"/>, within the configuration group for the state recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.04', $nemSch_elements)"/>, should include the level recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.11', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_dConfiguration_rule_4" context="nem:dConfiguration.09[. != '' and @CodeType]">
+  <sch:rule id="nemSch_sdCustomConfiguration_rule_4" context="nem:sdCustomConfiguration.08">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d014" role="[ERROR]" diagnostics="nemsisDiagnostic" test="matches(., '^[0-9]{2,7}$') or @CodeType != '9924003'">
+    <sch:assert id="nemSch_s009" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:sdCustomConfiguration.08)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same value should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sdCustomConfiguration.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_seCustomConfiguration.xml?><sch:pattern id="nemSch_seCustomConfiguration">
+
+  <sch:title>StateDataSet / Patient Care Report Custom Elements</sch:title>
+
+  <sch:rule id="nemSch_seCustomConfiguration_rule_1" context="nem:seCustomConfiguration.CustomGroup">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s010" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(@CustomElementID) = preceding-sibling::nem:seCustomConfiguration.CustomGroup/normalize-space(@CustomElementID))">
+      The Custom Element ID for each Patient Care Report Custom Data Element should be unique (the same ID should not be used more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_seCustomConfiguration_rule_2" context="nem:seCustomConfiguration.06">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s011" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(.) = preceding-sibling::nem:seCustomConfiguration.06/normalize-space(.))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same value should not be listed more than once).
+    </sch:assert>
+
+    <sch:assert id="nemSch_s012" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(normalize-space(@customValueDescription) = preceding-sibling::nem:seCustomConfiguration.06/normalize-space(@customValueDescription))">
+      The Custom Value Description for <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same description should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_seCustomConfiguration_rule_3" context="nem:seCustomConfiguration.07">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s013" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:seCustomConfiguration.07)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same value should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_seCustomConfiguration_rule_4" context="nem:seCustomConfiguration.08">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s014" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:seCustomConfiguration.08)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same value should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_seCustomConfiguration.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_sElement.xml?><sch:pattern id="nemSch_sElement">
+
+  <sch:title>StateDataSet / State Collected Elements</sch:title>
+
+  <sch:rule id="nemSch_sElement_rule_1" context="nem:sElement.01">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s015" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(normalize-space(.) = preceding-sibling::nem:sElement.01/normalize-space(.))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same element should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sElement.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_sConfiguration.xml?><sch:pattern id="nemSch_sConfiguration">
+
+  <sch:title>StateDataSet / Configuration Information</sch:title>
+
+  <sch:rule id="nemSch_sConfiguration_rule_1" context="nem:sConfiguration.01">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s016" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:sConfiguration.01)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same level should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_sConfiguration_rule_2" context="nem:sConfiguration.02">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s017" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../../nem:sConfiguration.01" test=". = ../../nem:sConfiguration.01">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be on the list of <sch:value-of select="key('nemSch_key_elements', 'sConfiguration.01', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_s018" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = ../preceding-sibling::nem:sConfiguration.ProcedureGroup/nem:sConfiguration.02)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same level should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_sConfiguration_rule_3" context="nem:sConfiguration.03">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s019" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(normalize-space(.) = preceding-sibling::nem:sConfiguration.03/normalize-space(.))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same procedure should not be listed more than once for a particular level).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_sConfiguration_rule_4" context="nem:sConfiguration.04">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s020" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../../nem:sConfiguration.01" test=". = ../../nem:sConfiguration.01">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be on the list of <sch:value-of select="key('nemSch_key_elements', 'sConfiguration.01', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_s021" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = ../preceding-sibling::nem:sConfiguration.MedicationGroup/nem:sConfiguration.04)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same level should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_sConfiguration_rule_5" context="nem:sConfiguration.05">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s022" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(normalize-space(.) = preceding-sibling::nem:sConfiguration.05/normalize-space(.))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same medication should not be listed more than once for a particular level).
+    </sch:assert>
+
+    <sch:assert id="nemSch_s023" role="[ERROR]" diagnostics="nemsisDiagnostic" test=". = '' or matches(., '^[0-9]{2,7}$') or not(@CodeType = '9924003')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be a code of between 2 and 7 digits when Code Type is "RxNorm".
     </sch:assert>
 
-    <sch:assert id="nemSch_d015" role="[ERROR]" diagnostics="nemsisDiagnostic" test=". = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000') or @CodeType != '9924005'">
+    <sch:assert id="nemSch_s024" role="[ERROR]" diagnostics="nemsisDiagnostic" test=". = '' or . = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000') or not(@CodeType = '9924005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be a SNOMED code specifically allowed in the data dictionary when Code Type is "SNOMED".
     </sch:assert>
 
-  </sch:rule>
-
-  <sch:rule id="nemSch_dConfiguration_rule_5" context="nem:dConfiguration.09[. != '']">
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <sch:assert id="nemSch_d016" role="[ERROR]" diagnostics="nemsisDiagnostic" test="matches(., '^[0-9]{2,7}$') or . = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000')">
+    <sch:assert id="nemSch_s025" role="[ERROR]" diagnostics="nemsisDiagnostic" test=". = '' or matches(., '^[0-9]{2,7}$') or . = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000') or @CodeType">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be an RxNorm code of between 2 and 7 digits or a SNOMED code specifically allowed in the data dictionary.
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_dConfiguration_rule_6" context="nem:dConfiguration.16">
+  <sch:rule id="nemSch_sConfiguration_rule_6" context="nem:sConfiguration.06">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d017" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:dConfiguration.16)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same call sign should not be listed more than once).
+    <sch:assert id="nemSch_s026" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:sConfiguration.06)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same protocol should not be listed more than once).
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dConfiguration.xml?>
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sConfiguration.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_sAgency.xml?><sch:pattern id="nemSch_sAgency">
+
+  <sch:title>StateDataSet / Agency Information</sch:title>
+
+  <sch:rule id="nemSch_sAgency_rule_1" context="nem:sAgencyGroup">
+
+    <sch:let name="nemsisElements" value="nem:sAgency.01, nem:sAgency.02"/>
+
+    <sch:assert id="nemSch_s027" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(preceding-sibling::nem:sAgencyGroup[nem:sAgency.01 = current()/nem:sAgency.01 and nem:sAgency.02 = current()/nem:sAgency.02])">
+      <sch:value-of select="key('nemSch_key_elements', 'sAgency.01', $nemSch_elements)"/> and <sch:value-of select="key('nemSch_key_elements', 'sAgency.02', $nemSch_elements)"/> should be a unique combination for each EMS agency.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sAgency.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_sFacility.xml?><sch:pattern id="nemSch_sFacility">
+
+  <sch:title>StateDataSet / Facility Information</sch:title>
+
+  <sch:rule id="nemSch_sFacility_rule_1" context="nem:sFacility.FacilityGroup">
+
+    <sch:let name="nemsisElements" value="../nem:sFacility.01, nem:sFacility.03, nem:sFacility.07, nem:sFacility.08, nem:sFacility.09"/>
+
+    <sch:assert id="nemSch_s028" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(preceding::nem:sFacility.FacilityGroup[../nem:sFacility.01 = current()/../nem:sFacility.01 and normalize-space(nem:sFacility.03) = current()/normalize-space(nem:sFacility.03) and normalize-space(nem:sFacility.07) = current()/normalize-space(nem:sFacility.07) and normalize-space(nem:sFacility.08) = current()/nem:sFacility.08 and nem:sFacility.09 = current()/nem:sFacility.09])">
+      <sch:value-of select="key('nemSch_key_elements', 'sFacility.01', $nemSch_elements)"/>, <sch:value-of select="key('nemSch_key_elements', 'sFacility.03', $nemSch_elements)"/>, <sch:value-of select="key('nemSch_key_elements', 'sFacility.07', $nemSch_elements)"/>, <sch:value-of select="key('nemSch_key_elements', 'sFacility.08', $nemSch_elements)"/>, and <sch:value-of select="key('nemSch_key_elements', 'sFacility.09', $nemSch_elements)"/> should be a unique combination for each facility.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_sFacility_rule_2" context="nem:sFacility.04">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s029" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:sFacility.04)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same designation should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_sFacility_rule_3" context="nem:sFacility.05">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_s030" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(normalize-space(.) = preceding-sibling::nem:sFacility.05/normalize-space(.))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same identifier should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_sFacility_rule_4" context="nem:sFacility.11">
+
+    <sch:let name="nemsisElements" value="../nem:sFacility.09, ."/>
+
+    <sch:assert id="nemSch_s031" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:sFacility.09)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'sFacility.09', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sFacility.xml?>
 
   <!-- DIAGNOSTICS -->
 

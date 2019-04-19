@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.4.0.170111_1800326
-Revision Date: March 26, 2018
+Version: 3.5.0.190419_CR_190419
+Revision Date: April 19, 2019 (Candidate Release Draft)
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -37,67 +37,60 @@ Schematron files via a user-friendly web-based interface.
         <link rel="stylesheet" type="text/css" href="https://nemsis.org/media/nemsis_v3/master/Schematron/utilities/html/schematronHtml.css" />
 
         <script type="text/javascript">
-          
+
           var version = '<xsl:value-of select="sch:schema/@schemaVersion"/>'.split('.').slice(0, 3).join('.');
           var versionBase = 'http://www.nemsis.org/media/nemsis_v3/release-' + version;
 
           // Function to clean up value-of elements in overview page
           function cleanValueOf (element) {
-            var replacement = element.innerHTML;
-            // If it looks like a nemSch_key_elements lookup, try to isolate the name of the element(s) being looked up
-            if (replacement.match(/key\s*\(\s*['"]nemSch_key_elements['"].*\$nemSch_elements\s*\)/)) {
-              var match = replacement.match(/[de][A-Z][A-Za-z]*\.\d\d/g);
-              // If we couldn't isolate any element names, go with an "(Element)" placeholder
-              replacement = match ? match.join(' | ') : '(Element)';
-            } else {
-              // Otherwise, look for and clean up "string-join" code if found
-              replacement = replacement.replace(/string-join\s*\((.*)\[.*],\s*['"]\s*,\s*['"]\)/, '$1');
-            }
-            element.innerHTML = replacement;
+          var replacement = element.innerHTML;
+          // If it looks like a nemSch_key_elements lookup, try to isolate the name of the element(s) being looked up
+          if (replacement.match(/key\s*\(\s*['"]nemSch_key_elements['"].*\$nemSch_elements\s*\)/)) {
+          var match = replacement.match(/[sde][A-Z][A-Za-z]*\.\d\d/g);
+          // If we couldn't isolate any element names, go with an "(Element)" placeholder
+          replacement = match ? match.join(' | ') : '(Element)';
+          } else {
+          // Otherwise, look for and clean up "string-join" code if found
+          replacement = replacement.replace(/string-join\s*\((.*)\[.*],\s*['"]\s*,\s*['"]\)/, '$1');
+          }
+          element.innerHTML = replacement;
           }
 
           // Helper function for linkNemsisElement
           function linkReplace ($1, useName) {
-            var elementName = window.nemSch_lookup_elements[$1];
-            return '&lt;a href="' + versionBase + '/DataDictionary/PDFHTML/DEMEMS/sections/elements/' + $1 + '.xml" target="_blank" title="' +
-              $1 + ' ' + elementName + '">' + (useName &amp;&amp; elementName ? elementName : $1) + '&lt;/a>';
-            }
+          var elementName = window.nemSch_lookup_elements[$1];
+          return '&lt;a href="' + versionBase + '/DataDictionary/PDFHTML/DEMEMS/sections/elements/' + $1 + '.xml" target="_blank" title="' +
+          $1 + ' ' + elementName + '">' + (useName &amp;&amp; elementName ? elementName : $1) + '&lt;/a>';
+          }
 
           // Function to add links to NEMSIS elements
           // useName (true|*false): if true, replace element name/ID with NEMSIS name/label
           function linkNemsisElement(element, useName) {
-            var regEx = useName ? /\$?([de][A-Z][a-zA-Z]+\.\d\d)/g : /([de][A-Z][a-zA-Z]+\.\d\d)/g;
-            element.innerHTML = element.innerHTML.replace(regEx, function(match, $1) {return linkReplace($1, useName);});
+          var regEx = useName ? /\$?([sde][A-Z][a-zA-Z]+\.\d\d)/g : /([sde][A-Z][a-zA-Z]+\.\d\d)/g;
+          element.innerHTML = element.innerHTML.replace(regEx, function(match, $1) {return linkReplace($1, useName);});
           }
-          
-          var nemsisElements = document.getElementById('nemsisElements');
 
-          setTimeout(window.addEventListener('load', function() {
+          window.addEventListener('load', setTimeout(function() {
+          // Create a NEMSIS element/name lookup list
+          window.nemSch_lookup_elements = [];
+          var parser = new DOMParser();
+          var nemSch_lookup_elements_source = parser.parseFromString(document.getElementById('nemsisElements').textContent, "application/xml").getElementsByTagName('*');
+          for (var i = 0; i &lt; nemSch_lookup_elements_source.length; i++) {
+          if (nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName'))
+          window.nemSch_lookup_elements[nemSch_lookup_elements_source[i].localName] = nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName').value;
+          }
+          nemSch_lookup_elements_source = [];
 
-            //Depending on how the XSLT was called (directly vs repository.html), nemsisElements may be empty. If so, re-assign it now.
-            if (!nemsisElements) nemsisElements = document.getElementById('nemsisElements');
+          var targets = document.getElementsByClassName('value-of');
+          for (var i = 0; i &lt; targets.length; i++) cleanValueOf(targets[i]);
 
-            // Create a NEMSIS element/name lookup list
-            window.nemSch_lookup_elements = [];
+          targets = document.getElementsByClassName('nameable');
+          for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], true);
 
-            var parser = new DOMParser();
-            var nemSch_lookup_elements_source = parser.parseFromString(nemsisElements.textContent, "application/xml").getElementsByTagName('*');
-            for (var i = 0; i &lt; nemSch_lookup_elements_source.length; i++) {
-              if (nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName'))
-                window.nemSch_lookup_elements[nemSch_lookup_elements_source[i].localName] = nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName').value;
-            }
-            nemSch_lookup_elements_source = [];
+          targets = document.getElementsByClassName('linkable');
+          for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], false);
 
-            var targets = document.getElementsByClassName('value-of');
-            for (var i = 0; i &lt; targets.length; i++) cleanValueOf(targets[i]);
-
-            targets = document.getElementsByClassName('nameable');
-            for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], true);
-
-            targets = document.getElementsByClassName('linkable');
-            for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], false);
-
-          }, false), 0);
+          }, 0), false);
         </script>
 
         <script id="nemsisElements" type="application/xml">
@@ -112,7 +105,7 @@ Schematron files via a user-friendly web-based interface.
           ga('create', 'UA-1013393-2', 'auto');
           ga('send', 'pageview');
         </script>
-      
+
       </head>
 
       <body>
@@ -123,7 +116,7 @@ Schematron files via a user-friendly web-based interface.
 
           <a href="#">
             <h1>
-              NEMSIS Schematron Validation Rules<br/>
+              NEMSIS Schematron Business Rules<br/>
               Version: <xsl:value-of select="sch:schema/@schemaVersion"/>
             </h1>
           </a>
@@ -164,7 +157,7 @@ Schematron files via a user-friendly web-based interface.
           <div class="blueRect"></div>
           <div class="spacer20"></div>
           <div class="titleMain">NEMSIS</div>
-          <div class="titleSub">Schematron Validation Rules</div>
+          <div class="titleSub">Schematron Business Rules</div>
           <div class="spacer50"></div>
           <div class="nhtsa">
             <xsl:value-of select="sch:schema/@id"/>
@@ -213,7 +206,7 @@ Schematron files via a user-friendly web-based interface.
             </xsl:apply-templates>
           </xsl:for-each>
           <xsl:if test="//sch:rule[substring(@context, 1, 1) = '*']">
-          <h3>General Validation Messages (may apply to many elements)</h3>
+            <h3>General Validation Messages (may apply to many elements)</h3>
             <table class="overviewTable">
               <xsl:apply-templates select="//sch:rule[substring(@context, 1, 1) = '*']/sch:assert | //sch:rule[substring(@context, 1, 1) = '*']/sch:report" mode="overview" />
             </table>
@@ -351,7 +344,7 @@ Schematron files via a user-friendly web-based interface.
       </td>
     </tr>
   </xsl:template>
-  
+
   <!-- Element List -->
   <xsl:template match="nem:*" mode="overviewByElement">
     <xsl:param name="asserts"/>
@@ -359,19 +352,22 @@ Schematron files via a user-friendly web-based interface.
       $asserts[preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementMissing'][
       contains(@value, local-name(current()))
       or ((contains(@value, '.,') or substring(normalize-space(@value), string-length(normalize-space(@value))) = '.')  and contains(../@context, local-name(current())))
-      ]] |
+      ] or contains(@subject, local-name(current()))] |
       $asserts[not(preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementMissing'])][
       contains(@test, local-name(current()))
+      or contains(@subject, local-name(current()))
       or contains(../@context, local-name(current()))]
       "/>
     <xsl:if test="$elementAsserts">
-      <h3><xsl:value-of select="local-name()"/> - <xsl:value-of select="@nemsisName"/></h3>
+      <h3>
+        <xsl:value-of select="local-name()"/> - <xsl:value-of select="@nemsisName"/>
+      </h3>
       <table class="overviewTable">
         <xsl:apply-templates select="$elementAsserts" mode="overview"/>
       </table>
     </xsl:if>
   </xsl:template>
-  
+
   <!-- Everything else in overview mode -->
   <xsl:template match="*" mode="overview"/>
 
@@ -691,10 +687,88 @@ Schematron files via a user-friendly web-based interface.
 
   <xsl:variable name="nemsisElements">
     <nemsisElements>
+      <StateDataSet xmlns="http://www.nemsis.org" nemsisName="Root Tag for State Dataset">
+        <sState nemsisName="State information for this State Dataset.">
+          <sState.01 nemsisName="State"/>
+        </sState>
+        <seCustomConfiguration nemsisName="Patient Care Report Custom Elements">
+          <seCustomConfiguration.CustomGroup nemsisName="Patient Care Report Custom Data Element Title">
+            <seCustomConfiguration.01 nemsisName="Patient Care Report Custom Data Element Title"/>
+            <seCustomConfiguration.02 nemsisName="Patient Care Report Custom Definition"/>
+            <seCustomConfiguration.03 nemsisName="Patient Care Report Custom Data Type"/>
+            <seCustomConfiguration.04 nemsisName="Patient Care Report Custom Data Element Recurrence"/>
+            <seCustomConfiguration.05 nemsisName="Patient Care Report Custom Data Element Usage"/>
+            <seCustomConfiguration.06 nemsisName="Patient Care Report Custom Data Element Potential Values"/>
+            <seCustomConfiguration.07 nemsisName="Patient Care Report Custom Data Element Potential NOT Values (NV)"/>
+            <seCustomConfiguration.08 nemsisName="Patient Care Report Custom Data Element Potential Pertinent Negative Values (PN)"/>
+            <seCustomConfiguration.09 nemsisName="Patient Care Report Custom Data Element Grouping ID"/>
+          </seCustomConfiguration.CustomGroup>
+        </seCustomConfiguration>
+        <sdCustomConfiguration nemsisName="Demographic Custom Elements">
+          <sdCustomConfiguration.CustomGroup nemsisName="Agency Demographic Custom Data Element Title">
+            <sdCustomConfiguration.01 nemsisName="Agency Demographic Custom Data Element Title"/>
+            <sdCustomConfiguration.02 nemsisName="Agency Demographic Custom Definition"/>
+            <sdCustomConfiguration.03 nemsisName="Agency Demographic Custom Data Type"/>
+            <sdCustomConfiguration.04 nemsisName="Agency Demographic Custom Data Element Recurrence"/>
+            <sdCustomConfiguration.05 nemsisName="Agency Demographic Custom Data Element Usage"/>
+            <sdCustomConfiguration.06 nemsisName="Agency Demographic Custom Data Element Potential Values"/>
+            <sdCustomConfiguration.07 nemsisName="Agency Demographic Custom Data Element Potential NOT Values (NV)"/>
+            <sdCustomConfiguration.08 nemsisName="Agency Demographic Custom Data Element Potential Pertinent Negative Values (PN)"/>
+            <sdCustomConfiguration.09 nemsisName="Agency Demographic Custom Data Element Grouping ID"/>
+          </sdCustomConfiguration.CustomGroup>
+        </sdCustomConfiguration>
+        <sSoftware nemsisName="Software Information">
+          <sSoftware.SoftwareGroup nemsisName="Software Creator">
+            <sSoftware.01 nemsisName="Software Creator"/>
+            <sSoftware.02 nemsisName="Software Name"/>
+            <sSoftware.03 nemsisName="Software Version"/>
+          </sSoftware.SoftwareGroup>
+        </sSoftware>
+        <sElement nemsisName="State Collected Elements">
+          <sElement.01 nemsisName="State Collected Element"/>
+        </sElement>
+        <sConfiguration nemsisName="Configuration Information">
+          <sConfiguration.01 nemsisName="State Certification/Licensure Levels"/>
+          <sConfiguration.ProcedureGroup nemsisName="EMS Certification Levels Permitted to Perform Each Procedure">
+            <sConfiguration.02 nemsisName="EMS Certification Levels Permitted to Perform Each Procedure"/>
+            <sConfiguration.03 nemsisName="Procedures Permitted by the State"/>
+          </sConfiguration.ProcedureGroup>
+          <sConfiguration.MedicationGroup nemsisName="EMS Certification Levels Permitted to Administer Each Medication">
+            <sConfiguration.04 nemsisName="EMS Certification Levels Permitted to Administer Each Medication"/>
+            <sConfiguration.05 nemsisName="Medications Permitted by the State"/>
+          </sConfiguration.MedicationGroup>
+          <sConfiguration.06 nemsisName="Protocols Permitted by the State"/>
+        </sConfiguration>
+        <sAgency nemsisName="Agency Information">
+          <sAgencyGroup nemsisName="EMS Agency Unique State ID">
+            <sAgency.01 nemsisName="EMS Agency Unique State ID"/>
+            <sAgency.02 nemsisName="EMS Agency Number"/>
+            <sAgency.03 nemsisName="EMS Agency Name"/>
+          </sAgencyGroup>
+        </sAgency>
+        <sFacility nemsisName="Facility Information">
+          <sFacilityGroup nemsisName="Type of Facility">
+            <sFacility.01 nemsisName="Type of Facility"/>
+            <sFacility.FacilityGroup nemsisName="Facility Name">
+              <sFacility.02 nemsisName="Facility Name"/>
+              <sFacility.03 nemsisName="Facility Location Code"/>
+              <sFacility.04 nemsisName="Hospital Designations"/>
+              <sFacility.05 nemsisName="Facility National Provider Identifier"/>
+              <sFacility.06 nemsisName="Facility Room, Suite, or Apartment"/>
+              <sFacility.07 nemsisName="Facility Street Address"/>
+              <sFacility.08 nemsisName="Facility City"/>
+              <sFacility.09 nemsisName="Facility State"/>
+              <sFacility.10 nemsisName="Facility ZIP Code"/>
+              <sFacility.11 nemsisName="Facility County"/>
+              <sFacility.12 nemsisName="Facility Country"/>
+              <sFacility.13 nemsisName="Facility GPS Location"/>
+              <sFacility.14 nemsisName="Facility US National Grid Coordinates"/>
+              <sFacility.15 nemsisName="Facility Phone Number"/>
+            </sFacility.FacilityGroup>
+          </sFacilityGroup>
+        </sFacility>
+      </StateDataSet>
       <DEMDataSet xmlns="http://www.nemsis.org" nemsisName="Root Tag For Demographic DataSet">
-        <dState nemsisName="State Required Demographic Data Elements">
-          <dState.01 nemsisName="State Required Element"/>
-        </dState>
         <dCustomConfiguration nemsisName="Contains information for demographic custom elements.">
           <dCustomConfiguration.CustomGroup nemsisName="Custom Data Element Title">
             <dCustomConfiguration.01 nemsisName="Custom Data Element Title"/>
@@ -764,12 +838,8 @@ Schematron files via a user-friendly web-based interface.
             </dContact.ContactInfoGroup>
           </dContact>
           <dConfiguration nemsisName="Configuration Information">
-            <dConfiguration.ConfigurationGroup nemsisName="State Associated with the Certification/Licensure Levels">
-              <dConfiguration.01 nemsisName="State Associated with the Certification/Licensure Levels"/>
-              <dConfiguration.02 nemsisName="State Certification/Licensure Levels"/>
-              <dConfiguration.03 nemsisName="Procedures Permitted by the State"/>
-              <dConfiguration.04 nemsisName="Medications Permitted by the State"/>
-              <dConfiguration.05 nemsisName="Protocols Permitted by the State"/>
+            <dConfiguration.ConfigurationGroup nemsisName="State Associated with this Configuration">
+              <dConfiguration.01 nemsisName="State Associated with this Configuration"/>
               <dConfiguration.ProcedureGroup nemsisName="EMS Certification Levels Permitted to Perform Each Procedure">
                 <dConfiguration.06 nemsisName="EMS Certification Levels Permitted to Perform Each Procedure"/>
                 <dConfiguration.07 nemsisName="EMS Agency Procedures"/>
@@ -888,7 +958,7 @@ Schematron files via a user-friendly web-based interface.
               <dDevice.06 nemsisName="Medical Device Purchase Date"/>
             </dDevice.DeviceGroup>
           </dDevice>
-          <dFacility nemsisName="Device Information">
+          <dFacility nemsisName="Facility Information">
             <dFacilityGroup nemsisName="Type of Facility">
               <dFacility.01 nemsisName="Type of Facility"/>
               <dFacility.FacilityGroup nemsisName="Facility Name">
@@ -919,9 +989,6 @@ Schematron files via a user-friendly web-based interface.
         </DemographicReport>
       </DEMDataSet>
       <EMSDataSet xmlns="http://www.nemsis.org" nemsisName="EMS Agency Unique State ID">
-        <eState nemsisName="State Required Elements">
-          <eState.01 nemsisName="State Required Element"/>
-        </eState>
         <Header nemsisName="EMS Agency Unique State ID">
           <DemographicGroup nemsisName="EMS Agency Unique State ID">
             <dAgency.01 nemsisName="EMS Agency Unique State ID"/>
@@ -961,7 +1028,7 @@ Schematron files via a user-friendly web-based interface.
                 <eResponse.05 nemsisName="Type of Service Requested"/>
                 <eResponse.06 nemsisName="Standby Purpose"/>
               </eResponse.ServiceGroup>
-              <eResponse.07 nemsisName="Primary Role of the Unit"/>
+              <eResponse.07 nemsisName="Unit Transport and Equipment Capability"/>
               <eResponse.08 nemsisName="Type of Dispatch Delay"/>
               <eResponse.09 nemsisName="Type of Response Delay"/>
               <eResponse.10 nemsisName="Type of Scene Delay"/>
@@ -969,7 +1036,6 @@ Schematron files via a user-friendly web-based interface.
               <eResponse.12 nemsisName="Type of Turn-Around Delay"/>
               <eResponse.13 nemsisName="EMS Vehicle (Unit) Number"/>
               <eResponse.14 nemsisName="EMS Unit Call Sign"/>
-              <eResponse.15 nemsisName="Level of Care of This Unit"/>
               <eResponse.16 nemsisName="Vehicle Dispatch Location"/>
               <eResponse.17 nemsisName="Vehicle Dispatch GPS Location"/>
               <eResponse.18 nemsisName="Vehicle Dispatch Location US National Grid Coordinates"/>
@@ -981,7 +1047,7 @@ Schematron files via a user-friendly web-based interface.
               <eResponse.24 nemsisName="Additional Response Mode Descriptors"/>
             </eResponse>
             <eDispatch nemsisName="Dispatch Information">
-              <eDispatch.01 nemsisName="Complaint Reported by Dispatch"/>
+              <eDispatch.01 nemsisName="Dispatch Reason"/>
               <eDispatch.02 nemsisName="EMD Performed"/>
               <eDispatch.03 nemsisName="EMD Card Number"/>
               <eDispatch.04 nemsisName="Dispatch Center Name or ID"/>
@@ -1012,6 +1078,7 @@ Schematron files via a user-friendly web-based interface.
               <eTimes.14 nemsisName="Unit Canceled Date/Time"/>
               <eTimes.15 nemsisName="Unit Back at Home Location Date/Time"/>
               <eTimes.16 nemsisName="EMS Call Completed Date/Time"/>
+              <eTimes.17 nemsisName="Unit Arrived at Staging Area Date/Time"/>
             </eTimes>
             <ePatient nemsisName="Patient Information">
               <ePatient.01 nemsisName="EMS Patient ID"/>
@@ -1039,6 +1106,7 @@ Schematron files via a user-friendly web-based interface.
               <ePatient.19 nemsisName="Patient's Email Address"/>
               <ePatient.20 nemsisName="State Issuing Driver's License"/>
               <ePatient.21 nemsisName="Driver's License Number"/>
+              <ePatient.22 nemsisName="Alternate Home Residence"/>
             </ePatient>
             <ePayment nemsisName="Insurance/Payment Information">
               <ePayment.01 nemsisName="Primary Method of Payment"/>
@@ -1067,6 +1135,8 @@ Schematron files via a user-friendly web-based interface.
                 <ePayment.21 nemsisName="Middle Initial/Name of the Insured"/>
                 <ePayment.22 nemsisName="Relationship to the Insured"/>
                 <ePayment.58 nemsisName="Insurance Group Name"/>
+                <ePayment.59 nemsisName="Insurance Company Phone Number"/>
+                <ePayment.60 nemsisName="Date of Birth of the Insured"/>
               </ePayment.InsuranceGroup>
               <ePayment.ClosestRelativeGroup nemsisName="Closest Relative/Guardian Last Name">
                 <ePayment.23 nemsisName="Closest Relative/Guardian Last Name"/>
@@ -1115,6 +1185,7 @@ Schematron files via a user-friendly web-based interface.
                 <eScene.02 nemsisName="Other EMS or Public Safety Agencies at Scene"/>
                 <eScene.03 nemsisName="Other EMS or Public Safety Agency ID Number"/>
                 <eScene.04 nemsisName="Type of Other Service at Scene"/>
+                <eScene.24 nemsisName="First Other EMS or Public Safety Agency at Scene to Provide Patient Care"/>
               </eScene.ResponderGroup>
               <eScene.05 nemsisName="Date/Time Initial Responder Arrived on Scene"/>
               <eScene.06 nemsisName="Number of Patients at Scene"/>
@@ -1159,12 +1230,14 @@ Schematron files via a user-friendly web-based interface.
               </eSituation.WorkRelatedGroup>
               <eSituation.17 nemsisName="Patient Activity"/>
               <eSituation.18 nemsisName="Date/Time Last Known Well"/>
+              <eSituation.19 nemsisName="Justification for Transfer or Encounter"/>
+              <eSituation.20 nemsisName="Reason for Interfacility Transfer/Medical Transport"/>
             </eSituation>
             <eInjury nemsisName="Injury Information">
               <eInjury.01 nemsisName="Cause of Injury"/>
               <eInjury.02 nemsisName="Mechanism of Injury"/>
-              <eInjury.03 nemsisName="Trauma Center Criteria"/>
-              <eInjury.04 nemsisName="Vehicular, Pedestrian, or Other Injury Risk Factor"/>
+              <eInjury.03 nemsisName="Trauma Triage Criteria (Steps 1 and 2)"/>
+              <eInjury.04 nemsisName="Trauma Triage Criteria (Steps 3 and 4)"/>
               <eInjury.05 nemsisName="Main Area of the Vehicle Impacted by the Collision"/>
               <eInjury.06 nemsisName="Location of Patient in Vehicle"/>
               <eInjury.07 nemsisName="Use of Occupant Safety Equipment"/>
@@ -1200,11 +1273,9 @@ Schematron files via a user-friendly web-based interface.
               <eArrest.02 nemsisName="Cardiac Arrest Etiology"/>
               <eArrest.03 nemsisName="Resuscitation Attempted By EMS"/>
               <eArrest.04 nemsisName="Arrest Witnessed By"/>
-              <eArrest.05 nemsisName="CPR Care Provided Prior to EMS Arrival"/>
-              <eArrest.06 nemsisName="Who Provided CPR Prior to EMS Arrival"/>
               <eArrest.07 nemsisName="AED Use Prior to EMS Arrival"/>
-              <eArrest.08 nemsisName="Who Used AED Prior to EMS Arrival"/>
               <eArrest.09 nemsisName="Type of CPR Provided"/>
+              <eArrest.10 nemsisName="Therapeutic Hypothermia by EMS"/>
               <eArrest.11 nemsisName="First Monitored Arrest Rhythm of the Patient"/>
               <eArrest.12 nemsisName="Any Return of Spontaneous Circulation"/>
               <eArrest.13 nemsisName="Neurological Outcome at Hospital Discharge"/>
@@ -1214,6 +1285,9 @@ Schematron files via a user-friendly web-based interface.
               <eArrest.17 nemsisName="Cardiac Rhythm on Arrival at Destination"/>
               <eArrest.18 nemsisName="End of EMS Cardiac Arrest Event"/>
               <eArrest.19 nemsisName="Date/Time of Initial CPR"/>
+              <eArrest.20 nemsisName="Who First Initiated CPR"/>
+              <eArrest.21 nemsisName="Who First Applied the AED"/>
+              <eArrest.22 nemsisName="Who First Defibrillated the Patient"/>
             </eArrest>
             <eHistory nemsisName="Patient History Information">
               <eHistory.01 nemsisName="Barriers to Patient Care"/>
@@ -1236,6 +1310,7 @@ Schematron files via a user-friendly web-based interface.
                 <eHistory.13 nemsisName="Current Medication Dose"/>
                 <eHistory.14 nemsisName="Current Medication Dosage Unit"/>
                 <eHistory.15 nemsisName="Current Medication Administration Route"/>
+                <eHistory.20 nemsisName="Current Medication Frequency"/>
               </eHistory.CurrentMedsGroup>
               <eHistory.16 nemsisName="Presence of Emergency Information Form"/>
               <eHistory.17 nemsisName="Alcohol/Drug Use Indicators"/>
@@ -1323,7 +1398,6 @@ Schematron files via a user-friendly web-based interface.
                 <eExam.05 nemsisName="Head Assessment"/>
                 <eExam.06 nemsisName="Face Assessment"/>
                 <eExam.07 nemsisName="Neck Assessment"/>
-                <eExam.08 nemsisName="Chest/Lungs Assessment"/>
                 <eExam.09 nemsisName="Heart Assessment"/>
                 <eExam.AbdomenGroup nemsisName="Abdominal Assessment Finding Location">
                   <eExam.10 nemsisName="Abdominal Assessment Finding Location"/>
@@ -1342,6 +1416,14 @@ Schematron files via a user-friendly web-based interface.
                   <eExam.17 nemsisName="Eye Assessment Finding Location"/>
                   <eExam.18 nemsisName="Eye Assessment"/>
                 </eExam.EyeGroup>
+                <eExam.LungGroup nemsisName="Lung Assessment Finding Location">
+                  <eExam.22 nemsisName="Lung Assessment Finding Location"/>
+                  <eExam.23 nemsisName="Lung Assessment"/>
+                </eExam.LungGroup>
+                <eExam.ChestGroup nemsisName="Chest Assessment Finding Location">
+                  <eExam.24 nemsisName="Chest Assessment Finding Location"/>
+                  <eExam.25 nemsisName="Chest Assessment"/>
+                </eExam.ChestGroup>
                 <eExam.19 nemsisName="Mental Status Assessment"/>
                 <eExam.20 nemsisName="Neurological Assessment"/>
               </eExam.AssessmentGroup>
@@ -1357,7 +1439,7 @@ Schematron files via a user-friendly web-based interface.
               <eMedications.MedicationGroup nemsisName="Date/Time Medication Administered">
                 <eMedications.01 nemsisName="Date/Time Medication Administered"/>
                 <eMedications.02 nemsisName="Medication Administered Prior to this Unit's EMS Care"/>
-                <eMedications.03 nemsisName="Medication Given"/>
+                <eMedications.03 nemsisName="Medication Administered"/>
                 <eMedications.04 nemsisName="Medication Administered Route"/>
                 <eMedications.DosageGroup nemsisName="Medication Dosage">
                   <eMedications.05 nemsisName="Medication Dosage"/>
@@ -1439,10 +1521,16 @@ Schematron files via a user-friendly web-based interface.
                 <eDisposition.10 nemsisName="Destination Location US National Grid Coordinates "/>
               </eDisposition.DestinationGroup>
               <eDisposition.11 nemsisName="Number of Patients Transported in this EMS Unit"/>
-              <eDisposition.12 nemsisName="Incident/Patient Disposition"/>
+              <eDisposition.IncidentDispositionGroup nemsisName="Unit Disposition">
+                <eDisposition.27 nemsisName="Unit Disposition"/>
+                <eDisposition.28 nemsisName="Patient Evaluation/Care"/>
+                <eDisposition.29 nemsisName="Crew Incident Disposition"/>
+                <eDisposition.30 nemsisName="Transport Disposition"/>
+                <eDisposition.31 nemsisName="Reason for Refusal/Release"/>
+              </eDisposition.IncidentDispositionGroup>
               <eDisposition.13 nemsisName="How Patient Was Moved to Ambulance"/>
               <eDisposition.14 nemsisName="Position of Patient During Transport"/>
-              <eDisposition.15 nemsisName="How Patient Was Transported From Ambulance"/>
+              <eDisposition.15 nemsisName="How Patient Was Moved From Ambulance"/>
               <eDisposition.16 nemsisName="EMS Transport Method"/>
               <eDisposition.17 nemsisName="Transport Mode from Scene"/>
               <eDisposition.18 nemsisName="Additional Transport Mode Descriptors"/>
@@ -1456,6 +1544,7 @@ Schematron files via a user-friendly web-based interface.
                 <eDisposition.25 nemsisName="Date/Time of Destination Prearrival Alert or Activation"/>
               </eDisposition.HospitalTeamActivationGroup>
               <eDisposition.26 nemsisName="Disposition Instructions Provided"/>
+              <eDisposition.32 nemsisName="Level of Care Provided per Protocol"/>
             </eDisposition>
             <eOutcome nemsisName="Patient Outcome Information">
               <eOutcome.01 nemsisName="Emergency Department Disposition"/>
@@ -1465,18 +1554,20 @@ Schematron files via a user-friendly web-based interface.
                 <eOutcome.04 nemsisName="External Report ID/Number"/>
                 <eOutcome.05 nemsisName="Other Report Registry Type"/>
               </eOutcome.ExternalDataGroup>
-              <eOutcome.06 nemsisName="Emergency Department Chief Complaint"/>
-              <eOutcome.07 nemsisName="First ED Systolic Blood Pressure"/>
-              <eOutcome.08 nemsisName="Emergency Department Recorded Cause of Injury"/>
-              <eOutcome.09 nemsisName="Emergency Department Procedures"/>
+              <eOutcome.EmergencyDepartmentProceduresGroup nemsisName="Emergency Department Procedures">
+                <eOutcome.09 nemsisName="Emergency Department Procedures"/>
+                <eOutcome.19 nemsisName="Date/Time Emergency Department Procedure Performed"/>
+              </eOutcome.EmergencyDepartmentProceduresGroup>
               <eOutcome.10 nemsisName="Emergency Department Diagnosis"/>
               <eOutcome.11 nemsisName="Date/Time of Hospital Admission"/>
-              <eOutcome.12 nemsisName="Hospital Procedures"/>
+              <eOutcome.HospitalProceduresGroup nemsisName="Hospital Procedures">
+                <eOutcome.12 nemsisName="Hospital Procedures"/>
+                <eOutcome.20 nemsisName="Date/Time Hospital Procedure Performed"/>
+              </eOutcome.HospitalProceduresGroup>
               <eOutcome.13 nemsisName="Hospital Diagnosis"/>
-              <eOutcome.14 nemsisName="Total ICU Length of Stay"/>
-              <eOutcome.15 nemsisName="Total Ventilator Days"/>
               <eOutcome.16 nemsisName="Date/Time of Hospital Discharge"/>
               <eOutcome.17 nemsisName="Outcome at Hospital Discharge"/>
+              <eOutcome.18 nemsisName="Date/Time of Emergency Department Admission"/>
             </eOutcome>
             <eCustomResults nemsisName="Custom Data Elements Results">
               <eCustomResults.ResultsGroup nemsisName="Custom Data Element Result">
@@ -1500,6 +1591,7 @@ Schematron files via a user-friendly web-based interface.
                 <eOther.09 nemsisName="External Electronic Document Type"/>
                 <eOther.10 nemsisName="File Attachment Type"/>
                 <eOther.11 nemsisName="File Attachment Image"/>
+                <eOther.22 nemsisName="File Attachment Name"/>
               </eOther.FileGroup>
               <eOther.SignatureGroup nemsisName="Type of Person Signing">
                 <eOther.12 nemsisName="Type of Person Signing"/>
@@ -1519,5 +1611,5 @@ Schematron files via a user-friendly web-based interface.
       </EMSDataSet>
     </nemsisElements>
   </xsl:variable>
-  
+
 </xsl:stylesheet>

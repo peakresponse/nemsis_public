@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.170111" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.190419_CR" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -39,11 +39,7 @@
   <element name="dAgency.24">EMS Agency Daylight Savings Time Use</element>
   <element name="dAgency.25">National Provider Identifier</element>
   <element name="dAgency.26">Fire Department ID Number</element>
-  <element name="dConfiguration.01">State Associated with the Certification/Licensure Levels</element>
-  <element name="dConfiguration.02">State Certification/Licensure Levels</element>
-  <element name="dConfiguration.03">Procedures Permitted by the State</element>
-  <element name="dConfiguration.04">Medications Permitted by the State</element>
-  <element name="dConfiguration.05">Protocols Permitted by the State</element>
+  <element name="dConfiguration.01">State Associated with this Configuration</element>
   <element name="dConfiguration.06">EMS Certification Levels Permitted to Perform Each Procedure</element>
   <element name="dConfiguration.07">EMS Agency Procedures</element>
   <element name="dConfiguration.08">EMS Certification Levels Permitted to Administer Each Medication</element>
@@ -156,7 +152,6 @@
   <element name="dPersonnel.37">EMS Personnel's Date Length of Service Documented</element>
   <element name="dPersonnel.38">EMS Personnel's Practice Level</element>
   <element name="dPersonnel.39">Date of Personnel's Certification or Licensure for Agency</element>
-  <element name="dState.01">State Required Element</element>
   <element name="dVehicle.01">Unit/Vehicle Number</element>
   <element name="dVehicle.02">Vehicle Identification Number</element>
   <element name="dVehicle.03">EMS Unit Call Sign</element>
@@ -185,11 +180,9 @@
   <element name="eArrest.02">Cardiac Arrest Etiology</element>
   <element name="eArrest.03">Resuscitation Attempted By EMS</element>
   <element name="eArrest.04">Arrest Witnessed By</element>
-  <element name="eArrest.05">CPR Care Provided Prior to EMS Arrival</element>
-  <element name="eArrest.06">Who Provided CPR Prior to EMS Arrival</element>
   <element name="eArrest.07">AED Use Prior to EMS Arrival</element>
-  <element name="eArrest.08">Who Used AED Prior to EMS Arrival</element>
   <element name="eArrest.09">Type of CPR Provided</element>
+  <element name="eArrest.10">Therapeutic Hypothermia by EMS</element>
   <element name="eArrest.11">First Monitored Arrest Rhythm of the Patient</element>
   <element name="eArrest.12">Any Return of Spontaneous Circulation</element>
   <element name="eArrest.13">Neurological Outcome at Hospital Discharge</element>
@@ -199,6 +192,9 @@
   <element name="eArrest.17">Cardiac Rhythm on Arrival at Destination</element>
   <element name="eArrest.18">End of EMS Cardiac Arrest Event</element>
   <element name="eArrest.19">Date/Time of Initial CPR</element>
+  <element name="eArrest.20">Who First Initiated CPR</element>
+  <element name="eArrest.21">Who First Applied the AED</element>
+  <element name="eArrest.22">Who First Defibrillated the Patient</element>
   <element name="eCrew.01">Crew Member ID</element>
   <element name="eCrew.02">Crew Member Level</element>
   <element name="eCrew.03">Crew Member Response Role</element>
@@ -226,7 +222,7 @@
   <element name="eDevice.10">Shock or Pacing Energy</element>
   <element name="eDevice.11">Total Number of Shocks Delivered</element>
   <element name="eDevice.12">Pacing Rate</element>
-  <element name="eDispatch.01">Complaint Reported by Dispatch</element>
+  <element name="eDispatch.01">Dispatch Reason</element>
   <element name="eDispatch.02">EMD Performed</element>
   <element name="eDispatch.03">EMD Card Number</element>
   <element name="eDispatch.04">Dispatch Center Name or ID</element>
@@ -243,10 +239,9 @@
   <element name="eDisposition.09">Destination GPS Location</element>
   <element name="eDisposition.10">Destination Location US National Grid Coordinates </element>
   <element name="eDisposition.11">Number of Patients Transported in this EMS Unit</element>
-  <element name="eDisposition.12">Incident/Patient Disposition</element>
   <element name="eDisposition.13">How Patient Was Moved to Ambulance</element>
   <element name="eDisposition.14">Position of Patient During Transport</element>
-  <element name="eDisposition.15">How Patient Was Transported From Ambulance</element>
+  <element name="eDisposition.15">How Patient Was Moved From Ambulance</element>
   <element name="eDisposition.16">EMS Transport Method</element>
   <element name="eDisposition.17">Transport Mode from Scene</element>
   <element name="eDisposition.18">Additional Transport Mode Descriptors</element>
@@ -258,6 +253,12 @@
   <element name="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</element>
   <element name="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</element>
   <element name="eDisposition.26">Disposition Instructions Provided</element>
+  <element name="eDisposition.27">Unit Disposition</element>
+  <element name="eDisposition.28">Patient Evaluation/Care</element>
+  <element name="eDisposition.29">Crew Incident Disposition</element>
+  <element name="eDisposition.30">Transport Disposition</element>
+  <element name="eDisposition.31">Reason for Refusal/Release</element>
+  <element name="eDisposition.32">Level of Care Provided per Protocol</element>
   <element name="eExam.01">Estimated Body Weight in Kilograms</element>
   <element name="eExam.02">Length Based Tape Measure</element>
   <element name="eExam.03">Date/Time of Assessment</element>
@@ -265,7 +266,6 @@
   <element name="eExam.05">Head Assessment</element>
   <element name="eExam.06">Face Assessment</element>
   <element name="eExam.07">Neck Assessment</element>
-  <element name="eExam.08">Chest/Lungs Assessment</element>
   <element name="eExam.09">Heart Assessment</element>
   <element name="eExam.10">Abdominal Assessment Finding Location</element>
   <element name="eExam.11">Abdomen Assessment</element>
@@ -279,6 +279,10 @@
   <element name="eExam.19">Mental Status Assessment</element>
   <element name="eExam.20">Neurological Assessment</element>
   <element name="eExam.21">Stroke/CVA Symptoms Resolved</element>
+  <element name="eExam.22">Lung Assessment Finding Location</element>
+  <element name="eExam.23">Lung Assessment</element>
+  <element name="eExam.24">Chest Assessment Finding Location</element>
+  <element name="eExam.25">Chest Assessment</element>
   <element name="eHistory.01">Barriers to Patient Care</element>
   <element name="eHistory.02">Last Name of Patient's Practitioner</element>
   <element name="eHistory.03">First Name of Patient's Practitioner</element>
@@ -298,10 +302,11 @@
   <element name="eHistory.17">Alcohol/Drug Use Indicators</element>
   <element name="eHistory.18">Pregnancy</element>
   <element name="eHistory.19">Last Oral Intake</element>
+  <element name="eHistory.20">Current Medication Frequency</element>
   <element name="eInjury.01">Cause of Injury</element>
   <element name="eInjury.02">Mechanism of Injury</element>
-  <element name="eInjury.03">Trauma Center Criteria</element>
-  <element name="eInjury.04">Vehicular, Pedestrian, or Other Injury Risk Factor</element>
+  <element name="eInjury.03">Trauma Triage Criteria (Steps 1 and 2)</element>
+  <element name="eInjury.04">Trauma Triage Criteria (Steps 3 and 4)</element>
   <element name="eInjury.05">Main Area of the Vehicle Impacted by the Collision</element>
   <element name="eInjury.06">Location of Patient in Vehicle</element>
   <element name="eInjury.07">Use of Occupant Safety Equipment</element>
@@ -337,7 +342,7 @@
   <element name="eLabs.08">Imaging Study File or Waveform Graphic</element>
   <element name="eMedications.01">Date/Time Medication Administered</element>
   <element name="eMedications.02">Medication Administered Prior to this Unit's EMS Care</element>
-  <element name="eMedications.03">Medication Given</element>
+  <element name="eMedications.03">Medication Administered</element>
   <element name="eMedications.04">Medication Administered Route</element>
   <element name="eMedications.05">Medication Dosage</element>
   <element name="eMedications.06">Medication Dosage Units</element>
@@ -369,23 +374,22 @@
   <element name="eOther.19">Date/Time of Signature</element>
   <element name="eOther.20">Signature Last Name</element>
   <element name="eOther.21">Signature First Name</element>
+  <element name="eOther.22">File Attachment Name</element>
   <element name="eOutcome.01">Emergency Department Disposition</element>
   <element name="eOutcome.02">Hospital Disposition</element>
   <element name="eOutcome.03">External Report ID/Number Type</element>
   <element name="eOutcome.04">External Report ID/Number</element>
   <element name="eOutcome.05">Other Report Registry Type</element>
-  <element name="eOutcome.06">Emergency Department Chief Complaint</element>
-  <element name="eOutcome.07">First ED Systolic Blood Pressure</element>
-  <element name="eOutcome.08">Emergency Department Recorded Cause of Injury</element>
   <element name="eOutcome.09">Emergency Department Procedures</element>
   <element name="eOutcome.10">Emergency Department Diagnosis</element>
   <element name="eOutcome.11">Date/Time of Hospital Admission</element>
   <element name="eOutcome.12">Hospital Procedures</element>
   <element name="eOutcome.13">Hospital Diagnosis</element>
-  <element name="eOutcome.14">Total ICU Length of Stay</element>
-  <element name="eOutcome.15">Total Ventilator Days</element>
   <element name="eOutcome.16">Date/Time of Hospital Discharge</element>
   <element name="eOutcome.17">Outcome at Hospital Discharge</element>
+  <element name="eOutcome.18">Date/Time of Emergency Department Admission</element>
+  <element name="eOutcome.19">Date/Time Emergency Department Procedure Performed</element>
+  <element name="eOutcome.20">Date/Time Hospital Procedure Performed</element>
   <element name="ePatient.01">EMS Patient ID</element>
   <element name="ePatient.02">Last Name</element>
   <element name="ePatient.03">First Name</element>
@@ -407,6 +411,7 @@
   <element name="ePatient.19">Patient's Email Address</element>
   <element name="ePatient.20">State Issuing Driver's License</element>
   <element name="ePatient.21">Driver's License Number</element>
+  <element name="ePatient.22">Alternate Home Residence</element>
   <element name="ePayment.01">Primary Method of Payment</element>
   <element name="ePayment.02">Physician Certification Statement</element>
   <element name="ePayment.03">Date Physician Certification Statement Signed</element>
@@ -464,6 +469,8 @@
   <element name="ePayment.56">Number of Supply Item(s) Used</element>
   <element name="ePayment.57">Payer Type</element>
   <element name="ePayment.58">Insurance Group Name</element>
+  <element name="ePayment.59">Insurance Company Phone Number</element>
+  <element name="ePayment.60">Date of Birth of the Insured</element>
   <element name="eProcedures.01">Date/Time Procedure Performed</element>
   <element name="eProcedures.02">Procedure Performed Prior to this Unit's EMS Care</element>
   <element name="eProcedures.03">Procedure</element>
@@ -489,7 +496,7 @@
   <element name="eResponse.04">EMS Response Number</element>
   <element name="eResponse.05">Type of Service Requested</element>
   <element name="eResponse.06">Standby Purpose</element>
-  <element name="eResponse.07">Primary Role of the Unit</element>
+  <element name="eResponse.07">Unit Transport and Equipment Capability</element>
   <element name="eResponse.08">Type of Dispatch Delay</element>
   <element name="eResponse.09">Type of Response Delay</element>
   <element name="eResponse.10">Type of Scene Delay</element>
@@ -497,7 +504,6 @@
   <element name="eResponse.12">Type of Turn-Around Delay</element>
   <element name="eResponse.13">EMS Vehicle (Unit) Number</element>
   <element name="eResponse.14">EMS Unit Call Sign</element>
-  <element name="eResponse.15">Level of Care of This Unit</element>
   <element name="eResponse.16">Vehicle Dispatch Location</element>
   <element name="eResponse.17">Vehicle Dispatch GPS Location</element>
   <element name="eResponse.18">Vehicle Dispatch Location US National Grid Coordinates</element>
@@ -530,6 +536,7 @@
   <element name="eScene.21">Incident County</element>
   <element name="eScene.22">Incident Country</element>
   <element name="eScene.23">Incident Census Tract</element>
+  <element name="eScene.24">First Other EMS or Public Safety Agency at Scene to Provide Patient Care</element>
   <element name="eSituation.01">Date/Time of Symptom Onset</element>
   <element name="eSituation.02">Possible Injury</element>
   <element name="eSituation.03">Complaint Type</element>
@@ -548,7 +555,8 @@
   <element name="eSituation.16">Patient's Occupation</element>
   <element name="eSituation.17">Patient Activity</element>
   <element name="eSituation.18">Date/Time Last Known Well</element>
-  <element name="eState.01">State Required Element</element>
+  <element name="eSituation.19">Justification for Transfer or Encounter</element>
+  <element name="eSituation.20">Reason for Interfacility Transfer/Medical Transport</element>
   <element name="eTimes.01">PSAP Call Date/Time</element>
   <element name="eTimes.02">Dispatch Notified Date/Time</element>
   <element name="eTimes.03">Unit Notified by Dispatch Date/Time</element>
@@ -565,6 +573,7 @@
   <element name="eTimes.14">Unit Canceled Date/Time</element>
   <element name="eTimes.15">Unit Back at Home Location Date/Time</element>
   <element name="eTimes.16">EMS Call Completed Date/Time</element>
+  <element name="eTimes.17">Unit Arrived at Staging Area Date/Time</element>
   <element name="eVitals.01">Date/Time Vital Signs Taken</element>
   <element name="eVitals.02">Obtained Prior to this Unit's EMS Care</element>
   <element name="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</element>
@@ -598,6 +607,53 @@
   <element name="eVitals.31">Reperfusion Checklist</element>
   <element name="eVitals.32">APGAR</element>
   <element name="eVitals.33">Revised Trauma Score</element>
+  <element name="sAgency.01">EMS Agency Unique State ID</element>
+  <element name="sAgency.02">EMS Agency Number</element>
+  <element name="sAgency.03">EMS Agency Name</element>
+  <element name="sConfiguration.01">State Certification/Licensure Levels</element>
+  <element name="sConfiguration.02">EMS Certification Levels Permitted to Perform Each Procedure</element>
+  <element name="sConfiguration.03">Procedures Permitted by the State</element>
+  <element name="sConfiguration.04">EMS Certification Levels Permitted to Administer Each Medication</element>
+  <element name="sConfiguration.05">Medications Permitted by the State</element>
+  <element name="sConfiguration.06">Protocols Permitted by the State</element>
+  <element name="sElement.01">State Collected Element</element>
+  <element name="sFacility.01">Type of Facility</element>
+  <element name="sFacility.02">Facility Name</element>
+  <element name="sFacility.03">Facility Location Code</element>
+  <element name="sFacility.04">Hospital Designations</element>
+  <element name="sFacility.05">Facility National Provider Identifier</element>
+  <element name="sFacility.06">Facility Room, Suite, or Apartment</element>
+  <element name="sFacility.07">Facility Street Address</element>
+  <element name="sFacility.08">Facility City</element>
+  <element name="sFacility.09">Facility State</element>
+  <element name="sFacility.10">Facility ZIP Code</element>
+  <element name="sFacility.11">Facility County</element>
+  <element name="sFacility.12">Facility Country</element>
+  <element name="sFacility.13">Facility GPS Location</element>
+  <element name="sFacility.14">Facility US National Grid Coordinates</element>
+  <element name="sFacility.15">Facility Phone Number</element>
+  <element name="sSoftware.01">Software Creator</element>
+  <element name="sSoftware.02">Software Name</element>
+  <element name="sSoftware.03">Software Version</element>
+  <element name="sState.01">State</element>
+  <element name="sdCustomConfiguration.01">Agency Demographic Custom Data Element Title</element>
+  <element name="sdCustomConfiguration.02">Agency Demographic Custom Definition</element>
+  <element name="sdCustomConfiguration.03">Agency Demographic Custom Data Type</element>
+  <element name="sdCustomConfiguration.04">Agency Demographic Custom Data Element Recurrence</element>
+  <element name="sdCustomConfiguration.05">Agency Demographic Custom Data Element Usage</element>
+  <element name="sdCustomConfiguration.06">Agency Demographic Custom Data Element Potential Values</element>
+  <element name="sdCustomConfiguration.07">Agency Demographic Custom Data Element Potential NOT Values (NV)</element>
+  <element name="sdCustomConfiguration.08">Agency Demographic Custom Data Element Potential Pertinent Negative Values (PN)</element>
+  <element name="sdCustomConfiguration.09">Agency Demographic Custom Data Element Grouping ID</element>
+  <element name="seCustomConfiguration.01">Patient Care Report Custom Data Element Title</element>
+  <element name="seCustomConfiguration.02">Patient Care Report Custom Definition</element>
+  <element name="seCustomConfiguration.03">Patient Care Report Custom Data Type</element>
+  <element name="seCustomConfiguration.04">Patient Care Report Custom Data Element Recurrence</element>
+  <element name="seCustomConfiguration.05">Patient Care Report Custom Data Element Usage</element>
+  <element name="seCustomConfiguration.06">Patient Care Report Custom Data Element Potential Values</element>
+  <element name="seCustomConfiguration.07">Patient Care Report Custom Data Element Potential NOT Values (NV)</element>
+  <element name="seCustomConfiguration.08">Patient Care Report Custom Data Element Potential Pertinent Negative Values (PN)</element>
+  <element name="seCustomConfiguration.09">Patient Care Report Custom Data Element Grouping ID</element>
 </nemSch_lookup_elements><?DSDL_INCLUDE_END includes/lookup_elements.xml#nemSch_lookup_elements?>
   </xsl:variable>
   <sch:let name="nemSch_elements" value="$nemSch_lookup_elements//*:nemSch_lookup_elements"/>
@@ -609,281 +665,212 @@
 
   <!-- PATTERNS -->
 
-  <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.13.xml?><sch:pattern id="nemSch_consistency_dAgency.13">
+  <?DSDL_INCLUDE_START includes/pattern_dNilNvPn.xml?><sch:pattern id="nemSch_dNilNvPn">
 
-  <!-- This pattern validates that dAgency.26 Fire Department ID Number is recorded when dAgency.13 Organizational Type is "Fire Department" and is not recorded when dAgency.13 Organizational Type is not "Fire Department". -->
+  <sch:title>DEMDataSet / Nil/Not Value Attributes</sch:title>
 
-  <sch:title>Fire Department ID Number is recorded when Organizational Type is "Fire Department" and is not recorded when Organizational Type is not "Fire Department".</sch:title>
+  <sch:rule id="nemSch_dNilNvPn_rule_1" context="nem:dCustomResults.01 | nem:eCustomResults.01">
 
-  <sch:rule id="nemSch_consistency_dAgency.13_dAgency.26" context="nem:dAgency.13">
-
-    <sch:let name="nemsisElements" value="., ../nem:dAgency.26"/>
-
-    <sch:assert id="nemSch_consistency_dAgency.13_dAgency.26_fire" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". != '9912001' or ../nem:dAgency.26 != ''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department", <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-    <sch:assert id="nemSch_consistency_dAgency.13_dAgency.26_nonfire" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = '9912001' or ../nem:dAgency.26 = ''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is not "Fire Department", <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should not be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_dAgency.13.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.ServiceGroup.xml?><sch:pattern id="nemSch_consistency_dAgency.ServiceGroup">
-
-  <!-- This pattern validates that each instance of dAgency.06 EMS Agency Service Area County(ies) belongs within the state recorded in dAgency.05 EMS Agency Service Area States and each instance of dAgency.07 EMS Agency Census Tracts belongs within a county recorded in dAgency.06 EMS Agency Service Area County(ies) within the state recorded in dAgency.04 EMS Agency Service Area States. -->
-
-  <sch:title>EMS Agency Service Area County belongs to the EMS Agency Service Area State with which it is grouped and EMS Agency Service Area Census Tract belongs to an EMS Agency Service Area County and the EMS Agency Service Area State with which it is grouped.</sch:title>
-
-  <sch:rule id="nemSch_consistency_dAgency.ServiceGroup_dAgency.06" context="nem:dAgency.06">
-
-    <sch:let name="nemsisElements" value="../nem:dAgency.05, ."/>
-
-    <sch:assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.06_dAgency.05" role="[ERROR]" diagnostics="nemsisDiagnostic" test="substring(., 1, 2) = ../nem:dAgency.05">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to the state with which it is grouped.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07" context="nem:dAgency.07[. != '']">
-
-    <sch:let name="nemsisElements" value="../nem:dAgency.05, ../nem:dAgency.06, ."/>
-
-    <sch:assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06" role="[ERROR]" diagnostics="nemsisDiagnostic" test="substring(., 1, 5) = ../nem:dAgency.06">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to a county recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.06', $nemSch_elements)"/> in the state with which it is grouped.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_dAgency.ServiceGroup.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_NilNvPn.xml?><sch:pattern id="nemSch_consistency_nilNvPn">
-
-  <!-- This pattern allows the following combinations of nil, NV, and PN attributes:
-         * For dCustomResults.01 and eCustomResults.01: Any combination
-         * For elements in eExam.AssessmentGroup: PN (nil and NV are not allowed per the XSD)
-         * For eMedications.03 and eProcedures.03 only: PN and not(nil) and not(NV)
-         * nil and either NV or PN but not both
-       If an element has neither nil, NV, nor PN, the rules in this pattern are not fired (other 
-       than the dummy rule for CustomResults).
-       The XSD ensures consistency between the nil attribute and whether the element is empty, so 
-       that combination is not checked here.
-  -->
-
-  <sch:title>The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate.</sch:title>
-
-  <sch:rule id="nemSch_nilNvPn_customResults" context="nem:dCustomResults.01 | nem:eCustomResults.01">
-
-    <!-- This rule fires when dCustomResults.01 or eCustomResults.01 Custom Data Element Result has 
-         a Pertinent Negative attribute. Nothing is checked. CustomResults should be validated 
-         based on information contained in CustomConfiguration. -->
+    <!-- This rule fires on dCustomResults.01 to prevent subsequent rules from firing. Nothing is checked. dCustomResults should be validated based on information contained in dCustomConfiguration. -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the combination of xsi:nil, Not Value, and Pertinent Negative attributes on dCustomResults.01.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup//*[@PN]">
-
-    <!-- This rule fires when an element in eExam.AssessmentGroup has a Pertinent Negative 
-         attribute. Nothing is checked, since the nil and NV attributes are not allowed.  -->
+  <sch:rule id="nemSch_dNilNvPn_rule_2" context="*[@xsi:nil = 'true']">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
-    </sch:report>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_nilNvPn_Pn_medication_procedure" context="nem:eMedications.03[@PN] | nem:eProcedures.03[@PN]">
-
-    <!-- This rule fires when eMedications.03 Medication Given or eProcedures.03 Procedure has a 
-         Pertinent Negative attribute. -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <!-- Assert that the element should also have a value and should not have a Not Value 
-         attribute. -->
-
-    <sch:assert id="nemSch_nilNvPn_Pn_Not_NilNv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@NV) and not(@xsi:nil = 'true')">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    <sch:assert id="nemSch_d001" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element), or it should be omitted (if the element is optional).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Pn" context="*[@PN]">
-
-    <!-- This rule fires when an element (other than those selected in the previous rules) has a 
-         Pertinent Negative attribute. -->
+  <sch:rule id="nemSch_dNilNvPn_rule_3" context="*[@NV]">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <!-- Assert that the element should be empty and should not have a Not Value attribute. -->
-
-    <sch:assert id="nemSch_nilNvPn_Pn_Nv_Not_Nil" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@NV) and @xsi:nil = 'true'">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_nilNvPn_nil" context="*[@xsi:nil = 'true']">
-
-    <!-- This rule fires when an element is empty (and does not have a Pertinent Negative 
-         attribute). -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <!-- Assert that the element should have a Not Value attribute or a Pertinent Negative 
-         attribute. The presence of a Pertinent Negative attribute is not specifically asserted
-         because if it was present, one of the rules above would have fired instead of this one. -->
-
-    <sch:assert id="nemSch_nilNvPn_nil_Nv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_nilNvPn_Nv" context="*[@NV]">
-
-    <!-- This rule fires when an element has a Not Value attribute (but does not have a Pertinent 
-         Negative attribute and is not empty). -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <!-- Assert that the element should be empty. (This is not specifically asserted because if 
-         the element was empty, the rule above would have fired instead of this one). -->
-    
-    <sch:assert id="nemSch_nilNvPn_Nv_Nil" role="[ERROR]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_d002" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil='true'">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_NilNvPn.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_sequence_dAgency.AgencyYearGroup.xml?><sch:pattern id="nemSch_sequence_dAgency.AgencyYearGroup">
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dNilNvPn.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_dNvPn.xml?><sch:pattern id="nemSch_dNvPn">
 
-  <!-- This pattern validates that dAgency.15 Statistical Calendar Year is in the past. -->
+  <sch:title>DEMDataSet / Not Value/Pertinent Negative Uniqueness</sch:title>
 
-  <sch:title>Statistical Calendar Year is in the past.</sch:title>
+  <sch:rule id="nemSch_dNvPn_rule_1" context="nem:dCustomResults.01">
 
-  <sch:rule id="nemSch_sequence_dAgency.AgencyYearGroup_dAgency.15" context="nem:dAgency.15[. &gt;= year-from-date(current-date())]">
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <sch:assert id="nemSch_sequence_dAgency.AgencyYearGroup_dAgency.15_past" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be in the past.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sequence_dAgency.AgencyYearGroup.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_uniqueness_DEMDataSet.xml?><sch:pattern id="nemSch_uniqueness_DEMDataSet">
-
-  <!-- This pattern validates that values for certain recurring agency demographic elements are 
-       unique within a list.  -->
-
-  <sch:title>Certain recurring demographic data elements are unique within a list.</sch:title>
-
-  <sch:rule id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup" context="nem:dAgency.15[.=../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15]">
-
-    <sch:let name="nemsisElements" value="../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15[.=current()], ."/>
-
-    <sch:assert id="nemSch_uniqueness_DEMDataSet_dAgency.15" role="[ERROR]" diagnostics="nemsisDiagnostic" test="false()">
-      Agency statistics for a particular <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded once.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_DEMDataSet_dConfiguration.11" context="nem:dConfiguration.11[.='1211019']">
-
-    <sch:let name="nemsisElements" value="../nem:dConfiguration.11"/>
-
-    <sch:assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.11_none" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:dConfiguration.11)=1">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other values should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_DEMDataSet_dConfiguration.16" context="nem:dConfiguration.16[.=preceding-sibling::nem:dConfiguration.16]">
-
-    <sch:let name="nemsisElements" value="preceding-sibling::nem:dConfiguration.16[.=current()], ."/>
-
-    <sch:assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.16_assert" role="[ERROR]" diagnostics="nemsisDiagnostic" test="false()">
-      Each <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_uniqueness_DEMDataSet.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_uniqueness_NvPn.xml?><sch:pattern id="nemSch_uniqueness_NvPn">
-
-  <!-- This pattern validates that if a Not Value or Pertinent Negative is recorded for a 
-       recurring element, no other instances of the element are recorded. -->
-
-  <sch:title>When a Not Value or Pertinent Negative is recorded for a recurring element, it is the only value recorded.</sch:title>
-
-  <sch:rule id="nemSch_uniqueness_NvPn_customResults" context="nem:dCustomResults.01 | nem:eCustomResults.01">
-
-    <!-- This rule fires when dCustomResults.01 or eCustomResults.01 Custom Data Element Result 
-         has a Pertinent Negative attribute. Nothing is checked. CustomResults should be validated 
-         based on information contained in CustomConfiguration. -->
+    <!-- This rule fires on dCustomResults.01 to prevent subsequent rules from firing. Nothing is checked. dCustomResults should be validated based on information contained in dCustomConfiguration. -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the uniqueness of dCustomResults.01 with Not Value or Pertinent Negative attribute.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup//*[@PN]">
+  <sch:rule id="nemSch_dNvPn_rule_2" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
 
-    <!-- This rule fires when an element in eExam.AssessmentGroup has a Pertinent Negative 
-         attribute. Nothing is checked, since the Pertinent Negative accompanies a value.  -->
+    <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
+
+    <sch:assert id="nemSch_d003" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value, no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dNvPn.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_dUuid.xml?><sch:pattern id="nemSch_uuid">
+
+  <sch:title>DEMDataSet / UUIDs</sch:title>
+
+  <sch:rule id="nemSch_uuid_rule_1" context="*[@UUID]">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
-    </sch:report>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_NvPn_Nv" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
-
-    <!-- This rule fires when a recurring element (other than those selected in the previous 
-         rules) has a Not Value attribute. -->
-
-    <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
-
-    <!-- Assert that the Not Value should be the only value recorded for the element.  -->
-
-    <sch:assert id="nemSch_uniqueness_NvPn_Nv_only" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value, no other <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded.
+    <sch:assert id="nemSch_d005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="count(ancestor-or-self::nem:DemographicReport/descendant-or-self::*[@UUID = current()/@UUID]) = 1">
+      UUID must be universally unique.
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_Pn" context="*[@PN][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dUuid.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_DemographicReport.xml?><sch:pattern id="nemSch_DemographicReport">
 
-    <!-- This rule fires when a recurring element (other than those selected in the previous 
-         rules) has a Pertinent Negative attribute. -->
+  <sch:title>DEMDataSet / Demographic Report</sch:title>
 
-    <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
+  <sch:rule id="nemSch_DemographicReport_rule_1" context="nem:DemographicReport">
 
-    <!-- Assert that the Pertinent Negative should be the only value recorded for the element.  -->
+    <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_uniqueness_NvPn_Pn_only" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, no other <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded.
+    <sch:assert id="nemSch_d004" role="[ERROR]" diagnostics="nemsisDiagnostic" test="xs:dateTime(@timeStamp) &lt; current-dateTime() + xs:dayTimeDuration('PT1H')">
+      The timestamp of the DemographicReport should not be in the future (the current time according to this system is <sch:value-of select="format-dateTime(current-dateTime(),'[MNn] [D1], [Y0001], [H01]:[m01] [ZN]')"/>).
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_uniqueness_NvPn.xml?>
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_DemographicReport.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_dAgency.xml?><sch:pattern id="nemSch_dAgency">
+
+  <sch:title>DEMDataSet / Agency Information</sch:title>
+
+  <sch:rule id="nemSch_dAgency_rule_1" context="nem:dAgency.06">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_d006" role="[ERROR]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05" test="starts-with(., ../nem:dAgency.05)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to the state with which it is grouped.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_dAgency_rule_2" context="nem:dAgency.07[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05, ../nem:dAgency.06" test="starts-with(., ../nem:dAgency.06)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to a county recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.06', $nemSch_elements)"/> in the state with which it is grouped.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_dAgency_rule_3" context="nem:dAgency.13">
+
+    <sch:let name="nemsisElements" value="., ../nem:dAgency.26"/>
+
+    <sch:assert id="nemSch_d008" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". != '9912001' or ../nem:dAgency.26 != ''">
+      <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
+    </sch:assert>
+
+    <sch:assert id="nemSch_d009" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = '9912001' or not(../nem:dAgency.26 != '')">
+      <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dAgency.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_dConfiguration.xml?><sch:pattern id="nemSch_dConfiguration">
+
+  <sch:title>DEMDataSet / Configuration Information</sch:title>
+
+  <sch:rule id="nemSch_dConfiguration_rule_1" context="nem:dAgency.04">
+
+    <sch:let name="nemsisElements" value="., ancestor-or-self::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01"/>
+
+    <sch:assert id="nemSch_d010" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = ancestor-or-self::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01">
+      There should be a configuration group where <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.01', $nemSch_elements)"/> is the state recorded in <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_dConfiguration_rule_2" context="nem:dConfiguration.01">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_d011" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = ../preceding-sibling::nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same state should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_dConfiguration_rule_3" context="nem:dAgency[nem:dAgency.04 = ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup/nem:dConfiguration.01]">
+
+    <sch:let name="nemsisElements" value="nem:dAgency.04, nem:dAgency.11, ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup[nem:dConfiguration.01 = current()/nem:dAgency.04]/(nem:dConfiguration.01, nem:dConfiguration.ProcedureGroup/nem:dConfiguration.06, nem:dConfiguration.MedicationGroup/nem:dConfiguration.08)"/>
+
+    <sch:assert id="nemSch_d012" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:dAgency.11 = ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup[nem:dConfiguration.01 = current()/nem:dAgency.04]/nem:dConfiguration.ProcedureGroup/nem:dConfiguration.06">
+      <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.06', $nemSch_elements)"/>, within the configuration group for the state recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.04', $nemSch_elements)"/>, should include the level recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.11', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_d013" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:dAgency.11 = ancestor::nem:DemographicReport/nem:dConfiguration/nem:dConfiguration.ConfigurationGroup[nem:dConfiguration.01 = current()/nem:dAgency.04]/nem:dConfiguration.MedicationGroup/nem:dConfiguration.08">
+      <sch:value-of select="key('nemSch_key_elements', 'dConfiguration.08', $nemSch_elements)"/>, within the configuration group for the state recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.04', $nemSch_elements)"/>, should include the level recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.11', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_dConfiguration_rule_4" context="nem:dConfiguration.09[. != '' and @CodeType]">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_d014" role="[ERROR]" diagnostics="nemsisDiagnostic" test="matches(., '^[0-9]{2,7}$') or @CodeType != '9924003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be a code of between 2 and 7 digits when Code Type is "RxNorm".
+    </sch:assert>
+
+    <sch:assert id="nemSch_d015" role="[ERROR]" diagnostics="nemsisDiagnostic" test=". = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000') or @CodeType != '9924005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be a SNOMED code specifically allowed in the data dictionary when Code Type is "SNOMED".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_dConfiguration_rule_5" context="nem:dConfiguration.09[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_d016" role="[ERROR]" diagnostics="nemsisDiagnostic" test="matches(., '^[0-9]{2,7}$') or . = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be an RxNorm code of between 2 and 7 digits or a SNOMED code specifically allowed in the data dictionary.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_dConfiguration_rule_6" context="nem:dConfiguration.16">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_d017" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:dConfiguration.16)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same call sign should not be listed more than once).
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_dConfiguration.xml?>
 
   <!-- DIAGNOSTICS -->
 

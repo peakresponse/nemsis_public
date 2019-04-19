@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.170111" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.5.0.190419_CR" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -39,11 +39,7 @@
   <element name="dAgency.24">EMS Agency Daylight Savings Time Use</element>
   <element name="dAgency.25">National Provider Identifier</element>
   <element name="dAgency.26">Fire Department ID Number</element>
-  <element name="dConfiguration.01">State Associated with the Certification/Licensure Levels</element>
-  <element name="dConfiguration.02">State Certification/Licensure Levels</element>
-  <element name="dConfiguration.03">Procedures Permitted by the State</element>
-  <element name="dConfiguration.04">Medications Permitted by the State</element>
-  <element name="dConfiguration.05">Protocols Permitted by the State</element>
+  <element name="dConfiguration.01">State Associated with this Configuration</element>
   <element name="dConfiguration.06">EMS Certification Levels Permitted to Perform Each Procedure</element>
   <element name="dConfiguration.07">EMS Agency Procedures</element>
   <element name="dConfiguration.08">EMS Certification Levels Permitted to Administer Each Medication</element>
@@ -156,7 +152,6 @@
   <element name="dPersonnel.37">EMS Personnel's Date Length of Service Documented</element>
   <element name="dPersonnel.38">EMS Personnel's Practice Level</element>
   <element name="dPersonnel.39">Date of Personnel's Certification or Licensure for Agency</element>
-  <element name="dState.01">State Required Element</element>
   <element name="dVehicle.01">Unit/Vehicle Number</element>
   <element name="dVehicle.02">Vehicle Identification Number</element>
   <element name="dVehicle.03">EMS Unit Call Sign</element>
@@ -185,11 +180,9 @@
   <element name="eArrest.02">Cardiac Arrest Etiology</element>
   <element name="eArrest.03">Resuscitation Attempted By EMS</element>
   <element name="eArrest.04">Arrest Witnessed By</element>
-  <element name="eArrest.05">CPR Care Provided Prior to EMS Arrival</element>
-  <element name="eArrest.06">Who Provided CPR Prior to EMS Arrival</element>
   <element name="eArrest.07">AED Use Prior to EMS Arrival</element>
-  <element name="eArrest.08">Who Used AED Prior to EMS Arrival</element>
   <element name="eArrest.09">Type of CPR Provided</element>
+  <element name="eArrest.10">Therapeutic Hypothermia by EMS</element>
   <element name="eArrest.11">First Monitored Arrest Rhythm of the Patient</element>
   <element name="eArrest.12">Any Return of Spontaneous Circulation</element>
   <element name="eArrest.13">Neurological Outcome at Hospital Discharge</element>
@@ -199,6 +192,9 @@
   <element name="eArrest.17">Cardiac Rhythm on Arrival at Destination</element>
   <element name="eArrest.18">End of EMS Cardiac Arrest Event</element>
   <element name="eArrest.19">Date/Time of Initial CPR</element>
+  <element name="eArrest.20">Who First Initiated CPR</element>
+  <element name="eArrest.21">Who First Applied the AED</element>
+  <element name="eArrest.22">Who First Defibrillated the Patient</element>
   <element name="eCrew.01">Crew Member ID</element>
   <element name="eCrew.02">Crew Member Level</element>
   <element name="eCrew.03">Crew Member Response Role</element>
@@ -226,7 +222,7 @@
   <element name="eDevice.10">Shock or Pacing Energy</element>
   <element name="eDevice.11">Total Number of Shocks Delivered</element>
   <element name="eDevice.12">Pacing Rate</element>
-  <element name="eDispatch.01">Complaint Reported by Dispatch</element>
+  <element name="eDispatch.01">Dispatch Reason</element>
   <element name="eDispatch.02">EMD Performed</element>
   <element name="eDispatch.03">EMD Card Number</element>
   <element name="eDispatch.04">Dispatch Center Name or ID</element>
@@ -243,10 +239,9 @@
   <element name="eDisposition.09">Destination GPS Location</element>
   <element name="eDisposition.10">Destination Location US National Grid Coordinates </element>
   <element name="eDisposition.11">Number of Patients Transported in this EMS Unit</element>
-  <element name="eDisposition.12">Incident/Patient Disposition</element>
   <element name="eDisposition.13">How Patient Was Moved to Ambulance</element>
   <element name="eDisposition.14">Position of Patient During Transport</element>
-  <element name="eDisposition.15">How Patient Was Transported From Ambulance</element>
+  <element name="eDisposition.15">How Patient Was Moved From Ambulance</element>
   <element name="eDisposition.16">EMS Transport Method</element>
   <element name="eDisposition.17">Transport Mode from Scene</element>
   <element name="eDisposition.18">Additional Transport Mode Descriptors</element>
@@ -258,6 +253,12 @@
   <element name="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</element>
   <element name="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</element>
   <element name="eDisposition.26">Disposition Instructions Provided</element>
+  <element name="eDisposition.27">Unit Disposition</element>
+  <element name="eDisposition.28">Patient Evaluation/Care</element>
+  <element name="eDisposition.29">Crew Incident Disposition</element>
+  <element name="eDisposition.30">Transport Disposition</element>
+  <element name="eDisposition.31">Reason for Refusal/Release</element>
+  <element name="eDisposition.32">Level of Care Provided per Protocol</element>
   <element name="eExam.01">Estimated Body Weight in Kilograms</element>
   <element name="eExam.02">Length Based Tape Measure</element>
   <element name="eExam.03">Date/Time of Assessment</element>
@@ -265,7 +266,6 @@
   <element name="eExam.05">Head Assessment</element>
   <element name="eExam.06">Face Assessment</element>
   <element name="eExam.07">Neck Assessment</element>
-  <element name="eExam.08">Chest/Lungs Assessment</element>
   <element name="eExam.09">Heart Assessment</element>
   <element name="eExam.10">Abdominal Assessment Finding Location</element>
   <element name="eExam.11">Abdomen Assessment</element>
@@ -279,6 +279,10 @@
   <element name="eExam.19">Mental Status Assessment</element>
   <element name="eExam.20">Neurological Assessment</element>
   <element name="eExam.21">Stroke/CVA Symptoms Resolved</element>
+  <element name="eExam.22">Lung Assessment Finding Location</element>
+  <element name="eExam.23">Lung Assessment</element>
+  <element name="eExam.24">Chest Assessment Finding Location</element>
+  <element name="eExam.25">Chest Assessment</element>
   <element name="eHistory.01">Barriers to Patient Care</element>
   <element name="eHistory.02">Last Name of Patient's Practitioner</element>
   <element name="eHistory.03">First Name of Patient's Practitioner</element>
@@ -298,10 +302,11 @@
   <element name="eHistory.17">Alcohol/Drug Use Indicators</element>
   <element name="eHistory.18">Pregnancy</element>
   <element name="eHistory.19">Last Oral Intake</element>
+  <element name="eHistory.20">Current Medication Frequency</element>
   <element name="eInjury.01">Cause of Injury</element>
   <element name="eInjury.02">Mechanism of Injury</element>
-  <element name="eInjury.03">Trauma Center Criteria</element>
-  <element name="eInjury.04">Vehicular, Pedestrian, or Other Injury Risk Factor</element>
+  <element name="eInjury.03">Trauma Triage Criteria (Steps 1 and 2)</element>
+  <element name="eInjury.04">Trauma Triage Criteria (Steps 3 and 4)</element>
   <element name="eInjury.05">Main Area of the Vehicle Impacted by the Collision</element>
   <element name="eInjury.06">Location of Patient in Vehicle</element>
   <element name="eInjury.07">Use of Occupant Safety Equipment</element>
@@ -337,7 +342,7 @@
   <element name="eLabs.08">Imaging Study File or Waveform Graphic</element>
   <element name="eMedications.01">Date/Time Medication Administered</element>
   <element name="eMedications.02">Medication Administered Prior to this Unit's EMS Care</element>
-  <element name="eMedications.03">Medication Given</element>
+  <element name="eMedications.03">Medication Administered</element>
   <element name="eMedications.04">Medication Administered Route</element>
   <element name="eMedications.05">Medication Dosage</element>
   <element name="eMedications.06">Medication Dosage Units</element>
@@ -369,23 +374,22 @@
   <element name="eOther.19">Date/Time of Signature</element>
   <element name="eOther.20">Signature Last Name</element>
   <element name="eOther.21">Signature First Name</element>
+  <element name="eOther.22">File Attachment Name</element>
   <element name="eOutcome.01">Emergency Department Disposition</element>
   <element name="eOutcome.02">Hospital Disposition</element>
   <element name="eOutcome.03">External Report ID/Number Type</element>
   <element name="eOutcome.04">External Report ID/Number</element>
   <element name="eOutcome.05">Other Report Registry Type</element>
-  <element name="eOutcome.06">Emergency Department Chief Complaint</element>
-  <element name="eOutcome.07">First ED Systolic Blood Pressure</element>
-  <element name="eOutcome.08">Emergency Department Recorded Cause of Injury</element>
   <element name="eOutcome.09">Emergency Department Procedures</element>
   <element name="eOutcome.10">Emergency Department Diagnosis</element>
   <element name="eOutcome.11">Date/Time of Hospital Admission</element>
   <element name="eOutcome.12">Hospital Procedures</element>
   <element name="eOutcome.13">Hospital Diagnosis</element>
-  <element name="eOutcome.14">Total ICU Length of Stay</element>
-  <element name="eOutcome.15">Total Ventilator Days</element>
   <element name="eOutcome.16">Date/Time of Hospital Discharge</element>
   <element name="eOutcome.17">Outcome at Hospital Discharge</element>
+  <element name="eOutcome.18">Date/Time of Emergency Department Admission</element>
+  <element name="eOutcome.19">Date/Time Emergency Department Procedure Performed</element>
+  <element name="eOutcome.20">Date/Time Hospital Procedure Performed</element>
   <element name="ePatient.01">EMS Patient ID</element>
   <element name="ePatient.02">Last Name</element>
   <element name="ePatient.03">First Name</element>
@@ -407,6 +411,7 @@
   <element name="ePatient.19">Patient's Email Address</element>
   <element name="ePatient.20">State Issuing Driver's License</element>
   <element name="ePatient.21">Driver's License Number</element>
+  <element name="ePatient.22">Alternate Home Residence</element>
   <element name="ePayment.01">Primary Method of Payment</element>
   <element name="ePayment.02">Physician Certification Statement</element>
   <element name="ePayment.03">Date Physician Certification Statement Signed</element>
@@ -464,6 +469,8 @@
   <element name="ePayment.56">Number of Supply Item(s) Used</element>
   <element name="ePayment.57">Payer Type</element>
   <element name="ePayment.58">Insurance Group Name</element>
+  <element name="ePayment.59">Insurance Company Phone Number</element>
+  <element name="ePayment.60">Date of Birth of the Insured</element>
   <element name="eProcedures.01">Date/Time Procedure Performed</element>
   <element name="eProcedures.02">Procedure Performed Prior to this Unit's EMS Care</element>
   <element name="eProcedures.03">Procedure</element>
@@ -489,7 +496,7 @@
   <element name="eResponse.04">EMS Response Number</element>
   <element name="eResponse.05">Type of Service Requested</element>
   <element name="eResponse.06">Standby Purpose</element>
-  <element name="eResponse.07">Primary Role of the Unit</element>
+  <element name="eResponse.07">Unit Transport and Equipment Capability</element>
   <element name="eResponse.08">Type of Dispatch Delay</element>
   <element name="eResponse.09">Type of Response Delay</element>
   <element name="eResponse.10">Type of Scene Delay</element>
@@ -497,7 +504,6 @@
   <element name="eResponse.12">Type of Turn-Around Delay</element>
   <element name="eResponse.13">EMS Vehicle (Unit) Number</element>
   <element name="eResponse.14">EMS Unit Call Sign</element>
-  <element name="eResponse.15">Level of Care of This Unit</element>
   <element name="eResponse.16">Vehicle Dispatch Location</element>
   <element name="eResponse.17">Vehicle Dispatch GPS Location</element>
   <element name="eResponse.18">Vehicle Dispatch Location US National Grid Coordinates</element>
@@ -530,6 +536,7 @@
   <element name="eScene.21">Incident County</element>
   <element name="eScene.22">Incident Country</element>
   <element name="eScene.23">Incident Census Tract</element>
+  <element name="eScene.24">First Other EMS or Public Safety Agency at Scene to Provide Patient Care</element>
   <element name="eSituation.01">Date/Time of Symptom Onset</element>
   <element name="eSituation.02">Possible Injury</element>
   <element name="eSituation.03">Complaint Type</element>
@@ -548,7 +555,8 @@
   <element name="eSituation.16">Patient's Occupation</element>
   <element name="eSituation.17">Patient Activity</element>
   <element name="eSituation.18">Date/Time Last Known Well</element>
-  <element name="eState.01">State Required Element</element>
+  <element name="eSituation.19">Justification for Transfer or Encounter</element>
+  <element name="eSituation.20">Reason for Interfacility Transfer/Medical Transport</element>
   <element name="eTimes.01">PSAP Call Date/Time</element>
   <element name="eTimes.02">Dispatch Notified Date/Time</element>
   <element name="eTimes.03">Unit Notified by Dispatch Date/Time</element>
@@ -565,6 +573,7 @@
   <element name="eTimes.14">Unit Canceled Date/Time</element>
   <element name="eTimes.15">Unit Back at Home Location Date/Time</element>
   <element name="eTimes.16">EMS Call Completed Date/Time</element>
+  <element name="eTimes.17">Unit Arrived at Staging Area Date/Time</element>
   <element name="eVitals.01">Date/Time Vital Signs Taken</element>
   <element name="eVitals.02">Obtained Prior to this Unit's EMS Care</element>
   <element name="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</element>
@@ -598,6 +607,53 @@
   <element name="eVitals.31">Reperfusion Checklist</element>
   <element name="eVitals.32">APGAR</element>
   <element name="eVitals.33">Revised Trauma Score</element>
+  <element name="sAgency.01">EMS Agency Unique State ID</element>
+  <element name="sAgency.02">EMS Agency Number</element>
+  <element name="sAgency.03">EMS Agency Name</element>
+  <element name="sConfiguration.01">State Certification/Licensure Levels</element>
+  <element name="sConfiguration.02">EMS Certification Levels Permitted to Perform Each Procedure</element>
+  <element name="sConfiguration.03">Procedures Permitted by the State</element>
+  <element name="sConfiguration.04">EMS Certification Levels Permitted to Administer Each Medication</element>
+  <element name="sConfiguration.05">Medications Permitted by the State</element>
+  <element name="sConfiguration.06">Protocols Permitted by the State</element>
+  <element name="sElement.01">State Collected Element</element>
+  <element name="sFacility.01">Type of Facility</element>
+  <element name="sFacility.02">Facility Name</element>
+  <element name="sFacility.03">Facility Location Code</element>
+  <element name="sFacility.04">Hospital Designations</element>
+  <element name="sFacility.05">Facility National Provider Identifier</element>
+  <element name="sFacility.06">Facility Room, Suite, or Apartment</element>
+  <element name="sFacility.07">Facility Street Address</element>
+  <element name="sFacility.08">Facility City</element>
+  <element name="sFacility.09">Facility State</element>
+  <element name="sFacility.10">Facility ZIP Code</element>
+  <element name="sFacility.11">Facility County</element>
+  <element name="sFacility.12">Facility Country</element>
+  <element name="sFacility.13">Facility GPS Location</element>
+  <element name="sFacility.14">Facility US National Grid Coordinates</element>
+  <element name="sFacility.15">Facility Phone Number</element>
+  <element name="sSoftware.01">Software Creator</element>
+  <element name="sSoftware.02">Software Name</element>
+  <element name="sSoftware.03">Software Version</element>
+  <element name="sState.01">State</element>
+  <element name="sdCustomConfiguration.01">Agency Demographic Custom Data Element Title</element>
+  <element name="sdCustomConfiguration.02">Agency Demographic Custom Definition</element>
+  <element name="sdCustomConfiguration.03">Agency Demographic Custom Data Type</element>
+  <element name="sdCustomConfiguration.04">Agency Demographic Custom Data Element Recurrence</element>
+  <element name="sdCustomConfiguration.05">Agency Demographic Custom Data Element Usage</element>
+  <element name="sdCustomConfiguration.06">Agency Demographic Custom Data Element Potential Values</element>
+  <element name="sdCustomConfiguration.07">Agency Demographic Custom Data Element Potential NOT Values (NV)</element>
+  <element name="sdCustomConfiguration.08">Agency Demographic Custom Data Element Potential Pertinent Negative Values (PN)</element>
+  <element name="sdCustomConfiguration.09">Agency Demographic Custom Data Element Grouping ID</element>
+  <element name="seCustomConfiguration.01">Patient Care Report Custom Data Element Title</element>
+  <element name="seCustomConfiguration.02">Patient Care Report Custom Definition</element>
+  <element name="seCustomConfiguration.03">Patient Care Report Custom Data Type</element>
+  <element name="seCustomConfiguration.04">Patient Care Report Custom Data Element Recurrence</element>
+  <element name="seCustomConfiguration.05">Patient Care Report Custom Data Element Usage</element>
+  <element name="seCustomConfiguration.06">Patient Care Report Custom Data Element Potential Values</element>
+  <element name="seCustomConfiguration.07">Patient Care Report Custom Data Element Potential NOT Values (NV)</element>
+  <element name="seCustomConfiguration.08">Patient Care Report Custom Data Element Potential Pertinent Negative Values (PN)</element>
+  <element name="seCustomConfiguration.09">Patient Care Report Custom Data Element Grouping ID</element>
 </nemSch_lookup_elements><?DSDL_INCLUDE_END includes/lookup_elements.xml#nemSch_lookup_elements?>
   </xsl:variable>
   <sch:let name="nemSch_elements" value="$nemSch_lookup_elements//*:nemSch_lookup_elements"/>
@@ -609,1475 +665,1614 @@
 
   <!-- PATTERNS -->
 
-  <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.02_eResponse.01.xml?><sch:pattern id="nemSch_consistency_dAgency.02_eResponse.01">
+  <?DSDL_INCLUDE_START includes/pattern_eNilNvPn.xml?><sch:pattern id="nemSch_eNilNvPn">
 
-  <!-- This pattern verifies that the EMS Agency Number in eResponse.01 matches the EMS Agency Number in dAgency.02. -->
+  <sch:title>EMSDataSet / Nil/Not Value/Pertinent Negative Attributes</sch:title>
 
-  <sch:title>eResponse.01 EMS Agency Number matches dAgency.02 EMS Agency Number.</sch:title>
+  <sch:rule id="nemSch_eNilNvPn_rule_1" context="nem:eCustomResults.01">
 
-  <sch:rule id="nemSch_consistency_dAgency.02_eResponse.01_eResponse.01" context="nem:eResponse.01">
-
-    <sch:let name="nemsisElements" value="., ancestor::nem:Header/nem:DemographicGroup/nem:dAgency.02"/>
-
-    <sch:assert id="nemSch_consistency_dAgency.02_eResponse.01_eResponse.01_match" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = ancestor::nem:Header/nem:DemographicGroup/nem:dAgency.02">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> in the patient care report should match <sch:value-of select="key('nemSch_key_elements', 'dAgency.02', $nemSch_elements)"/> in the agency demographic information.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_dAgency.02_eResponse.01.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eArrest.xml?><sch:pattern id="nemSch_consistency_eArrest">
-
-  <!-- This pattern validates consistency between the presence of cardiac arrest and the presence 
-       of elements that are only collected in cardiac arrest cases. The elements in the eArrest 
-       section should be recorded when (and only when) eArrest.01 Cardiac Arrest is "Yes...". -->
-
-  <sch:title>When eArrest.01 Cardiac Arrest is "Yes...", other elements in the eArrest section are recorded, and when eArrest.01 Cardiac Arrest is not "Yes...", other elements in the eArrest section are not recorded.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eArrest_all" context="nem:eArrest[nem:eArrest.01 = ('3001003', '3001005')]">
-
-    <!-- This rule fires when eArrest.01 Cardiac Arrest is "Yes...". -->
-
-    <!-- Flag each of the following elements if it is empty. -->
-
-    <sch:let name="eArrest.02" value="if(nem:eArrest.02 != '') then '' else key('nemSch_key_elements', 'eArrest.02', $nemSch_elements)"/>
-
-    <sch:let name="eArrest.03" value="if(not(nem:eArrest.03 = '')) then '' else key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/>
-
-    <sch:let name="eArrest.04" value="if(not(nem:eArrest.04 = '')) then '' else key('nemSch_key_elements', 'eArrest.04', $nemSch_elements)"/>
-
-    <!-- Do not flag eArrest.05 CPR Care Provided Prior to EMS Arrival or eArrest.07 AED Use Prior 
-         to EMS Arrival if Cardiac Arrest is not "Yes, Prior to EMS Arrival". -->
-
-    <sch:let name="eArrest.05" value="if(nem:eArrest.05 != '' or nem:eArrest.01 != '3001003') then '' else key('nemSch_key_elements', 'eArrest.05', $nemSch_elements)"/>
-
-    <sch:let name="eArrest.07" value="if(nem:eArrest.07 != '' or nem:eArrest.01 != '3001003') then '' else key('nemSch_key_elements', 'eArrest.07', $nemSch_elements)"/>
-
-    <!-- Do not flag eArrest.17 Cardiac Rhythm on Arrival at Destination unless Disposition 
-         indicates transport by EMS. -->
-
-    <sch:let name="eArrest.17" value="if(nem:eArrest.17 != '' or not(../nem:eDisposition/nem:eDisposition.12 = (4212013, 4212017, 4212033))) then '' else key('nemSch_key_elements', 'eArrest.17', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="(nem:eArrest.01, nem:eArrest.02[$eArrest.02], nem:eArrest.03[$eArrest.02], nem:eArrest.04[$eArrest.02], nem:eArrest.05[$eArrest.02], nem:eArrest.07[$eArrest.07], nem:eArrest.17[$eArrest.17])"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements. -->
-
-    <sch:assert id="nemSch_consistency_eArrest_all_present" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eArrest.02 or $eArrest.03 or $eArrest.04 or $eArrest.05 or $eArrest.07 or $eArrest.17)">
-      When <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes", the following information related to cardiac arrest and resuscitation should be recorded:
-      <sch:value-of select="string-join(($eArrest.02, $eArrest.03, $eArrest.04, $eArrest.05, $eArrest.07, $eArrest.17)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eArrest.01" context="nem:eArrest[some $element in .//*[local-name() != 'eArrest.01'] satisfies normalize-space($element) != '']">
-
-    <!-- This rule fires when eArrest.01 Cardiac Arrest is not "Yes..." and the eArrest section 
-         has a value recorded in any element other than eArrest.01. -->
-
-    <sch:let name="nemsisElements" value="(nem:eArrest.01[. = ''], *[. != ''])"/>
-
-    <sch:assert id="nemSch_consistency_eArrest.01_yes" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Information related to cardiac arrest and resuscitation should be recorded only when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes".
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eArrest.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eArrest.03.xml?><sch:pattern id="nemSch_consistency_eArrest.03">
-
-  <!-- This pattern validates consistency in eArrest.03 Resuscitation Attempted by EMS. -->
-
-  <sch:title>eArrest.03 Resuscitation Attempted By EMS does not contain "Attempted/Initiated..." and "Not Attempted..." in the same record.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eArrest.03_attempted" context="nem:eArrest[nem:eArrest.03 != '']">
-
-    <!-- This rule fires when there are non-empty instances of eArrest.03 within eArrest. -->
-
-    <sch:let name="nemsisElements" value="nem:eArrest.03"/>
-
-    <!-- Assert that eArrest.03 Resuscitation Attempted by EMS should not contain both "Attempted/Initiated..." and "Not Attempted..." in the same record.  -->
-
-    <sch:assert id="nemSch_consistency_eArrest.03_attempted_not" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = ('3003001', '3003003', '3003005') and nem:eArrest.03 = ('3003007', '3003009', '3003011'))">
-      <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> should not contain both "Attempted/Initiated..." and "Not Attempted..." in the same record.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eArrest.03.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eArrest.03_eArrest.09.xml?><sch:pattern id="nemSch_consistency_eArrest.03_eArrest.09">
-
-  <!-- This pattern validates consistency between eArrest.03 Resuscitation Attempted by EMS and 
-       eArrest.09 Type of CPR Provided. -->
-
-  <sch:title>In eArrest.03 Resuscitation Attempted By EMS and eArrest.09 Type of CPR Provided, information is consistent regarding compressions and ventilation.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eArrest.03_eArrest.09_match" context="nem:eArrest[nem:eArrest.03 !='' or nem:eArrest.09 != '']">
-
-    <!-- This rule fires when there are non-empty instances of eArrest.03 or eArrest.09 within 
-         eArrest. -->
-
-    <sch:let name="nemsisElements" value="(nem:eArrest.03, nem:eArrest.09)"/>
-
-    <!-- Assert that when eArrest.03 Resuscitation Attempted by EMS contains "Initiated Chest 
-         Compressions", eArrest.09 Type of CPR Provided should contain "Compressions...".  -->
-
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_compressions_1" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = '3003005') or nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011')">
-      When <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Initiated Chest Compressions", <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> should contain "Compressions...".
-    </sch:assert>
-
-    <!-- Assert that when eArrest.03 Resuscitation Attempted by EMS contains "Attempted 
-         Ventilation", eArrest.09 Type of CPR Provided should contain "Ventilation...".  -->
-
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_1" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = '3003003') or nem:eArrest.09 = ('3009013', '3009015', '3009017', '3009019')">
-      When <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Attempted Ventilation", <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> should contain "Ventilation...".
-    </sch:assert>
-
-    <!-- Assert that when eArrest.09 Type of CPR Provided contains "Compressions...", eArrest.03 
-         Resuscitation Attempted by EMS should contain "Initiated Chest Compressions" .  -->
-
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_compressions_2" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eArrest.03 = '3003005' or not(nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011'))">
-      When <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Compressions...", <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> should contain "Initiated Chest Compressions".
-    </sch:assert>
-
-    <!-- Assert that when eArrest.09 Type of CPR Provided contains "Ventilation...", eArrest.03 
-         Resuscitation Attempted by EMS should contain "Attempted Ventilation" .  -->
-
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_2" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eArrest.03 = '3003003' or not(nem:eArrest.09 = ('3009013', '3009015', '3009017', '3009019'))">
-      When <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Ventilation...", <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> should contain "Attempted Ventilation".
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eArrest.03_eArrest.09.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eDisposition.xml?><sch:pattern id="nemSch_consistency_eDisposition">
-
-  <!-- This pattern validates consistency among elements in the eDisposition section. -->
-
-  <sch:title>Elements in the eDisposition section are consistent.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eDisposition.06" context="nem:eDisposition.06[. != '']">
-
-    <sch:let name="nemsisElements" value="../nem:eDisposition.05, ."/>
-
-    <sch:assert id="nemSch_consistency_eDisposition.06_eDisposition.05" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:eDisposition.05)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'eDisposition.05', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eDisposition.21_hospital" context="nem:eDisposition.21[. = ('4221003', '4221005', '4221023')]">
-
-    <!-- This rule fires when eDisposition.21 Destination Type is "Hospital..." or "Freestanding 
-         Emergency Department". -->
-
-    <sch:let name="nemsisElements" value="., ../(nem:eDisposition.22, nem:eDisposition.23[../nem:eDisposition.21 = '4221005'])[.='']"/>
-
-    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.22" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". != '4221005' or ../nem:eDisposition.22!=''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Hospital-Non-Emergency Department Bed", <sch:value-of select="key('nemSch_key_elements', 'eDisposition.22', $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eDisposition.23!=''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department", <sch:value-of select="key('nemSch_key_elements', 'eDisposition.23', $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eDisposition.21_nonhospital" context="nem:eDisposition.21">
-
-    <!-- This rule fires when eDisposition.21 Destination Type is not "Hospital..." or 
-         "Freestanding Emergency Department". -->
-
-    <!-- Flag the following elements that should be "Not Applicable". -->
-    
-    <sch:let name="eDisposition.22" value="if(../nem:eDisposition.22/@NV = '7701001') then '' else key('nemSch_key_elements', 'eDisposition.22', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.23" value="if(../nem:eDisposition.23/@NV = '7701001') then '' else key('nemSch_key_elements', 'eDisposition.23', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="., ../(nem:eDisposition.22[$eDisposition.22], nem:eDisposition.23[$eDisposition.23])"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eDisposition.21_nonhospital_all" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eDisposition.22 or $eDisposition.23)">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is not "Hospital..." or "Freestanding Emergency Department", the following should be "Not Applicable":
-      <sch:value-of select="string-join(($eDisposition.22, $eDisposition.23)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eDisposition.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eDisposition.12.xml?><sch:pattern id="nemSch_consistency_eDisposition.12">
-
-  <!-- This pattern validates that certain elements are recorded, based on the Incident/Patient 
-       Disposition. -->
-
-  <sch:title>Certain elements are recorded, based on eDisposition.12 Incident/Patient Disposition.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eDisposition.12_no_scene" context="nem:PatientCareReport[nem:eDisposition/nem:eDisposition.12[. = 4212007]]">
-
-    <!-- This rule fires if Disposition is "Canceled (Prior to Arrival at Scene)". Nothing is 
-         checked. -->
-
-    <sch:let name="nemsisElements" value="nem:eDisposition.12"/>
-    
-    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
-    </sch:report>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eDisposition.12_all" context="nem:PatientCareReport">
-
-    <!-- This rule fires on each PatientCareReport. -->
-
-    <!-- Set flags based on eDisposition.12 Incident/Patient Disposition. -->
-
-    <!-- no_scene: Canceled (Prior to Arrival at Scene). -->
-
-    <sch:let name="no_scene" value="if(ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = 4212007]) then true() else false()"/>
-
-    <!-- no_patient: No scene or Assist, Canceled on Scene (No Patient), Standby, or Transport of 
-                     Body Parts or Organs Only. -->
-
-    <sch:let name="no_patient" value="if($no_scene or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. &lt;= 4212011 or . = (4212039, 4212041, 4212043)]) then true() else false()"/>
-
-    <!-- no_treatment: No patient or No Resuscitation Attempted, Patient Refused Evaluation/Care, 
-                       or No Treatment/Transport Required. (Note: it is possible but not necessary 
-                       that treatment was given in the case of Patient Refused Evaluation/Care.) -->
-
-    <sch:let name="no_treatment" value="if($no_patient or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212013, 4212015, 4212021, 4212023, 4212025)]) then true() else false()"/>
-
-    <!-- no_transport: No patient or Without Transport, No Treatment/Transport Required, Released, 
-                       or Transferred. -->
-
-    <sch:let name="no_transport" value="if($no_patient or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212015, 4212019, 4212021, 4212025, 4212027, 4212029, 4212031)]) then true() else false()"/>
-
-    <!-- no_emstransport: No transport or Transported by Law Enforcement, Transported by Private 
-                          Vehicle, Transport Non-Patient. -->
-
-    <sch:let name="no_emstransport" value="if($no_transport or ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. = (4212035, 4212037, 4212043)]) then true() else false()"/>
-
-    <!-- no_911: eResponse.05 Type of Service Requested is not "911 Response (Scene)". -->
-
-    <sch:let name="no_911" value="if(ancestor-or-self::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != 2205001) then true() else false()"/>
-
-    <!-- Flag each of the following elements if it is empty, contingent upon a flag that was set 
-         based on the Disposition. -->
-
-    <!-- eArrest.16: If Disposition is "Patient Dead at Scene-Resuscitation Attempted..." -->
-    
-    <sch:let name="eArrest.16" value="if(not(nem:eDisposition/nem:eDisposition.12 = (4212017, 4212019)) or nem:eArrest/nem:eArrest.16 != '') then '' else key('nemSch_key_elements', 'eArrest.16', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.05" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.DestinationGroup/nem:eDisposition.05 != '') then '' else key('nemSch_key_elements', 'eDisposition.05', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.06" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.DestinationGroup/nem:eDisposition.06 != '') then '' else key('nemSch_key_elements', 'eDisposition.06', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.07" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.DestinationGroup/nem:eDisposition.07 != '') then '' else key('nemSch_key_elements', 'eDisposition.07', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.16" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.16 != '') then '' else key('nemSch_key_elements', 'eDisposition.16', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.17" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.17 != '') then '' else key('nemSch_key_elements', 'eDisposition.17', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.19" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.19 != '') then '' else key('nemSch_key_elements', 'eDisposition.19', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.20" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.20 != '') then '' else key('nemSch_key_elements', 'eDisposition.20', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.21" value="if($no_emstransport or nem:eDisposition/nem:eDisposition.21 != '') then '' else key('nemSch_key_elements', 'eDisposition.21', $nemSch_elements)"/>
-
-    <sch:let name="ePatient.07" value="if($no_emstransport or nem:ePatient/nem:ePatient.07 != '') then '' else key('nemSch_key_elements', 'ePatient.07', $nemSch_elements)"/>
-
-    <sch:let name="ePatient.08" value="if($no_emstransport or nem:ePatient/nem:ePatient.08 != '') then '' else key('nemSch_key_elements', 'ePatient.08', $nemSch_elements)"/>
-
-    <sch:let name="ePatient.09" value="if($no_emstransport or nem:ePatient/nem:ePatient.09 != '') then '' else key('nemSch_key_elements', 'ePatient.09', $nemSch_elements)"/>
-
-    <sch:let name="ePatient.13" value="if($no_patient or nem:ePatient/nem:ePatient.13 != '') then '' else key('nemSch_key_elements', 'ePatient.13', $nemSch_elements)"/>
-
-    <sch:let name="ePatient.14" value="if($no_emstransport or nem:ePatient/nem:ePatient.14 != '') then '' else key('nemSch_key_elements', 'ePatient.14', $nemSch_elements)"/>
-
-    <sch:let name="ePatient.15" value="if($no_patient or nem:ePatient/nem:ePatient.AgeGroup/nem:ePatient.15 != '') then '' else key('nemSch_key_elements', 'ePatient.15', $nemSch_elements)"/>
-
-    <sch:let name="ePatient.16" value="if($no_patient or nem:ePatient/nem:ePatient.AgeGroup/nem:ePatient.16 != '') then '' else key('nemSch_key_elements', 'ePatient.16', $nemSch_elements)"/>
-
-    <sch:let name="ePayment.01" value="if($no_emstransport or nem:ePayment/nem:ePayment.01 != '') then '' else key('nemSch_key_elements', 'ePayment.01', $nemSch_elements)"/>
-
-    <sch:let name="eScene.09" value="if($no_scene or nem:eScene/nem:eScene.09 != '') then '' else key('nemSch_key_elements', 'eScene.09', $nemSch_elements)"/>
-
-    <sch:let name="eSituation.02" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.02 != '') then '' else key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/>
-
-    <sch:let name="eSituation.07" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.07 != '') then '' else key('nemSch_key_elements', 'eSituation.07', $nemSch_elements)"/>
-
-    <sch:let name="eSituation.08" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.08 != '') then '' else key('nemSch_key_elements', 'eSituation.08', $nemSch_elements)"/>
-
-    <sch:let name="eSituation.09" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.09 != '') then '' else key('nemSch_key_elements', 'eSituation.09', $nemSch_elements)"/>
-
-    <sch:let name="eSituation.11" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.11 != '') then '' else key('nemSch_key_elements', 'eSituation.11', $nemSch_elements)"/>
-
-    <sch:let name="eSituation.13" value="if($no_treatment or $no_emstransport or $no_911 or nem:eSituation/nem:eSituation.13 != '') then '' else key('nemSch_key_elements', 'eSituation.13', $nemSch_elements)"/>
-
-    <sch:let name="eTimes.05" value="if($no_scene or nem:eTimes/nem:eTimes.05 != '') then '' else key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>
-
-    <sch:let name="eTimes.06" value="if($no_scene or nem:eTimes/nem:eTimes.06 != '') then '' else key('nemSch_key_elements', 'eTimes.06', $nemSch_elements)"/>
-
-    <sch:let name="eTimes.07" value="if($no_patient or nem:eTimes/nem:eTimes.07 != '') then '' else key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>
-
-    <sch:let name="eTimes.09" value="if($no_emstransport or nem:eTimes/nem:eTimes.09 != '') then '' else key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>
-
-    <sch:let name="eTimes.11" value="if($no_emstransport or nem:eTimes/nem:eTimes.11 != '') then '' else key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>
-
-    <sch:let name="eTimes.12" value="if($no_emstransport or nem:eTimes/nem:eTimes.12 != '') then '' else key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="nem:eDisposition/nem:eDisposition.12, nem:eArrest.16[$eArrest.16], nem:eDisposition/(nem:eDisposition.DestinationGroup/(nem:eDisposition.05[$eDisposition.05], nem:eDisposition.06[$eDisposition.06], nem:eDisposition.07[$eDisposition.07]), nem:eDisposition.16[$eDisposition.16], nem:eDisposition.17[$eDisposition.17], nem:eDisposition.19[$eDisposition.19], nem:eDisposition.20[$eDisposition.20]), nem:eDisposition.21[$eDisposition.21], nem:ePatient/(nem:ePatient.07[$ePatient.07], nem:ePatient.08[$ePatient.08], nem:ePatient.09[$ePatient.09], nem:ePatient.13[$ePatient.13], nem:ePatient.14[$ePatient.14], nem:ePatient.AgeGroup/nem:ePatient.15[$ePatient.15], nem:ePatient.AgeGroup/nem:ePatient.16[$ePatient.16]), nem:ePayment.01[$ePayment.01], nem:eScene/nem:eScene.09[$eScene.09], nem:eSituation/(nem:eSituation.02[$eSituation.02], nem:eSituation.07[$eSituation.07], nem:eSituation.08[$eSituation.08], nem:eSituation.09[$eSituation.09], nem:eSituation.11[$eSituation.11], nem:eSituation.13[$eSituation.13]), nem:eTimes/(nem:eTimes.05[$eTimes.05], nem:eTimes.06[$eTimes.06], nem:eTimes.07[$eTimes.07], nem:eTimes.09[$eTimes.09], nem:eTimes.11[$eTimes.11], nem:eTimes.12[$eTimes.12])"/>
-
-    <!-- Assert (as error) that none of certain elements above should be flagged. If the assert 
-         fails, list the flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_error" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not($eDisposition.16 or $eDisposition.17 or $eDisposition.20 or $eDisposition.21)">
-      Based on <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/>, the following should be recorded:
-      <sch:value-of select="string-join(($eDisposition.16, $eDisposition.17, $eDisposition.20, $eDisposition.21)[. != ''], ', ')"/>
-    </sch:assert>
-
-    <!-- Assert (as warning) that none of certain elements above should be flagged. If the assert 
-         fails, list the flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eArrest.16 or $eDisposition.05 or $eDisposition.06 or $eDisposition.07 or $eDisposition.19 or $ePatient.07 or $ePatient.08 or $ePatient.09 or $ePatient.13 or $ePatient.14 or $ePatient.15 or $ePatient.16 or $ePayment.01 or $eScene.09 or $eSituation.02 or $eSituation.07 or $eSituation.08 or $eSituation.09 or $eSituation.11 or $eSituation.13 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.09 or $eTimes.11 or $eTimes.12)">
-      Based on <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/>, the following should be recorded:
-      <sch:value-of select="string-join(($eArrest.16, $eDisposition.05, $eDisposition.06, $eDisposition.07, $eDisposition.19, $ePatient.07, $ePatient.08, $ePatient.09, $ePatient.13, $ePatient.14, $ePatient.15, $ePatient.16, $ePayment.01, $eScene.09, $eSituation.02, $eSituation.07, $eSituation.08, $eSituation.09, $eSituation.11, $eSituation.13, $eTimes.05, $eTimes.06, $eTimes.07, $eTimes.09, $eTimes.11, $eTimes.12)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eDisposition.12.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eDisposition.HospitalTeamActivationGroup.xml?><sch:pattern id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup">
-
-  <!-- This pattern validates that eDisposition.24 Destination Team Pre-Arrival Alert or 
-       Activation and eDisposition.25 Date/Time of Destination Prearrival Alert or Activation are 
-       both recorded when either one is recorded. -->
-
-  <sch:title>eDisposition.24 Destination Team Pre-Arrival Alert or Activation and eDisposition.25 Date/Time of Destination Prearrival Alert or Activation are both recorded when either one is recorded.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24" context="nem:eDisposition.HospitalTeamActivationGroup[nem:eDisposition.25 != '']">
-
-    <!-- This rule fires when eDisposition.25 Date/Time of Destination Prearrival Alert or 
-         Activation is recorded. -->
-
-    <sch:let name="nemsisElements" value="*"/>
-
-    <!-- Assert that eDisposition.24 Destination Team Pre-Arrival Alert or Activation is also 
-         recorded. -->
-
-    <sch:assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24_present" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eDisposition.24 != ''">
-      When <sch:value-of select="key('nemSch_key_elements', 'eDisposition.25', $nemSch_elements)"/> is recorded, <sch:value-of select="key('nemSch_key_elements', 'eDisposition.24', $nemSch_elements)"/> should also be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25" context="nem:eDisposition.HospitalTeamActivationGroup[not(nem:eDisposition.24 = ('', '4224001'))]">
-
-    <!-- This rule fires when eDisposition.25 Date/Time of Destination Prearrival Alert or 
-         Activation is not recorded and eDisposition.24 Destination Team Pre-Arrival Alert or 
-         Activation is recorded and is not "None". -->
-
-    <sch:let name="nemsisElements" value="*"/>
-
-    <!-- Assert that eDisposition.25 Date/Time of Destination Prearrival Alert or Activation is 
-         also recorded. -->
-
-    <sch:assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25_present" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      When <sch:value-of select="key('nemSch_key_elements', 'eDisposition.24', $nemSch_elements)"/> is recorded, <sch:value-of select="key('nemSch_key_elements', 'eDisposition.25', $nemSch_elements)"/> should also be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eDisposition.HospitalTeamActivationGroup.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eInjury.xml?><sch:pattern id="nemSch_consistency_eInjury">
-
-  <!-- This pattern validates consistency between the presence of possible injury and the 
-       presence of elements that are only collected in possible injury cases. The elements in 
-       the eInjury section should be recorded when (and only when) eSituation.02 Possible Injury 
-       is "Yes". -->
-
-  <sch:title>When eSituation.02 Possible Injury is "Yes" (and eDisposition.12 Incident/Patient Disposition indicates patient contact), elements in the eInjury section are recorded, and when eSituation.02 Possible Injury is not "Yes", elements in the eInjury section are not recorded.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eInjury_all" context="nem:eInjury[../nem:eSituation/nem:eSituation.02 = '9922005']">
-
-    <!-- This rule fires when eSituation.02 Possible Injury is "Yes". -->
-
-    <!-- Set no_patient flag based on eDisposition.12 Incident/Patient Disposition. -->
-
-    <!-- no_patient: Assist, Canceled, Standby, or Transport of Body Parts or Organs Only. -->
-
-    <sch:let name="no_patient" value="if(ancestor-or-self::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12[. &lt;= 4212011 or . = (4212039, 4212041, 4212043)]) then true() else false()"/>
-
-    <!-- Flag each of the following elements if it is empty. -->
-
-    <sch:let name="eInjury.01" value="if($no_patient or nem:eInjury.01 != '') then '' else key('nemSch_key_elements', 'eInjury.01', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="(../nem:eSituation/nem:eSituation.02, (nem:eInjury.01)[. = ''])"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eInjury_all_present" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eInjury.01)">
-      When <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes", the following information related to injury should be recorded:
-      <sch:value-of select="string-join(($eInjury.01)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eInjury_eSituation.02" context="nem:eInjury[some $element in .//* satisfies normalize-space($element) != '']">
-
-    <!-- This rule fires when eSituation.02 Possible Injury is not "Yes" and the eInjury section 
-         has a value recorded in any element. -->
-
-    <sch:let name="nemsisElements" value="(../nem:eSituation/nem:eSituation.02, *[. != ''])"/>
-
-    <sch:assert id="nemSch_consistency_eInjury.01_yes" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Information related to injury should be recorded only when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eInjury.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_ePatient.xml?><sch:pattern id="nemSch_consistency_ePatient">
-
-  <!-- This pattern validates consistency among elements in the ePatient section. -->
-
-  <sch:title>Elements in the ePatient section are consistent.</sch:title>
-
-  <sch:rule id="nemSch_consistency_ePatient.07" context="nem:ePatient.07[. != '']">
-
-    <sch:let name="nemsisElements" value="., ../nem:ePatient.08"/>
-
-    <!-- Assert that the ePatient.07 Patient's Home County should belong within ePatient.08 
-         Patient's Home State. -->
-    
-    <sch:assert id="nemSch_consistency_ePatient.07_ePatient.08" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:ePatient.08)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'ePatient.08', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_ePatient.15" context="nem:ePatient.15[. != '']">
-
-    <sch:let name="nemsisElements" value="., ../nem:ePatient.16"/>
-
-    <sch:assert id="nemSch_consistency_ePatient.15_ePatient.16" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:ePatient.16 != ''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is recorded, <sch:value-of select="key('nemSch_key_elements', 'ePatient.16', $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_ePatient.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eScene.xml?><sch:pattern id="nemSch_consistency_eScene">
-
-  <!-- This pattern validates consistency among elements in the eScene section. -->
-
-  <sch:title>Elements in the eScene section are consistent.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eScene.07_mci" context="nem:eScene.07[. = '9923003']">
-
-    <!-- This rule fires when eScene.07 Mass Casualty Incident is "Yes". -->
-
-    <sch:let name="nemsisElements" value="(../nem:eScene.06[.!='2707001'], ., ../nem:eScene.08[.=''])"/>
-
-    <!-- Assert that eScene.06 Number of Patients at Scene should be "Multiple". -->
-
-    <sch:assert id="nemSch_consistency_eScene.07_mci_eScene.06" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eScene.06 = '2707001'">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Yes", <sch:value-of select="key('nemSch_key_elements', 'eScene.06', $nemSch_elements)"/> should be "Multiple".
-    </sch:assert>
-
-    <!-- Assert that eScene.08 Triage Classification for MCI Patient should be recorded. -->
-
-    <sch:assert id="nemSch_consistency_eScene.07_mci_eScene.08" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eScene.08 != ''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Yes", <sch:value-of select="key('nemSch_key_elements', 'eScene.08', $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eScene.21" context="nem:eScene.21[. != '']">
-
-    <sch:let name="nemsisElements" value="., ../nem:eScene.18"/>
-
-    <!-- Assert that eScene.21 Incident County should belong within eScene.18 Incident State. -->
-
-    <sch:assert id="nemSch_consistency_eScene.21_eScene.18" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:eScene.18)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'eScene.18', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eScene.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_eSituation.xml?><sch:pattern id="nemSch_consistency_eSituation">
-
-  <!-- This pattern validates consistency within elements in eSituation. -->
-
-  <sch:title>Elements in the eSituation section are consistent.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eSituation.09" context="nem:eSituation.09[. = '']">
-
-    <!-- This rule fires when eSituation.09 Primary Symptom is empty. -->
-
-    <sch:let name="nemsisElements" value="(., ../nem:eSituation.10)"/>
-
-    <!-- Assert that there should be no non-empty instances of eSituation.10 Other Associated 
-         Symptoms.  -->
-
-    <sch:assert id="nemSch_consistency_eSituation.09_eSituation.10" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eSituation.10 != '')">
-      When <sch:value-of select="key('nemSch_key_elements', 'eSituation.09', $nemSch_elements)"/> is empty, <sch:value-of select="key('nemSch_key_elements', 'eSituation.10', $nemSch_elements)"/> should not be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eSituation.11" context="nem:eSituation.11[. = '']">
-
-    <!-- This rule fires when eSituation.11 Provider's Primary Impression is empty. -->
-
-    <sch:let name="nemsisElements" value="(., ../nem:eSituation.12)"/>
-
-    <!-- Assert that there should be no non-empty instances of eSituation.12 Provider's Secondary 
-         Impressions.  -->
-
-    <sch:assert id="nemSch_consistency_eSituation.11_eSituation.12" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eSituation.12 != '')">
-      When <sch:value-of select="key('nemSch_key_elements', 'eSituation.11', $nemSch_elements)"/> is empty, <sch:value-of select="key('nemSch_key_elements', 'eSituation.12', $nemSch_elements)"/> should not be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eSituation_injury" context="nem:eSituation[some $element in (nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12) satisfies matches($element , '^(S|T(0\d|1[0-4]))')]">
-
-    <!-- This rule fires when eSituation.09, 10, 11, or 12 (Symptoms or Impressions) contain an 
-         ICD-10 code that indicates an injury. -->
-
-    <sch:let name="nemsisElements" value="(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12)[matches(., '^(S|T(0\d|1[0-4]))')], nem:eSituation.02"/>
-
-    <!-- Assert that eSituation.02 Possible Injury should be "Yes".  -->
-
-    <sch:assert id="nemSch_consistency_eSituation_injury_eSituation.02" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eSituation.02 = '9922005'">
-      When a symptom or impression is injury-related, <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> should be "Yes".
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_eSituation.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_group.xml?><sch:pattern id="nemSch_consistency_group">
-
-  <!-- This pattern validates that certain elements are recorded in each medication administration, 
-       procedure, or set of vital signs. The rules in this pattern fire when an 
-       eMedications.MedicationGroup, eProcedures.ProcedureGroup, or eVitals.VitalGroup has a value 
-       recorded in any element. The XSD requires at least one instance of each of those groups, 
-       even if no medications were administered, no procedures were performed, or no vitals signs 
-       were obtained. In those cases, software should generate an instance of the group with all 
-       of its required elements empty. The rules in this pattern do not fire in those cases.
-       This pattern also validates consistency among elements in medication, procedure, and vital 
-       sign groups. -->
-
-  <sch:title>Certain elements are recorded in each real medication administration, procedure, or set of vital signs.</sch:title>
-
-  <sch:rule id="nemSch_consistency_eMedications.MedicationGroup" context="nem:eMedications.MedicationGroup[some $element in .//* satisfies normalize-space($element) != '']">
-
-    <!-- Flag each of the following elements if it is empty. -->
-
-    <sch:let name="eMedications.01" value="if(nem:eMedications.01 != '' or nem:eMedications.02 = '9923003' or nem:eMedications.03/@PN) then '' else key('nemSch_key_elements', 'eMedications.01', $nemSch_elements)"/>
-
-    <sch:let name="eMedications.03" value="if(nem:eMedications.03 != '') then '' else key('nemSch_key_elements', 'eMedications.03', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="(nem:eMedications.02, nem:eMedications.03, (nem:eMedications.01)[. = ''])"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eMedications.MedicationGroup_all" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eMedications.01 or $eMedications.03)">
-      When a medication is administered, the following should be recorded:
-      <sch:value-of select="string-join(($eMedications.01, $eMedications.03)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eProcedures.ProcedureGroup" context="nem:eProcedures.ProcedureGroup[some $element in .//* satisfies normalize-space($element) != '']">
-
-    <!-- Flag each of the following elements if it is empty. -->
-
-    <sch:let name="eProcedures.01" value="if(nem:eProcedures.01 != '' or nem:eProcedures.02 = '9923003' or nem:eProcedures.03/@PN) then '' else key('nemSch_key_elements', 'eProcedures.01', $nemSch_elements)"/>
-
-    <sch:let name="eProcedures.03" value="if(nem:eProcedures.03 != '') then '' else key('nemSch_key_elements', 'eProcedures.03', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="(nem:eProcedures.02, nem:eProcedures.03, (nem:eProcedures.01)[. = ''])"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eProcedures.ProcedureGroup_all" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eProcedures.01 or $eProcedures.03)">
-      When a procedure is performed, the following should be recorded:
-      <sch:value-of select="string-join(($eProcedures.01, $eProcedures.03)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eVitals.VitalGroup" context="nem:eVitals.VitalGroup[some $element in .//* satisfies normalize-space($element) != '']">
-
-    <!-- Flag each of the following elements if it is empty. -->
-
-    <sch:let name="eVitals.01" value="if(nem:eVitals.01 != '' or nem:eVitals.02 = '9923003') then '' else key('nemSch_key_elements', 'eVitals.01', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="(nem:eVitals.02, (nem:eVitals.01)[. = ''])"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eVitals.VitalGroup_all" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eVitals.01)">
-      When a set of vital signs is obtained, the following should be recorded:
-      <sch:value-of select="string-join(($eVitals.01)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eMedications.DosageGroup" context="nem:eMedications.05[. != '']">
-
-    <!-- This rule fires when eMedications.05 Medication Dosage is recorded. -->
-
-    <sch:let name="nemsisElements" value="../*"/>
-
-    <!-- Assert that eMedications.06 Medication Dosage Units should be recorded.  -->
-
-    <sch:assert id="nemSch_consistency_eMedications.DosageGroup_eMedications.06" role="[ERROR]" diagnostics="nemsisDiagnostic" test="../nem:eMedications.06 != ''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is recorded, <sch:value-of select="key('nemSch_key_elements', 'eMedications.06', $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_group.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_NilNvPn.xml?><sch:pattern id="nemSch_consistency_nilNvPn">
-
-  <!-- This pattern allows the following combinations of nil, NV, and PN attributes:
-         * For dCustomResults.01 and eCustomResults.01: Any combination
-         * For elements in eExam.AssessmentGroup: PN (nil and NV are not allowed per the XSD)
-         * For eMedications.03 and eProcedures.03 only: PN and not(nil) and not(NV)
-         * nil and either NV or PN but not both
-       If an element has neither nil, NV, nor PN, the rules in this pattern are not fired (other 
-       than the dummy rule for CustomResults).
-       The XSD ensures consistency between the nil attribute and whether the element is empty, so 
-       that combination is not checked here.
-  -->
-
-  <sch:title>The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate.</sch:title>
-
-  <sch:rule id="nemSch_nilNvPn_customResults" context="nem:dCustomResults.01 | nem:eCustomResults.01">
-
-    <!-- This rule fires when dCustomResults.01 or eCustomResults.01 Custom Data Element Result has 
-         a Pertinent Negative attribute. Nothing is checked. CustomResults should be validated 
-         based on information contained in CustomConfiguration. -->
+    <!-- This rule fires on eCustomResults.01 to prevent subsequent rules from firing. Nothing is checked. eCustomResults should be validated based on information contained in eCustomConfiguration. -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the combination of xsi:nil, Not Value, and Pertinent Negative attributes on eCustomResults.01.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup//*[@PN]">
+  <sch:rule id="nemSch_eNilNvPn_rule_2" context="nem:eExam.AssessmentGroup//*[@PN]">
 
     <!-- This rule fires when an element in eExam.AssessmentGroup has a Pertinent Negative 
-         attribute. Nothing is checked, since the nil and NV attributes are not allowed.  -->
+         attribute to prevent subsequent rules from being fired. Nothing is checked, since the nil and NV attributes are not allowed.  -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the Pertinent Negative attribute on elements in eExam.AssessmentGroup.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Pn_medication_procedure" context="nem:eMedications.03[@PN] | nem:eProcedures.03[@PN]">
-
-    <!-- This rule fires when eMedications.03 Medication Given or eProcedures.03 Procedure has a 
-         Pertinent Negative attribute. -->
+  <sch:rule id="nemSch_eNilNvPn_rule_3" context="nem:eSituation.01[@PN = '8801023']">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <!-- Assert that the element should also have a value and should not have a Not Value 
-         attribute. -->
+    <sch:assert id="nemSch_e003" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil = 'true' and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
 
-    <sch:assert id="nemSch_nilNvPn_Pn_Not_NilNv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@NV) and not(@xsi:nil = 'true')">
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_4" context="nem:eSituation.01[@PN = '8801029']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e004" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_5" context="nem:eSituation.10[@PN]">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_6" context="nem:eMedications.03[@PN]">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e006" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Pn" context="*[@PN]">
-
-    <!-- This rule fires when an element (other than those selected in the previous rules) has a 
-         Pertinent Negative attribute. -->
+  <sch:rule id="nemSch_eNilNvPn_rule_7" context="nem:eProcedures.03[@PN]">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <!-- Assert that the element should be empty and should not have a Not Value attribute. -->
+    <sch:assert id="nemSch_e007" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
 
-    <sch:assert id="nemSch_nilNvPn_Pn_Nv_Not_Nil" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@NV) and @xsi:nil = 'true'">
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_8" context="*[@PN]">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e008" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil = 'true' and not(@NV)">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_nil" context="*[@xsi:nil = 'true']">
-
-    <!-- This rule fires when an element is empty (and does not have a Pertinent Negative 
-         attribute). -->
+  <sch:rule id="nemSch_eNilNvPn_rule_9" context="*[@xsi:nil = 'true']">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <!-- Assert that the element should have a Not Value attribute or a Pertinent Negative 
-         attribute. The presence of a Pertinent Negative attribute is not specifically asserted
-         because if it was present, one of the rules above would have fired instead of this one. -->
-
-    <sch:assert id="nemSch_nilNvPn_nil_Nv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
+    <sch:assert id="nemSch_e001" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV or @PN">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Nv" context="*[@NV]">
-
-    <!-- This rule fires when an element has a Not Value attribute (but does not have a Pertinent 
-         Negative attribute and is not empty). -->
+  <sch:rule id="nemSch_eNilNvPn_rule_10" context="*[@NV]">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <!-- Assert that the element should be empty. (This is not specifically asserted because if 
-         the element was empty, the rule above would have fired instead of this one). -->
-    
-    <sch:assert id="nemSch_nilNvPn_Nv_Nil" role="[ERROR]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_e002" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil='true'">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_NilNvPn.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_sequence_time.xml?><sch:pattern id="nemSch_sequence_time">
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eNilNvPn.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eNvPn.xml?><sch:pattern id="nemSch_eNvPn">
 
-  <!-- This pattern validates the sequence of date/time elements. Each date/time element in a 
-       record should have a value that is not too early or too late compared to certain other 
-       elements in the record. -->
+  <sch:title>EMSDataSet / Not Value/Pertinent Negative Uniqueness</sch:title>
 
-  <sch:title>The sequence of date/time elements is appropriate.</sch:title>
+  <sch:rule id="nemSch_eNvPn_rule_1" context="nem:eCustomResults.01">
 
-  <sch:rule id="nemSch_sequence_time_eTimes" context="nem:eTimes">
-
-    <!-- Flag each of the following elements if it occurs too early in the sequence of date/times. -->
-
-    <!-- eAirway.10: Date/Time Decision to Manage the Patient with an Invasive Airway should not 
-                     occur prior to: 
-                     Unit Notified by Dispatch Date/Time. -->
-
-    <sch:let name="eAirway.10" value="if(not(../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.10)                                           or (every $element in (nem:eTimes.03)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.10)))                                          then '' else key('nemSch_key_elements', 'eAirway.10', $nemSch_elements)"/>
-
-    <!-- eAirway.11: Date/Time Invasive Airway Placement Attempts Abandoned should not occur prior 
-                     to: 
-                     Date/Time Decision to Manage the Patient with an Invasive Airway, 
-                     Unit Notified by Dispatch Date/Time, 
-                     Dispatch Acknowledged Date/Time, 
-                     Arrived at Patient Date/Time. -->
-
-    <sch:let name="eAirway.11" value="if(not(../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.11)                                           or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.10, nem:eTimes.03, nem:eTimes.04, nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(../nem:eAirway/nem:eAirway.AirwayGroup/nem:eAirway.11)))                                           then '' else key('nemSch_key_elements', 'eAirway.11', $nemSch_elements)"/>
-
-    <!-- eArrest.14: Date/Time of Cardiac Arrest: No "should not occur prior to" constraints. -->
-
-    <!-- eArrest.15: Date/Time Resuscitation Discontinued: No "should not occur prior to" 
-                     constraints. -->
-
-    <!-- eArrest.19: Date/Time of Initial CPR: No "should not occur prior to" constraints. -->
-
-    <!-- eOutcome.11: Date/Time of Hospital Admission should not occur prior to: 
-                      Unit Notified by Dispatch Date/Time, 
-                      Dispatch Acknowledged Date/Time, 
-                      Unit En Route Date/Time, 
-                      Unit Arrived on Scene Date/Time, 
-                      Arrived at Patient Date/Time, 
-                      Transfer of EMS Patient Care Date/Time, 
-                      Unit Left Scene Date/Time, 
-                      Arrival at Destination Landing Area Date/Time, 
-                      Patient Arrived at Destination Date/Time, 
-                      Destination Patient Transfer of Care Date/Time. -->
-
-    <sch:let name="eOutcome.11" value="if(not(../nem:eOutcome/nem:eOutcome.11)                                           or (every $element in (nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(../nem:eOutcome/nem:eOutcome.11)))                                            then '' else key('nemSch_key_elements', 'eOutcome.11', $nemSch_elements)"/>
-
-    <!-- eOutcome.16: Date/Time of Hospital Discharge should not occur prior to: 
-                      Date/Time of Hospital Admission, 
-                      Unit Notified by Dispatch Date/Time, 
-                      Dispatch Acknowledged Date/Time, 
-                      Unit En Route Date/Time, 
-                      Unit Arrived on Scene Date/Time, 
-                      Arrived at Patient Date/Time, 
-                      Transfer of EMS Patient Care Date/Time, 
-                      Unit Left Scene Date/Time, 
-                      Arrival at Destination Landing Area Date/Time, 
-                      Patient Arrived at Destination Date/Time, 
-                      Destination Patient Transfer of Care Date/Time. -->
-
-    <sch:let name="eOutcome.16" value="if(not(../nem:eOutcome/nem:eOutcome.16)                                           or (every $element in (../nem:eOutcome/nem:eOutcome.11, nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(../nem:eOutcome/nem:eOutcome.16)))                                            then '' else key('nemSch_key_elements', 'eOutcome.16', $nemSch_elements)"/>
-
-    <!-- ePayment.03: Date Physician Certification Statement Signed: No "should not occur prior to" 
-                      constraints. -->
-
-    <!-- eScene.05: Date/Time Initial Responder Arrived on Scene: No "should not occur prior to" 
-                    constraints. -->
-
-    <!-- eSituation.01: Date/Time of Symptom Onset: No "should not occur prior to" constraints. -->
-
-    <!-- eSituation.18: Date/Time Last Known Well: No "should not occur prior to" constraints. -->
-
-    <!-- eTimes.01: PSAP Call Date/Time: No "should not occur prior to" constraints. -->
-
-    <!-- eTimes.02: Dispatch Notified Date/Time should not occur prior to: 
-                    PSAP Call Date/Time. -->
-
-    <sch:let name="eTimes.02" value="if(not(nem:eTimes.02)                                          or (every $element in (nem:eTimes.01)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.02)))                                          then '' else key('nemSch_key_elements', 'eTimes.02', $nemSch_elements)"/>
-
-    <!-- eTimes.03: Unit Notified by Dispatch Date/Time should not occur prior to: 
-                    PSAP Call Date/Time, 
-                    Dispatch Notified Date/Time. -->
-
-    <sch:let name="eTimes.03" value="if(                                                               (every $element in (nem:eTimes.01, nem:eTimes.02)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.03)))                                          then '' else key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>
-
-    <!-- eTimes.04: Dispatch Acknowledged Date/Time should not occur prior to: 
-                    Unit Notified Date/Time. -->
-
-    <sch:let name="eTimes.04" value="if(not(nem:eTimes.04)                                          or (every $element in (nem:eTimes.03)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.04)))                                          then '' else key('nemSch_key_elements', 'eTimes.04', $nemSch_elements)"/>
-
-    <!-- eTimes.05: Unit En Route Date/Time should not occur prior to: 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time. -->
-
-    <sch:let name="eTimes.05" value="if(nem:eTimes.05 = ''                                         or (every $element in (nem:eTimes.03, nem:eTimes.04)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.05)))                                          then '' else key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>
-
-    <!-- eTimes.06: Unit Arrived on Scene Date/Time should not occur prior to: 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time. -->
-
-    <sch:let name="eTimes.06" value="if(nem:eTimes.06 = ''                                         or (every $element in (../nem:eScene/nem:eScene.05, nem:eTimes.03, nem:eTimes.04, nem:eTimes.05)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.06)))                                          then '' else key('nemSch_key_elements', 'eTimes.06', $nemSch_elements)"/>
-
-    <!-- eTimes.07: Arrived at Patient Date/Time should not occur prior to: 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time. 
-                    (It may occur prior to Unit En Route Date/Time or Unit Arrived on Scene 
-                    Date/Time in cases where a crew member arrived before the unit arrived.) -->
-
-    <sch:let name="eTimes.07" value="if(nem:eTimes.07 = ''                                         or (every $element in (../nem:eScene/nem:eScene.05, nem:eTimes.03, nem:eTimes.04)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.07)))                                         then '' else key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>
-
-    <!-- eTimes.08: Transfer of EMS Patient Care Date/Time should not occur prior to: 
-                    Date/Time Decision to Manage the Patient with an Invasive Airway, 
-                    Date/Time Invasive Airway Placement Attempts Abandoned, 
-                    Date/Time of Cardiac Arrest, 
-                    Date/Time Resuscitation Discontinued, 
-                    Date/Time of Initial CPR, 
-                    Last Oral Intake, 
-                    Date/Time of ACN Incident, 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Date/Time of Symptom Onset, 
-                    Date/Time Last Known Well, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time, 
-                    Unit Arrived on Scene Date/Time, 
-                    Arrived at Patient Date/Time. -->
-
-    <sch:let name="eTimes.08" value="if(not(nem:eTimes.08) or nem:eTimes.08 = ''                                         or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/(nem:eAirway.10, nem:eAirway.11), ../nem:eArrest/(nem:eArrest.14, nem:eArrest.15, nem:eArrest.19), ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/(nem:eSituation.01, nem:eSituation.18), nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.08)))                                          then '' else key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/>
-
-    <!-- eTimes.09: Unit Left Scene Date/Time should not occur prior to: 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time, 
-                    Unit Arrived on Scene Date/Time, 
-                    Arrived at Patient Date/Time. 
-                    (It may occur prior to Transfer of EMS Patient Care Date/Time if the unit 
-                    transported the patient to a rendezvous point prior to transferring care.) -->
-
-    <sch:let name="eTimes.09" value="if(nem:eTimes.09 = ''                                         or (every $element in (../nem:eScene/nem:eScene.05, nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.09)))                                         then '' else key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>
-
-    <!-- eTimes.10: Arrival at Destination Landing Area Date/Time should not occur prior to: 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time, 
-                    Unit Arrived on Scene Date/Time, 
-                    Arrived at Patient Date/Time, 
-                    Unit Left Scene Date/Time. -->
-
-    <sch:let name="eTimes.10" value="if(not(nem:eTimes.10)                                         or (every $element in (../nem:eScene/nem:eScene.05, nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.09)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.10)))                                         then '' else key('nemSch_key_elements', 'eTimes.10', $nemSch_elements)"/>
-
-    <!-- eTimes.11: Patient Arrived at Destination Date/Time should not occur prior to: 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time, 
-                    Unit Arrived on Scene Date/Time, 
-                    Arrived at Patient Date/Time, 
-                    Unit Left Scene Date/Time, 
-                    Arrival at Destination Landing Area Date/Time. -->
-
-    <sch:let name="eTimes.11" value="if(nem:eTimes.11 = ''                                         or (every $element in (../nem:eScene/nem:eScene.05, nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.09, nem:eTimes.10)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.11)))                                         then '' else key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>
-
-    <!-- eTimes.12: Destination Patient Transfer of Care Date/Time should not occur prior to: 
-                    Date/Time Decision to Manage the Patient with an Invasive Airway, 
-                    Date/Time Invasive Airway Placement Attempts Abandoned, 
-                    Date/Time of Cardiac Arrest, 
-                    Date/Time Resuscitation Discontinued, 
-                    Date/Time of Initial CPR, 
-                    Last Oral Intake, 
-                    Date/Time of ACN Incident, 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Date/Time of Symptom Onset, 
-                    Date/Time Last Known Well, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time, 
-                    Unit Arrived on Scene Date/Time, 
-                    Arrived at Patient Date/Time, 
-                    Unit Left Scene Date/Time, 
-                    Arrival at Destination Landing Area Date/Time. -->
-
-    <sch:let name="eTimes.12" value="if(nem:eTimes.12 = ''                                         or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/(nem:eAirway.10, nem:eAirway.11), ../nem:eArrest/(nem:eArrest.14, nem:eArrest.15, nem:eArrest.19), ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/(nem:eSituation.01, nem:eSituation.18), nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.12)))                                         then '' else key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>
-
-    <!-- eTimes.13: Unit Back in Service Date/Time should not occur prior to: 
-                    Date/Time Decision to Manage the Patient with an Invasive Airway, 
-                    Date/Time Invasive Airway Placement Attempts Abandoned, 
-                    Date/Time of Cardiac Arrest, 
-                    Date/Time Resuscitation Discontinued, 
-                    Date/Time of Initial CPR, 
-                    Last Oral Intake, 
-                    Date/Time of ACN Incident, 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Date/Time of Symptom Onset, 
-                    Date/Time Last Known Well, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time, 
-                    Unit Arrived on Scene Date/Time, 
-                    Arrived at Patient Date/Time, 
-                    Unit Left Scene Date/Time, 
-                    Arrival at Destination Landing Area Date/Time, 
-                    Transfer of EMS Patient Care Date/Time, 
-                    Destination Patient Transfer of Care Date/Time, 
-                    Unit Canceled Date/Time. -->
-
-    <sch:let name="eTimes.13" value="if(                                         (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/(nem:eAirway.10, nem:eAirway.11), ../nem:eArrest/(nem:eArrest.14, nem:eArrest.15, nem:eArrest.19), ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/(nem:eSituation.01, nem:eSituation.18), nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12, nem:eTimes.14)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.13)))                                          then '' else key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>
-
-    <!-- eTimes.14: Unit Canceled Date/Time should not occur prior to: Unit Notified Date/Time. -->
-
-    <sch:let name="eTimes.14" value="if(not(nem:eTimes.14)                                         or (every $element in (nem:eTimes.03)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.14)))                                         then '' else key('nemSch_key_elements', 'eTimes.14', $nemSch_elements)"/>
-
-    <!-- eTimes.15: Unit Back at Home Location Date/Time should not occur prior to: 
-                    Date/Time Decision to Manage the Patient with an Invasive Airway, 
-                    Date/Time Invasive Airway Placement Attempts Abandoned, 
-                    Date/Time of Cardiac Arrest, 
-                    Date/Time Resuscitation Discontinued, 
-                    Date/Time of Initial CPR, 
-                    Last Oral Intake, 
-                    Date/Time of ACN Incident, 
-                    Date/Time Initial Responder Arrived on Scene, 
-                    Date/Time of Symptom Onset, 
-                    Date/Time Last Known Well, 
-                    Unit Notified by Dispatch Date/Time, 
-                    Dispatch Acknowledged Date/Time, 
-                    Unit En Route Date/Time, 
-                    Unit Arrived on Scene Date/Time, 
-                    Arrived at Patient Date/Time, 
-                    Unit Left Scene Date/Time, 
-                    Arrival at Destination Landing Area Date/Time, 
-                    Transfer of EMS Patient Care Date/Time, 
-                    Destination Patient Transfer of Care Date/Time, 
-                    Unit Canceled Date/Time. -->
-
-    <sch:let name="eTimes.15" value="if(not(nem:eTimes.15)                                         or (every $element in (../nem:eAirway/nem:eAirway.AirwayGroup/(nem:eAirway.10, nem:eAirway.11), ../nem:eArrest/(nem:eArrest.14, nem:eArrest.15, nem:eArrest.19), ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eScene/nem:eScene.05, ../nem:eSituation/(nem:eSituation.01, nem:eSituation.18), nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.09, nem:eTimes.10, nem:eTimes.11, nem:eTimes.12, nem:eTimes.14)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.15)))                                         then '' else key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>
-
-    <!-- eTimes.16: EMS Call Completed Date/Time should not occur prior to: 
-                    Unit Back in Service Date/Time. -->
-
-    <sch:let name="eTimes.16" value="if(not(nem:eTimes.16)                                         or (every $element in (nem:eTimes.13)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(nem:eTimes.16)))                                         then '' else key('nemSch_key_elements', 'eTimes.16', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="(../nem:eAirway/nem:eAirway.AirwayGroup/(nem:eAirway.10, nem:eAirway.11), ../nem:eArrest/(nem:eArrest.14, nem:eArrest.15, nem:eArrest.19), ../nem:eHistory/nem:eHistory.19, ../nem:eInjury/nem:eInjury.CollisionGroup/nem:eInjury.14, ../nem:eOutcome/nem:eOutcome.11, ../nem:eOutcome/nem:eOutcome.16, ../nem:eScene/nem:eScene.05, ../nem:eSituation/(nem:eSituation.01, nem:eSituation.18), *)[. != '']"/>
-
-    <!-- eTimes.13: Unit Back in Service Date/Time should not occur after the current date/time. A 
-                    window of up to one hour is allowed in case client and server clocks might be 
-                    slightly off from each other.. -->
-
-    <sch:let name="eTimes.13_current" value="if(                                         xs:dateTime(nem:eTimes.13) &lt; current-dateTime() + xs:dayTimeDuration('PT1H'))                                         then '' else concat(key('nemSch_key_elements', 'eTimes.13', $nemSch_elements), ' (and possibly other Date/Times)')"/>
-
-    <!-- eTimes.15: Unit Back at Home Location Date/Time should not occur after the current 
-                    date/time. A window of up to one hour is allowed in case client and server 
-                    clocks might be slightly off from each other.. -->
-
-    <sch:let name="eTimes.15_current" value="if(not(nem:eTimes.15)                                         or xs:dateTime(nem:eTimes.15) &lt; current-dateTime() + xs:dayTimeDuration('PT1H'))                                         then '' else key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>
-
-    <!-- eTimes.16: EMS Call Completed Date/Time should not occur after the current date/time. A 
-                    window of up to one hour is allowed in case client and server clocks might be 
-                    slightly off from each other.. -->
-
-    <sch:let name="eTimes.16_current" value="if(not(nem:eTimes.16)                                         or xs:dateTime(nem:eTimes.16) &lt; current-dateTime() + xs:dayTimeDuration('PT1H'))                                         then '' else key('nemSch_key_elements', 'eTimes.16', $nemSch_elements)"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements.  -->
-
-    <sch:assert id="nemSch_sequence_time_eTimes_order" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eAirway.10 or $eAirway.11 or $eOutcome.11 or $eOutcome.16 or $eTimes.02 or $eTimes.03 or $eTimes.04 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.08 or $eTimes.09 or $eTimes.10 or $eTimes.11 or $eTimes.12 or $eTimes.13 or $eTimes.14 or $eTimes.15 or $eTimes.16)">
-      Date/Times should be in order. The following times are too early:
-      <sch:value-of select="string-join(($eAirway.10, $eAirway.11, $eOutcome.11, $eOutcome.16, $eTimes.02, $eTimes.03, $eTimes.04, $eTimes.05, $eTimes.06, $eTimes.07, $eTimes.08, $eTimes.09, $eTimes.10, $eTimes.11, $eTimes.12, $eTimes.13, $eTimes.14, $eTimes.15, $eTimes.16)[. != ''], ', ')"/>
-    </sch:assert>
-
-    <!-- Assert that none of the "_current" elements above should be flagged. If the assert fails, 
-         list the flagged elements.  -->
-
-    <sch:assert id="nemSch_sequence_time_eTimes_current" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eTimes.13_current or $eTimes.15_current or $eTimes.16_current)">
-      Date/Times should not be in the future (the current time according to this system is <sch:value-of select="format-dateTime(current-dateTime(),'[MNn] [D1], [Y0001], [H01]:[m01] [ZN]')"/>). The following times are too late:
-      <sch:value-of select="string-join(($eTimes.13_current, $eTimes.15_current, $eTimes.16_current)[. != ''], ', ')"/>
-    </sch:assert>
-
-  </sch:rule>
-
-  <!-- eAirway.02: Date/Time Airway Device Placement Confirmation: No sequence constraints. -->
-
-  <sch:rule id="nemSch_sequence_time_eDevice.02" context="nem:eDevice.02[. != '']">
-
-    <sch:let name="nemsisElements" value="(., ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
-
-    <!-- eDevice.02: Date/Time of Event (per Medical Device) should not occur prior to: 
-                     Date/Time Initial Responder Arrived on Scene, 
-                     Unit Notified by Dispatch Date/Time, 
-                     Dispatch Acknowledged Date/Time, 
-                     Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eDevice.02_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <!-- eDevice.02: Date/Time of Event (per Medical Device) should not occur after: 
-                     Transfer of EMS Patient Care Date/Time, 
-                     Destination Patient Transfer of Care Date/Time, 
-                     Unit Back in Service Date/Time, 
-                     Unit Back at Home Location Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eDevice.02_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_sequence_time_eDisposition.25" context="nem:eDisposition.25[. != '']">
-
-    <sch:let name="nemsisElements" value="(., ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
-
-    <!-- eDisposition.25: Date/Time of Destination Prearrival Alert or Activation should not occur 
-                          prior to: 
-                          Unit Notified by Dispatch Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eDisposition.25_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03)[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <!-- eDisposition.25: Date/Time of Destination Prearrival Alert or Activation should not occur 
-                          after: 
-                          Destination Patient Transfer of Care Date/Time, 
-                          Unit Back in Service Date/Time, 
-                          Unit Back at Home Location Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eDisposition.25_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>, <sch:value-of select="key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>, or <sch:value-of select="key('nemSch_key_elements', 'eTimes.15', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_sequence_time_eExam.03" context="nem:eExam.03[. != '']">
-
-    <sch:let name="nemsisElements" value="(., ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
-
-    <!-- eExam.03: Date/Time of Assessment should not occur prior to: 
-                   Date/Time Initial Responder Arrived on Scene, 
-                   Unit Notified by Dispatch Date/Time, 
-                   Dispatch Acknowledged Date/Time, 
-                   Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eExam.03_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <!-- eExam.03: Date/Time of Assessment should not occur after: 
-                   Transfer of EMS Patient Care Date/Time, 
-                   Destination Patient Transfer of Care Date/Time, 
-                   Unit Back in Service Date/Time, 
-                   Unit Back at Home Location Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eExam.03_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.)">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_sequence_time_eLabs.01" context="nem:eLabs.01[. != '']">
-
-    <sch:let name="eLabs.01_prior" value="if(../nem:eLabs.02 != '9923003' or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))) then false() else true()"/>
-
-    <sch:let name="nemsisElements" value="(., ../nem:eLabs.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
-
-    <!-- eLabs.01: When eLabs.02 Study/Result Prior to this Unit's EMS Care is not "Yes", 
-                   Date/Time of Laboratory or Imaging Result should not occur prior to: 
-                   Unit Notified by Dispatch Date/Time, 
-                   Dispatch Acknowledged Date/Time, 
-                   Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eLabs.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eLabs.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eLabs.02', $nemSch_elements)"/> is "Yes".
-    </sch:assert>
-
-    <!-- eLabs.01: When eLabs.02 Study/Result Prior to this Unit's EMS Care is "Yes", Date/Time 
-                   of Laboratory or Imaging Result should not occur after: 
-                   Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eLabs.01_prior_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eLabs.01_prior)">
-      When <sch:value-of select="key('nemSch_key_elements', 'eLabs.02', $nemSch_elements)"/> is "Yes," <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <!-- eLabs.01: Unless the previous assertion failed, Date/Time of Laboratory or Imaging Result 
-                   should not occur after: 
-                   Transfer of EMS Patient Care Date/Time, 
-                   Destination Patient Transfer of Care Date/Time, 
-                   Unit Back in Service Date/Time, 
-                   Unit Back at Home Location Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eLabs.01_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="$eLabs.01_prior or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_sequence_time_eMedications.01" context="nem:eMedications.01[. != '']">
-
-    <sch:let name="eMedications.01_prior" value="if(../nem:eMedications.02 != '9923003' or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))) then false() else true()"/>
-
-    <sch:let name="nemsisElements" value="(., ../nem:eMedications.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
-
-    <!-- eMedications.01: Unless eMedications.02 Medication Administered Prior to this Unit's EMS 
-                          Care is "Yes", Date/Time Medication Administered should not occur prior 
-                          to: 
-                          Date/Time Initial Responder Arrived on Scene, 
-                          Unit Notified by Dispatch Date/Time, 
-                          Dispatch Acknowledged Date/Time, 
-                          Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eMedications.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eMedications.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
-    </sch:assert>
-
-    <!-- eMedications.01: When eMedications.02 Medication Administered Prior to this Unit's EMS 
-                          Care is "Yes", Date/Time Medication Administered should not occur after: 
-                          Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eMedications.01_prior_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eMedications.01_prior)">
-      When <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes," <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <!-- eMedications.01: Unless the previous assertion failed, Date/Time Medication Administered 
-                          should not occur after: 
-                          Transfer of EMS Patient Care Date/Time, 
-                          Destination Patient Transfer of Care Date/Time, 
-                          Unit Back in Service Date/Time, 
-                          Unit Back at Home Location Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eMedications.01_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="$eMedications.01_prior or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <!-- eOther.19: Date/Time of Signature: No sequence constraints. -->
-
-  <sch:rule id="nemSch_sequence_time_eProcedures.01" context="nem:eProcedures.01[. != '']">
-
-    <sch:let name="eProcedures.01_prior" value="if(../nem:eProcedures.02 != '9923003' or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))) then false() else true()"/>
-
-    <sch:let name="nemsisElements" value="(., ../nem:eProcedures.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15))[. != '']"/>
-
-    <!-- eProcedures.01: Unless eProcedures.02 Procedure Performed Prior to this Unit's EMS Care 
-                         is "Yes", Date/Time Procedure Performed should not occur prior to: 
-                         Date/Time Initial Responder Arrived on Scene, 
-                         Unit Notified by Dispatch Date/Time, 
-                         Dispatch Acknowledged Date/Time, 
-                         Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eProcedures.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eProcedures.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eScene.05', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
-    </sch:assert>
-
-    <!-- eProcedures.01: When eProcedures.02 Procedure Performed Prior to this Unit's EMS Care is 
-                         "Yes", Date/Time Procedure Performed should not occur after: 
-                         Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eProcedures.01_prior_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eProcedures.01_prior)">
-      When <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes," <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <!-- eProcedures.01: Unless the previous assertion failed, Date/Time Procedure Performed 
-                         should not occur after: 
-                         Transfer of EMS Patient Care Date/Time, 
-                         Destination Patient Transfer of Care Date/Time, 
-                         Unit Back in Service Date/Time, 
-                         Unit Back at Home Location Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eProcedures.01_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="$eProcedures.01_prior or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_sequence_time_eVitals.01" context="nem:eVitals.01[. != '']">
-
-    <sch:let name="eVitals.01_prior" value="if(../nem:eVitals.02 != '9923003' or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.07)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))) then false() else true()"/>
-
-    <sch:let name="nemsisElements" value="(., ../nem:eVitals.02, ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.05, nem:eTimes.06, nem:eTimes.07, nem:eTimes.08, nem:eTimes.12, nem:eTimes.13))[. != '']"/>
-
-    <!-- eVitals.01: Unless eVitals.02 Obtained Prior to this Unit's EMS Care is "Yes", Date/Time 
-                     Vital Signs Taken should not occur prior to: 
-                     Date/Time Initial Responder Arrived on Scene, 
-                     Unit Notified by Dispatch Date/Time, 
-                     Dispatch Acknowledged Date/Time, 
-                     Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eVitals.01_after" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eVitals.02 = '9923003' or (every $element in (ancestor::nem:PatientCareReport/nem:eScene/nem:eScene.05, ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.03, nem:eTimes.04, nem:eTimes.07))[. != ''] satisfies xs:dateTime($element) &lt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eVitals.02', $nemSch_elements)"/> is "Yes".
-    </sch:assert>
-
-    <!-- eVitals.01: When eVitals.02 Obtained Prior to this Unit's EMS Care is "Yes", Date/Time 
-                     Vital Signs Taken should not occur after: 
-                     Arrived at Patient Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eVitals.01_prior_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eVitals.01_prior)">
-      When <sch:value-of select="key('nemSch_key_elements', 'eVitals.02', $nemSch_elements)"/> is "Yes," <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
-    </sch:assert>
-
-    <!-- eVitals.01: Unless the previous assertion failed, Date/Time Vital Signs Taken should not 
-                     occur after: 
-                     Transfer of EMS Patient Care Date/Time, 
-                     Destination Patient Transfer of Care Date/Time, 
-                     Unit Back in Service Date/Time, 
-                     Unit Back at Home Location Date/Time. -->
-
-    <sch:assert id="nemSch_sequence_time_eVitals.01_before" role="[WARNING]" diagnostics="nemsisDiagnostic" test="$eVitals.01_prior or (every $element in ancestor::nem:PatientCareReport/nem:eTimes/(nem:eTimes.08, nem:eTimes.12, nem:eTimes.13, nem:eTimes.15)[. != ''] satisfies xs:dateTime($element) &gt;= xs:dateTime(.))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.08', $nemSch_elements)"/> or <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_sequence_time.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_uniqueness_EMSDataSet.xml?><sch:pattern id="nemSch_uniqueness_EMSDataSet">
-
-  <!-- This pattern validates that values for certain recurring Patient Care Report elements are 
-       unique within a list.  -->
-
-  <sch:title>Certain recurring patient care report data elements are unique within a list.</sch:title>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_abstract" abstract="true">
-
-    <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
-
-    <!-- Assert that "None" should be the only value recorded for the element.  -->
-
-    <sch:assert id="nemSch_uniqueness_EMSDataSet_none" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../*[local-name() = local-name(current())]) = 1">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "<sch:value-of select="$none_label"/>", no other <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eArrest.04" context="nem:eArrest.04[. = '3004001']">
-
-    <!-- This rule fires when there is an instance of eArrest.04 Arrest Witnessed By set to "Not 
-         Witnessed". -->
-
-    <sch:let name="none_label" value="'Not Witnessed'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eArrest.12" context="nem:eArrest.12[. = '3012001']">
-
-    <!-- This rule fires when there is an instance of eArrest.12 Any Return of Spontaneous 
-         Circulation set to "No". -->
-
-    <sch:let name="none_label" value="'No'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eHistory.01" context="nem:eHistory.01[. = '3101009']">
-
-    <!-- This rule fires when there is an instance of eHistory.01 Barriers to Patient Care set to 
-         "None Noted". -->
-
-    <sch:let name="none_label" value="'None Noted'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eMedications.08" context="nem:eMedications.08[. = '3708031']">
-
-    <!-- This rule fires when there is an instance of eMedications.08 Medication Complication set 
-         to "None". -->
-
-    <sch:let name="none_label" value="'None'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eProcedures.07" context="nem:eProcedures.07[. = '3907033']">
-
-    <!-- This rule fires when there is an instance of eProcedures.07 Procedure Complication set to 
-         "None". -->
-
-    <sch:let name="none_label" value="'None'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.08" context="nem:eResponse.08[. = '2208013']">
-
-    <!-- This rule fires when there is an instance of eResponse.08 Type of Dispatch Delay set to 
-         "None/No Delay". -->
-
-    <sch:let name="none_label" value="'None/No Delay'"/>
-    
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.09" context="nem:eResponse.09[. = '2209011']">
-
-    <!-- This rule fires when there is an instance of eResponse.09 Type of Response Delay set to 
-         "None/No Delay". -->
-
-    <sch:let name="none_label" value="'None/No Delay'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.10" context="nem:eResponse.10[. = '2210017']">
-
-    <!-- This rule fires when there is an instance of eResponse.10 Type of Scene Delay set to 
-         "None/No Delay". -->
-
-    <sch:let name="none_label" value="'None/No Delay'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.11" context="nem:eResponse.11[. = '2211011']">
-
-    <!-- This rule fires when there is an instance of eResponse.11 Type of Transport Delay set to 
-         "None/No Delay". -->
-
-    <sch:let name="none_label" value="'None/No Delay'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.12" context="nem:eResponse.12[. = '2212015']">
-
-    <!-- This rule fires when there is an instance of eResponse.12 Type of Turn-Around Delay set to 
-         "None/No Delay". -->
-
-    <sch:let name="none_label" value="'None/No Delay'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eVitals.22" context="nem:eVitals.22[. = '3322003']">
-
-    <!-- This rule fires when there is an instance of eVitals.22 Glasgow Coma Score-Qualifier set 
-         to "Initial GCS has legitimate values without interventions such as intubation and 
-         sedation". -->
-
-    <sch:let name="none_label" value="'Initial GCS has legitimate values without interventions such as intubation and sedation'"/>
-
-    <sch:extends rule="nemSch_uniqueness_EMSDataSet_abstract"/>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_uniqueness_EMSDataSet.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_uniqueness_NvPn.xml?><sch:pattern id="nemSch_uniqueness_NvPn">
-
-  <!-- This pattern validates that if a Not Value or Pertinent Negative is recorded for a 
-       recurring element, no other instances of the element are recorded. -->
-
-  <sch:title>When a Not Value or Pertinent Negative is recorded for a recurring element, it is the only value recorded.</sch:title>
-
-  <sch:rule id="nemSch_uniqueness_NvPn_customResults" context="nem:dCustomResults.01 | nem:eCustomResults.01">
-
-    <!-- This rule fires when dCustomResults.01 or eCustomResults.01 Custom Data Element Result 
-         has a Pertinent Negative attribute. Nothing is checked. CustomResults should be validated 
-         based on information contained in CustomConfiguration. -->
+    <!-- This rule fires on eCustomResults.01 to prevent subsequent rules from firing. Nothing is checked. eCustomResults should be validated based on information contained in eCustomConfiguration. -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the uniqueness of eCustomResults.01 with Not Value or Pertinent Negative attribute.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup//*[@PN]">
+  <sch:rule id="nemSch_eNvPn_rule_2" context="nem:eExam.AssessmentGroup//*[@PN]">
 
     <!-- This rule fires when an element in eExam.AssessmentGroup has a Pertinent Negative 
-         attribute. Nothing is checked, since the Pertinent Negative accompanies a value.  -->
+         attribute to prevent subsequent rules from being fired. Nothing is checked, since the Pertinent Negative accompanies a value.  -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the uniqueness of elements in eExam.AssessmentGroup with a Pertinent Negative Attribute.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_Nv" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
+  <sch:rule id="nemSch_eNvPn_rule_3" context="nem:eSituation.10[@PN]">
 
-    <!-- This rule fires when a recurring element (other than those selected in the previous 
-         rules) has a Not Value attribute. -->
+    <!-- This rule fires when an element in eSituation.10 has a Pertinent Negative 
+         attribute to prevent subsequent rules from being fired. Nothing is checked, since the Pertinent Negative accompanies a value.  -->
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      This rule enforces no constraints on the uniqueness of elements in eExam.AssessmentGroup with a Pertinent Negative Attribute.
+    </sch:report>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNvPn_rule_4" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
 
     <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
 
-    <!-- Assert that the Not Value should be the only value recorded for the element.  -->
-
-    <sch:assert id="nemSch_uniqueness_NvPn_Nv_only" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value, no other <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded.
+    <sch:assert id="nemSch_e009" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value, no other value should be recorded.
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_Pn" context="*[@PN][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
-
-    <!-- This rule fires when a recurring element (other than those selected in the previous 
-         rules) has a Pertinent Negative attribute. -->
+  <sch:rule id="nemSch_eNvPn_rule_5" context="*[@PN][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
 
     <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
 
-    <!-- Assert that the Pertinent Negative should be the only value recorded for the element.  -->
-
-    <sch:assert id="nemSch_uniqueness_NvPn_Pn_only" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, no other <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded.
+    <sch:assert id="nemSch_e010" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, no other value should be recorded.
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_uniqueness_NvPn.xml?>
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eNvPn.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eResponse.xml?><sch:pattern id="nemSch_eResponse">
+
+  <sch:title>EMSDataSet / Unit Agency Information</sch:title>
+
+  <sch:rule id="nemSch_eResponse_rule_1" context="nem:eResponse.01">
+
+    <sch:let name="nemsisElements" value="., ancestor::nem:Header/nem:DemographicGroup/nem:dAgency.02"/>
+
+    <sch:assert id="nemSch_e011" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = ancestor::nem:Header/nem:DemographicGroup/nem:dAgency.02">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> in the patient care report should match <sch:value-of select="key('nemSch_key_elements', 'dAgency.02', $nemSch_elements)"/> in the agency demographic information.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eResponse_rule_2" context="nem:eResponse.08[. = '2208013']">
+
+    <sch:let name="nemsisElements" value="../nem:eResponse.08"/>
+
+    <sch:assert id="nemSch_e012" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eResponse.08) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eResponse_rule_3" context="nem:eResponse.09[. = '2209011']">
+
+    <sch:let name="nemsisElements" value="../nem:eResponse.09"/>
+
+    <sch:assert id="nemSch_e013" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eResponse.09) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eResponse_rule_4" context="nem:eResponse.10[. = '2210017']">
+
+    <sch:let name="nemsisElements" value="../nem:eResponse.10"/>
+
+    <sch:assert id="nemSch_e014" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eResponse.10) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eResponse_rule_5" context="nem:eResponse.11[. = '2211011']">
+
+    <sch:let name="nemsisElements" value="../nem:eResponse.11"/>
+
+    <sch:assert id="nemSch_e015" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eResponse.11) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eResponse_rule_6" context="nem:eResponse.12[. = '2212015']">
+
+    <sch:let name="nemsisElements" value="../nem:eResponse.12"/>
+
+    <sch:assert id="nemSch_e016" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eResponse.12) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eResponse.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eTimes.xml?><sch:pattern id="nemSch_eTimes">
+
+  <sch:title>EMSDataSet / Call Event Times Information</sch:title>
+
+  <sch:rule id="nemSch_eTimes_rule_1" context="nem:eTimes.03[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e017" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.01, ." test="../nem:eTimes.01 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.01)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.01', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_2" context="nem:eTimes.05[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e018" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded unless <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Cancelled Prior to Arrival at Scene".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_3" context="nem:eTimes.05[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e019" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_4" context="nem:eTimes.06[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e020" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded unless <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Cancelled Prior to Arrival at Scene".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_5" context="nem:eTimes.06[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e021" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e022" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.05, ." test="nem:eTimes.05 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.05)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_6" context="nem:eTimes.07[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e023" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 != '4227001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Patient Contact Made".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_7" context="nem:eTimes.07[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e024" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <!-- eTimes.07 Arrived at Patient Date/Time may occur prior to eTimes.05 Unit En Route Date/Time or eTimes.06 Unit Arrived on Scene Date/Time in cases where a crew member arrived before the unit arrived. -->
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_8" context="nem:eTimes.09[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e025" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded unless <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Cancelled Prior to Arrival at Scene".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_9" context="nem:eTimes.09[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e026" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e027" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.05, ." test="nem:eTimes.05 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.05)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e028" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.06, ." test="nem:eTimes.06 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.06)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.06', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e029" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.07, ." test="nem:eTimes.07 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.07)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_10" context="nem:eTimes.11[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e030" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_11" context="nem:eTimes.11[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e031" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e032" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.05, ." test="nem:eTimes.05 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.05)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e033" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.06, ." test="nem:eTimes.06 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.06)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.06', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e034" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.07, ." test="nem:eTimes.07 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.07)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e035" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.09, ." test="nem:eTimes.09 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.09)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_12" context="nem:eTimes.12[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e036" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_13" context="nem:eTimes.12[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e037" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e038" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.05, ." test="nem:eTimes.05 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.05)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e039" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.06, ." test="nem:eTimes.06 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.06)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.06', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e040" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.07, ." test="nem:eTimes.07 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.07)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e041" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.09, ." test="nem:eTimes.09 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.09)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e042" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.11, ." test="nem:eTimes.11 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.11)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e043" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.01, ." test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.01 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.01)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eSituation.01', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e044" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.18, ." test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.18 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.18)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eSituation.18', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e045" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.14, ." test="ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.14 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.14)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eArrest.14', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eTimes_rule_14" context="nem:eTimes.13[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e046" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e047" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.05, ." test="nem:eTimes.05 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.05)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.05', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e048" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.06, ." test="nem:eTimes.06 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.06)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.06', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e049" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.07, ." test="nem:eTimes.07 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.07)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e050" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.09, ." test="nem:eTimes.09 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.09)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.09', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e051" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.11, ." test="nem:eTimes.11 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.11)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.11', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e052" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:eTimes.12, ." test="nem:eTimes.12 = '' or xs:dateTime(.) &gt;= xs:dateTime(../nem:eTimes.12)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e053" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.01, ." test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.01 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.01)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eSituation.01', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e054" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.18, ." test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.18 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.18)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eSituation.18', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e055" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.14, ." test="ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.14 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.14)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eArrest.14', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e056" role="[WARNING]" diagnostics="nemsisDiagnostic" test="xs:dateTime(.) &lt;= current-dateTime() + xs:dayTimeDuration('PT1H')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be in the future (the current time according to this system is <sch:value-of select="format-dateTime(current-dateTime(),'[MNn] [D1], [Y0001], [H01]:[m01] [ZN]')"/>).
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eTimes.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_ePatient.xml?><sch:pattern id="nemSch_ePatient">
+
+  <sch:title>EMSDataSet / Patient Information</sch:title>
+
+  <sch:rule id="nemSch_ePatient_rule_1" context="nem:ePatient.07[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e057" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_ePatient_rule_2" context="nem:ePatient.07[. != '']">
+
+    <sch:let name="nemsisElements" value="., ../nem:ePatient.08"/>
+
+    <sch:assert id="nemSch_e058" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:ePatient.08)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'ePatient.08', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_ePatient_rule_3" context="nem:ePatient.08[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e059" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_ePatient_rule_4" context="nem:ePatient.09[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e060" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_ePatient_rule_5" context="nem:ePatient.13[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e061" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_ePatient_rule_6" context="nem:ePatient.14[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e062" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_ePatient_rule_7" context="nem:ePatient.15[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e063" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_ePatient_rule_8" context="nem:ePatient.16[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e064" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e065" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="../nem:ePatient.15, ." test="../nem:ePatient.15 = ''">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'ePatient.15', $nemSch_elements)"/> is recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_ePatient.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_ePayment.xml?><sch:pattern id="nemSch_ePayment">
+
+  <sch:title>EMSDataSet / Insurance/Payment Information</sch:title>
+
+  <sch:rule id="nemSch_ePayment_rule_1" context="nem:ePayment.01[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e066" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_ePayment.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eScene.xml?><sch:pattern id="nemSch_eScene">
+
+  <sch:title>EMSDataSet / Incident Scene Information</sch:title>
+
+  <sch:rule id="nemSch_eScene_rule_1" context="nem:eScene.06">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e067" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test=". = ('2707001', '2707005') or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 != '4227001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Multiple" or "Single" when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Patient Contact Made".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e068" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eScene.07" test=". = '2707001' or ../nem:eScene.07 != '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Multiple" when <sch:value-of select="key('nemSch_key_elements', 'eScene.07', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eScene_rule_2" context="nem:eScene.08[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e069" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eScene.07" test="../nem:eScene.07 != '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eScene.07', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eScene_rule_3" context="nem:eScene.09[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e070" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded unless <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Cancelled Prior to Arrival at Scene".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eScene_rule_4" context="nem:eScene.18[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e071" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded unless <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Cancelled Prior to Arrival at Scene".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eScene_rule_5" context="nem:eScene.19[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e072" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded unless <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Cancelled Prior to Arrival at Scene".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eScene_rule_6" context="nem:eScene.21[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e073" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded unless <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Cancelled Prior to Arrival at Scene".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eScene_rule_7" context="nem:eScene.21[. != '']">
+
+    <sch:let name="nemsisElements" value="., ../nem:eScene.18"/>
+
+    <sch:assert id="nemSch_e074" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:eScene.18)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'eScene.18', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eScene.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eSituation.xml?><sch:pattern id="nemSch_eSituation">
+
+  <sch:title>EMSDataSet / Situation Information</sch:title>
+
+  <sch:rule id="nemSch_eSituation_rule_1" context="nem:eSituation.01[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e075" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != '2205001' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "Emergency Response (Primary Response Area)" and <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_2" context="nem:eSituation.02">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e076" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test=". != '' or ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != '2205001' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "Emergency Response (Primary Response Area)" and <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e077" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12)" test=". = '9922005' or not(some $element in ../(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12) satisfies matches($element, '^(S|T(0\d|1[0-4]))'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Yes" when a symptom or impression is injury-related.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_3" context="nem:eSituation.07[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e078" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != '2205001' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "Emergency Response (Primary Response Area)" and <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_4" context="nem:eSituation.08[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e079" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != '2205001' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "Emergency Response (Primary Response Area)" and <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_5" context="nem:eSituation.09[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e080" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != '2205001' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "Emergency Response (Primary Response Area)" and <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_6" context="nem:eSituation.10[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eSituation.10[. != '']"/>
+
+    <sch:assert id="nemSch_e081" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eSituation.09" test="../nem:eSituation.09 != ''">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.09', $nemSch_elements)"/> is recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_7" context="nem:eSituation.11[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e082" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != '2205001' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "Emergency Response (Primary Response Area)" and <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_8" context="nem:eSituation.12[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eSituation.12[. != '']"/>
+
+    <sch:assert id="nemSch_e083" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eSituation.11" test="../nem:eSituation.11 != ''">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.11', $nemSch_elements)"/> is recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_9" context="nem:eSituation.13[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e084" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 != '2205001' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "Emergency Response (Primary Response Area)" and <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_10" context="nem:eSituation.18[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e085" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001' or not(ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01 = ('3001003', '3001005'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e086" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001' or not(ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29 = '3329005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eVitals.29', $nemSch_elements)"/> is "Positive".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e087" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001' or not(ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03 = ('9901051', '9901053', '9901055', '9901057', '9901058'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eVitals.03', $nemSch_elements)"/> is "STEMI...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eSituation_rule_11" context="nem:eSituation.20[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e088" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05" test="ancestor::nem:PatientCareReport/nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 = ('2205005', '2205007', '2205015', '2205017', '2205019')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eResponse.05', $nemSch_elements)"/> is "... Transfer" or "Other Routine Medical Transport".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eSituation.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eInjury.xml?><sch:pattern id="nemSch_eInjury">
+
+  <sch:title>EMSDataSet / Injury Information</sch:title>
+
+  <sch:rule id="nemSch_eInjury_rule_1" context="nem:eInjury.01[. = ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eInjury.01"/>
+
+    <sch:assert id="nemSch_e089" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="../nem:eInjury.01 != '' or ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 != '9922005' or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eInjury_rule_2" context="nem:eInjury.01[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eInjury.01"/>
+
+    <sch:assert id="nemSch_e090" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02" test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eInjury_rule_3" context="nem:eInjury.03[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eInjury.03"/>
+
+    <sch:assert id="nemSch_e091" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02" test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eInjury_rule_4" context="nem:eInjury.04[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eInjury.04"/>
+
+    <sch:assert id="nemSch_e092" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02" test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eInjury.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eArrest.xml?><sch:pattern id="nemSch_eArrest">
+
+  <sch:title>EMSDataSet / Cardiac Arrest Information</sch:title>
+
+  <sch:rule id="nemSch_eArrest_rule_1" context="nem:eArrest.02[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e093" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="not(../nem:eArrest.01 = ('3001003', '3001005')) or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_2" context="nem:eArrest.02[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e094" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_3" context="nem:eArrest.03[1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.03"/>
+
+    <sch:assert id="nemSch_e095" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="../nem:eArrest.03 != '' or not(../nem:eArrest.01 = ('3001003', '3001005')) or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e096" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="not(../nem:eArrest.03 != '') or ../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e097" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eArrest.03 = ('3003001', '3003003', '3003005') and ../nem:eArrest.03 = ('3003007', '3003009', '3003011'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not contain both "Attempted/Initiated..." and "Not Attempted...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e098" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.09" test="../nem:eArrest.03 = '3003005' or not(../nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011', '3009021'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Initiated Chest Compressions" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Compressions...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e099" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.09" test="../nem:eArrest.03 = '3003003' or not(../nem:eArrest.09 = ('3009009', '3009013', '3009015', '3009017', '3009019', '3009023', '3009025', '3009027'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Attempted Ventilation" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Ventilation..." or "Compressions-Intermittent with Ventilation".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_4" context="nem:eArrest.04[. = ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.04"/>
+
+    <sch:assert id="nemSch_e100" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="../nem:eArrest.04 != '' or not(../nem:eArrest.01 = ('3001003', '3001005')) or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_5" context="nem:eArrest.04[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.04"/>
+
+    <sch:assert id="nemSch_e101" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e102" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eArrest.04 = '3004001') or count(../nem:eArrest.04) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Not Witnessed", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_6" context="nem:eArrest.07[. = ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.07"/>
+
+    <sch:assert id="nemSch_e103" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="../nem:eArrest.07 != '' or not(../nem:eArrest.01 = ('3001003', '3001005')) or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_7" context="nem:eArrest.07[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.07"/>
+
+    <sch:assert id="nemSch_e104" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_8" context="nem:eArrest.09[1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.09"/>
+
+    <sch:assert id="nemSch_e105" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="not(../nem:eArrest.09 != '') or ../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e106" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.03" test="not(../nem:eArrest.03 = '3003005') or ../nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011', '3009021')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Compressions..." when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Initiated Chest Compressions".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e107" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.03" test="not(../nem:eArrest.03 = '3003003') or ../nem:eArrest.09 = ('3009009', '3009013', '3009015', '3009017', '3009019', '3009023', '3009025', '3009027')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Ventilation..." or "Compressions-Intermittent with Ventilation" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Attempted Ventilation".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_9" context="nem:eArrest.12[. = ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.12"/>
+
+    <sch:assert id="nemSch_e108" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="../nem:eArrest.12 != '' or not(../nem:eArrest.01 = ('3001003', '3001005')) or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_10" context="nem:eArrest.12[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.12"/>
+
+    <sch:assert id="nemSch_e109" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e110" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eArrest.12 = '3012001') or count(../nem:eArrest.12) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "No", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_11" context="nem:eArrest.14[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e111" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_12" context="nem:eArrest.16[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e112" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_13" context="nem:eArrest.17[. = ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.17"/>
+
+    <sch:assert id="nemSch_e113" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="../nem:eArrest.17 != '' or not(../nem:eArrest.01 = ('3001003', '3001005')) or not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230001'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit..." and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_14" context="nem:eArrest.17[. != ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.17"/>
+
+    <sch:assert id="nemSch_e114" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_15" context="nem:eArrest.18[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e115" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="not(../nem:eArrest.01 = ('3001003', '3001005')) or ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_16" context="nem:eArrest.18[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e116" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_17" context="nem:eArrest.20[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e117" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.03" test="not(../nem:eArrest.03 = ('3003001', '3003003', '3003005'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> is "Attempted..." or "Initiated...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_18" context="nem:eArrest.20[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e118" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_19" context="nem:eArrest.21[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e119" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.07" test="not(../nem:eArrest.07 = ('3007003', '3007005'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.07', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_20" context="nem:eArrest.21[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e120" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_21" context="nem:eArrest.22[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e121" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.03" test="not(../nem:eArrest.03 = '3003001')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> is "Attempted Defibrillation".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e122" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.07" test="not(../nem:eArrest.07 = '3007005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.07', $nemSch_elements)"/> is "Yes, With Defibrillation".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eArrest_rule_22" context="nem:eArrest.22[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e123" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eArrest.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eHistory.xml?><sch:pattern id="nemSch_eHistory">
+
+  <sch:title>EMSDataSet / Patient History Information</sch:title>
+
+  <sch:rule id="nemSch_eHistory_rule_1" context="nem:eHistory.01[. = '3101009'][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eHistory.01"/>
+
+    <sch:assert id="nemSch_e124" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eHistory.01) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None Noted", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eHistory.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eVitals.xml?><sch:pattern id="nemSch_eVitals">
+
+  <sch:title>EMSDataSet / Patient Vital Sign Information</sch:title>
+
+  <sch:rule id="nemSch_eVitals_rule_1" context="nem:eVitals.VitalGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eVitals.01[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e125" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eVitals.02" test="../nem:eVitals.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when a set of vital signs is obtained, unless <sch:value-of select="key('nemSch_key_elements', 'eVitals.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eVitals_rule_2" context="nem:eVitals.01[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e126" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03, ., ../nem:eVitals.02" test="xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03) or ../nem:eVitals.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eVitals.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e127" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07, ., ../nem:eVitals.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07) or ../nem:eVitals.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eVitals.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e128" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12, ., ../nem:eVitals.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12 = '' or xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e129" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13, ., ../nem:eVitals.02" test="xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e130" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07, ., ../nem:eVitals.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07 = '' or xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07) or ../nem:eVitals.02 != '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/> when <sch:value-of select="key('nemSch_key_elements', 'eVitals.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eVitals_rule_3" context="nem:eVitals.16[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e131" role="[WARNING]" diagnostics="nemsisDiagnostic" test="xs:decimal(.) &lt;= 100 or not(@ETCO2Type = '3340003')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no more than 100 when ETCO2 Type is "Percentage".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e132" role="[WARNING]" diagnostics="nemsisDiagnostic" test="xs:decimal(.) &lt;= 100 or not(@ETCO2Type = '3340005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be no more than 100 when ETCO2 Type is "kPa".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e133" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". castable as xs:integer or not(@ETCO2Type = '3340001')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be an integer when ETCO2 Type is "mmHg".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e134" role="[WARNING]" diagnostics="nemsisDiagnostic" test="@ETCO2Type">
+      ETCO2 Type should be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eVitals_rule_4" context="nem:eVitals.22[. = '3322003']">
+
+    <sch:let name="nemsisElements" value="../nem:eVitals.22"/>
+
+    <sch:assert id="nemSch_e135" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eVitals.22) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Initial GCS has legitimate values without interventions such as intubation and sedation", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eVitals.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eMedications.xml?><sch:pattern id="nemSch_eMedications">
+
+  <sch:title>EMSDataSet / Intervention Medications Information</sch:title>
+
+  <sch:rule id="nemSch_eMedications_rule_1" context="nem:eMedications.MedicationGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eMedications.01[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e136" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eMedications.02" test="../nem:eMedications.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_2" context="nem:eMedications.01[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e137" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03, ., ../nem:eMedications.02" test="xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03) or ../nem:eMedications.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e138" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07, ., ../nem:eMedications.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07) or ../nem:eMedications.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e139" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12, ., ../nem:eMedications.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12 = '' or xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e140" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13, ., ../nem:eMedications.02" test="xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e141" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07, ., ../nem:eMedications.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07 = '' or xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07) or ../nem:eMedications.02 != '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/> when <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_3" context="nem:eMedications.MedicationGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eMedications.03[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e142" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when a medication is administered.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_4" context="nem:eMedications.03[. != '' and @CodeType]">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e143" role="[ERROR]" diagnostics="nemsisDiagnostic" test="matches(., '^[0-9]{2,7}$') or @CodeType != '9924003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be a code of between 2 and 7 digits when Code Type is "RxNorm".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e144" role="[ERROR]" diagnostics="nemsisDiagnostic" test=". = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000') or @CodeType != '9924005'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be a SNOMED code specifically allowed in the data dictionary when Code Type is "SNOMED".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_5" context="nem:eMedications.03[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e145" role="[ERROR]" diagnostics="nemsisDiagnostic" test="matches(., '^[0-9]{2,7}$') or . = ('116762002', '116795008', '116861002', '116865006', '180208003', '33389009', '71493000')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be an RxNorm code of between 2 and 7 digits or a SNOMED code specifically allowed in the data dictionary.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_6" context="nem:eMedications.MedicationGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eMedications.04[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e146" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eMedications.02" test="../nem:eMedications.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_7" context="nem:eMedications.MedicationGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eMedications.05[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e147" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eMedications.02" test="../nem:eMedications.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_8" context="nem:eMedications.MedicationGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eMedications.06[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e148" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eMedications.02" test="../nem:eMedications.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_9" context="nem:eMedications.08[. = '3708031'][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eMedications.08"/>
+
+    <sch:assert id="nemSch_e149" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eMedications.08) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eMedications_rule_10" context="nem:eMedications.MedicationGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eMedications.10[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e150" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eMedications.02" test="../nem:eMedications.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eMedications.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eProcedures.xml?><sch:pattern id="nemSch_eProcedures">
+
+  <sch:title>EMSDataSet / Intervention Procedures Information</sch:title>
+
+  <sch:rule id="nemSch_eProcedures_rule_1" context="nem:eProcedures.ProcedureGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eProcedures.01[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e151" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eProcedures.02" test="../nem:eProcedures.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eProcedures_rule_2" context="nem:eProcedures.01[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e152" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03, ., ../nem:eProcedures.02" test="xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03) or ../nem:eProcedures.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e153" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07, ., ../nem:eProcedures.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07 = '' or xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07) or ../nem:eProcedures.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/>, unless <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e154" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12, ., ../nem:eProcedures.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12 = '' or xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e155" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13, ., ../nem:eProcedures.02" test="xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e156" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07, ., ../nem:eProcedures.02" test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07 = '' or xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.07) or ../nem:eProcedures.02 != '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.07', $nemSch_elements)"/> when <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eProcedures_rule_3" context="nem:eProcedures.ProcedureGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eProcedures.03[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e157" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when a Procedure is performed.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eProcedures_rule_4" context="nem:eProcedures.07[. = '3907033'][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eProcedures.07"/>
+
+    <sch:assert id="nemSch_e158" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../nem:eProcedures.07) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eProcedures_rule_5" context="nem:eProcedures.ProcedureGroup[some $element in .//* satisfies normalize-space($element) != '']/nem:eProcedures.10[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e159" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eProcedures.02" test="../nem:eProcedures.02 = '9923003'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eProcedures.xml?>
+  <?DSDL_INCLUDE_START includes/pattern_eDisposition.xml?><sch:pattern id="nemSch_eDisposition">
+
+  <sch:title>EMSDataSet / Patient Disposition Information</sch:title>
+
+  <sch:rule id="nemSch_eDisposition_rule_1" context="nem:eDisposition.05[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e160" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_2" context="nem:eDisposition.06[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e161" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e162" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.05" test="starts-with(., ../nem:eDisposition.05)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'eDisposition.05', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_3" context="nem:eDisposition.07[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e163" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_4" context="nem:eDisposition.16">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e164" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test=". != '' or not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e165" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test=". = '' or not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230009', '4230013'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Patient Refused Transport" or "No Transport".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_5" context="nem:eDisposition.17">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e166" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test=". != '' or not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e167" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test=". = '' or not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230009', '4230013'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Patient Refused Transport" or "No Transport".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_6" context="nem:eDisposition.19[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e168" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_7" context="nem:eDisposition.20[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e169" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_8" context="nem:eDisposition.21[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e170" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30" test="not(ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.30 = ('4230001', '4230003'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is "Transport by This EMS Unit...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_9" context="nem:eDisposition.23[. = ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eDisposition.23"/>
+
+    <sch:assert id="nemSch_e171" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01" test="../nem:eDisposition.23 != '' or not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01 = ('3001003', '3001005'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.21', $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e172" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29" test="../nem:eDisposition.23 != '' or not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29 = '3329005')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.21', $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department" and <sch:value-of select="key('nemSch_key_elements', 'eVitals.29', $nemSch_elements)"/> is "Positive".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e173" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03" test="../nem:eDisposition.23 != '' or not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03 = ('9901051', '9901053', '9901055', '9901057', '9901058'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.21', $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department" and <sch:value-of select="key('nemSch_key_elements', 'eVitals.03', $nemSch_elements)"/> is "STEMI...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_10" context="nem:eDisposition.24[. = '4224001'][1]">
+
+    <sch:let name="nemsisElements" value="../../nem:eDisposition.HospitalTeamActivationGroup/nem:eDisposition.24"/>
+
+    <sch:assert id="nemSch_e174" role="[WARNING]" diagnostics="nemsisDiagnostic" test="count(../../nem:eDisposition.HospitalTeamActivationGroup) = 1">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "None", no other value should be recorded.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition._rule_11" context="nem:eDisposition.HospitalTeamActivationGroup[* != '']">
+
+    <sch:let name="nemsisElements" value="nem:eDisposition.24, nem:eDisposition.25"/>
+
+    <sch:assert id="nemSch_e175" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eDisposition.24 != ''">
+      <sch:value-of select="key('nemSch_key_elements', 'eDisposition.24', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.25', $nemSch_elements)"/> is recorded.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e176" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eDisposition.25 != '' or nem:eDisposition.24 = '4224001'">
+      <sch:value-of select="key('nemSch_key_elements', 'eDisposition.25', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.24', $nemSch_elements)"/> is recorded with a value other than "None".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_12" context="nem:eDisposition.25[. != '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e177" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03, ." test="xs:dateTime(.) &gt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.03)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be earlier than <sch:value-of select="key('nemSch_key_elements', 'eTimes.03', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e178" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12, ." test="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12 = '' or xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.12)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.12', $nemSch_elements)"/>.
+    </sch:assert>
+
+    <sch:assert id="nemSch_e179" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13, ." test="xs:dateTime(.) &lt;= xs:dateTime(ancestor::nem:PatientCareReport/nem:eTimes/nem:eTimes.13)">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should not be later than <sch:value-of select="key('nemSch_key_elements', 'eTimes.13', $nemSch_elements)"/>.
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_13" context="nem:eDisposition.27">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e180" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.28" test=". = '4227001' or not(../nem:eDisposition.28 = ('4228001', '4228003', '4228005', '4228007'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Patient Contact Made" when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated..." or "Patient Refused Evaluation/Care".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e181" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.29" test=". = '4227001' or not(../nem:eDisposition.29 = ('4229001', '4229003', '4229005', '4229007'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Patient Contact Made" when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.29', $nemSch_elements)"/> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e182" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.30" test=". = '4227001' or ../nem:eDisposition.30 = ('', '4229011', '4229013')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Patient Contact Made" when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.30', $nemSch_elements)"/> is a value other than "Non-Patient Transport (Not Otherwise Listed)" or "No Transport".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_14" context="nem:eDisposition.28">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e183" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.27" test=". != '' or ../nem:eDisposition.27 != '4227001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Patient Contact Made".
+    </sch:assert>
+
+    <sch:assert id="nemSch_e184" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.29" test=". = '4228001' or not(../nem:eDisposition.29 = ('4229001', '4229003', '4229005', '4229007'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Patient Evaluated and Care Provided" when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.29', $nemSch_elements)"/> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_15" context="nem:eDisposition.29[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e185" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.27" test="../nem:eDisposition.27 != '4227001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Patient Contact Made".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_16" context="nem:eDisposition.30[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e186" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.27" test="../nem:eDisposition.27 != '4227001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.27', $nemSch_elements)"/> is "Patient Contact Made".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eDisposition_rule_17" context="nem:eDisposition.32[. = '']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e187" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded (with a value other than "No Care Provided") when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+    </sch:assert>
+
+  </sch:rule>
+
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_eDisposition.xml?>
 
   <!-- DIAGNOSTICS -->
 

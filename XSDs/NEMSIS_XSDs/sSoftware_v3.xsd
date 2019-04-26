@@ -9,7 +9,7 @@
            </xs:annotation>
            <xs:complexType>
                <xs:sequence>
-                   <xs:element name="sSoftware.01" id="sSoftware.SoftwareCreator">
+                   <xs:element name="sSoftware.01" id="sSoftware.SoftwareCreator" nillable="true">
                        <xs:annotation>
                            <xs:documentation>
                                <nemsisTacDoc>
@@ -34,7 +34,7 @@
                            </xs:simpleContent>
                        </xs:complexType>
                    </xs:element>
-                   <xs:element name="sSoftware.02" id="sSoftware.SoftwareName">
+                   <xs:element name="sSoftware.02" id="sSoftware.SoftwareName" nillable="true">
                        <xs:annotation>
                            <xs:documentation>
                                <nemsisTacDoc>
@@ -59,7 +59,7 @@
                            </xs:simpleContent>
                        </xs:complexType>
                    </xs:element>
-                   <xs:element name="sSoftware.03" id="sSoftware.SoftwareVersion">
+                   <xs:element name="sSoftware.03" id="sSoftware.SoftwareVersion" nillable="true">
                        <xs:annotation>
                            <xs:documentation>
                                <nemsisTacDoc>

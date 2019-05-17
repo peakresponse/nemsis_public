@@ -500,20 +500,6 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.17" type="OutcomeAtHospitalDischarge" id="eOutcome.OutcomeAtHospitalDischarge" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>
-						<nemsisTacDoc>
-							<number>eOutcome.17</number>
-							<name>Outcome at Hospital Discharge</name>
-							<national>No</national>
-							<state>No</state>
-							<definition>The patient's functional status at time of hospital discharge.</definition>
-							<usage>Optional</usage>
-						</nemsisTacDoc>
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
 			<xs:element name="eOutcome.18" id="eOutcome.EmergencyDepartmentAdmissionDateTime" minOccurs="0" nillable="true">
 				<xs:annotation>
 					<xs:documentation>

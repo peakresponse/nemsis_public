@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2011 rel. 2 (x64) (http://www.altova.com) by Greg Chandler (University of Utah) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:include schemaLocation="commonTypes_v3.xsd"/>
 	<xs:complexType name="eAirways">
@@ -384,7 +383,6 @@
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
-					<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -600,6 +598,11 @@
 					<xs:documentation>Waveform ETCO2</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4004021">
+				<xs:annotation>
+					<xs:documentation>Chest Rise</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="IndividualDetails">
@@ -696,7 +699,7 @@
 			<xs:documentation>The measurement at the lip of the tube depth in centimeters (cm) of the invasive airway placed.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
-			<xs:minInclusive value="8"/>
+			<xs:minInclusive value="4"/>
 			<xs:maxInclusive value="32"/>
 		</xs:restriction>
 	</xs:simpleType>

@@ -9,7 +9,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dFacility.01" id="dFacility.TypeofFacility" minOccurs="0">
+						<xs:element name="dFacility.01" id="dFacility.TypeofFacility" minOccurs="0" type="TypeOfFacility">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -20,14 +20,10 @@
 										<definition>The type of facility (healthcare or other) that the EMS agency transports patients to or from.</definition>
 										<v2Number>D04_15</v2Number>
 										<usage>Optional</usage>
+										<v3changes>With the release of v3.5.0 additional values were added to meet the needs of EMS. Reconciled the health care facility descriptions to match those in eDisposition.21 - Type of Destination.</v3changes>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="TypeOfFacility"/>
-								</xs:simpleContent>
-							</xs:complexType>
 						</xs:element>
 						<xs:element name="dFacility.FacilityGroup" id="dFacility.FacilityGroup" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
@@ -77,6 +73,7 @@
 													<definition>The designation(s) associated with the hospital (e.g., Trauma, STEMI, Peds, etc.)</definition>
 													<v2Number/>
 													<usage>Optional</usage>
+													<comment>Stroke Center classifications based on Joint Commission stroke certification: &lt;a href="https://www.jointcommission.org/facts_about_joint_commission_stroke_certification/" target="_blank">https://www.jointcommission.org/facts_about_joint_commission_stroke_certification/&lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -159,7 +156,7 @@
 The information contained within this element could be used to populate the address information within eScene.17 (Incident City) and/or eDisposition.04 (Destination City) as appropriate. 
 &lt;br/>&lt;br/>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
 &lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 													</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -176,7 +173,7 @@ The information contained within this element could be used to populate the addr
 													<definition>The state where the facility is located.</definition>
 													<usage>Optional</usage>
 													<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.05 (Destination State) as appropriate.
-								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+														&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -194,7 +191,7 @@ The information contained within this element could be used to populate the addr
 													<usage>Optional</usage>
 													>
 										<comment>The information contained within this element could be used to populate the address information within eScene.19 (Incident ZIP Code) and/or eDisposition.07 (Destination ZIP Code) as appropriate.
-										&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+											&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -211,7 +208,7 @@ The information contained within this element could be used to populate the addr
 													<definition>The county where the facility is located.</definition>
 													<usage>Optional</usage>
 													<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.21 (Incident County) and/or eDisposition.06 (Destination County) as appropriate.
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>										
+														&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>										
 										</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -228,7 +225,7 @@ The information contained within this element could be used to populate the addr
 													<definition>The country where the facility is located.</definition>
 													<usage>Optional</usage>
 													<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.22 (Incident Country) and/or eDisposition.08 (Destination Country) as appropriate.
-										&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm &lt;/a>
+														&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a>
 										</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
@@ -261,7 +258,7 @@ The information contained within this element could be used to populate the addr
 													<name>Facility US National Grid Coordinates</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>Facility US National Grid Coordinates</definition>
+													<definition>The facility's US National Grid coordinates.</definition>
 													<usage>Optional</usage>
 													<comment>Standard found at www.fgdc.gov/usng. The information contained within this element could be used to populate the address information within eScene.11 (Scene US National Grid Coordinates) and/or eDisposition.10 (Disposition Location US National Grid Coordinates) as appropriate.</comment>
 												</nemsisTacDoc>
@@ -276,7 +273,7 @@ The information contained within this element could be used to populate the addr
 													<name>Facility Phone Number</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>Facility phone number.</definition>
+													<definition>The facility's phone number.</definition>
 													<v2Number/>
 													<usage>Optional</usage>
 													<comment>This element contains an attribute to define what type of phone number is being documented (e.g., Fax, Home, Mobile, Pager, and Work).</comment>
@@ -294,100 +291,14 @@ The information contained within this element could be used to populate the addr
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								<xs:attribute name="UUID" type="UUID" use="required" />
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					<xs:attribute name="UUID" type="UUID" use="required" />
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:simpleType name="FacilityCode">
-		<xs:annotation>
-			<xs:documentation>The code of the facility as assigned by the state or the EMS agency.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FacilityDepartment">
-		<xs:annotation>
-			<xs:documentation>The name or number of the facility department.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FacilityName">
-		<xs:annotation>
-			<xs:documentation>The name of the facility.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="2"/>
-			<xs:maxLength value="100"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="FacilityRoom">
-		<xs:annotation>
-			<xs:documentation>The number of the specific room, suite, or apartment.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="1"/>
-			<xs:maxLength value="15"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="TypeOfFacility">
-		<xs:annotation>
-			<xs:documentation>The type of facility.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="1701001">
-				<xs:annotation>
-					<xs:documentation>Assisted Living Facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701003">
-				<xs:annotation>
-					<xs:documentation>Clinic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701005">
-				<xs:annotation>
-					<xs:documentation>Hospital</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701007">
-				<xs:annotation>
-					<xs:documentation>Nursing Home</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701009">
-				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701011">
-				<xs:annotation>
-					<xs:documentation>Urgent Care</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701013">
-				<xs:annotation>
-					<xs:documentation>Rehabilitation Facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701015">
-				<xs:annotation>
-					<xs:documentation>Mental Health Facility</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1701017">
-				<xs:annotation>
-					<xs:documentation>Dialysis Center</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
 </xs:schema>

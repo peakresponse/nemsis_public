@@ -18,7 +18,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>
-							Suggested code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html																
+								Suggested code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/															
 							&lt;br/>&lt;br/>Code list is represented in ICD-10 Codes.
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus
@@ -47,7 +47,7 @@
 							<name>Mechanism of Injury</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The mechanism of the event which caused the injury</definition>
+							<definition>The mechanism of the event which caused the injury.</definition>
 							<v2Number>E10_03</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasuresGroup>
@@ -69,12 +69,12 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eInjury.03" nillable="true" id="eInjury.TraumaCenterCriteria" maxOccurs="unbounded">
+			<xs:element name="eInjury.03" nillable="true" id="eInjury.TraumaTriageCriteriaSteps1and2" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eInjury.03</number>
-							<name>Trauma Center Criteria</name>
+							<name>Trauma Triage Criteria (Steps 1 and 2)</name>
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Physiologic and Anatomic Field Trauma Triage Criteria (steps 1 and 2) as defined by the Centers for Disease Control.</definition>
@@ -89,7 +89,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="TraumaCenterCriteria">
+						<xs:extension base="TraumaTriageCriteriaSteps1and2">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -100,12 +100,12 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eInjury.04" nillable="true" id="eInjury.VehicularPedestrianorOtherInjuryRiskFactor" maxOccurs="unbounded">
+			<xs:element name="eInjury.04" nillable="true" id="eInjury.TraumaTriageCriteriaSteps3and4" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eInjury.04</number>
-							<name>Vehicular, Pedestrian, or Other Injury Risk Factor</name>
+							<name>Trauma Triage Criteria (Steps 3 and 4)</name>
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Mechanism and Special Considerations Field Trauma Triage Criteria (steps 3 and 4) as defined by the Centers for Disease Control.</definition>
@@ -122,7 +122,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="VehicularInjuryIndicators">
+						<xs:extension base="TraumaTriageCriteriaSteps3and4">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -157,7 +157,7 @@
 							<name>Location of Patient in Vehicle</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The seat row location of the vehicle at the time of the crash with the front seat numbered as 1</definition>
+							<definition>The seat row location of the vehicle at the time of the crash with the front seat numbered as 1.</definition>
 							<v2Number>E10_06</v2Number>
 							<usage>Optional</usage>
 							<comment>MMUCC P6 data element</comment>
@@ -173,7 +173,7 @@
 							<name>Use of Occupant Safety Equipment</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>Safety equipment in use by the patient at the time of the injury</definition>
+							<definition>Safety equipment in use by the patient at the time of the injury.</definition>
 							<v2Number>E10_08</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasuresGroup>
@@ -204,7 +204,7 @@
 							<name>Airbag Deployment</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>Indication of Airbag Deployment</definition>
+							<definition>Indication of Airbag Deployment.</definition>
 							<v2Number>E10_09</v2Number>
 							<usage>Optional</usage>
 							<comment>MMUCC P8 data element baseline was used for this element.</comment>
@@ -227,7 +227,7 @@
 							<name>Height of Fall (feet)</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The distance in feet the patient fell, measured from the lowest point of the patient to the ground</definition>
+							<definition>The distance in feet the patient fell, measured from the lowest point of the patient to the ground.</definition>
 							<v2Number>E10_10</v2Number>
 							<usage>Optional</usage>
 							<comment>Classify same level falls as 0 feet</comment>
@@ -379,9 +379,6 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<!--<xs:complexType>
-								<xs:attributeGroup ref="GPSLocation"/>
-							</xs:complexType>-->
 						</xs:element>
 						<xs:element name="eInjury.16" type="BodyType" id="eInjury.ACNIncidentVehicleBodyType" minOccurs="0">
 							<xs:annotation>
@@ -687,11 +684,6 @@
 					<xs:documentation>No Airbag Present</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!--<xs:enumeration value="2908011">
-				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="AreaOfVehicleImpact">
@@ -1157,7 +1149,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="TraumaCenterCriteria">
+	<xs:simpleType name="TraumaTriageCriteriaSteps1and2">
 		<xs:annotation>
 			<xs:documentation>Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma.</xs:documentation>
 		</xs:annotation>
@@ -1289,24 +1281,9 @@
 					<xs:documentation>Shoulder Belt Only Used</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!--<xs:enumeration value="2907011">
-				<xs:annotation>
-					<xs:documentation>Lap Belt With Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2907013">
-				<xs:annotation>
-					<xs:documentation>Lap Belt Without Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
-			<!--<xs:enumeration value="2907025">
-				<xs:annotation>
-					<xs:documentation>Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="VehicularInjuryIndicators">
+	<xs:simpleType name="TraumaTriageCriteriaSteps3and4">
 		<xs:annotation>
 			<xs:documentation>The kind of risk factor predictors present at the incident</xs:documentation>
 		</xs:annotation>

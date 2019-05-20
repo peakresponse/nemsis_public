@@ -207,7 +207,6 @@
 										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
-								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="eVitals.BloodPressureGroup" id="eVitals.BloodPressureGroup">
@@ -290,17 +289,17 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
-									<xs:element name="eVitals.08" nillable="true" id="eVitals.MethodofBloodPressureMeasurement">
+									<xs:element name="eVitals.08" nillable="true" id="eVitals.MethodofBloodPressureMeasurement" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>eVitals.08</number>
 													<name>Method of Blood Pressure Measurement</name>
-													<national>Yes</national>
+													<national>No</national>
 													<state>Yes</state>
 													<definition>Indication of method of blood pressure measurement.</definition>
 													<v2Number>E14_06</v2Number>
-													<usage>Required</usage>
+													<usage>Recommended</usage>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -309,7 +308,7 @@
 												<xs:extension base="BloodPressureMethod">
 													<xs:attribute name="NV" use="optional">
 														<xs:simpleType>
-															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 														</xs:simpleType>
 													</xs:attribute>
 												</xs:extension>
@@ -523,7 +522,7 @@
 										<name>End Tidal Carbon Dioxide (ETCO2)</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The numeric value of the patient's exhaled end tidal carbon dioxide (ETCO2) level measured as a unit of pressure in millimeters of mercury (mmHg).</definition>
+										<definition>The numeric value of the patient's exhaled end tidal carbon dioxide (ETCO2) level measured as a unit of pressure in millimeters of mercury (mmHg), percentage or, kilopascal (kPa).</definition>
 										<v2Number>E14_13</v2Number>
 										<usage>Required</usage>
 										<comment/>
@@ -542,6 +541,7 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="CO2">
+										<xs:attribute name="ETCO2Type" type="ETCO2Type" use="optional" />
 										<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
@@ -603,7 +603,6 @@
 											<performanceMeasure>Pediatric</performanceMeasure>
 											<performanceMeasure>Stroke</performanceMeasure>
 										</performanceMeasuresGroup>
-										<Comment>For glucometers with "High" and "Low" readings, report "600" for "High" and "20" for "Low". </Comment>
 										<PNNil>Yes</PNNil>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -639,7 +638,7 @@
 													<name>Glasgow Coma Score-Eye</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The patient's Glasgow Coma Score Eye opening.</definition>
+													<definition>The patient's Glasgow Coma Score Eye opening response.</definition>
 													<v2Number>E14_15</v2Number>
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
@@ -680,7 +679,7 @@
 													<name>Glasgow Coma Score-Verbal</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The patient's Glasgow Coma Score Verbal.</definition>
+													<definition>The patient's Glasgow Coma Score Verbal response.</definition>
 													<v2Number>E14_16</v2Number>
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
@@ -722,7 +721,7 @@
 													<name>Glasgow Coma Score-Motor</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The patient's Glasgow Coma Score Motor</definition>
+													<definition>The patient's Glasgow Coma Score Motor response.</definition>
 													<v2Number>E14_17</v2Number>
 													<usage>Required</usage>
 													<performanceMeasuresGroup>
@@ -896,7 +895,7 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eVitals.26" nillable="true" id="eVitals.LevelofResponsivenessAPVU">
+						<xs:element name="eVitals.26" nillable="true" id="eVitals.LevelofResponsivenessAVPU">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -1153,7 +1152,7 @@
 										<definition>The patient's Revised Trauma Score.</definition>
 										<v2Number>E14_27</v2Number>
 										<usage>Optional</usage>
-										<comment>The Revised Trauma Score is a physiological scoring system that is based on the first set of vital signs obtained from the patient, and consists of Glasgow Coma Scale, Systolic Blood Pressure and Respiratory Rate.</comment>
+										<comment>The Unweighted Revised Trauma Score is a physiological scoring system that is based on the first set of vital signs obtained from the patient, and consists of Glasgow Coma Scale, Systolic Blood Pressure and Respiratory Rate.</comment>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
@@ -1187,17 +1186,14 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="10"/>
 		</xs:restriction>
-		<!--CarbonMonoxideLevel-->
 	</xs:simpleType>
 	<xs:simpleType name="BloodGlucoseLevel">
 		<xs:annotation>
 			<xs:documentation>The Patient's Blood Glucose Level</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:integer">
-			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="2000"/>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[2][0][0][0]|[1][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[0-9]|High|Low"/>
 		</xs:restriction>
-		<!--BloodPressureMethod Indication of method of blood pressure measurement.-->
 	</xs:simpleType>
 	<xs:simpleType name="BloodPressureMethod">
 		<xs:annotation>
@@ -1235,7 +1231,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--MethodBodyTemp-->
 	</xs:simpleType>
 	<xs:simpleType name="BodyTemperature">
 		<xs:annotation>
@@ -1247,7 +1242,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="50"/>
 		</xs:restriction>
-		<!--CriticalRhythm-->
 	</xs:simpleType>
 	<xs:simpleType name="CarbonMonoxideLevel">
 		<xs:annotation>
@@ -1259,7 +1253,6 @@
 			<xs:totalDigits value="3"/>
 			<xs:fractionDigits value="1"/>
 		</xs:restriction>
-		<!--APGAR-->
 	</xs:simpleType>
 	<xs:simpleType name="CO2">
 		<xs:annotation>
@@ -1267,9 +1260,8 @@
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="200"/>
+			<xs:maxInclusive value="750"/>
 		</xs:restriction>
-		<!--OK-->
 	</xs:simpleType>
 	<xs:simpleType name="PulseRhythm">
 		<xs:annotation>
@@ -1292,7 +1284,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--ReperfusionChecklist-->
 	</xs:simpleType>
 	<xs:simpleType name="ECGMethod">
 		<xs:annotation>
@@ -1320,13 +1311,17 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--BloodGlucoseLevel-->
 	</xs:simpleType>
 	<xs:simpleType name="ECGType">
 		<xs:annotation>
 			<xs:documentation>The type of ECG associated with the cardiac rhythm.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
+			<xs:enumeration value="3304000">
+				<xs:annotation>
+					<xs:documentation>2 Lead ECG (pads or paddles)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="3304001">
 				<xs:annotation>
 					<xs:documentation>3 Lead</xs:documentation>
@@ -1364,11 +1359,10 @@
 			</xs:enumeration>
 			<xs:enumeration value="3304015">
 				<xs:annotation>
-					<xs:documentation>Other (AED, Not Listed)</xs:documentation>
+					<xs:documentation>Other</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--ECGType-->
 	</xs:simpleType>
 	<xs:simpleType name="GlasgowComaScoreEyes">
 		<xs:annotation>
@@ -1396,7 +1390,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GlasgowComaScoreMotor-->
 	</xs:simpleType>
 	<xs:simpleType name="GlasgowComaScoreMotor">
 		<xs:annotation>
@@ -1434,7 +1427,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--ECGMethod-->
 	</xs:simpleType>
 	<xs:simpleType name="GlasgowComaScoreVerbal">
 		<xs:annotation>
@@ -1467,7 +1459,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GlasgowComaScoreEyes-->
 	</xs:simpleType>
 	<xs:simpleType name="GCSScoreQualifier">
 		<xs:annotation>
@@ -1500,7 +1491,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GlasgowComaScoreVerbal-->
 	</xs:simpleType>
 	<xs:simpleType name="HeartRate">
 		<xs:annotation>
@@ -1510,7 +1500,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="500"/>
 		</xs:restriction>
-		<!--StrokeScaleType-->
 	</xs:simpleType>
 	<xs:simpleType name="MAP">
 		<xs:annotation>
@@ -1520,7 +1509,6 @@
 			<xs:minInclusive value="1"/>
 			<xs:maxInclusive value="500"/>
 		</xs:restriction>
-		<!--OK-->
 	</xs:simpleType>
 	<xs:simpleType name="MethodBodyTemp">
 		<xs:annotation>
@@ -1573,7 +1561,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--PainScale-->
 	</xs:simpleType>
 	<xs:simpleType name="MethodMeasureHeartRate">
 		<xs:annotation>
@@ -1611,7 +1598,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--CardiacRhythm-->
 	</xs:simpleType>
 	<xs:simpleType name="PainScale">
 		<xs:annotation>
@@ -1621,7 +1607,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="10"/>
 		</xs:restriction>
-		<!--TotalGCS-->
 	</xs:simpleType>
 	<xs:simpleType name="PatientsHighestLevelResponsiveness">
 		<xs:annotation>
@@ -1649,7 +1634,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--MethodMeasureHeartRate-->
 	</xs:simpleType>
 	<xs:simpleType name="PulseOximetry">
 		<xs:annotation>
@@ -1659,7 +1643,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="100"/>
 		</xs:restriction>
-		<!---RespiratoryEffort-->
 	</xs:simpleType>
 	<xs:simpleType name="ReperfusionChecklist">
 		<xs:annotation>
@@ -1682,7 +1665,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--TypePainScale-->
 	</xs:simpleType>
 	<xs:simpleType name="RespiratoryEffort">
 		<xs:annotation>
@@ -1725,7 +1707,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--GCSScoreMoreMeaningful-->
 	</xs:simpleType>
 	<xs:simpleType name="RespiratoryRate">
 		<xs:annotation>
@@ -1735,7 +1716,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="300"/>
 		</xs:restriction>
-		<!--BodyTemperature-->
 	</xs:simpleType>
 	<xs:simpleType name="RTS">
 		<xs:annotation>
@@ -1745,7 +1725,6 @@
 			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="12"/>
 		</xs:restriction>
-		<!--PulseOximetry-->
 	</xs:simpleType>
 	<xs:simpleType name="StrokeScale">
 		<xs:annotation>
@@ -1768,7 +1747,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--TypeOfPainScale-->
 	</xs:simpleType>
 	<xs:simpleType name="TotalGCS">
 		<xs:annotation>
@@ -1778,7 +1756,6 @@
 			<xs:minInclusive value="3"/>
 			<xs:maxInclusive value="15"/>
 		</xs:restriction>
-		<!--HeartRate-->
 	</xs:simpleType>
 	<xs:simpleType name="TypeOfPainScale">
 		<xs:annotation>
@@ -1806,7 +1783,6 @@
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--RTS-->
 	</xs:simpleType>
 	<xs:simpleType name="TypeOfStrokeScale">
 		<xs:annotation>
@@ -1815,27 +1791,27 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3330001">
 				<xs:annotation>
-					<xs:documentation>Cincinnati</xs:documentation>
+					<xs:documentation>Cincinnati Prehospital Stroke Scale (CPSS)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3330003">
+			<xs:enumeration value="3330004">
 				<xs:annotation>
-					<xs:documentation>Los Angeles</xs:documentation>
+					<xs:documentation>Los Angeles Prehospital Stroke Screen (LAPSS)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3330005">
 				<xs:annotation>
-					<xs:documentation>Massachusetts</xs:documentation>
+					<xs:documentation>Massachusetts Stroke Scale (MSS)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3330007">
 				<xs:annotation>
-					<xs:documentation>Miami Emergency Neurologic Deficit (MEND)</xs:documentation>
+					<xs:documentation>Miami Emergency Neurologic Deficit Exam (MEND)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3330009">
 				<xs:annotation>
-					<xs:documentation>NIH</xs:documentation>
+					<xs:documentation>NIH Stroke Scale (NIHSS)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3330011">
@@ -1845,10 +1821,56 @@
 			</xs:enumeration>
 			<xs:enumeration value="3330013">
 				<xs:annotation>
-					<xs:documentation>F.A.S.T. Exam</xs:documentation>
+					<xs:documentation>FAST-ED</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330015">
+				<xs:annotation>
+					<xs:documentation>Boston Stroke Scale (BOSS)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330017">
+				<xs:annotation>
+					<xs:documentation>Ontario Prehospital Stroke Scale (OPSS)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330019">
+				<xs:annotation>
+					<xs:documentation>Melbourne Ambulance Stroke Screen (MASS)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330021">
+				<xs:annotation>
+					<xs:documentation>Rapid Arterial oCclusion Evaluation (RACE)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330023">
+				<xs:annotation>
+					<xs:documentation>Los Angeles Motor Score (LAMS)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
-		<!--RespiratoryRate-->
+	</xs:simpleType>
+	<xs:simpleType name="ETCO2Type">
+		<xs:annotation>
+			<xs:documentation>The type measurement for ETCO2.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3340001">
+				<xs:annotation>
+					<xs:documentation>mmHg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3340003">
+				<xs:annotation>
+					<xs:documentation>Percentage</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3340005">
+				<xs:annotation>
+					<xs:documentation>kPa</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nemsis.org" targetNamespace="http://www.nemsis.org" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes_v3.xsd" />
 	<xs:complexType name="eRecord" id="eRecord.RecordInformation">
 		<xs:sequence>
 			<xs:element name="eRecord.01" type="PatientCareReportNumber" id="eRecord.PatientCareReportNumber">
@@ -28,7 +29,7 @@
 			</xs:element>
 			<xs:element name="eRecord.SoftwareApplicationGroup" id="eRecord.SoftwareApplicationGroup">
 				<xs:annotation>
-					<xs:documentation>Group Tag to hold information about the software used to generate patient care report</xs:documentation>
+					<xs:documentation>Group Tag to hold information about the software used to generate this patient care report</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
@@ -90,33 +91,6 @@
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="3"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoftwareCreator">
-		<xs:annotation>
-			<xs:documentation>The name of the Vendor, Software Manufacturer, or Software Developer</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="1"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoftwareName">
-		<xs:annotation>
-			<xs:documentation>The name of the software used to collect the EMS event</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="1"/>
-			<xs:maxLength value="50"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="SoftwareVersion">
-		<xs:annotation>
-			<xs:documentation>The version of the software used to collect the EMS event</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:minLength value="1"/>
 			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>

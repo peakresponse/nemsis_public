@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.5.0.190419_CR" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.5.0.190522CR1" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -1748,10 +1748,6 @@
   <sch:rule id="nemSch_eArrest_rule_21" context="nem:eArrest.22[. = '']">
 
     <sch:let name="nemsisElements" value="."/>
-
-    <sch:assert id="nemSch_e121" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.03" test="not(../nem:eArrest.03 = '3003001')">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> is "Attempted Defibrillation".
-    </sch:assert>
 
     <sch:assert id="nemSch_e122" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.07" test="not(../nem:eArrest.07 = '3007005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.07', $nemSch_elements)"/> is "Yes, With Defibrillation".

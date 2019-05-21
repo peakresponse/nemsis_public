@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.190419_CR" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.190522CR1" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -669,7 +669,7 @@
 
   <sch:title>DEMDataSet / Nil/Not Value Attributes</sch:title>
 
-  <sch:rule id="nemSch_dNilNvPn_rule_1" context="nem:dCustomResults.01 | nem:eCustomResults.01">
+  <sch:rule id="nemSch_dNilNvPn_rule_1" context="nem:dCustomResults.01">
 
     <!-- This rule fires on dCustomResults.01 to prevent subsequent rules from firing. Nothing is checked. dCustomResults should be validated based on information contained in dCustomConfiguration. -->
 

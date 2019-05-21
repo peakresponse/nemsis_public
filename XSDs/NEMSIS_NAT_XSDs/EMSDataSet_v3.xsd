@@ -22,7 +22,7 @@
 	<xs:include schemaLocation="eOther_v3.xsd"/>
 	<xs:element name="EMSDataSet">
 		<xs:annotation>
-			<xs:documentation>Root Tag For Dataset</xs:documentation>
+			<xs:documentation>Root Tag For Patient Care Report Dataset</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
@@ -70,7 +70,7 @@
 														<name>EMS Agency Number</name>
 														<national>Yes</national>
 														<state>Yes</state>
-														<definition>The state-assigned provider number of the responding agency</definition>
+														<definition>The state-assigned provider number of the responding agency.</definition>
 														<v2Number>D01_01</v2Number>
 														<usage>Mandatory</usage>
 														<performanceMeasuresGroup>
@@ -113,7 +113,7 @@
 															<performanceMeasure>Trauma</performanceMeasure>
 														</performanceMeasuresGroup>
 														<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
-																	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+															&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 													</nemsisTacDoc>
 												</xs:documentation>
 											</xs:annotation>
@@ -223,8 +223,7 @@
 											</xs:annotation>
 										</xs:element>
 									</xs:sequence>
-									<!--<xs:attribute name="RecordStatus" type="RecordStatus" use="optional"/>
-									<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
+									<xs:attribute name="UUID" type="UUID" use="required"/>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>

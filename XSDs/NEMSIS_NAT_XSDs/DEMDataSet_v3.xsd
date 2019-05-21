@@ -26,6 +26,7 @@
 							</xs:element>
 						</xs:sequence>
 						<xs:attribute name="timeStamp" type="DateTimeType" use="required"/>
+						<xs:attribute name="UUID" type="UUID" use="required"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

@@ -16,7 +16,7 @@
 										<name>Protocols Used</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The protocol used by EMS personnel to direct the clinical care of the patient</definition>
+										<definition>The protocol used by EMS personnel to direct the clinical care of the patient.</definition>
 										<v2Number>E17_01</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -29,7 +29,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Protocols are grouped into Airway, Environmental, Exposure, General, Injury, Medical, and OB/GYN. 
-										&lt;br/>&lt;br/> There is a new data element EProtocols.02 to indicate whether the protocol is Adult, Pediatric, or General (both).
+										&lt;br/>&lt;br/> There is a new data element eProtocols.02 to indicate whether the protocol is Adult, Pediatric, or General (both).
 										&lt;br/>&lt;br/> State and local entities can add additional protocols to the list but the additional protocols must map to these uniform codes. The protocol code list should be derived from dConfiguration.05 and/or dConfiguration.10</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -46,42 +46,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eProtocols.02" nillable="true" id="eProtocols.ProtocolAgeCategory">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>eProtocols.02</number>
-										<name>Protocol Age Category</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>The age group the protocol is written to address</definition>
-										<usage>Required</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-											<performanceMeasure>Cardiac Arrest</performanceMeasure>
-											<performanceMeasure>Pediatric</performanceMeasure>
-											<performanceMeasure>Response</performanceMeasure>
-											<performanceMeasure>STEMI</performanceMeasure>
-											<performanceMeasure>Stroke</performanceMeasure>
-											<performanceMeasure>Trauma</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment>Protocols are grouped into Airway, Environmental, Exposure, General, Injury, Medical, and OB/GYN.  -There is a new data element to indicate whether the protocol is Adult, Pediatric, or General (both).</comment>
-										<v3Changes>Added to better document protocol use.</v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="ProtocolAgeCategory">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-											</xs:simpleType>
-										</xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
+						
 					</xs:sequence>
 					
 				</xs:complexType>

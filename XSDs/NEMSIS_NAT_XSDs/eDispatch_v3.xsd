@@ -2,15 +2,15 @@
 	<xs:include schemaLocation="commonTypes_v3.xsd"></xs:include>
 	<xs:complexType name="eDispatch" id="eDispatch.DispatchInformation">
 		<xs:sequence>
-			<xs:element name="eDispatch.01" type="ComplaintReportedByDispatch" id="eDispatch.ComplaintReportedbyDispatch">
+			<xs:element name="eDispatch.01" type="DispatchReason" id="eDispatch.DispatchReason">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDispatch.01</number>
-							<name>Complaint Reported by Dispatch</name>
+							<name>Dispatch Reason</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The complaint dispatch reported to the responding unit.</definition>
+							<definition>The dispatch reason reported to the responding unit.</definition>
 							<v2Number>E03_01</v2Number>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
@@ -80,9 +80,9 @@ Added Pandemic/Epidemic/Outbreak.
 			<xs:maxLength value="50"></xs:maxLength>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="ComplaintReportedByDispatch">
+	<xs:simpleType name="DispatchReason">
 		<xs:annotation>
-			<xs:documentation>The complaint dispatch reported to the responding unit.</xs:documentation>
+			<xs:documentation>The dispatch reason reported to the responding unit.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2301001">
@@ -293,6 +293,26 @@ Added Pandemic/Epidemic/Outbreak.
 			<xs:enumeration value="2301083">
 				<xs:annotation>
 					<xs:documentation>Airmedical Transport</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301085">
+				<xs:annotation>
+					<xs:documentation>Altered Mental Status</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301087">
+				<xs:annotation>
+					<xs:documentation>Intercept</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301089">
+				<xs:annotation>
+					<xs:documentation>Nausea</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301091">
+				<xs:annotation>
+					<xs:documentation>Vomiting</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

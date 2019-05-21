@@ -4,46 +4,7 @@
 		<xs:sequence>
 			
 			
-			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" maxOccurs="unbounded">
-				<xs:annotation>
-					<xs:documentation>Group Tag to hold info about the EMS Crew Member</xs:documentation>
-				</xs:annotation>
-				<xs:complexType>
-					<xs:sequence>
-						
-						
-						<xs:element name="eOther.05" nillable="true" id="eOther.SuspectedEMSWorkRelatedExposureInjuryorDeath">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>eOther.05</number>
-										<name>Suspected EMS Work Related Exposure, Injury, or Death</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>Indication of an EMS work related exposure, injury, or death associated with this EMS event.</definition>
-										<v2Number>E23_05</v2Number>
-										<usage>Required</usage>
-										<comment>Associated with eOther.04 (EMS Professional (Crew Member) ID)</comment>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="YesNoValues">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-											</xs:simpleType>
-										</xs:attribute>
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
-						
-					</xs:sequence>
-					
-				</xs:complexType>
-			</xs:element>
+			
 			
 			
 			
@@ -70,9 +31,14 @@
 					<xs:documentation>Diagnostic Image (CT, X-ray, US, etc.)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4509007">
+			<xs:enumeration value="4509006">
 				<xs:annotation>
-					<xs:documentation>DNR/Living Will</xs:documentation>
+					<xs:documentation>DNR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4509008">
+				<xs:annotation>
+					<xs:documentation>Living Will</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4509009">
@@ -115,6 +81,11 @@
 					<xs:documentation>Other Video/Movie</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4509027">
+				<xs:annotation>
+					<xs:documentation>ePCR</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="FileImage">
@@ -125,7 +96,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="FileName">
 		<xs:annotation>
-			<xs:documentation>The name of the graphic file for the signature.</xs:documentation>
+			<xs:documentation>The name of the attached file.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="255"></xs:maxLength>
@@ -540,11 +511,6 @@
 					<xs:documentation>Physical Signature/Paper Copy Obtained</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="4515029">
-				<xs:annotation>
-					<xs:documentation>Refused</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
 			<xs:enumeration value="4515031">
 				<xs:annotation>
 					<xs:documentation>Signed</xs:documentation>
@@ -553,6 +519,21 @@
 			<xs:enumeration value="4515033">
 				<xs:annotation>
 					<xs:documentation>Signed-Not Patient</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4515035">
+				<xs:annotation>
+					<xs:documentation>Not Signed-Illiterate (Unable to Read)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4515037">
+				<xs:annotation>
+					<xs:documentation>Not Signed-Restrained</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4515039">
+				<xs:annotation>
+					<xs:documentation>Not Signed-Combative or Uncooperative</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -686,14 +667,44 @@
 			</xs:enumeration>
 			<xs:enumeration value="4507027">
 				<xs:annotation>
-					<xs:documentation>Weather</xs:documentation>
+					<xs:documentation>Weather (Other)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4507029">
+				<xs:annotation>
+					<xs:documentation>Earthquake</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4507031">
+				<xs:annotation>
+					<xs:documentation>Flood</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4507033">
+				<xs:annotation>
+					<xs:documentation>Land Slide</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4507035">
+				<xs:annotation>
+					<xs:documentation>Winter Storm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4507037">
+				<xs:annotation>
+					<xs:documentation>Tornado</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4507039">
+				<xs:annotation>
+					<xs:documentation>Hurricane</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="TypeOfSuspectedExposureToBodilyFluids">
+	<xs:simpleType name="TypeOfInjuryDeathOrSuspectedExposure">
 		<xs:annotation>
-			<xs:documentation>The type of exposure or unprotected contact with blood or body fluids</xs:documentation>
+			<xs:documentation>The type of injury, death, or exposure to blood or body fluids</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4506001">

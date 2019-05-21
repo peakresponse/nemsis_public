@@ -1,5 +1,4 @@
 'Dataset'|'DatasetType'|'ElementNumber'|'ElementName'|'National'|'State'|'Airway'|'CardiacArrest'|'Pediatric'|'ResponseTime'|'STEMI'|'Stroke'|'Trauma'|
-'EMSDataSet'|'element'|'eState.01'|'State Required Element'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'dAgency.01'|'EMS Agency Unique State ID'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'dAgency.02'|'EMS Agency Number'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'dAgency.04'|'EMS Agency State'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
@@ -22,7 +21,7 @@
 'EMSDataSet'|'element'|'eResponse.04'|'EMS Response Number'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eResponse.05'|'Type of Service Requested'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eResponse.06'|'Standby Purpose'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eResponse.07'|'Primary Role of the Unit'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eResponse.07'|'Unit Transport and Equipment Capability'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eResponse.08'|'Type of Dispatch Delay'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eResponse.09'|'Type of Response Delay'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eResponse.10'|'Type of Scene Delay'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
@@ -30,7 +29,6 @@
 'EMSDataSet'|'element'|'eResponse.12'|'Type of Turn-Around Delay'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eResponse.13'|'EMS Vehicle (Unit) Number'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eResponse.14'|'EMS Unit Call Sign'|'National'|'State'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eResponse.15'|'Level of Care of This Unit'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eResponse.16'|'Vehicle Dispatch Location'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eResponse.17'|'Vehicle Dispatch GPS Location'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eResponse.18'|'Vehicle Dispatch Location US National Grid Coordinates'|''|''|''|''|''|''|''|''|''|
@@ -40,7 +38,7 @@
 'EMSDataSet'|'element'|'eResponse.22'|'Ending Odometer Reading of Responding Vehicle'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eResponse.23'|'Response Mode to Scene'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eResponse.24'|'Additional Response Mode Descriptors'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'EMSDataSet'|'element'|'eDispatch.01'|'Complaint Reported by Dispatch'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDispatch.01'|'Dispatch Reason'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDispatch.02'|'EMD Performed'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDispatch.03'|'EMD Card Number'|''|''|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDispatch.04'|'Dispatch Center Name or ID'|''|''|''|''|''|''|''|''|''|
@@ -65,6 +63,7 @@
 'EMSDataSet'|'element'|'eTimes.14'|'Unit Canceled Date/Time'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eTimes.15'|'Unit Back at Home Location Date/Time'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eTimes.16'|'EMS Call Completed Date/Time'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eTimes.17'|'Unit Arrived at Staging Area Date/Time'|''|''|''|''|''|''|''|''|'X'|
 'EMSDataSet'|'element'|'ePatient.01'|'EMS Patient ID'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.02'|'Last Name'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.03'|'First Name'|''|'State'|''|''|''|''|''|''|''|
@@ -86,6 +85,7 @@
 'EMSDataSet'|'element'|'ePatient.19'|'Patient's Email Address'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.20'|'State Issuing Driver's License'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.21'|'Driver's License Number'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePatient.22'|'Alternate Home Residence'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.01'|'Primary Method of Payment'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'ePayment.02'|'Physician Certification Statement'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.03'|'Date Physician Certification Statement Signed'|''|''|''|''|''|''|''|''|''|
@@ -109,6 +109,8 @@
 'EMSDataSet'|'element'|'ePayment.21'|'Middle Initial/Name of the Insured'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.22'|'Relationship to the Insured'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.58'|'Insurance Group Name'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePayment.59'|'Insurance Company Phone Number'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePayment.60'|'Date of Birth of the Insured'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.23'|'Closest Relative/Guardian Last Name'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.24'|'Closest Relative/ Guardian First Name'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.25'|'Closest Relative/ Guardian Middle Initial/Name'|''|''|''|''|''|''|''|''|''|
@@ -147,6 +149,7 @@
 'EMSDataSet'|'element'|'eScene.02'|'Other EMS or Public Safety Agencies at Scene'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.03'|'Other EMS or Public Safety Agency ID Number'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.04'|'Type of Other Service at Scene'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eScene.24'|'First Other EMS or Public Safety Agency at Scene to Provide Patient Care'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.05'|'Date/Time Initial Responder Arrived on Scene'|''|''|'X'|'X'|''|''|'X'|''|'X'|
 'EMSDataSet'|'element'|'eScene.06'|'Number of Patients at Scene'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.07'|'Mass Casualty Incident'|'National'|'State'|''|''|''|''|''|''|'X'|
@@ -183,11 +186,13 @@
 'EMSDataSet'|'element'|'eSituation.15'|'Patient's Occupational Industry'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eSituation.16'|'Patient's Occupation'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eSituation.17'|'Patient Activity'|''|'State'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eSituation.18'|'Date/Time Last Known Well'|''|''|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eSituation.18'|'Date/Time Last Known Well'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eSituation.19'|'Justification for Transfer or Encounter'|''|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eSituation.20'|'Reason for Interfacility Transfer/Medical Transport'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eInjury.01'|'Cause of Injury'|'National'|'State'|''|''|''|''|''|''|'X'|
 'EMSDataSet'|'element'|'eInjury.02'|'Mechanism of Injury'|''|'State'|''|''|''|''|''|''|'X'|
-'EMSDataSet'|'element'|'eInjury.03'|'Trauma Center Criteria'|'National'|'State'|''|''|''|''|''|''|'X'|
-'EMSDataSet'|'element'|'eInjury.04'|'Vehicular, Pedestrian, or Other Injury Risk Factor'|'National'|'State'|''|''|''|''|''|''|'X'|
+'EMSDataSet'|'element'|'eInjury.03'|'Trauma Triage Criteria (Steps 1 and 2)'|'National'|'State'|''|''|''|''|''|''|'X'|
+'EMSDataSet'|'element'|'eInjury.04'|'Trauma Triage Criteria (Steps 3 and 4)'|'National'|'State'|''|''|''|''|''|''|'X'|
 'EMSDataSet'|'element'|'eInjury.05'|'Main Area of the Vehicle Impacted by the Collision'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eInjury.06'|'Location of Patient in Vehicle'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eInjury.07'|'Use of Occupant Safety Equipment'|''|'State'|''|''|''|''|''|''|'X'|
@@ -217,11 +222,9 @@
 'EMSDataSet'|'element'|'eArrest.02'|'Cardiac Arrest Etiology'|'National'|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.03'|'Resuscitation Attempted By EMS'|'National'|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.04'|'Arrest Witnessed By'|'National'|'State'|''|'X'|''|''|''|''|''|
-'EMSDataSet'|'element'|'eArrest.05'|'CPR Care Provided Prior to EMS Arrival'|'National'|'State'|''|'X'|''|''|''|''|''|
-'EMSDataSet'|'element'|'eArrest.06'|'Who Provided CPR Prior to EMS Arrival'|''|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.07'|'AED Use Prior to EMS Arrival'|'National'|'State'|''|'X'|''|''|''|''|''|
-'EMSDataSet'|'element'|'eArrest.08'|'Who Used AED Prior to EMS Arrival'|''|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.09'|'Type of CPR Provided'|'National'|'State'|''|'X'|''|''|''|''|''|
+'EMSDataSet'|'element'|'eArrest.10'|'Therapeutic Hypothermia by EMS'|''|''|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.11'|'First Monitored Arrest Rhythm of the Patient'|'National'|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.12'|'Any Return of Spontaneous Circulation'|'National'|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.13'|'Neurological Outcome at Hospital Discharge'|''|''|''|'X'|''|''|''|''|''|
@@ -231,6 +234,9 @@
 'EMSDataSet'|'element'|'eArrest.17'|'Cardiac Rhythm on Arrival at Destination'|'National'|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.18'|'End of EMS Cardiac Arrest Event'|'National'|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eArrest.19'|'Date/Time of Initial CPR'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eArrest.20'|'Who First Initiated CPR'|'National'|'State'|''|'X'|''|''|''|''|''|
+'EMSDataSet'|'element'|'eArrest.21'|'Who First Applied the AED'|'National'|'State'|''|'X'|''|''|''|''|''|
+'EMSDataSet'|'element'|'eArrest.22'|'Who First Defibrillated the Patient'|'National'|'State'|''|'X'|''|''|''|''|''|
 'EMSDataSet'|'element'|'eHistory.01'|'Barriers to Patient Care'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eHistory.02'|'Last Name of Patient's Practitioner'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eHistory.03'|'First Name of Patient's Practitioner'|''|''|''|''|''|''|''|''|''|
@@ -246,6 +252,7 @@
 'EMSDataSet'|'element'|'eHistory.13'|'Current Medication Dose'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eHistory.14'|'Current Medication Dosage Unit'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eHistory.15'|'Current Medication Administration Route'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eHistory.20'|'Current Medication Frequency'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eHistory.16'|'Presence of Emergency Information Form'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eHistory.17'|'Alcohol/Drug Use Indicators'|'National'|'State'|''|''|''|''|''|''|'X'|
 'EMSDataSet'|'element'|'eHistory.18'|'Pregnancy'|''|''|''|''|''|''|''|''|''|
@@ -258,7 +265,7 @@
 'EMSDataSet'|'element'|'eVitals.05'|'Method of ECG Interpretation'|'National'|'State'|''|''|''|''|'X'|''|''|
 'EMSDataSet'|'element'|'eVitals.06'|'SBP (Systolic Blood Pressure)'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eVitals.07'|'DBP (Diastolic Blood Pressure)'|''|'State'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eVitals.08'|'Method of Blood Pressure Measurement'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eVitals.08'|'Method of Blood Pressure Measurement'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.09'|'Mean Arterial Pressure'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.10'|'Heart Rate'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eVitals.11'|'Method of Heart Rate Measurement'|''|''|''|''|''|''|''|''|''|
@@ -299,7 +306,6 @@
 'EMSDataSet'|'element'|'eExam.05'|'Head Assessment'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.06'|'Face Assessment'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.07'|'Neck Assessment'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eExam.08'|'Chest/Lungs Assessment'|''|''|'X'|''|'X'|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.09'|'Heart Assessment'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.10'|'Abdominal Assessment Finding Location'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.11'|'Abdomen Assessment'|''|''|''|''|''|''|''|''|''|
@@ -310,15 +316,19 @@
 'EMSDataSet'|'element'|'eExam.16'|'Extremities Assessment'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.17'|'Eye Assessment Finding Location'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.18'|'Eye Assessment'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eExam.22'|'Lung Assessment Finding Location'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eExam.23'|'Lung Assessment'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eExam.24'|'Chest Assessment Finding Location'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eExam.25'|'Chest Assessment'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eExam.19'|'Mental Status Assessment'|''|''|''|'X'|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eExam.20'|'Neurological Assessment'|''|''|''|'X'|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eExam.21'|'Stroke/CVA Symptoms Resolved'|''|'State'|''|''|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eProtocols.01'|'Protocols Used'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'EMSDataSet'|'element'|'eProtocols.02'|'Protocol Age Category'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eProtocols.02'|'Protocol Age Category'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eMedications.01'|'Date/Time Medication Administered'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eMedications.02'|'Medication Administered Prior to this Unit's EMS Care'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'EMSDataSet'|'element'|'eMedications.03'|'Medication Given'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'EMSDataSet'|'element'|'eMedications.04'|'Medication Administered Route'|''|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eMedications.03'|'Medication Administered'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eMedications.04'|'Medication Administered Route'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eMedications.05'|'Medication Dosage'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eMedications.06'|'Medication Dosage Units'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eMedications.07'|'Response to Medication'|'National'|'State'|''|''|''|''|''|''|''|
@@ -374,10 +384,14 @@
 'EMSDataSet'|'element'|'eDisposition.09'|'Destination GPS Location'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.10'|'Destination Location US National Grid Coordinates'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.11'|'Number of Patients Transported in this EMS Unit'|''|'State'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eDisposition.12'|'Incident/Patient Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDisposition.27'|'Unit Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDisposition.28'|'Patient Evaluation/Care'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDisposition.29'|'Crew Incident Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDisposition.30'|'Transport Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDisposition.31'|'Reason for Refusal/Release'|''|''|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.13'|'How Patient Was Moved to Ambulance'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.14'|'Position of Patient During Transport'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eDisposition.15'|'How Patient Was Transported From Ambulance'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eDisposition.15'|'How Patient Was Moved From Ambulance'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.16'|'EMS Transport Method'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.17'|'Transport Mode from Scene'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'National'|'State'|''|''|''|''|''|''|''|
@@ -389,23 +403,21 @@
 'EMSDataSet'|'element'|'eDisposition.24'|'Destination Team Pre-Arrival Alert or Activation'|'National'|'State'|''|'X'|''|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.25'|'Date/Time of Destination Prearrival Alert or Activation'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.26'|'Disposition Instructions Provided'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eDisposition.32'|'Level of Care Provided per Protocol'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOutcome.01'|'Emergency Department Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eOutcome.02'|'Hospital Disposition'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eOutcome.03'|'External Report ID/Number Type'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOutcome.04'|'External Report ID/Number'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOutcome.05'|'Other Report Registry Type'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.06'|'Emergency Department Chief Complaint'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.07'|'First ED Systolic Blood Pressure'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.08'|'Emergency Department Recorded Cause of Injury'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.09'|'Emergency Department Procedures'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.10'|'Emergency Department Diagnosis'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.11'|'Date/Time of Hospital Admission'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.12'|'Hospital Procedures'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.13'|'Hospital Diagnosis'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.14'|'Total ICU Length of Stay'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.15'|'Total Ventilator Days'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.16'|'Date/Time of Hospital Discharge'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOutcome.17'|'Outcome at Hospital Discharge'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.09'|'Emergency Department Procedures'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.19'|'Date/Time Emergency Department Procedure Performed'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eOutcome.10'|'Emergency Department Diagnosis'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.11'|'Date/Time of Hospital Admission'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.12'|'Hospital Procedures'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.20'|'Date/Time Hospital Procedure Performed'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eOutcome.13'|'Hospital Diagnosis'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.16'|'Date/Time of Hospital Discharge'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.18'|'Date/Time of Emergency Department Admission'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomResults.01'|'Custom Data Element Result'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomResults.02'|'Custom Element ID Referenced'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomResults.03'|'CorrelationID of PatientCareReport Element or Group'|''|''|''|''|''|''|''|''|''|
@@ -413,13 +425,14 @@
 'EMSDataSet'|'element'|'eOther.02'|'Potential System of Care/Specialty/Registry Patient'|''|''|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eOther.03'|'Personal Protective Equipment Used'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.04'|'EMS Professional (Crew Member) ID'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eOther.05'|'Suspected EMS Work Related Exposure, Injury, or Death'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOther.05'|'Suspected EMS Work Related Exposure, Injury, or Death'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.07'|'Natural, Suspected, Intentional, or Unintentional Disaster'|''|''|''|''|''|''|''|''|'X'|
 'EMSDataSet'|'element'|'eOther.08'|'Crew Member Completing this Report'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.09'|'External Electronic Document Type'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.10'|'File Attachment Type'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.11'|'File Attachment Image'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOther.22'|'File Attachment Name'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.12'|'Type of Person Signing'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.13'|'Signature Reason'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.14'|'Type Of Patient Representative'|''|''|''|''|''|''|''|''|''|

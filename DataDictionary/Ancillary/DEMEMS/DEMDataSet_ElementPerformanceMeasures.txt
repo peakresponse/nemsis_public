@@ -1,5 +1,4 @@
 'Dataset'|'DatasetType'|'ElementNumber'|'ElementName'|'National'|'State'|'Airway'|'CardiacArrest'|'Pediatric'|'ResponseTime'|'STEMI'|'Stroke'|'Trauma'|
-'DEMDataSet'|'element'|'dState.01'|'State Required Element'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dCustomConfiguration.01'|'Custom Data Element Title'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dCustomConfiguration.02'|'Custom Definition'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dCustomConfiguration.03'|'Custom Data Type'|''|''|''|''|''|''|''|''|''|
@@ -23,13 +22,13 @@
 'DEMDataSet'|'element'|'dAgency.12'|'Organization Status'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dAgency.13'|'Organizational Type'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dAgency.14'|'EMS Agency Organizational Tax Status'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dAgency.15'|'Statistical Calendar Year'|'National'|'State'|''|''|''|''|''|''|''|
-'DEMDataSet'|'element'|'dAgency.16'|'Total Primary Service Area Size'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dAgency.17'|'Total Service Area Population'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dAgency.18'|'911 EMS Call Center Volume per Year'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dAgency.19'|'EMS Dispatch Volume per Year'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dAgency.20'|'EMS Patient Transport Volume per Year'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dAgency.21'|'EMS Patient Contact Volume per Year'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dAgency.15'|'Statistical Calendar Year'|''|'State'|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dAgency.16'|'Total Primary Service Area Size'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dAgency.17'|'Total Service Area Population'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dAgency.18'|'911 EMS Call Center Volume per Year'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dAgency.19'|'EMS Dispatch Volume per Year'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dAgency.20'|'EMS Patient Transport Volume per Year'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dAgency.21'|'EMS Patient Contact Volume per Year'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dAgency.22'|'EMS Billable Calls per Year'|''|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dAgency.23'|'EMS Agency Time Zone'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dAgency.24'|'EMS Agency Daylight Savings Time Use'|''|''|''|''|''|''|''|''|''|
@@ -51,21 +50,17 @@
 'DEMDataSet'|'element'|'dContact.14'|'Agency Medical Director Board Certification Type'|''|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.15'|'Medical Director Compensation'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.16'|'EMS Medical Director Fellowship Trained Status'|''|''|''|''|''|''|''|''|''|
-'DEMDataSet'|'element'|'dConfiguration.01'|'State Associated with the Certification/Licensure Levels'|'National'|'State'|''|''|''|''|''|''|''|
-'DEMDataSet'|'element'|'dConfiguration.02'|'State Certification/Licensure Levels'|'National'|'State'|''|''|''|''|''|''|''|
-'DEMDataSet'|'element'|'dConfiguration.03'|'Procedures Permitted by the State'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dConfiguration.04'|'Medications Permitted by the State'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dConfiguration.05'|'Protocols Permitted by the State'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dConfiguration.01'|'State Associated with this Configuration'|'National'|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.07'|'EMS Agency Procedures'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.08'|'EMS Certification Levels Permitted to Administer Each Medication'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.09'|'EMS Agency Medications'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.10'|'EMS Agency Protocols'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
-'DEMDataSet'|'element'|'dConfiguration.11'|'EMS Agency Specialty Service Capability'|'National'|'State'|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dConfiguration.11'|'EMS Agency Specialty Service Capability'|''|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.12'|'Billing Status'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.13'|'Emergency Medical Dispatch (EMD) Provided to EMS Agency Service Area'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.14'|'EMD Vendor'|''|'State'|''|''|''|''|''|''|''|
-'DEMDataSet'|'element'|'dConfiguration.15'|'Patient Monitoring Capability(ies)'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
+'DEMDataSet'|'element'|'dConfiguration.15'|'Patient Monitoring Capability(ies)'|''|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.16'|'Crew Call Sign'|'National'|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.17'|'Dispatch Center (CAD) Name or ID'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dLocation.01'|'EMS Location Type'|''|''|''|''|''|''|''|''|''|

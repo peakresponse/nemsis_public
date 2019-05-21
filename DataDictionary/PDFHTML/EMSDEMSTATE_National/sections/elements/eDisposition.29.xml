@@ -1,0 +1,48 @@
+<?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
+<element number="eDisposition.29"  minOccurs="1"  maxOccurs="1"  dataTypeName="CrewIncidentDisposition"  isNillable="Yes">
+<name>Crew Incident Disposition</name>
+<national>Yes</national>
+<deprecated></deprecated>
+<state>Yes</state>
+<definition>The crew disposition for this EMS event identifying which crew provided primary patient care or whether support services were required.</definition>
+<v2Number></v2Number>
+<usage>Required</usage>
+<performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
+<v3Comment>Grouped with Patient and Transport Dispositions. A "Referral Agency" is intended for use with specialty referral programs (such as "Safe Baby Haven", mental health or addiction, or similar programs) where EMS provides an initial medical screening as part of the intake process for the various services or programs. Depending on context of the Value, "Unit" could be Vehicle or Service/Agency.</v3Comment>
+<v3Changes>Element added with the release of v3.5.0</v3Changes>
+<deprecatedComment></deprecatedComment>
+<restrictions>
+  <CrewIncidentDisposition baseType="string">
+    <facet name="enumeration" value="4229001" annotation="Initiated and Continued Primary Care"/>
+    <facet name="enumeration" value="4229003" annotation="Initiated Primary Care and Transferred to Another EMS Crew"/>
+    <facet name="enumeration" value="4229005" annotation="Provided Care Supporting Primary EMS Crew"/>
+    <facet name="enumeration" value="4229007" annotation="Assumed Primary Care from Another EMS Crew"/>
+    <facet name="enumeration" value="4229009" annotation="Incident Support Services Provided (Including Standby)"/>
+    <facet name="enumeration" value="4229011" annotation="Back in Service, No Care/Support Services Required"/>
+    <facet name="enumeration" value="4229013" annotation="Back in Service, Care/Support Services Refused"/>
+  </CrewIncidentDisposition>
+</restrictions>
+<attributes>
+  <NV>
+    <NV.NotApplicable><facet name="enumeration" value="7701001" annotation="Not Applicable"/></NV.NotApplicable>
+    <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
+  </NV>
+</attributes>
+<asserts>
+  <assert id="nemSch_e181" role="Warning">
+      <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> should be "Patient Contact Made" when <elementRef elementNumber="eDisposition.29">Crew Incident Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+      </assert>
+  <assert id="nemSch_e184" role="Warning">
+      <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> should be "Patient Evaluated and Care Provided" when <elementRef elementNumber="eDisposition.29">Crew Incident Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+      </assert>
+  <assert id="nemSch_e185" role="Warning">
+      <elementRef elementNumber="eDisposition.29">Crew Incident Disposition</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
+      </assert>
+  <assert id="nemSch_e002" role="Error">
+      When Crew Incident Disposition has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_e001" role="Error">
+      When Crew Incident Disposition is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
+</element>

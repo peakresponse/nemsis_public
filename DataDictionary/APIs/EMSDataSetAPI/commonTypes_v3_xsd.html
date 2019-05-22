@@ -70,6 +70,7 @@ var facetsBoxes= new Array('facets_EMSAgencyStateID',
 				'facets_HospitalDesignation', 
 				'facets_icd10CodeOutcomeProcedures', 
 				'facets_CustomResults', 
+				'facets_UUID', 
 				'facets_ANSICountryCodesCAMXUS', 
 				'facets_CodeType', 
 				'facets_CodeType.ICD10', 
@@ -108,7 +109,6 @@ var facetsBoxes= new Array('facets_EMSAgencyStateID',
 				'facets_TimeStampType', 
 				'facets_TrueFalseType', 
 				'facets_TypeOfService', 
-				'facets_UUID', 
 				'facets_FacilityCode', 
 				'facets_FacilityDepartment', 
 				'facets_FacilityName', 
@@ -180,11 +180,11 @@ var usedByBoxes= new Array('usedBy_EMSAgencyStateID',
 				'usedBy_icd10CodeOutcomeProcedures', 
 				'usedBy_CustomResults', 
 				'usedBy_Graphic', 
+				'usedBy_UUID', 
 				'usedBy_NationalProviderIdentifier', 
 				'usedBy_OrganizationalType', 
 				'usedBy_StateCertificationLicensureLevels', 
-				'usedBy_TypeOfService', 
-				'usedBy_UUID');
+				'usedBy_TypeOfService');
 var sourceBoxes= new Array('source_EMSAgencyStateID', 
 				'source_EMSAgencyNumber', 
 				'source_ANSIStateCode', 
@@ -251,6 +251,7 @@ var sourceBoxes= new Array('source_EMSAgencyStateID',
 				'source_icd10CodeOutcomeProcedures', 
 				'source_CustomResults', 
 				'source_Graphic', 
+				'source_UUID', 
 				'source_ANSICountryCodesCAMXUS', 
 				'source_CodeType', 
 				'source_CodeType.ICD10', 
@@ -289,7 +290,6 @@ var sourceBoxes= new Array('source_EMSAgencyStateID',
 				'source_TimeStampType', 
 				'source_TrueFalseType', 
 				'source_TypeOfService', 
-				'source_UUID', 
 				'source_FacilityCode', 
 				'source_FacilityDepartment', 
 				'source_FacilityName', 
@@ -361,6 +361,7 @@ var diagramBoxes= new Array('diagram_EMSAgencyStateID',
 				'diagram_icd10CodeOutcomeProcedures', 
 				'diagram_CustomResults', 
 				'diagram_Graphic', 
+				'diagram_UUID', 
 				'diagram_ANSICountryCodesCAMXUS', 
 				'diagram_CodeType', 
 				'diagram_CodeType.ICD10', 
@@ -399,7 +400,6 @@ var diagramBoxes= new Array('diagram_EMSAgencyStateID',
 				'diagram_TimeStampType', 
 				'diagram_TrueFalseType', 
 				'diagram_TypeOfService', 
-				'diagram_UUID', 
 				'diagram_FacilityCode', 
 				'diagram_FacilityDepartment', 
 				'diagram_FacilityName', 
@@ -470,6 +470,7 @@ var annotationBoxes= new Array('annotations_EMSAgencyStateID',
 				'annotations_icd10CodeOutcomeProcedures', 
 				'annotations_CustomResults', 
 				'annotations_Graphic', 
+				'annotations_UUID', 
 				'annotations_ANSICountryCodesCAMXUS', 
 				'annotations_CodeType', 
 				'annotations_DateType', 
@@ -504,7 +505,6 @@ var annotationBoxes= new Array('annotations_EMSAgencyStateID',
 				'annotations_TimeStampType', 
 				'annotations_TrueFalseType', 
 				'annotations_TypeOfService', 
-				'annotations_UUID', 
 				'annotations_FacilityCode', 
 				'annotations_FacilityDepartment', 
 				'annotations_FacilityName', 
@@ -14365,6 +14365,119 @@ var annotationBoxes= new Array('annotations_EMSAgencyStateID',
             <td class="rt_lineBottom"></td>
             <td class="rt_cornerBottomRight"></td>
          </tr>
+      </table><a id="UUID"></a><div class="componentTitle">Simple Type <span class="qname">UUID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.nemsis.org</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_UUID" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%"><pre><span class="tT">A universally unique identifier used to track persistent objects over time.</span></pre></td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_UUID');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_UUID" style="display:block"><img alt="Diagram" border="0" src="img/commonTypes_v3_xsd_Simple_Type_UUID.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:string</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_UUID" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">pattern</td>
+                                    <td width="30%"><b>[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[1-5][a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_UUID" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Attributes </td>
+                                    <td><b><a href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for EMSDataSet_v3.xsd')">EMSDataSet/Header/PatientCareReport/@UUID</a></b>, <b><a href="dAgency_v3_xsd.html#dAgency_dAgency_dAgency.AgencyServiceGroup_UUID" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for dAgency_v3.xsd')">dAgency/dAgency.AgencyServiceGroup/@UUID</a></b>, <b><a href="dAgency_v3_xsd.html#dAgency_dAgency_dAgency.AgencyYearGroup_UUID" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for dAgency_v3.xsd')">dAgency/dAgency.AgencyYearGroup/@UUID</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_UUID" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:simpleType</span><span class="tAN"> name=</span><span class="tAV">"UUID"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A universally unique identifier used to track persistent objects over time.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[1-5][a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:simpleType&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
       </table><a id="ANSICountryCodesCAMXUS"></a><div class="componentTitle">Simple Type <span class="qname">ANSICountryCodesCAMXUS</span></div>
       <table class="rt">
          <tr>
@@ -19176,119 +19289,6 @@ var annotationBoxes= new Array('annotations_EMSAgencyStateID',
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Critical Care (Ground)</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:enumeration&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/xs:simpleType&gt;</span></pre></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-            <td class="rt_lineRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_cornerBottomLeft"></td>
-            <td class="rt_lineBottom"></td>
-            <td class="rt_cornerBottomRight"></td>
-         </tr>
-      </table><a id="UUID"></a><div class="componentTitle">Simple Type <span class="qname">UUID</span></div>
-      <table class="rt">
-         <tr>
-            <td class="rt_cornerTopLeft"></td>
-            <td class="rt_lineTop"></td>
-            <td class="rt_cornerTopRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_lineLeft"></td>
-            <td class="rt_content">
-               <table class="component">
-                  <tbody>
-                     <tr>
-                        <td class="firstColumn"><b>Namespace</b></td>
-                        <td>http://www.nemsis.org</td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_UUID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="annotations_UUID" style="display:block">
-                              <div class="annotation">
-                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                    <tr>
-                                       <td width="100%"><pre><span class="tT">A universally unique identifier used to track persistent objects over time.</span></pre></td>
-                                    </tr>
-                                 </table>
-                              </div>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_UUID');" class="control" /></div>
-                        </td>
-                        <td class="diagram">
-                           <div id="diagram_UUID" style="display:block"><img alt="Diagram" border="0" src="img/commonTypes_v3_xsd_Simple_Type_UUID.jpeg" /></div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn"><b>Type</b></td>
-                        <td>restriction of <b>xs:string</b></td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Facets</b></div>
-                           <div class="floatRight"><input id="button_facets_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_UUID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="facets_UUID" style="display:block">
-                              <table class="facetsTable">
-                                 <tr>
-                                    <td class="firstColumn">pattern</td>
-                                    <td width="30%"><b>[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[1-5][a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}</b></td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_UUID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="usedBy_UUID" style="display:block">
-                              <table class="usedByTable">
-                                 <tr>
-                                    <td class="firstColumn">Attributes </td>
-                                    <td><b><a href="dAgency_v3_xsd.html#dAgency_dAgency_dAgency.AgencyServiceGroup_UUID" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for dAgency_v3.xsd')">dAgency/dAgency.AgencyServiceGroup/@UUID</a></b>, <b><a href="dAgency_v3_xsd.html#dAgency_dAgency_dAgency.AgencyYearGroup_UUID" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for dAgency_v3.xsd')">dAgency/dAgency.AgencyYearGroup/@UUID</a></b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_UUID');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="source_UUID" style="display:block">
-                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                 <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;xs:simpleType</span><span class="tAN"> name=</span><span class="tAV">"UUID"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">A universally unique identifier used to track persistent objects over time.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:pattern</span><span class="tAN"> value=</span><span class="tAV">"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[1-5][a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:simpleType&gt;</span></pre></td>
                                  </tr>

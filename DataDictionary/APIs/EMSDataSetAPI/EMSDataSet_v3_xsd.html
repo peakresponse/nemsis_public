@@ -39,8 +39,11 @@
 				'properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDisposition', 
 				'properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome', 
 				'properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCustomResults', 
-				'properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther');
-var facetsBoxes= new Array('facets_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_DemographicGroup_dAgency.01');
+				'properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther', 
+				'properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');
+var facetsBoxes= new Array('facets_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_DemographicGroup_dAgency.01', 
+				'facets_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');
+var usedByBoxes= new Array('usedBy_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');
 var sourceBoxes= new Array('source_EMSDataSet', 
 				'source_EMSDataSet_Header', 
 				'source_EMSDataSet_EMSDataSet_Header_DemographicGroup', 
@@ -73,7 +76,8 @@ var sourceBoxes= new Array('source_EMSDataSet',
 				'source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDisposition', 
 				'source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome', 
 				'source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCustomResults', 
-				'source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther');
+				'source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther', 
+				'source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');
 var instanceBoxes= new Array('instance_EMSDataSet', 
 				'instance_EMSDataSet_Header', 
 				'instance_EMSDataSet_EMSDataSet_Header_DemographicGroup', 
@@ -169,6 +173,7 @@ var annotationBoxes= new Array('annotations_EMSDataSet',
 				'annotations_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome', 
 				'annotations_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCustomResults', 
 				'annotations_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther');
+var attributesBoxes= new Array('attributes_EMSDataSet_EMSDataSet_Header_PatientCareReport');
 var modelBoxes= new Array('model_EMSDataSet', 
 				'model_EMSDataSet_Header', 
 				'model_EMSDataSet_EMSDataSet_Header_DemographicGroup', 
@@ -448,6 +453,9 @@ var modelBoxes= new Array('model_EMSDataSet',
                         <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, annotationBoxes);" class="control" /></span><span class="globalControlName">Annotations</span></td>
                      </tr>
                      <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, attributesBoxes);" class="control" /></span><span class="globalControlName">Attributes </span></td>
+                     </tr>
+                     <tr>
                         <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, diagramBoxes);" class="control" /></span><span class="globalControlName">Diagrams</span></td>
                      </tr>
                      <tr>
@@ -464,6 +472,9 @@ var modelBoxes= new Array('model_EMSDataSet',
                      </tr>
                      <tr>
                         <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source</span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
                      </tr>
                   </table>
                   <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
@@ -856,6 +867,7 @@ var modelBoxes= new Array('model_EMSDataSet',
                     </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"UUID"</span><span class="tAN"> type=</span><span class="tAV">"UUID"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
@@ -967,7 +979,7 @@ var modelBoxes= new Array('model_EMSDataSet',
                                     <td width="100%"><pre><span class="tEl">&lt;Header</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://www.nemsis.org"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;DemographicGroup</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/DemographicGroup&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eCustomConfiguration</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/eCustomConfiguration&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;PatientCareReport</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/PatientCareReport&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;PatientCareReport</span><span class="tT"> </span><span class="tAN">UUID=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/PatientCareReport&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/Header&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -1215,6 +1227,7 @@ var modelBoxes= new Array('model_EMSDataSet',
               </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"UUID"</span><span class="tAN"> type=</span><span class="tAV">"UUID"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
@@ -2036,31 +2049,32 @@ var modelBoxes= new Array('model_EMSDataSet',
                         </td>
                         <td class="diagram">
                            <div id="diagram_EMSDataSet_EMSDataSet_Header_PatientCareReport" style="display:block"><img alt="Diagram" border="0" src="img/EMSDataSet_v3_xsd_Element_PatientCareReport.jpeg" usemap="#EMSDataSet_v3_xsd_Element_PatientCareReport" /><map name="EMSDataSet_v3_xsd_Element_PatientCareReport" id="EMSDataSet_v3_xsd_Element_PatientCareReport">
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eRecord" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eRecord" coords="237,2,341,46" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eResponse" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eResponse" coords="237,87,355,131" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDispatch" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDispatch" coords="237,172,348,216" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCrew" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCrew" coords="237,257,339,301" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eTimes" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eTimes" coords="237,342,334,386" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePatient" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePatient" coords="237,427,338,471" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePayment" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePayment" coords="237,512,347,556" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eScene" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eScene" coords="237,597,337,641" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eSituation" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eSituation" coords="237,682,347,726" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eInjury" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eInjury" coords="237,767,332,811" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eArrest" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eArrest" coords="237,852,337,896" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eHistory" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eHistory" coords="237,937,340,981" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eNarrative" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eNarrative" coords="237,1022,350,1066" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eVitals" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eVitals" coords="237,1107,333,1151" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eLabs" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eLabs" coords="237,1192,330,1236" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eExam" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eExam" coords="237,1277,332,1321" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProtocols" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProtocols" coords="237,1362,351,1406" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eMedications" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eMedications" coords="237,1447,363,1491" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProcedures" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProcedures" coords="237,1532,362,1576" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eAirway" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eAirway" coords="237,1617,348,1661" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDevice" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDevice" coords="237,1702,345,1746" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDisposition" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDisposition" coords="237,1787,358,1831" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome" coords="237,1872,349,1916" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCustomResults" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCustomResults" coords="237,1957,378,2001" />
-                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther" coords="237,2042,333,2086" /></map></div>
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" coords="180,41,266,85" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eRecord" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eRecord" coords="237,102,341,146" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eResponse" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eResponse" coords="237,187,355,231" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDispatch" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDispatch" coords="237,272,348,316" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCrew" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCrew" coords="237,357,339,401" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eTimes" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eTimes" coords="237,442,334,486" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePatient" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePatient" coords="237,527,338,571" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePayment" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_ePayment" coords="237,612,347,656" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eScene" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eScene" coords="237,697,337,741" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eSituation" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eSituation" coords="237,782,347,826" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eInjury" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eInjury" coords="237,867,332,911" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eArrest" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eArrest" coords="237,952,337,996" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eHistory" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eHistory" coords="237,1037,340,1081" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eNarrative" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eNarrative" coords="237,1122,350,1166" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eVitals" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eVitals" coords="237,1207,333,1251" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eLabs" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eLabs" coords="237,1292,330,1336" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eExam" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eExam" coords="237,1377,332,1421" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProtocols" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProtocols" coords="237,1462,351,1506" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eMedications" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eMedications" coords="237,1547,363,1591" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProcedures" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eProcedures" coords="237,1632,362,1676" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eAirway" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eAirway" coords="237,1717,348,1761" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDevice" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDevice" coords="237,1802,345,1846" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDisposition" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eDisposition" coords="237,1887,358,1931" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome" coords="237,1972,349,2016" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCustomResults" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eCustomResults" coords="237,2057,378,2101" />
+                                 <area alt="EMSDataSet_v3_xsd.tmp#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther" href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOther" coords="237,2142,333,2186" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -2103,7 +2117,7 @@ var modelBoxes= new Array('model_EMSDataSet',
                            <div id="instance_EMSDataSet_EMSDataSet_Header_PatientCareReport" style="display:block">
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
-                                    <td width="100%"><pre><span class="tEl">&lt;PatientCareReport</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://www.nemsis.org"</span><span class="tEl">&gt;</span><span class="tI">
+                                    <td width="100%"><pre><span class="tEl">&lt;PatientCareReport</span><span class="tT"> </span><span class="tAN">UUID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://www.nemsis.org"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eRecord</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/eRecord&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eResponse</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/eResponse&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eDispatch</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/eDispatch&gt;</span><span class="tI">
@@ -2130,6 +2144,34 @@ var modelBoxes= new Array('model_EMSDataSet',
   </span><span class="tEl">&lt;eCustomResults</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/eCustomResults&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eOther</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/eOther&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/PatientCareReport&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_EMSDataSet_EMSDataSet_Header_PatientCareReport" type="image" src="img/btM.gif" value="-" onclick="switchState('attributes_EMSDataSet_EMSDataSet_Header_PatientCareReport');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_EMSDataSet_EMSDataSet_Header_PatientCareReport" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th width="10%">Type</th>
+                                       <th width="5%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for EMSDataSet_v3.xsd')">UUID</a></b></td>
+                                    <td><b><a href="commonTypes_v3_xsd.html#UUID" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">UUID</a></b></td>
+                                    <td>required</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
                                  </tr>
                               </table>
                            </div>
@@ -2276,6 +2318,7 @@ var modelBoxes= new Array('model_EMSDataSet',
         </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:sequence&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"UUID"</span><span class="tAN"> type=</span><span class="tAV">"UUID"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
                                  </tr>
@@ -5376,8 +5419,7 @@ var modelBoxes= new Array('model_EMSDataSet',
                                  <area alt="eOutcome_v3_xsd.tmp#eOutcome_eOutcome.HospitalProceduresGroup" href="eOutcome_v3_xsd.html#eOutcome_eOutcome.HospitalProceduresGroup" coords="265,548,472,573" />
                                  <area alt="eOutcome_v3_xsd.tmp#eOutcome_eOutcome.13" href="eOutcome_v3_xsd.html#eOutcome_eOutcome.13" coords="265,614,360,639" />
                                  <area alt="eOutcome_v3_xsd.tmp#eOutcome_eOutcome.16" href="eOutcome_v3_xsd.html#eOutcome_eOutcome.16" coords="265,708,360,733" />
-                                 <area alt="eOutcome_v3_xsd.tmp#eOutcome_eOutcome.17" href="eOutcome_v3_xsd.html#eOutcome_eOutcome.17" coords="265,802,360,827" />
-                                 <area alt="eOutcome_v3_xsd.tmp#eOutcome_eOutcome.18" href="eOutcome_v3_xsd.html#eOutcome_eOutcome.18" coords="265,896,360,921" />
+                                 <area alt="eOutcome_v3_xsd.tmp#eOutcome_eOutcome.18" href="eOutcome_v3_xsd.html#eOutcome_eOutcome.18" coords="265,802,360,827" />
                                  <area alt="eOutcome_v3_xsd.tmp#eOutcome" href="eOutcome_v3_xsd.html#eOutcome" coords="163,3,263,25" /></map></div>
                         </td>
                      </tr>
@@ -5405,12 +5447,12 @@ var modelBoxes= new Array('model_EMSDataSet',
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome" type="image" src="img/btM.gif" value="-" onclick="switchState('model_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome" style="display:block"><b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.01</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.02" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.02</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.ExternalDataGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.ExternalDataGroup*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.EmergencyDepartmentProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.EmergencyDepartmentProceduresGroup*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.10*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.11{0,1}</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.HospitalProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.HospitalProceduresGroup*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.13*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.16" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.16{0,1}</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.17" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.17{0,1}</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.18{0,1}</a></b></div>
+                           <div id="model_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_eOutcome" style="display:block"><b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.01</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.02" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.02</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.ExternalDataGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.ExternalDataGroup*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.EmergencyDepartmentProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.EmergencyDepartmentProceduresGroup*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.10*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.11{0,1}</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.HospitalProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.HospitalProceduresGroup*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.13*</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.16" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.16{0,1}</a></b> , <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.18{0,1}</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.01</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.02" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.02</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.10</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.11</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.13</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.16" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.16</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.17" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.17</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.18</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.EmergencyDepartmentProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.EmergencyDepartmentProceduresGroup</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.ExternalDataGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.ExternalDataGroup</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.HospitalProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.HospitalProceduresGroup</a></b></td>
+                        <td><b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.01</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.02" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.02</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.10</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.11</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.13</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.16" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.16</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.18</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.EmergencyDepartmentProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.EmergencyDepartmentProceduresGroup</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.ExternalDataGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.ExternalDataGroup</a></b>, <b><a href="eOutcome_v3_xsd.html#eOutcome_eOutcome.HospitalProceduresGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eOutcome_v3.xsd')">eOutcome.HospitalProceduresGroup</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5431,7 +5473,6 @@ var modelBoxes= new Array('model_EMSDataSet',
   </span><span class="tEl">&lt;eOutcome.HospitalProceduresGroup</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/eOutcome.HospitalProceduresGroup&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eOutcome.13</span><span class="tT"> </span><span class="tAN">CorrelationID=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">NV=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,unbounded}</span><span class="tEl">&lt;/eOutcome.13&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eOutcome.16</span><span class="tT"> </span><span class="tAN">NV=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/eOutcome.16&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;eOutcome.17</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/eOutcome.17&gt;</span><span class="tI">
   </span><span class="tEl">&lt;eOutcome.18</span><span class="tT"> </span><span class="tAN">NV=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{0,1}</span><span class="tEl">&lt;/eOutcome.18&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/eOutcome&gt;</span></pre></td>
                                  </tr>
@@ -5711,6 +5752,102 @@ var modelBoxes= new Array('model_EMSDataSet',
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Other Miscellaneous Information</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="EMSDataSet_v3_xsd.html#EMSDataSet" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for EMSDataSet_v3.xsd')">EMSDataSet</a></b> / <b><a href="EMSDataSet_v3_xsd.html#EMSDataSet_Header" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for EMSDataSet_v3.xsd')">Header</a></b> / <b><a href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_PatientCareReport" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for EMSDataSet_v3.xsd')">PatientCareReport</a></b> / @UUID</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td><b><a href="commonTypes_v3_xsd.html#UUID" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">UUID</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>required</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">pattern</td>
+                                    <td width="30%"><b>[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[1-5][a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="EMSDataSet_v3_xsd.html#EMSDataSet_EMSDataSet_Header_PatientCareReport" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for EMSDataSet_v3.xsd')">EMSDataSet/Header/PatientCareReport</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" type="image" src="img/btM.gif" value="-" onclick="switchState('source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_EMSDataSet_EMSDataSet_Header_EMSDataSet_EMSDataSet_Header_PatientCareReport_UUID" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"UUID"</span><span class="tAN"> type=</span><span class="tAV">"UUID"</span><span class="tAN"> use=</span><span class="tAV">"required"</span><span class="tEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>

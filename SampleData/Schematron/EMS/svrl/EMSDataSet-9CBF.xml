@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.4.0.170111"><!--   
+                        schemaVersion="3.4.0.190607"><!--   
 		   
 		   
 		 -->
@@ -42,12 +42,12 @@
                     id="nemSch_consistency_eDisposition.06"/>
    <svrl:fired-rule context="nem:eDisposition.21[. = ('4221003', '4221005', '4221023')]"
                     id="nemSch_consistency_eDisposition.21_hospital"/>
-   <svrl:failed-assert test="../nem:eDisposition.23!=''"
+   <svrl:failed-assert test="../nem:eDisposition.23!='' or not(ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01 = ('3001003', '3001005') or ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29 = '3329005' or ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03 = ('9901051', '9901053', '9901055', '9901057', '9901058'))"
                        id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23"
                        role="[WARNING]"
                        location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.21[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
-      When Type of Destination is "Hospital..." or "Freestanding Emergency Department", Hospital Capability should be recorded.
+      When Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Cardiac Arrest is "Yes..." or Stroke Scale Score is "Positive" or Cardiac Rhythm / Electrocardiography (ECG) is "STEMI...", Hospital Capability should be recorded.
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">

@@ -2,6 +2,27 @@ NEMSIS Schematron Change Log
 
 
 
+3.4.0.190607
+
+
+National Patterns and Rules
+
+nemSch_consistency_eArrest: Corrected $nemsisElements variable value (affects diagnostics output, no impact on validation)
+
+nemSch_consistency_eArrest.03_eArrest.09: Allow "Compressions-Intermittent with Ventilation" to satisfy the assertion: When Resuscitation Attempted By EMS contains "Attempted Ventilation", Type of CPR Provided should contain "Ventilation...".
+
+nemSch_consistency_eDisposition: Changed assert nemSch_consistency_eDisposition.21_hospital_eDisposition.23 to only apply to certain conditions: When Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Cardiac Arrest is "Yes..." or Stroke Scale Score is "Positive" or Cardiac Rhythm / Electrocardiography (ECG) is "STEMI...", Hospital Capability should be recorded.
+
+nemSch_consistency_eDisposition: Removed rule nemSch_consistency_eDisposition.21_nonhospital and assert nemSch_consistency_eDisposition.21_nonhospital_all: When Type of Destination is not "Hospital..." or "Freestanding Emergency Department", the following should be "Not Applicable": (Hospital In-Patient Destination, Hospital Capability).
+
+nemSch_consistency_eDisposition.12: Moved validation of eDisposition.16, 17, 20, and 21 from ERROR to WARNING.
+
+nemSch_consistency_group: Changed assert nemSch_consistency_eMedications.DosageGroup_eMedications.06 from ERROR to WARNING: When Medication Dosage is recorded, Medication Dosage Units should be recorded. Changed $nemsisElements variable value so the assert will show in the "Overview by NEMSIS Element" section of the Schematron data dictionary view.
+
+Updated documentation links.
+
+
+
 3.4.0.170907
 
 

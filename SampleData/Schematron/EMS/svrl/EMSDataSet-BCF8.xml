@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.4.0.170111"><!--   
+                        schemaVersion="3.4.0.190607"><!--   
 		   
 		   
 		 -->
@@ -38,20 +38,18 @@
    <svrl:active-pattern document="EMSDataSet-BCF8.xml"
                         id="nemSch_consistency_eDisposition"
                         name="Elements in the eDisposition section are consistent."/>
-   <svrl:fired-rule context="nem:eDisposition.21[. = ('4221003', '4221005', '4221023')]"
-                    id="nemSch_consistency_eDisposition.21_hospital"/>
    <svrl:active-pattern document="EMSDataSet-BCF8.xml"
                         id="nemSch_consistency_eDisposition.12"
                         name="Certain elements are recorded, based on eDisposition.12 Incident/Patient Disposition."/>
    <svrl:fired-rule context="nem:PatientCareReport"
                     id="nemSch_consistency_eDisposition.12_all"/>
-   <svrl:failed-assert test="not($eArrest.16 or $eDisposition.05 or $eDisposition.06 or $eDisposition.07 or $eDisposition.19 or $ePatient.07 or $ePatient.08 or $ePatient.09 or $ePatient.13 or $ePatient.14 or $ePatient.15 or $ePatient.16 or $ePayment.01 or $eScene.09 or $eSituation.02 or $eSituation.07 or $eSituation.08 or $eSituation.09 or $eSituation.11 or $eSituation.13 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.09 or $eTimes.11 or $eTimes.12)"
+   <svrl:failed-assert test="not($eArrest.16 or $eDisposition.05 or $eDisposition.06 or $eDisposition.07 or $eDisposition.16 or $eDisposition.17 or $eDisposition.19 or $eDisposition.20 or $eDisposition.21 or $ePatient.07 or $ePatient.08 or $ePatient.09 or $ePatient.13 or $ePatient.14 or $ePatient.15 or $ePatient.16 or $ePayment.01 or $eScene.09 or $eSituation.02 or $eSituation.07 or $eSituation.08 or $eSituation.09 or $eSituation.11 or $eSituation.13 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.09 or $eTimes.11 or $eTimes.12)"
                        id="nemSch_consistency_eDisposition.12_all_warning"
                        role="[WARNING]"
                        location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
       Based on Incident/Patient Disposition, the following should be recorded:
-      Destination State, Destination County, Destination ZIP Code, Final Patient Acuity, Patient's Home County, Patient's Home State, Patient's Home ZIP Code, Gender, Race, Age, Age Units, Primary Method of Payment, Incident Location Type, Possible Injury, Chief Complaint Anatomic Location, Chief Complaint Organ System, Primary Symptom, Provider's Primary Impression, Initial Patient Acuity, Unit En Route Date/Time, Unit Arrived on Scene Date/Time, Arrived at Patient Date/Time, Unit Left Scene Date/Time, Patient Arrived at Destination Date/Time, Destination Patient Transfer of Care Date/Time</svrl:text>
+      Destination State, Destination County, Destination ZIP Code, EMS Transport Method, Transport Mode from Scene, Final Patient Acuity, Reason for Choosing Destination, Type of Destination, Patient's Home County, Patient's Home State, Patient's Home ZIP Code, Gender, Race, Age, Age Units, Primary Method of Payment, Incident Location Type, Possible Injury, Chief Complaint Anatomic Location, Chief Complaint Organ System, Primary Symptom, Provider's Primary Impression, Initial Patient Acuity, Unit En Route Date/Time, Unit Arrived on Scene Date/Time, Arrived at Patient Date/Time, Unit Left Scene Date/Time, Patient Arrived at Destination Date/Time, Destination Patient Transfer of Care Date/Time</svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <record>
@@ -71,7 +69,16 @@
                <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.DestinationGroup[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.07[namespace-uri()='http://www.nemsis.org'][1]"
                         xsi:nil="true"
                         NV="7701003"/>
+               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.16[namespace-uri()='http://www.nemsis.org'][1]"
+                        xsi:nil="true"
+                        NV="7701003"/>
+               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.17[namespace-uri()='http://www.nemsis.org'][1]"
+                        xsi:nil="true"
+                        NV="7701003"/>
                <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.19[namespace-uri()='http://www.nemsis.org'][1]"
+                        xsi:nil="true"
+                        NV="7701003"/>
+               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.20[namespace-uri()='http://www.nemsis.org'][1]"
                         xsi:nil="true"
                         NV="7701003"/>
                <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:ePatient[namespace-uri()='http://www.nemsis.org'][1]/*:ePatient.07[namespace-uri()='http://www.nemsis.org'][1]"
@@ -225,6 +232,13 @@
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@PN]" id="nemSch_nilNvPn_Pn"/>
+   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
+   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
+   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
+   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
+   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
+   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
+   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_nilNvPn_nil"/>

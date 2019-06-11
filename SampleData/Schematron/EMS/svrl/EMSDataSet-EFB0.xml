@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.4.0.170111"><!--   
+                        schemaVersion="3.4.0.190607"><!--   
 		   
 		   
 		 -->
@@ -90,7 +90,7 @@
                     id="nemSch_consistency_eMedications.DosageGroup"/>
    <svrl:failed-assert test="../nem:eMedications.06 != ''"
                        id="nemSch_consistency_eMedications.DosageGroup_eMedications.06"
-                       role="[ERROR]"
+                       role="[WARNING]"
                        location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eMedications[namespace-uri()='http://www.nemsis.org'][1]/*:eMedications.MedicationGroup[namespace-uri()='http://www.nemsis.org'][1]/*:eMedications.DosageGroup[namespace-uri()='http://www.nemsis.org'][1]/*:eMedications.05[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
       When Medication Dosage is recorded, Medication Dosage Units should be recorded.

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.170111" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.190607" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 

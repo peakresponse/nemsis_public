@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.170111" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.190607" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -658,7 +658,7 @@
 
     <sch:let name="eArrest.17" value="if(nem:eArrest.17 != '' or not(../nem:eDisposition/nem:eDisposition.12 = (4212013, 4212017, 4212033))) then '' else key('nemSch_key_elements', 'eArrest.17', $nemSch_elements)"/>
 
-    <sch:let name="nemsisElements" value="(nem:eArrest.01, nem:eArrest.02[$eArrest.02], nem:eArrest.03[$eArrest.02], nem:eArrest.04[$eArrest.02], nem:eArrest.05[$eArrest.02], nem:eArrest.07[$eArrest.07], nem:eArrest.17[$eArrest.17])"/>
+    <sch:let name="nemsisElements" value="(nem:eArrest.01, nem:eArrest.02[$eArrest.02], nem:eArrest.03[$eArrest.03], nem:eArrest.04[$eArrest.04], nem:eArrest.05[$eArrest.05], nem:eArrest.07[$eArrest.07], nem:eArrest.17[$eArrest.17])"/>
 
     <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
          flagged elements. -->
@@ -729,7 +729,7 @@
     <!-- Assert that when eArrest.03 Resuscitation Attempted by EMS contains "Attempted 
          Ventilation", eArrest.09 Type of CPR Provided should contain "Ventilation...".  -->
 
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_1" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = '3003003') or nem:eArrest.09 = ('3009013', '3009015', '3009017', '3009019')">
+    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_1" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = '3003003') or nem:eArrest.09 = ('3009009', '3009013', '3009015', '3009017', '3009019')">
       When <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Attempted Ventilation", <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> should contain "Ventilation...".
     </sch:assert>
 
@@ -777,31 +777,8 @@
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Hospital-Non-Emergency Department Bed", <sch:value-of select="key('nemSch_key_elements', 'eDisposition.22', $nemSch_elements)"/> should be recorded.
     </sch:assert>
 
-    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eDisposition.23!=''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department", <sch:value-of select="key('nemSch_key_elements', 'eDisposition.23', $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eDisposition.21_nonhospital" context="nem:eDisposition.21">
-
-    <!-- This rule fires when eDisposition.21 Destination Type is not "Hospital..." or 
-         "Freestanding Emergency Department". -->
-
-    <!-- Flag the following elements that should be "Not Applicable". -->
-    
-    <sch:let name="eDisposition.22" value="if(../nem:eDisposition.22/@NV = '7701001') then '' else key('nemSch_key_elements', 'eDisposition.22', $nemSch_elements)"/>
-
-    <sch:let name="eDisposition.23" value="if(../nem:eDisposition.23/@NV = '7701001') then '' else key('nemSch_key_elements', 'eDisposition.23', $nemSch_elements)"/>
-
-    <sch:let name="nemsisElements" value="., ../(nem:eDisposition.22[$eDisposition.22], nem:eDisposition.23[$eDisposition.23])"/>
-
-    <!-- Assert that none of the elements above should be flagged. If the assert fails, list the 
-         flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eDisposition.21_nonhospital_all" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eDisposition.22 or $eDisposition.23)">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is not "Hospital..." or "Freestanding Emergency Department", the following should be "Not Applicable":
-      <sch:value-of select="string-join(($eDisposition.22, $eDisposition.23)[. != ''], ', ')"/>
+    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eDisposition.23!='' or not(ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01 = ('3001003', '3001005') or ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29 = '3329005' or ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03 = ('9901051', '9901053', '9901055', '9901057', '9901058'))">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes..." or <sch:value-of select="key('nemSch_key_elements', 'eVitals.29', $nemSch_elements)"/> is "Positive" or <sch:value-of select="key('nemSch_key_elements', 'eVitals.03', $nemSch_elements)"/> is "STEMI...", <sch:value-of select="key('nemSch_key_elements', 'eDisposition.23', $nemSch_elements)"/> should be recorded.
     </sch:assert>
 
   </sch:rule>
@@ -929,20 +906,12 @@
 
     <sch:let name="nemsisElements" value="nem:eDisposition/nem:eDisposition.12, nem:eArrest.16[$eArrest.16], nem:eDisposition/(nem:eDisposition.DestinationGroup/(nem:eDisposition.05[$eDisposition.05], nem:eDisposition.06[$eDisposition.06], nem:eDisposition.07[$eDisposition.07]), nem:eDisposition.16[$eDisposition.16], nem:eDisposition.17[$eDisposition.17], nem:eDisposition.19[$eDisposition.19], nem:eDisposition.20[$eDisposition.20]), nem:eDisposition.21[$eDisposition.21], nem:ePatient/(nem:ePatient.07[$ePatient.07], nem:ePatient.08[$ePatient.08], nem:ePatient.09[$ePatient.09], nem:ePatient.13[$ePatient.13], nem:ePatient.14[$ePatient.14], nem:ePatient.AgeGroup/nem:ePatient.15[$ePatient.15], nem:ePatient.AgeGroup/nem:ePatient.16[$ePatient.16]), nem:ePayment.01[$ePayment.01], nem:eScene/nem:eScene.09[$eScene.09], nem:eSituation/(nem:eSituation.02[$eSituation.02], nem:eSituation.07[$eSituation.07], nem:eSituation.08[$eSituation.08], nem:eSituation.09[$eSituation.09], nem:eSituation.11[$eSituation.11], nem:eSituation.13[$eSituation.13]), nem:eTimes/(nem:eTimes.05[$eTimes.05], nem:eTimes.06[$eTimes.06], nem:eTimes.07[$eTimes.07], nem:eTimes.09[$eTimes.09], nem:eTimes.11[$eTimes.11], nem:eTimes.12[$eTimes.12])"/>
 
-    <!-- Assert (as error) that none of certain elements above should be flagged. If the assert 
-         fails, list the flagged elements.  -->
+    <!-- Assert that none of certain elements above should be flagged. If the assert fails, list 
+         the flagged elements.  -->
 
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_error" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not($eDisposition.16 or $eDisposition.17 or $eDisposition.20 or $eDisposition.21)">
+    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eArrest.16 or $eDisposition.05 or $eDisposition.06 or $eDisposition.07 or $eDisposition.16 or $eDisposition.17 or $eDisposition.19 or $eDisposition.20 or $eDisposition.21 or $ePatient.07 or $ePatient.08 or $ePatient.09 or $ePatient.13 or $ePatient.14 or $ePatient.15 or $ePatient.16 or $ePayment.01 or $eScene.09 or $eSituation.02 or $eSituation.07 or $eSituation.08 or $eSituation.09 or $eSituation.11 or $eSituation.13 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.09 or $eTimes.11 or $eTimes.12)">
       Based on <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/>, the following should be recorded:
-      <sch:value-of select="string-join(($eDisposition.16, $eDisposition.17, $eDisposition.20, $eDisposition.21)[. != ''], ', ')"/>
-    </sch:assert>
-
-    <!-- Assert (as warning) that none of certain elements above should be flagged. If the assert 
-         fails, list the flagged elements.  -->
-
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not($eArrest.16 or $eDisposition.05 or $eDisposition.06 or $eDisposition.07 or $eDisposition.19 or $ePatient.07 or $ePatient.08 or $ePatient.09 or $ePatient.13 or $ePatient.14 or $ePatient.15 or $ePatient.16 or $ePayment.01 or $eScene.09 or $eSituation.02 or $eSituation.07 or $eSituation.08 or $eSituation.09 or $eSituation.11 or $eSituation.13 or $eTimes.05 or $eTimes.06 or $eTimes.07 or $eTimes.09 or $eTimes.11 or $eTimes.12)">
-      Based on <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/>, the following should be recorded:
-      <sch:value-of select="string-join(($eArrest.16, $eDisposition.05, $eDisposition.06, $eDisposition.07, $eDisposition.19, $ePatient.07, $ePatient.08, $ePatient.09, $ePatient.13, $ePatient.14, $ePatient.15, $ePatient.16, $ePayment.01, $eScene.09, $eSituation.02, $eSituation.07, $eSituation.08, $eSituation.09, $eSituation.11, $eSituation.13, $eTimes.05, $eTimes.06, $eTimes.07, $eTimes.09, $eTimes.11, $eTimes.12)[. != ''], ', ')"/>
+      <sch:value-of select="string-join(($eArrest.16, $eDisposition.05, $eDisposition.06, $eDisposition.07, $eDisposition.16, $eDisposition.17, $eDisposition.19, $eDisposition.20, $eDisposition.21, $ePatient.07, $ePatient.08, $ePatient.09, $ePatient.13, $ePatient.14, $ePatient.15, $ePatient.16, $ePayment.01, $eScene.09, $eSituation.02, $eSituation.07, $eSituation.08, $eSituation.09, $eSituation.11, $eSituation.13, $eTimes.05, $eTimes.06, $eTimes.07, $eTimes.09, $eTimes.11, $eTimes.12)[. != ''], ', ')"/>
     </sch:assert>
 
   </sch:rule>
@@ -1236,11 +1205,11 @@
 
     <!-- This rule fires when eMedications.05 Medication Dosage is recorded. -->
 
-    <sch:let name="nemsisElements" value="../*"/>
+    <sch:let name="nemsisElements" value="../(nem:eMedications.05, nem:eMedications.06)"/>
 
     <!-- Assert that eMedications.06 Medication Dosage Units should be recorded.  -->
 
-    <sch:assert id="nemSch_consistency_eMedications.DosageGroup_eMedications.06" role="[ERROR]" diagnostics="nemsisDiagnostic" test="../nem:eMedications.06 != ''">
+    <sch:assert id="nemSch_consistency_eMedications.DosageGroup_eMedications.06" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:eMedications.06 != ''">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is recorded, <sch:value-of select="key('nemSch_key_elements', 'eMedications.06', $nemSch_elements)"/> should be recorded.
     </sch:assert>
 

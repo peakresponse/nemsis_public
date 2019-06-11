@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.4.0.170111"><!--   
+                        schemaVersion="3.4.0.190607"><!--   
 		   
 		   
 		 -->
@@ -35,7 +35,7 @@
                         name="In eArrest.03 Resuscitation Attempted By EMS and eArrest.09 Type of CPR Provided, information is consistent regarding compressions and ventilation."/>
    <svrl:fired-rule context="nem:eArrest[nem:eArrest.03 !='' or nem:eArrest.09 != '']"
                     id="nemSch_consistency_eArrest.03_eArrest.09_match"/>
-   <svrl:failed-assert test="not(nem:eArrest.03 = '3003003') or nem:eArrest.09 = ('3009013', '3009015', '3009017', '3009019')"
+   <svrl:failed-assert test="not(nem:eArrest.03 = '3003003') or nem:eArrest.09 = ('3009009', '3009013', '3009015', '3009017', '3009019')"
                        id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_1"
                        role="[WARNING]"
                        location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eArrest[namespace-uri()='http://www.nemsis.org'][1]">

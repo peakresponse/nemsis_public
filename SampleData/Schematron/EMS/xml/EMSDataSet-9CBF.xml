@@ -3,7 +3,7 @@
 
 NEMSIS V3 Schematron Test Case
 ID:               nemSch_consistency_eDisposition.21_hospital_eDisposition.23_A
-Description:      When Type of Destination is "Hospital..." or "Freestanding Emergency Department", Hospital Capability should be recorded.
+Description:      When Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Cardiac Arrest is "Yes..." or Stroke Scale Score is "Positive" or Cardiac Rhythm / Electrocardiography (ECG) is "STEMI...", Hospital Capability should be recorded.
 Expected Result:  [WARNING]
 
 -->
@@ -1232,10 +1232,10 @@ Expected Result:  [WARNING]
             <eDisposition.20>4220017</eDisposition.20>
             <eDisposition.21>4221023</eDisposition.21>
             <eDisposition.22>4222053</eDisposition.22>
-            <!-- - -->
             <!-- + -->
             <eDisposition.23 xsi:nil="true" NV="7701001"/>
             <!---->
+            <!-- - -->
             <eDisposition.HospitalTeamActivationGroup>
                <eDisposition.24>4224017</eDisposition.24>
                <eDisposition.25>2015-02-12T12:36:22-00:00</eDisposition.25>

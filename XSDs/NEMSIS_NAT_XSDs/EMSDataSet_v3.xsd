@@ -216,11 +216,6 @@
 												<xs:documentation>Patient Outcome Information</xs:documentation>
 											</xs:annotation>
 										</xs:element>
-										<xs:element name="eOther" type="eOther" id="eOtherSection">
-											<xs:annotation>
-												<xs:documentation>Other Miscellaneous Information</xs:documentation>
-											</xs:annotation>
-										</xs:element>
 									</xs:sequence>
 									<xs:attribute name="UUID" type="UUID" use="required"/>
 								</xs:complexType>

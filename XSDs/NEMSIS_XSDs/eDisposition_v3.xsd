@@ -383,12 +383,12 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eDisposition.29" id="eDisposition.CrewIncidentDispostion" nillable="true">
+						<xs:element name="eDisposition.29" id="eDisposition.CrewDispostion" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eDisposition.29</number>
-										<name>Crew Incident Disposition</name>
+										<name>Crew Disposition</name>
 										<national>Yes</national>
 										<state>Yes</state>
 										<definition>The crew disposition for this EMS event identifying which crew provided primary patient care or whether support services were required.</definition>
@@ -410,7 +410,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
-									<xs:extension base="CrewIncidentDisposition">
+									<xs:extension base="CrewDisposition">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -1702,7 +1702,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="CrewIncidentDisposition">
+	<xs:simpleType name="CrewDisposition">
 		<xs:annotation>
 			<xs:documentation>The crew disposition for this EMS event identifying which crew provided primary patient care or whether support services were required.</xs:documentation>
 		</xs:annotation>

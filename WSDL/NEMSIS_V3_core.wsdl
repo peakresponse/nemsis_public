@@ -398,6 +398,11 @@
                             <xs:documentation>NEMSIS Medical Device Schema</xs:documentation>
                         </xs:annotation>
                     </xs:enumeration>
+                    <xs:enumeration value="65">
+                        <xs:annotation>
+                            <xs:documentation>NEMSIS State Data Set Schema</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
                 </xs:restriction>
             </xs:simpleType>			
 			<xs:complexType name="ServerErrorReport">

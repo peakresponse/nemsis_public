@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.190522CR1" see="http://www.nemsis.org/v3/downloads/schematron.html">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.190930" see="http://www.nemsis.org/v3/downloads/schematron.html">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -255,7 +255,7 @@
   <element name="eDisposition.26">Disposition Instructions Provided</element>
   <element name="eDisposition.27">Unit Disposition</element>
   <element name="eDisposition.28">Patient Evaluation/Care</element>
-  <element name="eDisposition.29">Crew Incident Disposition</element>
+  <element name="eDisposition.29">Crew Disposition</element>
   <element name="eDisposition.30">Transport Disposition</element>
   <element name="eDisposition.31">Reason for Refusal/Release</element>
   <element name="eDisposition.32">Level of Care Provided per Protocol</element>
@@ -737,7 +737,7 @@
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="count(ancestor-or-self::nem:DemographicReport/descendant-or-self::*[@UUID = current()/@UUID]) = 1">
+    <sch:assert id="nemSch_d005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="count(ancestor::nem:DemographicReport/*[@UUID = current()/@UUID]) = 1">
       UUID must be universally unique.
     </sch:assert>
 
@@ -942,5 +942,9 @@
 </sch:diagnostic><?DSDL_INCLUDE_END includes/diagnostic_nemsisDiagnostic.xml?>
 
   </sch:diagnostics>
+
+  <!-- PROPERTIES -->
+
+  <sch:properties/>
 
 </sch:schema>

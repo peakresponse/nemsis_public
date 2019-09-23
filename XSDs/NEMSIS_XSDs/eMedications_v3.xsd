@@ -147,7 +147,7 @@ List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood p
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="Medication">
-										<xs:attribute name="CodeType" use="required">
+										<xs:attribute name="CodeType" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="CodeType.RxNorm CodeType.SNOMED" />
 											</xs:simpleType>

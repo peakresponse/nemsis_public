@@ -191,7 +191,7 @@
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="Medication">
-													<xs:attribute name="CodeType" use="required">
+													<xs:attribute name="CodeType" use="optional">
 														<xs:simpleType>
 															<xs:union memberTypes="CodeType.RxNorm CodeType.SNOMED" />
 														</xs:simpleType>

@@ -61,7 +61,7 @@ Scenario: We want to extend eMedications.08 - Medication Complication with some 
 				<eCustomConfiguration.06 nemsisCode="3708035" customValueDescription="Wheezing">A107</eCustomConfiguration.06>
 			</eCustomConfiguration.CustomGroup>
 		</eCustomConfiguration>
-		<PatientCareReport>
+		<PatientCareReport UUID="8c07ecf9-5c57-404e-b199-555a79ed1c3f">
 			<eRecord>
 				<eRecord.01>aaa</eRecord.01>
 				<eRecord.SoftwareApplicationGroup>
@@ -252,7 +252,7 @@ Scenario: We want to extend eMedications.08 - Medication Complication with some 
 				<eMedications.MedicationGroup>
 					<eMedications.01>2011-01-01T00:00:00-00:00</eMedications.01>
 					<eMedications.02>9923003</eMedications.02>
-					<eMedications.03>aa</eMedications.03>
+					<eMedications.03 CodeType="9924003">aa</eMedications.03>
 					<eMedications.04>9927011</eMedications.04>
 					<eMedications.DosageGroup>
 						<eMedications.05>123456.12</eMedications.05>

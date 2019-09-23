@@ -40,7 +40,7 @@ Scenario: We want to extend eVitals.26 with some new codes that DO NOT map to a 
 				<eCustomConfiguration.06 customValueDescription="Low Alert">3326099</eCustomConfiguration.06>
 			</eCustomConfiguration.CustomGroup>
 		</eCustomConfiguration>
-		<PatientCareReport>
+		<PatientCareReport UUID="840c090b-c8d3-42b4-8084-34c6e9583103">
 			<eRecord>
 				<eRecord.01>aaa</eRecord.01>
 				<eRecord.SoftwareApplicationGroup>
@@ -230,7 +230,7 @@ Scenario: We want to extend eVitals.26 with some new codes that DO NOT map to a 
 				<eMedications.MedicationGroup>
 					<eMedications.01>2011-01-01T00:00:00-00:00</eMedications.01>
 					<eMedications.02>9923003</eMedications.02>
-					<eMedications.03>aa</eMedications.03>
+					<eMedications.03 CodeType="9924003">aa</eMedications.03>
 					<eMedications.04>9927001</eMedications.04>
 					<eMedications.DosageGroup>
 						<eMedications.05>123456.12</eMedications.05>

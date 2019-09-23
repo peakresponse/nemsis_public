@@ -40,7 +40,7 @@ Scenario: We want to extend eVitals.26 with some new codes that map back to a NE
 				<eCustomConfiguration.06 nemsisCode="3326001" customValueDescription="Low Alert">3326099</eCustomConfiguration.06>
 			</eCustomConfiguration.CustomGroup>
 		</eCustomConfiguration>
-		<PatientCareReport>
+		<PatientCareReport UUID="28a45f38-eeb5-4dd6-90b2-15cd853c82de">
 			<eRecord>
 				<eRecord.01>aaa</eRecord.01>
 				<eRecord.SoftwareApplicationGroup>
@@ -231,7 +231,7 @@ Scenario: We want to extend eVitals.26 with some new codes that map back to a NE
 				<eMedications.MedicationGroup>
 					<eMedications.01>2011-01-01T00:00:00-00:00</eMedications.01>
 					<eMedications.02>9923003</eMedications.02>
-					<eMedications.03>aa</eMedications.03>
+					<eMedications.03 CodeType="9924003">aa</eMedications.03>
 					<eMedications.04>9927011</eMedications.04>
 					<eMedications.DosageGroup>
 						<eMedications.05>123456.12</eMedications.05>

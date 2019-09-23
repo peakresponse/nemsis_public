@@ -63,7 +63,7 @@ Scenario: We want to add a new group for collecting when the patient was restrai
 		
 			
 		</eCustomConfiguration>
-		<PatientCareReport>
+		<PatientCareReport UUID="874e8004-ab36-47e9-9f10-747844b5edac">
 			<eRecord>
 				<eRecord.01>aaa</eRecord.01>
 				<eRecord.SoftwareApplicationGroup>
@@ -253,7 +253,7 @@ Scenario: We want to add a new group for collecting when the patient was restrai
 				<eMedications.MedicationGroup>
 					<eMedications.01>2011-01-01T00:00:00-00:00</eMedications.01>
 					<eMedications.02>9923003</eMedications.02>
-					<eMedications.03>aa</eMedications.03>
+					<eMedications.03 CodeType="9924003">aa</eMedications.03>
 					<eMedications.04>9927011</eMedications.04>
 					<eMedications.DosageGroup>
 						<eMedications.05>123456.12</eMedications.05>

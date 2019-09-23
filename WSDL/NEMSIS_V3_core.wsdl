@@ -163,6 +163,11 @@
                             <xs:documentation>Partially successful import of a file, with [ERROR] level Schematron rule violation reported</xs:documentation>
                         </xs:annotation>
                     </xs:enumeration>
+                    <xs:enumeration value="10">
+                        <xs:annotation>
+                            <xs:documentation>File has passed validation, processing is not yet complete</xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
                 </xs:restriction>
             </xs:simpleType>
             <xs:simpleType name="RetrieveErrorCode">

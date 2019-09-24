@@ -1258,9 +1258,9 @@
 		<xs:annotation>
 			<xs:documentation>The patient's end-tidal or other CO2 level.</xs:documentation>
 		</xs:annotation>
-		<xs:restriction base="xs:integer">
+		<xs:restriction base="xs:decimal">
 			<xs:minInclusive value="0"/>
-			<xs:maxInclusive value="750"/>
+			<xs:maxInclusive value="760"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="PulseRhythm">

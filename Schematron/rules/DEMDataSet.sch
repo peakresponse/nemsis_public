@@ -737,7 +737,7 @@
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="count(ancestor::nem:DemographicReport/*[@UUID = current()/@UUID]) = 1">
+    <sch:assert id="nemSch_d005" role="[ERROR]" diagnostics="nemsisDiagnostic" test="count(ancestor::nem:DemographicReport//*[@UUID = current()/@UUID]) = 1">
       UUID must be universally unique.
     </sch:assert>
 
@@ -767,7 +767,7 @@
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_d006" role="[ERROR]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05" test="starts-with(., ../nem:dAgency.05)">
+    <sch:assert id="nemSch_d006" role="[ERROR]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05" test="substring(., 1, 2) = ../nem:dAgency.05">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to the state with which it is grouped.
     </sch:assert>
 
@@ -777,7 +777,7 @@
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05, ../nem:dAgency.06" test="starts-with(., ../nem:dAgency.06)">
+    <sch:assert id="nemSch_d007" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:dAgency.05, ../nem:dAgency.06" test="substring(., 1, 5) = ../nem:dAgency.06">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to a county recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.06', $nemSch_elements)"/> in the state with which it is grouped.
     </sch:assert>
 
@@ -888,6 +888,7 @@
     <!-- Elements that uniquely identify the record where the problem happened. -->
 
     <record>
+      <xsl:copy-of select="ancestor-or-self::*:StateDataSet/*:sState/*:sState.01"/>
       <xsl:copy-of select="ancestor-or-self::*:DemographicReport/*:dAgency/(*:dAgency.01 | *:dAgency.02 | *:dAgency.04)"/>
       <xsl:copy-of select="ancestor-or-self::*:Header/*:DemographicGroup/*"/>
       <xsl:copy-of select="ancestor-or-self::*:PatientCareReport/*:eRecord/*:eRecord.01"/>

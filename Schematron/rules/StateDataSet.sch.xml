@@ -995,6 +995,7 @@
     <!-- Elements that uniquely identify the record where the problem happened. -->
 
     <record>
+      <xsl:copy-of select="ancestor-or-self::*:StateDataSet/*:sState/*:sState.01"/>
       <xsl:copy-of select="ancestor-or-self::*:DemographicReport/*:dAgency/(*:dAgency.01 | *:dAgency.02 | *:dAgency.04)"/>
       <xsl:copy-of select="ancestor-or-self::*:Header/*:DemographicGroup/*"/>
       <xsl:copy-of select="ancestor-or-self::*:PatientCareReport/*:eRecord/*:eRecord.01"/>

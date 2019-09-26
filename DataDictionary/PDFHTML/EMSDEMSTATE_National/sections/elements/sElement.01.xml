@@ -33,5 +33,8 @@
   <assert id="nemSch_s001" role="Error">
       When State Collected Element is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element), or it should be omitted (if the element is optional).
       </assert>
+  <assert id="nemSch_s003" role="Warning">
+      When State Collected Element has a Not Value, no other value should be recorded.
+      </assert>
 </asserts>
 </element>

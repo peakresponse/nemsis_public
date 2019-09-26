@@ -38,5 +38,8 @@
   <assert id="nemSch_e001" role="Error">
       When Provider's Secondary Impressions is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
       </assert>
+  <assert id="nemSch_e009" role="Warning">
+      When Provider's Secondary Impressions has a Not Value, no other value should be recorded.
+      </assert>
 </asserts>
 </element>

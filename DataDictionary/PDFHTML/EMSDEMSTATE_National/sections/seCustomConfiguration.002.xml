@@ -11,4 +11,9 @@
     <element number="seCustomConfiguration.08" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" isNillable="No" dataType="PN"><name>Patient Care Report Custom Data Element Potential Pertinent Negative Values (PN)</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     <element number="seCustomConfiguration.09" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="CorrelationID"><name>Patient Care Report Custom Data Element Grouping ID</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
   </group>
+<asserts>
+  <assert id="nemSch_s010" role="Error">
+      The Custom Element ID for each Patient Care Report Custom Data Element should be unique (the same ID should not be used more than once).
+      </assert>
+</asserts>
 </section>

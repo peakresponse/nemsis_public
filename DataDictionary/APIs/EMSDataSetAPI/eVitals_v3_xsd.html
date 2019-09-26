@@ -5646,7 +5646,7 @@ var modelBoxes= new Array('model_eVitals_eVitals.VitalGroup',
                         <td class="firstColumn"><b>Type hierarchy</b></td>
                         <td>
                            <ul class="internal">
-                              <li class="internal"><b>xs:integer</b><ul class="internal">
+                              <li class="internal"><b>xs:decimal</b><ul class="internal">
                                     <li class="internal"><b><a href="eVitals_v3_xsd.html#CO2" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for eVitals_v3.xsd')">CO2</a></b></li>
                                  </ul>
                               </li>
@@ -12982,7 +12982,7 @@ var modelBoxes= new Array('model_eVitals_eVitals.VitalGroup',
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Type</b></td>
-                        <td>restriction of <b>xs:integer</b></td>
+                        <td>restriction of <b>xs:decimal</b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -12993,8 +12993,22 @@ var modelBoxes= new Array('model_eVitals_eVitals.VitalGroup',
                            <div id="facets_CO2" style="display:block">
                               <table class="facetsTable">
                                  <tr>
+                                    <td class="firstColumn">totalDigits</td>
+                                    <td width="30%"><b>4</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">fractionDigits</td>
+                                    <td width="30%"><b>1</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
                                     <td class="firstColumn">maxInclusive</td>
-                                    <td width="30%"><b>750</b></td>
+                                    <td width="30%"><b>760</b></td>
                                     <td>
                                        <div class="annotation"></div>
                                     </td>
@@ -13039,9 +13053,11 @@ var modelBoxes= new Array('model_eVitals_eVitals.VitalGroup',
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's end-tidal or other CO2 level.</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:integer"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:decimal"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:totalDigits</span><span class="tAN"> value=</span><span class="tAV">"4"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:fractionDigits</span><span class="tAN"> value=</span><span class="tAV">"1"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:minInclusive</span><span class="tAN"> value=</span><span class="tAV">"0"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:maxInclusive</span><span class="tAN"> value=</span><span class="tAV">"750"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:maxInclusive</span><span class="tAN"> value=</span><span class="tAV">"760"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:simpleType&gt;</span></pre></td>
                                  </tr>

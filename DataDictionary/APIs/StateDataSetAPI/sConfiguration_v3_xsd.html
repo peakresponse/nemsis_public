@@ -20,6 +20,7 @@
 				'properties_sConfiguration_sConfiguration_sConfiguration.ProcedureGroup_sConfiguration_sConfiguration_sConfiguration.ProcedureGroup_sConfiguration.03_NV', 
 				'properties_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.04_NV', 
 				'properties_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV', 
+				'properties_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType', 
 				'properties_sConfiguration_sConfiguration_sConfiguration.06_NV');
 var usedByBoxes= new Array('usedBy_sConfiguration', 
 				'usedBy_sConfiguration_sConfiguration_sConfiguration.01_NV', 
@@ -27,6 +28,7 @@ var usedByBoxes= new Array('usedBy_sConfiguration',
 				'usedBy_sConfiguration_sConfiguration_sConfiguration.ProcedureGroup_sConfiguration_sConfiguration_sConfiguration.ProcedureGroup_sConfiguration.03_NV', 
 				'usedBy_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.04_NV', 
 				'usedBy_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV', 
+				'usedBy_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType', 
 				'usedBy_sConfiguration_sConfiguration_sConfiguration.06_NV');
 var sourceBoxes= new Array('source_sConfiguration_sConfiguration.01', 
 				'source_sConfiguration_sConfiguration.ProcedureGroup', 
@@ -42,6 +44,7 @@ var sourceBoxes= new Array('source_sConfiguration_sConfiguration.01',
 				'source_sConfiguration_sConfiguration_sConfiguration.ProcedureGroup_sConfiguration_sConfiguration_sConfiguration.ProcedureGroup_sConfiguration.03_NV', 
 				'source_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.04_NV', 
 				'source_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV', 
+				'source_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType', 
 				'source_sConfiguration_sConfiguration_sConfiguration.06_NV');
 var instanceBoxes= new Array('instance_sConfiguration_sConfiguration.ProcedureGroup', 
 				'instance_sConfiguration_sConfiguration.MedicationGroup');
@@ -1229,7 +1232,7 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
                                  <tr>
                                     <td width="100%"><pre><span class="tEl">&lt;sConfiguration.MedicationGroup</span><span class="tT"> </span><span class="tAN">xmlns=</span><span class="tAV">"http://www.nemsis.org"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;sConfiguration.04</span><span class="tT"> </span><span class="tAN">NV=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,1}</span><span class="tEl">&lt;/sConfiguration.04&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;sConfiguration.05</span><span class="tT"> </span><span class="tAN">NV=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/sConfiguration.05&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;sConfiguration.05</span><span class="tT"> </span><span class="tAN">CodeType=</span><span class="tAV">""</span><span class="tT"> </span><span class="tAN">NV=</span><span class="tAV">""</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">{1,unbounded}</span><span class="tEl">&lt;/sConfiguration.05&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/sConfiguration.MedicationGroup&gt;</span></pre></td>
                                  </tr>
                               </table>
@@ -1306,7 +1309,7 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
                 </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
-              </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications &lt;br/&gt;&lt;br/&gt;List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood products.. List of medications based on RxNorm (RXCUI) code. &lt;br/&gt;&lt;br/&gt;Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/"&gt;https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a&gt; &lt;br/&gt;&lt;br/&gt;RxNorm &lt;br/&gt;Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html"&gt;http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a&gt; &lt;br/&gt;Product - RxNorm Full Monthly Release &lt;br/&gt;&lt;br/&gt;SNOMED-CT &lt;br/&gt;Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html"&gt;http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a&gt; &lt;br/&gt;Product: Product - UMLS Metathesaurus. &lt;br/&gt;&lt;br/&gt;Allowable SNOMED-CT codes are: &lt;br/&gt;116762002 Administration of blood product &lt;br/&gt;116795008 Transfusion of cryoprecipitate &lt;br/&gt;116861002 Transfusion of fresh frozen plasma &lt;br/&gt;116865006 Administration of albumin &lt;br/&gt;180208003 Intravenous blood transfusion of platelets &lt;br/&gt;33389009 Transfusion of whole blood &lt;br/&gt;71493000 Transfusion of packed red blood cells</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
@@ -1316,6 +1319,11 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
               </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"NV"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"NV.NotApplicable NV.NotRecorded"</span><span class="tEl">/&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"CodeType"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"CodeType.RxNorm CodeType.SNOMED"</span><span class="tEl">/&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
@@ -1569,7 +1577,7 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
     </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
     </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications &lt;br/&gt;&lt;br/&gt;List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood products.. List of medications based on RxNorm (RXCUI) code. &lt;br/&gt;&lt;br/&gt;Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/"&gt;https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a&gt; &lt;br/&gt;&lt;br/&gt;RxNorm &lt;br/&gt;Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html"&gt;http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a&gt; &lt;br/&gt;Product - RxNorm Full Monthly Release &lt;br/&gt;&lt;br/&gt;SNOMED-CT &lt;br/&gt;Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html"&gt;http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a&gt; &lt;br/&gt;Product: Product - UMLS Metathesaurus. &lt;br/&gt;&lt;br/&gt;Allowable SNOMED-CT codes are: &lt;br/&gt;116762002 Administration of blood product &lt;br/&gt;116795008 Transfusion of cryoprecipitate &lt;br/&gt;116861002 Transfusion of fresh frozen plasma &lt;br/&gt;116865006 Administration of albumin &lt;br/&gt;180208003 Intravenous blood transfusion of platelets &lt;br/&gt;33389009 Transfusion of whole blood &lt;br/&gt;71493000 Transfusion of packed red blood cells</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
 </span></pre></td>
                                     </tr>
@@ -1586,7 +1594,8 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
                         <td class="diagram">
                            <div id="diagram_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05" style="display:block"><img alt="Diagram" border="0" src="img/sConfiguration_v3_xsd_Element_sConfiguration_05.jpeg" usemap="#sConfiguration_v3_xsd_Element_sConfiguration_05" /><map name="sConfiguration_v3_xsd_Element_sConfiguration_05" id="sConfiguration_v3_xsd_Element_sConfiguration_05">
                                  <area alt="commonTypes_v3_xsd.tmp#Medication" href="commonTypes_v3_xsd.html#Medication" coords="164,2,270,28" />
-                                 <area alt="sConfiguration_v3_xsd.tmp#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV" href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV" coords="178,108,248,133" /></map></div>
+                                 <area alt="sConfiguration_v3_xsd.tmp#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV" href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV" coords="178,108,248,133" />
+                                 <area alt="sConfiguration_v3_xsd.tmp#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" coords="178,143,277,168" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -1645,6 +1654,15 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
                                     </tr>
                                  </thead>
                                  <tr>
+                                    <td class="firstColumn"><b><a href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for sConfiguration_v3.xsd')">CodeType</a></b></td>
+                                    <td>union of(<b><a href="commonTypes_v3_xsd.html#CodeType.RxNorm" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">CodeType.RxNorm</a></b>, <b><a href="commonTypes_v3_xsd.html#CodeType.SNOMED" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">CodeType.SNOMED</a></b>)
+                                    </td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
                                     <td class="firstColumn"><b><a href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_NV" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for sConfiguration_v3.xsd')">NV</a></b></td>
                                     <td>union of(<b><a href="commonTypes_v3_xsd.html#NV.NotApplicable" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotApplicable</a></b>, <b><a href="commonTypes_v3_xsd.html#NV.NotRecorded" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotRecorded</a></b>)
                                     </td>
@@ -1685,7 +1703,7 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
           </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
           </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications &lt;br/&gt;&lt;br/&gt;List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood products.. List of medications based on RxNorm (RXCUI) code. &lt;br/&gt;&lt;br/&gt;Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/"&gt;https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a&gt; &lt;br/&gt;&lt;br/&gt;RxNorm &lt;br/&gt;Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html"&gt;http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a&gt; &lt;br/&gt;Product - RxNorm Full Monthly Release &lt;br/&gt;&lt;br/&gt;SNOMED-CT &lt;br/&gt;Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html"&gt;http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a&gt; &lt;br/&gt;Product: Product - UMLS Metathesaurus. &lt;br/&gt;&lt;br/&gt;Allowable SNOMED-CT codes are: &lt;br/&gt;116762002 Administration of blood product &lt;br/&gt;116795008 Transfusion of cryoprecipitate &lt;br/&gt;116861002 Transfusion of fresh frozen plasma &lt;br/&gt;116865006 Administration of albumin &lt;br/&gt;180208003 Intravenous blood transfusion of platelets &lt;br/&gt;33389009 Transfusion of whole blood &lt;br/&gt;71493000 Transfusion of packed red blood cells</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
@@ -1695,6 +1713,11 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
         </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"NV"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"NV.NotApplicable NV.NotRecorded"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"CodeType"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"CodeType.RxNorm CodeType.SNOMED"</span><span class="tEl">/&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
@@ -2142,7 +2165,7 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
                     </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
-                  </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Used to populate dConfiguration.09 EMS Agency Medications &lt;br/&gt;&lt;br/&gt;List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood products.. List of medications based on RxNorm (RXCUI) code. &lt;br/&gt;&lt;br/&gt;Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/"&gt;https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a&gt; &lt;br/&gt;&lt;br/&gt;RxNorm &lt;br/&gt;Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html"&gt;http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a&gt; &lt;br/&gt;Product - RxNorm Full Monthly Release &lt;br/&gt;&lt;br/&gt;SNOMED-CT &lt;br/&gt;Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html"&gt;http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a&gt; &lt;br/&gt;Product: Product - UMLS Metathesaurus. &lt;br/&gt;&lt;br/&gt;Allowable SNOMED-CT codes are: &lt;br/&gt;116762002 Administration of blood product &lt;br/&gt;116795008 Transfusion of cryoprecipitate &lt;br/&gt;116861002 Transfusion of fresh frozen plasma &lt;br/&gt;116865006 Administration of albumin &lt;br/&gt;180208003 Intravenous blood transfusion of platelets &lt;br/&gt;33389009 Transfusion of whole blood &lt;br/&gt;71493000 Transfusion of packed red blood cells</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
               </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
@@ -2152,6 +2175,11 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
                   </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"NV"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
                       </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"NV.NotApplicable NV.NotRecorded"</span><span class="tEl">/&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+                  </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"CodeType"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+                    </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                      </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"CodeType.RxNorm CodeType.SNOMED"</span><span class="tEl">/&gt;</span><span class="tI">
                     </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
                   </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
                 </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
@@ -2607,6 +2635,88 @@ var modelBoxes= new Array('model_sConfiguration_sConfiguration.ProcedureGroup',
                                     <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"NV"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"NV.NotApplicable NV.NotRecorded"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="sConfiguration_v3_xsd.html#sConfiguration" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for sConfiguration_v3.xsd')">sConfiguration</a></b> / <b><a href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration.MedicationGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for sConfiguration_v3.xsd')">sConfiguration.MedicationGroup</a></b> / <b><a href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for sConfiguration_v3.xsd')">sConfiguration.05</a></b> / @CodeType</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>union of(<b><a href="commonTypes_v3_xsd.html#CodeType.RxNorm" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">CodeType.RxNorm</a></b>, <b><a href="commonTypes_v3_xsd.html#CodeType.SNOMED" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">CodeType.SNOMED</a></b>)
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" type="image" src="img/btM.gif" value="-" onclick="switchState('properties_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>optional</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="sConfiguration_v3_xsd.html#sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for sConfiguration_v3.xsd')">sConfiguration/sConfiguration.MedicationGroup/sConfiguration.05</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" type="image" src="img/btM.gif" value="-" onclick="switchState('source_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration_sConfiguration_sConfiguration.MedicationGroup_sConfiguration.05_CodeType" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"CodeType"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"CodeType.RxNorm CodeType.SNOMED"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:attribute&gt;</span></pre></td>
                                  </tr>

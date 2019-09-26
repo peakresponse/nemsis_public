@@ -29,7 +29,7 @@
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
 <asserts>
-  <assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06" role="Warning">
+  <assert id="nemSch_d007" role="Warning">
       <elementRef elementNumber="dAgency.07">EMS Agency Census Tracts</elementRef> should belong to a county recorded in <elementRef elementNumber="dAgency.06">EMS Agency Service Area County(ies)</elementRef> in the state with which it is grouped.
       </assert>
   <assert id="nemSch_d002" role="Error">
@@ -37,6 +37,9 @@
       </assert>
   <assert id="nemSch_d001" role="Error">
       When EMS Agency Census Tracts is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_d003" role="Warning">
+      When EMS Agency Census Tracts has a Not Value, no other value should be recorded.
       </assert>
 </asserts>
 </element>

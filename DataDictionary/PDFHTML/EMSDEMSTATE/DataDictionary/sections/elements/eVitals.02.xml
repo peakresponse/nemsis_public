@@ -25,7 +25,7 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e125" role="Warning">
-      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should be recorded when a set of vital signs is obtained, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should be recorded, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
       </assert>
   <assert id="nemSch_e126" role="Warning">
       <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".

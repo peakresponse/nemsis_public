@@ -30,5 +30,8 @@
   <assert id="nemSch_e001" role="Error">
       When Patient's Phone Number is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
       </assert>
+  <assert id="nemSch_e010" role="Warning">
+      When Patient's Phone Number has a Pertinent Negative, no other value should be recorded.
+      </assert>
 </asserts>
 </element>

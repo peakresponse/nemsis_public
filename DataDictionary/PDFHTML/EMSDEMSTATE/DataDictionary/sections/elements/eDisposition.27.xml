@@ -53,7 +53,7 @@
       <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> should be "Patient Contact Made" when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated..." or "Patient Refused Evaluation/Care".
       </assert>
   <assert id="nemSch_e181" role="Warning">
-      <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> should be "Patient Contact Made" when <elementRef elementNumber="eDisposition.29">Crew Incident Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+      <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> should be "Patient Contact Made" when <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
       </assert>
   <assert id="nemSch_e182" role="Warning">
       <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> should be "Patient Contact Made" when <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> is a value other than "Non-Patient Transport (Not Otherwise Listed)" or "No Transport".
@@ -62,7 +62,7 @@
       <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
       </assert>
   <assert id="nemSch_e185" role="Warning">
-      <elementRef elementNumber="eDisposition.29">Crew Incident Disposition</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
+      <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
       </assert>
   <assert id="nemSch_e186" role="Warning">
       <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".

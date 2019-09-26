@@ -11,4 +11,9 @@
     <element number="sdCustomConfiguration.08" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" isNillable="No" dataType="PN"><name>Agency Demographic Custom Data Element Potential Pertinent Negative Values (PN)</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     <element number="sdCustomConfiguration.09" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="CorrelationID"><name>Agency Demographic Custom Data Element Grouping ID</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
   </group>
+<asserts>
+  <assert id="nemSch_s005" role="Error">
+      The Custom Element ID for each Agency Demographic Custom Data Element should be unique (the same ID should not be used more than once).
+      </assert>
+</asserts>
 </section>

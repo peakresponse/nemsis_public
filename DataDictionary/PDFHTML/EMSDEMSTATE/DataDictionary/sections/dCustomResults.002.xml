@@ -5,9 +5,4 @@
     <element number="dCustomResults.02" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="CorrelationID"><name>Custom Element ID Referenced</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     <element number="dCustomResults.03" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="CorrelationID"><name>CorrelationID of DemographicReport Element or Group</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
   </group>
-<asserts>
-  <assert id="nemSch_d004" role="Error">
-      The timestamp of the DemographicReport should not be in the future (the current time according to this system is (value)).
-      </assert>
-</asserts>
 </section>

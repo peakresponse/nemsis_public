@@ -42,13 +42,16 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e013" role="Warning">
-      When <elementRef elementNumber="eResponse.09">Type of Response Delay</elementRef> is "None", no other value should be recorded.
+      When <elementRef elementNumber="eResponse.09">Type of Response Delay</elementRef> is "None/No Delay", no other value should be recorded.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Type of Response Delay has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
       </assert>
   <assert id="nemSch_e001" role="Error">
       When Type of Response Delay is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_e009" role="Warning">
+      When Type of Response Delay has a Not Value, no other value should be recorded.
       </assert>
 </asserts>
 </element>

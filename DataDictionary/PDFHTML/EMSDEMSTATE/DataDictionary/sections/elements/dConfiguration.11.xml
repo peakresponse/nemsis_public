@@ -48,5 +48,8 @@
   <assert id="nemSch_d001" role="Error">
       When EMS Agency Specialty Service Capability is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element), or it should be omitted (if the element is optional).
       </assert>
+  <assert id="nemSch_d003" role="Warning">
+      When EMS Agency Specialty Service Capability has a Not Value, no other value should be recorded.
+      </assert>
 </asserts>
 </element>

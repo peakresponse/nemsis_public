@@ -36,19 +36,19 @@
       <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
       </assert>
   <assert id="nemSch_e097" role="Warning">
-      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should not contain both "Attempted/Initiated..." and "Not Attempted...".
+      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should not contain both "Attempted/Initiated..." and "Not Attempted...".
       </assert>
   <assert id="nemSch_e098" role="Warning">
-      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should contain "Initiated Chest Compressions" when <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> contains "Compressions...".
+      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should contain "Initiated Chest Compressions" when <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> contains "Compressions...".
       </assert>
   <assert id="nemSch_e099" role="Warning">
-      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should contain "Attempted Ventilation" when <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> contains "Ventilation..." or "Compressions-Intermittent with Ventilation".
+      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should contain "Attempted Ventilation" when <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> contains "Ventilation..." or "Compressions-Intermittent with Ventilation".
       </assert>
   <assert id="nemSch_e106" role="Warning">
-      <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> should contain "Compressions..." when <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> contains "Initiated Chest Compressions".
+      <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> should contain "Compressions..." when <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> contains "Initiated Chest Compressions".
       </assert>
   <assert id="nemSch_e107" role="Warning">
-      <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> should contain "Ventilation..." or "Compressions-Intermittent with Ventilation" when <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> contains "Attempted Ventilation".
+      <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> should contain "Ventilation..." or "Compressions-Intermittent with Ventilation" when <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> contains "Attempted Ventilation".
       </assert>
   <assert id="nemSch_e117" role="Warning">
       <elementRef elementNumber="eArrest.20">Who First Initiated CPR</elementRef> should be recorded when <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> is "Attempted..." or "Initiated...".
@@ -58,6 +58,9 @@
       </assert>
   <assert id="nemSch_e001" role="Error">
       When Resuscitation Attempted By EMS is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_e009" role="Warning">
+      When Resuscitation Attempted By EMS has a Not Value, no other value should be recorded.
       </assert>
 </asserts>
 </element>

@@ -31,7 +31,7 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e005" role="Error">
-      When <elementRef elementNumber="eSituation.10">Other Associated Symptoms</elementRef> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      When <elementRef elementNumber="eSituation.10">Other Associated Symptoms</elementRef> has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
       </assert>
   <assert id="nemSch_e077" role="Warning">
       <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be "Yes" when a symptom or impression is injury-related.
@@ -44,6 +44,12 @@
       </assert>
   <assert id="nemSch_e001" role="Error">
       When Other Associated Symptoms is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_e009" role="Warning">
+      When Other Associated Symptoms has a Not Value, no other value should be recorded.
+      </assert>
+  <assert id="nemSch_e010" role="Warning">
+      When Other Associated Symptoms has a Pertinent Negative, no other value should be recorded.
       </assert>
 </asserts>
 </element>

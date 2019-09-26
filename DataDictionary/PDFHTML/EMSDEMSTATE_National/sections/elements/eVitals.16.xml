@@ -12,9 +12,11 @@
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
-  <CO2 baseType="integer">
+  <CO2 baseType="decimal">
+    <facet name="totalDigits" value="4"/>
+    <facet name="fractionDigits" value="1"/>
     <facet name="minInclusive" value="0"/>
-    <facet name="maxInclusive" value="750"/>
+    <facet name="maxInclusive" value="760"/>
   </CO2>
 </restrictions>
 <attributes>

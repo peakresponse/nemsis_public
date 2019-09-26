@@ -123,13 +123,22 @@
 										</performanceMeasuresGroup>
 										<comment>
 List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood products. 
-&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a>
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>
 &lt;br/>&lt;br/>RxNorm 
 &lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
 &lt;br/>Product - RxNorm Full Monthly Release
 &lt;br/>&lt;br/>SNOMED-CT 
 &lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a>
 &lt;br/>Product: Product - UMLS Metathesaurus.
+
+&lt;br/>&lt;br/>Allowable SNOMED-CT codes are:
+&lt;br/>116762002 Administration of blood product
+&lt;br/>116795008 Transfusion of cryoprecipitate
+&lt;br/>116861002 Transfusion of fresh frozen plasma
+&lt;br/>116865006 Administration of albumin
+&lt;br/>180208003 Intravenous blood transfusion of platelets
+&lt;br/>33389009 Transfusion of whole blood
+&lt;br/>71493000 Transfusion of packed red blood cells
 </comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -168,7 +177,7 @@ List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood p
 										<v2Number>E18_04</v2Number>
 										<usage>Required</usage>
 										<comment>This medication route list represents a sub-group of values from the Data Elements for Emergency Department Systems (DEEDS), pertaining to prehospital care. &lt;br/> &lt;br/>
-DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/science/article/pii/S0196064498703178.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</comment>
+											DEEDS Version 1.0 was utilized for this list:  &lt;a href="http://www.sciencedirect.com/science/article/pii/S0196064498703178">http://www.sciencedirect.com/science/article/pii/S0196064498703178&lt;/a>.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

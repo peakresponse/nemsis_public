@@ -109,7 +109,7 @@
       <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
       </assert>
   <assert id="nemSch_e184" role="Warning">
-      <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> should be "Patient Evaluated and Care Provided" when <elementRef elementNumber="eDisposition.29">Crew Incident Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+      <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> should be "Patient Evaluated and Care Provided" when <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
       </assert>
   <assert id="nemSch_e187" role="Warning">
       <elementRef elementNumber="eDisposition.32">Level of Care Provided per Protocol</elementRef> should be recorded (with a value other than "No Care Provided") when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided".

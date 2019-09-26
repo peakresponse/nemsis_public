@@ -110,7 +110,7 @@
 'EMSDataSet'|'element'|'ePayment.22'|'Relationship to the Insured'|'E07_14'|''|''|'Optional'|'0'|'1'|''|'RelationshipToInsured'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.58'|'Insurance Group Name'|''|''|''|'Optional'|'0'|'1'|''|'InsuranceGroupName'|''|''|''|''|''|'2'|'30'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.59'|'Insurance Company Phone Number'|''|''|''|'Optional'|'0'|'M'|''|'PhoneNumber'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'|
-'EMSDataSet'|'element'|'ePayment.60'|'Date of Birth of the Insured'|''|''|''|'Optional'|'0'|'M'|''|'DateOfBirth'|''|''|''|''|''|''|''|''|'1890-01-01'|'2050-01-01'|''|''|''|''|
+'EMSDataSet'|'element'|'ePayment.60'|'Date of Birth of the Insured'|''|''|''|'Optional'|'0'|'1'|''|'DateOfBirth'|''|''|''|''|''|''|''|''|'1890-01-01'|'2050-01-01'|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.23'|'Closest Relative/Guardian Last Name'|'E07_18'|''|''|'Optional'|'0'|'1'|''|'PersonLastName'|''|''|''|''|''|'1'|'60'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.24'|'Closest Relative/ Guardian First Name'|'E07_19'|''|''|'Optional'|'0'|'1'|''|'PersonFirstName'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.25'|'Closest Relative/ Guardian Middle Initial/Name'|'E07_20'|''|''|'Optional'|'0'|'1'|''|'PersonMiddleName'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
@@ -273,7 +273,7 @@
 'EMSDataSet'|'element'|'eVitals.13'|'Pulse Rhythm'|'E14_10'|''|''|'Optional'|'0'|'1'|''|'PulseRhythm'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.14'|'Respiratory Rate'|'E14_11'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'RespiratoryRate'|'NV'|'PN'|'PNNill'|'NV.NotRecorded; NV.NotApplicable; '|'PN.UnableToComplete; PN.Refused; PN.ExamFindingNotPresent; '|''|''|''|'0'|'300'|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.15'|'Respiratory Effort'|'E14_12'|''|''|'Optional'|'0'|'1'|''|'RespiratoryEffort'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eVitals.16'|'End Tidal Carbon Dioxide (ETCO2)'|'E14_13'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'CO2'|'NV'|'PN'|'PNNill'|'NV.NotRecorded; NV.NotApplicable; '|'PN.UnableToComplete; PN.Refused; '|''|''|''|'0'|'750'|''|''|''|''|
+'EMSDataSet'|'element'|'eVitals.16'|'End Tidal Carbon Dioxide (ETCO2)'|'E14_13'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'CO2'|'NV'|'PN'|'PNNill'|'NV.NotRecorded; NV.NotApplicable; '|'PN.UnableToComplete; PN.Refused; '|''|''|''|'0'|'760'|''|'4'|'1'|''|
 'EMSDataSet'|'element'|'eVitals.17'|'Carbon Monoxide (CO)'|''|''|'State'|'Recommended'|'0'|'1'|'Nillable'|'CarbonMonoxideLevel'|'NV'|'PN'|'PNNill'|'NV.NotReporting; NV.NotRecorded; NV.NotApplicable; '|'PN.UnableToComplete; PN.Refused; '|''|''|''|'0'|'100'|''|'3'|'1'|''|
 'EMSDataSet'|'element'|'eVitals.18'|'Blood Glucose Level'|'E14_14'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'BloodGlucoseLevel'|'NV'|'PN'|'PNNill'|'NV.NotRecorded; NV.NotApplicable; '|'PN.UnableToComplete; PN.Refused; '|''|''|''|''|''|''|''|''|'[2][0][0][0]|[1][0-9][0-9][0-9]|[1-9][0-9][0-9]|[1-9][0-9]|[0-9]|High|Low'|
 'EMSDataSet'|'element'|'eVitals.19'|'Glasgow Coma Score-Eye'|'E14_15'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'GlasgowComaScoreEyes'|'NV'|'PN'|'PNNill'|'NV.NotRecorded; NV.NotApplicable; '|'PN.UnableToComplete; PN.Refused; '|''|''|''|''|''|''|''|''|''|
@@ -386,7 +386,7 @@
 'EMSDataSet'|'element'|'eDisposition.11'|'Number of Patients Transported in this EMS Unit'|''|''|'State'|'Recommended'|'0'|'1'|'Nillable'|'NumberOfPatients'|'NV'|''|''|'NV.NotReporting; NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'100'|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.27'|'Unit Disposition'|''|'National'|'State'|'Mandatory'|'1'|'1'|''|'UnitDisposition'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.28'|'Patient Evaluation/Care'|''|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'PatientEvaluationCare'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eDisposition.29'|'Crew Incident Disposition'|''|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'CrewIncidentDisposition'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eDisposition.29'|'Crew Disposition'|''|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'CrewDisposition'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.30'|'Transport Disposition'|''|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'TransportDisposition'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.31'|'Reason for Refusal/Release'|''|''|''|'Optional'|'0'|'M'|''|'ReasonForRefusalRelease'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDisposition.13'|'How Patient Was Moved to Ambulance'|'E20_11'|''|''|'Optional'|'0'|'M'|''|'HowPatientWasMovedToFromAmbulance'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|

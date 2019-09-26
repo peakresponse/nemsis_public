@@ -261,7 +261,7 @@
 'EMSDataSet'|'ePatient.16'|'Age Units'|'2516009'|'Years'|
 'EMSDataSet'|'ePatient.22'|'Alternate Home Residence'|'2522001'|'Homeless'|
 'EMSDataSet'|'ePatient.22'|'Alternate Home Residence'|'2522003'|'Migrant Worker'|
-'EMSDataSet'|'ePatient.22'|'Alternate Home Residence'|'2522005'|'Undocumented Citizen'|
+'EMSDataSet'|'ePatient.22'|'Alternate Home Residence'|'2522005'|'Foreign Visitor'|
 'EMSDataSet'|'ePayment.01'|'Primary Method of Payment'|'2601001'|'Insurance'|
 'EMSDataSet'|'ePayment.01'|'Primary Method of Payment'|'2601003'|'Medicaid'|
 'EMSDataSet'|'ePayment.01'|'Primary Method of Payment'|'2601005'|'Medicare'|
@@ -639,6 +639,7 @@
 'EMSDataSet'|'eArrest.02'|'Cardiac Arrest Etiology'|'3002005'|'Drug Overdose'|
 'EMSDataSet'|'eArrest.02'|'Cardiac Arrest Etiology'|'3002007'|'Electrocution'|
 'EMSDataSet'|'eArrest.02'|'Cardiac Arrest Etiology'|'3002009'|'Exsanguination-Medical (Non-Traumatic)'|
+'EMSDataSet'|'eArrest.02'|'Cardiac Arrest Etiology'|'3002011'|'Other'|
 'EMSDataSet'|'eArrest.02'|'Cardiac Arrest Etiology'|'3002013'|'Respiratory/Asphyxia'|
 'EMSDataSet'|'eArrest.02'|'Cardiac Arrest Etiology'|'3002015'|'Traumatic Cause'|
 'EMSDataSet'|'eArrest.03'|'Resuscitation Attempted By EMS'|'3003001'|'Attempted Defibrillation'|
@@ -736,7 +737,7 @@
 'EMSDataSet'|'eArrest.18'|'End of EMS Cardiac Arrest Event'|'3018011'|'Ongoing Resuscitation by Other EMS'|
 'EMSDataSet'|'eArrest.20'|'Who First Initiated CPR'|'3020001'|'Bystander'|
 'EMSDataSet'|'eArrest.20'|'Who First Initiated CPR'|'3020003'|'Family Member'|
-'EMSDataSet'|'eArrest.20'|'Who First Initiated CPR'|'3020005'|'Healthcare Provider (non-EMS)'|
+'EMSDataSet'|'eArrest.20'|'Who First Initiated CPR'|'3020005'|'Healthcare Provider (non-911 Responder)'|
 'EMSDataSet'|'eArrest.20'|'Who First Initiated CPR'|'3020007'|'First Responder (EMS)'|
 'EMSDataSet'|'eArrest.20'|'Who First Initiated CPR'|'3020009'|'First Responder (Law Enforcement)'|
 'EMSDataSet'|'eArrest.20'|'Who First Initiated CPR'|'3020011'|'First Responder (non-EMS Fire)'|
@@ -750,7 +751,7 @@
 'EMSDataSet'|'eArrest.21'|'Who First Applied the AED'|'3021013'|'EMS Responder (transport EMS)'|
 'EMSDataSet'|'eArrest.22'|'Who First Defibrillated the Patient'|'3022001'|'Bystander'|
 'EMSDataSet'|'eArrest.22'|'Who First Defibrillated the Patient'|'3022003'|'Family Member'|
-'EMSDataSet'|'eArrest.22'|'Who First Defibrillated the Patient'|'3022005'|'Healthcare Provider (non-EMS)'|
+'EMSDataSet'|'eArrest.22'|'Who First Defibrillated the Patient'|'3022005'|'Healthcare Provider (non-911 Responder)'|
 'EMSDataSet'|'eArrest.22'|'Who First Defibrillated the Patient'|'3022007'|'First Responder (EMS)'|
 'EMSDataSet'|'eArrest.22'|'Who First Defibrillated the Patient'|'3022009'|'First Responder (Law Enforcement)'|
 'EMSDataSet'|'eArrest.22'|'Who First Defibrillated the Patient'|'3022011'|'First Responder (non-EMS Fire)'|
@@ -1505,17 +1506,17 @@
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525023'|'Flail Segment'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525025'|'Implanted Device'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525027'|'Laceration'|
-'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3523029'|'Normal'|
+'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525029'|'Normal'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525031'|'Not Done'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525033'|'Pain'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525035'|'Pain with Inspiration/Expiration'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525037'|'Puncture/Stab Wound'|
-'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3523039'|'Retraction'|
+'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525039'|'Retraction'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525041'|'Tenderness'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525043'|'Gunshot Wound'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525045'|'Swelling'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525047'|'Contusion'|
-'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3523049'|'Tenderness-General'|
+'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525049'|'Tenderness-General'|
 'EMSDataSet'|'eExam.19'|'Mental Status Assessment'|'3519001'|'Combative'|
 'EMSDataSet'|'eExam.19'|'Mental Status Assessment'|'3519003'|'Confused'|
 'EMSDataSet'|'eExam.19'|'Mental Status Assessment'|'3519005'|'Hallucinations'|
@@ -2017,13 +2018,13 @@
 'EMSDataSet'|'eDisposition.28'|'Patient Evaluation/Care'|'4228005'|'Patient Evaluated, No Care Required'|
 'EMSDataSet'|'eDisposition.28'|'Patient Evaluation/Care'|'4228007'|'Patient Refused Evaluation/Care'|
 'EMSDataSet'|'eDisposition.28'|'Patient Evaluation/Care'|'4228009'|'Patient Support Services Provided'|
-'EMSDataSet'|'eDisposition.29'|'Crew Incident Disposition'|'4229001'|'Initiated and Continued Primary Care'|
-'EMSDataSet'|'eDisposition.29'|'Crew Incident Disposition'|'4229003'|'Initiated Primary Care and Transferred to Another EMS Crew'|
-'EMSDataSet'|'eDisposition.29'|'Crew Incident Disposition'|'4229005'|'Provided Care Supporting Primary EMS Crew'|
-'EMSDataSet'|'eDisposition.29'|'Crew Incident Disposition'|'4229007'|'Assumed Primary Care from Another EMS Crew'|
-'EMSDataSet'|'eDisposition.29'|'Crew Incident Disposition'|'4229009'|'Incident Support Services Provided (Including Standby)'|
-'EMSDataSet'|'eDisposition.29'|'Crew Incident Disposition'|'4229011'|'Back in Service, No Care/Support Services Required'|
-'EMSDataSet'|'eDisposition.29'|'Crew Incident Disposition'|'4229013'|'Back in Service, Care/Support Services Refused'|
+'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229001'|'Initiated and Continued Primary Care'|
+'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229003'|'Initiated Primary Care and Transferred to Another EMS Crew'|
+'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229005'|'Provided Care Supporting Primary EMS Crew'|
+'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229007'|'Assumed Primary Care from Another EMS Crew'|
+'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229009'|'Incident Support Services Provided (Including Standby)'|
+'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229011'|'Back in Service, No Care/Support Services Required'|
+'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229013'|'Back in Service, Care/Support Services Refused'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230001'|'Transport by This EMS Unit (This Crew Only)'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230003'|'Transport by This EMS Unit, with a Member of Another Crew'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230005'|'Transport by Another EMS Unit'|
@@ -2132,7 +2133,7 @@
 'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222009'|'Hospital-Hospice'|
 'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222011'|'Hospital-Hyperbaric Oxygen Treatment'|
 'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222013'|'Hospital-ICU'|
-'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222015'|'Hospital-Labor & Delivery'|
+'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222015'|'Hospital-Labor and Delivery'|
 'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222017'|'Hospital-Med/Surg'|
 'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222019'|'Hospital-Mental Health'|
 'EMSDataSet'|'eDisposition.22'|'Hospital In-Patient Destination'|'4222021'|'Hospital-MICU'|
@@ -2182,6 +2183,7 @@
 'EMSDataSet'|'eDisposition.24'|'Destination Team Pre-Arrival Alert or Activation'|'4224013'|'Yes-STEMI'|
 'EMSDataSet'|'eDisposition.24'|'Destination Team Pre-Arrival Alert or Activation'|'4224015'|'Yes-Stroke'|
 'EMSDataSet'|'eDisposition.24'|'Destination Team Pre-Arrival Alert or Activation'|'4224017'|'Yes-Trauma (General)'|
+'EMSDataSet'|'eDisposition.24'|'Destination Team Pre-Arrival Alert or Activation'|'4224019'|'Yes-Sepsis'|
 'EMSDataSet'|'eDisposition.26'|'Disposition Instructions Provided'|'4226001'|'Contact 911 or see your Doctor if problem returns'|
 'EMSDataSet'|'eDisposition.26'|'Disposition Instructions Provided'|'4226003'|'Contact 911 or see your Doctor if problem worsens'|
 'EMSDataSet'|'eDisposition.26'|'Disposition Instructions Provided'|'4226005'|'Other Not Listed (Described in Narrative)'|

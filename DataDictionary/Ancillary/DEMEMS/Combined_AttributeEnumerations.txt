@@ -319,7 +319,7 @@
 'null'|'null'|'null'|'null'|
 'EMSDataSet'|'null'|'2522001'|'Homeless'|
 'EMSDataSet'|'null'|'2522003'|'Migrant Worker'|
-'EMSDataSet'|'null'|'2522005'|'Undocumented Citizen'|
+'EMSDataSet'|'null'|'2522005'|'Foreign Visitor'|
 'null'|'null'|'null'|'null'|
 'EMSDataSet'|'null'|'2601001'|'Insurance'|
 'EMSDataSet'|'null'|'2601003'|'Medicaid'|
@@ -778,6 +778,7 @@
 'EMSDataSet'|'null'|'3002005'|'Drug Overdose'|
 'EMSDataSet'|'null'|'3002007'|'Electrocution'|
 'EMSDataSet'|'null'|'3002009'|'Exsanguination-Medical (Non-Traumatic)'|
+'EMSDataSet'|'null'|'3002011'|'Other'|
 'EMSDataSet'|'null'|'3002013'|'Respiratory/Asphyxia'|
 'EMSDataSet'|'null'|'3002015'|'Traumatic Cause'|
 'null'|'null'|'null'|'null'|
@@ -892,7 +893,7 @@
 'null'|'null'|'null'|'null'|
 'EMSDataSet'|'null'|'3020001'|'Bystander'|
 'EMSDataSet'|'null'|'3020003'|'Family Member'|
-'EMSDataSet'|'null'|'3020005'|'Healthcare Provider (non-EMS)'|
+'EMSDataSet'|'null'|'3020005'|'Healthcare Provider (non-911 Responder)'|
 'EMSDataSet'|'null'|'3020007'|'First Responder (EMS)'|
 'EMSDataSet'|'null'|'3020009'|'First Responder (Law Enforcement)'|
 'EMSDataSet'|'null'|'3020011'|'First Responder (non-EMS Fire)'|
@@ -908,7 +909,7 @@
 'null'|'null'|'null'|'null'|
 'EMSDataSet'|'null'|'3022001'|'Bystander'|
 'EMSDataSet'|'null'|'3022003'|'Family Member'|
-'EMSDataSet'|'null'|'3022005'|'Healthcare Provider (non-EMS)'|
+'EMSDataSet'|'null'|'3022005'|'Healthcare Provider (non-911 Responder)'|
 'EMSDataSet'|'null'|'3022007'|'First Responder (EMS)'|
 'EMSDataSet'|'null'|'3022009'|'First Responder (Law Enforcement)'|
 'EMSDataSet'|'null'|'3022011'|'First Responder (non-EMS Fire)'|
@@ -1774,17 +1775,17 @@
 'EMSDataSet'|'null'|'3525023'|'Flail Segment'|
 'EMSDataSet'|'null'|'3525025'|'Implanted Device'|
 'EMSDataSet'|'null'|'3525027'|'Laceration'|
-'EMSDataSet'|'null'|'3523029'|'Normal'|
+'EMSDataSet'|'null'|'3525029'|'Normal'|
 'EMSDataSet'|'null'|'3525031'|'Not Done'|
 'EMSDataSet'|'null'|'3525033'|'Pain'|
 'EMSDataSet'|'null'|'3525035'|'Pain with Inspiration/Expiration'|
 'EMSDataSet'|'null'|'3525037'|'Puncture/Stab Wound'|
-'EMSDataSet'|'null'|'3523039'|'Retraction'|
+'EMSDataSet'|'null'|'3525039'|'Retraction'|
 'EMSDataSet'|'null'|'3525041'|'Tenderness'|
 'EMSDataSet'|'null'|'3525043'|'Gunshot Wound'|
 'EMSDataSet'|'null'|'3525045'|'Swelling'|
 'EMSDataSet'|'null'|'3525047'|'Contusion'|
-'EMSDataSet'|'null'|'3523049'|'Tenderness-General'|
+'EMSDataSet'|'null'|'3525049'|'Tenderness-General'|
 'null'|'null'|'null'|'null'|
 'null'|'null'|'null'|'null'|
 'EMSDataSet'|'null'|'3519001'|'Combative'|
@@ -2475,7 +2476,7 @@
 'EMSDataSet'|'null'|'4222009'|'Hospital-Hospice'|
 'EMSDataSet'|'null'|'4222011'|'Hospital-Hyperbaric Oxygen Treatment'|
 'EMSDataSet'|'null'|'4222013'|'Hospital-ICU'|
-'EMSDataSet'|'null'|'4222015'|'Hospital-Labor & Delivery'|
+'EMSDataSet'|'null'|'4222015'|'Hospital-Labor and Delivery'|
 'EMSDataSet'|'null'|'4222017'|'Hospital-Med/Surg'|
 'EMSDataSet'|'null'|'4222019'|'Hospital-Mental Health'|
 'EMSDataSet'|'null'|'4222021'|'Hospital-MICU'|
@@ -2528,6 +2529,7 @@
 'EMSDataSet'|'null'|'4224013'|'Yes-STEMI'|
 'EMSDataSet'|'null'|'4224015'|'Yes-Stroke'|
 'EMSDataSet'|'null'|'4224017'|'Yes-Trauma (General)'|
+'EMSDataSet'|'null'|'4224019'|'Yes-Sepsis'|
 'null'|'null'|'null'|'null'|
 'null'|'null'|'null'|'null'|
 'EMSDataSet'|'null'|'4226001'|'Contact 911 or see your Doctor if problem returns'|
@@ -2806,7 +2808,6 @@
 'DEMDataSet'|'null'|'8801027'|'Order Criteria Not Met'|
 'DEMDataSet'|'null'|'8801029'|'Approximate'|
 'DEMDataSet'|'null'|'8801031'|'Symptom Not Present'|
-'null'|'null'|'null'|'null'|
 'null'|'null'|'null'|'null'|
 'null'|'null'|'null'|'null'|
 'null'|'null'|'null'|'null'|
@@ -3613,6 +3614,7 @@
 'StateDataSet'|'null'|'9917027'|'Physician Assistant'|
 'StateDataSet'|'null'|'9917029'|'Licensed Practical Nurse (LPN)'|
 'StateDataSet'|'null'|'9917031'|'Registered Nurse'|
+'null'|'null'|'null'|'null'|
 'null'|'null'|'null'|'null'|
 'null'|'null'|'null'|'null'|
 'StateDataSet'|'null'|'9914001'|'Airway'|

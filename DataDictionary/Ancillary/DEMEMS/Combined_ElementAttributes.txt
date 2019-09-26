@@ -329,7 +329,7 @@
 'EMSDataSet'|'element'|'eDisposition.07'|'Destination ZIP Code'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.11'|'Number of Patients Transported in this EMS Unit'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.28'|'Patient Evaluation/Care'|'NV'|
-'EMSDataSet'|'element'|'eDisposition.29'|'Crew Incident Disposition'|'NV'|
+'EMSDataSet'|'element'|'eDisposition.29'|'Crew Disposition'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.30'|'Transport Disposition'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.13'|'How Patient Was Moved to Ambulance'|'CorrelationID'|
 'EMSDataSet'|'element'|'eDisposition.14'|'Position of Patient During Transport'|'CorrelationID'|
@@ -383,7 +383,6 @@
 'DEMDataSet'|'element'|'dCustomConfiguration.06'|'Custom Data Element Potential Values'|'nemsisCode'|
 'DEMDataSet'|'element'|'dCustomConfiguration.06'|'Custom Data Element Potential Values'|'customValueDescription'|
 'DEMDataSet'|'group'|'DemographicReport'|''|'timeStamp'|
-'DEMDataSet'|'group'|'DemographicReport'|''|'UUID'|
 'DEMDataSet'|'element'|'dAgency.03'|'EMS Agency Name'|'NV'|
 'DEMDataSet'|'group'|'dAgency.AgencyServiceGroup'|''|'UUID'|
 'DEMDataSet'|'group'|'dAgency.AgencyServiceGroup'|''|'CorrelationID'|
@@ -524,6 +523,7 @@
 'StateDataSet'|'element'|'sConfiguration.03'|'Procedures Permitted by the State'|'NV'|
 'StateDataSet'|'element'|'sConfiguration.04'|'EMS Certification Levels Permitted to Administer Each Medication'|'NV'|
 'StateDataSet'|'element'|'sConfiguration.05'|'Medications Permitted by the State'|'NV'|
+'StateDataSet'|'element'|'sConfiguration.05'|'Medications Permitted by the State'|'CodeType'|
 'StateDataSet'|'element'|'sConfiguration.06'|'Protocols Permitted by the State'|'NV'|
 'StateDataSet'|'element'|'sAgency.01'|'EMS Agency Unique State ID'|'NV'|
 'StateDataSet'|'element'|'sAgency.02'|'EMS Agency Number'|'NV'|

@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.5.0.190419_CR_190419
-Revision Date: April 19, 2019 (Candidate Release Draft)
+Version: 3.5.0.190930
+Revision Date: September 30, 2019
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -43,54 +43,55 @@ Schematron files via a user-friendly web-based interface.
 
           // Function to clean up value-of elements in overview page
           function cleanValueOf (element) {
-          var replacement = element.innerHTML;
-          // If it looks like a nemSch_key_elements lookup, try to isolate the name of the element(s) being looked up
-          if (replacement.match(/key\s*\(\s*['"]nemSch_key_elements['"].*\$nemSch_elements\s*\)/)) {
-          var match = replacement.match(/[sde][A-Z][A-Za-z]*\.\d\d/g);
-          // If we couldn't isolate any element names, go with an "(Element)" placeholder
-          replacement = match ? match.join(' | ') : '(Element)';
-          } else {
-          // Otherwise, look for and clean up "string-join" code if found
-          replacement = replacement.replace(/string-join\s*\((.*)\[.*],\s*['"]\s*,\s*['"]\)/, '$1');
-          }
-          element.innerHTML = replacement;
+            var replacement = element.innerHTML;
+            // If it looks like a nemSch_key_elements lookup, try to isolate the name of the element(s) being looked up
+            if (replacement.match(/key\s*\(\s*['"]nemSch_key_elements['"].*\$nemSch_elements\s*\)/)) {
+              var match = replacement.match(/[sde][A-Z][A-Za-z]*\.\d\d/g);
+              // If we couldn't isolate any element names, go with an "(Element)" placeholder
+              replacement = match ? match.join(' | ') : '(Element)';
+            } else {
+              // Otherwise, look for and clean up "string-join" code if found
+              replacement = replacement.replace(/string-join\s*\((.*)\[.*],\s*['"]\s*,\s*['"]\)/, '$1');
+            }
+            element.innerHTML = replacement;
           }
 
           // Helper function for linkNemsisElement
           function linkReplace ($1, useName) {
-          var elementName = window.nemSch_lookup_elements[$1];
-          return '&lt;a href="' + versionBase + '/DataDictionary/PDFHTML/DEMEMS/sections/elements/' + $1 + '.xml" target="_blank" title="' +
-          $1 + ' ' + elementName + '">' + (useName &amp;&amp; elementName ? elementName : $1) + '&lt;/a>';
-          }
+            var elementName = window.nemSch_lookup_elements[$1];
+            var path = (version.split('.')[1] &lt; 5) ? 'DEMEMS' : 'EMSDEMSTATE'; // DD path changed in v3.5.0
+            return '&lt;a href="' + versionBase + '/DataDictionary/PDFHTML/' + path + '/sections/elements/' + $1 + '.xml" target="_blank" title="' +
+              $1 + ' ' + elementName + '">' + (useName &amp;&amp; elementName ? elementName : $1) + '&lt;/a>';
+            }
 
           // Function to add links to NEMSIS elements
           // useName (true|*false): if true, replace element name/ID with NEMSIS name/label
           function linkNemsisElement(element, useName) {
-          var regEx = useName ? /\$?([sde][A-Z][a-zA-Z]+\.\d\d)/g : /([sde][A-Z][a-zA-Z]+\.\d\d)/g;
-          element.innerHTML = element.innerHTML.replace(regEx, function(match, $1) {return linkReplace($1, useName);});
+            var regEx = useName ? /\$?([sde][A-Z][a-zA-Z]+\.\d\d)/g : /([sde][A-Z][a-zA-Z]+\.\d\d)/g;
+            element.innerHTML = element.innerHTML.replace(regEx, function(match, $1) {return linkReplace($1, useName);});
           }
 
-          window.addEventListener('load', setTimeout(function() {
-          // Create a NEMSIS element/name lookup list
-          window.nemSch_lookup_elements = [];
-          var parser = new DOMParser();
-          var nemSch_lookup_elements_source = parser.parseFromString(document.getElementById('nemsisElements').textContent, "application/xml").getElementsByTagName('*');
-          for (var i = 0; i &lt; nemSch_lookup_elements_source.length; i++) {
-          if (nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName'))
-          window.nemSch_lookup_elements[nemSch_lookup_elements_source[i].localName] = nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName').value;
-          }
-          nemSch_lookup_elements_source = [];
+          window.addEventListener('load', function() {
+            // Create a NEMSIS element/name lookup list
+            window.nemSch_lookup_elements = [];
+            var parser = new DOMParser();
+            var nemSch_lookup_elements_source = parser.parseFromString(document.getElementById('nemsisElements').outerHTML, "application/xml").getElementsByTagName('*');
+            for (var i = 0; i &lt; nemSch_lookup_elements_source.length; i++) {
+              if (nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName'))
+                window.nemSch_lookup_elements[nemSch_lookup_elements_source[i].localName] = nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName').value;
+            }
+            nemSch_lookup_elements_source = [];
 
-          var targets = document.getElementsByClassName('value-of');
-          for (var i = 0; i &lt; targets.length; i++) cleanValueOf(targets[i]);
+            var targets = document.getElementsByClassName('value-of');
+            for (var i = 0; i &lt; targets.length; i++) cleanValueOf(targets[i]);
 
-          targets = document.getElementsByClassName('nameable');
-          for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], true);
+            targets = document.getElementsByClassName('nameable');
+            for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], true);
 
-          targets = document.getElementsByClassName('linkable');
-          for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], false);
+            targets = document.getElementsByClassName('linkable');
+            for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], false);
 
-          }, 0), false);
+            }, false);
         </script>
 
         <script id="nemsisElements" type="application/xml">
@@ -116,7 +117,7 @@ Schematron files via a user-friendly web-based interface.
 
           <a href="#">
             <h1>
-              NEMSIS Schematron Business Rules<br/>
+              NEMSIS Schematron Validation Rules<br/>
               Version: <xsl:value-of select="sch:schema/@schemaVersion"/>
             </h1>
           </a>
@@ -157,7 +158,7 @@ Schematron files via a user-friendly web-based interface.
           <div class="blueRect"></div>
           <div class="spacer20"></div>
           <div class="titleMain">NEMSIS</div>
-          <div class="titleSub">Schematron Business Rules</div>
+          <div class="titleSub">Schematron Validation Rules</div>
           <div class="spacer50"></div>
           <div class="nhtsa">
             <xsl:value-of select="sch:schema/@id"/>
@@ -323,7 +324,7 @@ Schematron files via a user-friendly web-based interface.
   <!-- Assert, Report -->
   <xsl:template match="sch:assert|sch:report" mode="overview">
     <tr>
-      <td>
+      <td class="id">
         <a>
           <xsl:attribute name="href">
             <xsl:text>#</xsl:text>
@@ -331,7 +332,8 @@ Schematron files via a user-friendly web-based interface.
               <xsl:call-template name="generate-id"/>
             </xsl:for-each>
           </xsl:attribute>
-          ⋯
+          <xsl:value-of select="@id"/>
+        <xsl:if test="not(@id)">…</xsl:if>
         </a>
       </td>
       <td>
@@ -349,19 +351,17 @@ Schematron files via a user-friendly web-based interface.
   <xsl:template match="nem:*" mode="overviewByElement">
     <xsl:param name="asserts"/>
     <xsl:variable name="elementAsserts" select="
-      $asserts[preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementMissing'][
+      $asserts[preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementsMissing'][
       contains(@value, local-name(current()))
       or ((contains(@value, '.,') or substring(normalize-space(@value), string-length(normalize-space(@value))) = '.')  and contains(../@context, local-name(current())))
       ] or contains(@subject, local-name(current()))] |
-      $asserts[not(preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementMissing'])][
+      $asserts[not(preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementsMissing'])][
       contains(@test, local-name(current()))
       or contains(@subject, local-name(current()))
       or contains(../@context, local-name(current()))]
       "/>
     <xsl:if test="$elementAsserts">
-      <h3>
-        <xsl:value-of select="local-name()"/> - <xsl:value-of select="@nemsisName"/>
-      </h3>
+      <h3><xsl:value-of select="local-name()"/> - <xsl:value-of select="@nemsisName"/></h3>
       <table class="overviewTable">
         <xsl:apply-templates select="$elementAsserts" mode="overview"/>
       </table>
@@ -1524,7 +1524,7 @@ Schematron files via a user-friendly web-based interface.
               <eDisposition.IncidentDispositionGroup nemsisName="Unit Disposition">
                 <eDisposition.27 nemsisName="Unit Disposition"/>
                 <eDisposition.28 nemsisName="Patient Evaluation/Care"/>
-                <eDisposition.29 nemsisName="Crew Incident Disposition"/>
+                <eDisposition.29 nemsisName="Crew Disposition"/>
                 <eDisposition.30 nemsisName="Transport Disposition"/>
                 <eDisposition.31 nemsisName="Reason for Refusal/Release"/>
               </eDisposition.IncidentDispositionGroup>

@@ -5,7 +5,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   queryBinding="xslt2"
   id="DEMDataSet|EMSDataSet (pick one)"
-  schemaVersion="3.#.#.###### (see Schematron Guide for recommended values)"
+  schemaVersion="3.#.#.######_###### (see Schematron Guide for recommended values)"
   see="URL to human-readable documentation for this document"
   >
 
@@ -56,5 +56,9 @@
     <sch:include href="includes/diagnostic_nemsisDiagnostic.xml"/>
 
   </sch:diagnostics>
+
+  <!-- PROPERTIES -->
+
+  <sch:properties/>
 
 </sch:schema>

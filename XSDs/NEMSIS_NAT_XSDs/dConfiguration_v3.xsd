@@ -8,183 +8,23 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="dConfiguration.01" type="ANSIStateCode" id="dConfiguration.StateAssociatedwiththeCertificationLicensureLevels">
+						<xs:element name="dConfiguration.01" type="ANSIStateCode" id="dConfiguration.StateAssociatedwiththisConfiguration">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dConfiguration.01</number>
-										<name>State Associated with the Certification/Licensure Levels</name>
+										<name>State Associated with this Configuration</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The state associated with the state certification/licensure levels.</definition>
+										<definition>The state associated with this configuration.</definition>
 										<usage>Mandatory</usage>
-										<comment>Associated with the state (dAgency.01 - EMS Agency State). 
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+										<comment>Associated with the state (dAgency.04 - EMS Agency State). 
+											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-						</xs:element>
-						<xs:element name="dConfiguration.02" id="dConfiguration.StateCertificationLicensureLevels" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dConfiguration.02</number>
-										<name>State Certification/Licensure Levels</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>All of the potential levels of certification/licensure for EMS personnel recognized by the state.</definition>
-										<v2Number>D04_01</v2Number>
-										<usage>Mandatory</usage>
-										<comment>The new 2009 Education Levels have been added. The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
-										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
-										</comment>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="LicensureLevels">
-										
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="dConfiguration.03" nillable="true" id="dConfiguration.ProceduresPermittedbytheState" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dConfiguration.03</number>
-										<name>Procedures Permitted by the State</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>A list of all of the procedures permitted by the EMS Agency's licensing state.</definition>
-										<usage>Required</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-											<performanceMeasure>Cardiac Arrest</performanceMeasure>
-											<performanceMeasure>Pediatric</performanceMeasure>
-											<performanceMeasure>Response</performanceMeasure>
-											<performanceMeasure>STEMI</performanceMeasure>
-											<performanceMeasure>Stroke</performanceMeasure>
-											<performanceMeasure>Trauma</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment>This data element should capture all of the procedures permitted by the state for any/all levels of EMS personnel in the state. This is associated with the EMS Agency State (dAgency.01). This is related to the EMS Agency's procedures (dConfiguration.07) which have been implemented within the EMS System.
-										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify SNOMEDCT procedure codes based on medical direction and their own need.										
-										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html							
-										&lt;br/>&lt;br/>SNOMEDCT
-										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
-										&lt;br/>Product: Product - UMLS Metathesaurus
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
-										</comment>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="snomed">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-											</xs:simpleType>
-										</xs:attribute>
-										
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="dConfiguration.04" nillable="true" id="dConfiguration.MedicationsPermittedbytheState" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dConfiguration.04</number>
-										<name>Medications Permitted by the State</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>A list of all of the medications permitted by the state to be used by each EMS state certification/licensure level.</definition>
-										<usage>Required</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-											<performanceMeasure>Cardiac Arrest</performanceMeasure>
-											<performanceMeasure>Pediatric</performanceMeasure>
-											<performanceMeasure>Response</performanceMeasure>
-											<performanceMeasure>STEMI</performanceMeasure>
-											<performanceMeasure>Stroke</performanceMeasure>
-											<performanceMeasure>Trauma</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment>This data element should capture all of the medications permitted by the state for any/all levels of EMS personnel in the state.
-										This should be stored as an RxNorm (RXCUI) Code. This is associated with the EMS Agency State (dAgency.01).
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. 
-										The state EMS system does not need to import this information into their database. It is the responsibility of the state to submit this element to the national EMS database (NEMSIS). 
-										Reference the Demographic Dataset Submission Guide for further details.										
-										</comment>
-										<v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
-										&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. 
-										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html											
-										&lt;br/>&lt;br/>RxNorm
-										&lt;br/>Website - http://uts.nlm.nih.gov
-										
-										&lt;br/>&lt;br/>Product - UMLS Metathesaurus
-										&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
-										&lt;br/>Product - RxNorm Full Monthly Release
-										</v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="Medication">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-											</xs:simpleType>
-										</xs:attribute>
-										
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="dConfiguration.05" nillable="true" id="dConfiguration.ProtocolsPermittedbytheState" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dConfiguration.05</number>
-										<name>Protocols Permitted by the State</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>A list of all of the protocols permitted by the state.</definition>
-										<usage>Required</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-											<performanceMeasure>Cardiac Arrest</performanceMeasure>
-											<performanceMeasure>Pediatric</performanceMeasure>
-											<performanceMeasure>Response</performanceMeasure>
-											<performanceMeasure>STEMI</performanceMeasure>
-											<performanceMeasure>Stroke</performanceMeasure>
-											<performanceMeasure>Trauma</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment>
-										This data element should capture all of the protocols permitted by the state for any/all levels of EMS personnel in the state.  This is associated with the EMS Agency State (dAgency.01).
-										&lt;br/>&lt;br/>States can add additional protocols to the list but the additional state protocols must map to these uniform codes. &lt;br/>&lt;br/>The list is defined by the NASEMSO State Medical Directors.
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
-										</comment>
-										<v3Changes>Added to better identify states with statewide protocols and define state EMS capability and care.</v3Changes>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="ProtocolsUsed">
-										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-											</xs:simpleType>
-										</xs:attribute>
-										
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
 						</xs:element>
 						<xs:element name="dConfiguration.ProcedureGroup" id="dConfiguration.AgencyProcedureGroup" maxOccurs="unbounded">
 							<xs:annotation>
@@ -249,10 +89,10 @@
 
 &lt;br/>&lt;br/>EMS Agencies may identify additional SNOMEDCT procedure codes based on medical direction and their own need. If an agency resides in a state with statewide approved procedures, they should be listed/implemented here. 
 
-&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a>
 
 &lt;br/>&lt;br/>SNOMEDCT 
-&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html 
+&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html" target="_blank">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a> 
 &lt;br/>Product: Product - UMLS Metathesaurus 
 													</comment>
 												</nemsisTacDoc>
@@ -268,6 +108,7 @@
 									</xs:element>
 								</xs:sequence>
 								
+								<xs:attribute name="UUID" type="UUID" use="required"></xs:attribute>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="dConfiguration.MedicationGroup" id="dConfiguration.AgencyMedicationGroup" maxOccurs="unbounded">
@@ -323,22 +164,37 @@
 														<performanceMeasure>Stroke</performanceMeasure>
 														<performanceMeasure>Trauma</performanceMeasure>
 													</performanceMeasuresGroup>
-													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
+													<comment>This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
 
-&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
-
+&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood products. 
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>
 &lt;br/>&lt;br/>RxNorm 
-&lt;br/>Website - http://uts.nlm.nih.gov 
+&lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
+&lt;br/>Product - RxNorm Full Monthly Release
+&lt;br/>&lt;br/>SNOMED-CT 
+&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a>
+&lt;br/>Product: Product - UMLS Metathesaurus.
 
-&lt;br/>&lt;br/>Product - UMLS Metathesaurus 
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
-&lt;br/>Product - RxNorm Full Monthly Release</comment>
+&lt;br/>&lt;br/>Allowable SNOMED-CT codes are:
+&lt;br/>116762002 Administration of blood product
+&lt;br/>116795008 Transfusion of cryoprecipitate
+&lt;br/>116861002 Transfusion of fresh frozen plasma
+&lt;br/>116865006 Administration of albumin
+&lt;br/>180208003 Intravenous blood transfusion of platelets
+&lt;br/>33389009 Transfusion of whole blood
+&lt;br/>71493000 Transfusion of packed red blood cells
+													</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
 										<xs:complexType>
 											<xs:simpleContent>
 												<xs:extension base="Medication">
+													<xs:attribute name="CodeType" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="CodeType.RxNorm CodeType.SNOMED"></xs:union>
+														</xs:simpleType>
+													</xs:attribute>
 													
 												</xs:extension>
 											</xs:simpleContent>
@@ -346,6 +202,7 @@
 									</xs:element>
 								</xs:sequence>
 								
+								<xs:attribute name="UUID" type="UUID" use="required"></xs:attribute>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="dConfiguration.10" id="dConfiguration.EMSAgencyProtocols" maxOccurs="unbounded">
@@ -382,27 +239,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="dConfiguration.11" id="dConfiguration.EMSAgencySpecialtyServiceCapability" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dConfiguration.11</number>
-										<name>EMS Agency Specialty Service Capability</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>Special training or services provided by the EMS Agency and available to the EMS service area/community.</definition>
-										<usage>Mandatory</usage>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="AgencySpecialtyServiceCapability">
-										
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
+						
 						
 						<xs:element name="dConfiguration.13" id="dConfiguration.EmergencyMedicalDispatchEMDProvidedtoEMSAgencyServiceArea">
 							<xs:annotation>
@@ -434,37 +271,7 @@
 							</xs:complexType>
 						</xs:element>
 						
-						<xs:element name="dConfiguration.15" id="dConfiguration.PatientMonitoringCapabilityies" maxOccurs="unbounded">
-							<xs:annotation>
-								<xs:documentation>
-									<nemsisTacDoc>
-										<number>dConfiguration.15</number>
-										<name>Patient Monitoring Capability(ies)</name>
-										<national>Yes</national>
-										<state>Yes</state>
-										<definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
-										<usage>Mandatory</usage>
-										<performanceMeasuresGroup>
-											<performanceMeasure>Airway</performanceMeasure>
-											<performanceMeasure>Cardiac Arrest</performanceMeasure>
-											<performanceMeasure>Pediatric</performanceMeasure>
-											<performanceMeasure>Response</performanceMeasure>
-											<performanceMeasure>STEMI</performanceMeasure>
-											<performanceMeasure>Stroke</performanceMeasure>
-											<performanceMeasure>Trauma</performanceMeasure>
-										</performanceMeasuresGroup>
-										<comment>Added to identify the patient monitoring capability of the EMS Agency. Associated with each EMS Agency Number (dAgency.02) since each EMS Agency Number may have a different capability within each EMS Agency. Other patient monitoring capability may exist but NEMSIS Version 3 only includes these specific capabilities.</comment>
-									</nemsisTacDoc>
-								</xs:documentation>
-							</xs:annotation>
-							<xs:complexType>
-								<xs:simpleContent>
-									<xs:extension base="PatientMonitoringCapability">
-										
-									</xs:extension>
-								</xs:simpleContent>
-							</xs:complexType>
-						</xs:element>
+						
 						<xs:element name="dConfiguration.16" id="dConfiguration.AgencyCallSign" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
@@ -491,6 +298,7 @@
 						
 					</xs:sequence>
 					
+					<xs:attribute name="UUID" type="UUID" use="required"></xs:attribute>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>

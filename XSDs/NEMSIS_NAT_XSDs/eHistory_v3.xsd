@@ -10,7 +10,7 @@
 							<name>Barriers to Patient Care</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
+							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene.</definition>
 							<v2Number>E12_01</v2Number>
 							<usage>Required</usage>
 							<comment></comment>
@@ -62,7 +62,7 @@
 						<xs:extension base="AlcoholDrugUseIndicators">
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.NoneReported PN.Refused PN.UnableToComplete"></xs:union>
+									<xs:union memberTypes="PN.NoneReported PN.UnableToComplete"></xs:union>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="NV" use="optional">
@@ -146,9 +146,9 @@
 					<xs:documentation>Positive Level known from Law Enforcement or Hospital Record</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3117011">
+			<xs:enumeration value="3117013">
 				<xs:annotation>
-					<xs:documentation>Smell of Alcohol on Breath</xs:documentation>
+					<xs:documentation>Physical Exam Indicates Suspected Alcohol or Drug Use</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -236,6 +236,16 @@
 			<xs:enumeration value="3101031">
 				<xs:annotation>
 					<xs:documentation>State of Emotional Distress</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3101033">
+				<xs:annotation>
+					<xs:documentation>Alcohol Use, Suspected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3101035">
+				<xs:annotation>
+					<xs:documentation>Drug Use, Suspected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -390,6 +400,88 @@
 			<xs:totalDigits value="9"></xs:totalDigits>
 			<xs:fractionDigits value="3"></xs:fractionDigits>
 		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CurrentMedicationFrequency">
+		<xs:annotation>
+			<xs:documentation>The frequency of the patient's current medication</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3120001">
+				<xs:annotation>
+					<xs:documentation>qi (every hour)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120003">
+				<xs:annotation>
+					<xs:documentation>q2h (every 2 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120005">
+				<xs:annotation>
+					<xs:documentation>q3h (every 3 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120007">
+				<xs:annotation>
+					<xs:documentation>q4h (every 4 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120009">
+				<xs:annotation>
+					<xs:documentation>qid (four times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120011">
+				<xs:annotation>
+					<xs:documentation>tad (three times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120013">
+				<xs:annotation>
+					<xs:documentation>ac (before meals)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120015">
+				<xs:annotation>
+					<xs:documentation>pc (after meals)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120017">
+				<xs:annotation>
+					<xs:documentation>bid (twice a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120019">
+				<xs:annotation>
+					<xs:documentation>qd (every day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120021">
+				<xs:annotation>
+					<xs:documentation>qd-am (every day in the morning)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120023">
+				<xs:annotation>
+					<xs:documentation>qd-pm (every day in the evening)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120025">
+				<xs:annotation>
+					<xs:documentation>has (at bedtime)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120027">
+				<xs:annotation>
+					<xs:documentation>sod (every other day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120029">
+				<xs:annotation>
+					<xs:documentation>prn (as needed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicationAllergies">
 		<xs:annotation>

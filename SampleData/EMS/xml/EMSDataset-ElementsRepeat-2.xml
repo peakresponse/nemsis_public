@@ -1,11 +1,11 @@
 
-<EMSDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/release-3.4.0/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd" xmlns="http://www.nemsis.org">
+<EMSDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/release-3.5.0/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd" xmlns="http://www.nemsis.org">
     <Header>
         <DemographicGroup>
             <dAgency.01>1</dAgency.01>
             <dAgency.02>11</dAgency.02>
             <dAgency.04>49</dAgency.04></DemographicGroup>
-        <PatientCareReport>
+        <PatientCareReport UUID="48329829-33c5-402b-96c2-f67205304b25">
             <eRecord>
                 <eRecord.01>JXj</eRecord.01>
                 <eRecord.SoftwareApplicationGroup>
@@ -36,7 +36,6 @@
                 <eResponse.12>2212031</eResponse.12>
                 <eResponse.13>k</eResponse.13>
                 <eResponse.14>o</eResponse.14>
-                <eResponse.15>2215023</eResponse.15>
                 <eResponse.16>Kw</eResponse.16>
                 <eResponse.17>9.2,32.840462</eResponse.17>
                 <eResponse.18>19RCR73403154</eResponse.18>
@@ -82,7 +81,8 @@
                 <eTimes.13>2015-03-03T13:10:39+07:00</eTimes.13>
                 <eTimes.14>2015-03-03T13:10:39+07:00</eTimes.14>
                 <eTimes.15>2015-03-03T13:10:39+07:00</eTimes.15>
-                <eTimes.16>2015-03-03T13:10:39+07:00</eTimes.16></eTimes>
+                <eTimes.16>2015-03-03T13:10:39+07:00</eTimes.16>
+                <eTimes.17>2015-03-03T13:10:39+07:00</eTimes.17></eTimes>
             <ePatient>
                 <ePatient.01>5o</ePatient.01>
                 <ePatient.PatientNameGroup>
@@ -110,7 +110,8 @@
                 <ePatient.19 EmailAddressType="9904003">Io7H7csX@U1gz.com</ePatient.19>
                 <ePatient.19 EmailAddressType="9904003">JALNsZ3e@gBaL.com</ePatient.19>
                 <ePatient.20>49</ePatient.20>
-                <ePatient.21>x</ePatient.21></ePatient>
+                <ePatient.21>x</ePatient.21>
+                <ePatient.22>2522001</ePatient.22></ePatient>
             <ePayment>
                 <ePayment.01>2601023</ePayment.01>
                 <ePayment.CertificateGroup>
@@ -138,7 +139,9 @@
                     <ePayment.20>Crystal</ePayment.20>
                     <ePayment.21>Allman</ePayment.21>
                     <ePayment.22>2622019</ePayment.22>
-                    <ePayment.58>l2</ePayment.58></ePayment.InsuranceGroup>
+                    <ePayment.58>l2</ePayment.58>
+                    <ePayment.59>234-867-5309</ePayment.59>
+                    <ePayment.60>1965-12-30</ePayment.60></ePayment.InsuranceGroup>
                 <ePayment.InsuranceGroup>
                     <ePayment.09>7t</ePayment.09>
                     <ePayment.10>m3</ePayment.10>
@@ -154,7 +157,9 @@
                     <ePayment.20>Donald</ePayment.20>
                     <ePayment.21>Anders</ePayment.21>
                     <ePayment.22>2622019</ePayment.22>
-                    <ePayment.58>3Q</ePayment.58></ePayment.InsuranceGroup>
+                    <ePayment.58>3Q</ePayment.58>
+                    <ePayment.59>234-867-5309</ePayment.59>
+                    <ePayment.60>1957-10-05</ePayment.60></ePayment.InsuranceGroup>
                 <ePayment.ClosestRelativeGroup>
                     <ePayment.23>Barrett</ePayment.23>
                     <ePayment.24>Lorena</ePayment.24>
@@ -214,7 +219,8 @@
                 <eScene.ResponderGroup>
                     <eScene.02>D5</eScene.02>
                     <eScene.03>8</eScene.03>
-                    <eScene.04>2704019</eScene.04></eScene.ResponderGroup>
+                    <eScene.04>2704019</eScene.04>
+                    <eScene.24>9923001</eScene.24></eScene.ResponderGroup>
                 <eScene.ResponderGroup>
                     <eScene.02>2O</eScene.02>
                     <eScene.03>e</eScene.03>
@@ -268,7 +274,9 @@
                 <eSituation.17>Y93.13</eSituation.17>
                 <eSituation.17>Y93.23</eSituation.17>
                 <eSituation.17>Y93.24</eSituation.17>
-                <eSituation.18>2015-03-03T13:10:39+07:00</eSituation.18></eSituation>
+                <eSituation.18>2015-03-03T13:10:39+07:00</eSituation.18>
+                <eSituation.19>Justification</eSituation.19>
+                <eSituation.20>2820001</eSituation.20></eSituation>
             <eInjury>
                 <eInjury.01>T59.0X</eInjury.01>
                 <eInjury.01>T59.1</eInjury.01>
@@ -330,16 +338,10 @@
                 <eArrest.04>3004007</eArrest.04>
                 <eArrest.04>3004005</eArrest.04>
                 <eArrest.04>3004003</eArrest.04>
-                <eArrest.05>9923003</eArrest.05>
-                <eArrest.06>3006009</eArrest.06>
-                <eArrest.06>3006007</eArrest.06>
-                <eArrest.06>3006005</eArrest.06>
                 <eArrest.07>3007005</eArrest.07>
-                <eArrest.08>3008009</eArrest.08>
-                <eArrest.08>3008007</eArrest.08>
-                <eArrest.08>3008005</eArrest.08>
                 <eArrest.09>3009019</eArrest.09>
                 <eArrest.09>3009017</eArrest.09>
+                <eArrest.10>9923001</eArrest.10>
                 <eArrest.11>3011013</eArrest.11>
                 <eArrest.12>3012007</eArrest.12>
                 <eArrest.12>3012005</eArrest.12>
@@ -350,7 +352,10 @@
                 <eArrest.17>9901071</eArrest.17>
                 <eArrest.17>9901069</eArrest.17>
                 <eArrest.18>3018011</eArrest.18>
-                <eArrest.19>2015-03-03T13:10:39+07:00</eArrest.19></eArrest>
+                <eArrest.19>2015-03-03T13:10:39+07:00</eArrest.19>
+                <eArrest.20>3020009</eArrest.20>
+                <eArrest.21>3021001</eArrest.21>
+                <eArrest.22>3022011</eArrest.22></eArrest>
             <eHistory>
                 <eHistory.01>3101031</eHistory.01>
                 <eHistory.01>3101029</eHistory.01>
@@ -393,14 +398,16 @@
                     <eHistory.12>1191</eHistory.12>
                     <eHistory.13>629.0</eHistory.13>
                     <eHistory.14>3114053</eHistory.14>
-                    <eHistory.15>9927061</eHistory.15></eHistory.CurrentMedsGroup>
+                    <eHistory.15>9927061</eHistory.15>
+                    <eHistory.20>3120001</eHistory.20></eHistory.CurrentMedsGroup>
                 <eHistory.CurrentMedsGroup>
                     <eHistory.12>1223</eHistory.12>
                     <eHistory.13>553.0</eHistory.13>
                     <eHistory.14>3114053</eHistory.14>
-                    <eHistory.15>9927061</eHistory.15></eHistory.CurrentMedsGroup>
+                    <eHistory.15>9927061</eHistory.15>
+                    <eHistory.20>3120003</eHistory.20></eHistory.CurrentMedsGroup>
                 <eHistory.16>9923003</eHistory.16>
-                <eHistory.17>3117011</eHistory.17>
+                <eHistory.17>3117013</eHistory.17>
                 <eHistory.17>3117009</eHistory.17>
                 <eHistory.17>3117007</eHistory.17>
                 <eHistory.18>3118011</eHistory.18>
@@ -641,9 +648,6 @@
                     <eExam.06>3506051</eExam.06>
                     <eExam.07>3507059</eExam.07>
                     <eExam.07>3507057</eExam.07>
-                    <eExam.08>3508103</eExam.08>
-                    <eExam.08>3508101</eExam.08>
-                    <eExam.08>3508099</eExam.08>
                     <eExam.09>3509021</eExam.09>
                     <eExam.09>3509019</eExam.09>
                     <eExam.09>3509017</eExam.09>
@@ -694,6 +698,22 @@
                         <eExam.17>3517005</eExam.17>
                         <eExam.18>3518059</eExam.18>
                         <eExam.18>3518057</eExam.18></eExam.EyeGroup>
+                    <eExam.LungGroup>
+                        <eExam.22>3522001</eExam.22>
+                        <eExam.23>3523011</eExam.23>
+                    </eExam.LungGroup>
+                    <eExam.LungGroup>
+                        <eExam.22>3522005</eExam.22>
+                        <eExam.23>3523015</eExam.23>
+                    </eExam.LungGroup>
+                    <eExam.ChestGroup>
+                        <eExam.24>3524011</eExam.24>
+                        <eExam.25>3525005</eExam.25>
+                    </eExam.ChestGroup>
+                    <eExam.ChestGroup>
+                        <eExam.24>3524011</eExam.24>
+                        <eExam.25>3525009</eExam.25>
+                    </eExam.ChestGroup>
                     <eExam.19>3519027</eExam.19>
                     <eExam.19>3519025</eExam.19>
                     <eExam.19>3519023</eExam.19>
@@ -714,8 +734,6 @@
                     <eExam.07>3507059</eExam.07>
                     <eExam.07>3507057</eExam.07>
                     <eExam.07>3507055</eExam.07>
-                    <eExam.08>3508103</eExam.08>
-                    <eExam.08>3508101</eExam.08>
                     <eExam.09>3509021</eExam.09>
                     <eExam.09>3509019</eExam.09>
                     <eExam.09>3509017</eExam.09>
@@ -773,6 +791,26 @@
                         <eExam.17>3517005</eExam.17>
                         <eExam.18>3518059</eExam.18>
                         <eExam.18>3518057</eExam.18></eExam.EyeGroup>
+                    <eExam.LungGroup>
+                        <eExam.22>3522001</eExam.22>
+                        <eExam.23>3523011</eExam.23>
+                    </eExam.LungGroup>
+                    <eExam.LungGroup>
+                        <eExam.22>3522005</eExam.22>
+                        <eExam.23>3523007</eExam.23>
+                    </eExam.LungGroup>
+                    <eExam.LungGroup>
+                        <eExam.22>3522001</eExam.22>
+                        <eExam.23>3523011</eExam.23>
+                    </eExam.LungGroup>
+                    <eExam.ChestGroup>
+                        <eExam.24>3524009</eExam.24>
+                        <eExam.25>3525001</eExam.25>
+                    </eExam.ChestGroup>
+                    <eExam.ChestGroup>
+                        <eExam.24>3524011</eExam.24>
+                        <eExam.25>3525009</eExam.25>
+                    </eExam.ChestGroup>
                     <eExam.19>3519027</eExam.19>
                     <eExam.19>3519025</eExam.19>
                     <eExam.20>3520053</eExam.20>
@@ -792,7 +830,7 @@
                 <eMedications.MedicationGroup>
                     <eMedications.01>2015-03-03T13:10:39+07:00</eMedications.01>
                     <eMedications.02>9923003</eMedications.02>
-                    <eMedications.03>1191</eMedications.03>
+                    <eMedications.03 CodeType="9924003">1191</eMedications.03>
                     <eMedications.04>9927061</eMedications.04>
                     <eMedications.DosageGroup>
                         <eMedications.05>53.0</eMedications.05>
@@ -808,7 +846,7 @@
                 <eMedications.MedicationGroup>
                     <eMedications.01>2015-03-03T13:10:39+07:00</eMedications.01>
                     <eMedications.02>9923003</eMedications.02>
-                    <eMedications.03>1223</eMedications.03>
+                    <eMedications.03 CodeType="9924003">1223</eMedications.03>
                     <eMedications.04>9927061</eMedications.04>
                     <eMedications.DosageGroup>
                         <eMedications.05>757.0</eMedications.05>
@@ -931,7 +969,13 @@
                     <eDisposition.09>37.242480,-113.200860</eDisposition.09>
                     <eDisposition.10>12SLL84375222</eDisposition.10></eDisposition.DestinationGroup>
                 <eDisposition.11>95</eDisposition.11>
-                <eDisposition.12>4212043</eDisposition.12>
+                <eDisposition.IncidentDispositionGroup>
+                    <eDisposition.27>4227011</eDisposition.27>
+                    <eDisposition.28>4228009</eDisposition.28>
+                    <eDisposition.29>4229013</eDisposition.29>
+                    <eDisposition.30>4230013</eDisposition.30>
+                    <eDisposition.31>4231015</eDisposition.31>
+                </eDisposition.IncidentDispositionGroup>
                 <eDisposition.13>9909015</eDisposition.13>
                 <eDisposition.13>9909013</eDisposition.13>
                 <eDisposition.13>9909011</eDisposition.13>
@@ -957,7 +1001,8 @@
                     <eDisposition.24>4224017</eDisposition.24>
                     <eDisposition.25>2015-03-03T13:10:39+07:00</eDisposition.25></eDisposition.HospitalTeamActivationGroup>
                 <eDisposition.26>4226015</eDisposition.26>
-                <eDisposition.26>4226013</eDisposition.26></eDisposition>
+                <eDisposition.26>4226013</eDisposition.26>
+                <eDisposition.32>4232003</eDisposition.32></eDisposition>
             <eOutcome>
                 <eOutcome.01>70</eOutcome.01>
                 <eOutcome.02>70</eOutcome.02>
@@ -973,25 +1018,32 @@
                     <eOutcome.03>4303025</eOutcome.03>
                     <eOutcome.04>qi</eOutcome.04>
                     <eOutcome.05>ni</eOutcome.05></eOutcome.ExternalDataGroup>
-                <eOutcome.06>ag</eOutcome.06>
-                <eOutcome.07>283</eOutcome.07>
-                <eOutcome.08>T59.0X</eOutcome.08>
-                <eOutcome.08>T59.1</eOutcome.08>
-                <eOutcome.09>BW3FZZZ</eOutcome.09>
-                <eOutcome.09>BR3CZZZ</eOutcome.09>
-                <eOutcome.09>BR3CZZZ</eOutcome.09>
+                <eOutcome.EmergencyDepartmentProceduresGroup>
+                    <eOutcome.09>BW3FZZZ</eOutcome.09>
+                    <eOutcome.19>2015-03-03T13:10:39+07:00</eOutcome.19>
+                </eOutcome.EmergencyDepartmentProceduresGroup>
+                <eOutcome.EmergencyDepartmentProceduresGroup>
+                    <eOutcome.09>BR3CZZZ</eOutcome.09>
+                    <eOutcome.19>2015-03-03T13:10:39+07:00</eOutcome.19>
+                </eOutcome.EmergencyDepartmentProceduresGroup>
+                <eOutcome.EmergencyDepartmentProceduresGroup>
+                    <eOutcome.09>BR3CZZZ</eOutcome.09>
+                    <eOutcome.19>2015-03-03T13:10:39+07:00</eOutcome.19>
+                </eOutcome.EmergencyDepartmentProceduresGroup>
                 <eOutcome.10>H57.01</eOutcome.10>
                 <eOutcome.10>H55.04</eOutcome.10>
                 <eOutcome.10>H57.8</eOutcome.10>
                 <eOutcome.11>2015-03-03T13:10:39+07:00</eOutcome.11>
-                <eOutcome.12>GZ3ZZZZ</eOutcome.12>
-                <eOutcome.12>BW3FZZZ</eOutcome.12>
+                <eOutcome.HospitalProceduresGroup>
+                    <eOutcome.12>GZ3ZZZZ</eOutcome.12>
+                    <eOutcome.20>2015-03-03T13:10:39+07:00</eOutcome.20>
+                </eOutcome.HospitalProceduresGroup>
+                <eOutcome.HospitalProceduresGroup>
+                    <eOutcome.12>BW3FZZZ</eOutcome.12>
+                    <eOutcome.20>2015-03-03T13:10:39+07:00</eOutcome.20>
+                </eOutcome.HospitalProceduresGroup>
                 <eOutcome.13>H57.01</eOutcome.13>
-                <eOutcome.13>H55.04</eOutcome.13>
-                <eOutcome.14>31</eOutcome.14>
-                <eOutcome.15>287</eOutcome.15>
-                <eOutcome.16>2015-03-03T13:10:39+07:00</eOutcome.16>
-                <eOutcome.17>4317013</eOutcome.17></eOutcome>
+                <eOutcome.13>H55.04</eOutcome.13></eOutcome>
             <eOther>
                 <eOther.01>9923003</eOther.01>
                 <eOther.02>4502019</eOther.02>
@@ -1017,11 +1069,13 @@
                 <eOther.FileGroup>
                     <eOther.09>4509025</eOther.09>
                     <eOther.10>x</eOther.10>
-                    <eOther.11>NnpSWkdrSGNsVTZpU1FuNVZadUszTWlmZXlYaFd4MkQxeGR6SEgzSWRoNXh1dHJhY1Q=</eOther.11></eOther.FileGroup>
+                    <eOther.11>NnpSWkdrSGNsVTZpU1FuNVZadUszTWlmZXlYaFd4MkQxeGR6SEgzSWRoNXh1dHJhY1Q=</eOther.11>
+                    <eOther.22>File</eOther.22></eOther.FileGroup>
                 <eOther.FileGroup>
                     <eOther.09>4509025</eOther.09>
                     <eOther.10>Y</eOther.10>
-                    <eOther.11>U1JKVHd3SjdmRE5qVXloMHFkR2dFWEJCM2dJMjA1OWxmRVBmc2llWDA5bHlKdDBZMW0=</eOther.11></eOther.FileGroup>
+                    <eOther.11>U1JKVHd3SjdmRE5qVXloMHFkR2dFWEJCM2dJMjA1OWxmRVBmc2llWDA5bHlKdDBZMW0=</eOther.11>
+                    <eOther.22>File</eOther.22></eOther.FileGroup>
                 <eOther.FileGroup>
                     <eOther.09>4509025</eOther.09>
                     <eOther.10>6</eOther.10>

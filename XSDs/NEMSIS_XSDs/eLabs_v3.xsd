@@ -17,7 +17,7 @@
 										<name>Date/Time of Laboratory or Imaging Result</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The data and time for the specific laboratory result</definition>
+										<definition>The data and time for the specific laboratory result.</definition>
 										<usage>Optional</usage>
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
@@ -503,6 +503,126 @@
 			<xs:enumeration value="3403113">
 				<xs:annotation>
 					<xs:documentation>Tylenol</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403115">
+				<xs:annotation>
+					<xs:documentation>ACT Celite (ACTc)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403117">
+				<xs:annotation>
+					<xs:documentation>ACT Kaolin (ACTk)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403119">
+				<xs:annotation>
+					<xs:documentation>Bands</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403121">
+				<xs:annotation>
+					<xs:documentation>Basophils</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403123">
+				<xs:annotation>
+					<xs:documentation>Creatine Phosphokinase (CK)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403125">
+				<xs:annotation>
+					<xs:documentation>Eosinophils</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403127">
+				<xs:annotation>
+					<xs:documentation>Erythrocyte Count</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403129">
+				<xs:annotation>
+					<xs:documentation>Erythrocyte Morphology</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403131">
+				<xs:annotation>
+					<xs:documentation>Erythrocyte Sedimentation Rate</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403133">
+				<xs:annotation>
+					<xs:documentation>High-Sensitivity C-reactive Protein (hs-CRP)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403135">
+				<xs:annotation>
+					<xs:documentation>Lymphocytes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403137">
+				<xs:annotation>
+					<xs:documentation>Mean Corpuscular Hemoglobin (MCH)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403139">
+				<xs:annotation>
+					<xs:documentation>Mean Corpuscular Hemoglobin Concentration (MCHC)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403141">
+				<xs:annotation>
+					<xs:documentation>Mean Corpuscular Volume (MCV)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403143">
+				<xs:annotation>
+					<xs:documentation>Monocytes</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403145">
+				<xs:annotation>
+					<xs:documentation>Myoglobin</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403147">
+				<xs:annotation>
+					<xs:documentation>Neutrophils</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403149">
+				<xs:annotation>
+					<xs:documentation>Oxygen Saturation (SaO2)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403151">
+				<xs:annotation>
+					<xs:documentation>Oxygen Volume/Content (SVO2)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403153">
+				<xs:annotation>
+					<xs:documentation>Phosphorus (PO4)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403155">
+				<xs:annotation>
+					<xs:documentation>Prothromblin test time (PT/INR)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403157">
+				<xs:annotation>
+					<xs:documentation>Red Cell Distribution Width (RDW)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403159">
+				<xs:annotation>
+					<xs:documentation>Reticulocyte Count</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3403161">
+				<xs:annotation>
+					<xs:documentation>Troporin T (cTnT)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

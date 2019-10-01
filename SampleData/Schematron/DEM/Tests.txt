@@ -5,67 +5,97 @@ ID:               DEMDataSet--Base
 Description:      This test case should pass validation while firing as many rules as possible.
 Expected Result:  [PASS]
       
-File:             DEMDataSet-14CD.xml
-ID:               nemSch_consistency_dAgency.13_dAgency.26_nonfire_A
-Description:      When Organizational Type is not "Fire Department", Fire Department ID Number should not be recorded.
-Expected Result:  [WARNING]
-
-File:             DEMDataSet-1F56.xml
-ID:               nemSch_uniqueness_DEMDataSet_dConfiguration.11_none_A
-Description:      When EMS Agency Specialty Service Capability is "None", no other values should be recorded.
-Expected Result:  [WARNING]
-
-File:             DEMDataSet-2DEF.xml
-ID:               nemSch_nilNvPn_nil_Nv_A
-Description:      When (Element) is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+File:             DEMDataSet-nemSch_d001_A.xml
+ID:               nemSch_d001_A
+Description:      When EMS Agency Name is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element), or it should be omitted (if the element is optional).
 Expected Result:  [ERROR]
 
-File:             DEMDataSet-31A7.xml
-ID:               nemSch_consistency_dAgency.ServiceGroup_dAgency.06_dAgency.05_A
+File:             DEMDataSet-nemSch_d002_A.xml
+ID:               nemSch_d002_A
+Description:      When Total Primary Service Area Size has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-nemSch_d003_A.xml
+ID:               nemSch_d003_A
+Description:      When National Provider Identifier has a Not Value, no other value should be recorded.
+Expected Result:  [WARNING]
+
+File:             DEMDataSet-nemSch_d004_A.xml
+ID:               nemSch_d004_A
+Description:      The timestamp of the DemographicReport should not be in the future (the current time according to this system is (current dateTime)). * This test should generate an error until January 1, 2050.
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-nemSch_d005_A.xml
+ID:               nemSch_d005_A
+Description:      UUID must be universally unique. * This test is expected to fail twice (once for each instance of the duplicate UUID attribute).
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-nemSch_d006_A.xml
+ID:               nemSch_d006_A
 Description:      EMS Agency Service Area County(ies) should belong to the state with which it is grouped.
 Expected Result:  [ERROR]
 
-File:             DEMDataSet-32CF.xml
-ID:               nemSch_nilNvPn_Nv_Nil_A
-Description:      When (Element) has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
-Expected Result:  [ERROR]
-
-File:             DEMDataSet-42A9.xml
-ID:               nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06_A
+File:             DEMDataSet-nemSch_d007_A.xml
+ID:               nemSch_d007_A
 Description:      EMS Agency Census Tracts should belong to a county recorded in EMS Agency Service Area County(ies) in the state with which it is grouped.
-Expected Result:  [ERROR]
+Expected Result:  [WARNING]
 
-File:             DEMDataSet-43AA.xml
-ID:               nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06_B
+File:             DEMDataSet-nemSch_d007_B.xml
+ID:               nemSch_d007_B
 Description:      EMS Agency Census Tracts should belong to a county recorded in EMS Agency Service Area County(ies) in the state with which it is grouped. * Blank Census Tract should be allowed.
 Expected Result:  [PASS]
 
-File:             DEMDataSet-681.xml
-ID:               nemSch_consistency_dAgency.13_dAgency.26_fire_A
-Description:      When Organizational Type is "Fire Department", Fire Department ID Number should be recorded.
+File:             DEMDataSet-nemSch_d008_A.xml
+ID:               nemSch_d008_A
+Description:      Fire Department ID Number should be recorded when Organizational Type is "Fire Department".
 Expected Result:  [WARNING]
 
-File:             DEMDataSet-91A.xml
-ID:               nemSch_nilNvPn_customResults_A
-Description:      The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate. * Not checked on dCustomResults.01.
+File:             DEMDataSet-nemSch_d009_A.xml
+ID:               nemSch_d009_A
+Description:      Fire Department ID Number should only be recorded when Organizational Type is "Fire Department".
+Expected Result:  [WARNING]
+
+File:             DEMDataSet-nemSch_d010_A.xml
+ID:               nemSch_d010_A
+Description:      There should be a configuration group where State Associated with this Configuration is the state recorded in EMS Agency State.
+Expected Result:  [WARNING]
+
+File:             DEMDataSet-nemSch_d011_A.xml
+ID:               nemSch_d011_A
+Description:      State Associated with this Configuration should be unique (the same state should not be listed more than once).
+Expected Result:  [WARNING]
+
+File:             DEMDataSet-nemSch_d012_A.xml
+ID:               nemSch_d012_A
+Description:      EMS Certification Levels Permitted to Perform Each Procedure, within the configuration group for the state recorded in EMS Agency State, should include the level recorded in Level of Service.
+Expected Result:  [WARNING]
+
+File:             DEMDataSet-nemSch_d013_A.xml
+ID:               nemSch_d013_A
+Description:      EMS Certification Levels Permitted to Administer Each Medication, within the configuration group for the state recorded in EMS Agency State, should include the level recorded in Level of Service.
+Expected Result:  [WARNING]
+
+File:             DEMDataSet-nemSch_d014_A.xml
+ID:               nemSch_d014_A
+Description:      EMS Agency Medications should be a code of between 2 and 7 digits when Code Type is "RxNorm".
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-nemSch_d015_A.xml
+ID:               nemSch_d015_A
+Description:      EMS Agency Medications should be a SNOMED code specifically allowed in the data dictionary when Code Type is "SNOMED".
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-nemSch_d016_A.xml
+ID:               nemSch_d016_A
+Description:      EMS Agency Medications should be an RxNorm code of between 2 and 7 digits or a SNOMED code specifically allowed in the data dictionary.
+Expected Result:  [ERROR]
+
+File:             DEMDataSet-nemSch_d017_A.xml
+ID:               nemSch_d017_A
+Description:      Crew Call Sign should be unique (the same call sign should not be listed more than once).
+Expected Result:  [WARNING]
+
+File:             DEMDataSet-nemSch_dNilNvPn_dNvPn_A.xml
+ID:               nemSch_dNilNvPn_dNvPn_A
+Description:      DEMDataSet / Nil/Not Value Attributes and DEMDataSet / Not Value/Pertinent Negative Uniqueness * Not checked on dCustomResults.01.
 Expected Result:  [PASS]
-
-File:             DEMDataSet-98CD.xml
-ID:               nemSch_sequence_dAgency.AgencyYearGroup_dAgency.15_past_A
-Description:      Statistical Calendar Year should be in the past. * This test should generate a warning until the year 2050.
-Expected Result:  [WARNING]
-
-File:             DEMDataSet-B53E.xml
-ID:               nemSch_uniqueness_DEMDataSet_dConfiguration.16_assert_A
-Description:      Each Crew Call Sign should be unique.
-Expected Result:  [ERROR]
-
-File:             DEMDataSet-CADE.xml
-ID:               nemSch_uniqueness_NvPn_Nv_only_A
-Description:      When (Element) has a Not Value, no other (Element) should be recorded.
-Expected Result:  [WARNING]
-
-File:             DEMDataSet-CB45.xml
-ID:               nemSch_uniqueness_DEMDataSet_dAgency.15_A
-Description:      Agency statistics for a particular Statistical Calendar Year should only be recorded once.
-Expected Result:  [ERROR]

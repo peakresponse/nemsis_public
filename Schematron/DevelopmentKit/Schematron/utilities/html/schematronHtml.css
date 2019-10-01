@@ -3,8 +3,8 @@
 Cascading Style Sheet (CSS) to style NEMSIS v3 Schematron that has been transformed into HTML for 
 documentation purposes
 
-Version: 3.4.0.170111_180103
-Revision Date: January 3, 2018
+Version: 3.5.0.190930
+Revision Date: September 30, 2019
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -90,6 +90,16 @@ div#menu div.contents div
 .overviewTable td
 {
   vertical-align: top;
+}
+
+.overviewTable .id
+{
+  font-size: 75%;
+  padding-top: 4pt;
+  max-width: 20ex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .overviewTable .role 

@@ -11,7 +11,7 @@
 							<name>Barriers to Patient Care</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene</definition>
+							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene.</definition>
 							<v2Number>E12_01</v2Number>
 							<usage>Required</usage>
 							<comment/>
@@ -45,7 +45,7 @@
 										<name>Last Name of Patient's Practitioner</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The last name of the patient's practitioner</definition>
+										<definition>The last name of the patient's practitioner.</definition>
 										<v2Number>E12_06</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -60,7 +60,7 @@
 										<name>First Name of Patient's Practitioner</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The first name of the patient's practitioner</definition>
+										<definition>The first name of the patient's practitioner.</definition>
 										<v2Number>E12_04</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -130,20 +130,20 @@
 							<name>Medication Allergies</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The patient's medication allergies</definition>
+							<definition>The patient's medication allergies.</definition>
 							<v2Number>E12_08</v2Number>
 							<usage>Recommended</usage>
 							<comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 CM codes can be used for medication groups. 
 
-&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a> 
 
 &lt;br/>&lt;br/>Code list is represented in two separate UMLS datasets:
 &lt;br/>1) ICD-10 Codes. 
 &lt;br/>2) RxNorm
 
-&lt;br/>&lt;br/>Website - http://uts.nlm.nih.gov 
+&lt;br/>&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov">http://uts.nlm.nih.gov&lt;/a>
 &lt;br/>Product - UMLS Metathesaurus
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
+&lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a> 
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
 							<PNNil>Yes</PNNil>
@@ -163,7 +163,11 @@
 									<xs:union memberTypes="PN.NoKnownDrugAllergy PN.Refused PN.UnableToComplete PN.Unresponsive"/>
 								</xs:simpleType>
 							</xs:attribute>
-							<xs:attribute name="CodeType" type="CodeType" use="optional"/>
+							<xs:attribute name="CodeType" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="CodeType.ICD10 CodeType.RxNorm" />
+								</xs:simpleType>
+							</xs:attribute>
 							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
@@ -182,9 +186,9 @@
 							<usage>Optional</usage>
 							<comment>
 Data Element Comment Section:
-&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a>
 &lt;br/>&lt;br/>SNOMEDCT 
-&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html 
+&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a> 
 &lt;br/>Product: Product - UMLS Metathesaurus
 							</comment>
 						</nemsisTacDoc>
@@ -206,7 +210,7 @@ Data Element Comment Section:
 							<name>Medical/Surgical History</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The patient's pre-existing medical and surgery history of the patient</definition>
+							<definition>The patient's pre-existing medical and surgery history of the patient.</definition>
 							<v2Number>E12_10</v2Number>
 							<usage>Recommended</usage>
 							<comment>
@@ -215,7 +219,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 &lt;br/>ICD-10-CM: Diagnosis Codes. 
 &lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a> 
 &lt;br/>Product - UMLS Metathesaurus 
-&lt;br/>Please reference the NEMSIS Suggested Lists at: &lt;a href="http://nemsis.org/v3/resources.html" target="_blank">http://nemsis.org/v3/resources.html&lt;/a> 
+&lt;br/>Please reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a> 
 &lt;br/>
 &lt;br/>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
 
@@ -253,7 +257,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 							<name>Medical History Obtained From</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>Type of person medical history obtained from</definition>
+							<definition>Type of person medical history obtained from.</definition>
 							<v2Number>E12_11</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -273,7 +277,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eHistory.10" type="ImmunizationType" id="eHistory.ImmunizationHistory" minOccurs="0">
+						<xs:element name="eHistory.10" id="eHistory.ImmunizationHistory" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -287,6 +291,17 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ImmunizationType">
+										<xs:attribute name="PN" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="PN.NotImmunized"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 						<xs:element name="eHistory.11" type="Year" id="eHistory.ImmunizationYear" minOccurs="0">
 							<xs:annotation>
@@ -296,7 +311,7 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 										<name>Immunization Year</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The year associated with each immunization type</definition>
+										<definition>The year associated with each immunization type.</definition>
 										<v2Number>E12_13</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -321,16 +336,16 @@ The Medical/Surgical History pattern has been extended to include ICD-10-CM: Dia
 										<name>Current Medications</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The medications the patient currently takes</definition>
+										<definition>The medications the patient currently takes.</definition>
 										<v2Number>E12_14</v2Number>
 										<usage>Recommended</usage>
 										<comment>
 List of medications based on RxNorm (RXCUI) code. 
-&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a> 
 &lt;br/>&lt;br/>RxNorm 
-&lt;br/>Website - http://uts.nlm.nih.gov 
+&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov">http://uts.nlm.nih.gov&lt;/a> 
 &lt;br/>&lt;br/>Product - UMLS Metathesaurus 
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
+&lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
 &lt;br/>Product - RxNorm Full Monthly Release
 										</comment>
 										<PNNil>Yes</PNNil>
@@ -343,7 +358,6 @@ List of medications based on RxNorm (RXCUI) code.
 										<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="PN.NoneReported PN.Refused PN.Unresponsive PN.UnableToComplete"/>
-												<!-- PN.NoAnticoagulantsOrBleedingDisorder -->
 											</xs:simpleType>
 										</xs:attribute>
 										<xs:attribute name="NV" use="optional">
@@ -363,7 +377,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<name>Current Medication Dose</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The numeric dose or amount of the patient's current medication</definition>
+										<definition>The numeric dose or amount of the patient's current medication.</definition>
 										<v2Number>E12_15</v2Number>
 										<usage>Optional</usage>
 										<comment>Associated with eHistory.12 (Current Medications)</comment>
@@ -379,7 +393,7 @@ List of medications based on RxNorm (RXCUI) code.
 										<name>Current Medication Dosage Unit</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The dosage unit of the patient's current medication</definition>
+										<definition>The dosage unit of the patient's current medication.</definition>
 										<v2Number>E12_16</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -394,8 +408,22 @@ List of medications based on RxNorm (RXCUI) code.
 										<name>Current Medication Administration Route</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The administration route (po, SQ, etc.) of the patient's current medication</definition>
+										<definition>The administration route (po, SQ, etc.) of the patient's current medication.</definition>
 										<v2Number>E12_17</v2Number>
+										<usage>Optional</usage>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="eHistory.20" type="CurrentMedicationFrequency" id="eHistory.CurrentMedicationFrequency" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eHistory.20</number>
+										<name>Current Medication Frequency</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The frequency of administration of the patient's current medication.</definition>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -443,7 +471,7 @@ List of medications based on RxNorm (RXCUI) code.
 						<xs:extension base="AlcoholDrugUseIndicators">
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.NoneReported PN.Refused PN.UnableToComplete"/>
+									<xs:union memberTypes="PN.NoneReported PN.UnableToComplete"/>
 								</xs:simpleType>
 							</xs:attribute>
 							<xs:attribute name="NV" use="optional">
@@ -592,9 +620,9 @@ List of medications based on RxNorm (RXCUI) code.
 					<xs:documentation>Positive Level known from Law Enforcement or Hospital Record</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<xs:enumeration value="3117011">
+			<xs:enumeration value="3117013">
 				<xs:annotation>
-					<xs:documentation>Smell of Alcohol on Breath</xs:documentation>
+					<xs:documentation>Physical Exam Indicates Suspected Alcohol or Drug Use</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -682,6 +710,16 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:enumeration value="3101031">
 				<xs:annotation>
 					<xs:documentation>State of Emotional Distress</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3101033">
+				<xs:annotation>
+					<xs:documentation>Alcohol Use, Suspected</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3101035">
+				<xs:annotation>
+					<xs:documentation>Drug Use, Suspected</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -836,6 +874,88 @@ List of medications based on RxNorm (RXCUI) code.
 			<xs:totalDigits value="9"/>
 			<xs:fractionDigits value="3"/>
 		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CurrentMedicationFrequency">
+		<xs:annotation>
+			<xs:documentation>The frequency of the patient's current medication</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3120001">
+				<xs:annotation>
+					<xs:documentation>qi (every hour)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120003">
+				<xs:annotation>
+					<xs:documentation>q2h (every 2 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120005">
+				<xs:annotation>
+					<xs:documentation>q3h (every 3 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120007">
+				<xs:annotation>
+					<xs:documentation>q4h (every 4 hours)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120009">
+				<xs:annotation>
+					<xs:documentation>qid (four times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120011">
+				<xs:annotation>
+					<xs:documentation>tad (three times a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120013">
+				<xs:annotation>
+					<xs:documentation>ac (before meals)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120015">
+				<xs:annotation>
+					<xs:documentation>pc (after meals)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120017">
+				<xs:annotation>
+					<xs:documentation>bid (twice a day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120019">
+				<xs:annotation>
+					<xs:documentation>qd (every day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120021">
+				<xs:annotation>
+					<xs:documentation>qd-am (every day in the morning)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120023">
+				<xs:annotation>
+					<xs:documentation>qd-pm (every day in the evening)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120025">
+				<xs:annotation>
+					<xs:documentation>has (at bedtime)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120027">
+				<xs:annotation>
+					<xs:documentation>sod (every other day)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3120029">
+				<xs:annotation>
+					<xs:documentation>prn (as needed)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="MedicationAllergies">
 		<xs:annotation>

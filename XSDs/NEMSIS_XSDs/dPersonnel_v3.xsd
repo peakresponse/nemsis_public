@@ -139,7 +139,7 @@
 													<comment>
 City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
 &lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -155,7 +155,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<definition>The state of the personnel's mailing address.</definition>
 													<v2Number>D08_06</v2Number>
 													<usage>Optional</usage>
-													<comment>Based on ANSI Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm &lt;/a></comment>
+													<comment>Based on ANSI Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm &lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -171,7 +171,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<definition>The ZIP code of the personnel's mailing address.</definition>
 													<v2Number>D08_07</v2Number>
 													<usage>Optional</usage>
-													<comment>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+													<comment>Zip Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
 												</nemsisTacDoc>
@@ -188,7 +188,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<state>No</state>
 													<definition>The country of the personnel mailing address.</definition>
 													<usage>Optional</usage>
-													<comment>Based on ANSI Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+													<comment>Based on ANSI Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -279,6 +279,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<definition>The personnel's gender.</definition>
 										<v2Number>D08_12</v2Number>
 										<usage>Recommended</usage>
+										<comment>Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity" target="_blank">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -305,7 +306,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<definition>The personnel's race as defined by the OMB (US Office of Management and Budget).</definition>
 										<v2Number>D08_13</v2Number>
 										<usage>Recommended</usage>
-										<comment>OMB requirements are provided at: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</comment>
+										<comment>OMB requirements are provided at: &lt;a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html" target="_blank">https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html&lt;/a>. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -332,7 +333,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<state>No</state>
 										<definition>The documentation of the personnel's citizenship.</definition>
 										<usage>Optional</usage>
-										<comment>Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<comment>Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -430,6 +431,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								<xs:attribute name="UUID" type="UUID" use="required" />
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="dPersonnel.20" id="dPersonnel.EMSPersonnelsForeignLanguageAbility" minOccurs="0" maxOccurs="unbounded">
@@ -538,7 +540,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<definition>The personnel's state EMS certification level.</definition>
 													<v2Number>D08_15</v2Number>
 													<usage>Recommended</usage>
-													<comment>Added 2009 EMS Education Levels.&lt;br/>&lt;br/>The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.&lt;br/>&lt;br/>Some listed health care providers may not have an EMS certification/licensure number, however their level should be indicated from the list above and the state licensure number should be indicated in dPersonnel.23 - EMS Personnel's State's Licensure ID Number.</comment>
+													<comment>The category Emergency Medical Technician - Intermediate includes EMS professionals with an "85" or "99" certification level.&lt;br/>&lt;br/>Some listed health care providers may not have an EMS certification/licensure number, however their level should be indicated from the list above and the state licensure number should be indicated in dPersonnel.23 - EMS Personnel's State's Licensure ID Number.</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -602,6 +604,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								<xs:attribute name="UUID" type="UUID" use="required" />
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="dPersonnel.28" type="NationalRegistryNumber" id="dPersonnel.NationalRegistryNumber" minOccurs="0">
@@ -643,7 +646,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Personnel's Current National Registry Expiration Date</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires</definition>
+										<definition>The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires.</definition>
 										<usage>Optional</usage>
 										<performanceMeasures/>
 									</nemsisTacDoc>
@@ -839,10 +842,12 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</xs:element>
 								</xs:sequence>
 								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+								<xs:attribute name="UUID" type="UUID" use="required" />
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+					<xs:attribute name="UUID" type="UUID" use="required"></xs:attribute>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -978,42 +983,27 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1529001">
 				<xs:annotation>
-					<xs:documentation>2009 Advanced Emergency Medical Technician (AEMT)</xs:documentation>
+					<xs:documentation>Advanced Emergency Medical Technician (AEMT)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1529002">
+				<xs:annotation>
+					<xs:documentation>Emergency Medical Technician - Intermediate</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1529003">
 				<xs:annotation>
-					<xs:documentation>2009 Emergency Medical Responder (EMR)</xs:documentation>
+					<xs:documentation>Emergency Medical Responder (EMR)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1529005">
 				<xs:annotation>
-					<xs:documentation>2009 Emergency Medical Technician</xs:documentation>
+					<xs:documentation>Emergency Medical Technician (EMT)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="1529007">
 				<xs:annotation>
-					<xs:documentation>2009 Paramedic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1529009">
-				<xs:annotation>
-					<xs:documentation>EMT-Basic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1529011">
-				<xs:annotation>
-					<xs:documentation>EMT-Intermediate</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1529013">
-				<xs:annotation>
-					<xs:documentation>EMT-Paramedic</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="1529015">
-				<xs:annotation>
-					<xs:documentation>First Responder</xs:documentation>
+					<xs:documentation>Paramedic</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

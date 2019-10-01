@@ -22,7 +22,7 @@ Scenario: We want to extend eVitals.26 with some new codes that DO NOT map to a 
 -->
 				
 <EMSDataSet xsi:schemaLocation="http://www.nemsis.org 
-https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3.4.0.150302/EMSDataSet_v3.xsd" xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	http://nemsis.org/media/nemsis_v3/release-3.5.0/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd" xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Header>
 		<DemographicGroup>
 			<dAgency.01>a</dAgency.01>
@@ -40,7 +40,7 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 				<eCustomConfiguration.06 customValueDescription="Low Alert">3326099</eCustomConfiguration.06>
 			</eCustomConfiguration.CustomGroup>
 		</eCustomConfiguration>
-		<PatientCareReport>
+		<PatientCareReport UUID="840c090b-c8d3-42b4-8084-34c6e9583103">
 			<eRecord>
 				<eRecord.01>aaa</eRecord.01>
 				<eRecord.SoftwareApplicationGroup>
@@ -58,7 +58,7 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 				<eResponse.ServiceGroup>
 					<eResponse.05>2205001</eResponse.05>
 				</eResponse.ServiceGroup>
-				<eResponse.07>2207003</eResponse.07>
+				<eResponse.07>2207013</eResponse.07>
 				<eResponse.08>2208001</eResponse.08>
 				<eResponse.09>2209001</eResponse.09>
 				<eResponse.10>2210001</eResponse.10>
@@ -66,7 +66,6 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 				<eResponse.12>2212001</eResponse.12>
 				<eResponse.13>a</eResponse.13>
 				<eResponse.14>a</eResponse.14>
-				<eResponse.15>2215001</eResponse.15>
 				<eResponse.23>2223001</eResponse.23>
 				<eResponse.24>2224001</eResponse.24>
 			</eResponse>
@@ -120,6 +119,8 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 				<eSituation.11>T73</eSituation.11>
 				<eSituation.12>T73</eSituation.12>
 				<eSituation.13>2813001</eSituation.13>
+				<eSituation.18>2011-01-01T00:00:00-00:00</eSituation.18>
+				<eSituation.20>2820001</eSituation.20>
 			</eSituation>
 			<eInjury>
 				<eInjury.01>T65.9</eInjury.01>
@@ -131,7 +132,6 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 				<eArrest.02>3002001</eArrest.02>
 				<eArrest.03>3003001</eArrest.03>
 				<eArrest.04>3004001</eArrest.04>
-				<eArrest.05>9923001</eArrest.05>
 				<eArrest.07>3007001</eArrest.07>
 				<eArrest.09>3009001</eArrest.09>
 				<eArrest.11>3011001</eArrest.11>
@@ -140,6 +140,9 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 				<eArrest.16>3016001</eArrest.16>
 				<eArrest.17>9901001</eArrest.17>
 				<eArrest.18>3018001</eArrest.18>
+				<eArrest.20>3020003</eArrest.20>
+				<eArrest.21>3021009</eArrest.21>
+				<eArrest.22>3022003</eArrest.22>
 			</eArrest>
 			<eHistory>
 				<eHistory.01>3101001</eHistory.01>
@@ -227,7 +230,8 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 				<eMedications.MedicationGroup>
 					<eMedications.01>2011-01-01T00:00:00-00:00</eMedications.01>
 					<eMedications.02>9923003</eMedications.02>
-					<eMedications.03>aa</eMedications.03>
+					<eMedications.03 CodeType="9924003">aa</eMedications.03>
+					<eMedications.04>9927001</eMedications.04>
 					<eMedications.DosageGroup>
 						<eMedications.05>123456.12</eMedications.05>
 						<eMedications.06>3706001</eMedications.06>
@@ -255,7 +259,12 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 					<eDisposition.06>12345</eDisposition.06>
 					<eDisposition.07>00000</eDisposition.07>
 				</eDisposition.DestinationGroup>
-				<eDisposition.12>4212001</eDisposition.12>
+				<eDisposition.IncidentDispositionGroup>
+					<eDisposition.27>4227011</eDisposition.27>
+					<eDisposition.28>4228009</eDisposition.28>
+					<eDisposition.29>4229001</eDisposition.29>
+					<eDisposition.30>4230001</eDisposition.30>
+				</eDisposition.IncidentDispositionGroup>
 				<eDisposition.16>4216001</eDisposition.16>
 				<eDisposition.17>4217001</eDisposition.17>
 				<eDisposition.18>4218001</eDisposition.18>
@@ -268,6 +277,7 @@ https://www.nemsis.org/media/nemsis_v3/release-v3.4.0.150302/XSDs/NEMSIS_XSDs_v3
 					<eDisposition.24>4224001</eDisposition.24>
 					<eDisposition.25>2011-01-01T00:00:00-00:00</eDisposition.25>
 				</eDisposition.HospitalTeamActivationGroup>
+				<eDisposition.32>4232013</eDisposition.32>
 			</eDisposition>
 			<eOutcome>
 				<eOutcome.01>01</eOutcome.01>

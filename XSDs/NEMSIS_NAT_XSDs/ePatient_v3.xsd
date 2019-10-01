@@ -127,7 +127,7 @@
 							<name>Gender</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The Patient's Gender</definition>
+							<definition>The patient's gender.</definition>
 							<v2Number>E06_11</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -139,6 +139,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
+							<comment>Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -162,7 +163,7 @@
 							<name>Race</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The patient's race as defined by the OMB (US Office of Management and Budget)</definition>
+							<definition>The patient's race as defined by the OMB (US Office of Management and Budget).</definition>
 							<v2Number>E06_12</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -205,7 +206,7 @@
 										<name>Age</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient's age (either calculated from date of birth or best approximation)</definition>
+										<definition>The patient's age (either calculated from date of birth or best approximation).</definition>
 										<v2Number>E06_14</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -240,7 +241,7 @@
 										<name>Age Units</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The unit used to define the patient's age</definition>
+										<definition>The unit used to define the patient's age.</definition>
 										<v2Number>E06_15</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -270,6 +271,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
+			
 			
 			
 			
@@ -316,15 +318,6 @@
 					<xs:documentation>Years</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:simpleType name="DateOfBirth">
-		<xs:annotation>
-			<xs:documentation>The Date on an event or occurrence.</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:date">
-			<xs:minInclusive value="1890-01-01"></xs:minInclusive>
-			<xs:maxInclusive value="2050-01-01"></xs:maxInclusive>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="DriversLicenseNumber">
@@ -378,6 +371,28 @@
 			<xs:enumeration value="2514011">
 				<xs:annotation>
 					<xs:documentation>White</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AlternateHomeResidence">
+		<xs:annotation>
+			<xs:documentation>Type of patient without a home ZIP/Postal code.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2522001">
+				<xs:annotation>
+					<xs:documentation>Homeless</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2522003">
+				<xs:annotation>
+					<xs:documentation>Migrant Worker</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2522005">
+				<xs:annotation>
+					<xs:documentation>Foreign Visitor</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

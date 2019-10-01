@@ -10,7 +10,7 @@
 							<name>First EMS Unit on Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
+							<definition>Documentation that this EMS Unit was the first EMS Unit among all EMS Agencies on the Scene.</definition>
 							<usage>Required</usage>
 							<comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</comment>
 						</nemsisTacDoc>
@@ -38,7 +38,7 @@
 							<name>Number of Patients at Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indicator of how many total patients were at the scene</definition>
+							<definition>Indicator of how many total patients were at the scene.</definition>
 							<v2Number>E08_05</v2Number>
 							<usage>Required</usage>
 						</nemsisTacDoc>
@@ -64,7 +64,7 @@
 							<name>Mass Casualty Incident</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources)</definition>
+							<definition>Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources).</definition>
 							<v2Number>E08_06</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -140,7 +140,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident Location Type</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The kind of location where the incident happened</definition>
+							<definition>The kind of location where the incident happened.</definition>
 							<v2Number>E08_07</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -152,7 +152,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
+							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/					
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus
@@ -188,7 +188,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident State</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The state, territory, or province where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The state, territory, or province where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_14</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -200,7 +200,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -225,7 +225,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident ZIP Code</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The ZIP code of the incident location</definition>
+							<definition>The ZIP code of the incident location.</definition>
 							<v2Number>E08_15</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -237,7 +237,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+							<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
 						</nemsisTacDoc>
@@ -264,7 +264,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident County</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The county or parish where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The county or parish where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_13</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -277,7 +277,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
-							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -445,7 +445,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"></xs:minLength>
-			<xs:maxLength value="50"></xs:maxLength>
+			<xs:maxLength value="255"></xs:maxLength>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TriageClassification">

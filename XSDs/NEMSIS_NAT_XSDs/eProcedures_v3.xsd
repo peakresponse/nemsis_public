@@ -16,7 +16,7 @@
 										<name>Date/Time Procedure Performed</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The date/time the procedure was performed on the patient</definition>
+										<definition>The date/time the procedure was performed on the patient.</definition>
 										<v2Number>E19_01</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -122,7 +122,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Procedures which are recorded as a Vital Sign do not have to be documented in the Procedure Section.
-										&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
+											&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/	
 										&lt;br/>&lt;br/>SNOMEDCT
 										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
 										&lt;br/>Product: Product - UMLS Metathesaurus
@@ -140,7 +140,7 @@
 										</xs:attribute>
 										<xs:attribute name="PN" use="optional">
 											<xs:simpleType>
-												<xs:union memberTypes="PN.ContraindicationNoted PN.DeniedByOrder PN.Refused PN.UnableToComplete"></xs:union>
+												<xs:union memberTypes="PN.ContraindicationNoted PN.DeniedByOrder PN.Refused PN.UnableToComplete PN.OrderCriteriaNotMet"></xs:union>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -224,7 +224,7 @@
 										<name>Procedure Complication</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient</definition>
+										<definition>Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient.</definition>
 										<v2Number>E19_07</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -256,7 +256,7 @@
 										<name>Response to Procedure</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient's response to the procedure</definition>
+										<definition>The patient's response to the procedure.</definition>
 										<v2Number>E19_08</v2Number>
 										<usage>Required</usage>
 									</nemsisTacDoc>
@@ -664,6 +664,16 @@
 			<xs:enumeration value="3913077">
 				<xs:annotation>
 					<xs:documentation>Radial-Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913079">
+				<xs:annotation>
+					<xs:documentation>Wrist-Left</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3913081">
+				<xs:annotation>
+					<xs:documentation>Wrist-Right</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

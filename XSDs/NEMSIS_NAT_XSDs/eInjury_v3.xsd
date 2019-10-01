@@ -17,7 +17,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>
-							Suggested code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html																
+								Suggested code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/															
 							&lt;br/>&lt;br/>Code list is represented in ICD-10 Codes.
 							&lt;br/>Website - http://uts.nlm.nih.gov  
 							&lt;br/>Product - UMLS Metathesaurus
@@ -39,12 +39,12 @@
 				</xs:complexType>
 			</xs:element>
 			
-			<xs:element name="eInjury.03" nillable="true" id="eInjury.TraumaCenterCriteria" maxOccurs="unbounded">
+			<xs:element name="eInjury.03" nillable="true" id="eInjury.TraumaTriageCriteriaSteps1and2" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eInjury.03</number>
-							<name>Trauma Center Criteria</name>
+							<name>Trauma Triage Criteria (Steps 1 and 2)</name>
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Physiologic and Anatomic Field Trauma Triage Criteria (steps 1 and 2) as defined by the Centers for Disease Control.</definition>
@@ -59,7 +59,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="TraumaCenterCriteria">
+						<xs:extension base="TraumaTriageCriteriaSteps1and2">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -70,12 +70,12 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eInjury.04" nillable="true" id="eInjury.VehicularPedestrianorOtherInjuryRiskFactor" maxOccurs="unbounded">
+			<xs:element name="eInjury.04" nillable="true" id="eInjury.TraumaTriageCriteriaSteps3and4" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eInjury.04</number>
-							<name>Vehicular, Pedestrian, or Other Injury Risk Factor</name>
+							<name>Trauma Triage Criteria (Steps 3 and 4)</name>
 							<national>Yes</national>
 							<state>Yes</state>
 							<definition>Mechanism and Special Considerations Field Trauma Triage Criteria (steps 3 and 4) as defined by the Centers for Disease Control.</definition>
@@ -84,15 +84,15 @@
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Assesses mechanism of injury and evidence of high-energy impact (Step 3) AND Assess special patient or system considerations (Step 4) based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3 and 4. Website: http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf</comment>
+							<comment>Assesses mechanism of injury and evidence of high-energy impact (Step 3) AND Assess special patient or system considerations (Step 4) based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3 and 4. Website: &lt;a href="http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf" target="_blank">http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf&lt;/a></comment>
 							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
-							&lt;br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
+								&lt;br/>Website: &lt;a href="http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf" target="_blank">http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf&lt;/a></v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="VehicularInjuryIndicators">
+						<xs:extension base="TraumaTriageCriteriaSteps3and4">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -159,7 +159,6 @@
 					<xs:documentation>No Airbag Present</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="AreaOfVehicleImpact">
@@ -625,7 +624,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="TraumaCenterCriteria">
+	<xs:simpleType name="TraumaTriageCriteriaSteps1and2">
 		<xs:annotation>
 			<xs:documentation>Field Triage Criteria for transport to a trauma center as defined by the Centers for Disease Control and Prevention and the American College of Surgeons-Committee on Trauma.</xs:documentation>
 		</xs:annotation>
@@ -757,11 +756,9 @@
 					<xs:documentation>Shoulder Belt Only Used</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			
-			
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="VehicularInjuryIndicators">
+	<xs:simpleType name="TraumaTriageCriteriaSteps3and4">
 		<xs:annotation>
 			<xs:documentation>The kind of risk factor predictors present at the incident</xs:documentation>
 		</xs:annotation>

@@ -23,6 +23,7 @@ CREATE TABLE [DemographicReport] (
 CREATE TABLE [dAgency.AgencyServiceGroup] ( 
     [pk_dAgency.AgencyServiceGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dAgency.AgencyServiceGroup_UUID]    VARCHAR(255)
 ,    [dAgency.05]    VARCHAR(255)
 )
 
@@ -56,7 +57,9 @@ CREATE TABLE [dAgency.10] (
 CREATE TABLE [dAgency.AgencyYearGroup] ( 
     [pk_dAgency.AgencyYearGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dAgency.AgencyYearGroup_UUID]    VARCHAR(255)
 ,    [dAgency.15]    VARCHAR(255)
+,    [dAgency.15_NV]    VARCHAR(255)
 ,    [dAgency.16]    VARCHAR(255)
 ,    [dAgency.16_NV]    VARCHAR(255)
 ,    [dAgency.17]    VARCHAR(255)
@@ -89,7 +92,8 @@ CREATE TABLE [dAgency.26] (
 
 CREATE TABLE [dContact.ContactInfoGroup] ( 
     [pk_dContact.ContactInfoGroup]    INT PRIMARY KEY,
-    [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+    [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])	
+,    [dContact.ContactInfoGroup_UUID]    VARCHAR(255)
 ,    [dContact.01]    VARCHAR(255)
 ,    [dContact.01_NV]    VARCHAR(255)
 ,    [dContact.02]    VARCHAR(255)
@@ -141,41 +145,16 @@ CREATE TABLE [dContact.14] (
 CREATE TABLE [dConfiguration.ConfigurationGroup] ( 
     [pk_dConfiguration.ConfigurationGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dConfiguration.ConfigurationGroup_UUID]    VARCHAR(255)
 ,    [dConfiguration.01]    VARCHAR(255)
 ,    [dConfiguration.12]    VARCHAR(255)
 ,    [dConfiguration.13]    VARCHAR(255)
 )
 
-CREATE TABLE [dConfiguration.02] ( 
-    [pk_dConfiguration.02]    INT PRIMARY KEY,
-    [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
-,    [dConfiguration.02]    VARCHAR(255)
-)
-
-CREATE TABLE [dConfiguration.03] ( 
-    [pk_dConfiguration.03]    INT PRIMARY KEY,
-    [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
-,    [dConfiguration.03]    VARCHAR(255)
-,    [dConfiguration.03_NV]    VARCHAR(255)
-)
-
-CREATE TABLE [dConfiguration.04] ( 
-    [pk_dConfiguration.04]    INT PRIMARY KEY,
-    [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
-,    [dConfiguration.04]    VARCHAR(255)
-,    [dConfiguration.04_NV]    VARCHAR(255)
-)
-
-CREATE TABLE [dConfiguration.05] ( 
-    [pk_dConfiguration.05]    INT PRIMARY KEY,
-    [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
-,    [dConfiguration.05]    VARCHAR(255)
-,    [dConfiguration.05_NV]    VARCHAR(255)
-)
-
 CREATE TABLE [dConfiguration.ProcedureGroup] ( 
     [pk_dConfiguration.ProcedureGroup]    INT PRIMARY KEY,
     [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
+,    [dConfiguration.ProcedureGroup_UUID]    VARCHAR(255)
 ,    [dConfiguration.06]    VARCHAR(255)
 )
 
@@ -188,6 +167,7 @@ CREATE TABLE [dConfiguration.07] (
 CREATE TABLE [dConfiguration.MedicationGroup] ( 
     [pk_dConfiguration.MedicationGroup]    INT PRIMARY KEY,
     [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
+,    [dConfiguration.MedicationGroup_UUID]    VARCHAR(255)
 ,    [dConfiguration.08]    VARCHAR(255)
 )
 
@@ -195,6 +175,7 @@ CREATE TABLE [dConfiguration.09] (
     [pk_dConfiguration.09]    INT PRIMARY KEY,
     [fk_pk_dConfiguration.MedicationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.MedicationGroup]([pk_dConfiguration.MedicationGroup])
 ,    [dConfiguration.09]    VARCHAR(255)
+,    [dConfiguration.09_CodeType]    VARCHAR(255)
 )
 
 CREATE TABLE [dConfiguration.10] ( 
@@ -207,6 +188,7 @@ CREATE TABLE [dConfiguration.11] (
     [pk_dConfiguration.11]    INT PRIMARY KEY,
     [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
 ,    [dConfiguration.11]    VARCHAR(255)
+,    [dConfiguration.11_NV]    VARCHAR(255)
 )
 
 CREATE TABLE [dConfiguration.14] ( 
@@ -220,6 +202,7 @@ CREATE TABLE [dConfiguration.15] (
     [pk_dConfiguration.15]    INT PRIMARY KEY,
     [fk_pk_dConfiguration.ConfigurationGroup]    INT FOREIGN KEY REFERENCES     [dConfiguration.ConfigurationGroup]([pk_dConfiguration.ConfigurationGroup])
 ,    [dConfiguration.15]    VARCHAR(255)
+,    [dConfiguration.15_NV]    VARCHAR(255)
 )
 
 CREATE TABLE [dConfiguration.16] ( 
@@ -237,6 +220,7 @@ CREATE TABLE [dConfiguration.17] (
 CREATE TABLE [dLocation.LocationGroup] ( 
     [pk_dLocation.LocationGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dLocation.LocationGroup_UUID]    VARCHAR(255)
 ,    [dLocation.01]    VARCHAR(255)
 ,    [dLocation.02]    VARCHAR(255)
 ,    [dLocation.03]    VARCHAR(255)
@@ -261,6 +245,7 @@ CREATE TABLE [dLocation.12] (
 CREATE TABLE [dVehicle.VehicleGroup] ( 
     [pk_dVehicle.VehicleGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dVehicle.VehicleGroup_UUID]    VARCHAR(255)
 ,    [dVehicle.01]    VARCHAR(255)
 ,    [dVehicle.01_NV]    VARCHAR(255)
 ,    [dVehicle.02]    VARCHAR(255)
@@ -275,6 +260,7 @@ CREATE TABLE [dVehicle.VehicleGroup] (
 CREATE TABLE [dVehicle.VehicleCertificationLevelsGroup] ( 
     [pk_dVehicle.VehicleCertificationLevelsGroup]    INT PRIMARY KEY,
     [fk_pk_dVehicle.VehicleGroup]    INT FOREIGN KEY REFERENCES     [dVehicle.VehicleGroup]([pk_dVehicle.VehicleGroup])
+,    [dVehicle.VehicleCertificationLevelsGroup_UUID]    VARCHAR(255)
 ,    [dVehicle.05]    VARCHAR(255)
 ,    [dVehicle.06]    VARCHAR(255)
 ,    [dVehicle.07]    VARCHAR(255)
@@ -284,6 +270,7 @@ CREATE TABLE [dVehicle.VehicleCertificationLevelsGroup] (
 CREATE TABLE [dVehicle.YearGroup] ( 
     [pk_dVehicle.YearGroup]    INT PRIMARY KEY,
     [fk_pk_dVehicle.VehicleGroup]    INT FOREIGN KEY REFERENCES     [dVehicle.VehicleGroup]([pk_dVehicle.VehicleGroup])
+,    [dVehicle.YearGroup_UUID]    VARCHAR(255)
 ,    [dVehicle.11]    VARCHAR(255)
 ,    [dVehicle.12]    VARCHAR(255)
 ,    [dVehicle.13]    VARCHAR(255)
@@ -293,6 +280,7 @@ CREATE TABLE [dVehicle.YearGroup] (
 CREATE TABLE [dPersonnel.PersonnelGroup] ( 
     [pk_dPersonnel.PersonnelGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dPersonnel.PersonnelGroup_UUID]    VARCHAR(255)
 ,    [dPersonnel.01]    VARCHAR(255)
 ,    [dPersonnel.01_NV]    VARCHAR(255)
 ,    [dPersonnel.02]    VARCHAR(255)
@@ -362,6 +350,7 @@ CREATE TABLE [dPersonnel.17] (
 CREATE TABLE [dPersonnel.ImmunizationsGroup] ( 
     [pk_dPersonnel.ImmunizationsGroup]    INT PRIMARY KEY,
     [fk_pk_dPersonnel.PersonnelGroup]    INT FOREIGN KEY REFERENCES     [dPersonnel.PersonnelGroup]([pk_dPersonnel.PersonnelGroup])
+,    [dPersonnel.ImmunizationsGroup_UUID]    VARCHAR(255)
 ,    [dPersonnel.18]    VARCHAR(255)
 ,    [dPersonnel.19]    VARCHAR(255)
 )
@@ -375,6 +364,7 @@ CREATE TABLE [dPersonnel.20] (
 CREATE TABLE [dPersonnel.LicensureGroup] ( 
     [pk_dPersonnel.LicensureGroup]    INT PRIMARY KEY,
     [fk_pk_dPersonnel.PersonnelGroup]    INT FOREIGN KEY REFERENCES     [dPersonnel.PersonnelGroup]([pk_dPersonnel.PersonnelGroup])
+,    [dPersonnel.LicensureGroup_UUID]    VARCHAR(255)
 ,    [dPersonnel.22]    VARCHAR(255)
 ,    [dPersonnel.22_NV]    VARCHAR(255)
 ,    [dPersonnel.23]    VARCHAR(255)
@@ -396,6 +386,7 @@ CREATE TABLE [dPersonnel.35] (
 CREATE TABLE [dPersonnel.CertificationLevelGroup] ( 
     [pk_dPersonnel.CertificationLevelGroup]    INT PRIMARY KEY,
     [fk_pk_dPersonnel.PersonnelGroup]    INT FOREIGN KEY REFERENCES     [dPersonnel.PersonnelGroup]([pk_dPersonnel.PersonnelGroup])
+,    [dPersonnel.CertificationLevelGroup_UUID]    VARCHAR(255)
 ,    [dPersonnel.38]    VARCHAR(255)
 ,    [dPersonnel.39]    VARCHAR(255)
 )
@@ -403,6 +394,7 @@ CREATE TABLE [dPersonnel.CertificationLevelGroup] (
 CREATE TABLE [dDevice.DeviceGroup] ( 
     [pk_dDevice.DeviceGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dDevice.DeviceGroup_UUID]    VARCHAR(255)
 ,    [dDevice.01]    VARCHAR(255)
 ,    [dDevice.02]    VARCHAR(255)
 ,    [dDevice.04]    VARCHAR(255)
@@ -419,12 +411,14 @@ CREATE TABLE [dDevice.03] (
 CREATE TABLE [dFacilityGroup] ( 
     [pk_dFacilityGroup]    INT PRIMARY KEY,
     [fk_pk_DemographicReport]    INT FOREIGN KEY REFERENCES     [DemographicReport]([pk_DemographicReport])
+,    [dFacilityGroup_UUID]    VARCHAR(255)
 ,    [dFacility.01]    VARCHAR(255)
 )
 
 CREATE TABLE [dFacility.FacilityGroup] ( 
     [pk_dFacility.FacilityGroup]    INT PRIMARY KEY,
     [fk_pk_dFacilityGroup]    INT FOREIGN KEY REFERENCES     [dFacilityGroup]([pk_dFacilityGroup])
+,    [dFacility.FacilityGroup_UUID]    VARCHAR(255)
 ,    [dFacility.02]    VARCHAR(255)
 ,    [dFacility.03]    VARCHAR(255)
 ,    [dFacility.06]    VARCHAR(255)

@@ -138,13 +138,13 @@
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.EmergencyDepartmentProceduresGroup" id="eOutcome.EmergencyDepartmentProceduresGroup" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOutcome.EmergencyDepartmentProceduresGroup" id="eOutcome.EmergencyDepartmentProceduresGroup" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold information about emergency department procedures</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eOutcome.09" id="eOutcome.EmergencyDepartmentProcedures" minOccurs="0" nillable="true">
+						<xs:element name="eOutcome.09" id="eOutcome.EmergencyDepartmentProcedures" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -177,7 +177,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eOutcome.19" nillable="true" id="eOutcome.DateTimeEmergencyDepartmentProcedurePerformed" minOccurs="0">
+						<xs:element name="eOutcome.19" nillable="true" id="eOutcome.DateTimeEmergencyDepartmentProcedurePerformed">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -238,7 +238,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.10" id="eOutcome.EmergencyDepartmentDiagnosis" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			<xs:element name="eOutcome.10" id="eOutcome.EmergencyDepartmentDiagnosis" maxOccurs="unbounded" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -268,7 +268,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.11" id="eOutcome.HospitalAdmissionDateTime" minOccurs="0" nillable="true">
+			<xs:element name="eOutcome.11" id="eOutcome.HospitalAdmissionDateTime" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -319,13 +319,13 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.HospitalProceduresGroup" id="eOutcome.HospitalProceduresGroup" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOutcome.HospitalProceduresGroup" id="eOutcome.HospitalProceduresGroup" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold information about hospital procedures</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="eOutcome.12" id="eOutcome.HospitalProcedures" minOccurs="0" nillable="true">
+						<xs:element name="eOutcome.12" id="eOutcome.HospitalProcedures" nillable="true">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -358,7 +358,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eOutcome.20" nillable="true" id="eOutcome.DateTimeHospitalProcedurePerformed" minOccurs="0">
+						<xs:element name="eOutcome.20" nillable="true" id="eOutcome.DateTimeHospitalProcedurePerformed">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -419,7 +419,7 @@
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.13" id="eOutcome.HospitalDiagnosis" minOccurs="0" maxOccurs="unbounded" nillable="true">
+			<xs:element name="eOutcome.13" id="eOutcome.HospitalDiagnosis" maxOccurs="unbounded" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -449,7 +449,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.16" id="eOutcome.HospitalDischargeDateTime" minOccurs="0" nillable="true">
+			<xs:element name="eOutcome.16" id="eOutcome.HospitalDischargeDateTime" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -500,7 +500,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.18" id="eOutcome.EmergencyDepartmentAdmissionDateTime" minOccurs="0" nillable="true">
+			<xs:element name="eOutcome.18" id="eOutcome.EmergencyDepartmentAdmissionDateTime" nillable="true">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>

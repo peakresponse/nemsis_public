@@ -571,6 +571,7 @@
 										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
+								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="eExam.ChestGroup" id="eExam.ChestGroup" minOccurs="0" maxOccurs="unbounded">
@@ -622,6 +623,7 @@
 										</xs:complexType>
 									</xs:element>
 								</xs:sequence>
+								<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 							</xs:complexType>
 						</xs:element>
 						<xs:element name="eExam.19" id="eExam.MentalStatusAssessment" minOccurs="0" maxOccurs="unbounded">

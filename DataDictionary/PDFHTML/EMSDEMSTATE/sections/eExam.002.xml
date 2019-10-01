@@ -26,11 +26,11 @@
       <element number="eExam.17" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="EyesAssessmentLocation"><name>Eye Assessment Finding Location</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
       <element number="eExam.18" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="" isNillable="No" dataType="EyesAssessment"><name>Eye Assessment</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative>Yes</pertinentNegative></element>
     </group>
-    <group number="eExam.LungGroup" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" isNillable="No">
+    <group number="eExam.LungGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="" isNillable="No">
       <element number="eExam.22" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="LungAssessmentLocation"><name>Lung Assessment Finding Location</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
       <element number="eExam.23" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="" isNillable="No" dataType="LungAssessment"><name>Lung Assessment</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative>Yes</pertinentNegative></element>
     </group>
-    <group number="eExam.ChestGroup" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" isNillable="No">
+    <group number="eExam.ChestGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="" isNillable="No">
       <element number="eExam.24" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="ChestAssessmentLocation"><name>Chest Assessment Finding Location</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
       <element number="eExam.25" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="" isNillable="No" dataType="ChestAssessment"><name>Chest Assessment</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative>Yes</pertinentNegative></element>
     </group>

@@ -457,7 +457,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eDisposition.31" id="eDisposition.ReasonForRefusalRelease" type="ReasonForRefusalRelease" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eDisposition.31" id="eDisposition.ReasonForRefusalRelease" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -482,6 +482,13 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ReasonForRefusalRelease">
+										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
 				</xs:complexType>
@@ -530,7 +537,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.15" type="HowPatientWasMovedToFromAmbulance" id="eDisposition.HowPatientWasMovedFromAmbulance" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eDisposition.15" id="eDisposition.HowPatientWasMovedFromAmbulance" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -544,6 +551,13 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="HowPatientWasMovedToFromAmbulance">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="eDisposition.16" nillable="true" id="eDisposition.EMSTransportMethod">
 				<xs:annotation>
@@ -804,6 +818,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
 							</xs:attribute>
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

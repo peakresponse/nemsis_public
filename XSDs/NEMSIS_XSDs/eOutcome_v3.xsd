@@ -167,7 +167,6 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="icd10CodeOutcomeProcedures">
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -236,6 +235,7 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="eOutcome.10" id="eOutcome.EmergencyDepartmentDiagnosis" maxOccurs="unbounded" nillable="true">
@@ -348,7 +348,6 @@
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="icd10CodeOutcomeProcedures">
-										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -417,6 +416,7 @@
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
+					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="eOutcome.13" id="eOutcome.HospitalDiagnosis" maxOccurs="unbounded" nillable="true">

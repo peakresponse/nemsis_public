@@ -18,6 +18,6 @@
 </restrictions>
 <attributes>
   <PhoneNumberType baseType="string"><facet name="enumeration" value="9913001" annotation="Fax"/><facet name="enumeration" value="9913003" annotation="Home"/><facet name="enumeration" value="9913005" annotation="Mobile"/><facet name="enumeration" value="9913007" annotation="Pager"/><facet name="enumeration" value="9913009" annotation="Work"/></PhoneNumberType>
-  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+  <CorrelationID baseType="string"><facet name="minLength" value="2"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
 </element>

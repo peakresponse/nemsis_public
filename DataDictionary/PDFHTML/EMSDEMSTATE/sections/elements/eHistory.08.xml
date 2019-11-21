@@ -39,7 +39,7 @@
     <PN.UnableToComplete><facet name="enumeration" value="8801023" annotation="Unable to Complete"/></PN.UnableToComplete>
     <PN.Unresponsive><facet name="enumeration" value="8801021" annotation="Unresponsive"/></PN.Unresponsive>
   </PN>
-  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+  <CorrelationID baseType="string"><facet name="minLength" value="2"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
 <asserts>
   <assert id="nemSch_e008" role="Error">

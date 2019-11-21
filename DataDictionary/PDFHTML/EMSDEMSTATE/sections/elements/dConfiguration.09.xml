@@ -40,7 +40,7 @@
     <CodeType.RxNorm><facet name="enumeration" value="9924003" annotation="RxNorm"/></CodeType.RxNorm>
     <CodeType.SNOMED><facet name="enumeration" value="9924005" annotation="SNOMED-CT"/></CodeType.SNOMED>
   </CodeType>
-  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+  <CorrelationID baseType="string"><facet name="minLength" value="2"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
 <asserts>
   <assert id="nemSch_d014" role="Error">

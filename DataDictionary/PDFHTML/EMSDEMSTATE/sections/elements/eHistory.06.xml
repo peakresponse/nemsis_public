@@ -43,7 +43,7 @@
     <CodeType.ICD10><facet name="enumeration" value="9924001" annotation="ICD-10"/></CodeType.ICD10>
     <CodeType.RxNorm><facet name="enumeration" value="9924003" annotation="RxNorm"/></CodeType.RxNorm>
   </CodeType>
-  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+  <CorrelationID baseType="string"><facet name="minLength" value="2"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
 <asserts>
   <assert id="nemSch_e008" role="Error">

@@ -26,6 +26,7 @@
     <facet name="enumeration" value="2907027" annotation="Shoulder and Lap Belt Used"/>
     <facet name="enumeration" value="2907029" annotation="Lap Belt Only Used"/>
     <facet name="enumeration" value="2907031" annotation="Shoulder Belt Only Used"/>
+    <facet name="enumeration" value="2907033" annotation="Unable to Determine"/>
   </UseOfOccupantSafetyEquipment>
 </restrictions>
 <attributes>
@@ -34,7 +35,7 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
     <NV.NotReporting><facet name="enumeration" value="7701005" annotation="Not Reporting"/></NV.NotReporting>
   </NV>
-  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+  <CorrelationID baseType="string"><facet name="minLength" value="2"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
 <asserts>
   <assert id="nemSch_e002" role="Error">

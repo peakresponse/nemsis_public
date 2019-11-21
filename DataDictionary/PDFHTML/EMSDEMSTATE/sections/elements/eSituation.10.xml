@@ -27,7 +27,7 @@
   <PN>
     <PN.SymptomNotPresent><facet name="enumeration" value="8801031" annotation="Symptom Not Present"/></PN.SymptomNotPresent>
   </PN>
-  <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
+  <CorrelationID baseType="string"><facet name="minLength" value="2"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
 <asserts>
   <assert id="nemSch_e005" role="Error">

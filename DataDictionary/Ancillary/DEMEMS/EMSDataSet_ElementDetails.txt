@@ -3,14 +3,14 @@
 'EMSDataSet'|'element'|'dAgency.02'|'EMS Agency Number'|'D01_01'|'National'|'State'|'Mandatory'|'1'|'1'|''|'EMSAgencyNumber'|''|''|''|''|''|'1'|'15'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'dAgency.04'|'EMS Agency State'|'D01_03'|'National'|'State'|'Mandatory'|'1'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{2}'|
 'EMSDataSet'|'element'|'eCustomConfiguration.01'|'Custom Data Element Title'|''|''|''|'Mandatory'|'1'|'1'|''|'CustomTitle'|''|''|''|''|''|'2'|'100'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eCustomConfiguration.02'|'Custom Definition'|''|''|''|'Mandatory'|'1'|'1'|''|'CustomDefinition'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eCustomConfiguration.02'|'Custom Definition'|''|''|''|'Mandatory'|'1'|'1'|''|'CustomDefinition'|''|''|''|''|''|'2'|'255'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomConfiguration.03'|'Custom Data Type'|''|''|''|'Mandatory'|'1'|'1'|''|'CustomDataType'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomConfiguration.04'|'Custom Data Element Recurrence'|''|''|''|'Mandatory'|'1'|'1'|''|'YesNoValues'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomConfiguration.05'|'Custom Data Element Usage'|''|''|''|'Mandatory'|'1'|'1'|''|'ElementUsage'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomConfiguration.06'|'Custom Data Element Potential Values'|''|''|''|'Optional'|'0'|'M'|''|'CustomValue'|''|''|''|''|''|'1'|'100'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomConfiguration.07'|'Custom Data Element Potential NOT Values (NV)'|''|''|''|'Optional'|'0'|'M'|''|'NV'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomConfiguration.08'|'Custom Data Element Potential Pertinent Negative Values (PN)'|''|''|''|'Optional'|'0'|'M'|''|'PN'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eCustomConfiguration.09'|'Custom Data Element Grouping ID'|''|''|''|'Optional'|'0'|'1'|''|'CorrelationID'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eCustomConfiguration.09'|'Custom Data Element Grouping ID'|''|''|''|'Optional'|'0'|'1'|''|'CorrelationID'|''|''|''|''|''|'2'|'255'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eRecord.01'|'Patient Care Report Number'|'E01_01'|'National'|'State'|'Mandatory'|'1'|'1'|''|'PatientCareReportNumber'|''|''|''|''|''|'3'|'50'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eRecord.02'|'Software Creator'|'E01_02'|'National'|'State'|'Mandatory'|'1'|'1'|''|'SoftwareCreator'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eRecord.03'|'Software Name'|'E01_03'|'National'|'State'|'Mandatory'|'1'|'1'|''|'SoftwareName'|''|''|''|''|''|'1'|'50'|''|''|''|''|''|''|''|
@@ -419,8 +419,8 @@
 'EMSDataSet'|'element'|'eOutcome.16'|'Date/Time of Hospital Discharge'|''|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'DateTimeType'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1950-01-01T00:00:00-00:00'|'2050-01-01T00:00:00-00:00'|''|''|''|'[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}'|
 'EMSDataSet'|'element'|'eOutcome.18'|'Date/Time of Emergency Department Admission'|''|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'DateTimeType'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1950-01-01T00:00:00-00:00'|'2050-01-01T00:00:00-00:00'|''|''|''|'[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}'|
 'EMSDataSet'|'element'|'eCustomResults.01'|'Custom Data Element Result'|''|''|''|'Mandatory'|'1'|'M'|'Nillable'|'CustomResults'|'NV'|'PN'|''|''|''|'1'|'100000'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eCustomResults.02'|'Custom Element ID Referenced'|''|''|''|'Mandatory'|'1'|'1'|''|'CorrelationID'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eCustomResults.03'|'CorrelationID of PatientCareReport Element or Group'|''|''|''|'Optional'|'0'|'1'|''|'CorrelationID'|''|''|''|''|''|'0'|'255'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eCustomResults.02'|'Custom Element ID Referenced'|''|''|''|'Mandatory'|'1'|'1'|''|'CorrelationID'|''|''|''|''|''|'2'|'255'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eCustomResults.03'|'CorrelationID of PatientCareReport Element or Group'|''|''|''|'Optional'|'0'|'1'|''|'CorrelationID'|''|''|''|''|''|'2'|'255'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.01'|'Review Requested'|'E23_01'|''|''|'Optional'|'0'|'1'|''|'YesNoValues'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.02'|'Potential System of Care/Specialty/Registry Patient'|'E23_02'|''|''|'Optional'|'0'|'M'|''|'PotentialRegistryCandidate'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOther.03'|'Personal Protective Equipment Used'|'E23_03'|''|''|'Optional'|'0'|'M'|''|'PersonalProtectiveEquipmentUsed'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|

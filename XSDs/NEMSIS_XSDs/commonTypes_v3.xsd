@@ -320,7 +320,7 @@
 			<xs:documentation>The correlation ID used to link custom elements</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:minLength value="0"/>
+			<xs:minLength value="2"/>
 			<xs:maxLength value="255"/>
 		</xs:restriction>
 	</xs:simpleType>

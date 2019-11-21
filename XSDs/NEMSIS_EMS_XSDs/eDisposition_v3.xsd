@@ -403,7 +403,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Grouped with Patient and Transport Dispositions. A "Referral Agency" is intended for use with specialty referral programs (such as "Safe Baby Haven", mental health or addiction, or similar programs) where EMS provides an initial medical screening as part of the intake process for the various services or programs. Depending on context of the Value, "Unit" could be Vehicle or Service/Agency.</comment>
+										<comment>Grouped with Patient and Transport Dispositions. Depending on context of the Value, "Unit" could be Vehicle or Service/Agency.</comment>
 										<v3Changes>Element added with the release of v3.5.0</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -440,7 +440,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Grouped with Patient and Incident Dispostions. Provides a rapid filter for transport or no transport for incident evaluation, business entry rules and Schematron rules.</comment>
+										<comment>Grouped with Patient and Incident Dispositions. Provides a rapid filter for transport or no transport for incident evaluation, business entry rules and Schematron rules.</comment>
 										<v3Changes>Element added with the release of v3.5.0</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -457,7 +457,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eDisposition.31" id="eDisposition.ReasonForRefusalRelease" type="ReasonForRefusalRelease" minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="eDisposition.31" id="eDisposition.ReasonForRefusalRelease" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
@@ -482,6 +482,13 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="ReasonForRefusalRelease">
+										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
 				</xs:complexType>
@@ -530,7 +537,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.15" type="HowPatientWasMovedToFromAmbulance" id="eDisposition.HowPatientWasMovedFromAmbulance" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eDisposition.15" id="eDisposition.HowPatientWasMovedFromAmbulance" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -544,6 +551,13 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="HowPatientWasMovedToFromAmbulance">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
 			</xs:element>
 			<xs:element name="eDisposition.16" nillable="true" id="eDisposition.EMSTransportMethod">
 				<xs:annotation>
@@ -804,6 +818,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
 								</xs:simpleType>
 							</xs:attribute>
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

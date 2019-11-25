@@ -252,7 +252,7 @@ Scenario: We want to extend eMedications.08 - Medication Complication with some 
 				<eMedications.MedicationGroup>
 					<eMedications.01>2011-01-01T00:00:00-00:00</eMedications.01>
 					<eMedications.02>9923003</eMedications.02>
-					<eMedications.03 CodeType="9924003">aa</eMedications.03>
+					<eMedications.03 CodeType="9924003">23</eMedications.03>
 					<eMedications.04>9927011</eMedications.04>
 					<eMedications.DosageGroup>
 						<eMedications.05>123456.12</eMedications.05>
@@ -305,6 +305,19 @@ Scenario: We want to extend eMedications.08 - Medication Complication with some 
 			<eOutcome>
 				<eOutcome.01>01</eOutcome.01>
 				<eOutcome.02>01</eOutcome.02>
+				<eOutcome.EmergencyDepartmentProceduresGroup>
+					<eOutcome.09>ABCD</eOutcome.09>
+					<eOutcome.19>2011-01-01T00:00:00-00:00</eOutcome.19>
+				</eOutcome.EmergencyDepartmentProceduresGroup>
+				<eOutcome.10>A01</eOutcome.10>
+				<eOutcome.11>2011-01-01T00:00:00-00:00</eOutcome.11>
+				<eOutcome.HospitalProceduresGroup>
+					<eOutcome.12>A01</eOutcome.12>
+					<eOutcome.20>2011-01-01T00:00:00-00:00</eOutcome.20>
+				</eOutcome.HospitalProceduresGroup>
+				<eOutcome.13>A01</eOutcome.13>
+				<eOutcome.16>2011-01-01T00:00:00-00:00</eOutcome.16>
+				<eOutcome.18>2011-01-01T00:00:00-00:00</eOutcome.18>
 			</eOutcome>
 			<eCustomResults>
 				<eCustomResults.ResultsGroup>

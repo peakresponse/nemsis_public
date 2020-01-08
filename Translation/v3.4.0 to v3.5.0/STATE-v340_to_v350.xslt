@@ -68,12 +68,27 @@ Revision Date: January 7, 2020
       <sElement>
         <xsl:apply-templates select="n:eState/n:eState.01"/>
         <xsl:apply-templates select="n:dState/n:dState.01"/>
-        <!-- Insert blank sState.01 if there are no instances of eState.01 or dState.01 -->
+        <!-- Insert blank sElement.01 if there are no instances of eState.01 or dState.01 -->
         <xsl:if test="not(n:eState/n:eState.01 or n:dState/n:dState.01)">
-          <sState xsi:nil="true" NV="7701003"/>
+          <sElement.01 xsi:nil="true" NV="7701003"/>
         </xsl:if>
       </sElement>
+        <!-- dConfiguration: Insert sConfiguration with required children if missing -->
       <xsl:apply-templates select="n:dConfiguration"/>
+      <xsl:if test="not(n:dConfiguration)">
+        <sConfiguration>
+          <sConfiguration.01 xsi:nil="true" NV="7701001"/>
+          <sConfiguration.ProcedureGroup>
+            <sConfiguration.02 xsi:nil="true" NV="7701003"/>
+            <sConfiguration.03 xsi:nil="true" NV="7701003"/>
+          </sConfiguration.ProcedureGroup>
+          <sConfiguration.MedicationGroup>
+            <sConfiguration.04 xsi:nil="true" NV="7701003"/>
+            <sConfiguration.05 xsi:nil="true" NV="7701003"/>
+          </sConfiguration.MedicationGroup>
+          <sConfiguration.06 xsi:nil="true" NV="7701003"/>
+        </sConfiguration>
+      </xsl:if>
       <xsl:apply-templates select="n:dAgency"/>
       <xsl:apply-templates select="n:dFacility"/>
     </xsl:copy>

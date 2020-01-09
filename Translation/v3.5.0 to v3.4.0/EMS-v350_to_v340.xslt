@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.160713CP2_200107
-Revision Date: January 7, 2020
+Version: 3.5.0.191130CP1_3.4.0.160713CP2_200109
+Revision Date: January 9, 2020
 
 -->
 
@@ -80,7 +80,7 @@ Revision Date: January 7, 2020
   </xsl:template>
 
   <!-- eResponse.08: Map "Communication Specialist-Assignment Error", "No Receiving MD, Bed, Hospital", "Specialty Team Delay" to "Other" -->
-  <xsl:template match="n:eDispatch.08[. = ('2208019', '2208021', '2208023')]">
+  <xsl:template match="n:eResponse.08[. = ('2208019', '2208021', '2208023')]">
     <xsl:copy>2208015</xsl:copy>
   </xsl:template>
 
@@ -184,10 +184,7 @@ Revision Date: January 7, 2020
 
   <!-- ePatient.13: Map "Female-to-Male, Transgender Male", "Male-to-Female, Transgender Female", "Other, neither exclusively male or female" to "Not Recorded" -->
   <xsl:template match="n:ePatient.13[. = ('9906007', '9906009', '9906011')]">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:text></xsl:text>
-    </xsl:copy>
+    <xsl:copy use-attribute-sets="NotRecorded"/>
   </xsl:template>
 
   <!-- ePatient.18: Remove if blank (@PN not supported) -->
@@ -296,7 +293,7 @@ Revision Date: January 7, 2020
   <xsl:template match="n:eArrest.22"/>
 
   <!-- eHistory.01: Map "Alcohol Use, Suspected", "Drug Use, Suspected" to "Not Recorded" -->
-  <xsl:template match="n:eHistory.11[. = ('3101033', '3101035')]">
+  <xsl:template match="n:eHistory.01[. = ('3101033', '3101035')]">
     <xsl:copy use-attribute-sets="NotRecorded"/>
   </xsl:template>
 
@@ -364,7 +361,7 @@ Revision Date: January 7, 2020
     <xsl:copy>
       <!-- @ETCO2Type: Remove -->
       <!-- BTPS (Body Temperature, Pressure Saturated): normal air pressure = 760mmHg; water vapor pressure = 47mmHg -->
-      <xsl:value-of select="round(760 div 47 * . div 100)"/>
+      <xsl:value-of select="round((760 - 47) * . div 100)"/>
     </xsl:copy>
   </xsl:template>
 
@@ -433,9 +430,9 @@ Revision Date: January 7, 2020
       <xsl:apply-templates select="n:eExam.06"/>
       <xsl:apply-templates select="n:eExam.07"/>
       <!-- eExam.LungGroup: Map to eExam.08 -->
-      <xsl:apply-templates select="n:eExam.LungGroup"/>
+      <xsl:apply-templates select="n:eExam.LungGroup/n:eExam.23"/>
       <!-- eExam.ChestGroup: Map to eExam.08 -->
-      <xsl:apply-templates select="n:eExam.ChestGroup"/>
+      <xsl:apply-templates select="n:eExam.ChestGroup/n:eExam.25"/>
       <xsl:apply-templates select="n:eExam.09"/>
       <xsl:apply-templates select="n:eExam.AbdomenGroup"/>
       <xsl:apply-templates select="n:eExam.12"/>
@@ -448,100 +445,100 @@ Revision Date: January 7, 2020
   </xsl:template>
 
   <!-- eExam.LungGroup => eExam.08 -->
-  <xsl:template match="n:eExam.LungGroup">
+  <xsl:template match="n:eExam.23">
     <xsl:choose>
       <!-- Breath Sounds-Absent  => Breath Sounds-Absent-Left or Breath Sounds-Absent-Right -->
-      <xsl:when test="n:eExam.23 = '3523001'">
+      <xsl:when test=". ='3523001'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508011', '3508013')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Breath Sounds-Decreased => Breath Sounds-Decreased-Left or Breath Sounds-Decreased-Right -->
-      <xsl:when test="n:eExam.23 = '3523003'">
+      <xsl:when test=". ='3523003'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508015', '3508017')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Breath Sounds-Equal -->
-      <xsl:when test="n:eExam.23 = '3523005'">
+      <xsl:when test=". ='3523005'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508019')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Breath Sounds-Normal => Breath Sounds-Normal-Left or Breath Sounds-Normal-Right -->
-      <xsl:when test="n:eExam.23 = '3523007'">
+      <xsl:when test=". ='3523007'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508021', '3508023')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Foreign Body => Foreign Body -->
-      <xsl:when test="n:eExam.23 = '3523009'">
+      <xsl:when test=". ='3523009'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508041')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Increased Respiratory Effort => Increased Respiratory Effort -->
-      <xsl:when test="n:eExam.23 = '3523011'">
+      <xsl:when test=". ='3523011'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508047')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Normal => Normal -->
-      <xsl:when test="n:eExam.23 = '3523013'">
+      <xsl:when test=". ='3523013'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508053')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Not Done => Not Done -->
-      <xsl:when test="n:eExam.23 = '3523015'">
+      <xsl:when test=". ='3523015'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508055')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Pain => Pain -->
-      <xsl:when test="n:eExam.23 = '3523017'">
+      <xsl:when test=". ='3523017'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508057')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Pain with Inspiraton/Expiration => Pain with Inspiraton/expiration-Left or Pain with Inspiraton/expiration-Right -->
-      <xsl:when test="n:eExam.23 = '3523019'">
+      <xsl:when test=". ='3523019'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508059', '3508061')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Rales => Rales-Left or Rales-Right -->
-      <xsl:when test="n:eExam.23 = '3523021'">
+      <xsl:when test=". ='3523021'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508065', '3508067')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Rhonchi => Rhonchi-Left or Rhonchi-Right -->
-      <xsl:when test="n:eExam.23 = '3523023'">
+      <xsl:when test=". ='3523023'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508071', '3508073')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Rhonchi/Wheezing => Rhonchi/Wheezing -->
-      <xsl:when test="n:eExam.23 = '3523025'">
+      <xsl:when test=". ='3523025'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508075')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Stridor => Stridor-Left or Stridor-Right -->
-      <xsl:when test="n:eExam.23 = '3523027'">
+      <xsl:when test=". ='3523027'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508077', '3508079')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Wheezing-Expiratory => Wheezing-Expiratory-Left or Wheezing-Expiratory-Right -->
-      <xsl:when test="n:eExam.23 = '3523029'">
+      <xsl:when test=". ='3523029'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508089', '3508091')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Wheezing-Inspiratory => Wheezing-Inspiratory-Left or Wheezing-Inspiratory-Right -->
-      <xsl:when test="n:eExam.23 = '3523031'">
+      <xsl:when test=". ='3523031'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508093', '3508095')"/>
         </xsl:call-template>
@@ -550,154 +547,154 @@ Revision Date: January 7, 2020
   </xsl:template>
 
   <!-- eExam.ChestGroup => eExam.08-->
-  <xsl:template match="n:eExam.ChestGroup">
+  <xsl:template match="n:eExam.25">
     <xsl:choose>
       <!-- Abrasion -->
-      <xsl:when test="n:eExam.25 = '3525001'">
+      <xsl:when test=". ='3525001'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508001')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Avulsion -->
-      <xsl:when test="n:eExam.25 = '3525003'">
+      <xsl:when test=". ='3525003'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508003')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Accessory Muscles Used with Breathing -->
-      <xsl:when test="n:eExam.25 = '3525005'">
+      <xsl:when test=". ='3525005'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508005')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Bleeding Controlled -->
-      <xsl:when test="n:eExam.25 = '3525007'">
+      <xsl:when test=". ='3525007'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508007')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Bleeding Uncontrolled -->
-      <xsl:when test="n:eExam.25 = '3525009'">
+      <xsl:when test=". ='3525009'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508009')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Burn-Blistering -->
-      <xsl:when test="n:eExam.25 = '3525011'">
+      <xsl:when test=". ='3525011'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508025')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Burn-Charring -->
-      <xsl:when test="n:eExam.25 = '3525013'">
+      <xsl:when test=". ='3525013'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508027')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Burn-Redness -->
-      <xsl:when test="n:eExam.25 = '3525015'">
+      <xsl:when test=". ='3525015'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508029')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Burn-White/Waxy -->
-      <xsl:when test="n:eExam.25 = '3525017'">
+      <xsl:when test=". ='3525017'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508031')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Crush Injury -->
-      <xsl:when test="n:eExam.25 = '3525019'">
+      <xsl:when test=". ='3525019'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508033')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Deformity -->
-      <xsl:when test="n:eExam.25 = '3525021'">
+      <xsl:when test=". ='3525021'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508035')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Flail Segment => Flail Segment-Left or Flail Segment-Right -->
-      <xsl:when test="n:eExam.25 = '3525023'">
+      <xsl:when test=". ='3525023'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508037', '3508039')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Implanted Device -->
-      <xsl:when test="n:eExam.25 = '3525025'">
+      <xsl:when test=". ='3525025'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508049')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Laceration -->
-      <xsl:when test="n:eExam.25 = '3525027'">
+      <xsl:when test=". ='3525027'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508051')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Normal -->
-      <xsl:when test="n:eExam.25 = '3525029'">
+      <xsl:when test=". ='3525029'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508053')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Not Done -->
-      <xsl:when test="n:eExam.25 = '3525031'">
+      <xsl:when test=". ='3525031'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508055')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Pain -->
-      <xsl:when test="n:eExam.25 = '3525033'">
+      <xsl:when test=". ='3525033'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508057')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Pain with Inspiration/Expiration => Pain with Inspiration/expiration-Left or Pain with Inspiration/expiration-Right -->
-      <xsl:when test="n:eExam.25 = '3525035'">
+      <xsl:when test=". ='3525035'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508059', '3508061')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Puncture/Stab Wound -->
-      <xsl:when test="n:eExam.25 = '3525037'">
+      <xsl:when test=". ='3525037'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508063')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Retraction -->
-      <xsl:when test="n:eExam.25 = '3525039'">
+      <xsl:when test=". ='3525039'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508069')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Tenderness-->
-      <xsl:when test="n:eExam.25 = '3525041'">
+      <xsl:when test=". ='3525041'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508085', '3508087')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Gunshot Wound -->
-      <xsl:when test="n:eExam.25 = '3525043'">
+      <xsl:when test=". ='3525043'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508097')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Swelling -->
-      <xsl:when test="n:eExam.25 = '3525045'">
+      <xsl:when test=". ='3525045'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508099')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Contusion -->
-      <xsl:when test="n:eExam.25 = '3525047'">
+      <xsl:when test=". ='3525047'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508101')"/>
         </xsl:call-template>
       </xsl:when>
       <!-- Tenderness-General -->
-      <xsl:when test="n:eExam.25 = '3525049'">
+      <xsl:when test=". ='3525049'">
         <xsl:call-template name="eExam08">
           <xsl:with-param name="values" select="('3508103')"/>
         </xsl:call-template>
@@ -713,7 +710,7 @@ Revision Date: January 7, 2020
       <!-- One value in $values: copy to eExam.08 -->
       <xsl:when test="count($values) = 1">
         <eExam.08>
-          <xsl:apply-templates select=".//@*"/>
+          <xsl:apply-templates select="@*"/>
           <xsl:value-of select="$values[1]"/>
         </eExam.08>
       </xsl:when>
@@ -721,28 +718,28 @@ Revision Date: January 7, 2020
       <xsl:otherwise>
         <xsl:choose>
           <!-- Left => ...-Left -->
-          <xsl:when test="n:eExam.22 = '3522001' or n:eExam.24 = '3524001'">
+          <xsl:when test="../n:eExam.22 = '3522001' or ../n:eExam.24 = '3524001'">
             <eExam.08>
-              <xsl:apply-templates select=".//@*"/>
+              <xsl:apply-templates select="@*"/>
               <xsl:value-of select="$values[1]"/>
             </eExam.08>
           </xsl:when>
           <!-- Right => ...-Right -->
-          <xsl:when test="n:eExam.22 = '3522003' or n:eExam.24 = '3524003'">
+          <xsl:when test="../n:eExam.22 = '3522003' or ../n:eExam.24 = '3524003'">
             <eExam.08>
-              <xsl:apply-templates select=".//@*"/>
+              <xsl:apply-templates select="@*"/>
               <xsl:value-of select="$values[2]"/>
             </eExam.08>
           </xsl:when>
           <!-- Otherwise (Bilateral, General, missing) => ...-Left and ...-Right -->
           <xsl:otherwise>
             <eExam.08>
-              <xsl:apply-templates select=".//@*"/>
+              <xsl:apply-templates select="@*"/>
               <xsl:value-of select="$values[1]"/>
             </eExam.08>
             <eExam.08>
               <!-- Copy @CorrelationID to first instance only -->
-              <xsl:apply-templates select=".//@PN"/>
+              <xsl:apply-templates select="@PN"/>
               <xsl:value-of select="$values[2]"/>
             </eExam.08>
           </xsl:otherwise>
@@ -772,8 +769,10 @@ Revision Date: January 7, 2020
 
   <!-- eProtocols.02: Insert if missing -->
   <xsl:template match="n:eProtocols.ProtocolGroup[not(n:eProtocols.02)]">
-    <xsl:apply-templates select="@* | node()"/>
-    <eProtocols.02 xsi:nil="true" NV="7701003"/>
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+      <eProtocols.02 xsi:nil="true" NV="7701003"/>
+    </xsl:copy>
   </xsl:template>
 
   <!-- eProtocols.02/@NV: Map "Not Reporting" to "Not Recorded" -->
@@ -1063,7 +1062,7 @@ Revision Date: January 7, 2020
     </xsl:copy>
     <eOther>
       <eOther.EMSCrewMemberGroup>
-        <eOther.05 xsi:nil="true" NV="7700103"/>
+        <eOther.05 xsi:nil="true" NV="7701003"/>
       </eOther.EMSCrewMemberGroup>
     </eOther>
   </xsl:template>
@@ -1074,7 +1073,7 @@ Revision Date: January 7, 2020
       <xsl:apply-templates select="n:eOther.01"/>
       <xsl:apply-templates select="n:eOther.02"/>
       <eOther.EMSCrewMemberGroup>
-        <eOther.05 xsi:nil="true" NV="7700103"/>
+        <eOther.05 xsi:nil="true" NV="7701003"/>
       </eOther.EMSCrewMemberGroup>
       <xsl:apply-templates select="n:eOther.07"/>
       <xsl:apply-templates select="n:eOther.08"/>
@@ -1089,7 +1088,7 @@ Revision Date: January 7, 2020
       <xsl:apply-templates select="@*"/>
       <xsl:apply-templates select="n:eOther.03"/>
       <xsl:apply-templates select="n:eOther.04"/>
-      <eOther.05 xsi:nil="true" NV="7700103"/>
+      <eOther.05 xsi:nil="true" NV="7701003"/>
       <xsl:apply-templates select="n:eOther.06"/>
     </xsl:copy>
   </xsl:template>

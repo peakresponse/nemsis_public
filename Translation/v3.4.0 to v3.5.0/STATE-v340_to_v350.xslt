@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS StateDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.160713CP2_3.5.0.191130CP1_200107
-Revision Date: January 7, 2020
+Version: 3.4.0.160713CP2_3.5.0.191130CP1_200109
+Revision Date: January 9, 2020
 
 -->
 
@@ -18,6 +18,11 @@ Revision Date: January 7, 2020
 	exclude-result-prefixes="n xs">
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+
+  <xsl:attribute-set name="NotRecorded">
+    <xsl:attribute name="xsi:nil">true</xsl:attribute>
+    <xsl:attribute name="NV">7701003</xsl:attribute>
+  </xsl:attribute-set>
 
   <xsl:key name="key_element_names" match="n:element" use="@v340"/>
 
@@ -61,7 +66,7 @@ Revision Date: January 7, 2020
         <sSoftware.SoftwareGroup>
           <sSoftware.01>NEMSIS Technical Assistance Center</sSoftware.01>
           <sSoftware.02>NEMSIS XSL Translation</sSoftware.02>
-          <sSoftware.03>3.4.0.160713CP2_3.5.0.191130CP1_200107</sSoftware.03>
+          <sSoftware.03>3.4.0.160713CP2_3.5.0.191130CP1_200109</sSoftware.03>
         </sSoftware.SoftwareGroup>
       </sSoftware>
       <!-- dState.01, eState.01: Combine -->
@@ -368,25 +373,21 @@ Revision Date: January 7, 2020
     <xsl:element name="{n:name(.)}">9917003</xsl:element>
   </xsl:template>
 
-  <!-- dConfiguration.08, dConfiguration.08: Map "EMT-Basic" to "Emergency Medical Technician (EMT)" -->
+  <!-- dConfiguration.06, dConfiguration.08: Map "EMT-Basic" to "Emergency Medical Technician (EMT)" -->
   <xsl:template match="n:dConfiguration.06[. = '9917011'] | 
                        n:dConfiguration.08[. = '9917011']">
-    <xsl:copy>9917005</xsl:copy>
+    <xsl:element name="{n:name(.)}">9917005</xsl:element>
   </xsl:template>
 
   <!-- dConfiguration.06, dConfiguration.08: Map "EMT-Intermediate" to "Emergency Medical Technician - Intermediate" -->
   <xsl:template match="n:dConfiguration.06[. = '9917013'] | 
                        n:dConfiguration.08[. = '9917013']">
-    <xsl:copy>9917002</xsl:copy>
+    <xsl:element name="{n:name(.)}">9917002</xsl:element>
   </xsl:template>
 
-  <!-- dFacility.04: Map "Stroke Center" to "Stroke-Primary Stroke Center (PSC)" -->
-  <!-- JL: Check. See https://www.jointcommission.org/certification/dsc_neuro2.aspx. -->
+  <!-- dFacility.04: Map "Stroke Center" to "Not Recorded" -->
   <xsl:template match="n:dFacility.04[. = '9908017']">
-    <xsl:element name="{n:name(.)}">
-      <xsl:apply-templates select="@*"/>
-      <xsl:text>9908039</xsl:text>
-    </xsl:element>
+    <xsl:element name="{n:name(.)}"  use-attribute-sets="NotRecorded"/>
   </xsl:template>
 
   <!-- dFacility.15/@CorrelationID: Remove -->

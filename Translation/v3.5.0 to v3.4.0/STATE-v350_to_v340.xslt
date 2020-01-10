@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS StateDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.160713CP2_200107
-Revision Date: January 7, 2020
+Version: 3.5.0.191130CP1_3.4.0.160713CP2_200109
+Revision Date: January 9, 2020
 
 -->
 
@@ -131,8 +131,8 @@ Revision Date: January 7, 2020
   <!-- sConfiguration.02: Remove if empty -->
   <xsl:template match="n:sConfiguration.02[. = '']"/>
 
-  <!-- sConfiguration.04: Map "Emergency Medical Technician - Intermediate" to "EMT-Intermediate" -->
-  <xsl:template match="n:sConfiguration.04[. = '9917002']">
+  <!-- sConfiguration.02, sConfiguration.04: Map "Emergency Medical Technician - Intermediate" to "EMT-Intermediate" -->
+  <xsl:template match="n:sConfiguration.02[. = '9917002'] | n:sConfiguration.04[. = '9917002']">
     <xsl:element name="{n:name(.)}">
       <xsl:text>9917013</xsl:text>
     </xsl:element>
@@ -172,11 +172,11 @@ Revision Date: January 7, 2020
   <!-- sFacility.04: Remove if empty -->
   <xsl:template match="n:sFacility.04[. = '']"/>
 
-  <!-- sdFacility.04: Map "Stroke-..." to "Stroke Center" -->
+  <!-- sFacility.04: Map "Stroke-..." to "Stroke Center" -->
   <xsl:template match="n:sFacility.04[. = ('9908037', '9908039', '9908041', '9908043')]">
     <xsl:element name="{n:name(.)}">
       <xsl:apply-templates select="@*"/>
-      <xsl:text>9908039</xsl:text>
+      <xsl:text>9908017</xsl:text>
     </xsl:element>
   </xsl:template>
 

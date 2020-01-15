@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS DEMDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.160713CP2_3.5.0.191130CP1_200109
-Revision Date: January 9, 2020
+Version: 3.4.0.160713CP2_3.5.0.191130CP1_200115
+Revision Date: January 15, 2020
 
 -->
 
@@ -18,6 +18,11 @@ Revision Date: January 9, 2020
 	exclude-result-prefixes="n">
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+
+  <xsl:attribute-set name="NotRecorded">
+    <xsl:attribute name="xsi:nil" namespace="http://www.w3.org/2001/XMLSchema-instance">true</xsl:attribute>
+    <xsl:attribute name="NV">7701003</xsl:attribute>
+  </xsl:attribute-set>
 
   <xsl:template match="/">
     <xsl:comment>&#32;This NEMSIS 3.5.0 document was generated from a NEMSIS 3.4.0 document via an XML Stylesheet Language Transformation (XSLT). It is not valid per the NEMSIS 3.5.0 XSD due to lack of support to UUIDs (see the NEMSIS V3 UUID Guide for more information).&#32;</xsl:comment>
@@ -156,13 +161,9 @@ Revision Date: January 9, 2020
     <xsl:copy>1529003</xsl:copy>
   </xsl:template>
 
-  <!-- dFacility.04: Map "Stroke Center" to "Stroke-Primary Stroke Center (PSC)" -->
-  <!-- JL: Check. See https://www.jointcommission.org/certification/dsc_neuro2.aspx. -->
+  <!-- dFacility.04: Map "Stroke Center" to "Not Recorded" -->
   <xsl:template match="n:dFacility.04[. = '9908017']">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:text>9908039</xsl:text>
-    </xsl:copy>
+    <xsl:copy use-attribute-sets="NotRecorded"/>
   </xsl:template>
 
 </xsl:stylesheet>

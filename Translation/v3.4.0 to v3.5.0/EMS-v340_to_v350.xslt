@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.160713CP2_3.5.0.191130CP1_200109
-Revision Date: January 9, 2020
+Version: 3.4.0.160713CP2_3.5.0.191130CP1_200115
+Revision Date: January 15, 2020
 
 -->
 
@@ -20,7 +20,7 @@ Revision Date: January 9, 2020
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
   <xsl:attribute-set name="NotRecorded">
-    <xsl:attribute name="xsi:nil">true</xsl:attribute>
+    <xsl:attribute name="xsi:nil" namespace="http://www.w3.org/2001/XMLSchema-instance">true</xsl:attribute>
     <xsl:attribute name="NV">7701003</xsl:attribute>
   </xsl:attribute-set>
 
@@ -162,9 +162,9 @@ Revision Date: January 9, 2020
     <xsl:copy>3519037</xsl:copy>
   </xsl:template>
 
-  <!-- eExam.20: Map "Seizures" to "Other Seizure" -->
+  <!-- eExam.20: Map "Seizures" to "Other Seizures" -->
   <xsl:template match="n:eExam.20[. = '3520025']">
-    <xsl:copy>3520026</xsl:copy>
+    <xsl:copy>3520055</xsl:copy>
   </xsl:template>
 
   <!-- eSituation: Insert required elements if missing -->
@@ -903,7 +903,7 @@ Revision Date: January 9, 2020
   </xsl:template>
 
   <!-- eOther.15: Map "Refused" to "Not Signed - Refused" -->
-  <xsl:template match="n:eOther.09[. = '4515029']">
+  <xsl:template match="n:eOther.15[. = '4515029']">
     <xsl:copy>4515019</xsl:copy>
   </xsl:template>
 

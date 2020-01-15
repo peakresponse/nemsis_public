@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS DEMDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.160713CP2_200109
-Revision Date: January 9, 2020
+Version: 3.5.0.191130CP1_3.4.0.160713CP2_200115
+Revision Date: January 15, 2020
 
 -->
 
@@ -20,7 +20,7 @@ Revision Date: January 9, 2020
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
   <xsl:attribute-set name="NotRecorded">
-    <xsl:attribute name="xsi:nil">true</xsl:attribute>
+    <xsl:attribute name="xsi:nil" namespace="http://www.w3.org/2001/XMLSchema-instance">true</xsl:attribute>
     <xsl:attribute name="NV">7701003</xsl:attribute>
   </xsl:attribute-set>
 

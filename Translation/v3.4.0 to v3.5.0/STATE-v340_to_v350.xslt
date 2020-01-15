@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS StateDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.160713CP2_3.5.0.191130CP1_200109
-Revision Date: January 9, 2020
+Version: 3.4.0.160713CP2_3.5.0.191130CP1_200115
+Revision Date: January 15, 2020
 
 -->
 
@@ -20,7 +20,7 @@ Revision Date: January 9, 2020
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
   <xsl:attribute-set name="NotRecorded">
-    <xsl:attribute name="xsi:nil">true</xsl:attribute>
+    <xsl:attribute name="xsi:nil" namespace="http://www.w3.org/2001/XMLSchema-instance">true</xsl:attribute>
     <xsl:attribute name="NV">7701003</xsl:attribute>
   </xsl:attribute-set>
 
@@ -66,7 +66,7 @@ Revision Date: January 9, 2020
         <sSoftware.SoftwareGroup>
           <sSoftware.01>NEMSIS Technical Assistance Center</sSoftware.01>
           <sSoftware.02>NEMSIS XSL Translation</sSoftware.02>
-          <sSoftware.03>3.4.0.160713CP2_3.5.0.191130CP1_200109</sSoftware.03>
+          <sSoftware.03>3.4.0.160713CP2_3.5.0.191130CP1_200115</sSoftware.03>
         </sSoftware.SoftwareGroup>
       </sSoftware>
       <!-- dState.01, eState.01: Combine -->

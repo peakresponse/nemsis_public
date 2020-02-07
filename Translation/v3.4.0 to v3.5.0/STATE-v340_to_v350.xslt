@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS StateDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.160713CP2_3.5.0.191130CP1_200115
-Revision Date: January 15, 2020
+Version: 3.4.0.160713CP2_3.5.0.191130CP1_200206
+Revision Date: February 6, 2020
 
 -->
 
@@ -66,7 +66,7 @@ Revision Date: January 15, 2020
         <sSoftware.SoftwareGroup>
           <sSoftware.01>NEMSIS Technical Assistance Center</sSoftware.01>
           <sSoftware.02>NEMSIS XSL Translation</sSoftware.02>
-          <sSoftware.03>3.4.0.160713CP2_3.5.0.191130CP1_200115</sSoftware.03>
+          <sSoftware.03>3.4.0.160713CP2_3.5.0.191130CP1_200206</sSoftware.03>
         </sSoftware.SoftwareGroup>
       </sSoftware>
       <!-- dState.01, eState.01: Combine -->
@@ -383,6 +383,12 @@ Revision Date: January 15, 2020
   <xsl:template match="n:dConfiguration.06[. = '9917013'] | 
                        n:dConfiguration.08[. = '9917013']">
     <xsl:element name="{n:name(.)}">9917002</xsl:element>
+  </xsl:template>
+
+  <!-- dConfiguration.06, dConfiguration.08: Map "EMT-Paramedic" to "Paramedic" -->
+  <xsl:template match="n:dConfiguration.06[. = '9917015'] | 
+                       n:dConfiguration.08[. = '9917015']">
+    <xsl:element name="{n:name(.)}">9917007</xsl:element>
   </xsl:template>
 
   <!-- dFacility.04: Map "Stroke Center" to "Not Recorded" -->

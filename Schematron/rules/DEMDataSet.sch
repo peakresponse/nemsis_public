@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.190607" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.200219CR1" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -611,8 +611,6 @@
 
   <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.13.xml?><sch:pattern id="nemSch_consistency_dAgency.13">
 
-  <!-- This pattern validates that dAgency.26 Fire Department ID Number is recorded when dAgency.13 Organizational Type is "Fire Department" and is not recorded when dAgency.13 Organizational Type is not "Fire Department". -->
-
   <sch:title>Fire Department ID Number is recorded when Organizational Type is "Fire Department" and is not recorded when Organizational Type is not "Fire Department".</sch:title>
 
   <sch:rule id="nemSch_consistency_dAgency.13_dAgency.26" context="nem:dAgency.13">
@@ -620,19 +618,17 @@
     <sch:let name="nemsisElements" value="., ../nem:dAgency.26"/>
 
     <sch:assert id="nemSch_consistency_dAgency.13_dAgency.26_fire" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". != '9912001' or ../nem:dAgency.26 != ''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department", <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should be recorded.
+      <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
     </sch:assert>
 
     <sch:assert id="nemSch_consistency_dAgency.13_dAgency.26_nonfire" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = '9912001' or ../nem:dAgency.26 = ''">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is not "Fire Department", <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should not be recorded.
+      <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
     </sch:assert>
 
   </sch:rule>
 
 </sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_dAgency.13.xml?>
   <?DSDL_INCLUDE_START includes/pattern_consistency_dAgency.ServiceGroup.xml?><sch:pattern id="nemSch_consistency_dAgency.ServiceGroup">
-
-  <!-- This pattern validates that each instance of dAgency.06 EMS Agency Service Area County(ies) belongs within the state recorded in dAgency.05 EMS Agency Service Area States and each instance of dAgency.07 EMS Agency Census Tracts belongs within a county recorded in dAgency.06 EMS Agency Service Area County(ies) within the state recorded in dAgency.04 EMS Agency Service Area States. -->
 
   <sch:title>EMS Agency Service Area County belongs to the EMS Agency Service Area State with which it is grouped and EMS Agency Service Area Census Tract belongs to an EMS Agency Service Area County and the EMS Agency Service Area State with which it is grouped.</sch:title>
 
@@ -650,123 +646,66 @@
 
     <sch:let name="nemsisElements" value="../nem:dAgency.05, ../nem:dAgency.06, ."/>
 
-    <sch:assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06" role="[ERROR]" diagnostics="nemsisDiagnostic" test="substring(., 1, 5) = ../nem:dAgency.06">
+    <sch:assert id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07_dAgency.06" role="[WARNING]" diagnostics="nemsisDiagnostic" test="substring(., 1, 5) = ../nem:dAgency.06">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong to a county recorded in <sch:value-of select="key('nemSch_key_elements', 'dAgency.06', $nemSch_elements)"/> in the state with which it is grouped.
     </sch:assert>
 
   </sch:rule>
 
 </sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_dAgency.ServiceGroup.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_consistency_NilNvPn.xml?><sch:pattern id="nemSch_consistency_nilNvPn">
+  <?DSDL_INCLUDE_START includes/pattern_consistency_dNilNvPn.xml?><sch:pattern id="nemSch_consistency_dNilNvPn">
 
   <!-- This pattern allows the following combinations of nil, NV, and PN attributes:
-         * For dCustomResults.01 and eCustomResults.01: Any combination
-         * For elements in eExam.AssessmentGroup: PN (nil and NV are not allowed per the XSD)
-         * For eMedications.03 and eProcedures.03 only: PN and not(nil) and not(NV)
+         * For dCustomResults.01: Any combination
          * nil and either NV or PN but not both
        If an element has neither nil, NV, nor PN, the rules in this pattern are not fired (other 
-       than the dummy rule for CustomResults).
+       than the rule for dCustomResults that will never generated a failed assert).
        The XSD ensures consistency between the nil attribute and whether the element is empty, so 
        that combination is not checked here.
   -->
 
   <sch:title>The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate.</sch:title>
 
-  <sch:rule id="nemSch_nilNvPn_customResults" context="nem:dCustomResults.01 | nem:eCustomResults.01">
+  <sch:rule id="nemSch_consistency_dNilNvPn_customResults" context="nem:dCustomResults.01">
 
-    <!-- This rule fires when dCustomResults.01 or eCustomResults.01 Custom Data Element Result has 
-         a Pertinent Negative attribute. Nothing is checked. CustomResults should be validated 
-         based on information contained in CustomConfiguration. -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
-    </sch:report>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_nilNvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup//*[@PN]">
-
-    <!-- This rule fires when an element in eExam.AssessmentGroup has a Pertinent Negative 
-         attribute. Nothing is checked, since the nil and NV attributes are not allowed.  -->
+    <!-- This rule fires when dCustomResults.01 Custom Data Element Result has a Pertinent 
+         Negative attribute. Nothing is checked. CustomResults should be validated based on 
+         information contained in CustomConfiguration. -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the combination of xsi:nil, Not Value, and Pertinent Negative attributes on dCustomResults.01.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Pn_medication_procedure" context="nem:eMedications.03[@PN] | nem:eProcedures.03[@PN]">
+  <sch:rule id="nemSch_consistency_dNilNvPn_Nil" context="*[@xsi:nil = 'true']">
 
-    <!-- This rule fires when eMedications.03 Medication Given or eProcedures.03 Procedure has a 
-         Pertinent Negative attribute. -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <!-- Assert that the element should also have a value and should not have a Not Value 
-         attribute. -->
-
-    <sch:assert id="nemSch_nilNvPn_Pn_Not_NilNv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@NV) and not(@xsi:nil = 'true')">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_nilNvPn_Pn" context="*[@PN]">
-
-    <!-- This rule fires when an element (other than those selected in the previous rules) has a 
-         Pertinent Negative attribute. -->
+    <!-- This rule fires when an element is empty. -->
 
     <sch:let name="nemsisElements" value="."/>
 
-    <!-- Assert that the element should be empty and should not have a Not Value attribute. -->
-
-    <sch:assert id="nemSch_nilNvPn_Pn_Nv_Not_Nil" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@NV) and @xsi:nil = 'true'">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_nilNvPn_nil" context="*[@xsi:nil = 'true']">
-
-    <!-- This rule fires when an element is empty (and does not have a Pertinent Negative 
-         attribute). -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <!-- Assert that the element should have a Not Value attribute or a Pertinent Negative 
-         attribute. The presence of a Pertinent Negative attribute is not specifically asserted
-         because if it was present, one of the rules above would have fired instead of this one. -->
-
-    <sch:assert id="nemSch_nilNvPn_nil_Nv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
+    <sch:assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@NV">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_nilNvPn_Nv" context="*[@NV]">
+  <sch:rule id="nemSch_consistency_dNilNvPn_Nv" context="*[@NV]">
 
-    <!-- This rule fires when an element has a Not Value attribute (but does not have a Pertinent 
-         Negative attribute and is not empty). -->
+    <!-- This rule fires when an element has a Not Value attribute and is not empty. -->
 
     <sch:let name="nemsisElements" value="."/>
 
-    <!-- Assert that the element should be empty. (This is not specifically asserted because if 
-         the element was empty, the rule above would have fired instead of this one). -->
-    
-    <sch:assert id="nemSch_nilNvPn_Nv_Nil" role="[ERROR]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil='true'">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
     </sch:assert>
 
   </sch:rule>
 
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_NilNvPn.xml?>
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_consistency_dNilNvPn.xml?>
   <?DSDL_INCLUDE_START includes/pattern_sequence_dAgency.AgencyYearGroup.xml?><sch:pattern id="nemSch_sequence_dAgency.AgencyYearGroup">
-
-  <!-- This pattern validates that dAgency.15 Statistical Calendar Year is in the past. -->
 
   <sch:title>Statistical Calendar Year is in the past.</sch:title>
 
@@ -783,16 +722,13 @@
 </sch:pattern><?DSDL_INCLUDE_END includes/pattern_sequence_dAgency.AgencyYearGroup.xml?>
   <?DSDL_INCLUDE_START includes/pattern_uniqueness_DEMDataSet.xml?><sch:pattern id="nemSch_uniqueness_DEMDataSet">
 
-  <!-- This pattern validates that values for certain recurring agency demographic elements are 
-       unique within a list.  -->
-
   <sch:title>Certain recurring demographic data elements are unique within a list.</sch:title>
 
   <sch:rule id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup" context="nem:dAgency.15[.=../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15]">
 
     <sch:let name="nemsisElements" value="../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15[.=current()], ."/>
 
-    <sch:assert id="nemSch_uniqueness_DEMDataSet_dAgency.15" role="[ERROR]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_uniqueness_DEMDataSet_dAgency.15" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
       Agency statistics for a particular <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded once.
     </sch:assert>
 
@@ -812,78 +748,45 @@
 
     <sch:let name="nemsisElements" value="preceding-sibling::nem:dConfiguration.16[.=current()], ."/>
 
-    <sch:assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.16_assert" role="[ERROR]" diagnostics="nemsisDiagnostic" test="false()">
-      Each <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique.
+    <sch:assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.16_assert" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same call sign should not be listed more than once).
     </sch:assert>
 
   </sch:rule>
 
 </sch:pattern><?DSDL_INCLUDE_END includes/pattern_uniqueness_DEMDataSet.xml?>
-  <?DSDL_INCLUDE_START includes/pattern_uniqueness_NvPn.xml?><sch:pattern id="nemSch_uniqueness_NvPn">
-
-  <!-- This pattern validates that if a Not Value or Pertinent Negative is recorded for a 
-       recurring element, no other instances of the element are recorded. -->
+  <?DSDL_INCLUDE_START includes/pattern_uniqueness_dNvPn.xml?><sch:pattern id="nemSch_uniqueness_dNvPn">
 
   <sch:title>When a Not Value or Pertinent Negative is recorded for a recurring element, it is the only value recorded.</sch:title>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_customResults" context="nem:dCustomResults.01 | nem:eCustomResults.01">
+  <sch:rule id="nemSch_uniqueness_dNvPn_dCustomResults" context="nem:dCustomResults.01">
 
-    <!-- This rule fires when dCustomResults.01 or eCustomResults.01 Custom Data Element Result 
-         has a Pertinent Negative attribute. Nothing is checked. CustomResults should be validated 
-         based on information contained in CustomConfiguration. -->
-
-    <sch:let name="nemsisElements" value="."/>
-
-    <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
-    </sch:report>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_uniqueness_NvPn_eExam.AssessmentGroup" context="nem:eExam.AssessmentGroup//*[@PN]">
-
-    <!-- This rule fires when an element in eExam.AssessmentGroup has a Pertinent Negative 
-         attribute. Nothing is checked, since the Pertinent Negative accompanies a value.  -->
+    <!-- This rule fires on dCustomResults.01 to prevent subsequent rules from firing. Nothing is 
+         checked. eCustomResults should be validated based on information contained in 
+         eCustomConfiguration. -->
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      Dummy report needed to make this rule valid. This report will never succeed.
+      This rule enforces no constraints on the uniqueness of dCustomResults.01 with Not Value or Pertinent Negative attribute.
     </sch:report>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_Nv" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
+  <sch:rule id="nemSch_uniqueness_dNvPn_Nv" context="*[@NV][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
 
     <!-- This rule fires when a recurring element (other than those selected in the previous 
          rules) has a Not Value attribute. -->
 
     <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
 
-    <!-- Assert that the Not Value should be the only value recorded for the element.  -->
-
-    <sch:assert id="nemSch_uniqueness_NvPn_Nv_only" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value, no other <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded.
+    <sch:assert id="nemSch_uniqueness_dNvPn_Nv_only" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Not Value, no other value should be recorded.
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_NvPn_Pn" context="*[@PN][local-name() = (local-name(preceding-sibling::*[1]), local-name(following-sibling::*[1]))]">
-
-    <!-- This rule fires when a recurring element (other than those selected in the previous 
-         rules) has a Pertinent Negative attribute. -->
-
-    <sch:let name="nemsisElements" value="../*[local-name() = local-name(current())]"/>
-
-    <!-- Assert that the Pertinent Negative should be the only value recorded for the element.  -->
-
-    <sch:assert id="nemSch_uniqueness_NvPn_Pn_only" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative, no other <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded.
-    </sch:assert>
-
-  </sch:rule>
-
-</sch:pattern><?DSDL_INCLUDE_END includes/pattern_uniqueness_NvPn.xml?>
+</sch:pattern><?DSDL_INCLUDE_END includes/pattern_uniqueness_dNvPn.xml?>
 
   <!-- DIAGNOSTICS -->
 

@@ -17,32 +17,21 @@
    <xsl:variable name="document-uri">
       <xsl:value-of select="document-uri(/)"/>
    </xsl:variable>
-
    <!--PHASES-->
-
-
    <!--PROLOG-->
    <xsl:output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                method="xml"
                omit-xml-declaration="no"
                standalone="yes"
                indent="yes"/>
-
    <!--XSD TYPES FOR XSLT2-->
-
-
    <!--KEYS AND FUNCTIONS-->
-
-
    <!--DEFAULT RULES-->
-
-
    <!--MODE: SCHEMATRON-SELECT-FULL-PATH-->
    <!--This mode can be used to generate an ugly though full XPath for locators-->
    <xsl:template match="*" mode="schematron-select-full-path">
       <xsl:apply-templates select="." mode="schematron-get-full-path"/>
    </xsl:template>
-
    <!--MODE: SCHEMATRON-FULL-PATH-->
    <!--This mode can be used to generate an ugly though full XPath for locators-->
    <xsl:template match="*" mode="schematron-get-full-path">
@@ -81,7 +70,6 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-
    <!--MODE: SCHEMATRON-FULL-PATH-2-->
    <!--This mode can be used to generate prefixed XPath for humans-->
    <xsl:template match="node() | @*" mode="schematron-get-full-path-2">
@@ -115,7 +103,6 @@
          <xsl:text/>/@<xsl:value-of select="name(.)"/>
       </xsl:if>
    </xsl:template>
-
    <!--MODE: GENERATE-ID-FROM-PATH -->
    <xsl:template match="/" mode="generate-id-from-path"/>
    <xsl:template match="text()" mode="generate-id-from-path">
@@ -139,7 +126,6 @@
       <xsl:text>.</xsl:text>
       <xsl:value-of select="concat('.',name(),'-',1+count(preceding-sibling::*[name()=name(current())]),'-')"/>
    </xsl:template>
-
    <!--MODE: GENERATE-ID-2 -->
    <xsl:template match="/" mode="generate-id-2">U</xsl:template>
    <xsl:template match="*" mode="generate-id-2" priority="2">
@@ -162,7 +148,6 @@
    </xsl:template>
    <!--Strip characters-->
    <xsl:template match="text()" priority="-1"/>
-
    <!--SCHEMA SETUP-->
    <xsl:template match="/">
       <svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
@@ -193,18 +178,13 @@
          <xsl:apply-templates select="/" mode="M5"/>
       </svrl:schematron-output>
    </xsl:template>
-
    <!--SCHEMATRON PATTERNS-->
    <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Schema for Additional Constraints in NEMSIS Schematron</svrl:text>
-
    <!--PATTERN -->
-
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:schema" priority="1004" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:schema"/>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="not(@defaultPhase)"/>
          <xsl:otherwise>
@@ -219,8 +199,7 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-
-		    <!--ASSERT [WARNING]-->
+      <!--ASSERT [WARNING]-->
       <xsl:choose>
          <xsl:when test="@id = ('DEMDataSet', 'EMSDataSet')"/>
          <xsl:otherwise>
@@ -236,8 +215,7 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="@queryBinding = 'xslt2'"/>
          <xsl:otherwise>
@@ -252,8 +230,7 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-
-		    <!--ASSERT [WARNING]-->
+      <!--ASSERT [WARNING]-->
       <xsl:choose>
          <xsl:when test="matches(@schemaVersion, '^3\.\d+\.\d+\.\d{6}(CP\d+)?(_.*)?$')"/>
          <xsl:otherwise>
@@ -271,8 +248,7 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="sch:diagnostics/sch:diagnostic[@id = 'nemsisDiagnostic']"/>
          <xsl:otherwise>
@@ -290,12 +266,10 @@
       </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:pattern" priority="1003" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:pattern"/>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="sch:title"/>
          <xsl:otherwise>
@@ -312,12 +286,10 @@
       </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:rule" priority="1002" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:rule"/>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="not(@role)"/>
          <xsl:otherwise>
@@ -332,8 +304,7 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-
-		    <!--ASSERT [WARNING]-->
+      <!--ASSERT [WARNING]-->
       <xsl:choose>
          <xsl:when test="@abstract='true' or sch:let[@name = ('nemsisElements', 'nemsisElementsMissing')] or (sch:extends and //sch:rule[@id = current()/sch:extends/@rule]/sch:let[@name = ('nemsisElements', 'nemsisElementsMissing')])"/>
          <xsl:otherwise>
@@ -351,13 +322,11 @@
       </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:assert | sch:report" priority="1001" mode="M5">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                        context="sch:assert | sch:report"/>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="@diagnostics = 'nemsisDiagnostic' or starts-with(@diagnostics, 'nemsisDiagnostic ') or ends-with(@diagnostics, ' nemsisDiagnostic') or contains(@diagnostics, ' nemsisDiagnostic ')"/>
          <xsl:otherwise>
@@ -373,8 +342,7 @@
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="@role = ('[FATAL]', '[ERROR]', '[WARNING]')"/>
          <xsl:otherwise>
@@ -392,8 +360,7 @@
       </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M5"/>
    </xsl:template>
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:diagnostic[@id='nemsisDiagnostic']"
                  priority="1000"
                  mode="M5">
@@ -423,8 +390,7 @@
                     select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='name']/xsl:value-of[@select='.']"/>
       <xsl:variable name="deepEqual_nemsisDiagnostic"
                     select="$p01 and $p02 and $p03 and $p04 and $p05 and $p06 and $p07 and $p08 and $p09 and $p10 and $p11"/>
-
-		    <!--ASSERT [FATAL]-->
+      <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="$deepEqual_nemsisDiagnostic"/>
          <xsl:otherwise>

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.191130CP1_compliance_pre_2020">
 
-  <sch:title>NEMSIS ISO Schematron file for DEMDataSet for Compliance Pre-testing</sch:title>
+  <sch:title>NEMSIS ISO Schematron file for DEMDataSet for Compliance Pre-testing (2020, v3.5.0)</sch:title>
 
   <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
   <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -29,7 +29,7 @@
       <!-- To test: Set all instances of dContact.01 to a value other than "EMS Agency Director/Chief/Lead Administrator/CEO" to generate the error. -->
 
       <sch:assert id="compliance_dContact_type_director" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:dContact.ContactInfoGroup/nem:dContact.01 = '1101003'">
-        There should be an EMS Agency Director/Chief/Lead Administrator/CEO contact.
+        There should be an EMS Agency Director/Chief/Lead Administrator/CEO contact. This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.5.0.
       </sch:assert>
 
     </sch:rule>
@@ -42,8 +42,8 @@
       <!-- To test: Clear the value for dContact.12 (or set it to a Not Value) for the EMS Agency Director/Chief/Lead Administrator/CEO contact to generate the warning. -->
         
       <sch:assert id="compliance_dAgency.ContactInfoGroup_website" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:dContact.12[.!='']">
-        The EMS Agency Contact Web Address should be recorded for the EMS Agency Director/Chief/Lead Administrator/CEO contact (<sch:value-of select="nem:dContact.03"/> <sch:value-of select="nem:dContact.02"/>).
-    </sch:assert>
+        The EMS Agency Contact Web Address should be recorded for the EMS Agency Director/Chief/Lead Administrator/CEO contact (<sch:value-of select="nem:dContact.03"/> <sch:value-of select="nem:dContact.02"/>). This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.5.0.
+      </sch:assert>
 
     </sch:rule>
 

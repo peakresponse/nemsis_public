@@ -3,17 +3,12 @@
 
 NEMSIS V3 Test Case for Pre-testing
 ID:               2020-DEM-FailXsd_v350
-Description:      Test case for DEMDataSet that failes XSD validation.
+Description:      Test case for DEMDataSet that fails XSD validation.
 Expected Result:  [ERROR]
 Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid child element 'dConfiguration.02'. List of possible elements expected: 'dConfiguration.ProcedureGroup'.
 
-
 -->
-<DEMDataSet xmlns="http://www.nemsis.org"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.0.191130CP1/XSDs/NEMSIS_XSDs/DEMDataSet_v3.xsd">
-   <!-- dCustomConfiguration must contain the custom data elements required by the test cases. It may also contain additional custom data elements.
-       -->
+<DEMDataSet xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.0.191130CP1/XSDs/NEMSIS_XSDs/DEMDataSet_v3.xsd">
    <dCustomConfiguration>
       <dCustomConfiguration.CustomGroup CustomElementID="ALdAgency.001">
          <dCustomConfiguration.01>Canceled Calls per Year</dCustomConfiguration.01>
@@ -26,11 +21,10 @@ Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid ch
          <dCustomConfiguration.07>7701005</dCustomConfiguration.07>
       </dCustomConfiguration.CustomGroup>
    </dCustomConfiguration>
-   <!-- DemographicReport/@timeStamp should represent the date/time the information was recorded or generated. -->
-   <DemographicReport timeStamp="2017-07-01T00:00:00-06:00">
+   <DemographicReport timeStamp="2020-01-01T00:00:00-06:00">
       <dAgency>
          <dAgency.01>0110</dAgency.01>
-         <dAgency.02>0110T</dAgency.02>
+         <dAgency.02>350-0110T</dAgency.02>
          <dAgency.03>A1</dAgency.03>
          <dAgency.04>01</dAgency.04>
          <dAgency.AgencyServiceGroup UUID="bf856d92-2726-446c-88cc-0eecba76542b">
@@ -86,7 +80,7 @@ Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid ch
          <dAgency.12>1016003</dAgency.12>
          <dAgency.13>9912007</dAgency.13>
          <dAgency.14>1018005</dAgency.14>
-         <dAgency.AgencyYearGroup UUID="2a9ea54e-6f7d-462e-a507-30fd84187b0d" CorrelationID="refid_2">
+         <dAgency.AgencyYearGroup UUID="2a9ea54e-6f7d-462e-a507-30fd84187b0d" CorrelationID="refid_1">
             <dAgency.15>2017</dAgency.15>
             <dAgency.16>1466</dAgency.16>
             <dAgency.17>49727</dAgency.17>
@@ -96,7 +90,7 @@ Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid ch
             <dAgency.21>2572</dAgency.21>
             <dAgency.22>2099</dAgency.22>
          </dAgency.AgencyYearGroup>
-         <dAgency.AgencyYearGroup UUID="451ccf2b-918d-4896-afd6-8625937ed0e3" CorrelationID="refid_1">
+         <dAgency.AgencyYearGroup UUID="451ccf2b-918d-4896-afd6-8625937ed0e3" CorrelationID="refid_2">
             <dAgency.15>2018</dAgency.15>
             <dAgency.16>1466</dAgency.16>
             <dAgency.17>49727</dAgency.17>
@@ -237,7 +231,6 @@ Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid ch
             </dConfiguration.ProcedureGroup>
             <dConfiguration.ProcedureGroup UUID="ddf9990d-2d9b-4c52-9646-d97dbd774e57">
                <dConfiguration.06>9917019</dConfiguration.06>
-               <dConfiguration.07>116762002</dConfiguration.07>
                <dConfiguration.07>133901003</dConfiguration.07>
                <dConfiguration.07>20655006</dConfiguration.07>
                <dConfiguration.07>225116006</dConfiguration.07>
@@ -265,62 +258,63 @@ Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid ch
             </dConfiguration.ProcedureGroup>
             <dConfiguration.MedicationGroup UUID="aa75f5ec-9251-42de-b6aa-1e5b89aca753">
                <dConfiguration.08>9917001</dConfiguration.08>
-               <dConfiguration.09>1191</dConfiguration.09>
-               <dConfiguration.09>296</dConfiguration.09>
-               <dConfiguration.09>3498</dConfiguration.09>
-               <dConfiguration.09>377980</dConfiguration.09>
-               <dConfiguration.09>4917</dConfiguration.09>
-               <dConfiguration.09>6387</dConfiguration.09>
-               <dConfiguration.09>6585</dConfiguration.09>
-               <dConfiguration.09>7052</dConfiguration.09>
-               <dConfiguration.09>7242</dConfiguration.09>
-               <dConfiguration.09>7806</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1191</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">296</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3498</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">377980</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4917</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6387</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6585</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7052</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7242</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7806</dConfiguration.09>
             </dConfiguration.MedicationGroup>
             <dConfiguration.MedicationGroup UUID="3e1675d6-74f1-409e-b63a-1db4e57ce32e">
                <dConfiguration.08>9917005</dConfiguration.08>
-               <dConfiguration.09>1191</dConfiguration.09>
-               <dConfiguration.09>3498</dConfiguration.09>
-               <dConfiguration.09>377980</dConfiguration.09>
-               <dConfiguration.09>4917</dConfiguration.09>
-               <dConfiguration.09>7242</dConfiguration.09>
-               <dConfiguration.09>7806</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1191</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3498</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">377980</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4917</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7242</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7806</dConfiguration.09>
             </dConfiguration.MedicationGroup>
             <dConfiguration.MedicationGroup UUID="6c21d52d-2581-4212-95e1-ff000d79e8cc">
                <dConfiguration.08>9917007</dConfiguration.08>
-               <dConfiguration.09>1191</dConfiguration.09>
-               <dConfiguration.09>1605101</dConfiguration.09>
-               <dConfiguration.09>296</dConfiguration.09>
-               <dConfiguration.09>319864</dConfiguration.09>
-               <dConfiguration.09>3443</dConfiguration.09>
-               <dConfiguration.09>3498</dConfiguration.09>
-               <dConfiguration.09>377980</dConfiguration.09>
-               <dConfiguration.09>4337</dConfiguration.09>
-               <dConfiguration.09>4917</dConfiguration.09>
-               <dConfiguration.09>6387</dConfiguration.09>
-               <dConfiguration.09>6585</dConfiguration.09>
-               <dConfiguration.09>7052</dConfiguration.09>
-               <dConfiguration.09>7242</dConfiguration.09>
-               <dConfiguration.09>7806</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1191</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1605101</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">296</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">319864</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3443</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3498</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">377980</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4337</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4917</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6387</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6585</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7052</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7242</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7806</dConfiguration.09>
             </dConfiguration.MedicationGroup>
             <dConfiguration.MedicationGroup UUID="4274ffe9-0348-44ce-9c8c-381070e6c967">
                <dConfiguration.08>9917019</dConfiguration.08>
-               <dConfiguration.09>10154</dConfiguration.09>
-               <dConfiguration.09>1191</dConfiguration.09>
-               <dConfiguration.09>1605101</dConfiguration.09>
-               <dConfiguration.09>296</dConfiguration.09>
-               <dConfiguration.09>319864</dConfiguration.09>
-               <dConfiguration.09>3443</dConfiguration.09>
-               <dConfiguration.09>3498</dConfiguration.09>
-               <dConfiguration.09>377980</dConfiguration.09>
-               <dConfiguration.09>4337</dConfiguration.09>
-               <dConfiguration.09>4917</dConfiguration.09>
-               <dConfiguration.09>6387</dConfiguration.09>
-               <dConfiguration.09>6585</dConfiguration.09>
-               <dConfiguration.09>68139</dConfiguration.09>
-               <dConfiguration.09>7052</dConfiguration.09>
-               <dConfiguration.09>7242</dConfiguration.09>
-               <dConfiguration.09>7806</dConfiguration.09>
-               <dConfiguration.09>8782</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">10154</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924005">116762002</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1191</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1605101</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">296</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">319864</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3443</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3498</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">377980</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4337</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4917</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6387</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6585</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">68139</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7052</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7242</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7806</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">8782</dConfiguration.09>
             </dConfiguration.MedicationGroup>
             <dConfiguration.10>9914001</dConfiguration.10>
             <dConfiguration.10>9914007</dConfiguration.10>
@@ -428,42 +422,42 @@ Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid ch
             </dConfiguration.ProcedureGroup>
             <dConfiguration.MedicationGroup UUID="e9cda9aa-070c-46a6-9232-23d4a7e2f097">
                <dConfiguration.08>9917001</dConfiguration.08>
-               <dConfiguration.09>1191</dConfiguration.09>
-               <dConfiguration.09>296</dConfiguration.09>
-               <dConfiguration.09>3498</dConfiguration.09>
-               <dConfiguration.09>377980</dConfiguration.09>
-               <dConfiguration.09>4917</dConfiguration.09>
-               <dConfiguration.09>6387</dConfiguration.09>
-               <dConfiguration.09>6585</dConfiguration.09>
-               <dConfiguration.09>7052</dConfiguration.09>
-               <dConfiguration.09>7242</dConfiguration.09>
-               <dConfiguration.09>7806</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1191</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">296</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3498</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">377980</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4917</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6387</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6585</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7052</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7242</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7806</dConfiguration.09>
             </dConfiguration.MedicationGroup>
             <dConfiguration.MedicationGroup UUID="ae461b4c-8b8f-4822-b7ea-e6068b5dc457">
                <dConfiguration.08>9917005</dConfiguration.08>
-               <dConfiguration.09>1191</dConfiguration.09>
-               <dConfiguration.09>3498</dConfiguration.09>
-               <dConfiguration.09>377980</dConfiguration.09>
-               <dConfiguration.09>4917</dConfiguration.09>
-               <dConfiguration.09>7242</dConfiguration.09>
-               <dConfiguration.09>7806</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1191</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3498</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">377980</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4917</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7242</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7806</dConfiguration.09>
             </dConfiguration.MedicationGroup>
             <dConfiguration.MedicationGroup UUID="29f76ca3-4d45-4905-84b7-f8685ad9963d">
                <dConfiguration.08>9917007</dConfiguration.08>
-               <dConfiguration.09>1191</dConfiguration.09>
-               <dConfiguration.09>1605101</dConfiguration.09>
-               <dConfiguration.09>296</dConfiguration.09>
-               <dConfiguration.09>319864</dConfiguration.09>
-               <dConfiguration.09>3443</dConfiguration.09>
-               <dConfiguration.09>3498</dConfiguration.09>
-               <dConfiguration.09>377980</dConfiguration.09>
-               <dConfiguration.09>4337</dConfiguration.09>
-               <dConfiguration.09>4917</dConfiguration.09>
-               <dConfiguration.09>6387</dConfiguration.09>
-               <dConfiguration.09>6585</dConfiguration.09>
-               <dConfiguration.09>7052</dConfiguration.09>
-               <dConfiguration.09>7242</dConfiguration.09>
-               <dConfiguration.09>7806</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1191</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">1605101</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">296</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">319864</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3443</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">3498</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">377980</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4337</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">4917</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6387</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">6585</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7052</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7242</dConfiguration.09>
+               <dConfiguration.09 CodeType="9924003">7806</dConfiguration.09>
             </dConfiguration.MedicationGroup>
             <dConfiguration.10>9914001</dConfiguration.10>
             <dConfiguration.10>9914007</dConfiguration.10>
@@ -880,8 +874,6 @@ Expected Message: The element 'dConfiguration.ConfigurationGroup' has invalid ch
             </dFacility.FacilityGroup>
          </dFacilityGroup>
       </dFacility>
-      <!-- dCustomResults must contain the custom data elements required by the test cases. It may also contain additional custom data elements.
-       -->
       <dCustomResults>
          <dCustomResults.ResultsGroup>
             <dCustomResults.01>302</dCustomResults.01>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?>
-<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.170111_compliance_pre">
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.160713CP2_compliance_pre_2020">
 
-  <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing</sch:title>
+  <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing (v3.4.0)</sch:title>
 
   <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
   <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -18,24 +18,25 @@
 
   <!-- PATTERNS -->
 
-  <sch:pattern id="compliance_sequence_odometer">
+  <sch:pattern id="compliance_eCrew">
 
-    <sch:title>The odometer reading sequence is reasonable.</sch:title>
+    <sch:title>Crew information is complete.</sch:title>
 
-    <sch:rule id="compliance_sequence_odometer_rule" context="nem:eResponse">
+    <sch:rule id="compliance_eCrew.CrewGroup" context="nem:eCrew">
 
-      <sch:let name="nemsisElements" value="(nem:eResponse.19, nem:eResponse.20, nem:eResponse.21, nem:eResponse.22)"/>
+      <sch:let name="nemsisElements" value="nem:eCrew.CrewGroup/nem:eCrew.03"/>
+      <sch:let name="nemsisElementsMissing" value=".[not(nem:eCrew.CrewGroup/nem:eCrew.03)]/'eCrew.03'"/>
 
-      <!-- To test: Set two of the odometer readings to the same value as each other to trigger the error. -->
+      <!-- To test: Set all instances of eCrew.03 to a value other than "Driver/Pilot-Response". -->
 
-      <sch:assert id="compliance_sequence_odometer_0" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(nem:eResponse.19 = (nem:eResponse.20, nem:eResponse.21) or nem:eResponse.20 = nem:eResponse.21)">
-        Beginning, on-scene, and patient destination odometer readings should not be the same as each other.
+      <sch:assert id="compliance_eCrew.CrewGroup_DriverResponse" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:eCrew.CrewGroup/nem:eCrew.03 = '2403001'">
+        There should be a crew member with the role of "Driver/Pilot-Response". This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.4.0.
       </sch:assert>
 
-      <!-- To test: Set the odometer readings so that the difference between the lowest and highest readings is more than 1,000 to trigger the warning. -->
+      <!-- To test: Set all instances of eCrew.03 to a value other than "Primary Patient Caregiver-Transport" on a record where the disposition is "Patient Treated, Transported by This EMS Unit". -->
 
-      <sch:assert id="compliance_sequence_odometer_1000" role="[WARNING]" diagnostics="nemsisDiagnostic" test="max((nem:eResponse.19, nem:eResponse.20, nem:eResponse.21, nem:eResponse.22)) - min((nem:eResponse.19, nem:eResponse.20, nem:eResponse.21, nem:eResponse.22)) &lt; 1000">
-        Odometer readings should not exceed 1,000 miles traveled.
+      <sch:assert id="compliance_eCrew.CrewGroup_PrimaryCaregiverTransport" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = '4212033') or nem:eCrew.CrewGroup/nem:eCrew.03 = '2403013'">
+        There should be a crew member with the role of "Primary Patient Caregiver-Transport" when the disposition is "Patient Treated, Transported by This EMS Unit". This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.4.0.
       </sch:assert>
 
     </sch:rule>

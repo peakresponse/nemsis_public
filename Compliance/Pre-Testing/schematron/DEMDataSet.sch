@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?>
-<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.170111_compliance_pre">
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.160713CP2_compliance_pre_2020">
 
-  <sch:title>NEMSIS ISO Schematron file for DEMDataSet for Compliance Pre-testing</sch:title>
+  <sch:title>NEMSIS ISO Schematron file for DEMDataSet for Compliance Pre-testing (v3.4.0)</sch:title>
 
   <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
   <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -18,24 +18,31 @@
 
   <!-- PATTERNS -->
 
-  <sch:pattern id="compliance_dAgency.AgencyYearGroup">
+  <sch:pattern id="compliance_dContact">
 
-    <sch:title>Statistics are complete.</sch:title>
+    <sch:title>Agency Contact Information is complete.</sch:title>
 
-    <sch:rule id="compliance_dAgency.AgencyYearGroup_dAgency.15" context="nem:dAgency">
+    <sch:rule id="compliance_dContact_type" context="nem:dContact">
 
-      <sch:let name="nemsisElements" value="nem:dAgency.AgencyYearGroup/nem:dAgency.15"/>
+      <sch:let name="nemsisElements" value="nem:dContact.ContactInfoGroup/nem:dContact.01"/>
 
-      <!-- To test: Remove all but one instance of agency annual statistics to generate the error. -->
-        
-      <sch:assert id="compliance_dAgency.AgencyYearGroup_dAgency.15_two" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:dAgency.AgencyYearGroup[2]">
-        There should be at least two sets of agency annual statistics.
+      <!-- To test: Set all instances of dContact.01 to a value other than "EMS Agency Director/Chief/Lead Administrator/CEO" to generate the error. -->
+
+      <sch:assert id="compliance_dContact_type_director" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:dContact.ContactInfoGroup/nem:dContact.01 = '1101003'">
+        There should be an EMS Agency Director/Chief/Lead Administrator/CEO contact. This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.4.0.
       </sch:assert>
 
-      <!-- To test: Set all instances of dAgency.15 to a year other than "2015" to generate the warning. -->
+    </sch:rule>
+
+    <sch:rule id="compliance_dContact.ContactInfoGroup" context="nem:dContact.ContactInfoGroup[nem:dContact.01='1101003']">
+
+      <sch:let name="nemsisElements" value="nem:dContact.01"/>
+      <sch:let name="nemsisElementsMissing" value=".[not(nem:dContact.01)]/'dContact.01'"/>
+
+      <!-- To test: Clear the value for dContact.12 (or set it to a Not Value) for the EMS Agency Director/Chief/Lead Administrator/CEO contact to generate the warning. -->
         
-      <sch:assert id="compliance_dAgency.AgencyYearGroup_dAgency.15_2015" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:dAgency.AgencyYearGroup/nem:dAgency.15 = '2015'">
-        There should be a set of agency annual statistics for the year 2015.
+      <sch:assert id="compliance_dAgency.ContactInfoGroup_website" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:dContact.12[.!='']">
+        The EMS Agency Contact Web Address should be recorded for the EMS Agency Director/Chief/Lead Administrator/CEO contact (<sch:value-of select="nem:dContact.03"/> <sch:value-of select="nem:dContact.02"/>). This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.4.0.
       </sch:assert>
 
     </sch:rule>

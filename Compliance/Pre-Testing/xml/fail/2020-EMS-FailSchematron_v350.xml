@@ -1,16 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-NEMSIS V3 Test Case for Active Testing
+NEMSIS V3 Test Case for Pre-testing
 ID:               2020-EMS-failSchematron_v350
 Description:      Test case for EMSDataSet that fails national Schematron validation.
 Expected Result:  [ERROR]
 Expected Message: Medication Administered should be a SNOMED code specifically allowed in the data dictionary when Code Type is "SNOMED".
 
 -->
-<EMSDataSet xmlns="http://www.nemsis.org"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.0.191130CP1/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+<EMSDataSet xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.0.191130CP1/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>0110</dAgency.01>

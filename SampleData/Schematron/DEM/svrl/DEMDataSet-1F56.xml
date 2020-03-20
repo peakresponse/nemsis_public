@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for DEMDataSet"
-                        schemaVersion="3.4.0.190607"><!--   
+                        schemaVersion="3.4.0.200320"><!--   
 		   
 		   
 		 -->
@@ -39,17 +39,21 @@
    <svrl:fired-rule context="nem:dAgency.07[. != '']"
                     id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07"/>
    <svrl:active-pattern document="DEMDataSet-1F56.xml"
-                        id="nemSch_consistency_nilNvPn"
+                        id="nemSch_consistency_dNilNvPn"
                         name="The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate."/>
-   <svrl:fired-rule context="nem:dCustomResults.01 | nem:eCustomResults.01"
-                    id="nemSch_nilNvPn_customResults"/>
+   <svrl:fired-rule context="nem:dCustomResults.01"
+                    id="nemSch_consistency_dNilNvPn_customResults"/>
    <svrl:active-pattern document="DEMDataSet-1F56.xml"
                         id="nemSch_sequence_dAgency.AgencyYearGroup"
                         name="Statistical Calendar Year is in the past."/>
    <svrl:active-pattern document="DEMDataSet-1F56.xml"
                         id="nemSch_uniqueness_DEMDataSet"
                         name="Certain recurring demographic data elements are unique within a list."/>
-   <svrl:fired-rule context="nem:dConfiguration.11[.='1211019']"
+   <svrl:fired-rule context="nem:dAgency.15"
+                    id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup"/>
+   <svrl:fired-rule context="nem:dAgency.15"
+                    id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup"/>
+   <svrl:fired-rule context="nem:dConfiguration.11[.='1211019'][1]"
                     id="nemSch_uniqueness_DEMDataSet_dConfiguration.11"/>
    <svrl:failed-assert test="count(../nem:dConfiguration.11)=1"
                        id="nemSch_uniqueness_DEMDataSet_dConfiguration.11_none"
@@ -59,7 +63,7 @@
       When EMS Agency Specialty Service Capability is "None", no other values should be recorded.
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
-         <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+         <nemsisDiagnostic xmlns="http://www.nemsis.org">
             <record>
                <dAgency.01>0</dAgency.01>
                <dAgency.02>A</dAgency.02>
@@ -74,9 +78,23 @@
          </nemsisDiagnostic>
       </svrl:diagnostic-reference>
    </svrl:failed-assert>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
    <svrl:active-pattern document="DEMDataSet-1F56.xml"
-                        id="nemSch_uniqueness_NvPn"
+                        id="nemSch_uniqueness_dNvPn"
                         name="When a Not Value or Pertinent Negative is recorded for a recurring element, it is the only value recorded."/>
-   <svrl:fired-rule context="nem:dCustomResults.01 | nem:eCustomResults.01"
-                    id="nemSch_uniqueness_NvPn_customResults"/>
+   <svrl:fired-rule context="nem:dCustomResults.01"
+                    id="nemSch_uniqueness_dNvPn_dCustomResults"/>
 </svrl:schematron-output>

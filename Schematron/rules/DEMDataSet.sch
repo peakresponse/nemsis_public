@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.200219CR1" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.4.0.200320" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -621,7 +621,7 @@
       <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
     </sch:assert>
 
-    <sch:assert id="nemSch_consistency_dAgency.13_dAgency.26_nonfire" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = '9912001' or ../nem:dAgency.26 = ''">
+    <sch:assert id="nemSch_consistency_dAgency.13_dAgency.26_nonfire" role="[WARNING]" diagnostics="nemsisDiagnostic" test=". = '9912001' or not(../nem:dAgency.26 != '')">
       <sch:value-of select="key('nemSch_key_elements', 'dAgency.26', $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is "Fire Department".
     </sch:assert>
 
@@ -724,17 +724,17 @@
 
   <sch:title>Certain recurring demographic data elements are unique within a list.</sch:title>
 
-  <sch:rule id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup" context="nem:dAgency.15[.=../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15]">
+  <sch:rule id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup" context="nem:dAgency.15">
 
-    <sch:let name="nemsisElements" value="../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15[.=current()], ."/>
+    <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_uniqueness_DEMDataSet_dAgency.15" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_uniqueness_DEMDataSet_dAgency.15" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = ../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15)">
       Agency statistics for a particular <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded once.
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_DEMDataSet_dConfiguration.11" context="nem:dConfiguration.11[.='1211019']">
+  <sch:rule id="nemSch_uniqueness_DEMDataSet_dConfiguration.11" context="nem:dConfiguration.11[.='1211019'][1]">
 
     <sch:let name="nemsisElements" value="../nem:dConfiguration.11"/>
 
@@ -744,11 +744,11 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_DEMDataSet_dConfiguration.16" context="nem:dConfiguration.16[.=preceding-sibling::nem:dConfiguration.16]">
+  <sch:rule id="nemSch_uniqueness_DEMDataSet_dConfiguration.16" context="nem:dConfiguration.16">
 
-    <sch:let name="nemsisElements" value="preceding-sibling::nem:dConfiguration.16[.=current()], ."/>
+    <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.16_assert" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.16_assert" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(. = preceding-sibling::nem:dConfiguration.16)">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be unique (the same call sign should not be listed more than once).
     </sch:assert>
 

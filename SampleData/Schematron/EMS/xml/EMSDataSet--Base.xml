@@ -41,7 +41,8 @@ Expected Result:  PASS
                <eResponse.01>A</eResponse.01>
                <eResponse.02>Agency A</eResponse.02>
             </eResponse.AgencyGroup>
-            <eResponse.03>BLY</eResponse.03>
+            <eResponse.03>BLY
+        </eResponse.03>
             <eResponse.04>Ybq</eResponse.04>
             <eResponse.ServiceGroup>
                <eResponse.05>2205001</eResponse.05>
@@ -377,7 +378,7 @@ Expected Result:  PASS
             </eInjury.CollisionGroup>
          </eInjury>
          <eArrest>
-            <eArrest.01>3001003</eArrest.01>
+            <eArrest.01>3001005</eArrest.01>
             <eArrest.02>3002015</eArrest.02>
             <eArrest.03>3003003</eArrest.03>
             <eArrest.03>3003005</eArrest.03>
@@ -516,7 +517,7 @@ Expected Result:  PASS
                   <eVitals.28>3328007</eVitals.28>
                </eVitals.PainScaleGroup>
                <eVitals.StrokeScaleGroup>
-                  <eVitals.29>3329005</eVitals.29>
+                  <eVitals.29>3329003</eVitals.29>
                   <eVitals.30>3330013</eVitals.30>
                </eVitals.StrokeScaleGroup>
                <eVitals.31>3331005</eVitals.31>
@@ -571,7 +572,7 @@ Expected Result:  PASS
                   <eVitals.28>3328007</eVitals.28>
                </eVitals.PainScaleGroup>
                <eVitals.StrokeScaleGroup>
-                  <eVitals.29>3329005</eVitals.29>
+                  <eVitals.29>3329003</eVitals.29>
                   <eVitals.30>3330013</eVitals.30>
                </eVitals.StrokeScaleGroup>
                <eVitals.31>3331005</eVitals.31>
@@ -624,7 +625,7 @@ Expected Result:  PASS
                   <eVitals.28>3328007</eVitals.28>
                </eVitals.PainScaleGroup>
                <eVitals.StrokeScaleGroup>
-                  <eVitals.29>3329005</eVitals.29>
+                  <eVitals.29>3329003</eVitals.29>
                   <eVitals.30>3330013</eVitals.30>
                </eVitals.StrokeScaleGroup>
                <eVitals.31 xsi:nil="true" PN="8801023"/>
@@ -650,28 +651,28 @@ Expected Result:  PASS
                   <eLabs.WaveformGraphicGroup>
                      <eLabs.07>image/jpeg</eLabs.07>
                      <eLabs.08>
-                  /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkz
-                  ODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2Nj
-                  Y2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABBADwDAREA
-                  AhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAgMEAQAF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/a
-                  AAwDAQACEAMQAAAB9Y0UaEacaYcIOCGnGggEgQ4cEcKJxA8AsCCAEkYI4oHmgiSQnPUDDCBFkJh6
-                  ARoQsnKBRGWjzjTgDiIqHHH/xAAiEAACAQQCAQUAAAAAAAAAAAABAgADEBEgEiEEIjEzNEL/2gAI
-                  AQEAAQUCsZmDZjZD1oY7gHlFOjRhEHJselD2ILkZnAqyuTKaldSI7FhRbv3sLHAhKgfI70wkAsLO
-                  gdV8aksxiOgdXFWgtMsU28r6/wCrf//EABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAIAQMBAT8BEf/E
-                  ABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAIAQIBAT8BEf/EACMQAAIBAwMEAwAAAAAAAAAAAAABESAh
-                  MQISQQMQIjJAUWH/2gAIAQEABj8C+H+VuYIL5VT1JjjJL5psbcMb4mmWyW0eD8eWJrmzpel4PUsQ
-                  zcupKX2Lf7VsXf8A/8QAIRABAAIBBAIDAQAAAAAAAAAAAQARIRAxQVEgcYGhsWH/2gAIAQEAAT8h
-                  0fbibiqqLyKD8yzke/BaigjJY7RRTy3ep2uepeuzaYN2XnIPyTcHqMs9nubN9TiZBxLas9ykMLZv
-                  uDuRWbl7FYeYaMaEF7D6iZxV2wwviBqY0g7ZXSO1lIhIgpj2sf7zKwlVNmhc5TgL7zKCgAdR/tsQ
-                  j4xmAYi2vLifcP2fjr//2gAMAwEAAgADAAAAEIIJIIAJIBJJBJBIAJBIBBJAIAABIBBBJAIBBP/E
-                  ABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAIAQMBAT8QEf/EABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAI
-                  AQIBAT8QEf/EACMQAQACAgICAQUBAAAAAAAAAAEAESExQVEQYYFxobHB8JH/2gAIAQEAAT8Q8dgH
-                  YcymVhcyzNicMfNVFgVSvd6epcBdE31GayhcbVc483qZvD5jWMG3vOP3AiCzppAGsgPhxO3EHxda
-                  Jrp3Gagcjf5jFFQKK7LhdOi7VAaKNXAdY+I2th9hFj34Xw5iAWlykB1CpNGtWV1yQ26CouugXmO7
-                  nntfFepVFVtI4hqg0FRFhpy4nqu2VsMIvPYYHHGTbdU/b7woFLGGHqrqArHhaB7SgnXjwBGyAcOM
-                  8Hb9vxHItvRf2X+YgF0Yg+UrmcsuWNhzmpWIis3R/jKwrUAoCWBocNJ7g2mxec6zyw3FCdK/qnEP
-                  pOY6I6Z+k/hdIw8Q1P/Z
-                </eLabs.08>
+                /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkz
+                ODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2Nj
+                Y2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCABBADwDAREA
+                AhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAgMEAQAF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/a
+                AAwDAQACEAMQAAAB9Y0UaEacaYcIOCGnGggEgQ4cEcKJxA8AsCCAEkYI4oHmgiSQnPUDDCBFkJh6
+                ARoQsnKBRGWjzjTgDiIqHHH/xAAiEAACAQQCAQUAAAAAAAAAAAABAgADEBEgEiEEIjEzNEL/2gAI
+                AQEAAQUCsZmDZjZD1oY7gHlFOjRhEHJselD2ILkZnAqyuTKaldSI7FhRbv3sLHAhKgfI70wkAsLO
+                gdV8aksxiOgdXFWgtMsU28r6/wCrf//EABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAIAQMBAT8BEf/E
+                ABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAIAQIBAT8BEf/EACMQAAIBAwMEAwAAAAAAAAAAAAABESAh
+                MQISQQMQIjJAUWH/2gAIAQEABj8C+H+VuYIL5VT1JjjJL5psbcMb4mmWyW0eD8eWJrmzpel4PUsQ
+                zcupKX2Lf7VsXf8A/8QAIRABAAIBBAIDAQAAAAAAAAAAAQARIRAxQVEgcYGhsWH/2gAIAQEAAT8h
+                0fbibiqqLyKD8yzke/BaigjJY7RRTy3ep2uepeuzaYN2XnIPyTcHqMs9nubN9TiZBxLas9ykMLZv
+                uDuRWbl7FYeYaMaEF7D6iZxV2wwviBqY0g7ZXSO1lIhIgpj2sf7zKwlVNmhc5TgL7zKCgAdR/tsQ
+                j4xmAYi2vLifcP2fjr//2gAMAwEAAgADAAAAEIIJIIAJIBJJBJBIAJBIBBJAIAABIBBBJAIBBP/E
+                ABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAIAQMBAT8QEf/EABQRAQAAAAAAAAAAAAAAAAAAAGD/2gAI
+                AQIBAT8QEf/EACMQAQACAgICAQUBAAAAAAAAAAEAESExQVEQYYFxobHB8JH/2gAIAQEAAT8Q8dgH
+                YcymVhcyzNicMfNVFgVSvd6epcBdE31GayhcbVc483qZvD5jWMG3vOP3AiCzppAGsgPhxO3EHxda
+                Jrp3Gagcjf5jFFQKK7LhdOi7VAaKNXAdY+I2th9hFj34Xw5iAWlykB1CpNGtWV1yQ26CouugXmO7
+                nntfFepVFVtI4hqg0FRFhpy4nqu2VsMIvPYYHHGTbdU/b7woFLGGHqrqArHhaB7SgnXjwBGyAcOM
+                8Hb9vxHItvRf2X+YgF0Yg+UrmcsuWNhzmpWIis3R/jKwrUAoCWBocNJ7g2mxec6zyw3FCdK/qnEP
+                pOY6I6Z+k/hdIw8Q1P/Z
+              </eLabs.08>
                   </eLabs.WaveformGraphicGroup>
                </eLabs.LabImageGroup>
                <eLabs.LabImageGroup>
@@ -1142,18 +1143,18 @@ Expected Result:  PASS
                <eDevice.WaveformGroup>
                   <eDevice.04>image/jpeg</eDevice.04>
                   <eDevice.05>
-                /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkz
-                ODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/wgALCAAyAFoBAREA/8QAGAABAQEBAQAA
-                AAAAAAAAAAAAAAMBAgb/2gAIAQEAAAAB9Acda47AjXUL5oSpqNg4zndTplNYSqlU0Zz2460AA//E
-                ACMQAAEDAgUFAAAAAAAAAAAAAAEAEBEDIAIhIjEyEjBAQkP/2gAIAQEAAQUCfEYDzqvqcH+t9TiN
-                m97ZUolDFpzClTnMqYvp8GqbdjCOkMRPg//EAB4QAAEEAQUAAAAAAAAAAAAAAAAQESFAASAwMWGB
-                /9oACAEBAAY/AlfQ255T4GSSMD9kE02qf//EACIQAAEDAgYDAAAAAAAAAAAAAAEAETEhQRAgMFFh
-                cUCRwf/aAAgBAQABPyHOyPi+hMhGnVJBic3qfS4k6eIIMVSMCSyfeA7WT7pTHWD4TqAPZTwoNNhm
-                MKLGHvRorFuAbF/B/9oACAEBAAAAEBgBlAAGFm7hmAAP/8QAJBABAAEDAwQCAwAAAAAAAAAAAREA
-                ITEQUXEgQWGRMKFAwdH/2gAIAQEAAT8Q1B0SCHtoxqki3XL4bg41cHh9v8+ASG9KU3NcL5D6epAp
-                houIb2CRSN6rbI23oMImChgnwGX7pdsBlbeqGbJcT2oxhJyGCpoe90k0Y6QS4rN31JyE92osdbco
-                ARQnOpIEgs8fg//Z
-              </eDevice.05>
+              /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkz
+              ODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/wgALCAAyAFoBAREA/8QAGAABAQEBAQAA
+              AAAAAAAAAAAAAAMBAgb/2gAIAQEAAAAB9Acda47AjXUL5oSpqNg4zndTplNYSqlU0Zz2460AA//E
+              ACMQAAEDAgUFAAAAAAAAAAAAAAEAEBEDIAIhIjEyEjBAQkP/2gAIAQEAAQUCfEYDzqvqcH+t9TiN
+              m97ZUolDFpzClTnMqYvp8GqbdjCOkMRPg//EAB4QAAEEAQUAAAAAAAAAAAAAAAAQESFAASAwMWGB
+              /9oACAEBAAY/AlfQ255T4GSSMD9kE02qf//EACIQAAEDAgYDAAAAAAAAAAAAAAEAETEhQRAgMFFh
+              cUCRwf/aAAgBAQABPyHOyPi+hMhGnVJBic3qfS4k6eIIMVSMCSyfeA7WT7pTHWD4TqAPZTwoNNhm
+              MKLGHvRorFuAbF/B/9oACAEBAAAAEBgBlAAGFm7hmAAP/8QAJBABAAEDAwQCAwAAAAAAAAAAAREA
+              ITEQUXEgQWGRMKFAwdH/2gAIAQEAAT8Q1B0SCHtoxqki3XL4bg41cHh9v8+ASG9KU3NcL5D6epAp
+              houIb2CRSN6rbI23oMImChgnwGX7pdsBlbeqGbJcT2oxhJyGCpoe90k0Y6QS4rN31JyE92osdbco
+              ARQnOpIEgs8fg//Z
+            </eDevice.05>
                   <eDevice.06>4106013</eDevice.06>
                </eDevice.WaveformGroup>
                <eDevice.07>4107041</eDevice.07>
@@ -1175,18 +1176,18 @@ Expected Result:  PASS
                <eDevice.WaveformGroup>
                   <eDevice.04>image/jpeg</eDevice.04>
                   <eDevice.05>
-                /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkz
-                ODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/wgALCAAyAFoBAREA/8QAGAABAQEBAQAA
-                AAAAAAAAAAAAAAMBAgb/2gAIAQEAAAAB9AY1jQZKyNdHGcuk6ZTRLvdjVoRrqFwJ96lXNAAf/8QA
-                IxAAAAUEAQUBAAAAAAAAAAAAAAECESADECExMiIjMEBCQ//aAAgBAQABBQKG/JT4WqajkZBuEkZJ
-                dx1DYyQycl6LVvudThf9ZrJ03bueh//EAB0QAAEDBQEAAAAAAAAAAAAAACEAEUABEDBQYYH/2gAI
-                AQEABj8Ch+4QhZqooaJ+Qf/EACIQAAECBgIDAQAAAAAAAAAAAAEAERAgITFBUTBxQGGxwf/aAAgB
-                AQABPyGQEA4iSBfgNlajZ6TdwqdFE8E0GkAUWT6A7fCcMAoguJn8T7A9JxOwaeal6oCJ+uC8haJ+
-                OAjQkezGjwf/2gAIAQEAAAAQEIGYcWDMGQCUAA//xAAkEAEAAQIEBwEBAAAAAAAAAAABEQAxECFB
-                cSAwUWGRobFAwf/aAAgBAQABPxDgnCJ1MTRQSwTyLm1ZTx8VPfEkmIdqYptaGU1dZyOu2tTSQhho
-                eQkuHhSiM7ZGI3puVWIhajHYWVFqloXoTPei3C9k/wAowuhjkJ2Pp5F5VjbHMDtfvIc31PtGQYsI
-                1lvJ+H//2Q==
-              </eDevice.05>
+              /9j/4AAQSkZJRgABAQEASABIAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkz
+              ODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/wgALCAAyAFoBAREA/8QAGAABAQEBAQAA
+              AAAAAAAAAAAAAAMBAgb/2gAIAQEAAAAB9AY1jQZKyNdHGcuk6ZTRLvdjVoRrqFwJ96lXNAAf/8QA
+              IxAAAAUEAQUBAAAAAAAAAAAAAAECESADECExMiIjMEBCQ//aAAgBAQABBQKG/JT4WqajkZBuEkZJ
+              dx1DYyQycl6LVvudThf9ZrJ03bueh//EAB0QAAEDBQEAAAAAAAAAAAAAACEAEUABEDBQYYH/2gAI
+              AQEABj8Ch+4QhZqooaJ+Qf/EACIQAAECBgIDAQAAAAAAAAAAAAEAERAgITFBUTBxQGGxwf/aAAgB
+              AQABPyGQEA4iSBfgNlajZ6TdwqdFE8E0GkAUWT6A7fCcMAoguJn8T7A9JxOwaeal6oCJ+uC8haJ+
+              OAjQkezGjwf/2gAIAQEAAAAQEIGYcWDMGQCUAA//xAAkEAEAAQIEBwEBAAAAAAAAAAABEQAxECFB
+              cSAwUWGRobFAwf/aAAgBAQABPxDgnCJ1MTRQSwTyLm1ZTx8VPfEkmIdqYptaGU1dZyOu2tTSQhho
+              eQkuHhSiM7ZGI3puVWIhajHYWVFqloXoTPei3C9k/wAowuhjkJ2Pp5F5VjbHMDtfvIc31PtGQYsI
+              1lvJ+H//2Q==
+            </eDevice.05>
                   <eDevice.06>4106013</eDevice.06>
                </eDevice.WaveformGroup>
                <eDevice.07>4107041</eDevice.07>
@@ -1231,7 +1232,7 @@ Expected Result:  PASS
             <eDisposition.20>4220019</eDisposition.20>
             <eDisposition.20>4220017</eDisposition.20>
             <eDisposition.21>4221023</eDisposition.21>
-            <eDisposition.22>4222053</eDisposition.22>
+            <eDisposition.22 xsi:nil="true" NV="7701003"/>
             <eDisposition.23>9908035</eDisposition.23>
             <eDisposition.HospitalTeamActivationGroup>
                <eDisposition.24>4224017</eDisposition.24>

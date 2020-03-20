@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.200219CR1" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.4.0.200320" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -638,21 +638,21 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eArrest_all_eArrest.03" context="nem:eArrest.03[. = '']">
+  <sch:rule id="nemSch_consistency_eArrest_all_eArrest.03" context="nem:eArrest.03[1]">
 
-    <sch:let name="nemsisElements" value="."/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.03"/>
 
-    <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="not(../nem:eArrest.01 = ('3001003', '3001005'))">
+    <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.03 != '' or not(../nem:eArrest.01 = ('3001003', '3001005'))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eArrest_all_eArrest.04" context="nem:eArrest.04[. = '']">
+  <sch:rule id="nemSch_consistency_eArrest_all_eArrest.04" context="nem:eArrest.04[. = ''][1]">
 
-    <sch:let name="nemsisElements" value="."/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.04[. = '']"/>
 
-    <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.04" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="not(../nem:eArrest.01 = ('3001003', '3001005'))">
+    <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.04" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.04 != '' or not(../nem:eArrest.01 = ('3001003', '3001005'))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
     </sch:assert>
 
@@ -663,7 +663,7 @@
     <sch:let name="nemsisElements" value="."/>
 
     <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.05" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="not(../nem:eArrest.01 = '3001005')">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes, Prior to EMS Arrival".
     </sch:assert>
 
   </sch:rule>
@@ -673,24 +673,24 @@
     <sch:let name="nemsisElements" value="."/>
 
     <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.07" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="not(../nem:eArrest.01 = '3001005')">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes, Prior to EMS Arrival".
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eArrest_all_eArrest.17" context="nem:eArrest.17[. = '']">
+  <sch:rule id="nemSch_consistency_eArrest_all_eArrest.17" context="nem:eArrest.17[. = ''][1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.17"/>
+
+    <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.17" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12" test="../nem:eArrest.17 != '' or not(../nem:eArrest.01 = ('3001003', '3001005') and ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = ('4212013', '4212017', '4212033'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/> is "Patient Dead at Scene... (with Transport)" or "Patient Treated, Transported by this EMS Unit" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.02" context="nem:eArrest.02[. != '']">
 
     <sch:let name="nemsisElements" value="."/>
-
-    <sch:assert id="nemSch_consistency_eArrest_all_present_eArrest.17" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01, ancestor::nem:PatientCareReport" test="not(../nem:eArrest.01 = ('3001003', '3001005') and ../nem:eDisposition/nem:eDisposition.12 = (4212013, 4212017, 4212033))">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/> is "Patient Dead at Scene… (with Transport)" or "Patient Treated, Transported by this EMS Unit" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
-    </sch:assert>
-
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.02" context="nem:eArrest.02[. != ''][1]">
-
-    <sch:let name="nemsisElements" value="../nem:eArrest.02"/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.02" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -700,7 +700,7 @@
 
   <sch:rule id="nemSch_consistency_eArrest.01_eArrest.03" context="nem:eArrest.03[. != ''][1]">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.03"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.03[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -710,7 +710,7 @@
 
   <sch:rule id="nemSch_consistency_eArrest.01_eArrest.04" context="nem:eArrest.04[. != ''][1]">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.04"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.04[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.04" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -718,9 +718,9 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.05" context="nem:eArrest.05[. != ''][1]">
+  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.05" context="nem:eArrest.05[. != '']">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.05"/>
+    <sch:let name="nemsisElements" value="."/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.05" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -730,7 +730,7 @@
 
   <sch:rule id="nemSch_consistency_eArrest.01_eArrest.07" context="nem:eArrest.07[. != ''][1]">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.07"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.07[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.07" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -740,7 +740,7 @@
 
   <sch:rule id="nemSch_consistency_eArrest.01_eArrest.09" context="nem:eArrest.09[. != ''][1]">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.09"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.09[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.09" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -750,7 +750,7 @@
 
   <sch:rule id="nemSch_consistency_eArrest.01_eArrest.12" context="nem:eArrest.12[. != ''][1]">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.12"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.12[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.12" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -758,9 +758,9 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.14" context="nem:eArrest.14[. != ''][1]">
+  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.14" context="nem:eArrest.14[. != '']">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.14"/>
+    <sch:let name="nemsisElements" value="."/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.14" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -768,9 +768,9 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.16" context="nem:eArrest.16[. != ''][1]">
+  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.16" context="nem:eArrest.16[. != '']">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.16"/>
+    <sch:let name="nemsisElements" value="."/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.16" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -780,7 +780,7 @@
 
   <sch:rule id="nemSch_consistency_eArrest.01_eArrest.17" context="nem:eArrest.17[. != ''][1]">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.17"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.17[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.17" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -788,9 +788,9 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.18" context="nem:eArrest.18[. != ''][1]">
+  <sch:rule id="nemSch_consistency_eArrest.01_eArrest.18" context="nem:eArrest.18[. != '']">
 
-    <sch:let name="nemsisElements" value="../nem:eArrest.18"/>
+    <sch:let name="nemsisElements" value="."/>
 
     <sch:assert id="nemSch_consistency_eArrest.01_yes_eArrest.18" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.01" test="../nem:eArrest.01 = ('3001003', '3001005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
@@ -803,11 +803,11 @@
 
   <sch:title>eArrest.03 Resuscitation Attempted By EMS does not contain "Attempted/Initiated..." and "Not Attempted..." in the same record.</sch:title>
 
-  <sch:rule id="nemSch_consistency_eArrest.03_attempted" context="nem:eArrest[nem:eArrest.03 != '']">
+  <sch:rule id="nemSch_consistency_eArrest.03_attempted" context="nem:eArrest.03[1]">
 
-    <sch:let name="nemsisElements" value="nem:eArrest.03"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.03"/>
 
-    <sch:assert id="nemSch_consistency_eArrest.03_attempted_not" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = ('3003001', '3003003', '3003005') and nem:eArrest.03 = ('3003007', '3003009', '3003011'))">
+    <sch:assert id="nemSch_consistency_eArrest.03_attempted_not" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(../nem:eArrest.03 = ('3003001', '3003003', '3003005') and ../nem:eArrest.03 = ('3003007', '3003009', '3003011'))">
       <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> should not contain both "Attempted/Initiated..." and "Not Attempted...".
     </sch:assert>
 
@@ -818,24 +818,30 @@
 
   <sch:title>In eArrest.03 Resuscitation Attempted By EMS and eArrest.09 Type of CPR Provided, information is consistent regarding compressions and ventilation.</sch:title>
 
-  <sch:rule id="nemSch_consistency_eArrest.03_eArrest.09_match" context="nem:eArrest[nem:eArrest.03 !='' or nem:eArrest.09 != '']">
+  <sch:rule id="nemSch_consistency_eArrest.03_eArrest.09_match_eArrest.03" context="nem:eArrest.03[1]">
 
-    <sch:let name="nemsisElements" value="(nem:eArrest.03, nem:eArrest.09)"/>
+    <sch:let name="nemsisElements" value="../nem:eArrest.03"/>
 
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_compressions_1" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = '3003005') or nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011')">
-      <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> should contain "Compressions..." when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Initiated Chest Compressions".
+    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_compressions_2" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.09" test="../nem:eArrest.03 = '3003005' or not(../nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011', '3009021'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Initiated Chest Compressions" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Compressions...".
     </sch:assert>
 
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_1" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(nem:eArrest.03 = '3003003') or nem:eArrest.09 = ('3009009', '3009013', '3009015', '3009017', '3009019')">
-      <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> should contain "Ventilation..." when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Attempted Ventilation".
+    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_2" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.09" test="../nem:eArrest.03 = '3003003' or not(../nem:eArrest.09 = ('3009009', '3009013', '3009015', '3009017', '3009019', '3009023', '3009025', '3009027'))">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Attempted Ventilation" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Ventilation..." or "Compressions-Intermittent with Ventilation".
     </sch:assert>
 
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_compressions_2" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eArrest.03 = '3003005' or not(nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011'))">
-      <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> should contain "Initiated Chest Compressions" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Compressions...".
+  </sch:rule>
+
+  <sch:rule id="nemSch_consistency_eArrest.03_eArrest.09_match_eArrest.09" context="nem:eArrest.09[1]">
+
+    <sch:let name="nemsisElements" value="../nem:eArrest.09"/>
+
+    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_compressions_1" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.03" test="not(../nem:eArrest.03 = '3003005') or ../nem:eArrest.09 = ('3009001', '3009003', '3009005', '3009007', '3009009', '3009011', '3009021')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Compressions..." when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Initiated Chest Compressions".
     </sch:assert>
 
-    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_2" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eArrest.03 = '3003003' or not(nem:eArrest.09 = ('3009013', '3009015', '3009017', '3009019'))">
-      <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> should contain "Attempted Ventilation" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.09', $nemSch_elements)"/> contains "Ventilation...".
+    <sch:assert id="nemSch_consistency_eArrest.03_eArrest.09_ventilation_1" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eArrest.03" test="not(../nem:eArrest.03 = '3003003') or ../nem:eArrest.09 = ('3009009', '3009013', '3009015', '3009017', '3009019', '3009023', '3009025', '3009027')">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should contain "Ventilation..." or "Compressions-Intermittent with Ventilation" when <sch:value-of select="key('nemSch_key_elements', 'eArrest.03', $nemSch_elements)"/> contains "Attempted Ventilation".
     </sch:assert>
 
   </sch:rule>
@@ -847,9 +853,9 @@
 
   <sch:rule id="nemSch_consistency_eDisposition.06" context="nem:eDisposition.06[. != '']">
 
-    <sch:let name="nemsisElements" value="../nem:eDisposition.05, ."/>
+    <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_eDisposition.06_eDisposition.05" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:eDisposition.05)">
+    <sch:assert id="nemSch_consistency_eDisposition.06_eDisposition.05" role="[WARNING]" subject="., ../nem:eDisposition.05" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:eDisposition.05)">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'eDisposition.05', $nemSch_elements)"/>.
     </sch:assert>
 
@@ -865,19 +871,19 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eDisposition.21_hospital_rule2" context="nem:eDisposition.23[. = '']">
+  <sch:rule id="nemSch_consistency_eDisposition.21_hospital_rule2" context="nem:eDisposition.23[. = ''][1]">
 
-    <sch:let name="nemsisElements" value="."/>
+    <sch:let name="nemsisElements" value="../nem:eDisposition.23"/>
 
-    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_cardiacarrest" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01" test="not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01 = ('3001003', '3001005'))">
+    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_cardiacarrest" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01" test="../nem:eDisposition.23 != '' or not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eArrest/nem:eArrest.01 = ('3001003', '3001005'))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.21', $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department" and <sch:value-of select="key('nemSch_key_elements', 'eArrest.01', $nemSch_elements)"/> is "Yes...".
     </sch:assert>
 
-    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stroke" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29" test="not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29 = '3329005')">
+    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stroke" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29" test="../nem:eDisposition.23 != '' or not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.StrokeScaleGroup/nem:eVitals.29 = '3329005')">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.21', $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department" and <sch:value-of select="key('nemSch_key_elements', 'eVitals.29', $nemSch_elements)"/> is "Positive".
     </sch:assert>
 
-    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stemi" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03" test="not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03 = ('9901051', '9901053', '9901055', '9901057', '9901058'))">
+    <sch:assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stemi" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eDisposition.21, ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03" test="../nem:eDisposition.23 != '' or not(../nem:eDisposition.21 = ('4221003', '4221005', '4221023') and ancestor::nem:PatientCareReport/nem:eVitals/nem:eVitals.VitalGroup/nem:eVitals.CardiacRhythmGroup/nem:eVitals.03 = ('9901051', '9901053', '9901055', '9901057', '9901058'))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.21', $nemSch_elements)"/> is "Hospital..." or "Freestanding Emergency Department" and <sch:value-of select="key('nemSch_key_elements', 'eVitals.03', $nemSch_elements)"/> is "STEMI...".
     </sch:assert>
 
@@ -992,7 +998,7 @@
 
     <sch:let name="nemsisElements" value="../nem:ePatient.14"/>
 
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.14" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12" test="../nem:ePatient.14[. != ''] or not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = ('4212013', '4212017', '4212023', '4212033'))">
+    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.14" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12" test="../nem:ePatient.14 != '' or not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = ('4212013', '4212017', '4212023', '4212033'))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
     </sch:assert>
 
@@ -1168,11 +1174,11 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eDisposition.12_all_eDisposition.20" context="nem:eDisposition.20[. = '']">
+  <sch:rule id="nemSch_consistency_eDisposition.12_all_eDisposition.20" context="nem:eDisposition.20[. = ''][1]">
 
-    <sch:let name="nemsisElements" value="."/>
+    <sch:let name="nemsisElements" value="../nem:eDisposition.20"/>
 
-    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.20" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12" test="../nem:eDisposition.21[. != ''] or not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = ('4212013', '4212017', '4212023', '4212033'))">
+    <sch:assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.20" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12" test="../nem:eDisposition.20 != '' or not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = ('4212013', '4212017', '4212023', '4212033'))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
     </sch:assert>
 
@@ -1193,25 +1199,15 @@
 
   <sch:title>eDisposition.24 Destination Team Pre-Arrival Alert or Activation and eDisposition.25 Date/Time of Destination Prearrival Alert or Activation are both recorded when either one is recorded.</sch:title>
 
-  <sch:rule id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24" context="nem:eDisposition.HospitalTeamActivationGroup[nem:eDisposition.25 != '']">
+  <sch:rule id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_nonempty" context="nem:eDisposition.HospitalTeamActivationGroup[* != '']">
 
-    <sch:let name="nemsisElements" value="*"/>
+    <sch:let name="nemsisElements" value="nem:eDisposition.24, nem:eDisposition.25"/>
 
     <sch:assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24_present" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eDisposition.24 != ''">
       <sch:value-of select="key('nemSch_key_elements', 'eDisposition.24', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.25', $nemSch_elements)"/> is recorded.
     </sch:assert>
 
-  </sch:rule>
-
-  <sch:rule id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25" context="nem:eDisposition.HospitalTeamActivationGroup[not(nem:eDisposition.24 = ('', '4224001'))]">
-
-    <!-- This rule fires when eDisposition.25 Date/Time of Destination Prearrival Alert or 
-         Activation is not recorded and eDisposition.24 Destination Team Pre-Arrival Alert or 
-         Activation is recorded and is not "None". -->
-
-    <sch:let name="nemsisElements" value="*"/>
-
-    <sch:assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25_present" role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
+    <sch:assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25_present" role="[WARNING]" diagnostics="nemsisDiagnostic" test="nem:eDisposition.25 != '' or nem:eDisposition.24 = '4224001'">
       <sch:value-of select="key('nemSch_key_elements', 'eDisposition.25', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.24', $nemSch_elements)"/> is recorded with a value other than "None".
     </sch:assert>
 
@@ -1222,11 +1218,11 @@
 
   <sch:title>When eSituation.02 Possible Injury is "Yes" (and eDisposition.12 Incident/Patient Disposition indicates patient contact), elements in the eInjury section are recorded, and when eSituation.02 Possible Injury is not "Yes", elements in the eInjury section are not recorded.</sch:title>
 
-  <sch:rule id="nemSch_consistency_eInjury_all" context="nem:eInjury.01[. = '']">
+  <sch:rule id="nemSch_consistency_eInjury_all" context="nem:eInjury.01[. = ''][1]">
 
-    <sch:let name="nemsisElements" value="."/>
+    <sch:let name="nemsisElements" value="../nem:eInjury.01"/>
 
-    <sch:assert id="nemSch_consistency_eInjury_all_present_eInjury.01" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12" test="../nem:eInjury.01[. != ''] or not(ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005' and ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = ('4212013', '4212015', '4212017', '4212019', '4212021', '4212023', '4212025', '4212027', '4212029', '4212031', '4212033', '4212035', '4212037'))">
+    <sch:assert id="nemSch_consistency_eInjury_all_present_eInjury.01" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12" test="../nem:eInjury.01 != '' or not(ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005' and ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = ('4212013', '4212015', '4212017', '4212019', '4212021', '4212023', '4212025', '4212027', '4212029', '4212031', '4212033', '4212035', '4212037'))">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.12', $nemSch_elements)"/> is "Patient..." and <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
@@ -1237,7 +1233,7 @@
     <sch:let name="nemsisElements" value="../nem:eInjury.01[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eInjury_eSituation.02_yes_eInjury.01" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02" test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005'">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded only when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
   </sch:rule>
@@ -1247,7 +1243,7 @@
     <sch:let name="nemsisElements" value="../nem:eInjury.03[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eInjury_eSituation.02_yes_eInjury.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02" test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005'">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded only when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
   </sch:rule>
@@ -1257,7 +1253,7 @@
     <sch:let name="nemsisElements" value="../nem:eInjury.04[. != '']"/>
 
     <sch:assert id="nemSch_consistency_eInjury_eSituation.02_yes_eInjury.04" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02" test="ancestor::nem:PatientCareReport/nem:eSituation/nem:eSituation.02 = '9922005'">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded only when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should only be recorded when <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
   </sch:rule>
@@ -1269,20 +1265,20 @@
 
   <sch:rule id="nemSch_consistency_ePatient.07" context="nem:ePatient.07[. != '']">
 
-    <sch:let name="nemsisElements" value="., ../nem:ePatient.08"/>
+    <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_ePatient.07_ePatient.08" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:ePatient.08)">
+    <sch:assert id="nemSch_consistency_ePatient.07_ePatient.08" role="[WARNING]" subject="., ../nem:ePatient.08" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:ePatient.08)">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'ePatient.08', $nemSch_elements)"/>.
     </sch:assert>
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_ePatient.15" context="nem:ePatient.15[. != '']">
+  <sch:rule id="nemSch_consistency_ePatient.15" context="nem:ePatient.16[. = '']">
 
-    <sch:let name="nemsisElements" value="., ../nem:ePatient.16"/>
+    <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_ePatient.15_ePatient.16" role="[WARNING]" diagnostics="nemsisDiagnostic" test="../nem:ePatient.16 != ''">
-     <sch:value-of select="key('nemSch_key_elements', 'ePatient.16', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> is recorded.
+    <sch:assert id="nemSch_consistency_ePatient.15_ePatient.16" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="../nem:ePatient.15, ." test="../nem:ePatient.15 = ''">
+     <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'ePatient.15', $nemSch_elements)"/> is recorded.
     </sch:assert>
 
   </sch:rule>
@@ -1292,11 +1288,11 @@
 
   <sch:title>Elements in the eScene section are consistent.</sch:title>
 
-  <sch:rule id="nemSch_consistency_eScene.07_mci_rule1" context="nem:eScene.06[. != '2707001']">
+  <sch:rule id="nemSch_consistency_eScene.07_mci_rule1" context="nem:eScene.06">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_eScene.07_mci_eScene.06" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eScene.07" test="../nem:eScene.07 != '9923003'">
+    <sch:assert id="nemSch_consistency_eScene.07_mci_eScene.06" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eScene.07" test=". = '2707001' or ../nem:eScene.07 != '9923003'">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be "Multiple" when <sch:value-of select="key('nemSch_key_elements', 'eScene.07', $nemSch_elements)"/> is "Yes".
     </sch:assert>
 
@@ -1314,9 +1310,9 @@
 
   <sch:rule id="nemSch_consistency_eScene.21" context="nem:eScene.21[. != '']">
 
-    <sch:let name="nemsisElements" value="., ../nem:eScene.18"/>
+    <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_eScene.21_eScene.18" role="[WARNING]" diagnostics="nemsisDiagnostic" test="starts-with(., ../nem:eScene.18)">
+    <sch:assert id="nemSch_consistency_eScene.21_eScene.18" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eScene.18" test="starts-with(., ../nem:eScene.18)">
       <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should belong within the <sch:value-of select="key('nemSch_key_elements', 'eScene.18', $nemSch_elements)"/>.
     </sch:assert>
 
@@ -1347,11 +1343,11 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_consistency_eSituation_injury" context="nem:eSituation.02[. != '9922005']">
+  <sch:rule id="nemSch_consistency_eSituation_injury" context="nem:eSituation.02">
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_eSituation_injury_eSituation.02" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(some $element in ../(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12) satisfies matches($element, '^(S|T(0\d|1[0-4]))'))">
+    <sch:assert id="nemSch_consistency_eSituation_injury_eSituation.02" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12)" test=". = '9922005' or not(some $element in ../(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12) satisfies matches($element, '^(S|T(0\d|1[0-4]))'))">
       <sch:value-of select="key('nemSch_key_elements', 'eSituation.02', $nemSch_elements)"/> should be "Yes" when a symptom or impression is injury-related.
     </sch:assert>
 
@@ -1386,8 +1382,8 @@
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_eMedications.MedicationGroup_all_eMedications.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eMedications.02" test="../nem:eMedications.02 = '9923003'">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eMedications.02', $nemSch_elements)"/> is "Yes".
+    <sch:assert id="nemSch_consistency_eMedications.MedicationGroup_all_eMedications.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="." test="false()">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when a medication is administered.
     </sch:assert>
 
   </sch:rule>
@@ -1406,8 +1402,8 @@
 
     <sch:let name="nemsisElements" value="."/>
 
-    <sch:assert id="nemSch_consistency_eProcedures.ProcedureGroup_all_eProcedures.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="., ../nem:eProcedures.02" test="../nem:eProcedures.02 = '9923003'">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded, unless <sch:value-of select="key('nemSch_key_elements', 'eProcedures.02', $nemSch_elements)"/> is "Yes".
+    <sch:assert id="nemSch_consistency_eProcedures.ProcedureGroup_all_eProcedures.03" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="." test="false()">
+      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when a procedure is performed.
     </sch:assert>
 
   </sch:rule>
@@ -1876,7 +1872,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.08" context="nem:eResponse.08[. = '2208013']">
+  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.08" context="nem:eResponse.08[. = '2208013'][1]">
 
     <sch:let name="nemsisElements" value="../nem:eResponse.08"/>
 
@@ -1886,7 +1882,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.09" context="nem:eResponse.09[. = '2209011']">
+  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.09" context="nem:eResponse.09[. = '2209011'][1]">
 
     <sch:let name="nemsisElements" value="../nem:eResponse.09"/>
 
@@ -1896,7 +1892,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.10" context="nem:eResponse.10[. = '2210017']">
+  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.10" context="nem:eResponse.10[. = '2210017'][1]">
 
     <sch:let name="nemsisElements" value="../nem:eResponse.10"/>
 
@@ -1906,7 +1902,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.11" context="nem:eResponse.11[. = '2211011']">
+  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.11" context="nem:eResponse.11[. = '2211011'][1]">
 
     <sch:let name="nemsisElements" value="../nem:eResponse.11"/>
 
@@ -1916,7 +1912,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.12" context="nem:eResponse.12[. = '2212015']">
+  <sch:rule id="nemSch_uniqueness_EMSDataSet_eResponse.12" context="nem:eResponse.12[. = '2212015'][1]">
 
     <sch:let name="nemsisElements" value="../nem:eResponse.12"/>
 
@@ -1926,7 +1922,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_uniqueness_EMSDataSet_eVitals.22" context="nem:eVitals.22[. = '3322003']">
+  <sch:rule id="nemSch_uniqueness_EMSDataSet_eVitals.22" context="nem:eVitals.22[. = '3322003'][1]">
 
     <sch:let name="nemsisElements" value="../nem:eVitals.22"/>
 

@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for DEMDataSet"
-                        schemaVersion="3.4.0.190607"><!--   
+                        schemaVersion="3.4.0.200320"><!--   
 		   
 		   
 		 -->
@@ -39,43 +39,58 @@
    <svrl:fired-rule context="nem:dAgency.07[. != '']"
                     id="nemSch_consistency_dAgency.ServiceGroup_dAgency.07"/>
    <svrl:active-pattern document="DEMDataSet-CB45.xml"
-                        id="nemSch_consistency_nilNvPn"
+                        id="nemSch_consistency_dNilNvPn"
                         name="The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate."/>
-   <svrl:fired-rule context="nem:dCustomResults.01 | nem:eCustomResults.01"
-                    id="nemSch_nilNvPn_customResults"/>
+   <svrl:fired-rule context="nem:dCustomResults.01"
+                    id="nemSch_consistency_dNilNvPn_customResults"/>
    <svrl:active-pattern document="DEMDataSet-CB45.xml"
                         id="nemSch_sequence_dAgency.AgencyYearGroup"
                         name="Statistical Calendar Year is in the past."/>
    <svrl:active-pattern document="DEMDataSet-CB45.xml"
                         id="nemSch_uniqueness_DEMDataSet"
                         name="Certain recurring demographic data elements are unique within a list."/>
-   <svrl:fired-rule context="nem:dAgency.15[.=../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15]"
+   <svrl:fired-rule context="nem:dAgency.15"
                     id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup"/>
-   <svrl:failed-assert test="false()"
+   <svrl:fired-rule context="nem:dAgency.15"
+                    id="nemSch_uniqueness_DEMDataSet_dAgency.AgencyYearGroup"/>
+   <svrl:failed-assert test="not(. = ../preceding-sibling::nem:dAgency.AgencyYearGroup/nem:dAgency.15)"
                        id="nemSch_uniqueness_DEMDataSet_dAgency.15"
-                       role="[ERROR]"
+                       role="[WARNING]"
                        location="/*:DEMDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:DemographicReport[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency.AgencyYearGroup[namespace-uri()='http://www.nemsis.org'][2]/*:dAgency.15[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
       Agency statistics for a particular Statistical Calendar Year should only be recorded once.
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
-         <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+         <nemsisDiagnostic xmlns="http://www.nemsis.org">
             <record>
                <dAgency.01>0</dAgency.01>
                <dAgency.02>A</dAgency.02>
                <dAgency.04>49</dAgency.04>
             </record>
             <elements>
-               <element location="/*:DEMDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:DemographicReport[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency.AgencyYearGroup[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency.15[namespace-uri()='http://www.nemsis.org'][1]">2012</element>
                <element location="/*:DEMDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:DemographicReport[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency[namespace-uri()='http://www.nemsis.org'][1]/*:dAgency.AgencyYearGroup[namespace-uri()='http://www.nemsis.org'][2]/*:dAgency.15[namespace-uri()='http://www.nemsis.org'][1]">2012</element>
             </elements>
             <elementsMissing/>
          </nemsisDiagnostic>
       </svrl:diagnostic-reference>
    </svrl:failed-assert>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
+   <svrl:fired-rule context="nem:dConfiguration.16"
+                    id="nemSch_uniqueness_DEMDataSet_dConfiguration.16"/>
    <svrl:active-pattern document="DEMDataSet-CB45.xml"
-                        id="nemSch_uniqueness_NvPn"
+                        id="nemSch_uniqueness_dNvPn"
                         name="When a Not Value or Pertinent Negative is recorded for a recurring element, it is the only value recorded."/>
-   <svrl:fired-rule context="nem:dCustomResults.01 | nem:eCustomResults.01"
-                    id="nemSch_uniqueness_NvPn_customResults"/>
+   <svrl:fired-rule context="nem:dCustomResults.01"
+                    id="nemSch_uniqueness_dNvPn_dCustomResults"/>
 </svrl:schematron-output>

@@ -5,164 +5,319 @@ ID:               EMSDataSet--Base
 Description:      This test case should pass validation while firing as many rules as possible.
 Expected Result:  [PASS]
       
-File:             EMSDataSet-0B8.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_F
-Description:      When Type of Dispatch Delay is "None/No Delay", no other Type of Dispatch Delay should be recorded.
+File:             EMSDataSet-11CB.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.06_A
+Description:      Unit Back in Service Date/Time should not be earlier than Unit Arrived on Scene Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-11B9.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_G
-Description:      When Type of Response Delay is "None/No Delay", no other Type of Response Delay should be recorded.
+File:             EMSDataSet-1267.xml
+ID:               nemSch_sequence_time_eMedications.01_after_eTimes.07_A
+Description:      Date/Time Medication Administered should not be earlier than Arrived at Patient Date/Time, unless Medication Administered Prior to this Unit's EMS Care is "Yes".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-12BA.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_H
-Description:      When Type of Scene Delay is "None/No Delay", no other Type of Scene Delay should be recorded.
+File:             EMSDataSet-127D.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eArrest.12_A
+Description:      When Any Return of Spontaneous Circulation is "No", no other value should be recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-13BB.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_I
-Description:      When Type of Transport Delay is "None/No Delay", no other Type of Transport Delay should be recorded.
+File:             EMSDataSet-1368.xml
+ID:               nemSch_sequence_time_eMedications.01_after_eTimes.07_B
+Description:      Date/Time Medication Administered should not be earlier than Arrived at Patient Date/Time, unless Medication Administered Prior to this Unit's EMS Care is "Yes". * Medication Administered Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [PASS]
+
+File:             EMSDataSet-13E.xml
+ID:               nemSch_uniqueness_eNvPn_Pn_only_A
+Description:      When Alcohol/Drug Use Indicators has a Pertinent Negative, no other value should be recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-14BC.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_J
-Description:      When Type of Turn-Around Delay is "None/No Delay", no other Type of Turn-Around Delay should be recorded.
+File:             EMSDataSet-147E.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eArrest.04_A
+Description:      When Arrest Witnessed By is "Not Witnessed", no other value should be recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-15BD.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_K
-Description:      When Glasgow Coma Score-Qualifier is "Initial GCS has legitimate values without interventions such as intubation and sedation", no other Glasgow Coma Score-Qualifier should be recorded.
+File:             EMSDataSet-14C9.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.05_eTimes.03_A
+Description:      Unit En Route Date/Time should not be earlier than Unit Notified by Dispatch Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-1684.xml
-ID:               nemSch_sequence_time_eExam.03_before_A
-Description:      Date/Time of Assessment should be no later than Transfer of EMS Patient Care Date/Time or Destination Patient Transfer of Care Date/Time.
+File:             EMSDataSet-14CC.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.07_A
+Description:      Unit Back in Service Date/Time should not be earlier than Arrived at Patient Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-216.xml
-ID:               nemSch_sequence_time_eProcedures.01_before_A
-Description:      Date/Time Procedure Performed should be no later than Transfer of EMS Patient Care Date/Time or Destination Patient Transfer of Care Date/Time.
+File:             EMSDataSet-1602.xml
+ID:               nemSch_consistency_eInjury_eSituation.02_yes_eInjury.01_A
+Description:      Cause of Injury should only be recorded when Possible Injury is "Yes".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-2EF0.xml
-ID:               nemSch_nilNvPn_nil_Nv_B
-Description:      When (Element) is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
-Expected Result:  [ERROR]
+File:             EMSDataSet-163A.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eArrest.14_A
+Description:      Unit Backin Service Date/Time should not be earlier than Date/Time of Cardiac Arrest.
+Expected Result:  [WARNING]
 
-File:             EMSDataSet-33D0.xml
-ID:               nemSch_nilNvPn_Nv_Nil_B
-Description:      When (Element) has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
-Expected Result:  [ERROR]
+File:             EMSDataSet-1726.xml
+ID:               nemSch_eNilNvPn_eExam.AssessmentGroup_A
+Description:      An element in eExam.AssessmentGroup has a Pertinent Negative attribute. Nothing is checked, since the nil and NV attributes are not allowed.
+Expected Result:  [PASS]
+
+File:             EMSDataSet-1864.xml
+ID:               nemSch_sequence_time_eVitals.01_after_eTimes.03_A
+Description:      Date/Time Vital Signs Taken should not be earlier than Unit Notified by Dispatch Date/Time, unless Obtained Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-1ACE.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.09_A
+Description:      Unit Back in Service Date/Time should not be earlier than Unit Left Scene Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-1C04.xml
+ID:               nemSch_consistency_eInjury_eSituation.02_yes_eInjury.03_A
+Description:      Trauma Center Criteria should only be recorded when Possible Injury is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-1C9.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.05_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Unit En Route Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-1DEF.xml
+ID:               nemSch_sequence_time_eDisposition.25_before_eTimes.12_A
+Description:      Date/Time of Destination Prearrival Alert or Activation should not be later than Destination Patient Transfer of Care Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-1F05.xml
+ID:               nemSch_consistency_eInjury_eSituation.02_yes_eInjury.04_A
+Description:      Vehicular, Pedestrian, or Other Injury Risk Factor should only be recorded when Possible Injury is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-20F0.xml
+ID:               nemSch_sequence_time_eDisposition.25_before_eTimes.13_A
+Description:      Date/Time of Destination Prearrival Alert or Activation should not be later than Unit Back in Service Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-21CA.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.06_eTimes.03_A
+Description:      Unit Arrived on Scene Date/Time should not be earlier than Unit Notified by Dispatch Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-2243.xml
+ID:               nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stemi_A
+Description:      Hospital Capability should be recorded when Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Cardiac Rhythm / Electrocardiography (ECG) is "STEMI...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-2468.xml
+ID:               nemSch_sequence_time_eVitals.01_after_eTimes.07_A
+Description:      Date/Time Vital Signs Taken should not be earlier than Arrived at Patient Date/Time, unless Obtained Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-2569.xml
+ID:               nemSch_sequence_time_eVitals.01_after_eTimes.07_B
+Description:      Date/Time Vital Signs Taken should not be earlier than Arrived at Patient Date/Time, unless Obtained Prior to this Unit's EMS Care is "Yes". * Obtained Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [PASS]
+
+File:             EMSDataSet-2734.xml
+ID:               nemSch_consistency_eInjury_all_present_eInjury.01_A
+Description:      Cause of Injury should be recorded when Incident/Patient Disposition is "Patient..." and Possible Injury is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-27CC.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.06_eTimes.05_A
+Description:      Unit Arrived on Scene Date/Time should not be earlier than Unit En Route Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-2952.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eTimes.11_A
+Description:      Patient Arrived at Destination Date/Time should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-2956.xml
+ID:               nemSch_sequence_time_eTimes_current_eTimes.13_A
+Description:      Unit Back in Service Date/Time should not be in the future (the current time according to this system is (current dateTime)). * This test should generate a warning until January 1, 2050.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-2C53.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eTimes.12_A
+Description:      Destination Patient Transfer of Care Date/Time should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-2ECB.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.07_eTimes.03_A
+Description:      Arrived at Patient Date/Time should not be earlier than Unit Notified by Dispatch Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-3045.xml
+ID:               nemSch_uniqueness_eNvPn_Nv_only_B
+Description:      When Additional Response Mode Descriptors has a Not Value, no other value should be recorded.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-3155.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eTimes.05_A
+Description:      Unit En Route Date/Time should be recorded unless Incident/Patient Disposition is "Canceled (Prior to Arrival At Scene)".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-3456.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eTimes.06_A
+Description:      Unit Arrived on Scene Date/Time should be recorded unless Incident/Patient Disposition is "Canceled (Prior to Arrival At Scene)".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-3757.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eTimes.07_A
+Description:      Arrived at Patient Date/Time should be recorded when Incident/Patient Disposition is "Patient...".
+Expected Result:  [WARNING]
 
 File:             EMSDataSet-3BBB.xml
 ID:               nemSch_consistency_eSituation_injury_eSituation.02_A
-Description:      When a symptom or impression is injury-related, Possible Injury should be "Yes".
+Description:      Possible Injury should be "Yes" when a symptom or impression is injury-related.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-3F90.xml
-ID:               nemSch_consistency_eArrest.01_yes_A
-Description:      Information related to cardiac arrest and resuscitation should be recorded only when Cardiac Arrest is "Yes".
+File:             EMSDataSet-3D59.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eTimes.09_A
+Description:      Unit Left Scene Date/Time should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-4091.xml
-ID:               nemSch_consistency_eArrest.01_yes_B
-Description:      Information related to cardiac arrest and resuscitation should be recorded only when Cardiac Arrest is "Yes". * eArrest elements may be present and empty.
-Expected Result:  [PASS]
-
-File:             EMSDataSet-4C07.xml
-ID:               nemSch_sequence_time_eLabs.01_prior_before_A
-Description:      When Study/Result Prior to this Unit's EMS Care is "Yes," Date/Time of Laboratory or Imaging Result should be no later than Arrived at Patient Date/Time.
+File:             EMSDataSet-417.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eSituation.07_A
+Description:      Chief Complaint Anatomic Location should be recorded when Type of Service Requested is "911 Response (Scene)" and Incident/Patient Disposition is "Patient Treated, Transported by this EMS Unit".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-517F.xml
-ID:               nemSch_nilNvPn_Pn_Nv_Not_Nil_A
-Description:      When (Element) has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+File:             EMSDataSet-48CD.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.09_eTimes.03_A
+Description:      Unit Left Scene Date/Time should not be earlier than Unit Notified by Dispatch Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-4C2C.xml
+ID:               nemSch_consistency_eNilNvPn_Nil_Nv_B
+Description:      When EMS Agency Name is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
 Expected Result:  [ERROR]
+
+File:             EMSDataSet-4CA.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.06_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Unit Arrived on Scene Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-4CC4.xml
+ID:               nemSch_sequence_time_eMedications.01_before_eTimes.12_A
+Description:      Date/Time Medication Administered should not be later than Destination Patient Transfer of Care Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-4ECF.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.09_eTimes.05_A
+Description:      Unit Left Scene Date/Time should not be earlier than Unit En Route Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-4FC5.xml
+ID:               nemSch_sequence_time_eMedications.01_before_eTimes.13_A
+Description:      Date/Time Medication Administered should not be later than Unit Back in Service Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-51D0.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.09_eTimes.06_A
+Description:      Unit Left Scene Date/Time should not be earlier than Unit Arrived on Scene Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-522C.xml
+ID:               nemSch_consistency_eNilNvPn_Nv_Nil_B
+Description:      When Incident Number has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-54D1.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.09_eTimes.07_A
+Description:      Unit Left Scene Date/Time should not be earlier than Arrived at Patient Date/Time.
+Expected Result:  [WARNING]
 
 File:             EMSDataSet-55A9.xml
 ID:               nemSch_consistency_eScene.21_eScene.18_A
 Description:      Incident County should belong within the Incident State.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-584C.xml
-ID:               nemSch_consistency_eArrest_all_present_A
-Description:      When Cardiac Arrest is "Yes", the following information related to cardiac arrest and resuscitation should be recorded: (Cardiac Arrest Etiology, Resuscitation Attempted By EMS, Arrest Witnessed By, CPR Care Provided Prior to EMS Arrival, AED Use Prior to EMS Arrival, Cardiac Rhythm on Arrival at Destination)
+File:             EMSDataSet-55B9.xml
+ID:               nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stroke_A
+Description:      Hospital Capability should be recorded when Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Stroke Scale Score is "Positive".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-5B49.xml
-ID:               nemSch_sequence_time_eDevice.02_before_A
-Description:      Date/Time of Event (per Medical Device) should be no later than Transfer of EMS Patient Care Date/Time or Destination Patient Transfer of Care Date/Time.
+File:             EMSDataSet-5C56.xml
+ID:               nemSch_sequence_time_eMedications.01_prior_before_eTimes.07_A
+Description:      Date/Time Medication Administered should not be later than Arrived at Patient Date/Time when Medication Administered Prior to this Unit's EMS Care is "Yes".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-5E7.xml
-ID:               nemSch_sequence_time_eDevice.02_after_A
-Description:      Date/Time of Event (per Medical Device) should be no earlier than Arrived at Patient Date/Time.
+File:             EMSDataSet-5E80.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eVitals.22_A
+Description:      When Glasgow Coma Score-Qualifier is "Initial GCS has legitimate values without interventions such as intubation and sedation", no other value should be recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-6428.xml
-ID:               nemSch_consistency_eMedications.MedicationGroup_all_A
-Description:      When a medication is administered, the following should be recorded: (Date/Time Medication Administered, Medication Given)
+File:             EMSDataSet-5FC5.xml
+ID:               nemSch_sequence_time_eVitals.01_before_eTimes.12_A
+Description:      Date/Time Vital Signs Taken should not be later than Destination Patient Transfer of Care Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-62C6.xml
+ID:               nemSch_sequence_time_eVitals.01_before_eTimes.13_A
+Description:      Date/Time Vital Signs Taken should not be later than Unit Back in Service Date/Time.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-64F.xml
 ID:               nemSch_consistency_eSituation.09_eSituation.10_A
-Description:      When Primary Symptom is empty, Other Associated Symptoms should not be recorded.
+Description:      Other Associated Symptoms should only be recorded when Primary Symptom is recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-6529.xml
-ID:               nemSch_consistency_eMedications.MedicationGroup_all_B
-Description:      When a medication is administered, the following should be recorded: (Date/Time Medication Administered, Medication Given) * eMedications elements may be present and empty. eMedications.03 may have content and @PN.
+File:             EMSDataSet-663.xml
+ID:               nemSch_sequence_time_eMedications.01_after_eTimes.03_A
+Description:      Date/Time Medication Administered should not be earlier than Unit Notified by Dispatch Date/Time, unless Medication Administered Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-6646.xml
+ID:               nemSch_consistency_eNilNvPn_Pn_Not_NilNv_eMedications.03_A
+Description:      When Medication Given has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-675F.xml
+ID:               nemSch_eNilNvPn_customResults_A
+Description:      The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate. * Not checked on eCustomResults.01.
 Expected Result:  [PASS]
 
-File:             EMSDataSet-652A.xml
-ID:               nemSch_consistency_eVitals.VitalGroup_all_A
-Description:      When a set of vital signs is obtained, the following should be recorded: (Date/Time Vital Signs Taken)
-Expected Result:  [WARNING]
-
-File:             EMSDataSet-662B.xml
-ID:               nemSch_consistency_eVitals.VitalGroup_all_B
-Description:      When a set of vital signs is obtained, the following should be recorded: (Date/Time Vital Signs Taken) * eVitals elements may be present and empty.
-Expected Result:  [PASS]
-
-File:             EMSDataSet-67F.xml
-ID:               nemSch_consistency_eProcedures.ProcedureGroup_all_A
-Description:      When a procedure is performed, the following should be recorded: (Date/Time Procedure Performed, Procedure)
-Expected Result:  [WARNING]
-
-File:             EMSDataSet-685C.xml
-ID:               nemSch_consistency_eInjury_all_present_A
-Description:      When Possible Injury is "Yes", the following information related to injury should be recorded: (Cause of Injury)
-Expected Result:  [WARNING]
-
-File:             EMSDataSet-6E6A.xml
-ID:               nemSch_sequence_time_eMedications.01_before_A
-Description:      Date/Time Medication Administered should be no later than Transfer of EMS Patient Care Date/Time or Destination Patient Transfer of Care Date/Time.
+File:             EMSDataSet-6C7.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.11_A
+Description:      Unit Back in Service Date/Time should not be earlier than Patient Arrived at Destination Date/Time.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-717A.xml
 ID:               nemSch_consistency_ePatient.15_ePatient.16_A
-Description:      When Age is recorded, Age Units should be recorded.
+Description:      Age Units should be recorded when Age is recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-7479.xml
-ID:               nemSch_sequence_time_eLabs.01_before_A
-Description:      Date/Time of Laboratory or Imaging Result should be no later than Transfer of EMS Patient Care Date/Time or Destination Patient Transfer of Care Date/Time.
+File:             EMSDataSet-718.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eSituation.08_A
+Description:      Chief Complaint Organ System should be recorded when Type of Service Requested is "911 Response (Scene)" and Incident/Patient Disposition is "Patient Treated, Transported by this EMS Unit".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-776B.xml
-ID:               nemSch_sequence_time_eVitals.01_before_A
-Description:      Date/Time Vital Signs Taken should be no later than Transfer of EMS Patient Care Date/Time or Destination Patient Transfer of Care Date/Time.
+File:             EMSDataSet-74F0.xml
+ID:               nemSch_consistency_eMedications.MedicationGroup_all_eMedications.01_A
+Description:      Date/Time Medication Administered should be recorded, unless Medication Administered Prior to this Unit's EMS Care is "Yes".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-780.xml
-ID:               nemSch_consistency_eProcedures.ProcedureGroup_all_B
-Description:      When a procedure is performed, the following should be recorded: (Date/Time Procedure Performed, Procedure) * eProcedures elements may be present and empty. eProcedures.03 may have content and @PN.
+File:             EMSDataSet-7557.xml
+ID:               nemSch_sequence_time_eVitals.01_prior_before_eTimes.07_A
+Description:      Date/Time Vital Signs Taken should not be later than Arrived at Patient Date/Time when Obtained Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-75F1.xml
+ID:               nemSch_consistency_eMedications.MedicationGroup_all_eMedications.01_B
+Description:      Date/Time Medication Administered should be recorded, unless Medication Administered Prior to this Unit's EMS Care is "Yes". * eMedications elements may be present and empty. eMedications.03 may have content and @PN.
 Expected Result:  [PASS]
+
+File:             EMSDataSet-7AF2.xml
+ID:               nemSch_consistency_eMedications.MedicationGroup_all_eMedications.03_A
+Description:      Medication Given should be recorded when a medication is administered.
+Expected Result:  [WARNING]
 
 File:             EMSDataSet-7BFB.xml
 ID:               nemSch_consistency_eDisposition.06_eDisposition.05_A
 Description:      Destination County should belong within the Destination State.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-7CB.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.07_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Arrived at Patient Date/Time.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-817C.xml
@@ -170,217 +325,447 @@ ID:               nemSch_consistency_ePatient.07_ePatient.08_A
 Description:      Patient's Home County should belong within the Patient's Home State.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-8423.xml
-ID:               nemSch_sequence_time_eExam.03_after_A
-Description:      Date/Time of Assessment should be no earlier than Arrived at Patient Date/Time.
+File:             EMSDataSet-839.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eArrest.14_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Date/Time of Cardiac Arrest.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-85A3.xml
-ID:               nemSch_sequence_time_eProcedures.01_prior_before_A
-Description:      When Procedure Performed Prior to this Unit's EMS Care is "Yes," Date/Time Procedure Performed should be no later than Arrived at Patient Date/Time.
+File:             EMSDataSet-83FC.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eHistory.01_A
+Description:      When Barriers to Patient Care is "None Noted", no other value should be recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-8B13.xml
-ID:               nemSch_sequence_time_eTimes_order_A
-Description:      Date/Times should be in order. The following times are too early: (Date/Time Decision to Manage the Patient with an Invasive Airway, Date/Time Invasive Airway Placement Attempts Abandoned, Date/Time of Hospital Admission, Date/Time of Hospital Discharge, Dispatch Notified Date/Time, Unit Notified by Dispatch Date/Time, Dispatch Acknowledged Date/Time, Unit En Route Date/Time, Unit Arrived on Scene Date/Time, Arrived at Patient Date/Time, Transfer of EMS Patient Care Date/Time, Unit Left Scene Date/Time, Arrival at Destination Landing Area Date/Time, Patient Arrived at Destination Date/Time, Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, Unit Canceled Date/Time, Unit Back at Home Location Date/Time, EMS Call Completed Date/Time)
+File:             EMSDataSet-8C8.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.03_A
+Description:      Unit Back in Service Date/Time should not be earlier than Unit Notified by Dispatch Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-8EE0.xml
-ID:               nemSch_nilNvPn_eExam.AssessmentGroup_A
-Description:      An element in eExam.AssessmentGroup has a Pertinent Negative attribute. Nothing is checked, since the nil and NV attributes are not allowed.
-Expected Result:  [PASS]
-
-File:             EMSDataSet-8F95.xml
-ID:               nemSch_sequence_time_eDisposition.25_before_A
-Description:      Date/Time of Destination Prearrival Alert or Activation should be no later than Destination Patient Transfer of Care Date/Time, Unit Back in Service Date/Time, or Unit Back at Home Location Date/Time.
+File:             EMSDataSet-915A.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eResponse.10_A
+Description:      When Type of Scene Delay is "None/No Delay", no other value should be recorded.
 Expected Result:  [WARNING]
-
-File:             EMSDataSet-91A.xml
-ID:               nemSch_nilNvPn_customResults_A
-Description:      The combination of nil, Not Value (NV), and Pertinent Negative (PN) attributes for an element is appropriate. * Not checked on eCustomResults.01.
-Expected Result:  [PASS]
 
 File:             EMSDataSet-91BD.xml
 ID:               nemSch_consistency_eArrest.03_attempted_not_A
-Description:      Resuscitation Attempted By EMS should not contain both "Attempted/Initiated..." and "Not Attempted..." in the same record.
+Description:      Resuscitation Attempted By EMS should not contain both "Attempted/Initiated..." and "Not Attempted...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-9385.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eSituation.01_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Date/Time of Symptom Onset.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-945B.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eResponse.11_A
+Description:      When Type of Transport Delay is "None/No Delay", no other value should be recorded.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-9470.xml
+ID:               nemSch_sequence_time_eProcedures.01_before_eTimes.12_A
+Description:      Date/Time Procedure Performed should not be later than Destination Patient Transfer of Care Date/Time.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-954A.xml
 ID:               nemSch_consistency_eSituation.11_eSituation.12_A
-Description:      When Provider's Primary Impression is empty, Provider's Secondary Impressions should not be recorded.
+Description:      Provider's Secondary Impressions should only be recorded when Provider's Primary Impression is recorded.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-975C.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eResponse.12_A
+Description:      When Type of Turn-Around Delay is "None/No Delay", no other value should be recorded.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-9771.xml
+ID:               nemSch_sequence_time_eProcedures.01_before_eTimes.13_A
+Description:      Date/Time Procedure Performed should not be later than Unit Back in Service Date/Time.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-99BE.xml
 ID:               nemSch_consistency_eDisposition.21_hospital_eDisposition.22_A
-Description:      When Type of Destination is "Hospital-Non-Emergency Department Bed", Hospital In-Patient Destination should be recorded.
+Description:      Hospital In-Patient Destination should be recorded when Type of Destination is "Hospital-Non-Emergency Department Bed".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-9CBF.xml
-ID:               nemSch_consistency_eDisposition.21_hospital_eDisposition.23_A
-Description:      When Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Cardiac Arrest is "Yes..." or Stroke Scale Score is "Positive" or Cardiac Rhythm / Electrocardiography (ECG) is "STEMI...", Hospital Capability should be recorded.
+File:             EMSDataSet-99F1.xml
+ID:               nemSch_consistency_eNilNvPn_Pn_Not_NilNv_eProcedures.03_A
+Description:      When Procedure has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-9C8.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.12_A
+Description:      Unit Back in Service Date/Time should not be earlier than Destination Patient Transfer of Care Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-9CD8.xml
-ID:               nemSch_uniqueness_NvPn_Pn_only_A
-Description:      When (Element) has a Pertinent Negative, no other (Element) should be recorded.
+File:             EMSDataSet-A19.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eSituation.09_A
+Description:      Primary Symptom should be recorded when Type of Service Requested is "911 Response (Scene)" and Incident/Patient Disposition is "Patient Treated, Transported by this EMS Unit".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-A1.xml
-ID:               nemSch_consistency_eInjury.01_yes_B
-Description:      Information related to injury should be recorded only when Possible Injury is "Yes". * eInjury elements may be present and empty.
-Expected Result:  [PASS]
+File:             EMSDataSet-A20F.xml
+ID:               nemSch_sequence_time_eProcedures.01_after_eTimes.03_A
+Description:      Date/Time Procedure Performed should not be earlier than Unit Notified by Dispatch Date/Time, unless Procedure Performed Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [WARNING]
 
-File:             EMSDataSet-A2FA.xml
-ID:               nemSch_sequence_time_eTimes_current_A
-Description:      Date/Times should not be in the future (the current time according to this system is (current dateTime). The following times are too late: (Unit Back in Service Date/Time, Unit Back at Home Location Date/Time, EMS Call Completed Date/Time) * This test should generate a warning until January 1, 2050.
+File:             EMSDataSet-A228.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePatient.13_A
+Description:      Gender should be recorded when Incident/Patient Disposition is "Patient...".
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-A3EE.xml
 ID:               nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24_present_A
-Description:      When Date/Time of Destination Prearrival Alert or Activation is recorded, Destination Team Pre-Arrival Alert or Activation should also be recorded.
+Description:      Destination Team Pre-Arrival Alert or Activation should be recorded when Date/Time of Destination Prearrival Alert or Activation is recorded.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-A486.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eSituation.01_A
+Description:      Unit Back in Service Date/Time should not be earlier than Date/Time of Symptom Onset.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-A529.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePatient.14_A
+Description:      Race should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-A561.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eResponse.08_A
+Description:      When Type of Dispatch Delay is "None/No Delay", no other value should be recorded.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-A745.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eScene.09_A
+Description:      Incident Location Type should be recorded unless Incident/Patient Disposition is "Canceled (Prior to Arrival At Scene)".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-A82A.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePatient.15_A
+Description:      Age should be recorded when Incident/Patient Disposition is "Patient...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-A862.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eResponse.09_A
+Description:      When Type of Response Delay is "None/No Delay", no other value should be recorded.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-A944.xml
 ID:               nemSch_consistency_eScene.07_mci_eScene.06_A
-Description:      When Mass Casualty Incident is "Yes", Number of Patients at Scene should be "Multiple".
+Description:      Number of Patients at Scene should be "Multiple" when Mass Casualty Incident is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-AA02.xml
+ID:               nemSch_sequence_time_eProcedures.01_prior_before_eTimes.07_A
+Description:      Date/Time Procedure Performed should not be later than Arrived at Patient Date/Time when Procedure Performed Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-AA2B.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePatient.07_A
+Description:      Patient's Home County should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-AB2B.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePatient.16_A
+Description:      Age Units should be recorded when Incident/Patient Disposition is "Patient...". (This test is also expected to fail nemSch_consistency_ePatient.15_ePatient.16.)
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-AB8E.xml
+ID:               nemSch_sequence_time_eDisposition.25_after_eTimes.03_A
+Description:      Date/Time of Destination Prearrival Alert or Activation should not be earlier than Unit Notified by Dispatch Date/Time.
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-ACA.xml
 ID:               nemSch_consistency_eArrest.03_eArrest.09_compressions_1_A
-Description:      When Resuscitation Attempted By EMS contains "Initiated Chest Compressions", Type of CPR Provided should contain "Compressions...".
+Description:      Type of CPR Provided should contain "Compressions..." when Resuscitation Attempted By EMS contains "Initiated Chest Compressions".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-AD2C.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePatient.08_A
+Description:      Patient's Home State should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-AE13.xml
+ID:               nemSch_sequence_time_eProcedures.01_after_eTimes.07_A
+Description:      Date/Time Procedure Performed should not be earlier than Arrived at Patient Date/Time, unless Procedure Performed Prior to this Unit's EMS Care is "Yes".
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-AEEF.xml
 ID:               nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25_present_A
-Description:      When Destination Team Pre-Arrival Alert or Activation is recorded, Date/Time of Destination Prearrival Alert or Activation should also be recorded.
+Description:      Date/Time of Destination Prearrival Alert or Activation should be recorded when Destination Team Pre-Arrival Alert or Activation is recorded with a value other than "None".
 Expected Result:  [WARNING]
+
+File:             EMSDataSet-AF14.xml
+ID:               nemSch_sequence_time_eProcedures.01_after_eTimes.07_B
+Description:      Date/Time Procedure Performed should not be earlier than Arrived at Patient Date/Time, unless Procedure Performed Prior to this Unit's EMS Care is "Yes". * Procedure Performed Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [PASS]
 
 File:             EMSDataSet-AF46.xml
 ID:               nemSch_consistency_eScene.07_mci_eScene.08_A
-Description:      When Mass Casualty Incident is "Yes", Triage Classification for MCI Patient should be recorded.
+Description:      Triage Classification for MCI Patient should be recorded when Mass Casualty Incident is "Yes".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-B.xml
-ID:               nemSch_sequence_time_eVitals.01_after_B
-Description:      Date/Time Vital Signs Taken should be no earlier than Arrived at Patient Date/Time, unless Obtained Prior to this Unit's EMS Care is "Yes". * Obtained Prior to this Unit's EMS Care is "Yes".
-Expected Result:  [PASS]
+File:             EMSDataSet-B02D.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePatient.09_A
+Description:      Patient's Home ZIP Code should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
 
 File:             EMSDataSet-B952.xml
 ID:               nemSch_consistency_eArrest.03_eArrest.09_ventilation_1_A
-Description:      When Resuscitation Attempted By EMS contains "Attempted Ventilation", Type of CPR Provided should contain "Ventilation...".
+Description:      Type of CPR Provided should contain "Ventilation..." or "Compressions-Intermittent with Ventilation" when Resuscitation Attempted By EMS contains "Attempted Ventilation".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-BB3.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_A
-Description:      When Arrest Witnessed By is "Not Witnessed", no other Arrest Witnessed By should be recorded.
+File:             EMSDataSet-BAF3.xml
+ID:               nemSch_consistency_eProcedures.ProcedureGroup_all_eProcedures.01_A
+Description:      Date/Time Procedure Performed should be recorded, unless Procedure Performed Prior to this Unit's EMS Care is "Yes".
 Expected Result:  [WARNING]
+
+File:             EMSDataSet-BBF4.xml
+ID:               nemSch_consistency_eProcedures.ProcedureGroup_all_eProcedures.01_B
+Description:      Date/Time Procedure Performed should be recorded, unless Procedure Performed Prior to this Unit's EMS Care is "Yes". * eProcedures elements may be present and empty. eProcedures.03 may have content and @PN.
+Expected Result:  [PASS]
 
 File:             EMSDataSet-BC53.xml
 ID:               nemSch_consistency_eArrest.03_eArrest.09_ventilation_2_A
-Description:      When Type of CPR Provided contains "Ventilation...", Resuscitation Attempted By EMS should contain "Attempted Ventilation".
+Description:      Resuscitation Attempted By EMS should contain "Attempted Ventilation" when Type of CPR Provided contains "Ventilation..." or "Compressions-Intermittent with Ventilation".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-BCF8.xml
-ID:               nemSch_consistency_eDisposition.12_all_warning_A
-Description:      Based on Incident/Patient Disposition, the following should be recorded: (Reason CPR/Resuscitation Discontinued, Destination State, Destination County, Destination ZIP Code, EMS Transport Method, Transport Mode from Scene, Final Patient Acuity, Reason for Choosing Destination, Type of Destination, Patient's Home County, Patient's Home State, Patient's Home ZIP Code, Gender, Race, Age, Age Units, Primary Method of Payment, Incident Location Type, Possible Injury, Chief Complaint Anatomic Location, Chief Complaint Organ System, Primary Symptom, Provider's Primary Impression, Initial Patient Acuity, Unit En Route Date/Time, Unit Arrived on Scene Date/Time, Arrived at Patient Date/Time, Unit Left Scene Date/Time, Patient Arrived at Destination Date/Time, Destination Patient Transfer of Care Date/Time)
+File:             EMSDataSet-BDE7.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eDisposition.20_A
+Description:      Reason for Choosing Destination should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-CB4.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_B
-Description:      When Any Return of Spontaneous Circulation is "No", no other Any Return of Spontaneous Circulation should be recorded.
+File:             EMSDataSet-BF59.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.02_A
+Description:      Cardiac Arrest Etiology should only be recorded when Cardiac Arrest is "Yes...".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-CBDF.xml
-ID:               nemSch_uniqueness_NvPn_Nv_only_B
-Description:      When (Element) has a Not Value, no other (Element) should be recorded.
+File:             EMSDataSet-C0E8.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eDisposition.21_A
+Description:      Type of Destination should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-D720.xml
-ID:               nemSch_nilNvPn_Pn_Not_NilNv_A
-Description:      When Medication Given has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting). (This test is also expected to fail nemSch_consistency_eMedications.MedicationGroup_all.)
-Expected Result:  [ERROR]
+File:             EMSDataSet-C0F5.xml
+ID:               nemSch_consistency_eProcedures.ProcedureGroup_all_eProcedures.03_A
+Description:      Procedure should be recorded when a procedure is performed.
+Expected Result:  [WARNING]
 
-File:             EMSDataSet-DB5.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_C
-Description:      When Barriers to Patient Care is "None Noted", no other Barriers to Patient Care should be recorded.
+File:             EMSDataSet-C25A.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.03_A
+Description:      Resuscitation Attempted By EMS should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C35A.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.12_A
+Description:      Any Return of Spontaneous Circulation should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C4EA.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eDisposition.05_A
+Description:      Destination State should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C4F3.xml
+ID:               nemSch_consistency_eVitals.VitalGroup_all_eVitals.01_A
+Description:      Date/Time Vital Signs Taken should be recorded, unless Obtained Prior to this Unit's EMS Care is "Yes".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C55B.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.04_A
+Description:      Arrest Witnessed By should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C57C.xml
+ID:               nemSch_consistency_eDisposition.21_hospital_eDisposition.23_cardiacarrest_A
+Description:      Hospital Capability should be recorded when Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C5F4.xml
+ID:               nemSch_consistency_eVitals.VitalGroup_all_eVitals.01_B
+Description:      Date/Time Vital Signs Taken should be recorded, unless Obtained Prior to this Unit's EMS Care is "Yes". * eVitals elements may be present and empty.
+Expected Result:  [PASS]
+
+File:             EMSDataSet-C7EB.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eDisposition.06_A
+Description:      Destination County should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C85C.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.05_A
+Description:      CPR Care Provided Prior to EMS Arrival should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C95C.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.14_A
+Description:      Date/Time of Cardiac Arrest should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-C9C6.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eArrest.16_A
+Description:      Reason CPR/Resuscitation Discontinued should be recorded when Incident/Patient Disposition is "Patient Dead at Scene-Resuscitation Attempted..."
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-CAEC.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eDisposition.07_A
+Description:      Destination ZIP Code should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-CC.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.11_eTimes.09_A
+Description:      Patient Arrived at Destination Date/Time should not be earlier than Unit Left Scene Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-CE5E.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.07_A
+Description:      AED Use Prior to EMS Arrival should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-CEED.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eDisposition.17_A
+Description:      Transport Mode from Scene should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-CF5E.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.16_A
+Description:      Reason CPR/Resuscitation Discontinued should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-D25F.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.17_A
+Description:      Cardiac Rhythm on Arrival at Destination should only be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-D460.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.09_A
+Description:      Type of CPR Provided should only be recorded when Cardiac Arrest is "Yes...". (This test is also expected to fail nemSch_consistency_eArrest.03_eArrest.09_compressions_2.)
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-D4EF.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eDisposition.19_A
+Description:      Final Patient Acuity should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-D560.xml
+ID:               nemSch_consistency_eArrest.01_yes_eArrest.18_A
+Description:      End of EMS Cardiac Arrest Event should only be recorded when Cardiac Arrest is "Yes...".
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-DCB.xml
 ID:               nemSch_consistency_eArrest.03_eArrest.09_compressions_2_A
-Description:      When Type of CPR Provided contains "Compressions...", Resuscitation Attempted By EMS should contain "Initiated Chest Compressions".
+Description:      Resuscitation Attempted By EMS should contain "Initiated Chest Compressions" when Type of CPR Provided contains "Compressions...".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-DEB4.xml
-ID:               nemSch_sequence_time_eProcedures.01_after_A
-Description:      Date/Time Procedure Performed should be no earlier than Arrived at Patient Date/Time or Date/Time Initial Responder Arrived on Scene, unless Procedure Performed Prior to this Unit's EMS Care is "Yes".
+File:             EMSDataSet-DCD.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.09_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Unit Left Scene Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-DFB5.xml
-ID:               nemSch_sequence_time_eProcedures.01_after_B
-Description:      Date/Time Procedure Performed should be no earlier than Arrived at Patient Date/Time or Date/Time Initial Responder Arrived on Scene, unless Procedure Performed Prior to this Unit's EMS Care is "Yes". * Procedure Performed Prior to this Unit's EMS Care is "Yes".
-Expected Result:  [PASS]
-
-File:             EMSDataSet-EB6.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_D
-Description:      When Medication Complication is "None", no other Medication Complication should be recorded.
+File:             EMSDataSet-E02E.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eProcedures.07_A
+Description:      When Procedure Complication is "None", no other value should be recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-EBF7.xml
-ID:               nemSch_sequence_time_eMedications.01_prior_before_A
-Description:      When Medication Administered Prior to this Unit's EMS Care is "Yes," Date/Time Medication Administered should be no later than Arrived at Patient Date/Time.
+File:             EMSDataSet-E883.xml
+ID:               nemSch_uniqueness_EMSDataSet_none_eMedications.08_A
+Description:      When Medication Complication is "None", no other value should be recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-EC34.xml
-ID:               nemSch_sequence_time_eDisposition.25_after_A
-Description:      Date/Time of Destination Prearrival Alert or Activation should be no earlier than Unit Notified by Dispatch Date/Time
+File:             EMSDataSet-E915.xml
+ID:               nemSch_consistency_eArrest_all_present_eArrest.02_A
+Description:      Cardiac Arrest Etiology should be recorded when Cardiac Arrest is "Yes...".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-ED18.xml
-ID:               nemSch_sequence_time_eLabs.01_after_A
-Description:      Date/Time of Laboratory or Imaging Result should be no earlier than Arrived at Patient Date/Time, unless Study/Result Prior to this Unit's EMS Care is "Yes".
+File:             EMSDataSet-EC16.xml
+ID:               nemSch_consistency_eArrest_all_present_eArrest.03_A
+Description:      Resuscitation Attempted By EMS should be recorded when Cardiac Arrest is "Yes...".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-EE19.xml
-ID:               nemSch_sequence_time_eLabs.01_after_B
-Description:      Date/Time of Laboratory or Imaging Result should be no earlier than Arrived at Patient Date/Time, unless Study/Result Prior to this Unit's EMS Care is "Yes". * Study/Result Prior to this Unit's EMS Care is "Yes".
-Expected Result:  [PASS]
+File:             EMSDataSet-ECA.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.05_A
+Description:      Unit Back in Service Date/Time should not be earlier than Unit En Route Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-EDC6.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.11_eTimes.03_A
+Description:      Patient Arrived at Destination Date/Time should not be earlier than Unit Notified by Dispatch Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-EE2E.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_ePayment.01_A
+Description:      Primary Method of Payment should be recorded when Incident/Patient Disposition is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-EF17.xml
+ID:               nemSch_consistency_eArrest_all_present_eArrest.04_A
+Description:      Arrest Witnessed By should be recorded when Cardiac Arrest is "Yes...".
+Expected Result:  [WARNING]
 
 File:             EMSDataSet-EFB0.xml
 ID:               nemSch_consistency_eMedications.DosageGroup_eMedications.06_A
-Description:      When Medication Dosage is recorded, Medication Dosage Units should be recorded.
+Description:      Medication Dosage Units should be recorded when Medication Dosage is recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-F609.xml
-ID:               nemSch_sequence_time_eMedications.01_after_A
-Description:      Date/Time Medication Administered should be no earlier than Arrived at Patient Date/Time, unless Medication Administered Prior to this Unit's EMS Care is "Yes".
+File:             EMSDataSet-EFDA.xml
+ID:               nemSch_consistency_eNilNvPn_Pn_Nv_Not_Nil_A
+Description:      When Medication Allergies has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-F218.xml
+ID:               nemSch_consistency_eArrest_all_present_eArrest.05_A
+Description:      CPR Care Provided Prior to EMS Arrival should be recorded when Cardiac Arrest is "Yes, Prior to EMS Arrival".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-F70A.xml
-ID:               nemSch_sequence_time_eMedications.01_after_B
-Description:      Date/Time Medication Administered should be no earlier than Arrived at Patient Date/Time, unless Medication Administered Prior to this Unit's EMS Care is "Yes". * Medication Administered Prior to this Unit's EMS Care is "Yes".
-Expected Result:  [PASS]
+File:             EMSDataSet-F3C5.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.03_eTimes.01_A
+Description:      Unit Notified by Dispatch Date/Time should not be earlier than PSAP Call Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-F3C8.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.11_eTimes.05_A
+Description:      Patient Arrived at Destination Date/Time should not be earlier than Unit En Route Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-F412.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eSituation.02_A
+Description:      Possible Injury should be recorded when Type of Service Requested is "911 Response (Scene)" and Incident/Patient Disposition is "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-F512.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eSituation.11_A
+Description:      Provider's Primary Impression should be recorded when Type of Service Requested is "911 Response (Scene)" and Incident/Patient Disposition is "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-F6C9.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.11_eTimes.06_A
+Description:      Patient Arrived at Destination Date/Time should not be earlier than Unit Arrived on Scene Date/Time.
+Expected Result:  [WARNING]
 
 File:             EMSDataSet-F780.xml
 ID:               nemSch_consistency_dAgency.02_eResponse.01_eResponse.01_match_A
 Description:      EMS Agency Number in the patient care report should match EMS Agency Number in the agency demographic information.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-FAF8.xml
-ID:               nemSch_sequence_time_eVitals.01_prior_before_A
-Description:      When Obtained Prior to this Unit's EMS Care is "Yes," Date/Time Vital Signs Taken should be no later than Arrived at Patient Date/Time.
+File:             EMSDataSet-F81A.xml
+ID:               nemSch_consistency_eArrest_all_present_eArrest.07_A
+Description:      AED Use Prior to EMS Arrival should be recorded when Cardiac Arrest is "Yes, Prior to EMS Arrival".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-FB7.xml
-ID:               nemSch_uniqueness_EMSDataSet_none_E
-Description:      When Procedure Complication is "None", no other Procedure Complication should be recorded.
+File:             EMSDataSet-F8C6.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.11_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Patient Arrived at Destination Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-FE0A.xml
-ID:               nemSch_sequence_time_eVitals.01_after_A
-Description:      Date/Time Vital Signs Taken should be no earlier than Arrived at Patient Date/Time, unless Obtained Prior to this Unit's EMS Care is "Yes".
+File:             EMSDataSet-F9CA.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.11_eTimes.07_A
+Description:      Patient Arrived at Destination Date/Time should not be earlier than Arrived at Patient Date/Time.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-FEA0.xml
-ID:               nemSch_consistency_eInjury.01_yes_A
-Description:      Information related to injury should be recorded only when Possible Injury is "Yes".
+File:             EMSDataSet-FAC7.xml
+ID:               nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.03_A
+Description:      Destination Patient Transfer of Care Date/Time should not be earlier than Unit Notified by Dispatch Date/Time.
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-FB14.xml
+ID:               nemSch_consistency_eDisposition.12_all_warning_eSituation.13_A
+Description:      Initial Patient Acuity should be recorded when Type of Service Requested is "911 Response (Scene)" and Incident/Patient Disposition is "Patient Treated, Transported by this EMS Unit".
+Expected Result:  [WARNING]
+
+File:             EMSDataSet-FC1B.xml
+ID:               nemSch_consistency_eArrest_all_present_eArrest.17_A
+Description:      Cardiac Rhythm on Arrival at Destination should be recorded when Incident/Patient Disposition is "Patient Dead at Scene... (with Transport)" or "Patient Treated, Transported by this EMS Unit" and Cardiac Arrest is "Yes...".
 Expected Result:  [WARNING]

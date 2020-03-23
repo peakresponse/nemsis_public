@@ -14,32 +14,21 @@
    <xsl:variable name="document-uri">
       <xsl:value-of select="document-uri(/)"/>
    </xsl:variable>
-
    <!--PHASES-->
-
-
    <!--PROLOG-->
    <xsl:output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                method="xml"
                omit-xml-declaration="no"
                standalone="yes"
                indent="yes"/>
-
    <!--XSD TYPES FOR XSLT2-->
-
-
    <!--KEYS AND FUNCTIONS-->
-
-
    <!--DEFAULT RULES-->
-
-
    <!--MODE: SCHEMATRON-SELECT-FULL-PATH-->
    <!--This mode can be used to generate an ugly though full XPath for locators-->
    <xsl:template match="*" mode="schematron-select-full-path">
       <xsl:apply-templates select="." mode="schematron-get-full-path"/>
    </xsl:template>
-
    <!--MODE: SCHEMATRON-FULL-PATH-->
    <!--This mode can be used to generate an ugly though full XPath for locators-->
    <xsl:template match="*" mode="schematron-get-full-path">
@@ -76,7 +65,6 @@
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
-
    <!--MODE: SCHEMATRON-FULL-PATH-2-->
    <!--This mode can be used to generate prefixed XPath for humans-->
    <xsl:template match="node() | @*" mode="schematron-get-full-path-2">
@@ -110,7 +98,6 @@
          <xsl:text/>/@<xsl:value-of select="name(.)"/>
       </xsl:if>
    </xsl:template>
-
    <!--MODE: GENERATE-ID-FROM-PATH -->
    <xsl:template match="/" mode="generate-id-from-path"/>
    <xsl:template match="text()" mode="generate-id-from-path">
@@ -134,7 +121,6 @@
       <xsl:text>.</xsl:text>
       <xsl:value-of select="concat('.',name(),'-',1+count(preceding-sibling::*[name()=name(current())]),'-')"/>
    </xsl:template>
-
    <!--MODE: GENERATE-ID-2 -->
    <xsl:template match="/" mode="generate-id-2">U</xsl:template>
    <xsl:template match="*" mode="generate-id-2" priority="2">
@@ -157,7 +143,6 @@
    </xsl:template>
    <!--Strip characters-->
    <xsl:template match="text()" priority="-1"/>
-
    <!--SCHEMA SETUP-->
    <xsl:template match="/">
       <svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
@@ -183,18 +168,13 @@
          <xsl:apply-templates select="/" mode="M3"/>
       </svrl:schematron-output>
    </xsl:template>
-
    <!--SCHEMATRON PATTERNS-->
    <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Schema for Additional Constraints in Schematron</svrl:text>
-
    <!--PATTERN -->
-
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:active" priority="1003" mode="M3">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:active"/>
-
-		    <!--ASSERT -->
+      <!--ASSERT -->
       <xsl:choose>
          <xsl:when test="//sch:pattern[@id=current()/@pattern]"/>
          <xsl:otherwise>
@@ -212,12 +192,10 @@
       </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
    </xsl:template>
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:pattern[@is-a]" priority="1002" mode="M3">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:pattern[@is-a]"/>
-
-		    <!--ASSERT -->
+      <!--ASSERT -->
       <xsl:choose>
          <xsl:when test="//sch:pattern[@abstract='true'][@id=current()/@is-a]"/>
          <xsl:otherwise>
@@ -235,12 +213,10 @@
       </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
    </xsl:template>
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:extends" priority="1001" mode="M3">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:extends"/>
-
-		    <!--ASSERT -->
+      <!--ASSERT -->
       <xsl:choose>
          <xsl:when test="//sch:rule[@abstract='true'][@id=current()/@rule]"/>
          <xsl:otherwise>
@@ -258,12 +234,10 @@
       </xsl:choose>
       <xsl:apply-templates select="*|comment()|processing-instruction()" mode="M3"/>
    </xsl:template>
-
-	  <!--RULE -->
+   <!--RULE -->
    <xsl:template match="sch:let" priority="1000" mode="M3">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl" context="sch:let"/>
-
-		    <!--ASSERT -->
+      <!--ASSERT -->
       <xsl:choose>
          <xsl:when test="not(//sch:pattern                 [@abstract='true']/sch:param[@name=current()/@name])"/>
          <xsl:otherwise>

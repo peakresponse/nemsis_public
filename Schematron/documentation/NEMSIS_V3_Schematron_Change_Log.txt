@@ -2,6 +2,26 @@ NEMSIS Schematron Change Log
 
 
 
+3.4.0.200320
+
+
+National Patterns and Rules
+
+Rewrite to implement the following improvements:
+* Limit asserts to national elements only (NEMPUB-102).
+* Re-evaluate FATAL/ERROR/WARNING designations in national Schematron schemas (NEMPUB-181).
+* Make asserts more atomic (NEMPUB-187).
+* Rephrase assert text to start with the element that likely needs to be addressed (i.e., change from "When X, then Y" to "Y when X") (NEMPUB-294).
+
+All records that would have passed validation per v3.4.0.190607 will pass validation per this version. Some records that would have failed validation per v3.4.0.190607 will pass validation per this version, due to changing some [ERROR]s to [WARNING]s and removing asserts related to non-national elements. See "NEMSIS_v3.4.0_Schematron_Changes_2020.xlsx" for detailed change notes.
+
+
+Documentation Interface
+
+Bug fixes.
+
+
+
 3.4.0.190607
 
 

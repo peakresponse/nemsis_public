@@ -72,16 +72,15 @@ Schematron files via a user-friendly web-based interface.
           
           var nemsisElements = document.getElementById('nemsisElements');
 
-          setTimeout(window.addEventListener('load', function() {
+          window.addEventListener('load', function() {
 
             //Depending on how the XSLT was called (directly vs repository.html), nemsisElements may be empty. If so, re-assign it now.
             if (!nemsisElements) nemsisElements = document.getElementById('nemsisElements');
 
             // Create a NEMSIS element/name lookup list
             window.nemSch_lookup_elements = [];
-
             var parser = new DOMParser();
-            var nemSch_lookup_elements_source = parser.parseFromString(nemsisElements.textContent, "application/xml").getElementsByTagName('*');
+            var nemSch_lookup_elements_source = parser.parseFromString(nemsisElements.outerHTML, "application/xml").getElementsByTagName('*');
             for (var i = 0; i &lt; nemSch_lookup_elements_source.length; i++) {
               if (nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName'))
                 window.nemSch_lookup_elements[nemSch_lookup_elements_source[i].localName] = nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName').value;
@@ -97,7 +96,7 @@ Schematron files via a user-friendly web-based interface.
             targets = document.getElementsByClassName('linkable');
             for (var i = 0; i &lt; targets.length; i++) linkNemsisElement(targets[i], false);
 
-          }, false), 0);
+            }, false);
         </script>
 
         <script id="nemsisElements" type="application/xml">
@@ -356,12 +355,13 @@ Schematron files via a user-friendly web-based interface.
   <xsl:template match="nem:*" mode="overviewByElement">
     <xsl:param name="asserts"/>
     <xsl:variable name="elementAsserts" select="
-      $asserts[preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementMissing'][
+      $asserts[preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementsMissing'][
       contains(@value, local-name(current()))
       or ((contains(@value, '.,') or substring(normalize-space(@value), string-length(normalize-space(@value))) = '.')  and contains(../@context, local-name(current())))
-      ]] |
-      $asserts[not(preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementMissing'])][
+      ] or contains(@subject, local-name(current()))] |
+      $asserts[not(preceding-sibling::sch:let[@name='nemsisElements' or @name='nemsisElementsMissing'])][
       contains(@test, local-name(current()))
+      or contains(@subject, local-name(current()))
       or contains(../@context, local-name(current()))]
       "/>
     <xsl:if test="$elementAsserts">

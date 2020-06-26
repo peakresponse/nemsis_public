@@ -114,7 +114,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -142,7 +142,7 @@
 										<usage>Mandatory</usage>
 										<comment>Each state is captured as a group where the EMS agency provides service. The group includes dAgency.05, dAgency.06, dAgency.07, and Agency.08.
 										      &lt;br/>&lt;br/>Element added to document all of the states in which the EMS agency provides services. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
-													&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										      &lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -173,7 +173,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state. County codes are based on ISO/ANSI codes. It is a 5-digit code based on state (2-digit) and county (3-digit). 
-										  &lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -239,7 +239,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
-													&lt;br/>&lt;br/>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+											&lt;br/>&lt;br/>Zip Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -325,8 +325,6 @@
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
-						<!--<xs:attribute name="CurrentStatus" type="Status" use="required"/>
-							<xs:attribute name="CurrentStatusDate" type="DateTimeType" use="required"/>-->
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
@@ -390,7 +388,7 @@
 							<name>Organizational Type</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The organizational structure from which EMS services are delivered (fire, hospital, county, etc.)</definition>
+							<definition>The organizational structure from which EMS services are delivered (fire, hospital, county, etc).</definition>
 							<v2Number>D01_08</v2Number>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
@@ -415,7 +413,7 @@
 							<name>EMS Agency Organizational Tax Status</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The EMS Agencies business/corporate organizational tax status</definition>
+							<definition>The EMS Agencies business/corporate organizational tax status.</definition>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -453,7 +451,7 @@
 										<definition>The calendar year to which the information pertains for the EMS Agency and the specific EMS Agency Number (dAgency.02).</definition>
 										<v2Number>D01_10</v2Number>
 										<usage>Mandatory</usage>
-										<comment>Added Calendar Year to the definition to remove confusion noted in draft comments. Will allow multiple entry to allow data to be stored on several years. This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02) and elements dAgency.16 through dAgency.22</comment>
+										<comment>Added Calendar Year to the definition to remove confusion noted in draft comments. Will allow multiple entry to allow data to be stored on several years. This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02) and elements dAgency.16 through dAgency.22.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -461,7 +459,6 @@
 						<xs:element name="dAgency.16" nillable="true" id="dAgency.TotalPrimaryServiceSizeArea">
 							<xs:annotation>
 								<xs:documentation>
-									<definition>
 										<nemsisTacDoc>
 											<number>dAgency.16</number>
 											<name>Total Primary Service Area Size</name>
@@ -481,7 +478,6 @@
 											</performanceMeasuresGroup>
 											<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year</comment>
 										</nemsisTacDoc>
-									</definition>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
@@ -499,7 +495,6 @@
 						<xs:element name="dAgency.17" nillable="true" id="dAgency.TotalServiceAreaPopulation">
 							<xs:annotation>
 								<xs:documentation>
-									<definition>
 										<nemsisTacDoc>
 											<number>dAgency.17</number>
 											<name>Total Service Area Population</name>
@@ -519,7 +514,6 @@
 											</performanceMeasuresGroup>
 											<comment>This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02). A value should be associated with each with (dAgency.15) Statistical Calendar Year.</comment>
 										</nemsisTacDoc>
-									</definition>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
@@ -542,7 +536,7 @@
 										<name>911 EMS Call Center Volume per Year</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The number of 911 calls received by the call center during the last calendar year</definition>
+										<definition>The number of 911 calls received by the call center during the last calendar year.</definition>
 										<v2Number>D01_14</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -579,7 +573,7 @@
 										<name>EMS Dispatch Volume per Year</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The number of EMS dispatches during the last calendar year</definition>
+										<definition>The number of EMS dispatches during the last calendar year.</definition>
 										<v2Number>D01_15</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -802,9 +796,6 @@
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--</xs:element>
-		</xs:sequence>
-	</xs:complexType>-->
 	<xs:simpleType name="AgencyOrganizationalTaxStatus">
 		<xs:annotation>
 			<xs:documentation>The EMS Agencies business/corporate organizational tax status</xs:documentation>

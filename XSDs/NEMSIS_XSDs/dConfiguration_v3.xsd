@@ -19,8 +19,8 @@
 										<state>Yes</state>
 										<definition>The state associated with the state certification/licensure levels.</definition>
 										<usage>Mandatory</usage>
-										<comment>Associated with the state (dAgency.01 - EMS Agency State). 
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+										<comment>Associated with the state (dAgency.04 - EMS Agency State). 
+											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
 									</nemsisTacDoc>
@@ -250,10 +250,10 @@
 
 &lt;br/>&lt;br/>EMS Agencies may identify additional SNOMEDCT procedure codes based on medical direction and their own need. If an agency resides in a state with statewide approved procedures, they should be listed/implemented here. 
 
-&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a>
 
 &lt;br/>&lt;br/>SNOMEDCT 
-&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html 
+&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html" target="_blank">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a> 
 &lt;br/>Product: Product - UMLS Metathesaurus 
 													</comment>
 												</nemsisTacDoc>
@@ -326,14 +326,15 @@
 													</performanceMeasuresGroup>
 													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
 
-&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
-
+&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code.
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>
 &lt;br/>&lt;br/>RxNorm 
-&lt;br/>Website - http://uts.nlm.nih.gov 
-
-&lt;br/>&lt;br/>Product - UMLS Metathesaurus 
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
-&lt;br/>Product - RxNorm Full Monthly Release</comment>
+&lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
+&lt;br/>Product - RxNorm Full Monthly Release
+&lt;br/>&lt;br/>SNOMED-CT 
+&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a>
+&lt;br/>Product: Product - UMLS Metathesaurus.
+</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>

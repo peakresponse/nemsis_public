@@ -20,7 +20,7 @@
 										<name>EMS Agency Number</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The state-assigned provider number of the responding agency</definition>
+										<definition>The state-assigned provider number of the responding agency.</definition>
 										<v2Number>E02_01</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
@@ -45,7 +45,7 @@
 										<name>EMS Agency Name</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>EMS Agency Name</definition>
+										<definition>The EMS agency's name.</definition>
 										<usage>Recommended</usage>
 										<comment>Added to better identify the EMS Agency associated with the EMS event.</comment>
 									</nemsisTacDoc>
@@ -74,7 +74,7 @@
 							<name>Incident Number</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The incident number assigned by the 911 Dispatch System</definition>
+							<definition>The incident number assigned by the 911 Dispatch System.</definition>
 							<v2Number>E02_02</v2Number>
 							<usage>Required</usage>
 							<comment>This number can be used to associate multiple EMS responses, dispatch information, and other information to the same EMS event or patient.</comment>
@@ -133,7 +133,7 @@
 										<name>Type of Service Requested</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The type of service or category of service requested of the EMS Agency responding for this specific EMS event</definition>
+										<definition>The type of service or category of service requested of the EMS Agency responding for this specific EMS event.</definition>
 										<v2Number>E02_04</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
@@ -447,7 +447,7 @@
 							<name>Vehicle Dispatch Location</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The EMS location or healthcare facility representing the geographic location of the unit or crew at the time of dispatch.</definition>
+							<definition>The geographic location of the EMS unit or crew at the time of dispatch.</definition>
 							<v2Number>E02_13</v2Number>
 							<usage>Optional</usage>
 							<comment>This element can be populated from dLocation.02 EMS Location Name or dFacility information.  Depending on the information the EMS Agency or State is interested in knowing the following elements can be utilized:
@@ -503,7 +503,7 @@
 							<name>Beginning Odometer Reading of Responding Vehicle</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The mileage (counter or odometer reading) of the vehicle at the beginning of the call (when the wheels begin moving). If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)</definition>
+							<definition>The mileage (counter or odometer reading) of the vehicle at the beginning of the call (when the wheels begin moving). If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method).</definition>
 							<v2Number>E02_16</v2Number>
 							<usage>Optional</usage>
 							<comment>If a mileage counter is being used instead of an odometer, this value would be 0.</comment>
@@ -519,7 +519,7 @@
 							<name>On-Scene Odometer Reading of Responding Vehicle</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The mileage (counter or odometer reading) of the vehicle when it arrives at the scene. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)</definition>
+							<definition>The mileage (counter or odometer reading) of the vehicle when it arrives at the scene. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method).</definition>
 							<v2Number>E02_17</v2Number>
 							<usage>Optional</usage>
 							<comment>If using a counter, this is the mileage traveled from dispatch to the scene starting from 0.</comment>
@@ -535,7 +535,7 @@
 							<name>Patient Destination Odometer Reading of Responding Vehicle</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The mileage (counter or odometer reading) of the vehicle when it arrives at the patient's destination. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method)</definition>
+							<definition>The mileage (counter or odometer reading) of the vehicle when it arrives at the patient's destination. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of Boat, Fixed Wing, or Rotor Craft in eDisposition.16 (EMS Transport Method).</definition>
 							<v2Number>E02_18</v2Number>
 							<usage>Optional</usage>
 							<comment>If using a counter, this is the mileage traveled from dispatch to the patient's transport destination starting from 0.</comment>
@@ -551,7 +551,7 @@
 							<name>Ending Odometer Reading of Responding Vehicle</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>If using a counter, this is the mileage traveled beginning with dispatch through the transport of the patient to their destination and ending when back in service, starting from 0. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16</definition>
+							<definition>If using a counter, this is the mileage traveled beginning with dispatch through the transport of the patient to their destination and ending when back in service, starting from 0. If EMS vehicle/unit is via water or air travel document the number in "hours" as it relates to the documentation of boat, Fixed Wing, or Rotor Craft in eDisposition.16.</definition>
 							<v2Number>E02_19</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -566,7 +566,7 @@
 							<name>Response Mode to Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The indication whether the response was emergent or non-emergent. An emergent response is an immediate response (typically using lights and sirens).</definition>
+							<definition>The indication whether the response was emergent or non-emergent. An emergent response is an immediate response.</definition>
 							<v2Number>E02_20</v2Number>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
@@ -933,7 +933,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="2205011">
 				<xs:annotation>
-					<xs:documentation>Public Assistance/Other Not Listed</xs:documentation>
+					<xs:documentation>Public Assistance</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2205013">

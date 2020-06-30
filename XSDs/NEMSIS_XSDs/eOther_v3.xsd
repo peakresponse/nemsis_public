@@ -26,7 +26,7 @@
 							<name>Potential System of Care/Specialty/Registry Patient</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>An indication if the patient may meet the entry criteria for an injury or illness specific registry</definition>
+							<definition>An indication if the patient may meet the entry criteria for an injury or illness specific registry.</definition>
 							<v2Number>E23_02</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
@@ -48,7 +48,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" maxOccurs="unbounded">
+			<xs:element name="eOther.EMSCrewMemberGroup" id="eOther.EMSCrewMemberGroup" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation>Group Tag to hold info about the EMS Crew Member</xs:documentation>
 				</xs:annotation>
@@ -92,17 +92,17 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
-						<xs:element name="eOther.05" nillable="true" id="eOther.SuspectedEMSWorkRelatedExposureInjuryorDeath">
+						<xs:element name="eOther.05" nillable="true" id="eOther.SuspectedEMSWorkRelatedExposureInjuryorDeath" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eOther.05</number>
 										<name>Suspected EMS Work Related Exposure, Injury, or Death</name>
-										<national>Yes</national>
+										<national>No</national>
 										<state>Yes</state>
 										<definition>Indication of an EMS work related exposure, injury, or death associated with this EMS event.</definition>
 										<v2Number>E23_05</v2Number>
-										<usage>Required</usage>
+										<usage>Recommended</usage>
 										<comment>Associated with eOther.04 (EMS Professional (Crew Member) ID)</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -185,7 +185,7 @@
 							<name>Crew Member Completing this Report</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The statewide assigned ID number of the EMS crew member which completed this patient care report</definition>
+							<definition>The statewide assigned ID number of the EMS crew member which completed this patient care report.</definition>
 							<v2Number>E23_10</v2Number>
 							<usage>Recommended</usage>
 							<comment>If the EMS Professional has a specific ID associated with two states, the ID used would typically be based on the EMS Agencies state license.</comment>
@@ -359,7 +359,7 @@
 										<name>Signature Status</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Indication that a patient or patient representative signature has been collected or attempted to be collected.</definition>
+										<definition>Indication that the signature for the Type of Person Signing and Signature Reason has been collected or attempted to be collected.</definition>
 										<usage>Optional</usage>
 										<v3Changes>Added to better document disposition and billing.</v3Changes>
 									</nemsisTacDoc>
@@ -582,7 +582,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="FileName">
 		<xs:annotation>
-			<xs:documentation>The name of the graphic file for the signature.</xs:documentation>
+			<xs:documentation>The name of the attached file.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="255"/>
@@ -1150,7 +1150,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TypeOfSuspectedExposureToBodilyFluids">
 		<xs:annotation>
-			<xs:documentation>The type of exposure or unprotected contact with blood or body fluids</xs:documentation>
+			<xs:documentation>The type of injury, death, or exposure to blood or body fluids</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="4506001">

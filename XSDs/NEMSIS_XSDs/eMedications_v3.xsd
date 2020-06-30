@@ -17,7 +17,7 @@
 										<name>Date/Time Medication Administered</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The date/time medication administered to the patient</definition>
+										<definition>The date/time medication administered to the patient.</definition>
 										<v2Number>E18_01</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -76,7 +76,7 @@
 										<name>Medication Administered Prior to this Unit's EMS Care</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Indicates that the medication administration which is documented was administered prior to this EMS units care</definition>
+										<definition>Indicates that the medication administration which is documented was administered prior to this EMS units care.</definition>
 										<v2Number>E18_02</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -97,7 +97,6 @@
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
-												<!-- NV.NotReporting -->
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -125,11 +124,9 @@
 										</performanceMeasuresGroup>
 										<comment>
 List of medications based on RxNorm (RXCUI) code. 
-&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>
 &lt;br/>&lt;br/>RxNorm 
-&lt;br/>Website - http://uts.nlm.nih.gov 
-&lt;br/>&lt;br/>Product - UMLS Metathesaurus 
-&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
+&lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
 &lt;br/>Product - RxNorm Full Monthly Release
 </comment>
 									</nemsisTacDoc>
@@ -149,11 +146,6 @@ List of medications based on RxNorm (RXCUI) code.
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
-									<!--										<xs:attribute name="NV" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
-											</xs:simpleType>
-										</xs:attribute>-->
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
@@ -163,20 +155,20 @@ List of medications based on RxNorm (RXCUI) code.
 									<nemsisTacDoc>
 										<number>eMedications.04</number>
 										<name>Medication Administered Route</name>
-										<national>No</national>
+										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The route medication was administered to the patient</definition>
+										<definition>The route medication was administered to the patient.</definition>
 										<v2Number>E18_04</v2Number>
-										<usage>Optional</usage>
+										<usage>Required</usage>
 										<comment>This medication route list represents a sub-group of values from the Data Elements for Emergency Department Systems (DEEDS), pertaining to prehospital care. &lt;br/> &lt;br/>
-DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/science/article/pii/S0196064498703178.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</comment>
+											DEEDS Version 1.0 was utilized for this list:  &lt;a href="http://www.sciencedirect.com/science/article/pii/S0196064498703178">http://www.sciencedirect.com/science/article/pii/S0196064498703178&lt;/a>.  The list can be found on page 152 of 274 of the PDF document in Section 5, 5.13 Current Therapeutic Medication Route.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="eMedications.DosageGroup" id="eMedications.DosageGroup">
 							<xs:annotation>
-								<xs:documentation>Group Tag to hold info about the medication dosage given to the patient</xs:documentation>
+								<xs:documentation>Group Tag to hold info about the medication dosage administered to the patient</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
@@ -188,7 +180,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 													<name>Medication Dosage</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The dose or amount of the medication given to the patient</definition>
+													<definition>The dose or amount of the medication administered to the patient.</definition>
 													<v2Number>E18_05</v2Number>
 													<usage>Required</usage>
 												</nemsisTacDoc>
@@ -214,7 +206,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 													<name>Medication Dosage Units</name>
 													<national>Yes</national>
 													<state>Yes</state>
-													<definition>The unit of medication dosage given to patient</definition>
+													<definition>The unit of medication dosage administered to patient.</definition>
 													<v2Number>E18_06</v2Number>
 													<usage>Required</usage>
 												</nemsisTacDoc>
@@ -243,7 +235,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 										<name>Response to Medication</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient's response to the medication</definition>
+										<definition>The patient's response to the medication.</definition>
 										<v2Number>E18_07</v2Number>
 										<usage>Required</usage>
 									</nemsisTacDoc>
@@ -269,7 +261,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 										<name>Medication Complication</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS</definition>
+										<definition>Any complication (abnormal effect on the patient) associated with the administration of the medication to the patient by EMS.</definition>
 										<v2Number>E18_08</v2Number>
 										<usage>Required</usage>
 									</nemsisTacDoc>
@@ -296,7 +288,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 										<name>Medication Crew (Healthcare Professionals) ID</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The statewide assigned ID number of the EMS crew member giving the treatment to the patient</definition>
+										<definition>The statewide assigned ID number of the EMS crew member giving the treatment to the patient.</definition>
 										<v2Number>E18_09</v2Number>
 										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
@@ -360,7 +352,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 										<name>Medication Authorization</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of treatment authorization obtained</definition>
+										<definition>The type of treatment authorization obtained.</definition>
 										<v2Number>E18_10</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -375,7 +367,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 										<name>Medication Authorizing Physician</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The name of the authorizing physician ordering the medication administration if the order was provided by any manner other than protocol (standing order) in EMedications.11</definition>
+										<definition>The name of the authorizing physician ordering the medication administration if the order was provided by any manner other than protocol (standing order) in eMedications.11.</definition>
 										<v2Number>E18_11</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -507,7 +499,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 	</xs:simpleType>
 	<xs:simpleType name="MedicationDosage">
 		<xs:annotation>
-			<xs:documentation>The dose or amount of the medication given to the patient</xs:documentation>
+			<xs:documentation>The dose or amount of the medication administered to the patient</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:decimal">
 			<xs:totalDigits value="9"/>
@@ -516,7 +508,7 @@ DEEDS Version 1.0 was utilized for this list:  http://www.sciencedirect.com/scie
 	</xs:simpleType>
 	<xs:simpleType name="MedicationDosageUnits">
 		<xs:annotation>
-			<xs:documentation>The unit of medication dosage given to patient</xs:documentation>
+			<xs:documentation>The unit of medication dosage administered to patient</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3706001">

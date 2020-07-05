@@ -16,7 +16,7 @@
 								<definition>The state associated with the state certification/licensure levels.</definition>
 								<usage>Mandatory</usage>
 								<comment>Associated with the state (dAgency.01 - EMS Agency State). 
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+									&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
 							</nemsisTacDoc>
@@ -125,7 +125,7 @@
 														<name>Custom Data Element Potential Values</name>
 														<national>No</national>
 														<state>No</state>
-														<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
+														<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element.</definition>
 														<usage>Optional</usage>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 													</nemsisTacDoc>
@@ -148,7 +148,7 @@
 														<name>Custom Data Element Potential NOT Values (NV)</name>
 														<national>No</national>
 														<state>No</state>
-														<definition>NOT Values (NV) associated with the custom element</definition>
+														<definition>NOT Values (NV) associated with the custom element.</definition>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
@@ -162,7 +162,7 @@
 														<name>Custom Data Element Potential Pertinent Negative Values (PN)</name>
 														<national>No</national>
 														<state>No</state>
-														<definition>Pertinent Negative Values (PN) associated with the custom element</definition>
+														<definition>Pertinent Negative Values (PN) associated with the custom element.</definition>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
@@ -291,7 +291,7 @@
 														<name>Custom Data Element Potential Values</name>
 														<national>No</national>
 														<state>No</state>
-														<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element</definition>
+														<definition>The values which are associated with the Custom Data Element. Values would be the choices provided to the user when they document the Custom Data Element.</definition>
 														<usage>Optional</usage>
 														<v3Changes>Added to allow customized data elements to be inserted and collected from within the NEMSIS Version 3 standard.</v3Changes>
 													</nemsisTacDoc>
@@ -314,7 +314,7 @@
 														<name>Custom Data Element Potential NOT Values (NV)</name>
 														<national>No</national>
 														<state>No</state>
-														<definition>NOT Values (NV) associated with the custom element</definition>
+														<definition>NOT Values (NV) associated with the custom element.</definition>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
@@ -328,7 +328,7 @@
 														<name>Custom Data Element Potential Pertinent Negative Values (PN)</name>
 														<national>No</national>
 														<state>No</state>
-														<definition>Pertinent Negative Values (PN) associated with the custom element</definition>
+														<definition>Pertinent Negative Values (PN) associated with the custom element.</definition>
 														<usage>Optional</usage>
 													</nemsisTacDoc>
 												</xs:documentation>
@@ -394,7 +394,7 @@
 											<name>State Required Element</name>
 											<national>No</national>
 											<state>No</state>
-											<definition>Indicates which elements are required by the state</definition>
+											<definition>Indicates which elements are required by the state.</definition>
 											<v2Number/>
 											<usage>Optional</usage>
 											<comment>This element was created to document elements required by the state. The TIMESTAMP attribute describes the active date of the element. </comment>
@@ -497,9 +497,9 @@
 														</performanceMeasuresGroup>
 														<comment>This data element should capture all of the procedures permitted by the state for any/all levels of EMS personnel in the state. This is associated with the EMS Agency State (dAgency.01). This is related to the EMS Agency's procedures (dConfiguration.07) which have been implemented within the EMS System.
 										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify SNOMEDCT procedure codes based on medical direction and their own need.										
-										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html							
+										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>							
 										&lt;br/>&lt;br/>SNOMEDCT
-										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
+										&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html" target="_blank">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a>
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
@@ -581,12 +581,12 @@
 										</comment>
 														<v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
 										&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. 
-										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html											
+										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>											
 										&lt;br/>&lt;br/>RxNorm
-										&lt;br/>Website - http://uts.nlm.nih.gov
+										&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 										
 										&lt;br/>&lt;br/>Product - UMLS Metathesaurus
-										&lt;br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
+										&lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html" target="_blank">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
 										&lt;br/>Product - RxNorm Full Monthly Release
 										</v3Changes>
 													</nemsisTacDoc>
@@ -688,7 +688,7 @@
 														<name>EMS Agency Number</name>
 														<national>Yes</national>
 														<state>Yes</state>
-														<definition>The state-assigned provider number of the responding agency</definition>
+														<definition>The state-assigned provider number of the responding agency.</definition>
 														<v2Number>D01_01</v2Number>
 														<usage>Mandatory</usage>
 														<performanceMeasuresGroup>
@@ -828,7 +828,7 @@ list created at either the EMS Agency or State level.</comment>
 																	<name>Hospital Designations</name>
 																	<national>No</national>
 																	<state>No</state>
-																	<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc) </definition>
+																	<definition>The designation(s) associated with the hospital (e.g. Trauma, STEMI, Peds, etc).</definition>
 																	<v2Number/>
 																	<usage>Optional</usage>
 																</nemsisTacDoc>
@@ -904,7 +904,7 @@ list created at either the EMS Agency or State level.</comment>
 The information contained within this element could be used to populate the address information within eScene.17 (Incident City) and/or eDisposition.04 (Destination City) as appropriate. 
 &lt;br/>&lt;br/>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
 &lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 													</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -921,7 +921,7 @@ The information contained within this element could be used to populate the addr
 																	<definition>The state where the facility is located.</definition>
 																	<usage>Optional</usage>
 																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.18 (Incident State) and/or eDisposition.05 (Destination State) as appropriate.
-								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+																		&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -939,7 +939,7 @@ The information contained within this element could be used to populate the addr
 																	<usage>Optional</usage>
 													>
 										<comment>The information contained within this element could be used to populate the address information within eScene.19 (Incident ZIP Code) and/or eDisposition.07 (Destination ZIP Code) as appropriate.
-										&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+											&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -956,7 +956,7 @@ The information contained within this element could be used to populate the addr
 																	<definition>The county where the facility is located.</definition>
 																	<usage>Optional</usage>
 																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.21 (Incident County) and/or eDisposition.06 (Destination County) as appropriate.
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>										
+																		&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>										
 										</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -973,7 +973,7 @@ The information contained within this element could be used to populate the addr
 																	<definition>The country where the facility is located.</definition>
 																	<usage>Optional</usage>
 																	<comment>Based on the ANSI Code.  The information contained within this element could be used to populate the address information within eScene.22 (Incident Country) and/or eDisposition.08 (Destination Country) as appropriate.
-										&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm &lt;/a>
+																		&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
 										</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
@@ -1006,9 +1006,9 @@ The information contained within this element could be used to populate the addr
 																	<name>Facility US National Grid Coordinates</name>
 																	<national>No</national>
 																	<state>No</state>
-																	<definition>Facility US National Grid Coordinates</definition>
+																	<definition>Facility US National Grid Coordinates.</definition>
 																	<usage>Optional</usage>
-																	<comment>Standard found at www.fgdc.gov/usng. The information contained within this element could be used to populate the address information within eScene.11 (Scene US National Grid Coordinates) and/or eDisposition.10 (Disposition Location US National Grid Coordinates) as appropriate.</comment>
+																	<comment>Standard found at &lt;a href="http://www.fgdc.gov/usng" target="_blank">http://www.fgdc.gov/usng&lt;/a>. The information contained within this element could be used to populate the address information within eScene.11 (Scene US National Grid Coordinates) and/or eDisposition.10 (Disposition Location US National Grid Coordinates) as appropriate.</comment>
 																</nemsisTacDoc>
 															</xs:documentation>
 														</xs:annotation>

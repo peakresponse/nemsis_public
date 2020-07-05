@@ -29,7 +29,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Protocols are grouped into Airway, Cardiac, Environmental, Exposure, General, Injury, Medical, and OB/GYN. 
+										<comment>Protocols are grouped into Airway, Environmental, Exposure, General, Injury, Medical, and OB/GYN. 
 										&lt;br/>&lt;br/> There is a new data element eProtocols.02 to indicate whether the protocol is Adult, Pediatric, or General (both).
 										&lt;br/>&lt;br/> State and local entities can add additional protocols to the list but the additional protocols must map to these uniform codes. The protocol code list should be derived from dConfiguration.05 and/or dConfiguration.10</comment>
 									</nemsisTacDoc>
@@ -47,7 +47,7 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
-						<xs:element name="eProtocols.02" nillable="true" id="eProtocols.ProtocolAgeCategory" minOccurs="0">
+						<xs:element name="eProtocols.02" nillable="true" id="eProtocols.ProtocolAgeCategory">
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>

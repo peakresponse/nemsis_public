@@ -11,7 +11,7 @@
 							<name>First EMS Unit on Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Documentation that this EMS Unit was the first EMS Unit among all EMS Agencies on the Scene.</definition>
+							<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
 							<usage>Required</usage>
 							<comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</comment>
 						</nemsisTacDoc>
@@ -253,7 +253,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: https://nemsis.org/technical-resources/version-3/version-3-resource-repository/					
+							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>					
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus
@@ -338,7 +338,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<state>Yes</state>
 							<definition>The US National Grid Coordinates for the Scene.</definition>
 							<usage>Optional</usage>
-							<comment>Standard found at www.fgdc.gov/usng</comment>
+							<comment>Standard found at &lt;a href="https://www.fgdc.gov/usng" target="_blank">https://www.fgdc.gov/usng&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

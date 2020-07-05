@@ -22,11 +22,11 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) 
-								and the FL 17 - Patient Discharge Status Required. 
-								(For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6).
-								
-								&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/Regulations-and-Guidance/Guidance/Transmittals/downloads/R1104CP.pdf" target="_blank">https://www.cms.gov/Regulations-and-Guidance/Guidance/Transmittals/downloads/R1104CP.pdf&lt;/a>  Search for: "FL 17 – Patient Status"</comment>
+							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  (For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
+							&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf" target="_blank">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
+							&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
+							&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf" target="_blank">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
+							</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -63,9 +63,9 @@
 							</performanceMeasuresGroup>
 							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  
 								(For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-							&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
-							&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC &lt;a href="http://www.nubc.org">http://www.nubc.org&lt;/a>) via the NUBC's Official UB-04 Data Specifications Manual.  
-							&lt;br/>&lt;br/>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</comment>
+							&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf" target="_blank">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
+							&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC &lt;a href="http://www.nubc.org" target="_blank">http://www.nubc.org&lt;/a>) via the NUBC's Official UB-04 Data Specifications Manual.  
+							&lt;br/>&lt;br/>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf" target="_blank">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -178,9 +178,9 @@
 							<state>No</state>
 							<definition>The documented cause of injury from the emergency department record.</definition>
 							<usage>Optional</usage>
-							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
+							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>
 							&lt;br/>&lt;br/>ICD-10-CM 
-							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>  
 							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
@@ -209,7 +209,7 @@
 							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
 							The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. 
 							The letters O and I are not used in order to avoid confusion with the digits 0 and 1.
-							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>    
 							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
@@ -234,7 +234,7 @@
 							<definition>The practitioner's description of the condition or problem for which Emergency Department services were provided.</definition>
 							<usage>Optional</usage>
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
-							&lt;br/>Website - http://uts.nlm.nih.gov  
+								&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
@@ -302,7 +302,7 @@
 							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
 							The ten digits 0-9 and the 24 letters A-H,J-N and P-Z may be used in each character. 
 							The letters O and I are not used in order to avoid confusion with the digits 0 and 1.
-							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>
@@ -327,7 +327,7 @@
 							<definition>The hospital diagnosis of the patient associated with the hospital admission.</definition>
 							<usage>Optional</usage>
 							<comment>Code list is represented in ICD-10-CM: Diagnosis Codes.
-								&lt;br/>Website - http://uts.nlm.nih.gov  
+								&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 								&lt;br/>Product - UMLS Metathesaurus</comment>
 							<v3Changes>Added to better evaluate EMS care.</v3Changes>
 						</nemsisTacDoc>

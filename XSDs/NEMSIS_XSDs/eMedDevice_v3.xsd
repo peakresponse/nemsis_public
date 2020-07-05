@@ -49,7 +49,7 @@
 										<name>Last Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's last (family) name</definition>
+										<definition>The patient's last (family) name.</definition>
 										<v2Number>E06_01</v2Number>
 										<usage>Optional</usage>
 										<comment/>
@@ -71,7 +71,7 @@
 										<name>First Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's first (given) name</definition>
+										<definition>The patient's first (given) name.</definition>
 										<v2Number>E06_02</v2Number>
 										<usage>Optional</usage>
 										<comment/>
@@ -93,7 +93,7 @@
 										<name>Middle Initial/Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's middle name, if any</definition>
+										<definition>The patient's middle name, if any.</definition>
 										<v2Number>E06_03</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -109,7 +109,7 @@
 										<name>Gender</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The Patient's Gender</definition>
+										<definition>The Patient's Gender.</definition>
 										<v2Number>E06_11</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -139,7 +139,7 @@
 										<name>Race</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's race as defined by the OMB (US Office of Management and Budget)</definition>
+										<definition>The patient's race as defined by the OMB (US Office of Management and Budget).</definition>
 										<v2Number>E06_12</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -151,7 +151,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>OMB requirements are provided at: http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
+										<comment>OMB requirements are provided at: &lt;a href="http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172" target="_blank">http://www.omhrc.gov/templates/browse.aspx?lvl&#61;2&amp;lvlID&#61;172&lt;/a>. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -181,7 +181,7 @@
 										<name>Age</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's age (either calculated from date of birth or best approximation)</definition>
+										<definition>The patient's age (either calculated from date of birth or best approximation).</definition>
 										<v2Number>E06_14</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -211,7 +211,7 @@
 										<name>Age Units</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The unit used to define the patient's age</definition>
+										<definition>The unit used to define the patient's age.</definition>
 										<v2Number>E06_15</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -343,7 +343,7 @@
 													<definition>The patient's diastolic blood pressure.</definition>
 													<v2Number>E14_05</v2Number>
 													<usage>Optional</usage>
-													<comment>Diastolic blood pressure pattern allows for the following values:&lt;br/>1) A number 0 through 500 &lt;br/>2) P&lt;br/>3) p</comment>
+													<comment>Diastolic blood pressure pattern allows for the following values:&lt;br/>1) A number 0 through 500 &lt;br/>2) P&lt;br/>3) p.</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -752,7 +752,7 @@
 													<state>No</state>
 													<definition>The description or interpretation of the results of the imaging study.</definition>
 													<usage>Optional</usage>
-													<v3Changes>Added to better describe the EMS Patient Care</v3Changes>
+													<v3Changes>Added to better describe the EMS Patient Care.</v3Changes>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -865,7 +865,7 @@
 										<name>Date/Time of Event (per Medical Device)</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The time of the event recorded by the device's internal clock</definition>
+										<definition>The time of the event recorded by the device's internal clock.</definition>
 										<v2Number>E21_01</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -1009,7 +1009,7 @@
 													<name>Medical Device Mode (Manual, AED, Pacing, CO2, O2, etc)</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event)</definition>
+													<definition>The mode of operation the device is operating in during the defibrillation, pacing, or rhythm analysis by the device (if appropriate for the event).</definition>
 													<v2Number>E21_05</v2Number>
 													<usage>Optional</usage>
 												</nemsisTacDoc>
@@ -1028,7 +1028,7 @@
 										<name>Medical Device ECG Lead</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event)</definition>
+										<definition>The lead or source which the medical device used to obtain the rhythm (if appropriate for the event).</definition>
 										<v2Number>E21_06</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -1057,7 +1057,7 @@
 										<name>Medical Device ECG Interpretation</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The interpretation of the rhythm by the device (if appropriate for the event)</definition>
+										<definition>The interpretation of the rhythm by the device (if appropriate for the event).</definition>
 										<v2Number>E21_07</v2Number>
 										<usage>Optional</usage>
 										<performanceMeasuresGroup>
@@ -1085,7 +1085,7 @@
 													<name>Type of Shock</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The type of shock used by the device for the defibrillation (if appropriate for the event)</definition>
+													<definition>The type of shock used by the device for the defibrillation (if appropriate for the event).</definition>
 													<v2Number>E21_08</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>
@@ -1104,7 +1104,7 @@
 													<name>Shock or Pacing Energy</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The energy (in joules) used for the shock or pacing (if appropriate for the event)</definition>
+													<definition>The energy (in joules) used for the shock or pacing (if appropriate for the event).</definition>
 													<v2Number>E21_09</v2Number>
 													<usage>Optional</usage>
 													<performanceMeasuresGroup>

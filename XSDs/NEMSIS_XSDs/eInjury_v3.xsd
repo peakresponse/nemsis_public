@@ -514,7 +514,6 @@
 										<performanceMeasuresGroup>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<!--Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.-->
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -1281,21 +1280,6 @@
 					<xs:documentation>Shoulder Belt Only Used</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!--<xs:enumeration value="2907011">
-				<xs:annotation>
-					<xs:documentation>Lap Belt With Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2907013">
-				<xs:annotation>
-					<xs:documentation>Lap Belt Without Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
-			<!--<xs:enumeration value="2907025">
-				<xs:annotation>
-					<xs:documentation>Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="VehicularInjuryIndicators">

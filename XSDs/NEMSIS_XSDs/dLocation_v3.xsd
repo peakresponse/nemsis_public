@@ -63,10 +63,10 @@
 										<name>EMS Location GPS</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The GPS coordinate of  the EMS location.</definition>
+										<definition>The GPS Coordinates of the EMS Location.</definition>
 										<v2Number>D05_04</v2Number>
 										<usage>Optional</usage>
-										<comment>The pattern for GPS location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
+										<comment>The pattern for GPS Location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
 										  &lt;br/>- &lt;span style="font-style:italic">latitude&lt;/span> has a minimum of -90 and a maximum of 90 with up to 6 decimal places
 										  &lt;br/>- &lt;span style="font-style:italic">longitude&lt;/span> has a minimum of -180 and a maximum of 180 with up to 6 decimal places						  
 										 </comment>
@@ -82,7 +82,7 @@
 										<name>EMS Location US National Grid Coordinates</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The US National Grid Coordinates of the EMS location.</definition>
+										<definition>The US National Grid Coordinates of the EMS Location.</definition>
 										<usage>Optional</usage>
 										<comment>For more information go to &lt;a href="www.fgdc.gov/usng">www.fgdc.gov/usng&lt;/a>.</comment>
 									</nemsisTacDoc>
@@ -119,7 +119,7 @@
 										<name>EMS Location City</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The city of the EMS location type (e.g., Fixed station, sub-station, staging area, etc.).</definition>
+										<definition>The city of the EMS Location type (e.g., Fixed station, sub-station, staging area, etc.).</definition>
 										<v2Number>D05_06</v2Number>
 										<usage>Optional</usage>
 										<comment>
@@ -189,7 +189,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Location Country</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The country of the EMS location.</definition>
+										<definition>The country of the EMS Location.</definition>
 										<usage>Optional</usage>
 										<comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country.
 											&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>

@@ -18,9 +18,9 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>
-							Suggested code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html																
+								Suggested code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>															
 							&lt;br/>&lt;br/>Code list is represented in ICD-10 Codes.
-							&lt;br/>Website - http://uts.nlm.nih.gov  
+							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>  
 							&lt;br/>Product - UMLS Metathesaurus
 							</comment>
 						</nemsisTacDoc>
@@ -47,7 +47,7 @@
 							<name>Mechanism of Injury</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The mechanism of the event which caused the injury</definition>
+							<definition>The mechanism of the event which caused the injury.</definition>
 							<v2Number>E10_03</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasuresGroup>
@@ -83,7 +83,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>2011 Guidelines for the Field Triage of Injured Patients - value choices for Steps 1 and 2. For falls, one story is equal to 10 feet.</comment>
-							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. &lt;br/>Website: http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf</v3Changes>
+							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. &lt;br/>Website: &lt;a href="http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf" target="_blank">http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf&lt;/a></v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -116,7 +116,7 @@
 							</performanceMeasuresGroup>
 							<comment>Assesses mechanism of injury and evidence of high-energy impact (Step 3) AND Assess special patient or system considerations (Step 4) based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3 and 4. Website: http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf</comment>
 							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
-							&lt;br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
+								&lt;br/>Website: &lt;a href="http://www.cdc.gov/FieldTriage/" target="_blank">http://www.cdc.gov/FieldTriage/&lt;/a></v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -157,7 +157,7 @@
 							<name>Location of Patient in Vehicle</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The seat row location of the vehicle at the time of the crash with the front seat numbered as 1</definition>
+							<definition>The seat row location of the vehicle at the time of the crash with the front seat numbered as 1.</definition>
 							<v2Number>E10_06</v2Number>
 							<usage>Optional</usage>
 							<comment>MMUCC P6 data element</comment>
@@ -173,7 +173,7 @@
 							<name>Use of Occupant Safety Equipment</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>Safety equipment in use by the patient at the time of the injury</definition>
+							<definition>Safety equipment in use by the patient at the time of the injury.</definition>
 							<v2Number>E10_08</v2Number>
 							<usage>Recommended</usage>
 							<performanceMeasuresGroup>
@@ -204,7 +204,7 @@
 							<name>Airbag Deployment</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>Indication of Airbag Deployment</definition>
+							<definition>Indication of Airbag Deployment.</definition>
 							<v2Number>E10_09</v2Number>
 							<usage>Optional</usage>
 							<comment>MMUCC P8 data element baseline was used for this element.</comment>
@@ -227,7 +227,7 @@
 							<name>Height of Fall (feet)</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The distance in feet the patient fell, measured from the lowest point of the patient to the ground</definition>
+							<definition>The distance in feet the patient fell, measured from the lowest point of the patient to the ground.</definition>
 							<v2Number>E10_10</v2Number>
 							<usage>Optional</usage>
 							<comment>Classify same level falls as 0 feet</comment>
@@ -379,9 +379,6 @@
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<!--<xs:complexType>
-								<xs:attributeGroup ref="GPSLocation"/>
-							</xs:complexType>-->
 						</xs:element>
 						<xs:element name="eInjury.16" type="BodyType" id="eInjury.ACNIncidentVehicleBodyType" minOccurs="0">
 							<xs:annotation>
@@ -517,7 +514,6 @@
 										<performanceMeasuresGroup>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<!--Vehicular Emergency Data Set (VEDS) Recommendations. Version 3.0 Prepared: (February 2011) by the Advanced Automatic Crash Notification (AACN)Joint APCO/NENA Data Standardization Working Group.-->
 										<v3Changes>Added to better incorporate advanced automated collision notification information.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -687,11 +683,6 @@
 					<xs:documentation>No Airbag Present</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!--<xs:enumeration value="2908011">
-				<xs:annotation>
-					<xs:documentation>Other</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="AreaOfVehicleImpact">
@@ -1289,21 +1280,6 @@
 					<xs:documentation>Shoulder Belt Only Used</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
-			<!--<xs:enumeration value="2907011">
-				<xs:annotation>
-					<xs:documentation>Lap Belt With Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="2907013">
-				<xs:annotation>
-					<xs:documentation>Lap Belt Without Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
-			<!--<xs:enumeration value="2907025">
-				<xs:annotation>
-					<xs:documentation>Shoulder Belt</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>-->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="VehicularInjuryIndicators">

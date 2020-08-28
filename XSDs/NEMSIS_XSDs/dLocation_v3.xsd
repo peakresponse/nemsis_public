@@ -17,7 +17,7 @@
 										<name>EMS Location Type</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of EMS Location which could be a fixed station or a pre-determined staging area.</definition>
+										<definition>The type of EMS location which could be a fixed station or a pre-determined staging area.</definition>
 										<usage>Optional</usage>
 										<comment>This is associated with the EMS Agency associated with the EMS Agency Number (dAgency.02).</comment>
 										<v3Changes>Added to allow multiple locations to be documented for an EMS Agency.</v3Changes>
@@ -33,7 +33,7 @@
 										<name>EMS Location Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The name of the EMS Location.</definition>
+										<definition>The name of the EMS location.</definition>
 										<v2Number>D05_01</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -48,7 +48,7 @@
 										<name>EMS Location Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The ID number of the EMS Location.</definition>
+										<definition>The ID number of the EMS location.</definition>
 										<v2Number>D05_02</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -63,7 +63,7 @@
 										<name>EMS Location GPS</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The GPS Coordinates of the EMS Location.</definition>
+										<definition>The GPS Coordinates of the EMS location.</definition>
 										<v2Number>D05_04</v2Number>
 										<usage>Optional</usage>
 										<comment>The pattern for GPS Location is in the format "&lt;span style="font-style:italic">latitude&lt;/span>,&lt;span style="font-style:italic">longitude&lt;/span>" where:
@@ -82,7 +82,7 @@
 										<name>EMS Location US National Grid Coordinates</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The US National Grid Coordinates of the EMS Location.</definition>
+										<definition>The US National Grid Coordinates of the EMS location.</definition>
 										<usage>Optional</usage>
 										<comment>For more information go to &lt;a href="https://www.fgdc.gov/usng" target="_blank">https://www.fgdc.gov/usng&lt;/a>.</comment>
 									</nemsisTacDoc>
@@ -97,7 +97,7 @@
 										<name>EMS Location Address</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The address of the EMS Location.</definition>
+										<definition>The address of the EMS location.</definition>
 										<v2Number>D05_05</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -119,7 +119,7 @@
 										<name>EMS Location City</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The city of the EMS Location type (e.g., Fixed station, sub-station, staging area, etc.).</definition>
+										<definition>The city of the EMS location type (e.g., Fixed station, sub-station, staging area, etc.).</definition>
 										<v2Number>D05_06</v2Number>
 										<usage>Optional</usage>
 										<comment>
@@ -138,7 +138,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Location State</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The state of the EMS Location.</definition>
+										<definition>The state of the EMS location.</definition>
 										<v2Number>D05_07</v2Number>
 										<usage>Optional</usage>
 										<comment>Based on the ANSI State Code. &lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm &lt;/a></comment>
@@ -154,7 +154,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Station or Location ZIP Code</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The ZIP code of the EMS Location.</definition>
+										<definition>The ZIP code of the EMS location.</definition>
 										<v2Number>D05_08</v2Number>
 										<usage>Optional</usage>
 										<comment>Zip Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
@@ -171,7 +171,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Location County</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The county of the EMS Location.</definition>
+										<definition>The county of the EMS location.</definition>
 										<usage>Optional</usage>
 										<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes). 
 										&lt;br/>
@@ -189,7 +189,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Location Country</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The country of the EMS Location.</definition>
+										<definition>The country of the EMS location.</definition>
 										<usage>Optional</usage>
 										<comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country.
 											&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>
@@ -206,7 +206,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Location Phone Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The phone number of the EMS Location.</definition>
+										<definition>The phone number of the EMS location.</definition>
 										<v2Number>D05_09</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>

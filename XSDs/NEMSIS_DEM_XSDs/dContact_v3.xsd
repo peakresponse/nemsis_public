@@ -42,7 +42,7 @@
 										<name>Agency Contact Last Name</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The Last Name of the agency's primary contact.</definition>
+										<definition>The last name of the agency's primary contact.</definition>
 										<v2Number>D02_01</v2Number>
 										<usage>Recommended</usage>
 									</nemsisTacDoc>
@@ -140,10 +140,10 @@
 										<definition>The city of the EMS contact's mailing address.</definition>
 										<v2Number>D02_05</v2Number>
 										<usage>Recommended</usage>
-										<comment>The city should be the mailing address for each contact type for the EMS agency. The EMS agency primary address information (e.g., City) should be entered for the Agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”.   
+										<comment>The city should be the mailing address for each contact type for the EMS Agency. The EMS agency primary address information (e.g., City) should be entered for the agency Contact Type (dContact.05) “EMS Agency Director/Chief/Lead Administrator/CEO”.   
 &lt;br/>&lt;br/>City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options.   
 &lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website.   
-&lt;br/>&lt;br/>GNIS Codes Website: http://geonames.usgs.gov/domestic/download_data.htm
+&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -168,11 +168,11 @@
 										<name>Agency Contact State</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The state of the Agency contact's mailing address.</definition>
+										<definition>The state of the agency contact's mailing address.</definition>
 										<v2Number>D02_06</v2Number>
 										<usage>Recommended</usage>
-										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency. Based on the state ANSI Code. For individuals living outside the USA full address to be entered in the address line.
-										&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS Agency. Based on the state ANSI Code. For individuals living outside the USA full address to be entered in the address line.
+											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -196,10 +196,11 @@
 										<name>Agency Contact ZIP Code</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The ZIP code of the Agency's contact's mailing address.</definition>
+										<definition>The ZIP code of the agency's contact's mailing address.</definition>
 										<v2Number>D02_07</v2Number>
 										<usage>Recommended</usage>
-										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.&lt;br/>&lt;br/>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS Agency.
+											&lt;br/>&lt;br/>Zip Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition.
 </comment>
 									</nemsisTacDoc>
@@ -225,10 +226,10 @@
 										<name>Agency Contact Country</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The Country code of the Agency's contact's mailing address.</definition>
+										<definition>The Country code of the agency's contact's mailing address.</definition>
 										<usage>Optional</usage>
-										<comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country. The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency. For individuals living outside the USA full address to be entered in the address line.
-&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166): &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>										
+										<comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country. The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS Agency. For individuals living outside the USA full address to be entered in the address line.
+											&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166): &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a>										
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -270,10 +271,10 @@
 										<name>Agency Contact Email Address</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The primary email address of the Agency contact.</definition>
+										<definition>The primary email address of the agency contact.</definition>
 										<v2Number>D02_10</v2Number>
 										<usage>Recommended</usage>
-										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.</comment>
+										<comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS Agency.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -302,7 +303,7 @@
 										<definition>The primary website address of the agency.</definition>
 										<v2Number>D02_11</v2Number>
 										<usage>Recommended</usage>
-										<comment>The EMS agency website address should be entered for the Agency Contact Type (dContact.05) "EMS Agency Director/Chief/Lead Administrator/CEO". The EMS agency website address or other websites are optional for other contact types (e.g., Administrative Assistant, EMS Medical Director, etc.).</comment>
+										<comment>The EMS Agency website address should be entered for the agency Contact Type (dContact.05) "EMS Agency Director/Chief/Lead Administrator/CEO". The EMS Agency website address or other websites are optional for other contact types (e.g., Administrative Assistant, EMS Medical Director, etc.).</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -387,7 +388,7 @@
 													<state>No</state>
 													<definition>Indication of Medical Director's Compensation.</definition>
 													<usage>Optional</usage>
-													<comment>This element applies to the Medical Director(s) for an EMS agency (EMS Medical Director and EMS Assistant Medical Director).</comment>
+													<comment>This element applies to the Medical Director(s) for an EMS Agency (EMS Medical Director and EMS Assistant Medical Director).</comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -407,7 +408,6 @@
 										</xs:annotation>
 									</xs:element>
 								</xs:sequence>
-								<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
@@ -415,7 +415,6 @@
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 	</xs:complexType>
 	<xs:simpleType name="AgencyContactType">
 		<xs:annotation>

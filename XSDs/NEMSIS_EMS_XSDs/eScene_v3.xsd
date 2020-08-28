@@ -11,7 +11,7 @@
 							<name>First EMS Unit on Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Documentation that this EMS Unit was the first EMS Unit for the EMS Agency on the Scene</definition>
+							<definition>Documentation that this EMS unit was the first EMS unit for the EMS Agency on the scene</definition>
 							<usage>Required</usage>
 							<comment>Added to improve the evaluation of Response Times when multiple EMS units are responding to the same scene.</comment>
 						</nemsisTacDoc>
@@ -43,7 +43,7 @@
 										<name>Other EMS or Public Safety Agencies at Scene</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Other EMS agency names that were at the scene, if any</definition>
+										<definition>Other EMS agency names that were at the scene, if any.</definition>
 										<v2Number>E08_01</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -58,7 +58,7 @@
 										<name>Other EMS or Public Safety Agency ID Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The ID number for the EMS Agency or Other Public Safety listed in eScene.02</definition>
+										<definition>The ID number for the EMS Agency or Other Public Safety listed in eScene.02.</definition>
 										<usage>Optional</usage>
 										<comment>The ID should be the state ID (license number) for the EMS agency or ID number for the law enforcement. This may be an ID assigned by the state or created by the EMS agency.</comment>
 									</nemsisTacDoc>
@@ -73,7 +73,7 @@
 										<name>Type of Other Service at Scene</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of public safety or EMS service associated with Other Agencies on Scene</definition>
+										<definition>The type of public safety or EMS service associated with Other Agencies on Scene.</definition>
 										<v2Number>E08_02</v2Number>
 										<usage>Optional</usage>
 										<comment>Associated with each Other Service in eScene.02</comment>
@@ -139,7 +139,7 @@
 							<name>Number of Patients at Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indicator of how many total patients were at the scene</definition>
+							<definition>Indicator of how many total patients were at the scene.</definition>
 							<v2Number>E08_05</v2Number>
 							<usage>Required</usage>
 						</nemsisTacDoc>
@@ -165,7 +165,7 @@
 							<name>Mass Casualty Incident</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources)</definition>
+							<definition>Indicator if this event would be considered a mass casualty incident (overwhelmed existing EMS resources).</definition>
 							<v2Number>E08_06</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -241,7 +241,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident Location Type</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The kind of location where the incident happened</definition>
+							<definition>The kind of location where the incident happened.</definition>
 							<v2Number>E08_07</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -253,7 +253,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html						
+							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>					
 							&lt;br/>&lt;br/>ICD-10-CM
 							&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 							&lt;br/>Product - UMLS Metathesaurus
@@ -338,7 +338,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<state>Yes</state>
 							<definition>The US National Grid Coordinates for the Scene.</definition>
 							<usage>Optional</usage>
-							<comment>Standard found at www.fgdc.gov/usng</comment>
+							<comment>Standard found at &lt;a href="https://www.fgdc.gov/usng" target="_blank">https://www.fgdc.gov/usng&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -366,7 +366,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Mile Post or Major Roadway</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The mile post or major roadway associated with the incident locations</definition>
+							<definition>The mile post or major roadway associated with the incident locations.</definition>
 							<usage>Recommended</usage>
 							<comment/>
 						</nemsisTacDoc>
@@ -445,13 +445,13 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 							<name>Incident City</name>
 							<national>No</national>
 							<state>Yes</state>
-							<definition>The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The city or township (if applicable) where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_12</v2Number>
 							<usage>Recommended</usage>
 							<comment>
 City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
   	&lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+  	&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -475,7 +475,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Incident State</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The state, territory, or province where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The state, territory, or province where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_14</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -487,7 +487,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+							<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -512,7 +512,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Incident ZIP Code</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The ZIP code of the incident location</definition>
+							<definition>The ZIP code of the incident location.</definition>
 							<v2Number>E08_15</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -524,7 +524,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+							<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
 						</nemsisTacDoc>
@@ -576,7 +576,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Incident County</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The county or parish where the patient was found or to which the unit responded (or best approximation)</definition>
+							<definition>The county or parish where the patient was found or to which the unit responded (or best approximation).</definition>
 							<v2Number>E08_13</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -589,7 +589,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
-							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
+								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
 </comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -616,7 +616,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<state>No</state>
 							<definition>The country of the incident location.</definition>
 							<usage>Optional</usage>
-							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
+							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a>
 </comment>
 							<v3Changes>Added for international compatibility.</v3Changes>
 						</nemsisTacDoc>
@@ -648,7 +648,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										&lt;br/>2-digit State Code 3-digit County Code 6-digit Census Tract Number (no decimal) 
 										&lt;br/>&lt;br/>Example: NEMSIS TAC office (UT, Salt Lake County, Census Tract - located at 295 Chipeta Way, Salt Lake City, UT) 
 										49035101400
-										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a href="http://www.census.gov/geo/maps-data/data/tract_rel_download.html" target="_blank">http://www.census.gov/geo/maps-data/data/tract_rel_download.html&lt;/a>									
+										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a href="https://www.census.gov/geographies/reference-maps/2010/geo/2010-census-tract-maps.html" target="_blank">https://www.census.gov/geographies/reference-maps/2010/geo/2010-census-tract-maps.html&lt;/a>									
 							</comment>
 							<v3Changes>Added to improve the ability to use census and other demographic information within EMS research.</v3Changes>
 						</nemsisTacDoc>

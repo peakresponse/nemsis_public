@@ -11,7 +11,7 @@
 							<name>PSAP Call Date/Time</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The date/time the phone rings (9-1-1 call to public safety answering point or other designated entity) requesting EMS services.</definition>
+							<definition>The date/time the phone rings (911 call to public safety answering point or other designated entity) requesting EMS services.</definition>
 							<v2Number>E05_02</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -72,7 +72,7 @@
 							<name>Dispatch Notified Date/Time</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The date/time dispatch was notified by the 9-1-1 call taker (if a separate entity).</definition>
+							<definition>The date/time dispatch was notified by the 911 call taker (if a separate entity).</definition>
 							<v2Number>E05_03</v2Number>
 							<usage>Optional</usage>
 							<comment>This date/time might be the same as PSAP Call Date/Time (eTimes.01). 
@@ -601,7 +601,7 @@
 							<name>Destination Patient Transfer of Care Date/Time</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The date/time that patient care was transferred to the destination healthcare facilities staff.</definition>
+							<definition>The date/time that patient care was transferred to the destination healthcare staff.</definition>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>

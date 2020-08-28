@@ -281,7 +281,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>The Primary Type of Service is associated with each EMS Agency Numbers.</comment>
+							<comment>The Primary Type of Service is associated with each EMS Agency Number.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -336,7 +336,7 @@
 							<name>Level of Service</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The level of service in which the agency provides EMS care for every request for service (the minimum certification level). This may be the license level granted by the state EMS office.</definition>
+							<definition>The level of service which the agency provides EMS care for every request for service (the minimum certification level). This may be the license level granted by the state EMS office.</definition>
 							<v2Number>D01_07</v2Number>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
@@ -448,7 +448,7 @@
 										<name>Statistical Calendar Year</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The calendar year to which the information pertains to the EMS Agency and the specific EMS Agency Number (dAgency.02).</definition>
+										<definition>The calendar year to which the information pertains for the EMS Agency and the specific EMS Agency Number (dAgency.02).</definition>
 										<v2Number>D01_10</v2Number>
 										<usage>Mandatory</usage>
 										<comment>Added Calendar Year to the definition to remove confusion noted in draft comments. Will allow multiple entries to allow data to be stored on several years. This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02) and elements dAgency.16 through dAgency.22.</comment>
@@ -500,7 +500,7 @@
 											<name>Total Service Area Population</name>
 											<national>Yes</national>
 											<state>Yes</state>
-											<definition>The total population in the agency's service area based if possible on the year 2010 census data.</definition>
+											<definition>The total population in the agency's service area based if possible on year 2010 census data.</definition>
 											<v2Number>D01_13</v2Number>
 											<usage>Required</usage>
 											<performanceMeasuresGroup>
@@ -533,10 +533,10 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>dAgency.18</number>
-										<name>9-1-1 EMS Call Center Volume per Year</name>
+										<name>911 EMS Call Center Volume per Year</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The number of 9-1-1 calls received by the call center during the last calendar year.</definition>
+										<definition>The number of 911 calls received by the call center during the last calendar year.</definition>
 										<v2Number>D01_14</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -609,7 +609,7 @@
 										<name>EMS Patient Transport Volume per Year</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The number of EMS transports per year based on the last calendar year.</definition>
+										<definition>The number of EMS transports per year based on last calendar year.</definition>
 										<v2Number>D01_16</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -645,7 +645,7 @@
 										<name>EMS Patient Contact Volume per Year</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The number of EMS patient contacts per year based on the last calendar year.</definition>
+										<definition>The number of EMS patient contacts per year based on last calendar year.</definition>
 										<v2Number>D01_17</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>

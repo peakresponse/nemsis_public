@@ -23,9 +23,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  (For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-							&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf" target="_blank">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
-							&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
-							&lt;div style="font-size:3px">&amp;nbsp;&lt;/div>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf" target="_blank">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.
+								&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC &lt;a href="http://www.nubc.org" target="_blank">http://www.nubc.org&lt;/a>) via the NUBC's Official UB-04 Data Specifications Manual.  
 							</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -63,9 +61,8 @@
 							</performanceMeasuresGroup>
 							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  
 								(For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-							&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf" target="_blank">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
 							&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC &lt;a href="http://www.nubc.org" target="_blank">http://www.nubc.org&lt;/a>) via the NUBC's Official UB-04 Data Specifications Manual.  
-							&lt;br/>&lt;br/>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf" target="_blank">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</comment>
+							</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -176,7 +173,7 @@
 							<name>Emergency Department Recorded Cause of Injury</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The documented cause of injury from the emergency department record.</definition>
+							<definition>The documented cause of injury from the Emergency Department record.</definition>
 							<usage>Optional</usage>
 							<comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>
 							&lt;br/>&lt;br/>ICD-10-CM 
@@ -203,7 +200,7 @@
 							<name>Emergency Department Procedures</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The procedures performed on the patient during the emergency department visit.</definition>
+							<definition>The procedures performed on the patient during the Emergency Department visit.</definition>
 							<usage>Optional</usage>
 							<comment>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. 
 							Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
@@ -256,7 +253,7 @@
 							<name>Date/Time of Hospital Admission</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The date and time the patient was admitted to the hospital.</definition>
+							<definition>The date/time the patient was admitted to the hospital.</definition>
 							<usage>Optional</usage>
 							<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 							&lt;table  cellspacing="2">&lt;tr>&lt;td>							

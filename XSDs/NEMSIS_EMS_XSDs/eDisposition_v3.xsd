@@ -141,7 +141,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -178,7 +178,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>May be auto-populated if list created in dFacility.11 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
-							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -188,7 +188,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
-												<!-- NV.NotReporting -->
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -215,7 +214,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -242,7 +241,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<state>No</state>
 										<definition>The country of the destination.</definition>
 										<usage>Optional</usage>
-										<comment>May be auto-populated if list created in dFacility.12 (Facility Country).&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<comment>May be auto-populated if list created in dFacility.12 (Facility Country).&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
 										<v3Changes>Added for improved international compatibility.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -267,9 +266,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
-							<!--<xs:complexType>
-								<xs:attributeGroup ref="GPSLocation"/>
-							</xs:complexType>-->
 						</xs:element>
 						<xs:element name="eDisposition.10" type="USNG" id="eDisposition.DestinationLocationUSNationalGridCoordinates" minOccurs="0">
 							<xs:annotation>
@@ -350,7 +346,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>How Patient Was Moved to Ambulance</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The method the patient was moved to the ambulance from the scene</definition>
+							<definition>The method by which the patient was moved to the ambulance from the scene.</definition>
 							<v2Number>E20_11</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -372,7 +368,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Position of Patient During Transport</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The position of the patient during transport from the scene</definition>
+							<definition>The position of the patient during transport from the scene.</definition>
 							<v2Number>E20_12</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -394,7 +390,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>How Patient Was Transported From Ambulance</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The method the patient was moved from the ambulance to the destination</definition>
+							<definition>The method by which the patient was moved from the ambulance to the destination.</definition>
 							<v2Number>E20_13</v2Number>
 							<usage>Optional</usage>
 						</nemsisTacDoc>
@@ -409,7 +405,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>EMS Transport Method</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Transport method by this EMS Unit.</definition>
+							<definition>The method of transport by this EMS Unit.</definition>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -542,7 +538,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Reason for Choosing Destination</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The reason the unit chose to deliver or transfer the patient to the destination</definition>
+							<definition>The reason the unit chose to deliver or transfer the patient to the destination.</definition>
 							<v2Number>E20_16</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -552,7 +548,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Required if Patient Transported</comment>
+							<comment>Required if the patient was transported.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -577,7 +573,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Type of Destination</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The type of destination the patient was delivered or transferred to</definition>
+							<definition>The type of destination the patient was delivered or transferred to.</definition>
 							<v2Number>E20_17</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -673,7 +669,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>Destination Team Pre-Arrival Alert or Activation</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Indication that an alert (or activation) was called by EMS to the appropriate Destination Healthcare Facility team. The alert (or activation) should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
+										<definition>Indication that an alert (or activation) was called by EMS to the appropriate destination healthcare facility team. The alert (or activation) should occur prior to the EMS Unit arrival at the destination with the patient.</definition>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Cardiac Arrest</performanceMeasure>
@@ -706,7 +702,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>Date/Time of Destination Prearrival Alert or Activation</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The Date/Time EMS alerted, notified, or activated the Destination Healthcare Facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
+										<definition>The Date/Time EMS alerted, notified, or activated the destination healthcare facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -784,7 +780,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<!--<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>-->
 	</xs:complexType>
 	<xs:simpleType name="AdditionalTransportModeDescriptors">
 		<xs:annotation>
@@ -1054,7 +1049,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 			<xs:enumeration value="4222015">
 				<xs:annotation>
-					<xs:documentation>Hospital-Labor &amp;amp; Delivery</xs:documentation>
+					<xs:documentation>Hospital-Labor and Delivery</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4222017">

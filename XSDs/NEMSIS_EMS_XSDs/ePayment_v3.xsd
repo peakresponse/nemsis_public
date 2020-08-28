@@ -11,7 +11,7 @@
 							<name>Primary Method of Payment</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The primary method of payment or type of insurance associated with this EMS encounter</definition>
+							<definition>The primary method of payment or type of insurance associated with this EMS encounter.</definition>
 							<v2Number>E07_01</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -55,7 +55,7 @@
 										<definition>Indication of whether a physician certification statement (PCS) is available documenting the medical necessity or the EMS encounter.</definition>
 										<v2Number>E07_02</v2Number>
 										<usage>Optional</usage>
-										<comment>Data Element Name changed from Certificate of Medical Necessity to Physician Certification Statement. The PCS statement and documentation of medical necessity is a requirement of the Centers for Medicare &amp; Medicaid Services. The circumstances are defined in 42 CFR 410.40 (d)(2) and (d)(3). http://www.cms.gov/
+										<comment>Data Element Name changed from Certificate of Medical Necessity to Physician Certification Statement. The PCS statement and documentation of medical necessity is a requirement of the Centers for Medicare &amp; Medicaid Services. The circumstances are defined in 42 CFR 410.40 (d)(2) and (d)(3).  &lt;a href="http://www.cms.gov/" target="_blank">http://www.cms.gov/&lt;/a>
 										&lt;br/>&lt;br/>A PCS is required for the following non-emergency transport:
 										&lt;br/>1) Non-Emergency Repetitive Scheduled
 										&lt;br/>2) Non Emergency Non-Repetitive-Scheduled
@@ -72,7 +72,7 @@
 										<name>Date Physician Certification Statement Signed</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The date the Physician Certification Statement was signed</definition>
+										<definition>The date the Physician Certification Statement was signed.</definition>
 										<usage>Optional</usage>
 										<comment>Added to assist in billing documentation. Associated with ePayment.02:  Physician Certification Statement.
 										  	&lt;br/>&lt;br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
@@ -112,7 +112,7 @@
 										<name>Reason for Physician Certification Statement</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The reason for EMS transport noted on the Physician Certification Statement</definition>
+										<definition>The reason for EMS transport noted on the Physician Certification Statement.</definition>
 										<usage>Optional</usage>
 										<comment>Added to assist in billing documentation.</comment>
 									</nemsisTacDoc>
@@ -134,7 +134,7 @@
 										<name>Healthcare Provider Type Signing Physician Certification Statement</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of healthcare provider who signed the Physician Certification Statement</definition>
+										<definition>The type of healthcare provider who signed the Physician Certification Statement.</definition>
 										<usage>Optional</usage>
 										<comment>CMS defines the individual signing the PCS as a person who has personal knowledge of the beneficiary's condition at the time the ambulance transport is ordered or the service is furnished.</comment>
 									</nemsisTacDoc>
@@ -248,7 +248,7 @@
 										<name>Insurance Company Address</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The mailing address of the Insurance Company</definition>
+										<definition>The mailing address of the Insurance Company.</definition>
 										<v2Number>E07_05</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -289,7 +289,7 @@
 										<definition>The insurance company's state, territory, or province, or District of Columbia.</definition>
 										<v2Number>E07_07</v2Number>
 										<usage>Optional</usage>
-										<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Based on the ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -302,10 +302,10 @@
 										<name>Insurance Company ZIP Code</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The insurance company's ZIP Code</definition>
+										<definition>The insurance company's ZIP Code.</definition>
 										<v2Number>E07_08</v2Number>
 										<usage>Optional</usage>
-										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+										<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -319,9 +319,9 @@
 										<name>Insurance Company Country</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The insurance company's country</definition>
+										<definition>The insurance company's country.</definition>
 										<usage>Optional</usage>
-										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html " target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>
 										<v3Changes>Added to better document international addresses.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -350,7 +350,7 @@
 										<name>Insurance Policy ID Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The ID number of the patient's insurance policy</definition>
+										<definition>The ID number of the patient's insurance policy.</definition>
 										<v2Number>E07_10</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -380,7 +380,7 @@
 										<name>First Name of the Insured</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The first (given) name of the person insured by the insurance company</definition>
+										<definition>The first (given) name of the person insured by the insurance company.</definition>
 										<v2Number>E07_12</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -410,7 +410,7 @@
 										<name>Relationship to the Insured</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The relationship of the patient to the primary insured person</definition>
+										<definition>The relationship of the patient to the primary insured person.</definition>
 										<v2Number>E07_14</v2Number>
 										<usage>Optional</usage>
 										<comment>Descriptors are consistent with X12 Loop 2000C PAT01, Specifies the patient's relationship to the person insured.</comment>
@@ -452,7 +452,7 @@
 										<name>Closest Relative/Guardian Last Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The last (family) name of the patient's closest relative or guardian</definition>
+										<definition>The last (family) name of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_18</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -467,7 +467,7 @@
 										<name>Closest Relative/ Guardian First Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The first (given) name of the patient's closest relative or guardian</definition>
+										<definition>The first (given) name of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_19</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -540,7 +540,7 @@
 										<definition>The state of residence of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_23</v2Number>
 										<usage>Optional</usage>
-										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -556,7 +556,7 @@
 										<definition>The ZIP Code of the residence of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_24</v2Number>
 										<usage>Optional</usage>
-										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+										<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -572,7 +572,7 @@
 										<state>No</state>
 										<definition>The country of residence of the patient's closest relative or guardian.</definition>
 										<usage>Optional</usage>
-										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
+										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a>
 </comment>
 										<v3Changes>Added to improve international compatibility.</v3Changes>
 									</nemsisTacDoc>
@@ -587,7 +587,7 @@
 										<name>Closest Relative/ Guardian Phone Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The phone number of the patient's closest relative or guardian</definition>
+										<definition>The phone number of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_25</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -610,7 +610,7 @@
 										<name>Closest Relative/ Guardian Relationship</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The relationship of the patient's closest relative or guardian</definition>
+										<definition>The relationship of the patient's closest relative or guardian.</definition>
 										<v2Number>E07_26</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -634,7 +634,7 @@
 										<name>Patient's Employer</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The patient's employers Name</definition>
+										<definition>The patient's employer's name.</definition>
 										<v2Number>E07_27</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -649,7 +649,7 @@
 										<name>Patient's Employer's Address</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The street address of the patient's employer</definition>
+										<definition>The street address of the patient's employer.</definition>
 										<v2Number>E07_28</v2Number>
 										<usage>Optional</usage>
 										<comment>This element allows for a two line documentation of the address.  For out of country addresses the second line should be used to document, city, country, postal code and any other pertinent information.
@@ -689,10 +689,10 @@
 										<name>Patient's Employer's State</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The state of the patient's employer</definition>
+										<definition>The state of the patient's employer.</definition>
 										<v2Number>E07_30</v2Number>
 										<usage>Optional</usage>
-										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Based on ANSI State Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -705,10 +705,10 @@
 										<name>Patient's Employer's ZIP Code</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The ZIP Code of the patient's employer</definition>
+										<definition>The ZIP Code of the patient's employer.</definition>
 										<v2Number>E07_31</v2Number>
 										<usage>Optional</usage>
-										<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+										<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -722,10 +722,9 @@
 										<name>Patient's Employer's Country</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The country of the patient's employer</definition>
+										<definition>The country of the patient's employer.</definition>
 										<usage>Optional</usage>
-										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
-</comment>
+										<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>
 										<v3Changes>Added to improve international compatibility.</v3Changes>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -827,8 +826,9 @@
 							<definition>The CMS Ambulance Transport Reason Code for the transport.</definition>
 							<usage>Optional</usage>
 							<comment>Added to improve billing with electronic claims using the ASC X12 Standard. 
-The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport". The Accredited Standards Committee X12 organization maintains the standard. See the X12 website &lt;a href="https://x12.org/" target="_blank">https://x12.org/&lt;/a>	 or United States Health Information Knowledgebase website for more information:
-https://ushik.ahrq.gov/ViewItemDetails?system=sdo&amp;itemKey=133080000</comment>
+								The Ambulance Transport Code values are those determined by US Dept of HHS for the "Code indicating the type of ambulance transport". 
+								The Accredited Standards Committee X12 organization maintains the standard. See the X12 website &lt;a href="http://www.x12.org" target="_blank">http://www.x12.org&lt;/a> or United States Health Information Knowledgebase website for more information:
+								&lt;a href="https://ushik.ahrq.gov/ViewItemDetails?system=sdo&amp;itemKey=133080000" target="_blank">https://ushik.ahrq.gov/ViewItemDetails?system=sdo&amp;itemKey=133080000&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -957,7 +957,6 @@ https://ushik.ahrq.gov/ViewItemDetails?system=sdo&amp;itemKey=133080000</comment
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
-									<!-- NV.NotReporting -->
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
@@ -1066,7 +1065,7 @@ https://ushik.ahrq.gov/ViewItemDetails?system=sdo&amp;itemKey=133080000</comment
 										<name>Supply Item Used Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The name of the supply used on the patient by the EMS Crew during the EMS event.</definition>
+										<definition>The name of the supply used on the patient by the EMS crew during the EMS event.</definition>
 										<usage>Optional</usage>
 										<comment>Added to track EMS supplies for billing.  The list of supplies would be created by the EMS Agency.  There is no master list of supply items defined.</comment>
 										<v3Changes>Added to track EMS supplies for billing.</v3Changes>
@@ -1082,7 +1081,7 @@ https://ushik.ahrq.gov/ViewItemDetails?system=sdo&amp;itemKey=133080000</comment
 										<name>Number of Supply Item(s) Used</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The number of the specific supply item used on the patient by the EMS Crew during the EMS event.</definition>
+										<definition>The number of the specific supply item used on the patient by the EMS crew during the EMS event.</definition>
 										<usage>Optional</usage>
 										<comment>Associated with ePayment.55 (Supply Item Used Name). Used to better track supply items for billing.</comment>
 										<v3Changes>Added to track EMS supplies for billing.</v3Changes>

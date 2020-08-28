@@ -17,7 +17,7 @@
 										<name>Date/Time Procedure Performed</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The date/time the procedure was performed on the patient</definition>
+										<definition>The date/time the procedure was performed on the patient.</definition>
 										<v2Number>E19_01</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -123,9 +123,9 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>Procedures which are recorded as a Vital Sign do not have to be documented in the Procedure Section.
-										&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
+											&lt;br/>Code list is represented in SNOMEDCT. Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>	
 										&lt;br/>&lt;br/>SNOMEDCT
-										&lt;br/>Website: http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html
+										&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html" target="_blank">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a>
 										&lt;br/>Product: Product - UMLS Metathesaurus
 										</comment>
 									</nemsisTacDoc>
@@ -156,7 +156,7 @@
 										<name>Size of Procedure Equipment</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The size of the equipment used in the procedure on the patient</definition>
+										<definition>The size of the equipment used in the procedure on the patient.</definition>
 										<v2Number>E19_04</v2Number>
 										<usage>Optional</usage>
 										<comment>Need business logic to require detail of size appropriate for the procedure.</comment>
@@ -240,7 +240,7 @@
 										<name>Procedure Complication</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient</definition>
+										<definition>Any complication (abnormal effect on the patient) associated with the performance of the procedure on the patient.</definition>
 										<v2Number>E19_07</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -272,7 +272,7 @@
 										<name>Response to Procedure</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient's response to the procedure</definition>
+										<definition>The patient's response to the procedure.</definition>
 										<v2Number>E19_08</v2Number>
 										<usage>Required</usage>
 									</nemsisTacDoc>
@@ -298,7 +298,7 @@
 										<name>Procedure Crew Members ID</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The statewide assigned ID number of the EMS crew member performing the procedure on the patient</definition>
+										<definition>The statewide assigned ID number of the EMS crew member performing the procedure on the patient.</definition>
 										<v2Number>E19_09</v2Number>
 										<usage>Recommended</usage>
 										<performanceMeasuresGroup>
@@ -370,7 +370,7 @@
 										<name>Procedure Authorization</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The type of treatment authorization obtained</definition>
+										<definition>The type of treatment authorization obtained.</definition>
 										<v2Number>E19_10</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>
@@ -385,7 +385,7 @@
 										<name>Procedure Authorizing Physician</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The name of the authorizing physician ordering the procedure, if the order was provided by any manner other than protocol (standing order) in eProcedures.11</definition>
+										<definition>The name of the authorizing physician ordering the procedure, if the order was provided by any manner other than protocol (standing order) in eProcedures.11.</definition>
 										<v2Number>E19_11</v2Number>
 										<usage>Optional</usage>
 									</nemsisTacDoc>

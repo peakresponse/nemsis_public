@@ -110,7 +110,7 @@
 													<name>EMS Personnel's Mailing Address</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The Street or PO Box of the personnel's mailing address.</definition>
+													<definition>The street or PO Box of the personnel's mailing address.</definition>
 													<v2Number>D08_04</v2Number>
 													<usage>Optional</usage>
 													<comment>For individuals living outside the USA the full address can be entered in the address line.</comment>
@@ -139,7 +139,7 @@
 													<comment>
 City codes are based on GNIS Feature Class. The primary Feature Class to use is "Civil" with "Populated Place" and "Military" code as additional options. 
 &lt;br/>&lt;br/>Definitions for each GNIS City Feature Class can be found on the GNIS Codes website. 
-&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -155,7 +155,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<definition>The state of the personnel's mailing address.</definition>
 													<v2Number>D08_06</v2Number>
 													<usage>Optional</usage>
-													<comment>Based on ANSI Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm &lt;/a></comment>
+													<comment>Based on ANSI Code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm &lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -171,7 +171,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<definition>The ZIP code of the personnel's mailing address.</definition>
 													<v2Number>D08_07</v2Number>
 													<usage>Optional</usage>
-													<comment>Zip Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+													<comment>Zip Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition
 </comment>
 												</nemsisTacDoc>
@@ -186,9 +186,9 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<name>EMS Personnel's Country</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The country of the personnel mailing address.</definition>
+													<definition>The country of the personnel's mailing address.</definition>
 													<usage>Optional</usage>
-													<comment>Based on ANSI Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+													<comment>Based on ANSI Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -305,7 +305,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<definition>The personnel's race as defined by the OMB (US Office of Management and Budget).</definition>
 										<v2Number>D08_13</v2Number>
 										<usage>Recommended</usage>
-										<comment>OMB requirements are provided at: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</comment>
+										<comment>OMB requirements are provided at: &lt;a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html" target="_blank">https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html&lt;/a>. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -332,7 +332,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<state>No</state>
 										<definition>The documentation of the personnel's citizenship.</definition>
 										<usage>Optional</usage>
-										<comment>Website: &lt;a>http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<comment>Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -612,7 +612,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Personnel's National Registry Number</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The National Registry number associated with the level of certification/licensure obtained through NREMT.</definition>
+										<definition>The National Registry number associated with the level of certification/licensure obtained through NREMT (National Registry of Emergency Medical Technicians).</definition>
 										<usage>Optional</usage>
 										<performanceMeasures/>
 									</nemsisTacDoc>
@@ -643,7 +643,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Personnel's Current National Registry Expiration Date</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires</definition>
+										<definition>The date on which the EMS Personnel's National Registry of EMTs certification/licensure expires.</definition>
 										<usage>Optional</usage>
 										<performanceMeasures/>
 									</nemsisTacDoc>
@@ -725,7 +725,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>EMS Personnel's Primary EMS Job Role</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The individuals primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.</definition>
+										<definition>The individual's primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.</definition>
 										<usage>Recommended</usage>
 										<comment>This is a single choice data element which should reflect the EMS Personnel's primary/main job role for which he/she functions. It is understood that most EMS personnel perform more than one role as a part of their position. Other roles should be documented in dPersonnel.35 (EMS Personnel's Other Job Responsibilities).</comment>
 									</nemsisTacDoc>
@@ -830,7 +830,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<name>Date of Personnel's Certification or Licensure for Agency</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>The date that the Certification/Licensure was achieved for the local EMS agency.</definition>
+													<definition>The date that the certification/licensure was achieved for the local EMS agency.</definition>
 													<v2Number>D07_06</v2Number>
 													<usage>Optional</usage>
 												</nemsisTacDoc>

@@ -14,10 +14,10 @@
 								<xs:documentation>
 									<nemsisTacDoc>
 										<number>eLabs.01</number>
-										<name>The date/time of Laboratory or Imaging Result</name>
+										<name>Date/Time of Laboratory or Imaging Result</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The data and time for the specific laboratory result</definition>
+										<definition>The data/time for the specific laboratory result.</definition>
 										<usage>Optional</usage>
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
@@ -162,26 +162,22 @@
 																	<performanceMeasure>STEMI</performanceMeasure>
 																</performanceMeasuresGroup>
 																<comment>The description is defined as the extension of the file type.  
-																	Examples of file name extensions include "doc", "jpeg", "tiff", etc.  For a list of additional extensions reference the following website(s):
-&lt;br/>
-&lt;table>&lt;tr>&lt;td width="10px">&lt;/td>&lt;td>
-&lt;table style = "font-size:12px">
-&lt;tr>&lt;td>3D Image formats: &lt;a href="http://www.fileinfo.com/filetypes/3d_image" target="_blank">http://www.fileinfo.com/filetypes/3d_image&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>Raster Image formats: &lt;a href="http://www.fileinfo.com/filetypes/raster_image" target="_blank">http://www.fileinfo.com/filetypes/raster_image&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>Vector Image formats: &lt;a href="http://www.fileinfo.com/filetypes/vector_image" target="_blank">http://www.fileinfo.com/filetypes/vector_image&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
-&lt;tr>&lt;td>Video formats: &lt;a href="http://www.fileinfo.com/filetypes/video" target="_blank">http://www.fileinfo.com/filetypes/video&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>Audio formats: &lt;a href="http://www.fileinfo.com/filetypes/audio" target="_blank">http://www.fileinfo.com/filetypes/audio&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
-&lt;tr>&lt;td>Comparison of formats:&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>Image: &lt;a href="http://en.wikipedia.org/wiki/Comparison_of_image_file_formats" target="_blank">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>Audio: &lt;a href="http://en.wikipedia.org/wiki/Audio_file_format" target="_blank">http://en.wikipedia.org/wiki/Audio_file_format&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>Container: &lt;a href="http://en.wikipedia.org/wiki/Comparison_of_container_formats" target="_blank">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>&lt;br/>&lt;/td>&lt;/tr>
-&lt;tr>&lt;td>A general list of image formats: &lt;a href="http://en.wikipedia.org/wiki/Image_file_formats" target="_blank">http://en.wikipedia.org/wiki/Image_file_formats&lt;/a>&lt;/td>&lt;/tr> 
-&lt;tr>&lt;td>Mime Types: &lt;a href="http://en.wikipedia.org/wiki/Internet_media_type" target="_blank">http://en.wikipedia.org/wiki/Internet_media_type&lt;/a>&lt;/td>&lt;/tr>
-&lt;/table>
-&lt;/td>&lt;/tr>&lt;/table>													
+																	&lt;br/>Examples of file name extensions include "doc", "jpeg", "tiff", etc.  For a list of additional extensions reference the following website(s):
+																	&lt;br/>&lt;br/>
+																	&lt;br/>3D Image formats: &lt;a href="http://www.fileinfo.com/filetypes/3d_image" target="_blank">http://www.fileinfo.com/filetypes/3d_image&lt;/a>
+																	&lt;br/>Raster Image formats: &lt;a href="http://www.fileinfo.com/filetypes/raster_image" target="_blank">http://www.fileinfo.com/filetypes/raster_image&lt;/a>
+																	&lt;br/>Vector Image formats: &lt;a href="http://www.fileinfo.com/filetypes/vector_image" target="_blank">http://www.fileinfo.com/filetypes/vector_image&lt;/a>
+																	&lt;br/>&lt;br/>
+																	&lt;br/>Video formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/video&lt;/a>
+																	&lt;br/>Audio formats: &lt;span style="color:blue">http://www.fileinfo.com/filetypes/audio&lt;/a>
+																	&lt;br/>&lt;br/>
+																	&lt;br/>Comparison of formats:
+																	&lt;br/>Image: &lt;a href="http://en.wikipedia.org/wiki/Comparison_of_image_file_formats" target="_blank">http://en.wikipedia.org/wiki/Comparison_of_image_file_formats&lt;/a>
+																	&lt;br/>Audio: &lt;a href="http://en.wikipedia.org/wiki/Audio_file_format" target="_blank">http://en.wikipedia.org/wiki/Audio_file_format&lt;/a>
+																	&lt;br/>Container: &lt;a href="http://en.wikipedia.org/wiki/Comparison_of_container_formats" target="_blank">http://en.wikipedia.org/wiki/Comparison_of_container_formats&lt;/a>
+																	&lt;br/>&lt;br/>
+																	&lt;br/>A general list of image formats: &lt;a href="http://en.wikipedia.org/wiki/Image_file_formats" target="_blank">http://en.wikipedia.org/wiki/Image_file_formats&lt;/a>
+																	&lt;br/>Mime Types: &lt;a href="http://en.wikipedia.org/wiki/Internet_media_type" target="_blank">http://en.wikipedia.org/wiki/Internet_media_type&lt;/a>
 																</comment>
 															</nemsisTacDoc>
 														</xs:documentation>

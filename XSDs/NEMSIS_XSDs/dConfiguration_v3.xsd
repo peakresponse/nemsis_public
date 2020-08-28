@@ -21,7 +21,7 @@
 										<usage>Mandatory</usage>
 										<comment>Associated with the state (dAgency.04 - EMS Agency State). 
 											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a>
-										&lt;br/>&lt;br/>The state EMS system does not need to import this information into its database.  Reference the Demographic Dataset Submission Guide for further details.
+										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -39,7 +39,7 @@
 										<v2Number>D04_01</v2Number>
 										<usage>Mandatory</usage>
 										<comment>The new 2009 Education Levels have been added. The category EMT-Intermediate includes EMS professionals with an "85" or "99" certification level.
-										&lt;br/>&lt;br/>The state EMS system does not need to import this information into its database.  Reference the Demographic Dataset Submission Guide for further details.
+										&lt;br/>&lt;br/>The state EMS system does not need to import this information into their database.  Reference the Demographic Dataset Submission Guide for further details.
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -72,12 +72,12 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>This data element should capture all of the procedures permitted by the state for any/all levels of EMS personnel in the state. This is associated with the EMS Agency State (dAgency.01). This is related to the EMS Agency's procedures (dConfiguration.07) which have been implemented within the EMS System.
-										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify SNOMEDCT procedure codes based on the medical direction and their own need.										
-										&lt;br/>&lt;br/>The code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: &lt;a href="http://nemsis.org/v3/resources.html" target="_blank">http://nemsis.org/v3/resources.html&lt;/a>								
+										&lt;br/>&lt;br/>State EMS systems which have regulatory authority to determine the procedures statewide may identify SNOMEDCT procedure codes based on medical direction and their own need.										
+										&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>								
 										&lt;br/>&lt;br/>SNOMEDCT
 										&lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html" target="_blank">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a>
 										&lt;br/>Product: Product - UMLS Metathesaurus
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into its database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
+										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export. The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -122,7 +122,7 @@
 										</comment>
 										<v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
 										&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) code. 
-										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="http://nemsis.org/v3/resources.html" target="_blank">http://nemsis.org/v3/resources.html&lt;/a>											
+										&lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>											
 										&lt;br/>&lt;br/>RxNorm
 										&lt;br/>Website - &lt;a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov&lt;/a>
 										
@@ -168,7 +168,7 @@
 										<comment>
 										This data element should capture all of the protocols permitted by the state for any/all levels of EMS personnel in the state.  This is associated with the EMS Agency State (dAgency.01).
 										&lt;br/>&lt;br/>States can add additional protocols to the list but the additional state protocols must map to these uniform codes. &lt;br/>&lt;br/>The list is defined by the NASEMSO State Medical Directors.
-										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into its database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
+										&lt;br/>&lt;br/>The EMS agency should submit "Not Applicable" and "Nil" to the state system for the demographic export.  The state EMS system does not need to import this information into their database.  It is the responsibility of the state to submit this element to the national EMS database (NEMSIS).  Reference the Demographic Dataset Submission Guide for further details.										
 										</comment>
 										<v3Changes>Added to better identify states with statewide protocols and define state EMS capability and care.</v3Changes>
 									</nemsisTacDoc>
@@ -248,9 +248,9 @@
 													<comment>
 													This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. Each procedure is associated with the EMS professional certification levels permitted to perform the procedure. 
 
-&lt;br/>&lt;br/>EMS Agencies may identify additional SNOMEDCT procedure codes based on the medical direction and their own need. If an agency resides in a state with statewide approved procedures, they should be listed/implemented here. 
+&lt;br/>&lt;br/>EMS Agencies may identify additional SNOMEDCT procedure codes based on medical direction and their own need. If an agency resides in a state with statewide approved procedures, they should be listed/implemented here. 
 
-&lt;br/>&lt;br/>The code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a>
+&lt;br/>&lt;br/>Code list is represented in SNOMEDCT: Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/&lt;/a>
 
 &lt;br/>&lt;br/>SNOMEDCT 
 &lt;br/>Website: &lt;a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html" target="_blank">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html&lt;/a> 
@@ -326,7 +326,7 @@
 													</performanceMeasuresGroup>
 													<comment>The medication list is stored as the RxNorm (RXCUI) Code. This is associated with the EMS Agency Number (dAgency.02) since each EMS Agency Number may have different capabilities. 
 
-&lt;br/>&lt;br/>List of medications based on the RxNorm (RXCUI) code.
+&lt;br/>&lt;br/>List of medications based on RxNorm (RXCUI) codes.
 &lt;br/>&lt;br/>Reference the NEMSIS Suggested Lists at: &lt;a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/&lt;/a>
 &lt;br/>&lt;br/>RxNorm 
 &lt;br/>Website - &lt;a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html" target="_blank">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html&lt;/a>
@@ -485,7 +485,7 @@
 										<name>Patient Monitoring Capability(ies)</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The EMS Agency's patient monitoring capability can be provided to any/all patients presenting to EMS.</definition>
+										<definition>The EMS Agency's patient monitoring capability which can be provided to any/all patients presenting to EMS.</definition>
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -496,7 +496,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Added to identify the patient monitoring capability of the EMS Agency. Associated with each EMS Agency Number (dAgency.02) since each EMS Agency Number may have a different capabilities within each EMS Agency. Other patient monitoring capability may exist but NEMSIS Version 3 only includes these specific capabilities.</comment>
+										<comment>Added to identify the patient monitoring capability of the EMS Agency. Associated with each EMS Agency Number (dAgency.02) since each EMS Agency Number may have a different capability within each EMS Agency. Other patient monitoring capability may exist but NEMSIS Version 3 only includes these specific capabilities.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

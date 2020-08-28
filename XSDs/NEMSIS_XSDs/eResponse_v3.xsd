@@ -74,7 +74,7 @@
 							<name>Incident Number</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The incident number assigned by the 9-1-1 Dispatch System.</definition>
+							<definition>The incident number assigned by the 911 Dispatch System.</definition>
 							<v2Number>E02_02</v2Number>
 							<usage>Required</usage>
 							<comment>This number can be used to associate multiple EMS responses, dispatch information, and other information to the same EMS event or patient.</comment>
@@ -405,10 +405,10 @@
 							<name>EMS Unit Call Sign</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS vehicle/unit Number in many agencies.</definition>
+							<definition>The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS Vehicle/Unit Number in many agencies.</definition>
 							<v2Number>E02_12</v2Number>
 							<usage>Mandatory</usage>
-							<comment>"This element could be populated from a list created in dVehicle.03 EMS unit Call Sign or dConfiguration.16 (Crew Call Sign).</comment>
+							<comment>"This element could be populated from a list created in dVehicle.03 EMS Unit Call Sign or dConfiguration.16 (Crew Call Sign).</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -591,7 +591,7 @@
 							<name>Additional Response Mode Descriptors</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The documentation of response mode techniques used for this EMS Response.</definition>
+							<definition>The documentation of response mode techniques used for this EMS response.</definition>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -602,7 +602,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Descriptors have been added to better describe the EMS Response.  This includes information on whether the EMS event was schedule or unscheduled.</comment>
+							<comment>Descriptors have been added to better describe the EMS response.  This includes information on whether the EMS event was schedule or unscheduled.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

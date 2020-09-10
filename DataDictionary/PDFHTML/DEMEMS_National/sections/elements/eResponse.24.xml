@@ -8,7 +8,7 @@
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>Descriptors have been added to better describe the EMS Response.  This includes information on whether the EMS event was schedule or unscheduled.</v3Comment>
+<v3Comment>Descriptors have been added to better describe the EMS response.  This includes information on whether the EMS event was schedule or unscheduled.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -33,4 +33,15 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Additional Response Mode Descriptors has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Additional Response Mode Descriptors is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Additional Response Mode Descriptors has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

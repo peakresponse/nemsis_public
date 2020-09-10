@@ -4,11 +4,11 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The patient's race as defined by the OMB (US Office of Management and Budget)</definition>
+<definition>The patient's race as defined by the OMB (US Office of Management and Budget).</definition>
 <v2Number>E06_12</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>OMB requirements are provided at: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html. Using single multiple choice question methodology to improve the completion of ethnicity information.<br/><br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</v3Comment>
+<v3Comment>OMB requirements are provided at: <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html" target="_blank">https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html</a>. Using single multiple choice question methodology to improve the completion of ethnicity information.<br/><br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -28,4 +28,18 @@
   </NV>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.14" role="Warning">
+      <elementRef elementNumber="ePatient.14">Race</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Race has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Race is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Race has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

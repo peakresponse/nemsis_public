@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The date/time medication administered to the patient</definition>
+<definition>The date/time medication administered to the patient.</definition>
 <v2Number>E18_01</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -48,4 +48,30 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eMedications.MedicationGroup_all_eMedications.01" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should be recorded, unless <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eMedications.01_after_eTimes.03" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eMedications.01_after_eTimes.07" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eMedications.01_prior_before_eTimes.07" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eMedications.01_before_eTimes.12" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be later than <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eMedications.01_before_eTimes.13" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Date/Time Medication Administered has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Date/Time Medication Administered is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

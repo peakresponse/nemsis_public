@@ -42,4 +42,42 @@
     <facet name="pattern" value="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}"/>
   </DateTimeType>
 </restrictions>
+<asserts>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.03_eTimes.01" role="Warning">
+      <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.01">PSAP Call Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.05_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.05">Unit En Route Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.06_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.07_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.09_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.09">Unit Left Scene Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.11_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.11">Patient Arrived at Destination Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eDisposition.25_after_eTimes.03" role="Warning">
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eMedications.01_after_eTimes.03" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eProcedures.01_after_eTimes.03" role="Warning">
+      <elementRef elementNumber="eProcedures.01">Date/Time Procedure Performed</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eProcedures.02">Procedure Performed Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eVitals.01_after_eTimes.03" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+</asserts>
 </element>

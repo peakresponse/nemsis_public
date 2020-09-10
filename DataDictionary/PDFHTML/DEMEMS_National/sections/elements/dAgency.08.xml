@@ -9,7 +9,7 @@
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>This data element was added to better document the service area of the EMS Agency. Each state listed is associated with the counties, census tracts, and ZIP codes within the EMS Agency Service Area for each state.
-													<br/><br/>Zip Codes Product Website: <a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
+											<br/><br/>Zip Codes Product Website: <a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/</a>
 <br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
@@ -24,4 +24,15 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When EMS Agency Service Area ZIP Codes has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When EMS Agency Service Area ZIP Codes is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_dNvPn_Nv_only" role="Warning">
+      When EMS Agency Service Area ZIP Codes has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

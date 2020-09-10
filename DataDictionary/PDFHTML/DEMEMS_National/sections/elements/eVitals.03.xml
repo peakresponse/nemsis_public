@@ -61,4 +61,24 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stemi" role="Warning">
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</elementRef> is "STEMI...".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Pn_Nv_Not_Nil" role="Error">
+      When Cardiac Rhythm / Electrocardiography (ECG) has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Cardiac Rhythm / Electrocardiography (ECG) has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Cardiac Rhythm / Electrocardiography (ECG) is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Cardiac Rhythm / Electrocardiography (ECG) has a Not Value, no other value should be recorded.
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Pn_only" role="Warning">
+      When Cardiac Rhythm / Electrocardiography (ECG) has a Pertinent Negative, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

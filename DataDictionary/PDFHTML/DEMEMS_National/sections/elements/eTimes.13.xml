@@ -42,4 +42,48 @@
     <facet name="pattern" value="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}"/>
   </DateTimeType>
 </restrictions>
+<asserts>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.05" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.05">Unit En Route Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.06" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.07" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.09" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.09">Unit Left Scene Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.11" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.11">Patient Arrived at Destination Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.12" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eSituation.01" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eArrest.14" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_current_eTimes.13" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be in the future (the current time according to this system is (value)).
+      </assert>
+  <assert id="nemSch_sequence_time_eDisposition.25_before_eTimes.13" role="Warning">
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eMedications.01_before_eTimes.13" role="Warning">
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eProcedures.01_before_eTimes.13" role="Warning">
+      <elementRef elementNumber="eProcedures.01">Date/Time Procedure Performed</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eVitals.01_before_eTimes.13" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
+      </assert>
+</asserts>
 </element>

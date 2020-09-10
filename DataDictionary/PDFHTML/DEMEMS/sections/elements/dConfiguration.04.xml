@@ -15,12 +15,12 @@
 										Reference the Demographic Dataset Submission Guide for further details.</v3Comment>
 <v3Changes>State EMS systems which have regulatory authority to identify medications to be administered within the state may identify specific RxNorm codes based on medical direction and their own need.
 										<br/><br/>List of medications based on RxNorm (RXCUI) code. 
-										<br/><br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html											
+										<br/><br/>Reference the NEMSIS Suggested Lists at: <a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/</a>											
 										<br/><br/>RxNorm
-										<br/>Website - http://uts.nlm.nih.gov
+										<br/>Website - <a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov</a>
 										
 										<br/><br/>Product - UMLS Metathesaurus
-										<br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html
+										<br/>Website - <a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html" target="_blank">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html</a>	
 										<br/>Product - RxNorm Full Monthly Release</v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -36,4 +36,15 @@
   </NV>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When Medications Permitted by the State has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When Medications Permitted by the State is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_dNvPn_Nv_only" role="Warning">
+      When Medications Permitted by the State has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

@@ -48,4 +48,33 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eTimes.06" role="Warning">
+      <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef> should be recorded unless <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Canceled (Prior to Arrival At Scene)".
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.06_eTimes.03" role="Warning">
+      <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.06_eTimes.05" role="Warning">
+      <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.05">Unit En Route Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.09_eTimes.06" role="Warning">
+      <elementRef elementNumber="eTimes.09">Unit Left Scene Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.11_eTimes.06" role="Warning">
+      <elementRef elementNumber="eTimes.11">Patient Arrived at Destination Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.12_eTimes.06" role="Warning">
+      <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eTimes.06" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Unit Arrived on Scene Date/Time has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Unit Arrived on Scene Date/Time is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

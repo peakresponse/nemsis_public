@@ -20,4 +20,9 @@
 <attributes>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.16_assert" role="Warning">
+      <elementRef elementNumber="dConfiguration.16">Crew Call Sign</elementRef> should be unique (the same call sign should not be listed more than once).
+      </assert>
+</asserts>
 </element>

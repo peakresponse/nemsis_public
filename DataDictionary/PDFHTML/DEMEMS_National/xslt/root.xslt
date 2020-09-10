@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>NEMSIS Data Dictionary Section Groupin</title>
+<title>NEMSIS Data Dictionary Section Grouping</title>
     <style type="text/css">           
-        body {font-family:arial,helvetica,sans-serif; position:relative;}
-        .header {width:6.5in;background:#004080; color:white; padding:1px 2px 4px 5px; margin:0px 0px 0px 0px;font-size:18px;}
-        .element {white-space:nowrap;width:5in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
-        .elementSmall {white-space:nowrap;width:4.8in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
+        body {font-family:"Open Sans",sans-serif; position:relative;}
+        .header {width:6.5in;background:#283e56; color:white; padding:1px 2px 4px 5px; margin:0px 0px 0px 0px;font-size:18px;}
+        .element {width:5in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
+        .elementSmall {width:4.8in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
         .elementGroup {width:5.5in;float:left;z-index:10;background:#99CC99; padding:1px 1px 3px 5px; margin:3px 0px 3px 0px;font-size:12px; border:solid 1px;}        
         .national {height:12px;background:#E10000;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}                
         .state    {height:12px;background:#FBC723;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}        
@@ -33,6 +33,18 @@
         .blank {float:left;height:12px;padding:3px 0px 3px 0px;margin:3px 0px 3px 0px;font-size:12px;}
         .indent_g  {float:left;width:48px;padding:3px 0px 1px 0px;}  
         .indent_gback {float:left;width:49px;padding:3px 0px 1px 0px;}
+
+        .sectionCommentTitle    {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
+        .sectionRestrictionsEnumerationCodeTitle        {width:60px;  font-size:12px;font-weight:bold;}
+        .sectionRestrictionsEnumerationDescriptionTitle {width:460px; font-size:12px;font-weight:bold;}
+        .sectionRestrictionsEnumerationCodeValue        {width:60px;  font-size:12px;}
+        .sectionRestrictionsEnumerationDescriptionValue {width:460px; font-size:12px;}     
+
+        .assert td {padding: 1ex 1ex 1ex 0;}
+        .role    {display:inline-block;padding:0.5ex;text-align:center;width:8ex;}
+        .Fatal   {background-color: #e10000;}
+        .Error   {background-color: #fbc723;}
+        .Warning {background-color: #ffffbb;}
     </style>
 </head>
 <body>      
@@ -78,7 +90,7 @@
               <td width="2px"/>
               <td style="font-size:11px;background:#FFFFBB;border:solid 1px;" width="5px;" height="16px;" align="center"></td>
               <td style="width:2px;"/>    
-              <td class="legendKey"><B>N</B> = Not Values, <B>P</B> = Pertinent Negatives , <B>L</B> = Nillable, and/or <B>C</B> = Correlation ID</td>     
+              <td class="legendKey"><B>N</B> = Not Values, <B>P</B> = Pertinent Negatives , <B>L</B> = Nillable, <B>C</B> = Correlation ID, and/or <B>U</B> = UUID</td>     
             </tr>      
           </table>
         </td>
@@ -91,7 +103,74 @@
       <xsl:with-param name="count" select="0"/>
     </xsl:call-template>
     <div style="clear:both"/>  
-    <div class="header"><xsl:value-of select="section/@name"/></div>  
+    <div class="header"><xsl:value-of select="section/@name"/></div>
+
+  <!-- VALIDATION RULES SECTION -->
+  <xsl:if test="section/asserts">
+    <table>
+      <tr>
+        <td height="8px;"></td>
+      </tr>
+      <tr>
+        <td>
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <table width="630px" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="sectionCommentTitle">Associated Validation Rules</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="3px;"></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td width="5px"></td>
+                    <td class="sectionRestrictionsEnumerationCodeTitle">Rule ID</td>
+                    <td class="sectionRestrictionsEnumerationCodeTitle">Level</td>
+                    <td class="sectionRestrictionsEnumerationCodeTitle">Message</td>
+                  </tr>
+                  <tr>
+                    <td height="3px"></td>
+                  </tr>
+                  <xsl:for-each select="section/asserts/assert">
+                    <xsl:sort select="@id" />
+                    <tr class="assert">
+                      <td width="5px"></td>
+                      <td class="sectionRestrictionsEnumerationCodeValue" valign="top">
+                        <xsl:value-of select="@id" />
+                      </td>
+                      <td class="sectionRestrictionsEnumerationCodeValue" valign="top">
+                        <span>
+                          <xsl:attribute name="class">
+                          role
+                          <xsl:value-of select="@role" />
+                        </xsl:attribute>
+                          <xsl:value-of select="@role" />
+                        </span>
+                      </td>
+                      <td class="sectionRestrictionsEnumerationDescriptionValue">
+                        <xsl:value-of select="." />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="3px"></td>
+                    </tr>
+                  </xsl:for-each>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </xsl:if>
+
 </body>
 </html>
 </xsl:template>
@@ -115,6 +194,9 @@
             
             <xsl:choose><xsl:when test="@correlationID='Yes'">
   		        <div class="pnNvNil">C</div>                
+            </xsl:when></xsl:choose>
+            <xsl:choose><xsl:when test="@UUID='Yes'">
+  		        <div class="pnNvNil">U</div>                
             </xsl:when></xsl:choose>          
           <div style="clear:both"/>
           <xsl:call-template name="section">
@@ -163,7 +245,10 @@
           
           <xsl:choose><xsl:when test="restrictions/correlationID/text()='Yes'">
             <div class="pnNvNil">C</div>                
-          </xsl:when></xsl:choose>  
+          </xsl:when></xsl:choose>
+          <xsl:choose><xsl:when test="restrictions/UUID/text()='Yes'">
+            <div class="pnNvNil">U</div>                
+          </xsl:when></xsl:choose>    
           
         </xsl:when>     
     </xsl:choose>

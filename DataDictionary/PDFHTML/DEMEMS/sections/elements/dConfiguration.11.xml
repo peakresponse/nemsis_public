@@ -36,4 +36,9 @@
 <attributes>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_uniqueness_DEMDataSet_dConfiguration.11_none" role="Warning">
+      When <elementRef elementNumber="dConfiguration.11">EMS Agency Specialty Service Capability</elementRef> is "None", no other values should be recorded.
+      </assert>
+</asserts>
 </element>

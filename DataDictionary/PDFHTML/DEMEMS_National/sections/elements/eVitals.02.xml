@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>Indicates that the information which is documented was obtained prior to the documenting EMS units care.</definition>
+<definition>Indicates that the information which is documented was obtained prior to the documenting EMS unit's care.</definition>
 <v2Number>E14_02</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -23,4 +23,30 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eVitals.VitalGroup_all_eVitals.01" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should be recorded, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eVitals.01_after_eTimes.03" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eVitals.01_after_eTimes.07" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eVitals.01_prior_before_eTimes.07" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_sequence_time_eVitals.01_before_eTimes.12" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eVitals.01_before_eTimes.13" role="Warning">
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Obtained Prior to this Unit's EMS Care has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Obtained Prior to this Unit's EMS Care is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

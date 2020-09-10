@@ -20,7 +20,7 @@
     <facet name="enumeration" value="4222009" annotation="Hospital-Hospice"/>
     <facet name="enumeration" value="4222011" annotation="Hospital-Hyperbaric Oxygen Treatment"/>
     <facet name="enumeration" value="4222013" annotation="Hospital-ICU"/>
-    <facet name="enumeration" value="4222015" annotation="Hospital-Labor &amp;amp; Delivery"/>
+    <facet name="enumeration" value="4222015" annotation="Hospital-Labor and Delivery"/>
     <facet name="enumeration" value="4222017" annotation="Hospital-Med/Surg"/>
     <facet name="enumeration" value="4222019" annotation="Hospital-Mental Health"/>
     <facet name="enumeration" value="4222021" annotation="Hospital-MICU"/>
@@ -48,4 +48,15 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.22" role="Warning">
+      <elementRef elementNumber="eDisposition.22">Hospital In-Patient Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital-Non-Emergency Department Bed".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Hospital In-Patient Destination has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Hospital In-Patient Destination is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

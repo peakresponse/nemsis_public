@@ -9,7 +9,7 @@
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
-							<br/>http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf 
+								<br/><a href="http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf" target="_blank">http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf</a> 
 							<br/><br/>Dead without Resuscitation Efforts would be appropriate if resuscitation was initiated by non-EMS personnel but discontinued immediately upon evaluation by first arriving EMS personnel.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
@@ -27,4 +27,15 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.13" role="Warning">
+      <elementRef elementNumber="eSituation.13">Initial Patient Acuity</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Initial Patient Acuity has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Initial Patient Acuity is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

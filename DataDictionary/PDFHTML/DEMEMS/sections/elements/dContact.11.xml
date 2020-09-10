@@ -4,11 +4,11 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The primary email address of the Agency contact.</definition>
+<definition>The primary email address of the agency contact.</definition>
 <v2Number>D02_10</v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
-<v3Comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency.</v3Comment>
+<v3Comment>The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS Agency.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -27,4 +27,15 @@
   <EmailAddressType baseType="string"><facet name="enumeration" value="9904001" annotation="Personal"/><facet name="enumeration" value="9904003" annotation="Work"/></EmailAddressType>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When Agency Contact Email Address has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When Agency Contact Email Address is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_dNvPn_Nv_only" role="Warning">
+      When Agency Contact Email Address has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

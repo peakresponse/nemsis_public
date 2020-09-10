@@ -4,21 +4,21 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The patient's medication allergies</definition>
+<definition>The patient's medication allergies.</definition>
 <v2Number>E12_08</v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
 <v3Comment>The list of medication allergies is based on RxNorm (RXCUI) Codes. In addition, a specific list of ICD-10 CM codes can be used for medication groups. 
 
-<br/><br/>Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html 
+<br/><br/>Reference the NEMSIS Suggested Lists at: <a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/</a> 
 
 <br/><br/>Code list is represented in two separate UMLS datasets:
 <br/>1) ICD-10 Codes. 
 <br/>2) RxNorm
 
-<br/><br/>Website - http://uts.nlm.nih.gov 
+<br/><br/>Website - <a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov</a>
 <br/>Product - UMLS Metathesaurus
-<br/>Website - http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html 
+<br/>Website - <a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html" target="_blank">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html</a> 
 <br/>Product - RxNorm Full Monthly Release</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
@@ -42,4 +42,21 @@
   <CodeType baseType="string"><facet name="enumeration" value="9924001" annotation="ICD10"/><facet name="enumeration" value="9924003" annotation="RxNorm"/></CodeType>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eNilNvPn_Pn_Nv_Not_Nil" role="Error">
+      When Medication Allergies has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Medication Allergies has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Medication Allergies is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Medication Allergies has a Not Value, no other value should be recorded.
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Pn_only" role="Warning">
+      When Medication Allergies has a Pertinent Negative, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

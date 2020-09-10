@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The type of destination the patient was delivered or transferred to</definition>
+<definition>The type of destination the patient was delivered or transferred to.</definition>
 <v2Number>E20_17</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -33,4 +33,27 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.22" role="Warning">
+      <elementRef elementNumber="eDisposition.22">Hospital In-Patient Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital-Non-Emergency Department Bed".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_cardiacarrest" role="Warning">
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stroke" role="Warning">
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.29">Stroke Scale Score</elementRef> is "Positive".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_stemi" role="Warning">
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</elementRef> is "STEMI...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.21" role="Warning">
+      <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Type of Destination has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Type of Destination is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

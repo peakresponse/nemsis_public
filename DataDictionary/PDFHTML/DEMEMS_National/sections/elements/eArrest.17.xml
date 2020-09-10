@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The patient's cardiac rhythm upon delivery or transfer to the destination</definition>
+<definition>The patient's cardiac rhythm upon delivery or transfer to the destination.</definition>
 <v2Number>E11_11</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure></performanceMeasuresGroup>
@@ -57,4 +57,21 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.17" role="Warning">
+      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Dead at Scene... (with Transport)" or "Patient Treated, Transported by this EMS Unit" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.17" role="Warning">
+      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Cardiac Rhythm on Arrival at Destination has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Cardiac Rhythm on Arrival at Destination is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Cardiac Rhythm on Arrival at Destination has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

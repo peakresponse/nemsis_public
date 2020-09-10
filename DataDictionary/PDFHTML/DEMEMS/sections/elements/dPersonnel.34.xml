@@ -4,7 +4,7 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The individuals primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.</definition>
+<definition>The individual's primary/main EMS role at the EMS agency. This is the function which is performed the majority of the time for the EMS personnel.</definition>
 <v2Number></v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
@@ -31,4 +31,12 @@
     <NV.NotReporting><facet name="enumeration" value="7701005" annotation="Not Reporting"/></NV.NotReporting>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When EMS Personnel's Primary EMS Job Role has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When EMS Personnel's Primary EMS Job Role is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

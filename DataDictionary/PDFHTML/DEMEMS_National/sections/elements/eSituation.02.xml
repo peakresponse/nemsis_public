@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>Indication whether or not there was an injury</definition>
+<definition>Indication whether or not there was an injury.</definition>
 <v2Number>E09_04</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -24,4 +24,30 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.02" role="Warning">
+      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eInjury_all_present_eInjury.01" role="Warning">
+      <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient..." and <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_consistency_eInjury_eSituation.02_yes_eInjury.01" role="Warning">
+      <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_consistency_eInjury_eSituation.02_yes_eInjury.03" role="Warning">
+      <elementRef elementNumber="eInjury.03">Trauma Center Criteria</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_consistency_eInjury_eSituation.02_yes_eInjury.04" role="Warning">
+      <elementRef elementNumber="eInjury.04">Vehicular, Pedestrian, or Other Injury Risk Factor</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_consistency_eSituation_injury_eSituation.02" role="Warning">
+      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be "Yes" when a symptom or impression is injury-related.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Possible Injury has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Possible Injury is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

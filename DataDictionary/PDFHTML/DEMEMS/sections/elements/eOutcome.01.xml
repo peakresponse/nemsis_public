@@ -4,14 +4,12 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The known disposition of the patient from the Emergency Department (ED)</definition>
+<definition>The known disposition of the patient from the Emergency Department (ED).</definition>
 <v2Number>E22_01</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  (For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-							<br/><br/><a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf</a>  Page 35-36
-							<br/><br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC_ (www.nubc.org) via the NUBC's Official UB-04 Data Specifications Manual.  
-							<div style="font-size:3px"> </div>Contractor site, Knowledge Trek:  <a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf</a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</v3Comment>
+								<br/><br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC <a href="http://www.nubc.org" target="_blank">http://www.nubc.org</a>) via the NUBC's Official UB-04 Data Specifications Manual.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -45,4 +43,12 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Emergency Department Disposition has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Emergency Department Disposition is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

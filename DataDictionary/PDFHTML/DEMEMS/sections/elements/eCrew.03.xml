@@ -4,7 +4,7 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The role(s) of the role member during response, at scene treatment, and/or transport.</definition>
+<definition>The role(s) of the crew member during response, at scene treatment, and/or transport.</definition>
 <v2Number>E04_02</v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -30,4 +30,15 @@
   </NV>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Crew Member Response Role has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Crew Member Response Role is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Crew Member Response Role has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

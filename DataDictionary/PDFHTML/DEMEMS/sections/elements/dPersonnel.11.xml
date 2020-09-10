@@ -24,4 +24,12 @@
     <NV.NotReporting><facet name="enumeration" value="7701005" annotation="Not Reporting"/></NV.NotReporting>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When EMS Personnel's Date of Birth has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When EMS Personnel's Date of Birth is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

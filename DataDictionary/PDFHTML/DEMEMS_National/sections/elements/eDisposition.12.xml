@@ -37,4 +37,102 @@
     <facet name="enumeration" value="4212043" annotation="Transport Non-Patient, Organs, etc."/>
   </IncidentPatientDisposition>
 </restrictions>
+<asserts>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.17" role="Warning">
+      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Dead at Scene... (with Transport)" or "Patient Treated, Transported by this EMS Unit" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eTimes.05" role="Warning">
+      <elementRef elementNumber="eTimes.05">Unit En Route Date/Time</elementRef> should be recorded unless <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Canceled (Prior to Arrival At Scene)".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eTimes.06" role="Warning">
+      <elementRef elementNumber="eTimes.06">Unit Arrived on Scene Date/Time</elementRef> should be recorded unless <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Canceled (Prior to Arrival At Scene)".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eTimes.07" role="Warning">
+      <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eTimes.09" role="Warning">
+      <elementRef elementNumber="eTimes.09">Unit Left Scene Date/Time</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eTimes.11" role="Warning">
+      <elementRef elementNumber="eTimes.11">Patient Arrived at Destination Date/Time</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eTimes.12" role="Warning">
+      <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.07" role="Warning">
+      <elementRef elementNumber="ePatient.07">Patient's Home County</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.08" role="Warning">
+      <elementRef elementNumber="ePatient.08">Patient's Home State</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.09" role="Warning">
+      <elementRef elementNumber="ePatient.09">Patient's Home ZIP Code</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.13" role="Warning">
+      <elementRef elementNumber="ePatient.13">Gender</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.14" role="Warning">
+      <elementRef elementNumber="ePatient.14">Race</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.15" role="Warning">
+      <elementRef elementNumber="ePatient.15">Age</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePatient.16" role="Warning">
+      <elementRef elementNumber="ePatient.16">Age Units</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_ePayment.01" role="Warning">
+      <elementRef elementNumber="ePayment.01">Primary Method of Payment</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eScene.09" role="Warning">
+      <elementRef elementNumber="eScene.09">Incident Location Type</elementRef> should be recorded unless <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Canceled (Prior to Arrival At Scene)".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.02" role="Warning">
+      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.07" role="Warning">
+      <elementRef elementNumber="eSituation.07">Chief Complaint Anatomic Location</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.08" role="Warning">
+      <elementRef elementNumber="eSituation.08">Chief Complaint Organ System</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.09" role="Warning">
+      <elementRef elementNumber="eSituation.09">Primary Symptom</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.11" role="Warning">
+      <elementRef elementNumber="eSituation.11">Provider's Primary Impression</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eSituation.13" role="Warning">
+      <elementRef elementNumber="eSituation.13">Initial Patient Acuity</elementRef> should be recorded when Type of Service Requested is "911 Response (Scene)" and <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eArrest.16" role="Warning">
+      <elementRef elementNumber="eArrest.16">Reason CPR/Resuscitation Discontinued</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Dead at Scene-Resuscitation Attempted..."
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.05" role="Warning">
+      <elementRef elementNumber="eDisposition.05">Destination State</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.06" role="Warning">
+      <elementRef elementNumber="eDisposition.06">Destination County</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.07" role="Warning">
+      <elementRef elementNumber="eDisposition.07">Destination ZIP Code</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.16" role="Warning">
+      <elementRef elementNumber="eDisposition.16">EMS Transport Method</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.17" role="Warning">
+      <elementRef elementNumber="eDisposition.17">Transport Mode from Scene</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.19" role="Warning">
+      <elementRef elementNumber="eDisposition.19">Final Patient Acuity</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.20" role="Warning">
+      <elementRef elementNumber="eDisposition.20">Reason for Choosing Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eDisposition.21" role="Warning">
+      <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "... (With Transport)" or "Patient Treated, Transported by this EMS Unit".
+      </assert>
+  <assert id="nemSch_consistency_eInjury_all_present_eInjury.01" role="Warning">
+      <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient..." and <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      </assert>
+</asserts>
 </element>

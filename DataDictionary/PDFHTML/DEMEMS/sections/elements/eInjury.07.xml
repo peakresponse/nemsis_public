@@ -4,7 +4,7 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>Safety equipment in use by the patient at the time of the injury</definition>
+<definition>Safety equipment in use by the patient at the time of the injury.</definition>
 <v2Number>E10_08</v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -36,4 +36,15 @@
   </NV>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Use of Occupant Safety Equipment has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Use of Occupant Safety Equipment is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Use of Occupant Safety Equipment has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

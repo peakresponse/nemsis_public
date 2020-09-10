@@ -6,47 +6,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <title><xsl:value-of select="element/@number"/> - <xsl:value-of select="element/name"/></title>
-    <style type="text/css">
-      body {font-family:arial,helvetica,sans-serif; position:relative;}
+   <style type="text/css">
+      body {font-family:"Open Sans",sans-serif; position:relative;}
             
       .pageHeadingElement {font-size:20px;}
   
-      
       .deprecated {width:80px;font-size:14px;text-align:center;color:white;background: PURPLE no-repeat;}
-      .national {width:80px;font-size:14px;text-align:center;color:white;background: url(../../images/roundedNational.gif) no-repeat;}
-      .state    {width:80px;font-size:14px;text-align:center;color:white;background: url(../../images/roundedState.gif) no-repeat;}
+      .national {width:80px;font-size:14px;text-align:center;color:white;background-color:#E10000;}
+      .state    {width:80px;font-size:14px;text-align:center;color:white;background-color:#FBC723;}
       
-      
-      .numberName {font-size:16px;color:white;padding-left:5px; background: url(../../images/roundedNumberName.gif) no-repeat;}
+      .numberName {font-size:16px;color:white;padding:3px 0 3px 5px;background-color:#283e56;}
          
-      .definitionTitle {font-size:14px;background:#F0F0F0;color:#004080;}    
+      .definitionTitle {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}    
       .definitionValue {font-size:14px;}
 
-      .summaryTitle         {font-size:14px;background:#F0F0F0;color:#004080;}
-      .summaryValue         {font-size:14px;}
+      .summaryTitle         {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
+      .summaryValue         {font-size:14px;padding:2px 0 2px 2px;border:1px solid #283e56;}
             
-      .attributeTitle         {font-size:14px;background:#F0F0F0;color:#004080;}
-      .attributeName          {font-size:12px;font-weight:bold;color:#004080;}
+      .attributeTitle         {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
+      .attributeName          {font-size:12px;font-weight:bold;color:#283e56;}
       .attributeValue         {font-size:12px;}
             
-      .sectionCommentTitle    {font-size:14px;background:#F0F0F0;color:#004080;}
+      .sectionCommentTitle    {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
       .sectionCommentValue    {font-size:12px;}
       
-      .sectionV3ChangesTitle  {font-size:14px;background:#F0F0F0;color:#004080;}
+      .sectionV3ChangesTitle  {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
       .sectionV3ChangesValue  {font-size:12px;}
-      
-      .sectionDeprecatedCommentTitle  {font-size:14px;background:#F0F0F0;color:#004080;}
+
+      .sectionDeprecatedCommentTitle  {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
       .sectionDeprecatedCommentValue  {font-size:12px;}
-      
+            
       .sectionRestrictionsEnumerationCodeTitle        {width:60px;  font-size:12px;font-weight:bold;}
       .sectionRestrictionsEnumerationDescriptionTitle {width:560px; font-size:12px;font-weight:bold;}
       .sectionRestrictionsEnumerationCodeValue        {width:60px;  font-size:12px;}
       .sectionRestrictionsEnumerationDescriptionValue {width:560px; font-size:12px;}     
              
-      .sectionAssociatedMeasuresTitle     {font-size:14px;background:#F0F0F0;color:#004080;}
+      .sectionAssociatedMeasuresTitle     {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
       .sectionAssociatedMeasuresValue     {font-size:12px;padding-right:30px;}      
       
-      .sectionRestrictionsTitle   {font-size:14px;background:#F0F0F0;color:#004080;}
+      .sectionRestrictionsTitle   {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
       .sectionRestrictionsPattern {width:600px;font-size:12px;}
       
       .sectionRestrictionsDataTypeTitle   {width:120px;font-size:12px;font-weight:bold;}
@@ -59,10 +57,20 @@
       .sectionConstraintsHeaderDateTime   {width:200px;font-size:12px;font-weight:bold;}
       .sectionConstraintsValueDateTime    {width:200px;font-size:12px;}
       
-      td   {font-size:12px;}
+      .td1 {height:1px;width:1px;background-color:#283e56;}
+      .td2 {height:1px;background-color:#283e56;}
+      .td3 {width:1px;background-color:#283e56;}
+      
+      .assert td {padding: 1ex 1ex 1ex 0;}
+      .assertId {overflow:hidden; text-align:left; text-overflow:ellipsis; white-space:nowrap; direction:rtl; width:85px;}
+      .assertRole {width:65px;}
+      .assertText {width:525px;}
+      .role    {display:inline-block;padding:0.5ex;text-align:center;width:8ex;}
+      .Fatal   {background-color: #e10000;}
+      .Error   {background-color: #fbc723;}
+      .Warning {background-color: #ffffbb;}
     </style>
 </head>
-
 <body>
 
   <table border="0" cellspacing="0" cellpadding="0" width="675px">    
@@ -124,20 +132,8 @@
                   <td>
                     <table border="0" cellspacing="0" cellpadding="0" width="675px" height="26px">
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td width="667px" class="definitionTitle">Definition</td>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                 </tr>
@@ -160,39 +156,15 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="2px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td class="summaryTitle">National Element</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                   <td width="2px"></td>
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue"><xsl:value-of select="element/national"/></td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                      </tr>      
-                      <tr>
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
                       </tr>
                     </table>
                   </td>
@@ -206,45 +178,21 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;"></td>
                         <td class="summaryTitle">Pertinent Negatives (PN)</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                   <td width="2px"></td>
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue">                        
                           <xsl:choose>
                             <xsl:when test="element/attributes/PN">Yes</xsl:when>
                             <xsl:otherwise>No</xsl:otherwise>
                           </xsl:choose>    
                         </td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                 </tr>
@@ -259,40 +207,16 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td class="summaryTitle">State Element</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td> 
                   <td width="2px"></td>
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue"><xsl:value-of select="element/state"/></td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                 </tr>
@@ -305,44 +229,20 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td class="summaryTitle">NOT Values</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>    
                   <td width="2px"></td>
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue">
                           <xsl:choose>
                             <xsl:when test="element/attributes/NV">Yes</xsl:when>
                             <xsl:otherwise>No</xsl:otherwise>
                           </xsl:choose> 
                         </td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                      </tr>      
-                      <tr>
-                        <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
                       </tr>
                     </table>
                   </td>
@@ -358,19 +258,7 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;"></td>
                         <td class="summaryTitle">Version 2 Element</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;"></td>
-                      </tr>      
-                      <tr>
-                        <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
                       </tr>
                     </table>
                   </td>
@@ -378,25 +266,13 @@
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue">                        
                           <xsl:choose>
                             <xsl:when test="string-length(element/v2Number) &gt; 0"><xsl:value-of select="element/v2Number"/></xsl:when>
                             <xsl:otherwise>&#160;</xsl:otherwise>
                           </xsl:choose>     
                         </td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                 </tr>
@@ -409,19 +285,7 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td class="summaryTitle">Is Nillable</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                      </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
                       </tr>
                     </table>
                   </td>
@@ -429,19 +293,7 @@
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue"><xsl:value-of select="element/@isNillable"/></td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                      </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
                       </tr>
                     </table>
                   </td>
@@ -457,19 +309,7 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td class="summaryTitle">Usage</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                      </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
                       </tr>
                     </table>
                   </td>
@@ -477,24 +317,12 @@
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue">
                           <xsl:choose>
                             <xsl:when test="element/usage"><xsl:value-of select="element/usage"/></xsl:when>
                             <xsl:otherwise>&#160;</xsl:otherwise>
                           </xsl:choose>   
                         </td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                      </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
                       </tr>
                     </table>
                   </td>
@@ -508,42 +336,18 @@
                   <td>
                     <table width="180px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;"></td>
                         <td class="summaryTitle">Recurrence</td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                   <td width="2px"></td>
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                      </tr>
-                      <tr>
-                        <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                         <td align="center" class="summaryValue">
                           <xsl:value-of select="element/@minOccurs"/> : <xsl:value-of select="element/@maxOccurs"/>
                         </td>
-                        <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                       </tr>      
-                      <tr>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom.gif) no-repeat;"></td>        
-                        <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                      </tr>
                     </table>
                   </td>
                 </tr>
@@ -564,20 +368,8 @@
             <td>
               <table width="675px" cellspacing="0" cellpadding="0" border="0" >
                 <tr>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif) no-repeat;"></td>        
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                </tr>
-                <tr>
-                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                   <td width="667px" class="sectionAssociatedMeasuresTitle">Associated Performance Measure Initiatives</td>
-                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                 </tr>      
-                <tr>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                </tr>
               </table>
             </td>
           </tr>
@@ -613,20 +405,8 @@
             <td>
               <table width="675px" cellspacing="0" cellpadding="0" border="0" >
                 <tr>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif) no-repeat;"></td>        
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                </tr>
-                <tr>
-                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                   <td width="667px" class="attributeTitle">Attributes</td>
-                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                 </tr>      
-                <tr>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                </tr>
               </table>
             </td>
           </tr>
@@ -695,9 +475,40 @@
           </tr>
           </xsl:when></xsl:choose>
           
+          <xsl:choose><xsl:when test="element/attributes/CodeType">
+          <tr><td height="5px;"></td></tr>  
+          <tr>
+            <td>
+              <table width="667px" cellspacing="0" cellpadding="0" border="0" >
+                <tr>
+                  <td width="5px"></td>
+                  <td width="667px" class="attributeName">Code Type</td>
+                </tr>         
+                <tr>
+                  <td width="5px"></td>
+                  <td>                      
+                    <div class="attributeValue" style="float:left;"> 
+                    <table cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td>
+                        <xsl:for-each select="element/attributes/CodeType/*/facet">
+                        <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;">
+                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation" disable-output-escaping="yes"/>
+                        </div>
+                        </xsl:for-each> 
+                        </td>
+                      </tr>
+                    </table>
+                    </div>
+                  </td>
+                </tr>  
+              </table>
+            </td>
+          </tr>
+          </xsl:when></xsl:choose>
 
           <xsl:for-each select="element/attributes/*">
-          <xsl:choose><xsl:when test="name()!='PN' and name()!='NV' and ./facet/@name!='enumeration' and name()!='TIMESTAMP' ">
+          <xsl:choose><xsl:when test="name()!='PN' and name()!='NV' and name()!='CodeType' and ./facet/@name!='enumeration' and name()!='TIMESTAMP' ">
           <tr><td style="padding:4px 0 0 0">
               <table width="667px" cellspacing="0" cellpadding="0" border="0">
                 <tr>
@@ -806,43 +617,7 @@
             </td>
           </tr>
           </xsl:when></xsl:choose>
-          </xsl:for-each>           
-          
-               <!--     
-          
-          <xsl:choose><xsl:when test="element/restrictions/streetAddress">
-                    <div class="attributeValue" style="float:left;width:130px;"> 
-                     <b>Data Type: </b> <xsl:value-of select="element/restrictions/streetAddress/constraints/dataType"/> 
-                    </div>
-                    <xsl:for-each select="element/restrictions/streetAddress/constraints/constraint">
-                      <div class="attributeValue" style="float:left;width:130px;"> 
-                        <b><xsl:value-of select="constraintTitle"/>: </b> <xsl:value-of select="constraintValue"/> 
-                      </div>
-                    </xsl:for-each> 
-          
-          
-          <xsl:choose><xsl:when test="element/restrictions/currentStatusDate">
-                  <td width="667px" class="attributeName">Current Status Date</td>
-                    <div class="attributeValue" style="float:left;width:130px;"> 
-                     <b>Data Type: </b> <xsl:value-of select="element/restrictions/currentStatusDate/constraints/dataType"/> 
-                    </div>
-                    <xsl:for-each select="element/restrictions/currentStatusDate/constraints/constraint">
-                      <div class="attributeValue" style="float:left;width:250px;white-space: nowrap;"> 
-                        <b><xsl:value-of select="constraintTitle"/>: </b> <xsl:value-of select="constraintValue"/> 
-                      </div>
-                    </xsl:for-each>    
-          
-          <xsl:choose><xsl:when test="element/attributes/CorrelationID">  
-
-          <xsl:choose><xsl:when test="element/restrictions/fileType">
-          <xsl:choose><xsl:when test="element/restrictions/distanceUnit">
-          <xsl:choose><xsl:when test="element/restrictions/velocityUnit">
-          <xsl:choose><xsl:when test="element/restrictions/phoneNumberType">
-          <xsl:choose><xsl:when test="element/restrictions/emailAddressType">
-          <xsl:choose><xsl:when test="element/restrictions/codeType">
- -->        
-            
-            
+          </xsl:for-each>
         </table>          
     </td></tr>    
     </xsl:when>
@@ -859,20 +634,9 @@
             <td>
               <table width="675px" cellspacing="0" cellpadding="0" border="0" >
                 <tr>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif) no-repeat;"></td>        
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                </tr>
-                <tr>
-                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                   <td width="667px" class="sectionRestrictionsTitle">Constraints</td>
-                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                 </tr>      
-                <tr>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                </tr>
+
               </table>
             </td>
           </tr>
@@ -969,20 +733,8 @@
             <td>
               <table width="675px" cellspacing="0" cellpadding="0" border="0" >
                 <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif) no-repeat;"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                </tr>
-                <tr>
-                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                   <td class="sectionCommentTitle">Code List</td>
-                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
                 </tr>      
-                <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                </tr>
               </table>
             </td>
           </tr>
@@ -1037,25 +789,7 @@
     <tr><td>    
         <table border="0" cellspacing="0">
           <tr>
-            <td>
-              <table width="675px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif) no-repeat;"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                </tr>
-                <tr>
-                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                   <td width="667px" class="sectionCommentTitle">Data Element Comment</td>
-                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                </tr>      
-                <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                </tr>
-              </table>
-            </td>
           </tr>
           <tr>
             <td class="sectionCommentValue" style="padding-left:5px"><xsl:copy-of select="element/v3Comment"/></td>
@@ -1070,25 +804,7 @@
     <tr><td>    
         <table border="0" cellspacing="0" cellpadding="0" width="675px">
           <tr>
-            <td>
-              <table width="675px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif);"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                </tr>
-                <tr>
-                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                   <td width="667px" class="sectionV3ChangesTitle">Version 3 Changes Implemented</td>
-                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                </tr>      
-                <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                </tr>
-              </table>
-            </td>
           </tr>
           <tr>
             <td class="sectionV3ChangesValue" style="padding-left:5px"><xsl:copy-of select="element/v3Changes"/></td>
@@ -1105,25 +821,7 @@
     <tr><td>    
         <table border="0" cellspacing="0" cellpadding="0" width="675px">
           <tr>
-            <td>
-              <table width="675px" cellspacing="0" cellpadding="0" border="0" >
-                <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_section.gif);"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/top_right.gif) no-repeat;"></td>
-                </tr>
-                <tr>
-                  <td width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/left.gif) no-repeat;;"></td>
                   <td width="667px" class="sectionV3ChangesTitle">Deprecated Comments</td>
-                  <td width="4px" style="background: url(../../images/roundedCornerWithBorder_Titles/right.gif) no-repeat;;"></td>
-                </tr>      
-                <tr>
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_left.gif) no-repeat;"></td>
-                  <td height="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_section.gif) no-repeat;"></td>        
-                  <td height="3px" width="3px" style="background: url(../../images/roundedCornerWithBorder_Titles/bottom_right.gif) no-repeat;"></td>
-                </tr>
-              </table>
-            </td>
           </tr>
           <tr>
             <td class="sectionDeprecatedComment" style="padding-left:5px"><xsl:copy-of select="element/deprecatedComment"/></td>
@@ -1133,10 +831,67 @@
     </xsl:when>
     </xsl:choose>
      
+    <!-- VALIDATION RULES SECTION -->
+    <xsl:if test="element/asserts">
+    <tr><td height="8px;"></td></tr> 
+    <tr><td>
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <table width="675px" cellspacing="0" cellpadding="0" border="0" >
+                <tr>
+                  <td class="sectionCommentTitle">Associated Validation Rules</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td height="3px;"></td></tr> 
+          <tr>
+            <td>
+              <table cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed; width:100%;">
+                <tr>
+                  <td width="5px"></td>
+                  <td class="sectionRestrictionsEnumerationCodeTitle assertId">Rule ID</td>
+                  <td class="sectionRestrictionsEnumerationCodeTitle assertRole">Level</td>
+                  <td class="sectionRestrictionsEnumerationCodeTitle assertText">Message</td>
+                </tr>
+                <tr><td height="3px"></td></tr>
+                <xsl:for-each select="element/asserts/assert">
+                  <xsl:sort select="@id"/>
+                  <tr class="assert">
+                    <td width="5px"></td>
+                    <td class="sectionRestrictionsEnumerationCodeValue assertId" valign="top" title="{@id}">
+                      <xsl:value-of select="@id"/>
+                    </td>
+                    <td class="sectionRestrictionsEnumerationCodeValue assertRole" valign="top">
+                      <span>
+                        <xsl:attribute name="class">
+                          role
+                          <xsl:value-of select="@role" />
+                        </xsl:attribute>
+                      <xsl:value-of select="@role" />
+                    </span>
+                    </td>
+                    <td class="sectionRestrictionsEnumerationDescriptionValue assertText">
+                        <!--fix for escaping &lt;-->
+                        <xsl:call-template name="replace-string">
+                            <xsl:with-param name="text" select="."/>
+                            <xsl:with-param name="replace" select="'&amp;lt;'" />
+                            <xsl:with-param name="with" select="'&lt;'"/>
+                        </xsl:call-template>
+                    </td>
+                  </tr>
+                  <tr><td height="3px"></td></tr>
+                </xsl:for-each>
+              </table>
+            </td>
+          </tr>
+        </table>
+    </td></tr>
+    </xsl:if>
   </table>
            
  
-
                  
 </body>
 </html>

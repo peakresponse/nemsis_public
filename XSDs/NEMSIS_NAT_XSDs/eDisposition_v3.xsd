@@ -32,7 +32,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+										<comment>Based on the ANSI Code. May be auto-populated if list created in dFacility.09 (Facility State).&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -69,7 +69,7 @@
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
 										<comment>May be auto-populated if list created in dFacility.11 (Facility County). Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
-							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+											&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -79,7 +79,6 @@
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-												
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -106,7 +105,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+										<comment>May be auto-populated if list created in dFacility.10 (Facility ZIP Code).&lt;br/>&lt;br/>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -165,7 +164,7 @@
 							<name>EMS Transport Method</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Transport method by this EMS Unit.</definition>
+							<definition>The method of transport by this EMS Unit.</definition>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -298,7 +297,7 @@
 							<name>Reason for Choosing Destination</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The reason the unit chose to deliver or transfer the patient to the destination</definition>
+							<definition>The reason the unit chose to deliver or transfer the patient to the destination.</definition>
 							<v2Number>E20_16</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -308,7 +307,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Required if Patient Transported</comment>
+							<comment>Required if the patient was transported.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -333,7 +332,7 @@
 							<name>Type of Destination</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The type of destination the patient was delivered or transferred to</definition>
+							<definition>The type of destination the patient was delivered or transferred to.</definition>
 							<v2Number>E20_17</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -462,7 +461,7 @@
 										<name>Date/Time of Destination Prearrival Alert or Activation</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The Date/Time EMS alerted, notified, or activated the Destination Healthcare Facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
+										<definition>The Date/Time EMS alerted, notified, or activated the destination healthcare facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
@@ -519,7 +518,6 @@
 			</xs:element>
 			
 		</xs:sequence>
-		
 	</xs:complexType>
 	<xs:simpleType name="AdditionalTransportModeDescriptors">
 		<xs:annotation>
@@ -789,7 +787,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="4222015">
 				<xs:annotation>
-					<xs:documentation>Hospital-Labor &amp;amp; Delivery</xs:documentation>
+					<xs:documentation>Hospital-Labor and Delivery</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4222017">

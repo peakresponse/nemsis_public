@@ -8,7 +8,7 @@
 <v2Number>D02_11</v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
-<v3Comment>The EMS agency website address should be entered for the Agency Contact Type (dContact.05) "EMS Agency Director/Chief/Lead Administrator/CEO". The EMS agency website address or other websites are optional for other contact types (e.g., Administrative Assistant, EMS Medical Director, etc.).</v3Comment>
+<v3Comment>The EMS Agency website address should be entered for the agency Contact Type (dContact.05) "EMS Agency Director/Chief/Lead Administrator/CEO". The EMS Agency website address or other websites are optional for other contact types (e.g., Administrative Assistant, EMS Medical Director, etc.).</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -24,4 +24,12 @@
     <NV.NotReporting><facet name="enumeration" value="7701005" annotation="Not Reporting"/></NV.NotReporting>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When EMS Agency Contact Web Address has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When EMS Agency Contact Web Address is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

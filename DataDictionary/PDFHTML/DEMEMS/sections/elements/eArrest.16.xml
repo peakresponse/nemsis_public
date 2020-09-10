@@ -27,4 +27,18 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.16" role="Warning">
+      <elementRef elementNumber="eArrest.16">Reason CPR/Resuscitation Discontinued</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.12_all_warning_eArrest.16" role="Warning">
+      <elementRef elementNumber="eArrest.16">Reason CPR/Resuscitation Discontinued</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Dead at Scene-Resuscitation Attempted..."
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Reason CPR/Resuscitation Discontinued has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Reason CPR/Resuscitation Discontinued is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

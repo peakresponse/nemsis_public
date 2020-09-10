@@ -10,7 +10,7 @@
 							<name>Primary Method of Payment</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The primary method of payment or type of insurance associated with this EMS encounter</definition>
+							<definition>The primary method of payment or type of insurance associated with this EMS encounter.</definition>
 							<v2Number>E07_01</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -78,7 +78,6 @@
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
-									
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>

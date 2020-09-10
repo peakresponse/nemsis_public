@@ -8,7 +8,7 @@
 <v2Number>E11_08</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385														
+<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". <a href="http://circ.ahajournals.org/cgi/content/full/110/21/3385" target="_blank"> http://circ.ahajournals.org/cgi/content/full/110/21/3385</a>														
 							<br/><br/>Changed from estimated time prior to EMS arrival to date/time of cardiac arrest.
 							  	<br/><br/>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 <table  cellspacing="2"><tr><td>							
@@ -50,4 +50,21 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.14" role="Warning">
+      <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.12_eArrest.14" role="Warning">
+      <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eTimes_order_eTimes.13_eArrest.14" role="Warning">
+      <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef>.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Date/Time of Cardiac Arrest has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Date/Time of Cardiac Arrest is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

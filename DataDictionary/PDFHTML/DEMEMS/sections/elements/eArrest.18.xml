@@ -8,7 +8,7 @@
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Cardiac Arrest</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". http://circ.ahajournals.org/cgi/content/full/110/21/3385</v3Comment>
+<v3Comment>This element is a component of the Utstein Cardiac Arrest Criteria as identified in the American Heart Association journal "Resuscitation" from 2004 entitled "Cardiac Arrest and Cardiopulmonary Resuscitation Outcome Reports". <a href="http://circ.ahajournals.org/cgi/content/full/110/21/3385" target="_blank"> http://circ.ahajournals.org/cgi/content/full/110/21/3385</a></v3Comment>
 <v3Changes>Added to better identify the outcome of EMS cardiac arrest patients.</v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -27,4 +27,15 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.18" role="Warning">
+      <elementRef elementNumber="eArrest.18">End of EMS Cardiac Arrest Event</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When End of EMS Cardiac Arrest Event has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When End of EMS Cardiac Arrest Event is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

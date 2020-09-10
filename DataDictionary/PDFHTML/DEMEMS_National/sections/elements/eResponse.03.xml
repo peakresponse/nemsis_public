@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The incident number assigned by the 911 Dispatch System</definition>
+<definition>The incident number assigned by the 911 Dispatch System.</definition>
 <v2Number>E02_02</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
@@ -23,4 +23,12 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Incident Number has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Incident Number is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

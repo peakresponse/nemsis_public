@@ -19,7 +19,7 @@
 										<name>EMS Agency Number</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The state-assigned provider number of the responding agency</definition>
+										<definition>The state-assigned provider number of the responding agency.</definition>
 										<v2Number>E02_01</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
@@ -48,7 +48,7 @@
 							<name>Incident Number</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The incident number assigned by the 911 Dispatch System</definition>
+							<definition>The incident number assigned by the 911 Dispatch System.</definition>
 							<v2Number>E02_02</v2Number>
 							<usage>Required</usage>
 							<comment>This number can be used to associate multiple EMS responses, dispatch information, and other information to the same EMS event or patient.</comment>
@@ -107,7 +107,7 @@
 										<name>Type of Service Requested</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The type of service or category of service requested of the EMS Agency responding for this specific EMS event</definition>
+										<definition>The type of service or category of service requested of the EMS Agency responding for this specific EMS event.</definition>
 										<v2Number>E02_04</v2Number>
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
@@ -119,7 +119,7 @@
 											<performanceMeasure>Stroke</performanceMeasure>
 											<performanceMeasure>Trauma</performanceMeasure>
 										</performanceMeasuresGroup>
-										<comment>"Interfacility Transfer" has been changed to "Interfacility Transport. "Public Assistance/Other Not Listed" added for EMS 
+										<comment>"Interfacility Transfer" has been changed to "Interfacility Transport". "Public Assistance/Other Not Listed" added for EMS 
 										expanded scope events such as elderly assistance, injury prevention, public education, immunization programs, etc.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -137,7 +137,7 @@
 							<name>Primary Role of the Unit</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The primary role of the EMS Unit which responded to this specific EMS event</definition>
+							<definition>The primary role of the EMS unit which responded to this specific EMS event</definition>
 							<v2Number>E02_05</v2Number>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
@@ -365,7 +365,7 @@
 							<name>EMS Unit Call Sign</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS Unit/Vehicle Number in many agencies.</definition>
+							<definition>The EMS unit number used to dispatch and communicate with the unit. This may be the same as the EMS Vehicle/Unit Number in many agencies.</definition>
 							<v2Number>E02_12</v2Number>
 							<usage>Mandatory</usage>
 							<comment>"This element could be populated from a list created in dVehicle.03 EMS Unit Call Sign or dConfiguration.16 (Crew Call Sign).</comment>
@@ -414,7 +414,7 @@
 							<name>Response Mode to Scene</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The indication whether the response was emergent or non-emergent. An emergent response is an immediate response (typically using lights and sirens).</definition>
+							<definition>The indication whether the response was emergent or non-emergent. An emergent response is an immediate response.</definition>
 							<v2Number>E02_20</v2Number>
 							<usage>Mandatory</usage>
 							<performanceMeasuresGroup>
@@ -450,7 +450,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Descriptors have been added to better describe the EMS Response.  This includes information on whether the EMS event was schedule or unscheduled.</comment>
+							<comment>Descriptors have been added to better describe the EMS response.  This includes information on whether the EMS event was schedule or unscheduled.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1135,7 +1135,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="UnitLevelOfCare">
 		<xs:annotation>
-			<xs:documentation>The Primary role of the EMS Unit which responded to this specific EMS incident.</xs:documentation>
+			<xs:documentation>The Primary role of the EMS unit which responded to this specific EMS incident.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2215001">
@@ -1202,7 +1202,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="PrimaryRoleOfUnit">
 		<xs:annotation>
-			<xs:documentation>The Primary role of the EMS Unit which responded to this specific EMS incident.</xs:documentation>
+			<xs:documentation>The Primary role of the EMS unit which responded to this specific EMS incident.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2207003">

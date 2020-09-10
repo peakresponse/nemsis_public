@@ -10,7 +10,7 @@
 <performanceMeasuresGroup><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
 <v3Comment>Assesses mechanism of injury and evidence of high-energy impact (Step 3) AND Assess special patient or system considerations (Step 4) based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3 and 4. Website: http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf</v3Comment>
 <v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
-							<br/>Website: http://www.cdc.gov/FieldTriage/</v3Changes>
+								<br/>Website: <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/rr6101a1.htm" target="_blank">https://www.cdc.gov/mmwr/preview/mmwrhtml/rr6101a1.htm</a></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
   <VehicularInjuryIndicators baseType="string">
@@ -36,4 +36,18 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eInjury_eSituation.02_yes_eInjury.04" role="Warning">
+      <elementRef elementNumber="eInjury.04">Vehicular, Pedestrian, or Other Injury Risk Factor</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Vehicular, Pedestrian, or Other Injury Risk Factor has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Vehicular, Pedestrian, or Other Injury Risk Factor is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Vehicular, Pedestrian, or Other Injury Risk Factor has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

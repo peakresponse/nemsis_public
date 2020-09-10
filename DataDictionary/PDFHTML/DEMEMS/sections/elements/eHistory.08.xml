@@ -4,7 +4,7 @@
 <national>No</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The patient's pre-existing medical and surgery history of the patient</definition>
+<definition>The patient's pre-existing medical and surgery history.</definition>
 <v2Number>E12_10</v2Number>
 <usage>Recommended</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
@@ -13,7 +13,7 @@
 <br/>ICD-10-CM: Diagnosis Codes. 
 <br/>Website - <a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov</a> 
 <br/>Product - UMLS Metathesaurus 
-<br/>Please reference the NEMSIS Suggested Lists at: <a href="http://nemsis.org/v3/resources.html" target="_blank">http://nemsis.org/v3/resources.html</a> 
+<br/>Please reference the NEMSIS Suggested Lists at: <a href="https://nemsis.org/technical-resources/version-3/version-3-resource-repository/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resource-repository/</a> 
 <br/>
 <br/>ICD-10-PCS has a seven character alphanumeric code structure. Each character contains up to 34 possible values. Each value represents a specific option for the general character definition (e.g., stomach is one of the values for the body part character). 
 
@@ -41,4 +41,21 @@
   </PN>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eNilNvPn_Pn_Nv_Not_Nil" role="Error">
+      When Medical/Surgical History has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Medical/Surgical History has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Medical/Surgical History is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Medical/Surgical History has a Not Value, no other value should be recorded.
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Pn_only" role="Warning">
+      When Medical/Surgical History has a Pertinent Negative, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

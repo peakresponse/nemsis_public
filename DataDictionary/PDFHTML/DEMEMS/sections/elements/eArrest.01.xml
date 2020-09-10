@@ -25,4 +25,66 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.02" role="Warning">
+      <elementRef elementNumber="eArrest.02">Cardiac Arrest Etiology</elementRef> should be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.03" role="Warning">
+      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.04" role="Warning">
+      <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> should be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.05" role="Warning">
+      <elementRef elementNumber="eArrest.05">CPR Care Provided Prior to EMS Arrival</elementRef> should be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes, Prior to EMS Arrival".
+      </assert>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.07" role="Warning">
+      <elementRef elementNumber="eArrest.07">AED Use Prior to EMS Arrival</elementRef> should be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes, Prior to EMS Arrival".
+      </assert>
+  <assert id="nemSch_consistency_eArrest_all_present_eArrest.17" role="Warning">
+      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.12">Incident/Patient Disposition</elementRef> is "Patient Dead at Scene... (with Transport)" or "Patient Treated, Transported by this EMS Unit" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.02" role="Warning">
+      <elementRef elementNumber="eArrest.02">Cardiac Arrest Etiology</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.03" role="Warning">
+      <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.04" role="Warning">
+      <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.05" role="Warning">
+      <elementRef elementNumber="eArrest.05">CPR Care Provided Prior to EMS Arrival</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.07" role="Warning">
+      <elementRef elementNumber="eArrest.07">AED Use Prior to EMS Arrival</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.09" role="Warning">
+      <elementRef elementNumber="eArrest.09">Type of CPR Provided</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.12" role="Warning">
+      <elementRef elementNumber="eArrest.12">Any Return of Spontaneous Circulation</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.14" role="Warning">
+      <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.16" role="Warning">
+      <elementRef elementNumber="eArrest.16">Reason CPR/Resuscitation Discontinued</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.17" role="Warning">
+      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eArrest.01_yes_eArrest.18" role="Warning">
+      <elementRef elementNumber="eArrest.18">End of EMS Cardiac Arrest Event</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.21_hospital_eDisposition.23_cardiacarrest" role="Warning">
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Cardiac Arrest has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Cardiac Arrest is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

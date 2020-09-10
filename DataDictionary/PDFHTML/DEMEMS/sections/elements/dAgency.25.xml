@@ -8,9 +8,8 @@
 <v2Number>D01_21</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
-<v3Comment>Only EMS Agencies billing for service will have an NPI number. 
-                <br/><br/>CMS (Centers for Medicare and Medicaid Services) NPI Registry lookup: 
-                <br/>https://npiregistry.cms.hhs.gov/</v3Comment>
+<v3Comment>Only EMS Agencies billing for service will have an NPI (National Provider Identifier) number. 
+								<br/><br/>CMS (Centers for Medicare and Medicaid Services) NPI Registry lookup: <a href="https://npiregistry.cms.hhs.gov/" target="_blank">https://npiregistry.cms.hhs.gov/</a></v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -25,4 +24,15 @@
   </NV>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When National Provider Identifier has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When National Provider Identifier is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_dNvPn_Nv_only" role="Warning">
+      When National Provider Identifier has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

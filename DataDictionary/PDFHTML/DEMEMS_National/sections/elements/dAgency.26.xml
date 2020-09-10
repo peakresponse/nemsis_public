@@ -8,7 +8,7 @@
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
-<v3Comment>Fire Department ID was added to better integrate Fire Department EMS Agencies and linkage to other EMS related data systems such as NFIRS.</v3Comment>
+<v3Comment>Fire Department ID was added to better integrate Fire Department EMS Agencies and linkage to other EMS related data systems such as NFIRS (National Fire Incident Reporting System) .</v3Comment>
 <v3Changes>Added to better associate Fire and EMS licensure and operational identifiers.</v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -23,4 +23,21 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_dAgency.13_dAgency.26_fire" role="Warning">
+      <elementRef elementNumber="dAgency.26">Fire Department ID Number</elementRef> should be recorded when <elementRef elementNumber="dAgency.13">Organizational Type</elementRef> is "Fire Department".
+      </assert>
+  <assert id="nemSch_consistency_dAgency.13_dAgency.26_nonfire" role="Warning">
+      <elementRef elementNumber="dAgency.26">Fire Department ID Number</elementRef> should only be recorded when <elementRef elementNumber="dAgency.13">Organizational Type</elementRef> is "Fire Department".
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nv_Nil" role="Error">
+      When Fire Department ID Number has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_dNilNvPn_Nil_Nv" role="Error">
+      When Fire Department ID Number is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_dNvPn_Nv_only" role="Warning">
+      When Fire Department ID Number has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

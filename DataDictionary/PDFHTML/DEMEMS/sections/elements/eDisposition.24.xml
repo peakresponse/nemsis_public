@@ -30,4 +30,18 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24_present" role="Warning">
+      <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> is recorded.
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25_present" role="Warning">
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> is recorded with a value other than "None".
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Destination Team Pre-Arrival Alert or Activation has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Destination Team Pre-Arrival Alert or Activation is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

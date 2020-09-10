@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The Date/Time EMS alerted, notified, or activated the Destination Healthcare Facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
+<definition>The Date/Time EMS alerted, notified, or activated the destination healthcare facility prior to EMS arrival. The EMS assessment identified the patient as acutely ill or injured based on exam and possibly specified alert criteria.</definition>
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -48,4 +48,27 @@
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.24_present" role="Warning">
+      <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> is recorded.
+      </assert>
+  <assert id="nemSch_consistency_eDisposition.HospitalTeamActivationGroup_eDisposition.25_present" role="Warning">
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> is recorded with a value other than "None".
+      </assert>
+  <assert id="nemSch_sequence_time_eDisposition.25_after_eTimes.03" role="Warning">
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eDisposition.25_before_eTimes.12" role="Warning">
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should not be later than <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_sequence_time_eDisposition.25_before_eTimes.13" role="Warning">
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Date/Time of Destination Prearrival Alert or Activation has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Date/Time of Destination Prearrival Alert or Activation is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+</asserts>
 </element>

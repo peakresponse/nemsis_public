@@ -4,7 +4,7 @@
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
-<definition>The organizational structure from which EMS services are delivered (fire, hospital, county, etc.)</definition>
+<definition>The organizational structure from which EMS services are delivered (fire, hospital, county, etc.).</definition>
 <v2Number>D01_08</v2Number>
 <usage>Mandatory</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -20,4 +20,12 @@
     <facet name="enumeration" value="9912009" annotation="Tribal"/>
   </OrganizationalType>
 </restrictions>
+<asserts>
+  <assert id="nemSch_consistency_dAgency.13_dAgency.26_fire" role="Warning">
+      <elementRef elementNumber="dAgency.26">Fire Department ID Number</elementRef> should be recorded when <elementRef elementNumber="dAgency.13">Organizational Type</elementRef> is "Fire Department".
+      </assert>
+  <assert id="nemSch_consistency_dAgency.13_dAgency.26_nonfire" role="Warning">
+      <elementRef elementNumber="dAgency.26">Fire Department ID Number</elementRef> should only be recorded when <elementRef elementNumber="dAgency.13">Organizational Type</elementRef> is "Fire Department".
+      </assert>
+</asserts>
 </element>

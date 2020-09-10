@@ -8,7 +8,7 @@
 <v2Number>E09_16</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: http://nemsis.org/v3/resources.html	
+<v3Comment>Code list is represented in ICD-10-CM. Reference the NEMSIS Suggested Lists at: <a href="https://nemsis.org/technical-resources/version-3/version-3-resources/" target="_blank">https://nemsis.org/technical-resources/version-3/version-3-resources/</a>	
 							<br/><br/>ICD-10-CM
 							<br/>Website - <a href="http://uts.nlm.nih.gov" target="_blank">http://uts.nlm.nih.gov</a>
 							<br/>Product - UMLS Metathesaurus</v3Comment>
@@ -26,4 +26,21 @@
   </NV>
   <CorrelationID baseType="string"><facet name="minLength" value="0"/><facet name="maxLength" value="255"/></CorrelationID>
 </attributes>
+<asserts>
+  <assert id="nemSch_consistency_eSituation.11_eSituation.12" role="Warning">
+      <elementRef elementNumber="eSituation.12">Provider's Secondary Impressions</elementRef> should only be recorded when <elementRef elementNumber="eSituation.11">Provider's Primary Impression</elementRef> is recorded.
+      </assert>
+  <assert id="nemSch_consistency_eSituation_injury_eSituation.02" role="Warning">
+      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be "Yes" when a symptom or impression is injury-related.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nv_Nil" role="Error">
+      When Provider's Secondary Impressions has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      </assert>
+  <assert id="nemSch_consistency_eNilNvPn_Nil_Nv" role="Error">
+      When Provider's Secondary Impressions is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      </assert>
+  <assert id="nemSch_uniqueness_eNvPn_Nv_only" role="Warning">
+      When Provider's Secondary Impressions has a Not Value, no other value should be recorded.
+      </assert>
+</asserts>
 </element>

@@ -27,7 +27,7 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Based on the ANSI Code Single Choice based on the County Name but stored as the ANSI code (combined 5 digit State and County codes) Should be required if there is a patient associated with the event.
-							&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -63,7 +63,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>The ANSI Code Selection by text but stored as ANSI code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a>http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
+							<comment>The ANSI Code Selection by text but stored as ANSI code.&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -99,7 +99,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>ZIP Codes Product Website: &lt;a>https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
+							<comment>ZIP Codes Product Website: &lt;a href="https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/" target="_blank">https://www.zipcodedownload.com/Products/Product/Z5Commercial/Standard/Overview/&lt;/a>
 &lt;br/>Product: USA - 5-digit ZIP Code Database, Commercial Edition</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -127,7 +127,7 @@
 							<name>Gender</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The Patient's Gender</definition>
+							<definition>The patient's gender.</definition>
 							<v2Number>E06_11</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -162,7 +162,7 @@
 							<name>Race</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The patient's race as defined by the OMB (US Office of Management and Budget)</definition>
+							<definition>The patient's race as defined by the OMB (US Office of Management and Budget).</definition>
 							<v2Number>E06_12</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -174,7 +174,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>OMB requirements are provided at: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
+							<comment>OMB requirements are provided at: &lt;a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html" target="_blank">https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html&lt;/a>. Using single multiple choice question methodology to improve the completion of ethnicity information.&lt;br/>&lt;br/>Ethnicity (Version 2.2.1: E06_13) has been merged with this data element and retired.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -205,7 +205,7 @@
 										<name>Age</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient's age (either calculated from date of birth or best approximation)</definition>
+										<definition>The patient's age (either calculated from date of birth or best approximation).</definition>
 										<v2Number>E06_14</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -240,7 +240,7 @@
 										<name>Age Units</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The unit used to define the patient's age</definition>
+										<definition>The unit used to define the patient's age.</definition>
 										<v2Number>E06_15</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>

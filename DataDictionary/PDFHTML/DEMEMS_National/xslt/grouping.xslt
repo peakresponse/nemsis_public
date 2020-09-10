@@ -4,15 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title>NEMSIS Data Dictionary Section Groupin</title>
+<title>NEMSIS Data Dictionary Section Grouping</title>
     <style type="text/css">           
-        body {font-family:arial,helvetica,sans-serif; position:relative;}
+        body {font-family:"Open Sans",sans-serif; position:relative;}
         a:link, a:visited   { font-size: 12; text-decoration: none; color:#24409A; }
         a:hover, a:focus    { font-size: 12; text-decoration: none; color:#BB7A2A; }
-        .header {width:630px;background:#004080; color:white; padding:1px 2px 4px 5px; margin:0px 0px 0px 0px;font-size:18px;}
-        .element {white-space:nowrap;width:5in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
-        .elementSmall {white-space:nowrap;width:4.8in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
-        .elementGroup {width:5.5in;float:left;z-index:10;background:#99CC99; padding:1px 1px 3px 5px; margin:3px 0px 3px 0px;font-size:12px; border:solid 1px;white-space:nowrap;}        
+        .header {width:630px;background:#283e56; color:white; padding:1px 2px 4px 5px; margin:0px 0px 0px 0px;font-size:18px;}
+        .element {width:5in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}         
+        .elementSmall {width:4.8in;float:left;background:#F0F0F0; padding:1px 1px 3px 8px; margin:3px 0px 4px 0px;font-size:12px; border:solid 1px;}        
+        .elementGroup {width:5.5in;float:left;z-index:10;background:#99CC99; padding:1px 1px 3px 5px; margin:3px 0px 3px 0px;font-size:12px; border:solid 1px;}        
         
         .deprecated {height:12px;background:PURPLE;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px  purple;color:white;}                
         .national {height:12px;background:#E10000;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}                
@@ -20,7 +20,8 @@
         .optional {height:12px;background:#BBBBBB;float:left;padding:3px 3px 3px 3px; margin:3px 1px 3px 1px;font-size:10px; border:solid 1px;}   
         .cardinalityFont {font-size:11px;}         
 
-        .correlationID {height:12px;background:ORANGE;font-size:10px;}   
+        .correlationID {height:12px;background:ORANGE;font-size:10px;}
+        .UUID {height:12px;background:ORANGE;font-size:10px;}    
  
         .legendTitle  {font-size:16px;}
         .legend       {font-size:11px;}
@@ -43,6 +44,21 @@
         .blank        {float:left;height:12px;width:2px;padding:3px 0px 3px 0px;margin:3px 0px 3px 0px;font-size:12px;}
         .indent_g     {float:left;width:48px;padding:3px 0px 1px 0px;}  
         .indent_gback {float:left;width:49px;padding:3px 0px 1px 0px;}
+
+        .sectionCommentTitle    {font-size:14px;background:#F0F0F0;color:#283e56;padding:2px 0 2px 2px;border:1px solid #283e56;}
+        .sectionRestrictionsEnumerationCodeTitle        {width:60px;  font-size:12px;font-weight:bold;}
+        .sectionRestrictionsEnumerationDescriptionTitle {width:460px; font-size:12px;font-weight:bold;}
+        .sectionRestrictionsEnumerationCodeValue        {width:60px;  font-size:12px;}
+        .sectionRestrictionsEnumerationDescriptionValue {width:460px; font-size:12px;}     
+
+        .assert td {padding: 1ex 1ex 1ex 0;}
+        .assertId {overflow:hidden; text-align:left; text-overflow:ellipsis; white-space:nowrap; direction:rtl; width:85px;}
+        .assertRole {width:65px;}
+        .assertText {width:480px;}
+        .role    {display:inline-block;padding:0.5ex;text-align:center;width:8ex;}
+        .Fatal   {background-color: #e10000;}
+        .Error   {background-color: #fbc723;}
+        .Warning {background-color: #ffffbb;}
     </style>
 </head>
 <body>  
@@ -93,7 +109,7 @@
               <td width="2px"/>
               <td style="font-size:11px;background:#FFFFBB;border:solid 1px;" width="5px;" height="16px;" align="center"></td>
               <td style="width:2px;"/>    
-              <td class="legendKey"><B>N</B> = Not Values, <B>P</B> = Pertinent Negatives , <B>L</B> = Nillable, and/or <B>C</B> = Correlation ID</td>     
+              <td class="legendKey"><B>N</B> = Not Values, <B>P</B> = Pertinent Negatives , <B>L</B> = Nillable, <B>C</B> = Correlation ID, and/or <B>U</B> = UUID</td>      
             </tr>      
           </table>
         </td>
@@ -107,7 +123,74 @@
     </xsl:call-template>
     <div style="clear:both"/>  
     <div style="height:1px;font-size:1px;"></div> 
-    <div class="header"><xsl:value-of select="section/@name"/></div>  
+    <div class="header"><xsl:value-of select="section/@name"/></div>
+
+  <!-- VALIDATION RULES SECTION -->
+  <xsl:if test="section/asserts">
+    <table>
+      <tr>
+        <td height="8px;"></td>
+      </tr>
+      <tr>
+        <td>
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <table width="630px" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="sectionCommentTitle">Associated Validation Rules</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="3px;"></td>
+            </tr>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed; width:100%;">
+                  <tr>
+                    <td width="5px"></td>
+                  <td class="sectionRestrictionsEnumerationCodeTitle assertId">Rule ID</td>
+                  <td class="sectionRestrictionsEnumerationCodeTitle assertRole">Level</td>
+                  <td class="sectionRestrictionsEnumerationCodeTitle assertText">Message</td>
+                  </tr>
+                  <tr>
+                    <td height="3px"></td>
+                  </tr>
+                  <xsl:for-each select="section/asserts/assert">
+                    <xsl:sort select="@id" />
+                    <tr class="assert">
+                      <td width="5px"></td>
+                      <td class="sectionRestrictionsEnumerationCodeValue assertId" valign="top" title="{@id}">
+                        <xsl:value-of select="@id" />
+                      </td>
+                      <td class="sectionRestrictionsEnumerationCodeValue assertRole" valign="top">
+                        <span>
+                          <xsl:attribute name="class">
+                          role
+                          <xsl:value-of select="@role" />
+                        </xsl:attribute>
+                          <xsl:value-of select="@role" />
+                        </span>
+                      </td>
+                      <td class="sectionRestrictionsEnumerationDescriptionValue assertText">
+                        <xsl:value-of select="." />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="3px"></td>
+                    </tr>
+                  </xsl:for-each>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </xsl:if>
+      
 </body>
 </html>
 </xsl:template>
@@ -138,6 +221,9 @@
             <div class="indent_tag"/><div class="elementGroup"><xsl:value-of select="@number"/></div>                     
             <xsl:choose><xsl:when test="@CorrelationID='Yes'">
     		      <div class="pnNvNil">C</div>                
+            </xsl:when></xsl:choose>
+                        <xsl:choose><xsl:when test="@UUID='Yes'">
+    		      <div class="pnNvNil">U</div>                
             </xsl:when></xsl:choose>   
           </div>          
           </div>      
@@ -213,6 +299,9 @@
             <xsl:choose><xsl:when test="@CorrelationID='Yes'">
               <div class="pnNvNil">C</div>                
             </xsl:when></xsl:choose>  
+            <xsl:choose><xsl:when test="@UUID='Yes'">
+              <div class="pnNvNil">U</div>                
+            </xsl:when></xsl:choose>
           </div>
           </div>
         </xsl:when>           

@@ -8,7 +8,7 @@
 <v2Number>D01_10</v2Number>
 <usage>Mandatory</usage>
 <performanceMeasuresGroup></performanceMeasuresGroup>
-<v3Comment>Added Calendar Year to the definition to remove confusion noted in draft comments. Will allow multiple entry to allow data to be stored on several years. This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02) and elements dAgency.16 through dAgency.22</v3Comment>
+<v3Comment>Added Calendar Year to the definition to remove confusion noted in draft comments. Will allow multiple entries to allow data to be stored on several years. This statistical information is associated with the EMS Agency's specific EMS Agency Number (dAgency.02) and elements dAgency.16 through dAgency.22.</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -17,4 +17,12 @@
     <facet name="maxInclusive" value="2050"/>
   </Year>
 </restrictions>
+<asserts>
+  <assert id="nemSch_sequence_dAgency.AgencyYearGroup_dAgency.15_past" role="Warning">
+      <elementRef elementNumber="dAgency.15">Statistical Calendar Year</elementRef> should be in the past.
+      </assert>
+  <assert id="nemSch_uniqueness_DEMDataSet_dAgency.15" role="Warning">
+      Agency statistics for a particular <elementRef elementNumber="dAgency.15">Statistical Calendar Year</elementRef> should only be recorded once.
+      </assert>
+</asserts>
 </element>

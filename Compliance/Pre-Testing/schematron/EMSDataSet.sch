@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?>
-<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.5.0.191130CP1_compliance_pre_2020">
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.5.0.191130CP1_compliance_pre_2021">
 
-  <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing (2020, v3.5.0)</sch:title>
+  <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing (2021, v3.5.0)</sch:title>
 
   <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
   <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -30,13 +30,13 @@
       <!-- To test: Set all instances of eCrew.03 to a value other than "Driver/Pilot-Response". -->
 
       <sch:assert id="compliance_eCrew.CrewGroup_DriverResponse" role="[ERROR]" diagnostics="nemsisDiagnostic" test="nem:eCrew.CrewGroup/nem:eCrew.03 = '2403001'">
-        There should be a crew member with the role of "Driver/Pilot-Response". This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.5.0.
+        There should be a crew member with the role of "Driver/Pilot-Response". This is a validation message for compliance pre-testing for 2021 for NEMSIS v3.5.0.
       </sch:assert>
 
       <!-- To test: Set all instances of eCrew.03 to a value other than "Primary Patient Caregiver-Transport" on a record where the disposition is "Patient Treated, Transported by This EMS Unit". -->
 
       <sch:assert id="compliance_eCrew.CrewGroup_PrimaryCaregiverTransport" role="[WARNING]" diagnostics="nemsisDiagnostic" test="not(ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.12 = '4212033') or nem:eCrew.CrewGroup/nem:eCrew.03 = '2403013'">
-        There should be a crew member with the role of "Primary Patient Caregiver-Transport" when the disposition is "Patient Treated, Transported by This EMS Unit". This is a validation message for compliance pre-testing for 2020 for NEMSIS v3.5.0.
+        There should be a crew member with the role of "Primary Patient Caregiver-Transport" when the disposition is "Patient Treated, Transported by This EMS Unit". This is a validation message for compliance pre-testing for 2021 for NEMSIS v3.5.0.
       </sch:assert>
 
     </sch:rule>

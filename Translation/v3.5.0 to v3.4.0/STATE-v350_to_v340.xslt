@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS StateDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.160713CP2_200115
-Revision Date: January 15, 2020
+Version: 3.5.0.191130CP1_3.4.0.200910CP2_201201
+Revision Date: December 8, 2020
 
 -->
 
@@ -23,7 +23,6 @@ Revision Date: January 15, 2020
 
   <xsl:template match="/">
     <xsl:comment>&#32;This NEMSIS 3.4.0 document was generated from a NEMSIS 3.5.0 document via an XML Stylesheet Language Transformation (XSLT).&#32;</xsl:comment>
-    <xsl:text>&#10;</xsl:text>
     <xsl:copy>
       <xsl:apply-templates/>
     </xsl:copy>
@@ -157,7 +156,7 @@ Revision Date: January 15, 2020
   <xsl:template match="n:sFacility.01[. = '']"/>
 
   <!-- sFacility.01: Map "Diagnostic Services", "Freestanding Emergency Department", "Morgue/Mortuary", "Police/Jail", "Other EMS Responder (air)", "Other EMS Responder (ground)", "Other Recurring Care Center", "Drug and/or Alcohol Rehabilitation Facility", "Skilled Nursing Facility" to "Other" -->
-  <xsl:template match="n:sFacility.01[. = ('1701021', '1701023', '1701025', '1701027', '1701029', '1701031', '1701033', '1701035')]">
+  <xsl:template match="n:sFacility.01[. = ('1701019', '1701021', '1701023', '1701025', '1701027', '1701029', '1701031', '1701033', '1701035')]">
     <xsl:element name="{n:name(.)}">
       <xsl:text>1701009</xsl:text>
     </xsl:element>
@@ -181,7 +180,6 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- sFacility.04: Remove "Cancer Center" and "Labor and Delivery" -->
-  <!-- JL: Check -->
   <xsl:template match="n:sFacility.04[. = ('9908045', '9908047')]"/>
 
   <!-- sFacility.09: Remove if empty -->

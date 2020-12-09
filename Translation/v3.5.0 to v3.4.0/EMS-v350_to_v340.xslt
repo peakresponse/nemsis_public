@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.160713CP2_200115
-Revision Date: January 15, 2020
+Version: 3.5.0.191130CP1_3.4.0.200910CP2_201201
+Revision Date: December 8, 2020
 
 -->
 
@@ -19,14 +19,13 @@ Revision Date: January 15, 2020
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
-  <xsl:attribute-set name="NotRecorded" namespace="http://www.w3.org/2001/XMLSchema-instance">
-    <xsl:attribute name="xsi:nil">true</xsl:attribute>
+  <xsl:attribute-set name="NotRecorded">
+    <xsl:attribute name="xsi:nil" namespace="http://www.w3.org/2001/XMLSchema-instance">true</xsl:attribute>
     <xsl:attribute name="NV">7701003</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:template match="/">
     <xsl:comment>&#32;This NEMSIS 3.4.0 document was generated from a NEMSIS 3.5.0 document via an XML Stylesheet Language Transformation (XSLT).&#32;</xsl:comment>
-    <xsl:text>&#10;</xsl:text>
     <xsl:copy>
       <xsl:apply-templates/>
     </xsl:copy>
@@ -49,7 +48,6 @@ Revision Date: January 15, 2020
   <xsl:template match="n:eCustomConfiguration.08[. = ('8801025', '8801027', '8801029', '8801031')]"/>
 
   <!-- eResponse.05: Map new values -->
-  <!-- JL: Check -->
   <xsl:template match="n:eResponse.05">
     <xsl:copy>
       <xsl:choose>
@@ -73,7 +71,6 @@ Revision Date: January 15, 2020
         <!-- Non-Transport-Medical Treatment... => Non-Transport Rescue -->
         <xsl:when test=". = ('2207021', '2207023')">2207009</xsl:when>
         <!-- Non-Transport-No Medical Equipment... => Non-Transport Administrative (e.g., Supervisor) -->
-        <!-- JL: Or should it be Non-Transport Assistance? -->
         <xsl:when test=". = ('2207025')">2207005</xsl:when>
       </xsl:choose>
     </xsl:copy>
@@ -321,7 +318,6 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- eHistory.17: Map "Physical Exam Indicates Suspected Alcohol or Drug Use" to "Smell of Alcohol on Breath" -->
-  <!-- JL: Check -->
   <xsl:template match="n:eHistory.17[. = '3117013']">
     <xsl:copy>3117011</xsl:copy>
   </xsl:template>
@@ -388,7 +384,6 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- eVitals.30: Map "Los Angeles Prehospital Stroke Screen (LAPSS)" to "Los Angeles" -->
-  <!-- JL: Check -->
   <xsl:template match="n:eVitals.30[. = '3330004']">
     <xsl:copy>3330003</xsl:copy>
   </xsl:template>
@@ -401,7 +396,7 @@ Revision Date: January 15, 2020
   <!-- eLabs.03: Remove new values -->
   <xsl:template match="n:eLabs.03[xs:integer(.) > 3403113]"/>
 
-  <!-- JL: eExam.15: Remove new values -->
+  <!-- eExam.15: Remove new values -->
   <xsl:template match="n:eExam.15[. = ('3515097', '3515099', '3515101', '3515103', '3515105', '3515107', '3515109', '3515111')]"/>
 
   <!-- eExam.18: Map "Dilated" to "8-mm or >" -->
@@ -781,7 +776,6 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- eMedications.03/@PN, eProcedures.03/@PN: Map "Order Criteria Not Met" to "Contraindication Noted". -->
-  <!-- JL: Check -->
   <xsl:template match="n:eMedications.03/@PN[. = ('8801027')] |
                        n:eProcedures.03/@PN[. = ('8801027')]">
     <xsl:attribute name="PN">8801001</xsl:attribute>
@@ -796,7 +790,7 @@ Revision Date: January 15, 2020
       <eMedications.05>
         <xsl:apply-templates select="@*"/>
         <xsl:if test="n:eMedications.05 != ''">
-          <xsl:value-of select="xs:decimal(n:eMedications.05) * 1000"/>
+          <xsl:value-of select="format-number(n:eMedications.05 div 60, '#.###')"/>
         </xsl:if>
       </eMedications.05>
       <eMedications.06>3706037</eMedications.06>
@@ -816,20 +810,17 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- eMedications.10, eProcedures.10: Map "Law Enforcement", "Fire Personnel (non EMS)" to "Other Non-Healthcare Professional" -->
-  <!-- JL: Check -->
   <xsl:template match="n:eMedications.10[. = ('9905047', '9905051')] | 
                        n:eProcedures.10[. = ('9905047', '9905051')]">
     <xsl:copy>9905021</xsl:copy>
   </xsl:template>
 
   <!-- eProcedures.13: Map "Wrist-Left", to "Hand-Left" -->
-  <!-- JL: Check. Forearm-Left also an option. -->
   <xsl:template match="n:eProcedures.13[. = '3913079']">
     <xsl:copy>3913021</xsl:copy>
   </xsl:template>
 
   <!-- eProcedures.13: Map "Wrist-Right", to "Hand-Right" -->
-  <!-- JL: Check. Forearm-Right also an option. -->
   <xsl:template match="n:eProcedures.13[. = '3913081']">
     <xsl:copy>3913023</xsl:copy>
   </xsl:template>
@@ -896,6 +887,12 @@ Revision Date: January 15, 2020
                 <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and No Transport... => Patient Dead at Scene-No Resuscitation Attempted (Without Transport) -->
                 <xsl:when test="n:eDisposition.31 = ('4231011', '9931013') and
                                 n:eDisposition.30 = '4230013'">4212015</xsl:when>
+                <!-- Transport by This EMS Unit... => Patient Treated, Transported by this EMS Unit -->
+                <xsl:when test="n:eDisposition.30 = ('4230001', '4230003')">4212033</xsl:when>
+                <!-- Transport by Another EMS Unit... => Patient Treated, Transferred Care to Another EMS Unit -->
+                <xsl:when test="n:eDisposition.30 = ('4230005', '4230007')">4212031</xsl:when>
+                <!-- Non-Patient Transport (Not Otherwise Listed) => Transport Non-Patient, Organs, etc. -->
+                <xsl:when test="n:eDisposition.30 = '4230011'">4212043</xsl:when>
                 <!-- Otherwise => Patient Evaluated, No Treatment/Transport Required -->
                 <xsl:otherwise>4212021</xsl:otherwise>
               </xsl:choose>
@@ -932,13 +929,11 @@ Revision Date: January 15, 2020
   <xsl:template match="n:eDisposition.15"/>
 
   <!-- eDisposition.19: Map "Dead with Resuscitation Efforts (Black)", to "Dead without Resuscitation Efforts (Black)" -->
-  <!-- JL: Check -->
   <xsl:template match="n:eDisposition.19[. = '4219009']">
     <xsl:copy>4219007</xsl:copy>
   </xsl:template>
 
   <!-- eDisposition.19: Map "Non-Acute/Routine" to "Lower Acuity (Green)" -->
-  <!-- JL: Check -->
   <xsl:template match="n:eDisposition.19[. = '4219011']">
     <xsl:copy>4219005</xsl:copy>
   </xsl:template>
@@ -952,7 +947,6 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!--  eDisposition.21: Map "Dialysis Center", "Diagnostic Services", "Mental Health Facility", "Other Recurring Care Center", "Physical Rehabilitation Facility", "Drug and/or Alcohol Rehabilitation Facility", "Skilled Nursing Facility" to "Other" -->
-  <!-- JL: Check -->
   <xsl:template match="n:eDisposition.21[. = ('4221025', '4221027', '4221031', '4221035', '4221037', '4221039', '4221041')]">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
@@ -1099,7 +1093,6 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- eOther.07: Map "Earthquake", "Flood", "Land Slide", "Winter Storm", "Tornado", "Hurricane" to "Weather" -->
-  <!-- JL: Check "Earthquake" -->
   <xsl:template match="n:eOther.07[. = ('4507029', '4507031', '4507033', '4507035', '4507037', '4507039')]">
     <xsl:copy>4507027</xsl:copy>
   </xsl:template>

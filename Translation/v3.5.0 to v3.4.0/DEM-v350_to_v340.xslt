@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS DEMDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.160713CP2_200115
-Revision Date: January 15, 2020
+Version: 3.5.0.191130CP1_3.4.0.200910CP2_201201
+Revision Date: December 8, 2020
 
 -->
 
@@ -26,7 +26,6 @@ Revision Date: January 15, 2020
 
   <xsl:template match="/">
     <xsl:comment>&#32;This NEMSIS 3.4.0 document was generated from a NEMSIS 3.5.0 document via an XML Stylesheet Language Transformation (XSLT).&#32;</xsl:comment>
-    <xsl:text>&#10;</xsl:text>
     <xsl:copy>
       <xsl:apply-templates/>
     </xsl:copy>
@@ -176,7 +175,6 @@ Revision Date: January 15, 2020
   <xsl:template match="n:dConfiguration.01">
     <xsl:copy-of select="."/>
     <!-- dConfiguration.02 is mandatory; set to "Other" -->
-    <!-- JL: Check -->
     <dConfiguration.02>9911019</dConfiguration.02>
     <dConfiguration.03 xsi:nil="true" NV="7701003"/>
     <dConfiguration.04 xsi:nil="true" NV="7701003"/>
@@ -222,12 +220,9 @@ Revision Date: January 15, 2020
   <!-- dConfiguration.15: Remove empty instances -->
   <xsl:template match="n:dConfiguration.15[. = '']"/>
 
-  <!-- ePatient.13: Map "Female-to-Male, Transgender Male", "Male-to-Female, Transgender Female", "Other, neither exclusively male or female" to "Not Recorded" -->
+  <!-- dPersonnel.12: Map "Female-to-Male, Transgender Male", "Male-to-Female, Transgender Female", "Other, neither exclusively male or female" to "Not Recorded" -->
   <xsl:template match="n:dPersonnel.12[. = ('9906007', '9906009', '9906011')]">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:text></xsl:text>
-    </xsl:copy>
+    <xsl:copy use-attribute-sets="NotRecorded"/>
   </xsl:template>
 
   <!-- dPersonnel.ImmunizationsGroup: Remove if dPersonnel.18 is "None"-->
@@ -245,7 +240,7 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- dFacility.01: Map "Diagnostic Services", "Freestanding Emergency Department", "Morgue/Mortuary", "Police/Jail", "Other EMS Responder (air)", "Other EMS Responder (ground)", "Other Recurring Care Center", "Drug and/or Alcohol Rehabilitation Facility", "Skilled Nursing Facility" to "Other" -->
-  <xsl:template match="n:dFacility.01[. = ('1701021', '1701023', '1701025', '1701027', '1701029', '1701031', '1701033', '1701035')]">
+  <xsl:template match="n:dFacility.01[. = ('1701019', '1701021', '1701023', '1701025', '1701027', '1701029', '1701031', '1701033', '1701035')]">
     <xsl:copy>1701009</xsl:copy>
   </xsl:template>
 
@@ -258,7 +253,6 @@ Revision Date: January 15, 2020
   </xsl:template>
 
   <!-- dFacility.04: Remove "Cancer Center" and "Labor and Delivery" -->
-  <!-- JL: Check -->
   <xsl:template match="n:dFacility.04[. = ('9908045', '9908047')]"/>
 
   <!-- dCustomResults.01: Map to "Not Recorded" if @PN is "Not Immunized", "Order Criteria Not Present", "Symptom Not Present" -->

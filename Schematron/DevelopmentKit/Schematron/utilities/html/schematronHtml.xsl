@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.5.0.190930
-Revision Date: September 30, 2019
+Version: 3.5.0.191130CP1_210121
+Revision Date: January 21, 2021
 
 This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -71,11 +71,17 @@ Schematron files via a user-friendly web-based interface.
             element.innerHTML = element.innerHTML.replace(regEx, function(match, $1) {return linkReplace($1, useName);});
           }
 
+          var nemsisElements = document.getElementById('nemsisElements');
+
           window.addEventListener('load', function() {
+
+            // Depending on how the XSLT was called (directly vs repository.html), nemsisElements may be empty. If so, re-assign it now.
+            if (!nemsisElements) nemsisElements = document.getElementById('nemsisElements');
+
             // Create a NEMSIS element/name lookup list
             window.nemSch_lookup_elements = [];
             var parser = new DOMParser();
-            var nemSch_lookup_elements_source = parser.parseFromString(document.getElementById('nemsisElements').outerHTML, "application/xml").getElementsByTagName('*');
+            var nemSch_lookup_elements_source = parser.parseFromString(nemsisElements.outerHTML, "application/xml").getElementsByTagName('*');
             for (var i = 0; i &lt; nemSch_lookup_elements_source.length; i++) {
               if (nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName'))
                 window.nemSch_lookup_elements[nemSch_lookup_elements_source[i].localName] = nemSch_lookup_elements_source[i].attributes.getNamedItem('nemsisName').value;

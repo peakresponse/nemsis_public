@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.200910CP2_201201
-Revision Date: December 8, 2020
+Version: 3.5.0.191130CP1_3.4.0.200910CP2_210819
+Revision Date: August 19, 2021
 
 -->
 
@@ -852,10 +852,10 @@ Revision Date: December 8, 2020
                 <!-- Patient/Guardian States Intent to Transport by Other Means => Patient Treated, Transported by Private Vehicle -->
                 <xsl:when test="n:eDisposition.31 = '4231009'">4212037</xsl:when>
                 <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and Transport By... => Patient Dead at Scene-Resuscitation Attempted (With Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '9931013') and
+                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
                                 n:eDisposition.30 = ('4230001', '4230003', '4230005', '4230007')">4212017</xsl:when>
                 <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and No Transport => Patient Dead at Scene-Resuscitation Attempted (Without Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '9931013') and
+                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
                                 n:eDisposition.30 = '4230013'">4212019</xsl:when>
                 <!-- Initiated Primary Care and Transferred to Another EMS Crew => Patient Treated, Transferred Care to Another EMS Unit -->
                 <xsl:when test="n:eDisposition.29 = '4229003'">4212031</xsl:when>
@@ -882,10 +882,10 @@ Revision Date: December 8, 2020
             <xsl:when test="n:eDisposition.28 = '4228005'">
               <xsl:choose>
                 <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and Transport By... => Patient Dead at Scene-No Resuscitation Attempted (With Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '9931013') and
+                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
                                 n:eDisposition.30 = ('4230001', '4230003', '4230005', '4230007')">4212013</xsl:when>
                 <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and No Transport... => Patient Dead at Scene-No Resuscitation Attempted (Without Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '9931013') and
+                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
                                 n:eDisposition.30 = '4230013'">4212015</xsl:when>
                 <!-- Transport by This EMS Unit... => Patient Treated, Transported by this EMS Unit -->
                 <xsl:when test="n:eDisposition.30 = ('4230001', '4230003')">4212033</xsl:when>

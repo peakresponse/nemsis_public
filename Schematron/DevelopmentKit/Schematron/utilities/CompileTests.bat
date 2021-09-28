@@ -1,8 +1,8 @@
 @echo off
 rem Windows batch file to build Schematron test cases, generate SVRL output, and check results.
 
-rem Version: 3.5.0.191130CP1_210121
-rem Revision Date: January 21, 2021
+rem Version: 3.5.0.211001CP2_211001
+rem Revision Date: October 1, 2021
 
 rem This product is provided by the NEMIS TAC, without charge, to facilitate development
 rem of NEMSIS Schematron schemas.

@@ -195,7 +195,8 @@ nemsisDiagnostic =
             (element nem:dAgency.01 { text },
              element nem:dAgency.02 { text },
              element nem:dAgency.04 { text },
-             element nem:eRecord.01 { text }?)
+             element nem:eRecord.01 { text }?,
+             element nem:UUID { text }?)
         },
         element nem:elements {
             element nem:element {

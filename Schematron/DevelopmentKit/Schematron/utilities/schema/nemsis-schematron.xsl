@@ -151,8 +151,8 @@
    <!--SCHEMA SETUP-->
    <xsl:template match="/">
       <svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                              title="Schema for Additional Constraints in NEMSIS Schematron"
-                              schemaVersion="">
+                              title="Schema for Additional Constraints in NEMSIS Schematron v3.5+"
+                              schemaVersion="3.5.0.211001CP2">
          <xsl:comment>
             <xsl:value-of select="$archiveDirParameter"/>   
 		 <xsl:value-of select="$archiveNameParameter"/>  
@@ -163,7 +163,7 @@
     This schema supplies some constraints in addition to those given in
     the ISO/IEC 19757-2 (RELAX NG Compact Syntax) and ISO/IEC 19757-3 
     (Schematron) Schemas for Schematron. Schematron files distributed 
-    for use in NEMSIS-compliant systems must meet these additional 
+    for use in NEMSIS (v3.5+) compliant systems must meet these additional 
     constraints.
   </svrl:text>
          <svrl:ns-prefix-in-attribute-values uri="http://purl.oclc.org/dsdl/schematron" prefix="sch"/>
@@ -179,7 +179,7 @@
       </svrl:schematron-output>
    </xsl:template>
    <!--SCHEMATRON PATTERNS-->
-   <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Schema for Additional Constraints in NEMSIS Schematron</svrl:text>
+   <svrl:text xmlns:svrl="http://purl.oclc.org/dsdl/svrl">Schema for Additional Constraints in NEMSIS Schematron v3.5+</svrl:text>
    <!--PATTERN -->
    <!--RULE -->
    <xsl:template match="sch:schema" priority="1004" mode="M5">
@@ -375,23 +375,25 @@
       <xsl:variable name="p04"
                     select="nem:nemsisDiagnostic/nem:record/xsl:copy-of[normalize-space(@select)=normalize-space('ancestor-or-self::*:PatientCareReport/*:eRecord/*:eRecord.01')]"/>
       <xsl:variable name="p05"
-                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:attribute[@name='location']/xsl:apply-templates[@select='.' and @mode='schematron-get-full-path']"/>
+                    select="nem:nemsisDiagnostic/nem:record/xsl:if[normalize-space(@test)=normalize-space('ancestor-or-self::*[@UUID]')]/nem:UUID/xsl:value-of[normalize-space(@select)=normalize-space('ancestor-or-self::*[@UUID][1]/@UUID')]"/>
       <xsl:variable name="p06"
-                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:for-each[@select='@*']/xsl:attribute[@name='{name()}']/xsl:value-of[@select='.']"/>
+                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:attribute[@name='location']/xsl:apply-templates[@select='.' and @mode='schematron-get-full-path']"/>
       <xsl:variable name="p07"
-                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:if[@test='not(*)']/xsl:value-of[@select='.']"/>
+                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:for-each[@select='@*']/xsl:attribute[@name='{name()}']/xsl:value-of[@select='.']"/>
       <xsl:variable name="p08"
-                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:variable[@name='default_context' and @select='.']"/>
+                    select="nem:nemsisDiagnostic/nem:elements/xsl:for-each[@select='$nemsisElements']/xsl:element[@name='element']/xsl:if[@test='not(*)']/xsl:value-of[@select='.']"/>
       <xsl:variable name="p09"
-                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/xsl:variable[@name='parent']"/>
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:variable[@name='default_context' and @select='.']"/>
       <xsl:variable name="p10"
-                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='parentLocation']/xsl:choose/xsl:when[@test='$parent']/xsl:apply-templates[@select='$parent' and @mode='schematron-get-full-path']"/>
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/xsl:variable[@name='parent']"/>
       <xsl:variable name="p11"
-                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='parentLocation']/xsl:choose/xsl:otherwise/xsl:apply-templates[@select='$default_context' and @mode='schematron-get-full-path']"/>
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='parentLocation']/xsl:choose/xsl:when[@test='$parent']/xsl:apply-templates[@select='$parent' and @mode='schematron-get-full-path']"/>
       <xsl:variable name="p12"
+                    select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='parentLocation']/xsl:choose/xsl:otherwise/xsl:apply-templates[@select='$default_context' and @mode='schematron-get-full-path']"/>
+      <xsl:variable name="p13"
                     select="nem:nemsisDiagnostic/nem:elementsMissing/xsl:for-each[@select]/nem:element/xsl:attribute[@name='name']/xsl:value-of[@select='.']"/>
       <xsl:variable name="deepEqual_nemsisDiagnostic"
-                    select="$p01 and $p02 and $p03 and $p04 and $p05 and $p06 and $p07 and $p08 and $p09 and $p10 and $p11 and $p12"/>
+                    select="$p01 and $p02 and $p03 and $p04 and $p05 and $p06 and $p07 and $p08 and $p09 and $p10 and $p11 and $p12 and $p13"/>
       <!--ASSERT [FATAL]-->
       <xsl:choose>
          <xsl:when test="$deepEqual_nemsisDiagnostic"/>

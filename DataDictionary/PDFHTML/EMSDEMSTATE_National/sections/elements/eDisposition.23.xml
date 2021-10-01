@@ -45,13 +45,13 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e171" role="Warning">
-      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef>is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
       </assert>
   <assert id="nemSch_e172" role="Warning">
-      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef>is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.29">Stroke Scale Score</elementRef> is "Positive".
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.29">Stroke Scale Score</elementRef> is "Positive".
       </assert>
   <assert id="nemSch_e173" role="Warning">
-      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef>is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</elementRef> is "STEMI...".
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</elementRef> is "STEMI...".
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Hospital Capability has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

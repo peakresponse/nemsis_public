@@ -104,7 +104,7 @@
       <elementRef elementNumber="eArrest.22">Who First Defibrillated the Patient</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
       </assert>
   <assert id="nemSch_e171" role="Warning">
-      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef>is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Cardiac Arrest has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

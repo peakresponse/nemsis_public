@@ -8,7 +8,25 @@
 <v2Number></v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>Used to populate dConfiguration.09 EMS Agency Medications</v3Comment>
+<v3Comment>Used to populate dConfiguration.09 EMS Agency Medications 
+                                                <br/><br/>List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood products..
+                                                List of medications based on RxNorm (RXCUI) code. 
+                                                <br/><br/>Reference the NEMSIS Suggested Lists at: <a href="https://nemsis.org/technical-resources/version-3/version-3-resources/">https://nemsis.org/technical-resources/version-3/version-3-resources/</a>
+                                                <br/><br/>RxNorm 
+                                                <br/>Website - <a href="http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html">http://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html</a>
+                                                <br/>Product - RxNorm Full Monthly Release
+                                                <br/><br/>SNOMED-CT 
+                                                <br/>Website: <a href="http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html">http://www.nlm.nih.gov/research/umls/Snomed/snomed_main.html</a>
+                                                <br/>Product: Product - UMLS Metathesaurus.
+                                                
+                                                <br/><br/>Allowable SNOMED-CT codes are:
+                                                <br/>116762002 Administration of blood product
+                                                <br/>116795008 Transfusion of cryoprecipitate
+                                                <br/>116861002 Transfusion of fresh frozen plasma
+                                                <br/>116865006 Administration of albumin
+                                                <br/>180208003 Intravenous blood transfusion of platelets
+                                                <br/>33389009 Transfusion of whole blood
+                                                <br/>71493000 Transfusion of packed red blood cells</v3Comment>
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
@@ -22,6 +40,10 @@
     <NV.NotApplicable><facet name="enumeration" value="7701001" annotation="Not Applicable"/></NV.NotApplicable>
     <NV.NotRecorded><facet name="enumeration" value="7701003" annotation="Not Recorded"/></NV.NotRecorded>
   </NV>
+  <CodeType>
+    <CodeType.RxNorm><facet name="enumeration" value="9924003" annotation="RxNorm"/></CodeType.RxNorm>
+    <CodeType.SNOMED><facet name="enumeration" value="9924005" annotation="SNOMED-CT"/></CodeType.SNOMED>
+  </CodeType>
 </attributes>
 <asserts>
   <assert id="nemSch_s022" role="Warning">

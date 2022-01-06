@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS DEMDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.200910CP2_210819
-Revision Date: August 19, 2021
+Version: 3.5.0.211008CP3_3.4.0.200910CP2_210903
+Revision Date: January 6, 2022
 
 -->
 
@@ -220,9 +220,9 @@ Revision Date: August 19, 2021
   <!-- dConfiguration.15: Remove empty instances -->
   <xsl:template match="n:dConfiguration.15[. = '']"/>
 
-  <!-- dPersonnel.12: Map "Female-to-Male, Transgender Male", "Male-to-Female, Transgender Female", "Other, neither exclusively male or female" to "Not Recorded" -->
+  <!-- dPersonnel.12: Map "Female-to-Male, Transgender Male", "Male-to-Female, Transgender Female", "Other, neither exclusively male or female" to "Unknown (Unable to Determine)" -->
   <xsl:template match="n:dPersonnel.12[. = ('9906007', '9906009', '9906011')]">
-    <xsl:copy use-attribute-sets="NotRecorded"/>
+    <xsl:copy>9906005</xsl:copy>
   </xsl:template>
 
   <!-- dPersonnel.ImmunizationsGroup: Remove if dPersonnel.18 is "None"-->

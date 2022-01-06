@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.200910CP2_3.5.0.191130CP1_201106
-Revision Date: November 6, 2020
+Version: 3.4.0.200910CP2_3.5.0.211008CP3_220106
+Revision Date: January 6, 2022
 
 -->
 
@@ -25,7 +25,7 @@ Revision Date: November 6, 2020
   </xsl:attribute-set>
 
   <xsl:template match="/">
-    <xsl:comment>&#32;This NEMSIS 3.5.0 document was generated from a NEMSIS 3.4.0 document via an XML Stylesheet Language Transformation (XSLT). It is not valid per the NEMSIS 3.5.0 XSD due to lack of support to UUIDs (see the NEMSIS V3 UUID Guide for more information).&#32;</xsl:comment>
+    <xsl:comment>&#32;This NEMSIS 3.5.0 document was generated from a NEMSIS 3.4.0 document via an XML Stylesheet Language Transformation (XSLT). It is not valid per the NEMSIS 3.5.0 XSD due to lack of support for UUIDs (see the NEMSIS V3 UUID Guide for more information).&#32;</xsl:comment>
     <xsl:text>&#10;</xsl:text>
     <xsl:copy>
       <xsl:apply-templates/>
@@ -690,28 +690,30 @@ Revision Date: November 6, 2020
     <eDisposition.IncidentDispositionGroup>
       <eDisposition.27>
         <xsl:choose>
-          <!-- Assist..., Canceled On Scene (No Patient Contact) => No Patient Contact -->
-          <xsl:when test=". = ('4212001', '4212003', '4212005', '4212009')">4227007</xsl:when>
+          <!-- Assist, Agency; Assist, Unit; Canceled On Scene (No Patient Contact) => No Patient Contact -->
+          <xsl:when test=". = ('4212001', '4212005', '4212009')">4227007</xsl:when>
           <!-- Canceled (Prior to Arrival At Scene) => Cancelled Prior to Arrival at Scene -->
           <xsl:when test=". = '4212007'">4227005</xsl:when>
           <!-- Canceled on Scene (No Patient Found) => No Patient Found -->
           <xsl:when test=". = '4212011'">4227009</xsl:when>
-          <!-- Standby..., Transport Non-Patient, Organs, etc. => Non-Patient Incident (Not Otherwise Listed) -->
-          <xsl:when test=". = ('4212039', '4212041', '4212043')">4227011</xsl:when>
+          <!-- Assist, Public; Standby...; Transport Non-Patient, Organs, etc. => Non-Patient Incident (Not Otherwise Listed) -->
+          <xsl:when test=". = ('4212003', '4212039', '4212041', '4212043')">4227011</xsl:when>
           <!-- Otherwise: Patient... => Patient Contact Made -->
           <xsl:otherwise>4227001</xsl:otherwise>
         </xsl:choose>
       </eDisposition.27>
       <eDisposition.28>
         <xsl:choose>
-          <!-- Assist..., Canceled..., Standby..., Transport Non-Patient, Organs, etc. => Not Applicable -->
-          <xsl:when test=". = ('4212001', '4212003', '4212005', '4212007', '4212009', '4212011', '4212039', '4212041', '4212043')">
+          <!-- Assist, Agency; Assist, Unit => Patient Support Services Provided -->
+          <xsl:when test=". = ('4212001', '4212005')">4228009</xsl:when>
+          <!-- Assist, Public; Canceled...; Standby...; Transport Non-Patient, Organs, etc. => Not Applicable -->
+          <xsl:when test=". = ('4212003', '4212007', '4212009', '4212011', '4212039', '4212041', '4212043')">
             <xsl:attribute name="xsi:nil">true</xsl:attribute>
             <xsl:attribute name="NV">7701001</xsl:attribute>
           </xsl:when>
           <!-- Patient Dead at Scene-No Resuscitation Attempted..., Patient Evaluated, No Treatment/Transport Required => Patient Evaluated, No Care Required -->
           <xsl:when test=". = ('4212013', '4212015', '4212021')">4228005</xsl:when>
-          <!-- Patient Refused Evaluation/Care... => Patient Refused Evaluation/Care-->
+          <!-- Patient Refused Evaluation/Care... => Patient Refused Evaluation/Care -->
           <xsl:when test=". = ('4212023', '4212025')">4228007</xsl:when>
           <!-- Otherwise: Patient Dead at Scene-Resuscitation Attempted..., Patient Treated... => Patient Evaluated and Care Provided -->
           <xsl:otherwise>4228001</xsl:otherwise>
@@ -719,31 +721,35 @@ Revision Date: November 6, 2020
       </eDisposition.28>
       <eDisposition.29>
         <xsl:choose>
-          <!-- Assist..., Patient Dead at Scene-No Resuscitation Attempted (With Transport), Standby-Public Safety, Fire, or EMS Operational Support Provided, Transport Non-Patient, Organs, etc. => Incident Support Services Provided (Including Standby) -->
-          <xsl:when test=". = ('4212001', '4212003', '4212005', '4212013', '4212041', '4212043')">4229009</xsl:when>
+          <!-- Assist, Agency; Assist, Unit => Provided Care Supporting Primary EMS Crew -->
+          <xsl:when test=". = ('4212001', '4212005')">4229005</xsl:when>
+          <!-- Assist, Public; Canceled...; Patient Dead at Scene-No Resuscitation Attempted...;  => Back in Service, No Care/Support Services Required -->
+          <xsl:when test=". = ('4212003', '4212007', '4212009', '4212011', '4212013', '4212015', '4212021', '4212039')">4229011</xsl:when>
           <!-- Patient Refused Evaluation/Care... => Patient Refused Evaluation/Care -->
-          <xsl:when test=". = ('4212007', '4212009', '4212011', '4212015', '4212021', '4212039')">4229011</xsl:when>
+          <xsl:when test=". = ()">4229011</xsl:when>
           <!-- Patient Refused Evaluation/Care (With Transport), Patient Refused Evaluation/Care (Without Transport) => Back in Service, Care/Support Services Refused -->
           <xsl:when test=". = ('4212023','4212025')">4229013</xsl:when>
           <!-- Patient Treated, Transferred Care to Another EMS Unit => Initiated Primary Care and Transferred to Another EMS Crew -->
           <xsl:when test=". = '4212031'">4229003</xsl:when>
+          <!-- Standby-Public Safety, Fire, or EMS Operational Support Provided; Transport Non-Patient, Organs, etc. => Incident Support Services Provided (Including Standby) -->
+          <xsl:when test=". = ('4212041', '4212043')">4229009</xsl:when>
           <!-- Otherwise: Patient Dead at Scene-Resuscitation Attempted..., Patient Treated, Released..., Patient Treated, Transported... => Initiated and Continued Primary Care -->
           <xsl:otherwise>4229001</xsl:otherwise>
         </xsl:choose>
       </eDisposition.29>
       <eDisposition.30>
         <xsl:choose>
+          <!-- Assist, Public; Canceled...; Standby... => Not Applicable -->
+          <xsl:when test=". = ('4212003', '4212007', '4212009', '4212011', '4212039', '4212041')">
+            <xsl:attribute name="xsi:nil">true</xsl:attribute>
+            <xsl:attribute name="NV">7701001</xsl:attribute>
+          </xsl:when>
           <!-- ...(With Transport),  Patient Treated, Transported by this EMS Unit => Transport by This EMS Unit (This Crew Only) -->
           <xsl:when test=". = ('4212013', '4212017', '4212023', '4212033')">4230001</xsl:when>
           <!-- Patient Treated, Released (AMA) => Patient Refused Transport -->
           <xsl:when test=". = '4212027'">4230009</xsl:when>
           <!-- Patient Treated, Transferred Care to Another EMS Unit => Transport by Another EMS Unit -->
           <xsl:when test=". = '4212031'">4230005</xsl:when>
-          <!-- Standby... => Not Applicable -->
-          <xsl:when test=". = ('4212039', '4212041')">
-            <xsl:attribute name="xsi:nil">true</xsl:attribute>
-            <xsl:attribute name="NV">7701001</xsl:attribute>
-          </xsl:when>
           <!-- Transport Non-Patient, Organs, etc. => Non-Patient Transport (Not Otherwise Listed) -->
           <xsl:when test=". = '4212043'">4230011</xsl:when>
           <!-- Otherwise: Assist..., Canceled..., ...Without Transport, Patient Treated, Released (per protocol), Patient Treated, Transported by Law Enforcement, Patient Treated, Transported by Private Vehicle => No Transport -->
@@ -767,6 +773,11 @@ Revision Date: November 6, 2020
     </eDisposition.IncidentDispositionGroup>
   </xsl:template>
 
+  <!-- eDisposition.19: Map "Dead without Resuscitation Efforts (Black)" to "Dead with Resuscitation Efforts (Black)" when eDisposition.12 is "Patient Dead at Scene-Resuscitation Attempted..." -->
+  <xsl:template match="n:eDisposition.19[. = '4219007' and ../n:eDisposition.12 = ('4212017', '4212019')]">
+    <xsl:copy>4219009</xsl:copy>
+  </xsl:template>
+
   <!-- eDisposition.21: Map "Nursing Home/Assisted Living Facility" to "Assisted Living Facility" -->
   <xsl:template match="n:eDisposition.21[. = '4221011']">
     <xsl:copy>4221029</xsl:copy>
@@ -784,10 +795,13 @@ Revision Date: November 6, 2020
     </xsl:copy>
     <eDisposition.32>
       <xsl:choose>
-        <!-- eDisposition.12: Assist..., Cancelled..., Patient Dead at Scene-No Resuscitation Attempted..., Patient Evaluated, No Treatment/Transport Required, Patient Refused..., Standby..., Transport Non-Patient, Oregans, etc. => No Care Provided -->
-        <xsl:when test="../n:eDisposition.12 = ('4212001', '4212003', '4212005', '4212007', '4212009', '4212011', '4212039', '4212041', '4212043')">4232001</xsl:when>
-        <!-- No non-empty eProcedure.ProcedureGroup and eDisposition.12: Patient Dead at Scene-No Resuscitation Attempted..., Patient Evaluated, No Treatment/Transport Required, Patient Refused... -->
-        <xsl:when test="not(../../n:eProcedures/n:eProcedures.ProcedureGroup[.//* != '']) and ../n:eDisposition.12 = ('4212013', '4212015', '4212021', '4212023', '4212025')">4232001</xsl:when>
+        <!-- eDisposition.12: Assist, Public; Canceled...; Standby...; Transport Non-Patient, Oregans, etc. => Not Applicable -->
+        <xsl:when test="../n:eDisposition.12 = ('4212003', '4212007', '4212009', '4212011', '4212039', '4212041', '4212043')">
+          <xsl:attribute name="xsi:nil">true</xsl:attribute>
+          <xsl:attribute name="NV">7701001</xsl:attribute>
+        </xsl:when>
+        <!-- No non-empty eProcedure.ProcedureGroup and eDisposition.12: Assist, Agency; Assist, Unit; Patient Dead at Scene-No Resuscitation Attempted...; Patient Evaluated, No Treatment/Transport Required; Patient Refused... -->
+        <xsl:when test="not(../../n:eProcedures/n:eProcedures.ProcedureGroup[.//* != '']) and ../n:eDisposition.12 = ('4212001', '4212005', '4212013', '4212015', '4212021', '4212023', '4212025')">4232001</xsl:when>
         <!-- eResponse.15: BLS-... (except BLS-Community Paramedicine) => BLS - All Levels -->
         <xsl:when test="../../n:eResponse/n:eResponse.15 = ('2215001', '2215003', '2215005', '2215007')">4232001</xsl:when>
         <!-- eResponse.15: ALS-AEMT, ALS-Intermediate => ALS - AEMT/Intermediate -->

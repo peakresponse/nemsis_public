@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.191130CP1_3.4.0.200910CP2_210819
-Revision Date: August 19, 2021
+Version: 3.5.0.211008CP3_3.4.0.200910CP2_210903
+Revision Date: January 6, 2022
 
 -->
 
@@ -179,9 +179,9 @@ Revision Date: August 19, 2021
   <!-- ePatient.12: Remove if blank (@PN not supported) -->
   <xsl:template match="n:ePatient.12[. = '']"/>
 
-  <!-- ePatient.13: Map "Female-to-Male, Transgender Male", "Male-to-Female, Transgender Female", "Other, neither exclusively male or female" to "Not Recorded" -->
+  <!-- ePatient.13: Map "Female-to-Male, Transgender Male", "Male-to-Female, Transgender Female", "Other, neither exclusively male or female" to "Unknown (Unable to Determine)" -->
   <xsl:template match="n:ePatient.13[. = ('9906007', '9906009', '9906011')]">
-    <xsl:copy use-attribute-sets="NotRecorded"/>
+    <xsl:copy>9906005</xsl:copy>
   </xsl:template>
 
   <!-- ePatient.18: Remove if blank (@PN not supported) -->
@@ -793,7 +793,7 @@ Revision Date: August 19, 2021
           <xsl:value-of select="format-number(n:eMedications.05 div 60, '#.###')"/>
         </xsl:if>
       </eMedications.05>
-      <eMedications.06>3706037</eMedications.06>
+      <eMedications.06>3706041</eMedications.06>
     </xsl:copy>
   </xsl:template>
 
@@ -843,6 +843,18 @@ Revision Date: August 19, 2021
             <!-- Patient Evaluated and Care Provided, Patient Support Services Provided, empty -->
             <xsl:when test="n:eDisposition.28 = ('4228001', '4228009', '')">
               <xsl:choose>
+                <!-- Dead without Resuscitation Efforts (Black) and Transport by This EMS Unit... => Patient Dead at Scene-No Resuscitation Attempted (With Transport) -->
+                <xsl:when test="../n:eDisposition.19 = '4219007' and
+                                n:eDisposition.30 = ('4230001', '4230003')">4212013</xsl:when>
+                <!-- Dead without Resuscitation Efforts (Black) and Transport by Another EMS Unit... or No Transport => Patient Dead at Scene-No Resuscitation Attempted (Without Transport) -->
+                <xsl:when test="../n:eDisposition.19 = '4219007' and
+                                n:eDisposition.30 = ('4230005', '4230007', '4230013')">4212015</xsl:when>
+                <!-- Dead with Resuscitation Efforts (Black) and Transport by This EMS Unit... => Patient Dead at Scene-Resuscitation Attempted (With Transport) -->
+                <xsl:when test="../n:eDisposition.19 = '4219009' and
+                                n:eDisposition.30 = ('4230001', '4230003')">4212017</xsl:when>
+                <!-- Dead with Resuscitation Efforts (Black) and Transport by Another EMS Unit... or No Transport => Patient Dead at Scene-Resuscitation Attempted (Without Transport) -->
+                <xsl:when test="../n:eDisposition.19 = '4219009' and
+                                n:eDisposition.30 = ('4230005', '4230007', '4230013')">4212019</xsl:when>
                 <!-- Against Medical Advice => Patient Treated, Released (AMA) -->
                 <xsl:when test="n:eDisposition.31 = '4231001'">4212027</xsl:when>
                 <!-- Released Following Protocol Guidelines => Patient Treated, Released (per protocol) -->
@@ -851,12 +863,6 @@ Revision Date: August 19, 2021
                 <xsl:when test="n:eDisposition.31 = '4231007'">4212035</xsl:when>
                 <!-- Patient/Guardian States Intent to Transport by Other Means => Patient Treated, Transported by Private Vehicle -->
                 <xsl:when test="n:eDisposition.31 = '4231009'">4212037</xsl:when>
-                <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and Transport By... => Patient Dead at Scene-Resuscitation Attempted (With Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
-                                n:eDisposition.30 = ('4230001', '4230003', '4230005', '4230007')">4212017</xsl:when>
-                <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and No Transport => Patient Dead at Scene-Resuscitation Attempted (Without Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
-                                n:eDisposition.30 = '4230013'">4212019</xsl:when>
                 <!-- Initiated Primary Care and Transferred to Another EMS Crew => Patient Treated, Transferred Care to Another EMS Unit -->
                 <xsl:when test="n:eDisposition.29 = '4229003'">4212031</xsl:when>
                 <!-- Transport by This EMS Unit... => Patient Treated, Transported by this EMS Unit -->
@@ -872,8 +878,8 @@ Revision Date: August 19, 2021
             <!-- Patient Evaluated and Refused Care, Patient Refused Evaluation/Care -->
             <xsl:when test="n:eDisposition.28 = ('4228003', '4228007')">
               <xsl:choose>
-                <!-- Transport by... => Patient Refused Evaluation/Care (With Transport) -->
-                <xsl:when test="n:eDisposition.30 = ('4230001', '4230003', '4230005', '4230007')">4212023</xsl:when>
+                <!-- Transport by This EMS Unit... => Patient Refused Evaluation/Care (With Transport) -->
+                <xsl:when test="n:eDisposition.30 = ('4230001', '4230003')">4212023</xsl:when>
                 <!-- Otherwise => Patient Refused Evaluation/Care (Without Transport) -->
                 <xsl:otherwise>4212025</xsl:otherwise>
               </xsl:choose>
@@ -881,12 +887,12 @@ Revision Date: August 19, 2021
             <!-- Patient Evaluated, No Care Required -->
             <xsl:when test="n:eDisposition.28 = '4228005'">
               <xsl:choose>
-                <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and Transport By... => Patient Dead at Scene-No Resuscitation Attempted (With Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
-                                n:eDisposition.30 = ('4230001', '4230003', '4230005', '4230007')">4212013</xsl:when>
-                <!-- DNR, Medical/Physician Orders for Life Sustaining Treatment and No Transport... => Patient Dead at Scene-No Resuscitation Attempted (Without Transport) -->
-                <xsl:when test="n:eDisposition.31 = ('4231011', '4231013') and
-                                n:eDisposition.30 = '4230013'">4212015</xsl:when>
+                <!-- Dead without Resuscitation Efforts (Black) and Transport by This EMS Unit... => Patient Dead at Scene-No Resuscitation Attempted (With Transport) -->
+                <xsl:when test="../n:eDisposition.19 = '4219007' and
+                                n:eDisposition.30 = ('4230001', '4230003')">4212013</xsl:when>
+                <!-- Dead with Resuscitation Efforts (Black) and Transport by Another EMS Unit... or No Transport... => Patient Dead at Scene-No Resuscitation Attempted (Without Transport) -->
+                <xsl:when test="../n:eDisposition.19 = '4219009' and
+                                n:eDisposition.30 = ('4230005', '4230007', '4230013')">4212015</xsl:when>
                 <!-- Transport by This EMS Unit... => Patient Treated, Transported by this EMS Unit -->
                 <xsl:when test="n:eDisposition.30 = ('4230001', '4230003')">4212033</xsl:when>
                 <!-- Transport by Another EMS Unit... => Patient Treated, Transferred Care to Another EMS Unit -->
@@ -903,13 +909,39 @@ Revision Date: August 19, 2021
         <xsl:when test="n:eDisposition.27 = '4227003'">4212009</xsl:when>
         <!-- Cancelled Prior to Arrival at Scene => Canceled (Prior to Arrival At Scene) -->
         <xsl:when test="n:eDisposition.27 = '4227005'">4212007</xsl:when>
-        <!-- No Patient Contact, No Patient Found, Non-Patient Incident (Not Otherwise Listed) -->
-        <xsl:when test="n:eDisposition.27 = ('4227007', '4227009', '4227011')">
+        <!-- No Patient Contact -->
+        <xsl:when test="n:eDisposition.27 = '4227007'">
           <xsl:choose>
             <!-- Non-Patient Transport (Not Otherwise Listed) => Transport Non-Patient, Organs, etc. -->
             <xsl:when test="n:eDisposition.30 = '4230011'">4212043</xsl:when>
-            <!-- Back in Service... => Standby-No Services or Support Provided -->
-            <xsl:when test="n:eDisposition.29 = ('4229011', '4229013')">4212039</xsl:when>
+            <!-- Provided Care Supporting Primary EMS Crew => Assist, Unit -->
+            <xsl:when test="n:eDisposition.29 = '4229005'">4212005</xsl:when>
+            <!-- Support Services Provided (Including Standby) => Standby-Public Safety, Fire, or EMS Operational Support Provided -->
+            <xsl:when test="n:eDisposition.29 = '4229009'">4212041</xsl:when>
+            <!-- Otherwise => Canceled on Scene (No Patient Contact) -->
+            <xsl:otherwise>4212009</xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <!-- No Patient Found -->
+        <xsl:when test="n:eDisposition.27 = '4227009'">
+          <xsl:choose>
+            <!-- Non-Patient Transport (Not Otherwise Listed) => Transport Non-Patient, Organs, etc. -->
+            <xsl:when test="n:eDisposition.30 = '4230011'">4212043</xsl:when>
+            <!-- Support Services Provided (Including Standby) => Standby-Public Safety, Fire, or EMS Operational Support Provided -->
+            <xsl:when test="n:eDisposition.29 = '4229009'">4212041</xsl:when>
+            <!-- Otherwise => Canceled on Scene (No Patient Found) -->
+            <xsl:otherwise>4212011</xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <!-- Non-Patient Incident (Not Otherwise Listed) -->
+        <xsl:when test="n:eDisposition.27 = '4227011'">
+          <xsl:choose>
+            <!-- Non-Patient Transport (Not Otherwise Listed) => Transport Non-Patient, Organs, etc. -->
+            <xsl:when test="n:eDisposition.30 = '4230011'">4212043</xsl:when>
+            <!-- Back in Service, No Care/Support Services Required => Assist, Public -->
+            <xsl:when test="n:eDisposition.29 = '4229011'">4212003</xsl:when>
+            <!-- Back in Service, Care/Support Services Refused => Standby-No Services or Support Provided -->
+            <xsl:when test="n:eDisposition.29 = '4229013'">4212039</xsl:when>
             <!-- Otherwise => Standby-Public Safety, Fire, or EMS Operational Support Provided -->
             <xsl:otherwise>4212041</xsl:otherwise>
           </xsl:choose>

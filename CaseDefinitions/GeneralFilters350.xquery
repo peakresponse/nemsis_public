@@ -16,7 +16,7 @@ let
 
 (: eResponse.07 - Unit Transport and Equipment Capability :)
   (: Transport :)
-  let $UnitCapability_Transport := $records[eResponse/eResponse.07 = ('2207015', '2207017', '2207019', '2207025')]
+  let $UnitCapability_Transport := $records[eResponse/eResponse.07 = ('2207011', '2207013', '2207015', '2207017', '2207019', '2207025')]
   (: Non-Transport :)
   let $UnitCapability_NonTransport := $records[eResponse/eResponse.07 = ('2207021', '2207023', '2207027')]
   (: Ground :)

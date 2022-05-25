@@ -11,7 +11,7 @@ proc sql;
 
 /* eResponse.07 - Unit Transport and Equipment Capability */
   /* Transport */
-  create table UnitCapability_Transport as select * from nemsis.pub_pcrEvents where eResponse_07 in ('2207015', '2207017', '2207019', '2207025');
+  create table UnitCapability_Transport as select * from nemsis.pub_pcrEvents where eResponse_07 in ('2207011', '2207013', '2207015', '2207017', '2207019', '2207025');
   /* Non-Transport */
   create table UnitCapability_NonTransport as select * from nemsis.pub_pcrEvents where eResponse_07 in ('2207021', '2207023', '2207027');
   /* Ground */

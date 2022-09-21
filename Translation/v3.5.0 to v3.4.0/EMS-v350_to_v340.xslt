@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.211008CP3_3.4.0.200910CP2_210903
-Revision Date: January 6, 2022
+Version: 3.5.0.211008CP3_3.4.0.200910CP2_220920
+Revision Date: September 20, 2022
 
 -->
 
@@ -300,16 +300,14 @@ Revision Date: January 6, 2022
   <!-- eHistory.ImmunizationsGroup: Remove if eHistory.10/@PN is "Not Immunized"-->
   <xsl:template match="n:eHistory.ImmunizationsGroup[n:eHistory.10/@PN = '8801025']"/>
 
-  <!-- eHistory.12, eMedications.03: Remove SNOMED codes -->
-  <xsl:template match="n:eHistory.12[@CodeType = '9924005' or string-length(.) > 7] |
-                       n:eMedications.03[@CodeType = '9924005' or string-length(.) > 7]">
+  <!-- eMedications.03: Remove SNOMED codes -->
+  <xsl:template match="n:eMedications.03[@CodeType = '9924005' or string-length(.) > 7]">
     <!-- PN: Remove -->
     <xsl:copy use-attribute-sets="NotRecorded"/>
   </xsl:template>
 
-  <!-- eHistory.12, eMedications.03: Remove @CodeType -->
-  <xsl:template match="n:eHistory.12/@CodeType | 
-                       n:eMedications.03/@CodeType"/>
+  <!-- eMedications.03: Remove @CodeType -->
+  <xsl:template match="n:eMedications.03/@CodeType"/>
 
   <!-- eHistory.15, eMedications.04: Map 	"Auto Injector", "BVM", "CPAP", "IV Pump", "Nebulizer", "Umbilical Artery Catheter", "Umbilical Venous Catheter" to "Other/miscellaneous" -->
   <xsl:template match="n:eHistory.15[. = ('9927063', '9927065', '9927067', '9927069', '9927071', '9927073', '9927075')] | 
@@ -751,8 +749,8 @@ Revision Date: January 6, 2022
     </xsl:copy>
   </xsl:template>
 
-  <!-- eExam.19: Remove "Altered mental status, unspecified", "Developmentally Impaired", "Disorientation, unspecified", "Pharmacologically Paralyzed", "Pharmacologically Sedated", "Psychologically Impaired", "Slowness and poor responsiveness", "State of emotional shock and stress, unspecified", "Strange and inexplicable behavior", "Uncooperative", "Unspecified coma" -->
-  <xsl:template match="n:eExam.19[. = ('3519031', '3519033', '3519035', '3519037', '3519039', '3519041', '3519043', '3519045', '3519047', '3519049')]"/>
+  <!-- eExam.19: Remove "Altered mental status, unspecified", "Developmentally Impaired", "Disorientation, unspecified", "Psychologically Impaired", "Slowness and poor responsiveness", "State of emotional shock and stress, unspecified", "Strange and inexplicable behavior", "Uncooperative", "Unspecified coma" -->
+  <xsl:template match="n:eExam.19[. = ('3519031', '3519033', '3519035', '3519041', '3519043', '3519045', '3519047', '3519049')]"/>
 
   <!-- eExam.20: Map "Status Seizure", "Other Seizures" to "Seizures" -->
   <xsl:template match="n:eExam.20[. = ('3520026', '3520055')]">

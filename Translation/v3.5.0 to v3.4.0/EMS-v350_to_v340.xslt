@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.211008CP3_3.4.0.200910CP2_220920
-Revision Date: September 20, 2022
+Version: 3.5.0.211008CP3_3.4.0.200910CP2_221107
+Revision Date: November 7, 2022
 
 -->
 
@@ -742,7 +742,7 @@ Revision Date: September 20, 2022
   </xsl:template>
 
   <!-- eExam.19: Map "Pharmacologically Paralyzed", "Pharmacologically Sedated" to "Pharmacologically Sedated/Paralyzed" -->
-  <xsl:template match="n:eExam.19[. = ('3519037', '3519039')]">
+  <xsl:template match="n:eExam.19[. = ('3519035', '3519037')]">
     <xsl:copy>
       <xsl:apply-templates select="@*"/>
       <xsl:text>3519019</xsl:text>
@@ -750,7 +750,7 @@ Revision Date: September 20, 2022
   </xsl:template>
 
   <!-- eExam.19: Remove "Altered mental status, unspecified", "Developmentally Impaired", "Disorientation, unspecified", "Psychologically Impaired", "Slowness and poor responsiveness", "State of emotional shock and stress, unspecified", "Strange and inexplicable behavior", "Uncooperative", "Unspecified coma" -->
-  <xsl:template match="n:eExam.19[. = ('3519031', '3519033', '3519035', '3519041', '3519043', '3519045', '3519047', '3519049')]"/>
+  <xsl:template match="n:eExam.19[. = ('3519031', '3519033', '3519039', '3519041', '3519043', '3519045', '3519047', '3519049')]"/>
 
   <!-- eExam.20: Map "Status Seizure", "Other Seizures" to "Seizures" -->
   <xsl:template match="n:eExam.20[. = ('3520026', '3520055')]">

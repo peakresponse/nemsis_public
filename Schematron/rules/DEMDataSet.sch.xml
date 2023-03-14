@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.211008CP3" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.0.230317CP4" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -305,8 +305,8 @@
   <element name="eHistory.20">Current Medication Frequency</element>
   <element name="eInjury.01">Cause of Injury</element>
   <element name="eInjury.02">Mechanism of Injury</element>
-  <element name="eInjury.03">Trauma Triage Criteria (Steps 1 and 2)</element>
-  <element name="eInjury.04">Trauma Triage Criteria (Steps 3 and 4)</element>
+  <element name="eInjury.03">Trauma Triage Criteria (High Risk for Serious Injury)</element>
+  <element name="eInjury.04">Trauma Triage Criteria (Moderate Risk for Serious Injury)</element>
   <element name="eInjury.05">Main Area of the Vehicle Impacted by the Collision</element>
   <element name="eInjury.06">Location of Patient in Vehicle</element>
   <element name="eInjury.07">Use of Occupant Safety Equipment</element>

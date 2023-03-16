@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.5.0.211008CP3"><!--   
+                        schemaVersion="3.5.0.230317CP4"><!--   
 		   
 		   
 		 -->
@@ -87,7 +87,7 @@
                        id="nemSch_e091"
                        role="[WARNING]"
                        location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eInjury[namespace-uri()='http://www.nemsis.org'][1]/*:eInjury.03[namespace-uri()='http://www.nemsis.org'][1]">
-      <svrl:text>Trauma Triage Criteria (Steps 1 and 2) should only be recorded when Possible Injury is "Yes".
+      <svrl:text>Trauma Triage Criteria (High Risk for Serious Injury) should only be recorded when Possible Injury is "Yes".
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org">

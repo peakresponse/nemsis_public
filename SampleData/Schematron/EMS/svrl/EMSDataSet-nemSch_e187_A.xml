@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.5.0.211008CP3"><!--   
+                        schemaVersion="3.5.0.230317CP4"><!--   
 		   
 		   
 		 -->
@@ -23,7 +23,6 @@
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_eNilNvPn_rule_10"/>
    <svrl:fired-rule context="nem:eHistory.10[@PN]" id="nemSch_eNilNvPn_rule_3"/>
    <svrl:fired-rule context="*[@PN]" id="nemSch_eNilNvPn_rule_9"/>
-   <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_eNilNvPn_rule_10"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_eNilNvPn_rule_10"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_eNilNvPn_rule_10"/>
    <svrl:fired-rule context="*[@xsi:nil = 'true']" id="nemSch_eNilNvPn_rule_10"/>
@@ -137,7 +136,8 @@
    <svrl:fired-rule context="nem:eDisposition.HospitalTeamActivationGroup[* != '']"
                     id="nemSch_eDisposition_rule_12"/>
    <svrl:fired-rule context="nem:eDisposition.25[. != '']" id="nemSch_eDisposition_rule_13"/>
-   <svrl:fired-rule context="nem:eDisposition.32[. = '']" id="nemSch_eDisposition_rule_18"/>
+   <svrl:fired-rule context="nem:eDisposition.32[. = '' or . = '4232013']"
+                    id="nemSch_eDisposition_rule_18"/>
    <svrl:failed-assert test="ancestor::nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'"
                        id="nemSch_e187"
                        role="[WARNING]"
@@ -154,9 +154,7 @@
                <UUID>05d7121a-d59d-445f-a0d8-c3e08ed83bb8</UUID>
             </record>
             <elements>
-               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.32[namespace-uri()='http://www.nemsis.org'][1]"
-                        xsi:nil="true"
-                        NV="7701001"/>
+               <element location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition[namespace-uri()='http://www.nemsis.org'][1]/*:eDisposition.32[namespace-uri()='http://www.nemsis.org'][1]">4232013</element>
             </elements>
             <elementsMissing/>
          </nemsisDiagnostic>

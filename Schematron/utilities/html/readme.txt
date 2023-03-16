@@ -1,7 +1,7 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
+This product is provided by the NEMSIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
 
 This product is intended to be published via a web server.

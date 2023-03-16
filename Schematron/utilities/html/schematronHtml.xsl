@@ -4,10 +4,10 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.5.0.211008CP3_211008
-Revision Date: October 8, 2021
+Version: 3.5.0.230317CP4_230317
+Revision Date: March 17, 2023
 
-This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
+This product is provided by the NEMSIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
 
 -->
@@ -104,15 +104,6 @@ Schematron files via a user-friendly web-based interface.
           <xsl:copy-of select="$nemsisElements"/>
         </script>
 
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-1013393-2', 'auto');
-          ga('send', 'pageview');
-        </script>
-
       </head>
 
       <body>
@@ -160,7 +151,7 @@ Schematron files via a user-friendly web-based interface.
         <!-- Title page -->
 
         <div class="page" id="root">
-          <img src="https://nemsis.org/wp-content/themes/firetoss_seed/img/nemsis-logo.png"/>
+          <img src="https://nemsis.org/wp-content/themes/firetoss_seed/img/nemsis-logo.png" alt="NEMSIS"/>
           <div class="blueRect"></div>
           <div class="spacer20"></div>
           <div class="titleMain">NEMSIS</div>
@@ -1242,8 +1233,8 @@ Schematron files via a user-friendly web-based interface.
             <eInjury nemsisName="Injury Information">
               <eInjury.01 nemsisName="Cause of Injury"/>
               <eInjury.02 nemsisName="Mechanism of Injury"/>
-              <eInjury.03 nemsisName="Trauma Triage Criteria (Steps 1 and 2)"/>
-              <eInjury.04 nemsisName="Trauma Triage Criteria (Steps 3 and 4)"/>
+              <eInjury.03 nemsisName="Trauma Triage Criteria (High Risk for Serious Injury)"/>
+              <eInjury.04 nemsisName="Trauma Triage Criteria (Moderate Risk for Serious Injury)"/>
               <eInjury.05 nemsisName="Main Area of the Vehicle Impacted by the Collision"/>
               <eInjury.06 nemsisName="Location of Patient in Vehicle"/>
               <eInjury.07 nemsisName="Use of Occupant Safety Equipment"/>

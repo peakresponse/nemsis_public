@@ -2,6 +2,17 @@ NEMSIS Schematron Change Log
 
 
 
+3.5.0.230317CP4
+
+
+National Schematron Schemas
+
+Corrected nemSch_e182 codes for eDisposition.30 Transport Disposition. Previously, a warning was incorrectly issued when Unit Disposition is not "Patient Contact Made" and Transport Disposition is "Non-Patient Transport (Not Otherwise Listed)" or "No Transport". (NEMPUB-545)
+Corrected nemSch_e187 to issue a warning when eDisposition.32 Level of Care Provided Per Protocol is "No Care Provided" and Patient Evaluation/Care is "Patient Evaluated and Care Provided". Previously, the warning was only issued when eDisposition.32 is blank. (NEMPUB-536)
+Updated element names for eInjury.03 and eInjury.04 per XSD change.
+
+
+
 3.5.0.211008CP3
 
 

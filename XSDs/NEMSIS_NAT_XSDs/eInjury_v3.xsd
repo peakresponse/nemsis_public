@@ -44,22 +44,27 @@
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eInjury.03</number>
-							<name>Trauma Triage Criteria (Steps 1 and 2)</name>
+							<name>Trauma Triage Criteria (High Risk for Serious Injury)</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Physiologic and Anatomic Field Trauma Triage Criteria (steps 1 and 2) as defined by the Centers for Disease Control.</definition>
+							<definition>Trauma triage criteria for the red boxes (Injury Patterns and Mental Status and Vital Signs) in the 2021 ACS National Guideline for the Field Triage of Injured Patients.</definition>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>2011 Guidelines for the Field Triage of Injured Patients - value choices for Steps 1 and 2. For falls, one story is equal to 10 feet.</comment>
-							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. &lt;br/>Website: http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf</v3Changes>
+							<comment>2021 National Guidelines for the Field Triage of Injured Patients - Red Criteria (i.e., Injury Patterns, Mental Status &amp; Vital Signs)</comment>
+							<v3Changes>Revised to represent the 2021 National Guidelines for the Field Triage of Injured Patients - Red Criteria.  Website: &lt;a href="https://www.facs.org/quality-programs/trauma/systems/field-triage-guidelines/" target="_blank">https://www.facs.org/quality-programs/trauma/systems/field-triage-guidelines/&lt;/a></v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="TraumaTriageCriteriaSteps1and2">
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.NoneReported"></xs:union>
+								</xs:simpleType>
+							</xs:attribute>
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -75,24 +80,30 @@
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eInjury.04</number>
-							<name>Trauma Triage Criteria (Steps 3 and 4)</name>
+							<name>Trauma Triage Criteria (Moderate Risk for Serious Injury)</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Mechanism and Special Considerations Field Trauma Triage Criteria (steps 3 and 4) as defined by the Centers for Disease Control.</definition>
+							<definition>Trauma triage criteria for the yellow boxes (Mechanism of Injury and EMS Judgment) in the 2021 ACS National Guideline for the Field Triage of Injured Patients.</definition>
 							<v2Number>E10_04</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Assesses mechanism of injury and evidence of high-energy impact (Step 3) AND Assess special patient or system considerations (Step 4) based on CDC 2011 Guidelines for the Field Triage of Injured Patients Step 3 and 4. Website: &lt;a href="http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf" target="_blank">http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf&lt;/a></comment>
-							<v3Changes>Added to better evaluate the CDC-ACS 2011 Guidelines for the Field Triage of Injured Patients. 
-								&lt;br/>Website: &lt;a href="http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf" target="_blank">http://www.cdc.gov/mmwr/pdf/rr/rr6101.pdf&lt;/a></v3Changes>
+							<comment>2021 National Guidelines for the Field Triage of Injured Patients - Yellow Criteria (i.e., Mechanism of Injury and EMS Judgment)</comment>
+							<v3Changes>Revised to represent the 2021 National Guidelines for the Field Triage of Injured Patients - Yellow Criteria.  Website: 
+								&lt;a href="https://www.facs.org/quality-programs/trauma/systems/field-triage-guidelines/" target="_blank">https://www.facs.org/quality-programs/trauma/systems/field-triage-guidelines&lt;/a>
+							</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="TraumaTriageCriteriaSteps3and4">
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.NoneReported"></xs:union>
+								</xs:simpleType>
+							</xs:attribute>
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"></xs:union>
@@ -641,47 +652,97 @@
 			</xs:enumeration>
 			<xs:enumeration value="2903005">
 				<xs:annotation>
-					<xs:documentation>Chest wall instability or deformity (e.g., flail chest)</xs:documentation>
+					<xs:documentation>Chest wall instability, deformity, or suspected flail chest</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903007">
 				<xs:annotation>
-					<xs:documentation>Glasgow Coma Score &lt;= 13</xs:documentation>
+					<xs:documentation>Glasgow Coma Score &lt;= 13 (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903009">
 				<xs:annotation>
-					<xs:documentation>Open or depressed skull fracture</xs:documentation>
+					<xs:documentation>Skull deformity, suspected skull fracture</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903011">
 				<xs:annotation>
-					<xs:documentation>Paralysis</xs:documentation>
+					<xs:documentation>Paralysis (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903013">
 				<xs:annotation>
-					<xs:documentation>Pelvic fractures</xs:documentation>
+					<xs:documentation>Suspected pelvic fracture</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903015">
 				<xs:annotation>
-					<xs:documentation>All penetrating injuries to  head, neck, torso, and extremities proximal to elbow or knee</xs:documentation>
+					<xs:documentation>Penetrating injuries to head, neck, torso, and proximal extremities</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903017">
 				<xs:annotation>
-					<xs:documentation>Respiratory Rate  &lt;10 or >29 breaths per minute (&lt;20 in infants aged &lt;1 year) or need for ventilatory support</xs:documentation>
+					<xs:documentation>Respiratory Rate  &lt;10 or >29 breaths per minute (&lt;20 in infants aged &lt;1 year) or need for ventilatory support (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903019">
 				<xs:annotation>
-					<xs:documentation>Systolic Blood Pressure &lt;90 mmHg</xs:documentation>
+					<xs:documentation>Systolic Blood Pressure &lt;90 mmHg (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2903021">
 				<xs:annotation>
-					<xs:documentation>Two or more proximal long-bone fractures</xs:documentation>
+					<xs:documentation>Suspected fracture of two or more proximal long bones</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903023">
+				<xs:annotation>
+					<xs:documentation>Active bleeding requiring a tourniquet or wound packing with continuous pressure</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903025">
+				<xs:annotation>
+					<xs:documentation>Age >= 10 years: HR > SBP</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903027">
+				<xs:annotation>
+					<xs:documentation>Age >= 65 years: SBP &lt; 110 mmHg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903029">
+				<xs:annotation>
+					<xs:documentation>Age 0-9 years: SBP &lt; 70mm Hg + (2 x age in years)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903031">
+				<xs:annotation>
+					<xs:documentation>Age 10-64 years: SBP &lt; 90 mmHg</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903033">
+				<xs:annotation>
+					<xs:documentation>Respiratory distress or need for respiratory support</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903035">
+				<xs:annotation>
+					<xs:documentation>Room-air pulse oximetry &lt; 90%</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903037">
+				<xs:annotation>
+					<xs:documentation>RR &lt; 10 or > 29 breaths/min</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903039">
+				<xs:annotation>
+					<xs:documentation>Suspected spinal injury with new motor or sensory loss</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2903041">
+				<xs:annotation>
+					<xs:documentation>Unable to follow commands (motor GCS &lt; 6)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -770,52 +831,52 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2904001">
 				<xs:annotation>
-					<xs:documentation>Auto v. Pedestrian/Bicyclist Thrown, Run Over, or > 20 MPH Impact</xs:documentation>
+					<xs:documentation>Pedestrian/bicycle rider thrown, run over, or with significant impact</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904003">
 				<xs:annotation>
-					<xs:documentation>Fall Adults: > 20 ft. (one story is equal to 10 ft.)</xs:documentation>
+					<xs:documentation>Fall Adults: > 20 ft. (one story is equal to 10 ft.) (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904005">
 				<xs:annotation>
-					<xs:documentation>Fall Children: > 10 ft. or 2-3 times the height of the child</xs:documentation>
+					<xs:documentation>Fall Children: > 10 ft. or 2-3 times the height of the child (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904007">
 				<xs:annotation>
-					<xs:documentation>Crash Death in Same Passenger Compartment</xs:documentation>
+					<xs:documentation>Auto Crash: Death in passenger compartment</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904009">
 				<xs:annotation>
-					<xs:documentation>Crash Ejection (partial or complete) from automobile</xs:documentation>
+					<xs:documentation>Auto Crash: Partial or complete ejection</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904011">
 				<xs:annotation>
-					<xs:documentation>Crash Intrusion, including roof: > 12 in. occupant site; > 18 in. any site</xs:documentation>
+					<xs:documentation>Auto Crash: Significant intrusion (including roof): >12 inches occupant site; >18 inches any site; need for extrication</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904013">
 				<xs:annotation>
-					<xs:documentation>Crash Vehicle Telemetry Data (AACN) Consistent with High Risk of Injury</xs:documentation>
+					<xs:documentation>Auto Crash: Vehicle telemetry data consistent with severe injury</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904015">
 				<xs:annotation>
-					<xs:documentation>Motorcycle Crash > 20 MPH</xs:documentation>
+					<xs:documentation>Motorcycle Crash > 20 MPH (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904017">
 				<xs:annotation>
-					<xs:documentation>SBP &lt; 110 for age > 65</xs:documentation>
+					<xs:documentation>SBP &lt; 110 for age > 65 (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904019">
 				<xs:annotation>
-					<xs:documentation>Anticoagulants and Bleeding Disorders</xs:documentation>
+					<xs:documentation>Anticoagulant use</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904021">
@@ -825,17 +886,47 @@
 			</xs:enumeration>
 			<xs:enumeration value="2904023">
 				<xs:annotation>
-					<xs:documentation>EMS Provider Judgment</xs:documentation>
+					<xs:documentation>Other EMS judgment</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904025">
 				<xs:annotation>
-					<xs:documentation>Burn, without other trauma</xs:documentation>
+					<xs:documentation>Burn, without other trauma (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2904027">
 				<xs:annotation>
-					<xs:documentation>Burn, with trauma mechanism</xs:documentation>
+					<xs:documentation>Burns in conjunction with trauma</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904029">
+				<xs:annotation>
+					<xs:documentation>Auto Crash: Child (age 0-9 years) unrestrained or in unsecured child safety seat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904031">
+				<xs:annotation>
+					<xs:documentation>Fall from height > 10 feet (all ages)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904033">
+				<xs:annotation>
+					<xs:documentation>Low-level falls in young children (age &lt;= 5 years) or older adults (age >= 65 years) with significant head impact</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904035">
+				<xs:annotation>
+					<xs:documentation>Rider separated from transport vehicle with significant impact (eg, motorcycle, ATV, horse, etc.)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904037">
+				<xs:annotation>
+					<xs:documentation>Special, high-resource healthcare needs</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2904039">
+				<xs:annotation>
+					<xs:documentation>Suspicion of child abuse</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

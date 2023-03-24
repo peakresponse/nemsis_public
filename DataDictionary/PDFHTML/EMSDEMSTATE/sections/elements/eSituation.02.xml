@@ -38,10 +38,10 @@
       <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
       </assert>
   <assert id="nemSch_e091" role="Warning">
-      <elementRef elementNumber="eInjury.03">Trauma Triage Criteria (Steps 1 and 2)</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      <elementRef elementNumber="eInjury.03">Trauma Triage Criteria (High Risk for Serious Injury)</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
       </assert>
   <assert id="nemSch_e092" role="Warning">
-      <elementRef elementNumber="eInjury.04">Trauma Triage Criteria (Steps 3 and 4)</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      <elementRef elementNumber="eInjury.04">Trauma Triage Criteria (Moderate Risk for Serious Injury)</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Possible Injury has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.211008CP3_3.4.0.200910CP2_221107
-Revision Date: November 7, 2022
+Version: 3.5.0.230317CP4_3.4.0.200910CP2_230425
+Revision Date: April 25, 2023
 
 -->
 
@@ -249,6 +249,107 @@ Revision Date: November 7, 2022
 
   <!-- eSituation.20: Remove -->
   <xsl:template match="n:eSituation.20"/>
+
+  <!-- eInjury.03 -->
+  <xsl:template match="n:eInjury.03">
+    <xsl:choose>
+      <!-- Map "Active bleeding requiring a tourniquet or wound packing with continuous pressure", "Age ≥ 10 years: HR > SBP", "Age ≥ 65 years: SBP < 110 mmHg", "Room-air pulse oximetry < 90%", "Unable to follow commands (motor GCS < 6)" to "Not Recorded" -->
+      <!-- For "Age ≥ 65 years: SBP < 110 mmHg", use mapping to "Not Recorded" in case @CorrelationID is used; see mapping to eInjury.04 below) -->
+      <xsl:when test=". = ('2903023', '2903025', '2903027', '2903035', '2903041')">
+        <xsl:copy use-attribute-sets="NotRecorded">
+          <xsl:apply-templates select="@CorrelationID"/>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Map "Age 0-9 years: SBP < 70mm Hg + (2 x age in years)", "Age 10-64 years: SBP < 90 mmHg" to "Systolic Blood Pressure <90 mmHg" -->
+      <xsl:when test=". = ('2903029', '2903031')">
+        <xsl:copy>
+          <xsl:apply-templates select="@CorrelationID"/>
+          <xsl:text>2903019</xsl:text>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Map "Respiratory distress or need for respiratory support", "RR < 10 or > 29 breaths/min" to "Respiratory Rate <10 or >29 breaths per minute (<20 in infants aged <1 year) or need for ventilatory support" -->
+      <xsl:when test=". = ('2903033', '2903037')">
+        <xsl:copy>
+          <xsl:apply-templates select="@CorrelationID"/>
+          <xsl:text>2903017</xsl:text>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Map "Suspected spinal injury with new motor or sensory loss" to "Paralysis" -->
+      <xsl:when test=". = '2903039'">
+        <xsl:copy>
+          <xsl:apply-templates select="@CorrelationID"/>
+          <xsl:text>2903011</xsl:text>
+        </xsl:copy>
+      </xsl:when>
+      <!-- @PN: Map to "Not Recorded" -->
+      <xsl:when test="@PN">
+        <xsl:copy use-attribute-sets="NotRecorded">
+          <xsl:apply-templates select="@CorrelationID"/>
+        </xsl:copy>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="."/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:if test="not(following-sibling::n:eInjury.03)">
+      <xsl:apply-templates select="../n:eInjury.03[. = '2903027']" mode="eInjury04"/>
+    </xsl:if>
+  </xsl:template>
+
+    <!-- eInjury.03: Map "Age ≥ 65 years: SBP < 110 mmHg" to eInjury.04 "SBP < 110 for age > 65" -->
+    <xsl:template match="n:eInjury.03[. = '2903027']" mode="eInjury04">
+      <eInjury.04>2904017</eInjury.04>
+  </xsl:template>
+
+  <!-- eInjury.04 -->
+  <xsl:template match="n:eInjury.04[. != '']">
+    <xsl:choose>
+      <!-- Map "Auto Crash: Child (age 0-9 years) unrestrained or in unsecured child safety seat", "Low-level falls in young children (age ≤ 5 years) or older adults (age ≥ 65 years) with significant head impact" to "Not Recorded" -->
+      <xsl:when test=". = ('2904029', '2904033')">
+        <xsl:copy use-attribute-sets="NotRecorded">
+          <xsl:apply-templates select="@CorrelationID"/>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Map "Fall from height > 10 feet (all ages)" to "Fall Children: > 10 ft. or 2-3 times the height of the child" if Age < 16 Years -->
+      <xsl:when test=". = '2904031' and ancestor::n:PatientCareReport/n:ePatient/n:ePatient.AgeGroup[n:ePatient.16 = ('2516001', '2516003', '2516005', '2516007') or (n:ePatient.16 = '2516009' and n:ePatient.15 != '' and xs:integer(n:ePatient.15) &lt; 16)]">
+        <xsl:copy>
+          <xsl:apply-templates select="@CorrelationID"/>
+          <xsl:text>2904005</xsl:text>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Map "Fall from height > 10 feet (all ages)" to "Fall Adults: > 20 ft. (one story is equal to 10 ft.)" if Age not < 16 Years -->
+      <xsl:when test=". = '2904031'">
+        <xsl:copy>
+          <xsl:apply-templates select="@CorrelationID"/>
+          <xsl:text>2904003</xsl:text>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Map "Rider separated from transport vehicle with significant impact (eg, motorcycle, ATV, horse, etc.)" to "Motorcycle Crash > 20 MPH" -->
+      <xsl:when test=". = '2904035'">
+        <xsl:copy>
+          <xsl:apply-templates select="@CorrelationID"/>
+          <xsl:text>2904015</xsl:text>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Map "Special, high-resource healthcare needs", "Suspicion of child abuse" to "EMS Provider Judgment" -->
+      <xsl:when test=". = ('2904037', '2904039')">
+        <xsl:copy>
+          <xsl:apply-templates select="@CorrelationID"/>
+          <xsl:text>2904023</xsl:text>
+        </xsl:copy>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy-of select="."/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- eInjury.04/@PN: Map to "Not Recorded" -->
+  <xsl:template match="n:eInjury.04[@PN]">
+    <xsl:copy use-attribute-sets="NotRecorded">
+      <xsl:apply-templates select="@CorrelationID"/>
+    </xsl:copy>
+  </xsl:template>
 
   <!-- eInjury.07: Map "Unable to Determine" to "Not Recorded" -->
   <xsl:template match="n:eInjury.07[. = '2907033']">
@@ -750,7 +851,7 @@ Revision Date: November 7, 2022
   </xsl:template>
 
   <!-- eExam.19: Remove "Altered mental status, unspecified", "Developmentally Impaired", "Disorientation, unspecified", "Psychologically Impaired", "Slowness and poor responsiveness", "State of emotional shock and stress, unspecified", "Strange and inexplicable behavior", "Uncooperative", "Unspecified coma" -->
-  <xsl:template match="n:eExam.19[. = ('3519031', '3519033', '3519039', '3519041', '3519043', '3519045', '3519047', '3519049')]"/>
+  <xsl:template match="n:eExam.19[. = ('3519029', '3519031', '3519033', '3519039', '3519041', '3519043', '3519045', '3519047', '3519049')]"/>
 
   <!-- eExam.20: Map "Status Seizure", "Other Seizures" to "Seizures" -->
   <xsl:template match="n:eExam.20[. = ('3520026', '3520055')]">
@@ -1025,7 +1126,7 @@ Revision Date: November 7, 2022
   </xsl:template>
 
   <!-- eDisposition.23/@CorrelationID: Remove -->
-  <xsl:template match="n:eDisposition.23/@CorrelationID" mode="eDisposition23"/>
+  <xsl:template match="n:eDisposition.23/@CorrelationID"/>
 
   <!-- eDisposition.23: Remove instances after first instance -->
   <xsl:template match="n:eDisposition.23"/>

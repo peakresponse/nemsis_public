@@ -1,6 +1,6 @@
 /* NEMSIS Case Definition */
 /* General Filters - v3.5.0 */
-/* August 31, 2021 */
+/* June 27, 2023 */
 proc sql;
 
 /* eResponse.05 - Type of Service Requested */
@@ -24,6 +24,12 @@ proc sql;
   create table UnitCapability_Als as select * from nemsis.pub_pcrEvents where eResponse_07 in ('2207011', '2207013', '2207015', '2207019', '2207021');
   /* Other */
   create table UnitCapability_Other as select * from nemsis.pub_pcrEvents where eResponse_07 in ('2207025', '2207027');
+
+/* eResponse.23 - Response Mode to Scene */
+  /* Emergent */
+  create table ResponseMode_Emergent as select * from nemsis.pub_pcrEvents where eResponse_23 in ('2223001', '2223007');
+  /* Non-emergent */
+  create table ResponseMode_NonEmergent as select * from nemsis.pub_pcrEvents where eResponse_23 in ('2223003', '2223005');
 
 /* eSituation.13 Initial Patient Acuity */
   /* Critical (Red) */
@@ -60,5 +66,11 @@ proc sql;
   create table Disposition_EmsTransportThisUnit as select * from nemsis.pub_pcrEvents where (eDisposition_28 = '4228001' and eDisposition_30 in ('4230001', '4230003'));
   /* Patient Transferred to Another EMS Unit */
   create table Disposition_EmsTransfer as select * from nemsis.pub_pcrEvents where eDisposition_29 = '4229003';
+
+/* eDisposition.17 - Transport Mode from Scene */
+  /* Emergent */
+  create table TransportMode_Emergent as select * from nemsis.pub_pcrEvents where eDisposition_17 in ('4217001', '4217007');
+  /* Non-emergent */
+  create table transportMode_NonEmergent as select * from nemsis.pub_pcrEvents where eDisposition_17 in ('4217003', '4217005');
 
 quit;

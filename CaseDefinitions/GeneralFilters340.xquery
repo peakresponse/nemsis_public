@@ -2,7 +2,7 @@ xquery version '1.0';
 declare default element namespace 'http://www.nemsis.org';
 (: NEMSIS Case Definition :)
 (: General Filters - v3.4.0 :)
-(: August 31, 2021 :)
+(: June 27, 2023 :)
 for
   $dataset in doc('/path/to/EMSDataSetDocument.xml')
 let
@@ -29,6 +29,12 @@ let
   let $UnitCapability_Bls := $records[eResponse/eResponse.15 = ('2215001', '2215003', '2215005', '2215007', '22150023')]
   (: ALS :)
   let $UnitCapability_Als := $records[eResponse/eResponse.15 = ('2215009', '2215011', '2215013', '2215015', '2215017', '22150019', '22150021')]
+
+(: eResponse.23 - Response Mode to Scene :)
+  (: Emergent :)
+  let $ResponseMode_Emergent := $records[eResponse/eResponse.23 = ('2223001', '2223007')]
+  (: Non-emergent :)
+  let $ResponseMode_NonEmergent := $records[eResponse/eResponse.23 = ('2223003', '2223005')]
 
 (: eSituation.13 Initial Patient Acuity :)
   (: Critical (Red) :)
@@ -63,5 +69,12 @@ let
   let $Disposition_EmsTransportThisUnit := $records[eDisposition/eDisposition.12 = '4212033']
   (: Patient Transferred to Another EMS Unit :)
   let $Disposition_EmsTransfer := $records[eDisposition/eDisposition.12 = '4212031']
+
+(: eDisposition.17 - Transport Mode from Scene :)
+  (: Emergent :)
+  let $TransportMode_Emergent := $records[eDisposition/eDisposition.17 = ('4217001', '4217007')]
+  (: Non-emergent :)
+  let $TransportMode_NonEmergent := $records[eDisposition/eDisposition.17 = ('4217003', '4217005')]
+
 return
   count($records)

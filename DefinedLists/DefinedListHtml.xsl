@@ -4,8 +4,8 @@
  * XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 DefinedList XML to HTML for 
  * documentation purposes
  * 
- * Version: 3.5.0.191130CP1_20210526
- * Revision Date: May 26, 2021
+ * Version: 3.5.0.230317CP4_230718
+ * Revision Date: July 18, 2023
  * 
  * This product is provided by the NEMIS TAC, without charge, to facilitate browsing NEMSIS 3 
  * DefinedList files via a user-friendly web-based interface.
@@ -24,7 +24,7 @@
 
   <!-- Hard-coded version, urlBase, urlDDPath; will need to be modified in future versions -->
   <xsl:variable name="version">3.5</xsl:variable>
-  <xsl:variable name="urlBase">http://www.nemsis.org/media/nemsis_v3/master/</xsl:variable>
+  <xsl:variable name="urlBase">https://nemsis.org/media/nemsis_v3/master/</xsl:variable>
   <xsl:variable name="urlDDPath">EMSDEMSTATE</xsl:variable>
   <!-- XSLT 1.0 doesn't have document-uri() function. Figure out list name based on NEMSIS elements.  -->
   <xsl:variable name="listName">
@@ -689,8 +689,8 @@
       <element name="eHistory.20">Current Medication Frequency</element>
       <element name="eInjury.01">Cause of Injury</element>
       <element name="eInjury.02">Mechanism of Injury</element>
-      <element name="eInjury.03">Trauma Triage Criteria (Steps 1 and 2)</element>
-      <element name="eInjury.04">Trauma Triage Criteria (Steps 3 and 4)</element>
+      <element name="eInjury.03">Trauma Triage Criteria (High Risk for Serious Injury)</element>
+      <element name="eInjury.04">Trauma Triage Criteria (Moderate Risk for Serious Injury)</element>
       <element name="eInjury.05">Main Area of the Vehicle Impacted by the Collision</element>
       <element name="eInjury.06">Location of Patient in Vehicle</element>
       <element name="eInjury.07">Use of Occupant Safety Equipment</element>

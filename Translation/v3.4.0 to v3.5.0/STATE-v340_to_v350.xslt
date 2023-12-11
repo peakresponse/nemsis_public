@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS StateDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.200910CP2_3.5.0.230317CP4_230718
-Revision Date: July 18, 2023
+Version: 3.4.0.200910CP2_3.5.0.230317CP4_231211
+Revision Date: December 11, 2023
 
 -->
 
@@ -66,7 +66,7 @@ Revision Date: July 18, 2023
         <sSoftware.SoftwareGroup>
           <sSoftware.01>NEMSIS Technical Assistance Center</sSoftware.01>
           <sSoftware.02>NEMSIS XSL Translation</sSoftware.02>
-          <sSoftware.03>3.4.0.200910CP2_3.5.0.230317CP4_230718</sSoftware.03>
+          <sSoftware.03>3.4.0.200910CP2_3.5.0.230317CP4_231211</sSoftware.03>
         </sSoftware.SoftwareGroup>
       </sSoftware>
       <!-- dState.01, eState.01: Combine -->

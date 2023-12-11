@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.200910CP2_3.5.0.230317CP4_230425
-Revision Date: April 25, 2023
+Version: 3.4.0.200910CP2_3.5.0.230317CP4_231211
+Revision Date: December 11, 2023
 
 -->
 
@@ -690,10 +690,12 @@ Revision Date: April 25, 2023
     <eDisposition.IncidentDispositionGroup>
       <eDisposition.27>
         <xsl:choose>
-          <!-- Assist, Agency; Assist, Unit; Canceled On Scene (No Patient Contact) => No Patient Contact -->
-          <xsl:when test=". = ('4212001', '4212005', '4212009')">4227007</xsl:when>
+          <!-- Assist, Agency; Assist, Unit => No Patient Contact -->
+          <xsl:when test=". = ('4212001', '4212005')">4227007</xsl:when>
           <!-- Canceled (Prior to Arrival At Scene) => Cancelled Prior to Arrival at Scene -->
           <xsl:when test=". = '4212007'">4227005</xsl:when>
+          <!-- Canceled On Scene (No Patient Contact) => Cancelled on Scene -->
+          <xsl:when test=". = '4212009'">4227003</xsl:when>
           <!-- Canceled on Scene (No Patient Found) => No Patient Found -->
           <xsl:when test=". = '4212011'">4227009</xsl:when>
           <!-- Assist, Public; Standby...; Transport Non-Patient, Organs, etc. => Non-Patient Incident (Not Otherwise Listed) -->

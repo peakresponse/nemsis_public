@@ -69,15 +69,15 @@ Added Pandemic/Epidemic/Outbreak.
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDispatch.03" type="EMDCardNumber" id="eDispatch.EMDCardNumber" minOccurs="0">
+			<xs:element name="eDispatch.03" type="EMDDeterminantCode" id="eDispatch.EMDDeterminantCode" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDispatch.03</number>
-							<name>EMD Card Number</name>
+							<name>EMD Determinant Code</name>
 							<national>No</national>
 							<state>No</state>
-							<definition>The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode.</definition>
+							<definition>The EMD Determinant Code reported by dispatch, consisting of the card number, dispatch level, and dispatch mode.</definition>
 							<v2Number>E03_03</v2Number>
 							<usage>Optional</usage>
 							<performanceMeasuresGroup>
@@ -461,9 +461,9 @@ Use Case: Some CAD systems may use the Unit Dispatched CAD Record ID as the Pati
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="EMDCardNumber">
+	<xs:simpleType name="EMDDeterminantCode">
 		<xs:annotation>
-			<xs:documentation>The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode</xs:documentation>
+			<xs:documentation>The EMD Determinant Code reported by dispatch, consisting of the card number, dispatch level, and dispatch mode</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"/>

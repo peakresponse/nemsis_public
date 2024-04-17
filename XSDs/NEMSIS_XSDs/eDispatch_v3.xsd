@@ -403,6 +403,26 @@ Use Case: Some CAD systems may use the Unit Dispatched CAD Record ID as the Pati
 					<xs:documentation>Vomiting</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="2301093">
+				<xs:annotation>
+					<xs:documentation>Hanging/Strangulation/Asphyxiation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301095">
+				<xs:annotation>
+					<xs:documentation>Intoxicated Subject</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301097">
+				<xs:annotation>
+					<xs:documentation>EMS Requested by Law Enforcement</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2301099">
+				<xs:annotation>
+					<xs:documentation>Active Shooter</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ComputerAidedDispatchCADNameorID">

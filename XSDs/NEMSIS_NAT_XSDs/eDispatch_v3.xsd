@@ -373,9 +373,9 @@ Added Pandemic/Epidemic/Outbreak.
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="EMDCardNumber">
+	<xs:simpleType name="EMDDeterminantCode">
 		<xs:annotation>
-			<xs:documentation>The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode</xs:documentation>
+			<xs:documentation>The EMD Determinant Code reported by dispatch, consisting of the card number, dispatch level, and dispatch mode</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="1"></xs:minLength>

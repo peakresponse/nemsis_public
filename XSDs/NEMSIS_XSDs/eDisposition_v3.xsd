@@ -658,15 +658,15 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.19" nillable="true" id="eDisposition.FinalPatientAcuity">
+			<xs:element name="eDisposition.19" nillable="true" id="eDisposition.AcuityUponEMSReleaseOfPatient">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDisposition.19</number>
-							<name>Final Patient Acuity</name>
+							<name>Acuity Upon EMS Release of Patient</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The acuity of the patient's condition after EMS care.</definition>
+							<definition>The acuity of the patient's condition after EMS release of the patient.</definition>
 							<v2Number>E20_15</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -685,7 +685,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="FinalPatientAcuity">
+						<xs:extension base="AcuityUponEMSReleaseOfPatient">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -1611,7 +1611,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="FinalPatientAcuity">
+	<xs:simpleType name="AcuityUponEMSReleaseOfPatient">
 		<xs:annotation>
 			<xs:documentation>The patient's response.</xs:documentation>
 		</xs:annotation>

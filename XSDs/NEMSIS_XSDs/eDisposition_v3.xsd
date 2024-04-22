@@ -328,7 +328,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<name>Unit Disposition</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient disposition for an EMS event identifying whether patient contact was made.</definition>
+										<definition>The unit disposition for an EMS event identifying whether patient contact was made by this EMS Unit/Crew.</definition>
 										<v2Number/>
 										<usage>Mandatory</usage>
 										<performanceMeasuresGroup>
@@ -658,15 +658,15 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eDisposition.19" nillable="true" id="eDisposition.FinalPatientAcuity">
+			<xs:element name="eDisposition.19" nillable="true" id="eDisposition.AcuityUponEMSReleaseOfPatient">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
 							<number>eDisposition.19</number>
-							<name>Final Patient Acuity</name>
+							<name>Acuity Upon EMS Release of Patient</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The acuity of the patient's condition after EMS care.</definition>
+							<definition>The acuity of the patient's condition after EMS release of the patient.</definition>
 							<v2Number>E20_15</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -676,16 +676,16 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
-								&lt;br/>&lt;a href="http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf" target="_blank">http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf&lt;/a>
+								&lt;br/>&lt;a href="https://www.ems.gov/assets/National_EMS_Core_Content.pdf" target="_blank">https://www.ems.gov/assets/National_EMS_Core_Content.pdf&lt;/a>
 							&lt;br/>&lt;br/>Dead without Resuscitation Efforts would be appropriate if resuscitation was initiated by non-EMS personnel but discontinued immediately upon evaluation by first arriving EMS personnel.
-							&lt;br/>&lt;br/>"Non-Acute/Routine" added for use with patients with no clinical issues-such as a refusal for a life assist-or for routine transfers. "Dead with Resuscitation Efforts (Black)" added for EMS units that arrived and provided resuscitation to a critical patient, but who was deceased at the end of the event (such as in a cardiac arrest).</comment>
+							&lt;br/>&lt;br/>"Non-Acute/Routine" added for use with patients with no clinical issues-such as a refusal for a lift assist-or for routine transfers. "Dead with Resuscitation Efforts (Black)" added for EMS units that arrived and provided resuscitation to a critical patient, but who was deceased at the end of the event (such as in a cardiac arrest).</comment>
 							<v3Changes>With the release of v3.5.0 additional values were added to meet the needs of EMS.</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:simpleContent>
-						<xs:extension base="FinalPatientAcuity">
+						<xs:extension base="AcuityUponEMSReleaseOfPatient">
 							<xs:attribute name="NV" use="optional">
 								<xs:simpleType>
 									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -703,7 +703,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Reason for Choosing Destination</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The reason the unit chose to deliver or transfer the patient to the destination.</definition>
+							<definition>The reason(s) this EMS Unit delivered or transferred the patient to the destination.</definition>
 							<v2Number>E20_16</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -713,7 +713,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Required if the patient was transported.</comment>
+							<comment>Required if the patient was transported.  This NEMSIS data element has no relationship to the 5010 CMS claim file data element.  Please refer to ePayment.44 Ambulance Transport Reason Code for billing purposes.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -1413,6 +1413,26 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					<xs:documentation>Trendelenburg</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="4214021">
+				<xs:annotation>
+					<xs:documentation>Pediatric Ambulance Restraint Device</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4214023">
+				<xs:annotation>
+					<xs:documentation>Neonatal Ambulance Restraint Device</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4214025">
+				<xs:annotation>
+					<xs:documentation>Patient's Car Seat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4214027">
+				<xs:annotation>
+					<xs:documentation>Ambulance Integrated Car Seat</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ReasonForChoosingDestination">
@@ -1611,7 +1631,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="FinalPatientAcuity">
+	<xs:simpleType name="AcuityUponEMSReleaseOfPatient">
 		<xs:annotation>
 			<xs:documentation>The patient's response.</xs:documentation>
 		</xs:annotation>
@@ -1776,12 +1796,12 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 			<xs:enumeration value="4230005">
 				<xs:annotation>
-					<xs:documentation>Transport by Another EMS Unit</xs:documentation>
+					<xs:documentation>Transport by Another EMS Unit/Agency</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4230007">
 				<xs:annotation>
-					<xs:documentation>Transport by Another EMS Unit, with a Member of This Crew</xs:documentation>
+					<xs:documentation>Transport by Another EMS Unit/Agency, with a Member of This Crew</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="4230009">
@@ -1844,6 +1864,11 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			<xs:enumeration value="4231015">
 				<xs:annotation>
 					<xs:documentation>Other, Not Listed</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4231017">
+				<xs:annotation>
+					<xs:documentation>Patient Elopement</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

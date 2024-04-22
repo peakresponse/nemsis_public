@@ -703,7 +703,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<name>Reason for Choosing Destination</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The reason the unit chose to deliver or transfer the patient to the destination.</definition>
+							<definition>The reason(s) this EMS Unit delivered or transferred the patient to the destination.</definition>
 							<v2Number>E20_16</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -713,7 +713,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Required if the patient was transported.</comment>
+							<comment>Required if the patient was transported.  This NEMSIS data element has no relationship to the 5010 CMS claim file data element.  Please refer to ePayment.44 Ambulance Transport Reason Code for billing purposes.</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

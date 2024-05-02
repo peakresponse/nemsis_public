@@ -366,7 +366,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 	</xs:simpleType>
 	<xs:simpleType name="OtherEMSAgenciesAtScene">
 		<xs:annotation>
-			<xs:documentation>Other EMS agencies that were at the scene, if any</xs:documentation>
+			<xs:documentation>The name(s) of other EMS or Public Safety Agencies at the scene.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"></xs:minLength>

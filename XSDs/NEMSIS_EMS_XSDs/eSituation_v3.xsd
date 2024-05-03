@@ -509,9 +509,9 @@
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
 							<comment>Definitions related to "Critical, Emergent, and Lower Acuity" can be found in the National EMS Core Content document from NHTSA EMS (DOT HS 809-898 July 2005) at 
-								&lt;br/>&lt;a href="http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf">http://www.nhtsa.gov/people/injury/ems/emscorecontent/images/EMSCoreContent.pdf&lt;/a> 
+								&lt;br/>&lt;a href="https://www.ems.gov/assets/National_EMS_Core_Content.pdf">https://www.ems.gov/assets/National_EMS_Core_Content.pdf&lt;/a> 
 							&lt;br/>&lt;br/>Dead without Resuscitation Efforts would be appropriate if resuscitation was initiated by non-EMS personnel but discontinued immediately upon evaluation by first arriving EMS personnel.
-							&lt;br/>&lt;br/>"Non-Acute/Routine" added for use with patients with no clinical issues-such as refusal for a life assist-or for routine transfers.
+							&lt;br/>&lt;br/>"Non-Acute/Routine" added for use with patients with no clinical issues-such as refusal for a lift assist-or for routine transfers.
 							</comment>
 							<v3Changes>With the release of V3.5.0 additional values were added to meet the needs of EMS.</v3Changes>
 						</nemsisTacDoc>
@@ -573,7 +573,7 @@
 										<definition>The occupational industry of the patient's work.</definition>
 										<v2Number>E07_16</v2Number>
 										<usage>Optional</usage>
-										<comment>From the North American Industry Classification System (NAICS) from US Bureau of Labor Statistics &lt;br/>(http://www.census.gov/cgi-bin/sssd/naics/naicsrch?chart=2007).</comment>
+										<comment>From the North American Industry Classification System (NAICS) from US Bureau of Labor Statistics &lt;br/>(https://www.census.gov/naics/?58967?yearbck=2022).</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -660,7 +660,7 @@
 							</xs:attribute>
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.UnableToComplete"/>
+									<xs:union memberTypes="PN.UnableToComplete PN.Approximate"/>
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>
@@ -677,8 +677,7 @@
 							<state>Yes</state>
 							<definition>The ordering physician or medical provider diagnosis or stated reason for a hospital-to-hospital transfer, other medical transport, or Mobile Integrated Healthcare encounter.</definition>
 							<usage>Recommended</usage>
-							<comment>This is the diagnosis or reason for transfer, or medical transport or Integrated Healthcare Encounter provided by the ordering physician or medical provider. Hospital-to-hospital transfers and medical transports are based on the ordering medical provider, and not the EMS provider's impression. The text of the reason or diagnosis would be entered here rather than using the patient complaint field (as the patient may still have complaints to document), eSituation.11 Provider's Primary Impression or eSituation.12 Provider's Secondary Impressions.
-							&lt;br/>&lt;br/>This element should only be documented when eResponse.05 Type of Service Requested is Hospital-to-Hospital Transfer, Hospital-to-Hospital Transfer (with Sending Hospital Staff), Hospital-to-Hospital Transfer (Critical or Specialty Care), Other Medical Needs Transport, Mobile Integrated Health Care Evaluation or Visit. A new national Schematron rule exists for this with v3.5.0.</comment>
+							<comment>This is the diagnosis or reason for transfer, or medical transport or Integrated Healthcare Encounter provided by the ordering physician or medical provider. Hospital-to-hospital transfers and medical transports are based on the ordering medical provider, and not the EMS provider's impression. The text of the reason or diagnosis would be entered here rather than using the patient complaint field (as the patient may still have complaints to document), eSituation.11 Provider's Primary Impression or eSituation.12 Provider's Secondary Impressions.&lt;br/>&lt;br/>This element should only be documented when eResponse.05 Type of Service Requested is Hospital-to-Hospital Transfer, Other Medical Needs Transport, Mobile Integrated Health Care Evaluation or Visit.</comment>
 							<v3Changes>This element is being added with the release of v3.5.0</v3Changes>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -1152,7 +1151,7 @@
 			<xs:documentation>The sign and symptom present in the patient or observed by EMS personnel</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,4})?|(R73\.9)|(R99))|([A-QSTZ][0-9][0-9A-Z])((\.[0-9A-Z]{1,4})?)"/>
+			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,4})?|(R73\.9)|(R99))|([A-QSTUZ][0-9][0-9A-Z])((\.[0-9A-Z]{1,4})?)"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ProvidersImpression">
@@ -1160,7 +1159,7 @@
 			<xs:documentation>The EMS personnel's impression of the patient's primary problem or most significant condition which led to the management given to the patient (treatments, medications, or procedures).</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,4})?|(R73\.9)|(R99))|([A-QSTZ][0-9][0-9A-Z])((\.[0-9A-Z]{1,4})?)"/>
+			<xs:pattern value="(R[0-6][0-9](\.[0-9]{1,4})?|(R73\.9)|(R99))|([A-QSTUZ][0-9][0-9A-Z])((\.[0-9A-Z]{1,4})?)"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TimeUnitsOfChiefComplaint">

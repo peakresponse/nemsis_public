@@ -660,7 +660,7 @@
 							</xs:attribute>
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.UnableToComplete"/>
+									<xs:union memberTypes="PN.UnableToComplete PN.Approximate"/>
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>

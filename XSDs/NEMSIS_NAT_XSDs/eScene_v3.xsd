@@ -480,4 +480,26 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="TransferOfPatientCare">
+		<xs:annotation>
+			<xs:documentation>Transferred Patient/Care To/From Agency</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2725001">
+				<xs:annotation>
+					<xs:documentation>Transferred Patient to Agency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2725003">
+				<xs:annotation>
+					<xs:documentation>Received Patient from Agency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2725005">
+				<xs:annotation>
+					<xs:documentation>No Transfer of Patient/Care To/From Agency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

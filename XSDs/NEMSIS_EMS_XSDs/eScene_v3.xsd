@@ -112,6 +112,31 @@
 								</xs:simpleContent>
 							</xs:complexType>
 						</xs:element>
+						<xs:element name="eScene.25" id="eScene.TransferOfPatientCare" minOccurs="0" nillable="true">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eScene.25</number>
+										<name>Transferred Patient/Care To/From Agency</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>This element documents the transfer of a patient for care/transport in the field to or from the EMS agency listed in eScene.02.</definition>
+										<usage>Recommended</usage>
+										</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="TransferOfPatientCare">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>
@@ -866,6 +891,28 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			<xs:enumeration value="2708009">
 				<xs:annotation>
 					<xs:documentation>Black - Deceased</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransferOfPatientCare">
+		<xs:annotation>
+			<xs:documentation>This element documents the transfer of a patient for care/transport in the field to or from the EMS agency listed in eScene.02.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2725001">
+				<xs:annotation>
+					<xs:documentation>Transferred Patient to Agency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2725003">
+				<xs:annotation>
+					<xs:documentation>Received Patient from Agency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2725005">
+				<xs:annotation>
+					<xs:documentation>No Transfer of Patient/Care To/From Agency</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

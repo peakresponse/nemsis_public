@@ -482,7 +482,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 	</xs:simpleType>
 	<xs:simpleType name="TransferOfPatientCare">
 		<xs:annotation>
-			<xs:documentation>Transferred Patient/Care To/From Agency</xs:documentation>
+			<xs:documentation>This element documents the transfer of a patient for care/transport in the field to or from the EMS agency listed in eScene.02.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="2725001">

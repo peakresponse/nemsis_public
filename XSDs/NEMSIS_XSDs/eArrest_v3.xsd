@@ -87,7 +87,7 @@
 							<name>Resuscitation Attempted By EMS</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.).</definition>
+							<definition>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.) by any EMS.</definition>
 							<v2Number>E11_03</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
@@ -988,7 +988,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="ResuscitationAttempted">
 		<xs:annotation>
-			<xs:documentation>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.)</xs:documentation>
+			<xs:documentation>Indication of an attempt to resuscitate the patient who is in cardiac arrest (attempted, not attempted due to DNR, etc.) by any EMS.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3003001">

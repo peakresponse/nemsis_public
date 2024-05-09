@@ -807,6 +807,21 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="dAgency.27" type="YesNoValues" id="dAgency.LicensedAgency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>dAgency.27</number>
+							<name>Licensed Agency</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Indication if the agency is licensed by the state that issued the EMS Agency Number (dAgency.02).</definition>
+							<usage>Optional</usage>
+							<comment>Associated with each of the EMS Agency Number (dAgency.02).</comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="AgencyOrganizationalTaxStatus">

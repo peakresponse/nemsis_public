@@ -1924,4 +1924,13 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="StrokeScore">
+		<xs:annotation>
+			<xs:documentation>Score associated with the stroke scale listed in eVitals.30</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="42"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

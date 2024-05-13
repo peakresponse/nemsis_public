@@ -1073,6 +1073,40 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
+									<xs:element name="eVitals.34" nillable="true" id="eVitals.StrokeSeverityScore" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<nemsisTacDoc>
+													<number>eVitals.34</number>
+													<name>Stroke Severity Score</name>
+													<national>No</national>
+													<state>No</state>
+													<definition>The stroke severity value associated with the stroke scale type listed in eVitals.30.</definition>
+													<usage>Recommended</usage>
+													<performanceMeasuresGroup>
+														<performanceMeasure>Stroke</performanceMeasure>
+													</performanceMeasuresGroup>
+													<PNNil>Yes</PNNil>
+												</nemsisTacDoc>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="StrokeScore">
+													<xs:attribute name="PN" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="PN.UnableToComplete"/>
+														</xs:simpleType>
+													</xs:attribute>
+													<xs:attribute name="NV" use="optional">
+														<xs:simpleType>
+															<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+														</xs:simpleType>
+													</xs:attribute>
+												</xs:extension>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>

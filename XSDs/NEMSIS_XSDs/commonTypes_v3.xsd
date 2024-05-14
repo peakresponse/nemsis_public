@@ -2924,4 +2924,13 @@
 			<xs:maxLength value="50"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="PersonNameSuffix">
+		<xs:annotation>
+			<xs:documentation>Person Name Suffix</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>

@@ -105,6 +105,20 @@
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
+						<xs:element name="ePatient.23" type="PersonNameSuffix" id="ePatient.NameSuffix" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>ePatient.23</number>
+										<name>Name Suffix</name>
+										<national>No</national>
+										<state>No</state>
+										<definition>The patient's name component following family name that may be used to describe a person's position in a family.</definition>
+										<usage>Optional</usage>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>

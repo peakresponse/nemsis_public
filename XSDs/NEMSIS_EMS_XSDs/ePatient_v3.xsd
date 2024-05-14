@@ -445,7 +445,7 @@
 										<name>Age</name>
 										<national>Yes</national>
 										<state>Yes</state>
-										<definition>The patient's age (either calculated from date of birth or best approximation).</definition>
+										<definition>The patient's age (either calculated from date of birth or best approximation) at the time of the incident.</definition>
 										<v2Number>E06_14</v2Number>
 										<usage>Required</usage>
 										<performanceMeasuresGroup>
@@ -466,6 +466,11 @@
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="PN" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="PN.Approximate"/>
 											</xs:simpleType>
 										</xs:attribute>
 									</xs:extension>
@@ -655,7 +660,7 @@
 	</xs:complexType>
 	<xs:simpleType name="Age">
 		<xs:annotation>
-			<xs:documentation>The patient's age (either calculated from date of birth or best approximation)</xs:documentation>
+			<xs:documentation>The patient's age (either calculated from date of birth or best approximation) at the time of the incident.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="1"/>

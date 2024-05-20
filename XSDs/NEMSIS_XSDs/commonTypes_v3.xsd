@@ -2587,7 +2587,7 @@
 			<xs:documentation>The US National Grid Coordinates</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
-			<xs:pattern value="([1-9]|[1-5][0-9]|60)[C-HJ-NP-X][A-HJ-NP-Z][A-HJ-NP-V][0-9]{8}"/>
+			<xs:pattern value="([1-9]|[1-5][0-9]|60)[C-HJ-NP-X][A-HJ-NP-Z][A-HJ-NP-V][0-9]{10}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="UUID">

@@ -335,7 +335,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="CurrentMedicationAdministrationRoute">
 		<xs:annotation>
-			<xs:documentation> The functioning level of the crew member during this EMS patient encounter</xs:documentation>
+			<xs:documentation>The administration route of the medication</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="9927001">

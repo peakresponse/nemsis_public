@@ -407,6 +407,31 @@ List of medications based on RxNorm (RXCUI) code and SNOMED-CT codes for blood p
 								</xs:documentation>
 							</xs:annotation>
 						</xs:element>
+						<xs:element name="eMedications.13" nillable="true" id="eMedications.MedicationByAnotherUnit" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eMedications.13</number>
+										<name>Medication Administered by Another Unit</name>
+										<national>No</national>
+										<state>Yes</state>
+										<definition>Indicates the medication was administered by someone other than the EMS clinicians in this EMS unit.  This is not for prior to arrival medications, but for medications administered when multiple units/caregivers are on scene simultaneously providing patient care.</definition>
+										<usage>Recommended</usage>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="YesNoValues">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 				</xs:complexType>

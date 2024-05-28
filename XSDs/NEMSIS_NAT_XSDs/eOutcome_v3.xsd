@@ -493,6 +493,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="OutcomeAtHospitalDischarge">
@@ -916,6 +917,15 @@
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="1"></xs:minInclusive>
 			<xs:maxInclusive value="400"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InjurySeverityScore">
+		<xs:annotation>
+			<xs:documentation>The patient's total Injury Severity Score.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"></xs:minInclusive>
+			<xs:maxInclusive value="75"></xs:maxInclusive>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

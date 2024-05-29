@@ -550,6 +550,27 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="eOutcome.21" id="eOutcome.InjurySeverityScore" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eOutcome.21</number>
+							<name>Injury Severity Score</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The patient's total Injury Severity Score.</definition>
+							<usage>Optional</usage>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="InjurySeverityScore">
+							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="OutcomeAtHospitalDischarge">
@@ -973,6 +994,15 @@
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="1"/>
 			<xs:maxInclusive value="400"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InjurySeverityScore">
+		<xs:annotation>
+			<xs:documentation>The patient's total Injury Severity Score.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="75"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

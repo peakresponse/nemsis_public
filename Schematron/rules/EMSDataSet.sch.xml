@@ -154,7 +154,7 @@
   <element name="dPersonnel.38">EMS Personnel's Practice Level</element>
   <element name="dPersonnel.39">Date of Personnel's Certification or Licensure for Agency</element>
   <element name="dRecord.01">Software Creator</element>
-  <element name="dRecord.01">Software Name</element>
+  <element name="dRecord.02">Software Name</element>
   <element name="dRecord.03">Software Version</element>
   <element name="dVehicle.01">Unit/Vehicle Number</element>
   <element name="dVehicle.02">Vehicle Identification Number</element>

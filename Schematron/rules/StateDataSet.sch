@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="StateDataSet" schemaVersion="3.5.0.230317CP4" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="StateDataSet" schemaVersion="3.5.1.240611_dev" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for StateDataSet</sch:title>
 
@@ -39,6 +39,7 @@
   <element name="dAgency.24">EMS Agency Daylight Savings Time Use</element>
   <element name="dAgency.25">National Provider Identifier</element>
   <element name="dAgency.26">Fire Department ID Number</element>
+  <element name="dAgency.27">Licensed Agency</element>
   <element name="dConfiguration.01">State Associated with this Configuration</element>
   <element name="dConfiguration.06">EMS Certification Levels Permitted to Perform Each Procedure</element>
   <element name="dConfiguration.07">EMS Agency Procedures</element>
@@ -67,7 +68,7 @@
   <element name="dContact.13">Agency Medical Director Degree</element>
   <element name="dContact.14">Agency Medical Director Board Certification Type</element>
   <element name="dContact.15">Medical Director Compensation</element>
-  <element name="dContact.16">EMS Medical Director Fellowship Trained Status</element>
+  <element name="dContact.16">EMS Medical Director Board Certified/Eligible</element>
   <element name="dCustomConfiguration.01">Custom Data Element Title</element>
   <element name="dCustomConfiguration.02">Custom Definition</element>
   <element name="dCustomConfiguration.03">Custom Data Type</element>
@@ -152,6 +153,9 @@
   <element name="dPersonnel.37">EMS Personnel's Date Length of Service Documented</element>
   <element name="dPersonnel.38">EMS Personnel's Practice Level</element>
   <element name="dPersonnel.39">Date of Personnel's Certification or Licensure for Agency</element>
+  <element name="dRecord.01">Software Creator</element>
+  <element name="dRecord.01">Software Name</element>
+  <element name="dRecord.03">Software Version</element>
   <element name="dVehicle.01">Unit/Vehicle Number</element>
   <element name="dVehicle.02">Vehicle Identification Number</element>
   <element name="dVehicle.03">EMS Unit Call Sign</element>
@@ -224,7 +228,7 @@
   <element name="eDevice.12">Pacing Rate</element>
   <element name="eDispatch.01">Dispatch Reason</element>
   <element name="eDispatch.02">EMD Performed</element>
-  <element name="eDispatch.03">EMD Card Number</element>
+  <element name="eDispatch.03">EMD Determinant Code</element>
   <element name="eDispatch.04">Dispatch Center Name or ID</element>
   <element name="eDispatch.05">Dispatch Priority (Patient Acuity)</element>
   <element name="eDispatch.06">Unit Dispatched CAD Record ID</element>
@@ -245,7 +249,7 @@
   <element name="eDisposition.16">EMS Transport Method</element>
   <element name="eDisposition.17">Transport Mode from Scene</element>
   <element name="eDisposition.18">Additional Transport Mode Descriptors</element>
-  <element name="eDisposition.19">Final Patient Acuity</element>
+  <element name="eDisposition.19">Acuity Upon EMS Release of Patient</element>
   <element name="eDisposition.20">Reason for Choosing Destination</element>
   <element name="eDisposition.21">Type of Destination</element>
   <element name="eDisposition.22">Hospital In-Patient Destination</element>
@@ -352,6 +356,7 @@
   <element name="eMedications.10">Role/Type of Person Administering Medication</element>
   <element name="eMedications.11">Medication Authorization</element>
   <element name="eMedications.12">Medication Authorizing Physician</element>
+  <element name="eMedications.13">Medication Administered by Another Unit</element>
   <element name="eNarrative.01">Patient Care Report Narrative</element>
   <element name="eOther.01">Review Requested</element>
   <element name="eOther.02">Potential System of Care/Specialty/Registry Patient</element>
@@ -390,6 +395,7 @@
   <element name="eOutcome.18">Date/Time of Emergency Department Admission</element>
   <element name="eOutcome.19">Date/Time Emergency Department Procedure Performed</element>
   <element name="eOutcome.20">Date/Time Hospital Procedure Performed</element>
+  <element name="eOutcome.21">Injury Severity Score</element>
   <element name="ePatient.01">EMS Patient ID</element>
   <element name="ePatient.02">Last Name</element>
   <element name="ePatient.03">First Name</element>
@@ -412,6 +418,8 @@
   <element name="ePatient.20">State Issuing Driver's License</element>
   <element name="ePatient.21">Driver's License Number</element>
   <element name="ePatient.22">Alternate Home Residence</element>
+  <element name="ePatient.23">Name Suffix</element>
+  <element name="ePatient.24">Patient Preferred Language</element>
   <element name="ePayment.01">Primary Method of Payment</element>
   <element name="ePayment.02">Physician Certification Statement</element>
   <element name="ePayment.03">Date Physician Certification Statement Signed</element>
@@ -484,6 +492,8 @@
   <element name="eProcedures.11">Procedure Authorization</element>
   <element name="eProcedures.12">Procedure Authorizing Physician</element>
   <element name="eProcedures.13">Vascular Access Location</element>
+  <element name="eProcedures.14">Airway Placement Technique</element>
+  <element name="eProcedures.15">Procedure Performed by Another Unit</element>
   <element name="eProtocols.01">Protocols Used</element>
   <element name="eProtocols.02">Protocol Age Category</element>
   <element name="eRecord.01">Patient Care Report Number</element>
@@ -537,6 +547,7 @@
   <element name="eScene.22">Incident Country</element>
   <element name="eScene.23">Incident Census Tract</element>
   <element name="eScene.24">First Other EMS or Public Safety Agency at Scene to Provide Patient Care</element>
+  <element name="eScene.25">Transferred Patient/Care To/From Agency</element>
   <element name="eSituation.01">Date/Time of Symptom Onset</element>
   <element name="eSituation.02">Possible Injury</element>
   <element name="eSituation.03">Complaint Type</element>
@@ -607,6 +618,7 @@
   <element name="eVitals.31">Reperfusion Checklist</element>
   <element name="eVitals.32">APGAR</element>
   <element name="eVitals.33">Revised Trauma Score</element>
+  <element name="eVitals.34">Stroke Severity Score</element>
   <element name="sAgency.01">EMS Agency Unique State ID</element>
   <element name="sAgency.02">EMS Agency Number</element>
   <element name="sAgency.03">EMS Agency Name</element>

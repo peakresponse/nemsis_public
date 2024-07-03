@@ -28,10 +28,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e089" role="Warning">
-      <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e090" role="Warning">
-      <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is "Yes".
+      <elementRef elementNumber="eInjury.01">Cause of Injury</elementRef> should only be recorded when <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Cause of Injury has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

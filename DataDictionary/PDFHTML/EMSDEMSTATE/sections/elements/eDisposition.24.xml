@@ -33,13 +33,13 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e174" role="Warning">
-      When <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> is "No", no other value should be recorded.
+      When <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> is &quot;No&quot;, no other value should be recorded.
       </assert>
   <assert id="nemSch_e175" role="Warning">
       <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> is recorded.
       </assert>
   <assert id="nemSch_e176" role="Warning">
-      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> is recorded with a value other than "None".
+      <elementRef elementNumber="eDisposition.25">Date/Time of Destination Prearrival Alert or Activation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.24">Destination Team Pre-Arrival Alert or Activation</elementRef> is recorded with a value other than &quot;None&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Destination Team Pre-Arrival Alert or Activation has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

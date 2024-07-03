@@ -31,9 +31,6 @@
   </NV>
 </attributes>
 <asserts>
-  <assert id="nemSch_e078" role="Warning">
-      <elementRef elementNumber="eSituation.07">Chief Complaint Anatomic Location</elementRef> should be recorded when <elementRef elementNumber="eResponse.05">Type of Service Requested</elementRef> is "Emergency Response (Primary Response Area)" and <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided".
-      </assert>
   <assert id="nemSch_e002" role="Error">
       When Chief Complaint Anatomic Location has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
       </assert>

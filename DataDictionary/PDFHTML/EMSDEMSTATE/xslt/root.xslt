@@ -91,7 +91,14 @@
               <td style="font-size:11px;background:#FFFFBB;border:solid 1px;" width="5px;" height="16px;" align="center"></td>
               <td style="width:2px;"/>    
               <td class="legendKey"><B>N</B> = Not Values, <B>P</B> = Pertinent Negatives , <B>L</B> = Nillable, <B>C</B> = Correlation ID, and/or <B>U</B> = UUID</td>     
-            </tr>      
+            </tr>
+            <tr>
+              <td width="80px" />   
+              <td width="2px"/>
+              <td style="font-size:11px;background:#FFFFBB;border:solid 1px;" width="5px;" height="16px;" align="center"></td>
+              <td style="width:2px;"/>    
+              <td class="legendKey"><B>I</B> = Custom Element ID, <B>T</B> = Time Stamp, <B>G</B> = Procedure Group Correlation ID</td>      
+            </tr>
           </table>
         </td>
       </tr>
@@ -182,7 +189,7 @@
         <xsl:when test="local-name()='section'">
           <xsl:call-template name="section">
             <xsl:with-param name="count" select="$count + 1"/>
-          </xsl:call-template>              
+          </xsl:call-template>
         </xsl:when>     
         <xsl:when test="local-name()='group'"> 
           <xsl:call-template name="for.loop">            
@@ -197,7 +204,16 @@
             </xsl:when></xsl:choose>
             <xsl:choose><xsl:when test="@UUID='Yes'">
   		        <div class="pnNvNil">U</div>                
-            </xsl:when></xsl:choose>          
+            </xsl:when></xsl:choose>
+          <xsl:choose><xsl:when test="@ProcedureGroupCorrelationID='Yes'">
+            <div class="pnNvNil">G</div>                
+          </xsl:when></xsl:choose>          
+          <xsl:choose><xsl:when test="@CustomElementID='Yes'">
+            <div class="pnNvNil">I</div>                
+          </xsl:when></xsl:choose>
+          <xsl:choose><xsl:when test="@timeStamp='Yes'">
+            <div class="pnNvNil">T</div>                
+          </xsl:when></xsl:choose>
           <div style="clear:both"/>
           <xsl:call-template name="section">
             <xsl:with-param name="count" select="$count + 1"/>

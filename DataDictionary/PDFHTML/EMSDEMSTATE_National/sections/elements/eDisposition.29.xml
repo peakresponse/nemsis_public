@@ -30,13 +30,13 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e181" role="Warning">
-      <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> should be "Patient Contact Made" when <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+      <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> should be &quot;Patient Contact Made&quot; when <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> contains &quot;... Primary Care...&quot; or &quot;Provided Care Supporting Primary EMS Crew&quot;.
       </assert>
   <assert id="nemSch_e184" role="Warning">
-      <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> should be "Patient Evaluated and Care Provided" when <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> contains "... Primary Care..." or "Provided Care Supporting Primary EMS Crew".
+      <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> should be &quot;Patient Evaluated and Care Provided&quot; when <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> contains &quot;... Primary Care...&quot; or &quot;Provided Care Supporting Primary EMS Crew&quot;.
       </assert>
   <assert id="nemSch_e185" role="Warning">
-      <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
+      <elementRef elementNumber="eDisposition.29">Crew Disposition</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is &quot;Patient Contact Made&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Crew Disposition has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

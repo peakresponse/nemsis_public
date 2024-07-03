@@ -1,8 +1,8 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
 <section name="sFacility">
-  <group number="sFacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" isNillable="No">
+  <group number="sFacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" ProcedureGroupCorrelationID="" CustomElementID="" timeStamp="" isNillable="No">
     <element number="sFacility.01" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="Yes" dataType="TypeOfFacility"><name>Type of Facility</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
-    <group number="sFacility.FacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" isNillable="No">
+    <group number="sFacility.FacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" ProcedureGroupCorrelationID="" CustomElementID="" timeStamp="" isNillable="No">
       <element number="sFacility.02" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="Yes" dataType="FacilityName"><name>Facility Name</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
       <element number="sFacility.03" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="Yes" dataType="FacilityCode"><name>Facility Location Code</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
       <element number="sFacility.04" minOccurs="0" maxOccurs="M" CorrelationID="" UUID="" isNillable="Yes" dataType="HospitalDesignation"><name>Hospital Designations</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>

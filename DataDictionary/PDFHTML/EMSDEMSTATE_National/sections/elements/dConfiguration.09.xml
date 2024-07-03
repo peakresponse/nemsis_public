@@ -43,10 +43,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_d014" role="Error">
-      <elementRef elementNumber="dConfiguration.09">EMS Agency Medications</elementRef> should be a code of between 2 and 7 digits when Code Type is "RxNorm".
+      <elementRef elementNumber="dConfiguration.09">EMS Agency Medications</elementRef> should be a code of between 2 and 7 digits when Code Type is &quot;RxNorm&quot;.
       </assert>
   <assert id="nemSch_d015" role="Error">
-      <elementRef elementNumber="dConfiguration.09">EMS Agency Medications</elementRef> should be a SNOMED code specifically allowed in the data dictionary when Code Type is "SNOMED".
+      <elementRef elementNumber="dConfiguration.09">EMS Agency Medications</elementRef> should be a SNOMED code specifically allowed in the data dictionary when Code Type is &quot;SNOMED&quot;.
       </assert>
   <assert id="nemSch_d016" role="Error">
       <elementRef elementNumber="dConfiguration.09">EMS Agency Medications</elementRef> should be an RxNorm code of between 2 and 7 digits or a SNOMED code specifically allowed in the data dictionary.

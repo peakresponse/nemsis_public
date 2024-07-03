@@ -26,10 +26,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e067" role="Warning">
-      <elementRef elementNumber="eScene.06">Number of Patients at Scene</elementRef> should be "Multiple" or "Single" when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
+      <elementRef elementNumber="eScene.06">Number of Patients at Scene</elementRef> should be &quot;Multiple&quot; or &quot;Single&quot; when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is &quot;Patient Contact Made&quot;.
       </assert>
   <assert id="nemSch_e068" role="Warning">
-      <elementRef elementNumber="eScene.06">Number of Patients at Scene</elementRef> should be "Multiple" when <elementRef elementNumber="eScene.07">Mass Casualty Incident</elementRef> is "Yes".
+      <elementRef elementNumber="eScene.06">Number of Patients at Scene</elementRef> should be &quot;Multiple&quot; when <elementRef elementNumber="eScene.07">Mass Casualty Incident</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Number of Patients at Scene has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

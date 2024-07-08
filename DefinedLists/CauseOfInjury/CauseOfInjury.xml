@@ -1,7 +1,7 @@
-<?xml-stylesheet type="text/xsl" href="https://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedListHtml.xsl"?><DefinedList xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" date="2023-02-14" xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.xsd">
+<?xml-stylesheet type="text/xsl" href="//www.nemsis.org/media/DefinedLists/DefinedListHtml.xsl"?><DefinedList xmlns="http://www.nemsis.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" date="2023-02-14" xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.xsd">
   <Header>
     <SourceVocabularies>
-      <SourceVocabulary url="https://www.cdc.gov/nchs/icd/icd-10-cm.htm">ICD-10</SourceVocabulary>
+      <SourceVocabulary url="https://www.cdc.gov/nchs/icd/icd10cm.htm">ICD-10</SourceVocabulary>
     </SourceVocabularies>
     <NemsisTypes>
       <NemsisType>icd10CodeInjury</NemsisType>
@@ -443,6 +443,12 @@
       <SourceLabel>Pedal cyclist (driver) (passenger) injured in unspecified traffic accident</SourceLabel>
       <SuggestedLabel>Traffic accident</SuggestedLabel>
     </Code>
+    <Code date="2024-07-08">
+      <Value>V29.91</Value>
+      <Category>Pedal Cyclist</Category>
+      <SourceLabel>Electric (assisted) bicycle rider (driver) (passenger) injured in unspecified traffic accident</SourceLabel>
+      <SuggestedLabel>Electric Bike</SuggestedLabel>
+    </Code>    
     <Code date="2021-05-06">
       <Value>V03.9</Value>
       <Category>Pedestrian</Category>
@@ -455,6 +461,12 @@
       <SourceLabel>Pedestrian injured in collision with car, pick-up truck or van in traffic accident</SourceLabel>
       <SuggestedLabel>Car/truck/van, traffic accident</SuggestedLabel>
     </Code>
+    <Code date="2024-07-08">
+      <Value>V00.84</Value>
+      <Category>Pedestrian</Category>
+      <SourceLabel>Accident with standing micro-mobility pedestrian conveyance</SourceLabel>
+      <SuggestedLabel>Electric scooters/boards/skates</SuggestedLabel>
+    </Code>    
     <Code date="2021-05-06">
       <Value>T50.90</Value>
       <Category>Poisoning</Category>

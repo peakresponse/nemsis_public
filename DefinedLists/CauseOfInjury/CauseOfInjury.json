@@ -1,12 +1,12 @@
 {
-  "$schema": "https://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.schema.json",
+  "$schema": "http://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.schema.json",
   "DefinedList": {
     "date": "2023-02-14",
     "Header": {
       "SourceVocabularies": {
         "SourceVocabulary": [
           {
-            "url": "https://www.cdc.gov/nchs/icd/icd-10-cm.htm",
+            "url": "https://www.cdc.gov/nchs/icd/icd10cm.htm",
             "Value": "ICD-10"
           }
         ]
@@ -673,6 +673,15 @@
           "SuggestedLabel": "Traffic accident"
         },
         {
+          "date": "2024-07-08",
+          "Value": {
+            "Value": "V29.91"
+          },
+          "Category": "Pedal Cyclist",
+          "SourceLabel": "Electric (assisted) bicycle rider (driver) (passenger) injured in unspecified traffic accident",
+          "SuggestedLabel": "Electric Bike"
+        },
+{
           "date": "2021-05-06",
           "Value": {
             "Value": "V03.9"
@@ -690,6 +699,15 @@
           "SourceLabel": "Pedestrian injured in collision with car, pick-up truck or van in traffic accident",
           "SuggestedLabel": "Car/truck/van, traffic accident"
         },
+        {
+          "date": "2024-07-08",
+          "Value": {
+            "Value": "V00.84"
+          },
+          "Category": "Pedestrian",
+          "SourceLabel": "Accident with standing micro-mobility pedestrian conveyance",
+          "SuggestedLabel": "Electric scooters/boards/skates"
+        },        
         {
           "date": "2021-05-06",
           "Value": {

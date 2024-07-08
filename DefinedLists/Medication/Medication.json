@@ -1,12 +1,12 @@
 {
-  "$schema": "https://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.schema.json",
+  "$schema": "http://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.schema.json",
   "DefinedList": {
     "date": "2023-02-14",
     "Header": {
       "SourceVocabularies": {
         "SourceVocabulary": [
           {
-            "url": "https://www.nlm.nih.gov/research/umls/rxnorm/index.html",
+            "url": "http://www.nlm.nih.gov/research/umls/rxnorm/overview.html",
             "Value": "RxNorm"
           },
           {
@@ -92,6 +92,15 @@
           },
           "SourceLabel": "atropine",
           "SuggestedLabel": "Atropine"
+        },
+        {
+          "date": "2024-07-08",
+          "Value": {
+            "CodeType": "9924003",
+            "Value": "1819"
+          },
+          "SourceLabel": "buprenorphine",
+          "SuggestedLabel": "Buprenorphine"
         },
         {
           "date": "2021-05-06",

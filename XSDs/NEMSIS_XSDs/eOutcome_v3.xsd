@@ -548,7 +548,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="eOutcome.21" id="eOutcome.InjurySeverityScore" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="eOutcome.21" id="eOutcome.InjurySeverityScore" type="InjurySeverityScore" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -561,13 +561,6 @@
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
-				<xs:complexType>
-					<xs:simpleContent>
-						<xs:extension base="InjurySeverityScore">
-							<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
-						</xs:extension>
-					</xs:simpleContent>
-				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>

@@ -87,7 +87,7 @@
 'EMSDataSet'|'element'|'ePatient.20'|'State Issuing Driver's License'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.21'|'Driver's License Number'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.22'|'Alternate Home Residence'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'ePatient.24'|'Patient Preferred Language'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePatient.24'|'Patient's Preferred Language'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.01'|'Primary Method of Payment'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'ePayment.02'|'Physician Certification Statement'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.03'|'Date Physician Certification Statement Signed'|''|''|''|''|''|''|''|''|''|
@@ -152,7 +152,7 @@
 'EMSDataSet'|'element'|'eScene.03'|'Other EMS or Public Safety Agency ID Number'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.04'|'Type of Other Service at Scene'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.24'|'First Other EMS or Public Safety Agency at Scene to Provide Patient Care'|''|''|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eScene.25'|'Transferred Patient/Care To/From Agency'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eScene.25'|'Transferred Patient/Care To/From Agency'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.05'|'Date/Time Initial Responder Arrived on Scene'|''|''|'X'|'X'|''|''|'X'|''|'X'|
 'EMSDataSet'|'element'|'eScene.06'|'Number of Patients at Scene'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.07'|'Mass Casualty Incident'|'National'|'State'|''|''|''|''|''|''|'X'|
@@ -291,7 +291,7 @@
 'EMSDataSet'|'element'|'eVitals.28'|'Pain Scale Type'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.29'|'Stroke Scale Score'|'National'|'State'|''|''|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eVitals.30'|'Stroke Scale Type'|'National'|'State'|''|''|''|''|''|'X'|''|
-'EMSDataSet'|'element'|'eVitals.34'|'Stroke Severity Score'|''|''|''|''|''|''|''|'X'|''|
+'EMSDataSet'|'element'|'eVitals.34'|'Stroke Severity Score'|''|'State'|''|''|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eVitals.31'|'Reperfusion Checklist'|'National'|'State'|''|''|''|''|'X'|'X'|''|
 'EMSDataSet'|'element'|'eVitals.32'|'APGAR'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.33'|'Revised Trauma Score'|''|''|''|''|''|''|''|''|'X'|
@@ -355,7 +355,7 @@
 'EMSDataSet'|'element'|'eProcedures.11'|'Procedure Authorization'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eProcedures.12'|'Procedure Authorizing Physician'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eProcedures.13'|'Vascular Access Location'|''|'State'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eProcedures.14'|'Airway Placement Technique'|''|''|'X'|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eProcedures.14'|'Airway Placement Technique'|''|'State'|'X'|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eProcedures.15'|'Procedure Performed by Another Unit'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eAirway.01'|'Indications for Invasive Airway'|''|'State'|'X'|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eAirway.02'|'Date/Time Airway Device Placement Confirmation'|''|'State'|'X'|''|''|''|''|''|''|

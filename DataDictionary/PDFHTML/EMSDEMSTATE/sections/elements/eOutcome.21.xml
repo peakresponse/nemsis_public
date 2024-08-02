@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eOutcome.21"  minOccurs="0"  maxOccurs="M"  dataTypeName="InjurySeverityScore"  isNillable="No">
+<element number="eOutcome.21"  minOccurs="0"  maxOccurs="1"  dataTypeName="InjurySeverityScore"  isNillable="No">
 <name>Injury Severity Score</name>
 <national>No</national>
 <deprecated></deprecated>
@@ -17,7 +17,4 @@
     <facet name="maxInclusive" value="75"/>
   </InjurySeverityScore>
 </restrictions>
-<attributes>
-  <CorrelationID baseType="string"><facet name="minLength" value="2"/><facet name="maxLength" value="255"/></CorrelationID>
-</attributes>
 </element>

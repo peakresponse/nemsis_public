@@ -2,14 +2,14 @@
 <!--
 
 NEMSIS V3 Schematron Test Case
-ID:               nemSch_e079_A
-Description:      Chief Complaint Organ System should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided".
-Expected Result:  [WARNING]
+ID:               nemSch_e190_A
+Description:      When Age has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
 
 -->
 <EMSDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.0.211008CP3/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.240923/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>0</dAgency.01>
@@ -143,8 +143,10 @@ Expected Result:  [WARNING]
             <ePatient.14>2514011</ePatient.14>
             <ePatient.14>2514009</ePatient.14>
             <ePatient.14>2514007</ePatient.14>
-            <ePatient.AgeGroup>
-               <ePatient.15>58</ePatient.15>
+            <ePatient.AgeGroup><!-- + -->
+               <ePatient.15 xsi:nil="true" PN="8801029"/>
+               <!---->
+               <!-- - -->
                <ePatient.16>2516009</ePatient.16>
             </ePatient.AgeGroup>
             <ePatient.17>1960-11-27</ePatient.17>
@@ -307,10 +309,7 @@ Expected Result:  [WARNING]
                <eSituation.06>2806013</eSituation.06>
             </eSituation.PatientComplaintGroup>
             <eSituation.07>2807017</eSituation.07>
-            <!-- + -->
-            <eSituation.08 xsi:nil="true" NV="7701003"/>
-            <!---->
-            <!-- - -->
+            <eSituation.08>2808021</eSituation.08>
             <eSituation.09>R29.2</eSituation.09>
             <eSituation.10>S29</eSituation.10>
             <eSituation.11>A48.3</eSituation.11>
@@ -325,7 +324,8 @@ Expected Result:  [WARNING]
             </eSituation.WorkRelatedGroup>
             <eSituation.17>Y93.54</eSituation.17>
             <eSituation.17>Y93.52</eSituation.17>
-            <eSituation.18>2019-09-02T11:01:21-00:00</eSituation.18>
+            <eSituation.18>2019-09-02T11:01:21-00:00
+          </eSituation.18>
             <eSituation.19>nalcevk</eSituation.19>
             <eSituation.20 xsi:nil="true" NV="7701001"/>
          </eSituation>
@@ -395,7 +395,8 @@ Expected Result:  [WARNING]
             <eArrest.12>3012007</eArrest.12>
             <eArrest.12>3012005</eArrest.12>
             <eArrest.13>3013007</eArrest.13>
-            <eArrest.14>2019-09-02T11:01:21-00:00</eArrest.14>
+            <eArrest.14>2019-09-02T11:01:21-00:00
+            </eArrest.14>
             <eArrest.15>2019-09-02T12:36:21-00:00</eArrest.15>
             <eArrest.16>3016011</eArrest.16>
             <eArrest.17>9901071</eArrest.17>
@@ -1220,12 +1221,15 @@ Expected Result:  [WARNING]
                <eDisposition.10>14TKC00268831</eDisposition.10>
             </eDisposition.DestinationGroup>
             <eDisposition.11>56</eDisposition.11>
+            <!-- + -->
             <eDisposition.IncidentDispositionGroup>
-               <eDisposition.27>4227001</eDisposition.27>
-               <eDisposition.28>4228001</eDisposition.28>
-               <eDisposition.29>4229001</eDisposition.29>
-               <eDisposition.30>4230001</eDisposition.30>
+               <eDisposition.27>4227005</eDisposition.27>
+               <eDisposition.28 xsi:nil="true" NV="7701001"/>
+               <eDisposition.29 xsi:nil="true" NV="7701001"/>
+               <eDisposition.30 xsi:nil="true" NV="7701001"/>
             </eDisposition.IncidentDispositionGroup>
+            <!---->
+            <!-- - -->
             <eDisposition.13>9909015</eDisposition.13>
             <eDisposition.13>9909013</eDisposition.13>
             <eDisposition.13>9909011</eDisposition.13>

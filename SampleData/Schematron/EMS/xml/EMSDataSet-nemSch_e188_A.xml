@@ -2,14 +2,14 @@
 <!--
 
 NEMSIS V3 Schematron Test Case
-ID:               nemSch_e066_A
-Description:      Primary Method of Payment should be recorded when Transport Disposition is "Transport by This EMS Unit...".
-Expected Result:  [WARNING]
+ID:               nemSch_e188_A
+Description:      When Date/Time Last Known Well has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
 
 -->
 <EMSDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.0.211008CP3/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.240923/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>0</dAgency.01>
@@ -156,10 +156,8 @@ Expected Result:  [WARNING]
             <ePatient.20>49</ePatient.20>
             <ePatient.21>e</ePatient.21>
          </ePatient>
-         <ePayment><!-- + -->
-            <ePayment.01 xsi:nil="true" NV="7701003"/>
-            <!---->
-            <!-- - -->
+         <ePayment>
+            <ePayment.01>2601023</ePayment.01>
             <ePayment.CertificateGroup>
                <ePayment.02>9922005</ePayment.02>
                <ePayment.03>2014-01-02T12:36:21-00:00</ePayment.03>
@@ -324,7 +322,9 @@ Expected Result:  [WARNING]
             </eSituation.WorkRelatedGroup>
             <eSituation.17>Y93.54</eSituation.17>
             <eSituation.17>Y93.52</eSituation.17>
-            <eSituation.18>2019-09-02T11:01:21-00:00</eSituation.18>
+            <!-- Attribute change -->
+            <eSituation.18 PN="8801023">2019-09-02T11:01:21-00:00
+          </eSituation.18>
             <eSituation.19>nalcevk</eSituation.19>
             <eSituation.20 xsi:nil="true" NV="7701001"/>
          </eSituation>
@@ -394,7 +394,8 @@ Expected Result:  [WARNING]
             <eArrest.12>3012007</eArrest.12>
             <eArrest.12>3012005</eArrest.12>
             <eArrest.13>3013007</eArrest.13>
-            <eArrest.14>2019-09-02T11:01:21-00:00</eArrest.14>
+            <eArrest.14>2019-09-02T11:01:21-00:00
+            </eArrest.14>
             <eArrest.15>2019-09-02T12:36:21-00:00</eArrest.15>
             <eArrest.16>3016011</eArrest.16>
             <eArrest.17>9901071</eArrest.17>

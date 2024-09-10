@@ -2,18 +2,31 @@ NEMSIS Schematron Change Log
 
 
 
-3.5.1.240611_dev
+3.5.1.240923 (candidate release)
+
+
+NEMSIS V3 Schematron Guide
+
+Added link to NEMSIS Schematron schema validator.
 
 
 National Schematron Schemas
 
 Updated element name for eDisposition.19 per XSD change.
-nemSch_e003: Added eSituation.18 and eArrest.14 per XSD change: When (element) has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
-nemSch_e004: Added ePatient.15, eSituation.18, and eArrest.14 per XSD change: When (element) has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
 nemSch_e066: Removed assertion: Primary Method of Payment should be recorded when Transport Disposition is "Transport by This EMS Unit...". (NEMPUB-689)
 nemSch_e078: Removed assertion: Chief Complaint Anatomic Location should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided". (NEMPUB-681)
 nemSch_e079: Removed assertion: Chief Complaint Organ System should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided". (NEMPUB-677)
 nemSch_e103: Changed assertion to no longer apply when eArrest.01 Cardiac Arrest is "Yes, Prior to Any EMS Arrival (includes Transport EMS & Medical First Responders)". Assertion now reads: AED Use Prior to EMS Arrival should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Cardiac Arrest is "Yes, Prior to Any EMS Arrival (includes Transport EMS & Medical First Responders)". (NEMPUB-624)
+nemSch_e188: Added assertion per XSD change: When Date/Time Last Known Well has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e189: Added assertion per XSD change: When Date/Time of Cardiac Arrest has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e190: Added assertion per XSD change: When Age has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e191: Added assertion per XSD change: When Date/Time Last Known Well has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e192: Added assertion per XSD change: When Date/Time of Cardiac Arrest has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+
+
+Development Kit and Documentation Interface
+
+Updated element list.
 
 
 

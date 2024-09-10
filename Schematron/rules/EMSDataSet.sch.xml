@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.5.1.240611_dev" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="EMSDataSet" schemaVersion="3.5.1.240923" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for EMSDataSet</sch:title>
 
@@ -419,7 +419,7 @@
   <element name="ePatient.21">Driver's License Number</element>
   <element name="ePatient.22">Alternate Home Residence</element>
   <element name="ePatient.23">Name Suffix</element>
-  <element name="ePatient.24">Patient Preferred Language</element>
+  <element name="ePatient.24">Patient's Preferred Language</element>
   <element name="ePayment.01">Primary Method of Payment</element>
   <element name="ePayment.02">Physician Certification Statement</element>
   <element name="ePayment.03">Date Physician Certification Statement Signed</element>
@@ -721,7 +721,7 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_eNilNvPn_rule_4" context="nem:eSituation.01[@PN = '8801023']|nem:eSituation.18[@PN = '8801023']|nem:eArrest.14[@PN = '8801023']">
+  <sch:rule id="nemSch_eNilNvPn_rule_4" context="nem:eSituation.01[@PN = '8801023']">
 
     <sch:let name="nemsisElements" value="."/>
 
@@ -731,11 +731,61 @@
 
   </sch:rule>
 
-  <sch:rule id="nemSch_eNilNvPn_rule_5" context="nem:ePatient.15[@PN = '8801029']|nem:eSituation.01[@PN = '8801029']|nem:eSituation.18[@PN = '8801029']|nem:eArrest.14[@PN = '8801029']">
+  <sch:rule id="nemSch_eNilNvPn_rule_12" context="nem:eSituation.18[@PN = '8801023']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e188" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil = 'true' and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_13" context="nem:eArrest.14[@PN = '8801023']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e189" role="[ERROR]" diagnostics="nemsisDiagnostic" test="@xsi:nil = 'true' and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_14" context="nem:ePatient.15[@PN = '8801029']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e190" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_5" context="nem:eSituation.01[@PN = '8801029']">
 
     <sch:let name="nemsisElements" value="."/>
 
     <sch:assert id="nemSch_e004" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_15" context="nem:eSituation.18[@PN = '8801029']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e191" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
+      When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+    </sch:assert>
+
+  </sch:rule>
+
+  <sch:rule id="nemSch_eNilNvPn_rule_16" context="nem:eArrest.14[@PN = '8801029']">
+
+    <sch:let name="nemsisElements" value="."/>
+
+    <sch:assert id="nemSch_e192" role="[ERROR]" diagnostics="nemsisDiagnostic" test="not(@xsi:nil = 'true') and not(@NV)">
       When <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
     </sch:assert>
 
@@ -843,7 +893,7 @@
     <sch:let name="nemsisElements" value="."/>
 
     <sch:report role="[WARNING]" diagnostics="nemsisDiagnostic" test="false()">
-      This rule enforces no constraints on the uniqueness of elements in eExam.AssessmentGroup with a Pertinent Negative Attribute.
+      This rule enforces no constraints on the uniqueness of eSituation.10 with a Pertinent Negative Attribute.
     </sch:report>
 
   </sch:rule>

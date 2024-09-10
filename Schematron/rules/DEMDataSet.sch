@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.1.240611_dev" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="DEMDataSet" schemaVersion="3.5.1.240923" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for DEMDataSet</sch:title>
 
@@ -419,7 +419,7 @@
   <element name="ePatient.21">Driver's License Number</element>
   <element name="ePatient.22">Alternate Home Residence</element>
   <element name="ePatient.23">Name Suffix</element>
-  <element name="ePatient.24">Patient Preferred Language</element>
+  <element name="ePatient.24">Patient's Preferred Language</element>
   <element name="ePayment.01">Primary Method of Payment</element>
   <element name="ePayment.02">Physician Certification Statement</element>
   <element name="ePayment.03">Date Physician Certification Statement Signed</element>

@@ -1,8 +1,8 @@
 @echo off
 rem Windows batch file to validate NEMSIS Schematron documents
 
-rem Version: 3.5.0.230317CP4_230317
-rem Revision Date: March 17, 2023
+rem Version: 3.5.1.240923_240923
+rem Revision Date: September 23, 2024
 
 rem This product is provided by the NEMSIS TAC, without charge, to facilitate development
 rem of NEMSIS Schematron schemas.

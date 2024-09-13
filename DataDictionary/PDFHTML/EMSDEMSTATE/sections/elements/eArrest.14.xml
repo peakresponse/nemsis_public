@@ -54,11 +54,11 @@
   </PN>
 </attributes>
 <asserts>
-  <assert id="nemSch_e003" role="Error">
-      When <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef>, <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef>, <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef> has a Pertinent Negative of &quot;Unable to Complete&quot;, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+  <assert id="nemSch_e189" role="Error">
+      When <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef> has a Pertinent Negative of &quot;Unable to Complete&quot;, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
       </assert>
-  <assert id="nemSch_e004" role="Error">
-      When <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef>, <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef>, <elementRef elementNumber="ePatient.15">Age</elementRef>, <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef> has a Pertinent Negative of &quot;Approximate&quot;, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+  <assert id="nemSch_e192" role="Error">
+      When <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef> has a Pertinent Negative of &quot;Approximate&quot;, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
       </assert>
   <assert id="nemSch_e045" role="Warning">
       <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eArrest.14">Date/Time of Cardiac Arrest</elementRef>.

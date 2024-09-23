@@ -1,10 +1,10 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="eDispatch.03"  minOccurs="0"  maxOccurs="1"  dataTypeName="EMDCardNumber"  isNillable="No">
-<name>EMD Card Number</name>
+<element number="eDispatch.03"  minOccurs="0"  maxOccurs="1"  dataTypeName="EMDDeterminantCode"  isNillable="No">
+<name>EMD Determinant Code</name>
 <national>No</national>
 <deprecated></deprecated>
 <state>No</state>
-<definition>The EMD card number reported by dispatch, consisting of the card number, dispatch level, and dispatch mode.</definition>
+<definition>The EMD determinant code reported by dispatch, consisting of the card number, dispatch level, and dispatch mode.</definition>
 <v2Number>E03_03</v2Number>
 <usage>Optional</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
@@ -12,9 +12,9 @@
 <v3Changes></v3Changes>
 <deprecatedComment></deprecatedComment>
 <restrictions>
-  <EMDCardNumber baseType="string">
+  <EMDDeterminantCode baseType="string">
     <facet name="minLength" value="1"/>
     <facet name="maxLength" value="10"/>
-  </EMDCardNumber>
+  </EMDDeterminantCode>
 </restrictions>
 </element>

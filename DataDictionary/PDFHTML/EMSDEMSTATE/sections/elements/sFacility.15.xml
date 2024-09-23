@@ -14,7 +14,7 @@
 <deprecatedComment></deprecatedComment>
 <restrictions>
   <PhoneNumber baseType="string">
-    <facet name="pattern" value="[2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9]"/>
+    <facet name="pattern" value="([2-9][0-9][0-9]-[2-9][0-9][0-9]-[0-9][0-9][0-9][0-9])|(\+([0-9] ?){6,14}[0-9])"/>
   </PhoneNumber>
 </restrictions>
 <attributes>

@@ -25,9 +25,16 @@
   </NV>
   <PN>
     <PN.UnableToComplete><facet name="enumeration" value="8801023" annotation="Unable to Complete"/></PN.UnableToComplete>
+    <PN.Approximate><facet name="enumeration" value="8801029" annotation="Approximate"/></PN.Approximate>
   </PN>
 </attributes>
 <asserts>
+  <assert id="nemSch_e188" role="Error">
+      When <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> has a Pertinent Negative of &quot;Unable to Complete&quot;, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      </assert>
+  <assert id="nemSch_e191" role="Error">
+      When <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> has a Pertinent Negative of &quot;Approximate&quot;, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      </assert>
   <assert id="nemSch_e044" role="Warning">
       <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef>.
       </assert>
@@ -35,13 +42,13 @@
       <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef>.
       </assert>
   <assert id="nemSch_e085" role="Warning">
-      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e086" role="Warning">
-      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eVitals.29">Stroke Scale Score</elementRef> is "Positive".
+      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eVitals.29">Stroke Scale Score</elementRef> is &quot;Positive&quot;.
       </assert>
   <assert id="nemSch_e087" role="Warning">
-      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</elementRef> is "STEMI...".
+      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eVitals.03">Cardiac Rhythm / Electrocardiography (ECG)</elementRef> is &quot;STEMI...&quot;.
       </assert>
   <assert id="nemSch_e008" role="Error">
       When Date/Time Last Known Well has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).

@@ -229,7 +229,7 @@
 										<definition>The Country code of the Agency's contact's mailing address.</definition>
 										<usage>Optional</usage>
 										<comment>The International Organization for Standardization (ISO) ISO 3166-1-alpha-2 code element for the country. The address for the director/chief/lead administrator/CEO/ should be the main address for the EMS agency. For individuals living outside the USA full address to be entered in the address line.
-											&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166): &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>										
+											&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166): &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a>										
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -393,15 +393,15 @@
 											</xs:documentation>
 										</xs:annotation>
 									</xs:element>
-									<xs:element name="dContact.16" type="YesNoValues" id="dContact.EMSMedicalDirectorFellowshipTrainedStatus" minOccurs="0">
+									<xs:element name="dContact.16" type="YesNoValues" id="dContact.EMSMedicalDirectorBoardCertifiedEligible" minOccurs="0">
 										<xs:annotation>
 											<xs:documentation>
 												<nemsisTacDoc>
 													<number>dContact.16</number>
-													<name>EMS Medical Director Fellowship Trained Status</name>
+													<name>EMS Medical Director Board Certified/Eligible</name>
 													<national>No</national>
 													<state>No</state>
-													<definition>Indication if the EMS Medical Director is Fellowship trained.</definition>
+													<definition>Indication if the EMS Medical Director has advanced training through a formal fellowship or through another practice pathway.</definition>
 													<usage>Optional</usage>
 												</nemsisTacDoc>
 											</xs:documentation>

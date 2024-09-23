@@ -50,7 +50,7 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e023" role="Warning">
-      <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is "Patient Contact Made".
+      <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> should be recorded when <elementRef elementNumber="eDisposition.27">Unit Disposition</elementRef> is &quot;Patient Contact Made&quot;.
       </assert>
   <assert id="nemSch_e024" role="Warning">
       <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>.
@@ -68,22 +68,22 @@
       <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>.
       </assert>
   <assert id="nemSch_e127" role="Warning">
-      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e130" role="Warning">
-      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e138" role="Warning">
-      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e141" role="Warning">
-      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eMedications.01">Date/Time Medication Administered</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eMedications.02">Medication Administered Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e153" role="Warning">
-      <elementRef elementNumber="eProcedures.01">Date/Time Procedure Performed</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eProcedures.02">Procedure Performed Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eProcedures.01">Date/Time Procedure Performed</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eProcedures.02">Procedure Performed Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e156" role="Warning">
-      <elementRef elementNumber="eProcedures.01">Date/Time Procedure Performed</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eProcedures.02">Procedure Performed Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eProcedures.01">Date/Time Procedure Performed</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eProcedures.02">Procedure Performed Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Arrived at Patient Date/Time has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

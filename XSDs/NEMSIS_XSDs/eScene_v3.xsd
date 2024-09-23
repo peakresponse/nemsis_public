@@ -43,11 +43,11 @@
 										<name>Other EMS or Public Safety Agencies at Scene</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>Other EMS agency names that were at the scene, if any.</definition>
+										<definition>The name(s) of other EMS or public safety agencies at the scene.</definition>
 										<v2Number>E08_01</v2Number>
 										<usage>Optional</usage>
 										<comment>For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.02 and eScene.03 are used to populate CARES data element
-											#16 Fire/First Responder as defined by CARES in the CARES 2019 Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/2019/Data%20Dictionary%20(2019).pdf" target="_blank">https://mycares.net/sitepages/uploads/2019/Data%20Dictionary%20(2019).pdf&lt;/a>.</comment>
+											#16 Fire/First Responder as defined by CARES in the CARES Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/DataDictionary" target="_blank">https://mycares.net/sitepages/uploads/DataDictionary&lt;/a>.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -64,7 +64,7 @@
 										<usage>Optional</usage>
 										<comment>The ID should be the state ID (license number) for the EMS agency or ID number for the law enforcement. This may be an ID assigned by the state or created by the EMS agency.
 											&lt;br />&lt;br />For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.02 and eScene.03 are used to populate CARES data element
-											#16 Fire/First Responder as defined by CARES in the CARES 2019 Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/2019/Data%20Dictionary%20(2019).pdf" target="_blank">https://mycares.net/sitepages/uploads/2019/Data%20Dictionary%20(2019).pdf&lt;/a>.</comment>
+											#16 Fire/First Responder as defined by CARES in the CARES Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/DataDictionary" target="_blank">https://mycares.net/sitepages/uploads/DataDictionary&lt;/a>.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -96,13 +96,38 @@
 										<definition>When there are multiple other EMS Agencies or Public Safety Agencies at the scene, this element documents the other EMS or public safety agency that was first to provide care to the patient.</definition>
 										<usage>Optional</usage>
 										<comment>For states and local agencies that participate in the Cardiac Arrest Registry for Enhanced Survival (CARES), eScene.24 is used to populate CARES data element 
-											#16 Fire/First Responder as defined by CARES in the CARES 2019 Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/2019/Data%20Dictionary%20(2019).pdf" target="_blank">https://mycares.net/sitepages/uploads/2019/Data%20Dictionary%20(2019).pdf&lt;/a>.</comment>
+											#16 Fire/First Responder as defined by CARES in the CARES Data Dictionary: &lt;a href="https://mycares.net/sitepages/uploads/DataDictionary" target="_blank">https://mycares.net/sitepages/uploads/DataDictionary&lt;/a>.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:simpleContent>
 									<xs:extension base="YesNoValues">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="eScene.25" id="eScene.TransferOfPatientCare" minOccurs="0" nillable="true">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>eScene.25</number>
+										<name>Transferred Patient/Care To/From Agency</name>
+										<national>No</national>
+										<state>Yes</state>
+										<definition>Whether primary responsibility for the care of the patient was transferred in the field to or from the EMS agency listed in eScene.02.</definition>
+										<usage>Recommended</usage>
+										</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="TransferOfPatientCare">
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded"/>
@@ -647,7 +672,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<state>No</state>
 							<definition>The country of the incident location.</definition>
 							<usage>Optional</usage>
-							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a>
+							<comment>Based on the ISO Country Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a>
 </comment>
 							<v3Changes>Added for international compatibility.</v3Changes>
 						</nemsisTacDoc>
@@ -679,7 +704,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										&lt;br/>2-digit State Code 3-digit County Code 6-digit Census Tract Number (no decimal) 
 										&lt;br/>&lt;br/>Example: NEMSIS TAC office (UT, Salt Lake County, Census Tract - located at 295 Chipeta Way, Salt Lake City, UT) 
 										49035101400
-										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a href="http://www.census.gov/geo/maps-data/data/tract_rel_download.html" target="_blank">http://www.census.gov/geo/maps-data/data/tract_rel_download.html&lt;/a>									
+										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a href="https://www.census.gov/geographies/reference-files/2010/geo/relationship-files.html" target="_blank">https://www.census.gov/geographies/reference-files/2010/geo/relationship-files.html&lt;/a>									
 							</comment>
 							<v3Changes>Added to improve the ability to use census and other demographic information within EMS research.</v3Changes>
 						</nemsisTacDoc>
@@ -756,7 +781,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="OtherEMSAgenciesAtScene">
 		<xs:annotation>
-			<xs:documentation>Other EMS agencies that were at the scene, if any</xs:documentation>
+			<xs:documentation>The name(s) of other EMS or Public Safety Agencies at the scene.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:minLength value="2"/>
@@ -790,7 +815,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			</xs:enumeration>
 			<xs:enumeration value="2704009">
 				<xs:annotation>
-					<xs:documentation>Law</xs:documentation>
+					<xs:documentation>Law Enforcement</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="2704011">
@@ -866,6 +891,28 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 			<xs:enumeration value="2708009">
 				<xs:annotation>
 					<xs:documentation>Black - Deceased</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransferOfPatientCare">
+		<xs:annotation>
+			<xs:documentation>This element documents the transfer of a patient for care/transport in the field to or from the EMS agency listed in eScene.02.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2725001">
+				<xs:annotation>
+					<xs:documentation>Transferred Patient to Agency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2725003">
+				<xs:annotation>
+					<xs:documentation>Received Patient from Agency</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="2725005">
+				<xs:annotation>
+					<xs:documentation>No Transfer of Patient/Care To/From Agency</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

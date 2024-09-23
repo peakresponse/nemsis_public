@@ -40,7 +40,7 @@
 'EMSDataSet'|'element'|'eResponse.24'|'Additional Response Mode Descriptors'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDispatch.01'|'Dispatch Reason'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDispatch.02'|'EMD Performed'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
-'EMSDataSet'|'element'|'eDispatch.03'|'EMD Card Number'|''|''|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
+'EMSDataSet'|'element'|'eDispatch.03'|'EMD Determinant Code'|''|''|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDispatch.04'|'Dispatch Center Name or ID'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDispatch.05'|'Dispatch Priority (Patient Acuity)'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eDispatch.06'|'Unit Dispatched CAD Record ID'|''|''|''|''|''|''|''|''|''|
@@ -68,6 +68,7 @@
 'EMSDataSet'|'element'|'ePatient.02'|'Last Name'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.03'|'First Name'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.04'|'Middle Initial/Name'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePatient.23'|'Name Suffix'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.05'|'Patient's Home Address'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.06'|'Patient's Home City'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.07'|'Patient's Home County'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
@@ -86,6 +87,7 @@
 'EMSDataSet'|'element'|'ePatient.20'|'State Issuing Driver's License'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.21'|'Driver's License Number'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.22'|'Alternate Home Residence'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePatient.24'|'Patient's Preferred Language'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.01'|'Primary Method of Payment'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'ePayment.02'|'Physician Certification Statement'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.03'|'Date Physician Certification Statement Signed'|''|''|''|''|''|''|''|''|''|
@@ -150,6 +152,7 @@
 'EMSDataSet'|'element'|'eScene.03'|'Other EMS or Public Safety Agency ID Number'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.04'|'Type of Other Service at Scene'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.24'|'First Other EMS or Public Safety Agency at Scene to Provide Patient Care'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eScene.25'|'Transferred Patient/Care To/From Agency'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.05'|'Date/Time Initial Responder Arrived on Scene'|''|''|'X'|'X'|''|''|'X'|''|'X'|
 'EMSDataSet'|'element'|'eScene.06'|'Number of Patients at Scene'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eScene.07'|'Mass Casualty Incident'|'National'|'State'|''|''|''|''|''|''|'X'|
@@ -288,6 +291,7 @@
 'EMSDataSet'|'element'|'eVitals.28'|'Pain Scale Type'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.29'|'Stroke Scale Score'|'National'|'State'|''|''|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eVitals.30'|'Stroke Scale Type'|'National'|'State'|''|''|''|''|''|'X'|''|
+'EMSDataSet'|'element'|'eVitals.34'|'Stroke Severity Score'|''|'State'|''|''|''|''|''|'X'|''|
 'EMSDataSet'|'element'|'eVitals.31'|'Reperfusion Checklist'|'National'|'State'|''|''|''|''|'X'|'X'|''|
 'EMSDataSet'|'element'|'eVitals.32'|'APGAR'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eVitals.33'|'Revised Trauma Score'|''|''|''|''|''|''|''|''|'X'|
@@ -337,6 +341,7 @@
 'EMSDataSet'|'element'|'eMedications.10'|'Role/Type of Person Administering Medication'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eMedications.11'|'Medication Authorization'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eMedications.12'|'Medication Authorizing Physician'|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eMedications.13'|'Medication Administered by Another Unit'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eProcedures.01'|'Date/Time Procedure Performed'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eProcedures.02'|'Procedure Performed Prior to this Unit's EMS Care'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eProcedures.03'|'Procedure'|'National'|'State'|'X'|'X'|'X'|''|'X'|'X'|'X'|
@@ -350,6 +355,8 @@
 'EMSDataSet'|'element'|'eProcedures.11'|'Procedure Authorization'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eProcedures.12'|'Procedure Authorizing Physician'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eProcedures.13'|'Vascular Access Location'|''|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eProcedures.14'|'Airway Placement Technique'|''|'State'|'X'|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eProcedures.15'|'Procedure Performed by Another Unit'|''|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eAirway.01'|'Indications for Invasive Airway'|''|'State'|'X'|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eAirway.02'|'Date/Time Airway Device Placement Confirmation'|''|'State'|'X'|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eAirway.03'|'Airway Device Being Confirmed'|''|'State'|'X'|''|''|''|''|''|''|
@@ -395,7 +402,7 @@
 'EMSDataSet'|'element'|'eDisposition.16'|'EMS Transport Method'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.17'|'Transport Mode from Scene'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'National'|'State'|''|''|''|''|''|''|''|
-'EMSDataSet'|'element'|'eDisposition.19'|'Final Patient Acuity'|'National'|'State'|'X'|'X'|'X'|''|''|''|'X'|
+'EMSDataSet'|'element'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'National'|'State'|'X'|'X'|'X'|''|''|''|'X'|
 'EMSDataSet'|'element'|'eDisposition.20'|'Reason for Choosing Destination'|'National'|'State'|''|'X'|'X'|''|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.21'|'Type of Destination'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'EMSDataSet'|'element'|'eDisposition.22'|'Hospital In-Patient Destination'|'National'|'State'|''|''|''|''|''|''|''|
@@ -418,6 +425,7 @@
 'EMSDataSet'|'element'|'eOutcome.13'|'Hospital Diagnosis'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOutcome.16'|'Date/Time of Hospital Discharge'|'National'|'State'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eOutcome.18'|'Date/Time of Emergency Department Admission'|'National'|'State'|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'eOutcome.21'|'Injury Severity Score'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomResults.01'|'Custom Data Element Result'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomResults.02'|'Custom Element ID Referenced'|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'eCustomResults.03'|'CorrelationID of PatientCareReport Element or Group'|''|''|''|''|''|''|''|''|''|
@@ -452,6 +460,9 @@
 'DEMDataSet'|'element'|'dCustomConfiguration.07'|'Custom Data Element Potential NOT Values (NV)'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dCustomConfiguration.08'|'Custom Data Element Potential Pertinent Negative Values (PN)'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dCustomConfiguration.09'|'Custom Data Element Grouping ID'|''|''|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dRecord.01'|'Software Creator'|''|''|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dRecord.02'|'Software Name'|''|''|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dRecord.03'|'Software Version'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dAgency.01'|'EMS Agency Unique State ID'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dAgency.02'|'EMS Agency Number'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dAgency.03'|'EMS Agency Name'|''|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
@@ -478,6 +489,7 @@
 'DEMDataSet'|'element'|'dAgency.24'|'EMS Agency Daylight Savings Time Use'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dAgency.25'|'National Provider Identifier'|'National'|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dAgency.26'|'Fire Department ID Number'|'National'|'State'|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dAgency.27'|'Licensed Agency'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.01'|'Agency Contact Type'|''|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.02'|'Agency Contact Last Name'|''|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.03'|'Agency Contact First Name'|''|'State'|''|''|''|''|''|''|''|
@@ -493,7 +505,7 @@
 'DEMDataSet'|'element'|'dContact.13'|'Agency Medical Director Degree'|''|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.14'|'Agency Medical Director Board Certification Type'|''|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dContact.15'|'Medical Director Compensation'|''|''|''|''|''|''|''|''|''|
-'DEMDataSet'|'element'|'dContact.16'|'EMS Medical Director Fellowship Trained Status'|''|''|''|''|''|''|''|''|''|
+'DEMDataSet'|'element'|'dContact.16'|'EMS Medical Director Board Certified/Eligible'|''|''|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.01'|'State Associated with this Configuration'|'National'|'State'|''|''|''|''|''|''|''|
 'DEMDataSet'|'element'|'dConfiguration.06'|'EMS Certification Levels Permitted to Perform Each Procedure'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|
 'DEMDataSet'|'element'|'dConfiguration.07'|'EMS Agency Procedures'|'National'|'State'|'X'|'X'|'X'|'X'|'X'|'X'|'X'|

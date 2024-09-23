@@ -799,6 +799,7 @@
 											</xs:simpleContent>
 										</xs:complexType>
 									</xs:element>
+									
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
@@ -1492,7 +1493,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3330013">
 				<xs:annotation>
-					<xs:documentation>FAST-ED</xs:documentation>
+					<xs:documentation>FAST</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3330015">
@@ -1520,6 +1521,21 @@
 					<xs:documentation>Los Angeles Motor Score (LAMS)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3330025">
+				<xs:annotation>
+					<xs:documentation>Vision, Aphasia, Neglect (VAN)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330027">
+				<xs:annotation>
+					<xs:documentation>FAST-ED</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3330029">
+				<xs:annotation>
+					<xs:documentation>BEFAST</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="ETCO2Type">
@@ -1542,6 +1558,15 @@
 					<xs:documentation>kPa</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StrokeScore">
+		<xs:annotation>
+			<xs:documentation>Score associated with the stroke scale listed in eVitals.30</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"></xs:minInclusive>
+			<xs:maxInclusive value="42"></xs:maxInclusive>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

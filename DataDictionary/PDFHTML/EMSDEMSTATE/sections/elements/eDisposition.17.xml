@@ -27,10 +27,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e166" role="Warning">
-      <elementRef elementNumber="eDisposition.17">Transport Mode from Scene</elementRef> should be recorded when <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> is "Transport by This EMS Unit...".
+      <elementRef elementNumber="eDisposition.17">Transport Mode from Scene</elementRef> should be recorded when <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> is &quot;Transport by This EMS Unit...&quot;.
       </assert>
   <assert id="nemSch_e167" role="Warning">
-      <elementRef elementNumber="eDisposition.17">Transport Mode from Scene</elementRef> should not be recorded when <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> is "Patient Refused Transport" or "No Transport".
+      <elementRef elementNumber="eDisposition.17">Transport Mode from Scene</elementRef> should not be recorded when <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> is &quot;Patient Refused Transport&quot; or &quot;No Transport&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Transport Mode from Scene has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

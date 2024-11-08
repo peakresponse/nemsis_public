@@ -1024,7 +1024,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelDegreeFieldofStudy">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
+			<xs:documentation>The area of the personnel's post high-school (post-secondary) degree.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1516001">
@@ -1211,7 +1211,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelForeignLanguageAbility">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget)</xs:documentation>
+			<xs:documentation>The languages spoken (other than English) by the personnel with at least an elementary level of proficiency.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="amh">
@@ -1473,7 +1473,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelHighestEducationalDegree">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
+			<xs:documentation>The highest educational degree completed by the personnel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1515001">
@@ -1560,7 +1560,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelVehicleLicenseType">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
+			<xs:documentation>The type of motor vehicle license (i.e. Class A, B, Pilot, etc.) of the EMS personnel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1517001">

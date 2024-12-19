@@ -3,13 +3,13 @@
 
 NEMSIS V3 Schematron Test Case
 ID:               nemSch_e086_A
-Description:      Date/Time Last Known Well should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Stroke Scale Score is "Positive".
+Description:      Date/Time Last Known Well should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Stroke Scale Result is "Positive".
 Expected Result:  [WARNING]
 
 -->
 <EMSDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.240923/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.250115/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>0</dAgency.01>

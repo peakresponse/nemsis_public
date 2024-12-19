@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.5.1.240923_240923
-Revision Date: September 23, 2024
+Version: 3.5.1.250115_241219
+Revision Date: December 19, 2024
 
 This product is provided by the NEMSIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -1123,7 +1123,7 @@ Schematron files via a user-friendly web-based interface.
               <ePatient.20 nemsisName="State Issuing Driver's License"/>
               <ePatient.21 nemsisName="Driver's License Number"/>
               <ePatient.22 nemsisName="Alternate Home Residence"/>
-              <ePatient.24 nemsisName="Patient's Preferred Language"/>
+              <ePatient.24 nemsisName="Patient's Preferred Language(s)"/>
             </ePatient>
             <ePayment nemsisName="Insurance/Payment Information">
               <ePayment.01 nemsisName="Primary Method of Payment"/>
@@ -1381,9 +1381,9 @@ Schematron files via a user-friendly web-based interface.
                   <eVitals.28 nemsisName="Pain Scale Type"/>
                 </eVitals.PainScaleGroup>
                 <eVitals.StrokeScaleGroup nemsisName="Stroke Scale Score">
-                  <eVitals.29 nemsisName="Stroke Scale Score"/>
+                  <eVitals.29 nemsisName="Stroke Scale Result"/>
                   <eVitals.30 nemsisName="Stroke Scale Type"/>
-                  <eVitals.34 nemsisName="Stroke Severity Score"/>
+                  <eVitals.34 nemsisName="Stroke Scale Score"/>
                 </eVitals.StrokeScaleGroup>
                 <eVitals.31 nemsisName="Reperfusion Checklist"/>
                 <eVitals.32 nemsisName="APGAR"/>

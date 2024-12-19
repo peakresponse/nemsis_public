@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="StateDataSet" schemaVersion="3.5.1.240923" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="StateDataSet" schemaVersion="3.5.1.250115" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for StateDataSet</sch:title>
 
@@ -419,7 +419,7 @@
   <element name="ePatient.21">Driver's License Number</element>
   <element name="ePatient.22">Alternate Home Residence</element>
   <element name="ePatient.23">Name Suffix</element>
-  <element name="ePatient.24">Patient's Preferred Language</element>
+  <element name="ePatient.24">Patient's Preferred Language(s)</element>
   <element name="ePayment.01">Primary Method of Payment</element>
   <element name="ePayment.02">Physician Certification Statement</element>
   <element name="ePayment.03">Date Physician Certification Statement Signed</element>
@@ -613,12 +613,12 @@
   <element name="eVitals.26">Level of Responsiveness (AVPU)</element>
   <element name="eVitals.27">Pain Scale Score</element>
   <element name="eVitals.28">Pain Scale Type</element>
-  <element name="eVitals.29">Stroke Scale Score</element>
+  <element name="eVitals.29">Stroke Scale Result</element>
   <element name="eVitals.30">Stroke Scale Type</element>
   <element name="eVitals.31">Reperfusion Checklist</element>
   <element name="eVitals.32">APGAR</element>
   <element name="eVitals.33">Revised Trauma Score</element>
-  <element name="eVitals.34">Stroke Severity Score</element>
+  <element name="eVitals.34">Stroke Scale Score</element>
   <element name="sAgency.01">EMS Agency Unique State ID</element>
   <element name="sAgency.02">EMS Agency Number</element>
   <element name="sAgency.03">EMS Agency Name</element>

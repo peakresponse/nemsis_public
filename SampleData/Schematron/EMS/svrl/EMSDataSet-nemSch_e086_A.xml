@@ -9,7 +9,7 @@
                         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.5.1.240923"><!--   
+                        schemaVersion="3.5.1.250115"><!--   
 		   
 		   
 		 -->
@@ -95,7 +95,7 @@
                        id="nemSch_e086"
                        role="[WARNING]"
                        location="/*:EMSDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:Header[namespace-uri()='http://www.nemsis.org'][1]/*:PatientCareReport[namespace-uri()='http://www.nemsis.org'][1]/*:eSituation[namespace-uri()='http://www.nemsis.org'][1]/*:eSituation.18[namespace-uri()='http://www.nemsis.org'][1]">
-      <svrl:text>Date/Time Last Known Well should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Stroke Scale Score is "Positive".
+      <svrl:text>Date/Time Last Known Well should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Stroke Scale Result is "Positive".
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">

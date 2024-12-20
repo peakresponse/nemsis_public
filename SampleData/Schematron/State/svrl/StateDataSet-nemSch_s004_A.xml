@@ -9,7 +9,7 @@
                         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for StateDataSet"
-                        schemaVersion="3.5.1.240923"><!--   
+                        schemaVersion="3.5.1.250115"><!--   
 		   
 		   
 		 -->
@@ -30,7 +30,7 @@
                        role="[ERROR]"
                        location="/*:StateDataSet[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
-      The timestamp of the StateDataSet should not be in the future (the current time according to this system is September 10, 2024, 15:27 PDT).
+      The timestamp of the StateDataSet should not be in the future (the current time according to this system is December 19, 2024, 09:00 PST).
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
@@ -39,7 +39,7 @@
             </record>
             <elements>
                <element location="/*:StateDataSet[namespace-uri()='http://www.nemsis.org'][1]"
-                        xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.240923/XSDs/NEMSIS_XSDs/StateDataSet_v3.xsd"
+                        xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.250115/XSDs/NEMSIS_XSDs/StateDataSet_v3.xsd"
                         timestamp="2050-01-01T00:00:00-00:00"/>
             </elements>
             <elementsMissing/>

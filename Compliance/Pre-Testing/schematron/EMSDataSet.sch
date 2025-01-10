@@ -4,8 +4,8 @@
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
             queryBinding="xslt2"
             id="EMSDataSet"
-            schemaVersion="3.5.0.230317CP4_compliance_pretesting_2024">
-   <sch:title>NEMSIS ISO Schematron file for EMSDataSet for compliance pre-testing (2024, v3.5.0)</sch:title>
+            schemaVersion="3.5.1.250115_compliance_pretesting_2025">
+   <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing (2025, v3.5.1)</sch:title>
    <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
    <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
    <!-- "Initialize" variables used by nemsisDiagnostic. -->
@@ -15,69 +15,51 @@
    <!-- PHASES -->
    <!-- No phases used. -->
    <!-- PATTERNS -->
-   <sch:pattern id="compliance_covidImmunization">
-      <sch:title>COVID-19 immunization status should be recorded on patients with influenza-like illness or infectious disease</sch:title>
-      <sch:rule id="compliance_covidImmunization_rule"
-                context="nem:PatientCareReport[nem:eSituation/(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12)[matches(., '^(B97\.2.*)|(B99.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$')]]">
-         <sch:let name="nemsisElements"
-                  value="nem:eSituation/(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12)[matches(., '^(B97\.2.*)|(B99.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$')]"/>
-         <sch:let name="nemsisElementsMissing" value="'eHistory.10'"/>
+   <sch:pattern id="compliance_overdose">
+      <sch:title>Patients in the Garrett Recovery pilot program should be assessed for hallucinations.</sch:title>
+      <sch:rule id="compliance_overdose_rule"
+                context="nem:PatientCareReport[nem:ePayment/nem:ePayment.54 = 'Garrett Recovery']">
+         <sch:let name="nemsisElements" value="nem:ePayment/nem:ePayment.54"/>
+         <sch:let name="nemsisElementsMissing" value="'eExam.19'"/>
          <sch:let name="nemsisElementsMissingContext"
-                  value="nem:eHistory/nem:eHistory.ImmunizationsGroup"/>
-         <!-- To test: On case 2024-EMS-1-ILIRelease_v350 or 2024-EMS-4-CovidTransfer_v350, remove the entry for COVID-19 in eHistory.10 The Patient's Type of Immunization, or change it to another value. -->
-         <sch:assert id="compliance_covidImmunization_assert"
+                  value="nem:eExam/nem:eExam.AssessmentGroup[1]"/>
+         <!-- To test: On case 2023-EMS-1-Overdose_v351, remove "Hallucinations" from eExam.19 Mental Status Assessment. -->
+         <sch:assert id="compliance_overdose_assert"
                      role="[WARNING]"
                      diagnostics="nemsisDiagnostic"
-                     test="nem:eCustomResults/nem:eCustomResults.ResultsGroup[nem:eCustomResults.01 = '9910055' and nem:eCustomResults.03 = ancestor::nem:PatientCareReport/nem:eHistory/nem:eHistory.ImmunizationsGroup[nem:eHistory.10]/@CorrelationID]">
-        COVID-19 immunization status should be recorded when an impression or symptom is influenza-like illness or infectious disease. If the patient is not immunized for COVID-19, select "Not Immunized" along with "COVID-19" for The Patient's Type of Immunization. This is a validation message for compliance pre-testing for 2024 for NEMSIS v3.5.0.
+                     test="nem:eExam/nem:eExam.AssessmentGroup/nem:eExam.19 = '3519005'">
+        Mental Status Assessment should include "Hallucinations" (either as an exam finding or as an exam finding not present) when a patient is in the Garrett Recovery pilot program (Prior Authorization Code Payer is "Garrett Recovery"). This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="compliance_lungAssessment">
-      <sch:title>Lung Assessment should be recorded on 911 calls for patients with influenza-like illness or infectious disease</sch:title>
-      <sch:rule id="compliance_lungAssessment_rule"
-                context="nem:PatientCareReport[nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 = '2205001' and nem:eSituation/(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12)[matches(., '^(B97\.2.*)|(B99.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$')]]">
+   <sch:pattern id="compliance_cpmih_procedure">
+      <sch:title>Community paramedicine visits should include the "Informing doctor" procedure.</sch:title>
+      <sch:rule id="compliance_cpmih_procedure_rule"
+                context="nem:PatientCareReport[nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 = '2205031']">
          <sch:let name="nemsisElements"
-                  value="nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, nem:eSituation/(nem:eSituation.09, nem:eSituation.10, nem:eSituation.11, nem:eSituation.12)[matches(., '^(B97\.2.*)|(B99.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$')]"/>
-         <sch:let name="nemsisElementsMissing" value="'eExam.23'"/>
-         <sch:let name="nemsisElementsMissingContext" value="nem:eExam.LungGroup"/>
-         <!-- To test: On case 2024-EMS-1-ILIRelease_v350, remove the entries for eExam.23 Lung Assessment or record it as "Not Done". -->
-         <sch:assert id="compliance_lungAssessment_assert"
-                     role="[WARNING]"
-                     diagnostics="nemsisDiagnostic"
-                     test="nem:eExam/nem:eExam.AssessmentGroup/nem:eExam.LungGroup/nem:eExam.23[. != '3523015']">
-        Lung Assessment should be recorded when an impression or symptom is influenza-like illness or infectious disease and Type of Service Requested is "Emergency Response (Primary Response Area)". This is a validation message for compliance pre-testing for 2024 for NEMSIS v3.5.0.
-      </sch:assert>
-      </sch:rule>
-   </sch:pattern>
-   <sch:pattern id="compliance_lastOralIntake">
-      <sch:title>Last Oral Intake should be recorded on 911 calls with a patient that happen in the morning</sch:title>
-      <sch:rule id="compliance_lastOralIntake_rule"
-                context="nem:PatientCareReport[nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 = '2205001' and hours-from-dateTime(nem:eTimes/nem:eTimes.03) &lt; 12 and nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27 = '4227001']">
-         <sch:let name="nemsisElements"
-                  value="nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, nem:eTimes/nem:eTimes.03, nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.27"/>
-         <sch:let name="nemsisElementsMissing" value="'eHistory.19'"/>
-         <sch:let name="nemsisElementsMissingContext" value="nem:eHistory"/>
-         <!-- To test: On case 2024-EMS-1-ILIRelease_v350, remove the value for eHistory.19 Last Oral Intake. -->
-         <sch:assert id="compliance_lastOralIntake_assert"
+                  value="nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, nem:eProcedures/nem:eProcedures.ProcedureGroup/nem:eProcedures.03"/>
+         <!-- To test: On case 2023-EMS-5-CPMIH_v351, remove the "Informing doctor" procedure, or change eProcedures.03 Procedure in that instance to a different value. -->
+         <sch:assert id="compliance_cpmih_procedure_assert"
                      role="[ERROR]"
                      diagnostics="nemsisDiagnostic"
-                     test="nem:eHistory/nem:eHistory.19">
-        Last Oral Intake should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Unit Notified by Dispatch Date/Time is in the morning and Unit Disposition is "Patient Contact Made". This is a validation message for compliance pre-testing for 2024 for NEMSIS v3.5.0.
+                     test="nem:eProcedures/nem:eProcedures.ProcedureGroup/nem:eProcedures.03 = '304562007'">
+        A procedure of "Informing doctor" should be recorded when Type of Service Requested is "Mobile Integrated Health Care Encounter". This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>
    <!-- DIAGNOSTICS -->
    <sch:diagnostics>
+
+    <?DSDL_INCLUDE_START includes/diagnostic_nemsisDiagnostic.xml?>
       <sch:diagnostic id="nemsisDiagnostic">
 
       <!-- This is the NEMSIS national diagnostic. It must exist in every NEMSIS Schematron document, 
-           and it should be referenced by every assert and report. It provides nationally-
-           standardized, structured data to communicate which data elements are of interest in a 
-           failed assert or successful report. -->
+          and it should be referenced by every assert and report. It provides nationally-
+          standardized, structured data to communicate which data elements are of interest in a 
+          failed assert or successful report. -->
          <nemsisDiagnostic xmlns="http://www.nemsis.org"
                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
+    
         <!-- Elements that uniquely identify the record where the problem happened. -->
             <record>
                <xsl:copy-of select="ancestor-or-self::*:StateDataSet/*:sState/*:sState.01"/>
@@ -133,6 +115,7 @@
             </elementsMissing>
          </nemsisDiagnostic>
       </sch:diagnostic>
+      <?DSDL_INCLUDE_END includes/diagnostic_nemsisDiagnostic.xml?>
    </sch:diagnostics>
    <!-- PROPERTIES -->
    <sch:properties/>

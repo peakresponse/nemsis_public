@@ -3,10 +3,10 @@
  * 
  * XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 DefinedList XML to JSON
  * 
- * Version: 3.5.0.230317CP4_230718
- * Revision Date: July 18, 2023
+ * Version: 3.5.1.250115_250108
+ * Revision Date: January 8, 2025
  * 
- * This product is provided by the NEMIS TAC, without charge, to facilitate providing NEMSIS 3 
+ * This product is provided by the NEMSIS TAC, without charge, to facilitate providing NEMSIS 3 
  * DefinedList files in multiple formats.
  * 
 -->
@@ -17,7 +17,7 @@
 
   <xsl:template match="/">
   <xsl:text>{
-  "$schema": "https://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.schema.json",
+  "$schema": "https://nemsis.org/media/nemsis_v3/release-3.5.1/DefinedLists/DefinedLists.schema.json",
   "DefinedList": {
 </xsl:text>
     <xsl:apply-templates select="n:DefinedList"/>

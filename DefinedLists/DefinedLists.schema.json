@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema#",
-    "$id": "https://nemsis.org/media/nemsis_v3/release-3.5.0/DefinedLists/DefinedLists.schema.json#",
+    "$id": "https://nemsis.org/media/nemsis_v3/release-3.5.1/DefinedLists/DefinedLists.schema.json#",
     "definitions": {
         "DefinedList.Header.SourceVocabularies.SourceVocabulary": {
             "type": "object",
@@ -85,7 +85,7 @@
                 "Value": {
                     "type": "string",
                     "minLength": 1,
-                    "maxLength": 15
+                    "maxLength": 18
                     },
                 "CodeType": {
                     "allOf": [
@@ -120,7 +120,7 @@
                 "SourceLabel": {
                     "type": "string",
                     "minLength": 1,
-                    "maxLength": 3000                    
+                    "maxLength": 3000
                     },
                 "SuggestedLabel": {
                     "type": "string",

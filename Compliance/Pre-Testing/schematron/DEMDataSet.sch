@@ -4,8 +4,8 @@
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
             queryBinding="xslt2"
             id="DEMDataSet"
-            schemaVersion="3.5.0.230317CP4_compliance_pretesting_2024">
-   <sch:title>NEMSIS ISO Schematron file for DEMDataSet for compliance pre-testing (2024, v3.5.0)</sch:title>
+            schemaVersion="3.5.1.250115_compliance_pretesting_2025">
+   <sch:title>NEMSIS ISO Schematron file for DEMDataSet for Compliance Pre-testing (2025, v3.5.1)</sch:title>
    <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
    <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
    <!-- "Initialize" variables used by nemsisDiagnostic. -->
@@ -15,45 +15,47 @@
    <!-- PHASES -->
    <!-- No phases used. -->
    <!-- PATTERNS -->
-   <sch:pattern id="compliance_dispatchVolume">
-      <sch:title>EMS Dispatch Volume Per Year shouldn't be too high compared to Total Service Area Population</sch:title>
-      <sch:rule id="compliance_dispatchVolume_rule"
-                context="nem:dAgency.AgencyYearGroup[nem:dAgency.17 != '' and nem:dAgency.19 != '']">
-         <sch:let name="nemsisElements" value="nem:dAgency.17, nem:dAgency.19"/>
-         <!-- To test: Increase dAgency.19 EMS Dispatch Volume Per Year to be more than 25% of dAgency.17 Total Service Area Population. -->
-         <sch:assert id="compliance_dispatchVolume_assert"
+   <sch:pattern id="compliance_capability_protocol">
+      <sch:title>EMS Agency Protocols should include "General-Community Paramedicine / Mobile Integrated Healthcare" when EMS Agency Specialty Service Capability includes "Community Health Medicine".</sch:title>
+      <sch:rule id="compliance_capability_protocol_rule"
+                context="nem:dConfiguration.11[. = '1211005']">
+         <sch:let name="nemsisElements" value="."/>
+         <sch:let name="nemsisElementsMissing" value="'dConfiguration.10'"/>
+         <!-- To test: Remove "General-Community Paramedicine / Mobile Integrated Healthcare" from the list of EMS Agency Protocols. -->
+         <sch:assert id="compliance_capability_protocol_assert"
                      role="[WARNING]"
                      diagnostics="nemsisDiagnostic"
-                     test="xs:integer(nem:dAgency.19) &lt;= xs:integer(nem:dAgency.17) * 0.25">
-        EMS Dispatch Volume Per Year should not be more than 25% of Total Service Area Population. This is a validation message for compliance pre-testing for 2024 for NEMSIS v3.5.0.
+                     test="../nem:dConfiguration.10 = '9914175'">
+      EMS Agency Protocols should include "General-Community Paramedicine / Mobile Integrated Healthcare" when EMS Agency Specialty Service Capability includes "Community Health Medicine". This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="compliance_locationPhone">
-      <sch:title>Location phone number must be consistent with location county</sch:title>
-      <sch:rule id="compliance_locationPhone_rule"
-                context="nem:dLocation.12[. != '' and ../nem:dLocation.10 = '08069']">
-         <sch:let name="nemsisElements" value="., ../nem:dLocation.10"/>
-         <!-- To test: Change the first three digits of dLocation.12 EMS Location Phone Number to a value other than "970" for the location that is in Larimer County, Colorado -->
-         <sch:assert id="compliance_locationPhone_assert"
+   <sch:pattern id="compliance_certification_dates">
+      <sch:title>EMS Personnel's State EMS Current Certification Date should not be earlier than EMS Personnel's Initial State's Licensure Issue Date.</sch:title>
+      <sch:rule id="compliance_certification_dates_rule" context="nem:dPersonnel.25">
+         <sch:let name="nemsisElements" value="., nem:dPersonnel.26"/>
+         <!-- To test: Change an EMS Personnel's State EMS Current Certification Date to be later than EMS Personnel's Initial State's Licensure Issue Date. -->
+         <sch:assert id="compliance_certification_dates_assert"
                      role="[ERROR]"
                      diagnostics="nemsisDiagnostic"
-                     test="starts-with(., '970')">
-        EMS Location Phone Number must start with "970" when EMS Location County is Larimer County, Colorado. This is a validation message for compliance pre-testing for 2024 for NEMSIS v3.5.0.
+                     test="../nem:dPersonnel.26 and xs:date(.) &gt;= xs:date(../nem:dPersonnel.26)">
+        EMS Personnel's State EMS Current Certification Date should not be earlier than EMS Personnel's Initial State's Licensure Issue Date. This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>
    <!-- DIAGNOSTICS -->
    <sch:diagnostics>
+
+    <?DSDL_INCLUDE_START includes/diagnostic_nemsisDiagnostic.xml?>
       <sch:diagnostic id="nemsisDiagnostic">
 
       <!-- This is the NEMSIS national diagnostic. It must exist in every NEMSIS Schematron document, 
-           and it should be referenced by every assert and report. It provides nationally-
-           standardized, structured data to communicate which data elements are of interest in a 
-           failed assert or successful report. -->
+          and it should be referenced by every assert and report. It provides nationally-
+          standardized, structured data to communicate which data elements are of interest in a 
+          failed assert or successful report. -->
          <nemsisDiagnostic xmlns="http://www.nemsis.org"
                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
+    
         <!-- Elements that uniquely identify the record where the problem happened. -->
             <record>
                <xsl:copy-of select="ancestor-or-self::*:StateDataSet/*:sState/*:sState.01"/>
@@ -109,6 +111,7 @@
             </elementsMissing>
          </nemsisDiagnostic>
       </sch:diagnostic>
+      <?DSDL_INCLUDE_END includes/diagnostic_nemsisDiagnostic.xml?>
    </sch:diagnostics>
    <!-- PROPERTIES -->
    <sch:properties/>

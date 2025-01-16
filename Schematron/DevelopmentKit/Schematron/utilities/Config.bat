@@ -1,8 +1,8 @@
 @echo off
 rem Windows batch file to configure paths to programs used in the Schematron Development Kit
 
-rem Version: 3.5.0.230317CP4_230317
-rem Revision Date: March 17, 2023
+rem Version: 3.5.1.250115_241219
+rem Revision Date: December 19, 2024
 
 rem This product is provided by the NEMSIS TAC, without charge, to facilitate development
 rem of NEMSIS Schematron schemas.
@@ -18,7 +18,7 @@ rem Saxon is used for XSL transformations (the method used for implementing Sche
 rem NEMSIS XML documents)
 rem https://www.saxonica.com/
 
-set saxon="C:\Program Files\Saxonica\Saxon9HE\Saxon9he.jar"
+set saxon="C:\Program Files\Saxonica\SaxonHE12-4J\saxon-he-12.4.jar"
 
 rem xmllint (from the LibXML2 package) is used for XML Schema (XSD) validation of NEMSIS XML documents
 rem http://xmlsoft.org/

@@ -453,7 +453,7 @@
 										<name>Date/Time of Signature</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The date and time the signature was captured.</definition>
+										<definition>The date and time the crew member, patient, patient representative, or facility representative signature was captured.</definition>
 										<usage>Optional</usage>
 										<comment>DateTime consists of finite-length characters of the form: yyyy '-' mm '-' dd 'T' hh ':' mm ':' ss ('.' s+)? (zzzzzz)
 &lt;table  cellspacing="2">&lt;tr>&lt;td>							
@@ -493,7 +493,7 @@
 										<name>Signature Last Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The last name of the individual who signed the associated signature.</definition>
+										<definition>The last name of the crew member, patient, patient representative, or facility representative associated with the signature group.</definition>
 										<usage>Optional</usage>
 										<v3Changes>Added to better document disposition and billing.</v3Changes>
 									</nemsisTacDoc>
@@ -508,7 +508,7 @@
 										<name>Signature First Name</name>
 										<national>No</national>
 										<state>No</state>
-										<definition>The first name of the individual associated with the signature.</definition>
+										<definition>The first name of the crew member, patient, patient representative, or facility representative associated with the signature group.</definition>
 										<usage>Optional</usage>
 										<v3Changes>Added to better document disposition and billing.</v3Changes>
 									</nemsisTacDoc>
@@ -1290,6 +1290,36 @@
 			<xs:enumeration value="4506029">
 				<xs:annotation>
 					<xs:documentation>Other</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4506031">
+				<xs:annotation>
+					<xs:documentation>Violence-Offensive, Intimidating, or Hateful Language</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4506033">
+				<xs:annotation>
+					<xs:documentation>Violence-Physical Threat, or Threatening Behavior</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4506035">
+				<xs:annotation>
+					<xs:documentation>Violence-Physical Attack or Attempt to Attack</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4506037">
+				<xs:annotation>
+					<xs:documentation>Violence-Unwelcome Sexual Attention, Remarks, Jokes or Gestures</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4506039">
+				<xs:annotation>
+					<xs:documentation>Violence-Unwanted Touching of a Sexual Nature</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="4506041">
+				<xs:annotation>
+					<xs:documentation>Struck by Vehicle Along Roadway</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

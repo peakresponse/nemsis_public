@@ -1147,6 +1147,16 @@
 					<xs:documentation>Sacral-Right</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="3513029">
+				<xs:annotation>
+					<xs:documentation>Flank-Left</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3513031">
+				<xs:annotation>
+					<xs:documentation>Flank-Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="BroselowLutenColor">
@@ -1594,6 +1604,41 @@
 			<xs:enumeration value="3516083">
 				<xs:annotation>
 					<xs:documentation>Arm Drift</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516085">
+				<xs:annotation>
+					<xs:documentation>Cool/Cold to Touch</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516087">
+				<xs:annotation>
+					<xs:documentation>Cyanosis</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516089">
+				<xs:annotation>
+					<xs:documentation>Erythema/Flushing</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516091">
+				<xs:annotation>
+					<xs:documentation>Hot/Warm to Touch</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516093">
+				<xs:annotation>
+					<xs:documentation>Lividity</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516095">
+				<xs:annotation>
+					<xs:documentation>Mottled</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3516097">
+				<xs:annotation>
+					<xs:documentation>Pale</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -2925,7 +2970,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3523019">
 				<xs:annotation>
-					<xs:documentation>Pain with Inspiraton/Expiration</xs:documentation>
+					<xs:documentation>Pain with Inspiration/Expiration</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3523021">
@@ -2972,7 +3017,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3524003">
 				<xs:annotation>
-					<xs:documentation>Left - Posterior</xs:documentation>
+					<xs:documentation>Left - Posterior (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3524005">
@@ -2982,7 +3027,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3524007">
 				<xs:annotation>
-					<xs:documentation>Right - Posterior</xs:documentation>
+					<xs:documentation>Right - Posterior (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3524009">
@@ -3044,7 +3089,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3525013">
 				<xs:annotation>
-					<xs:documentation>Burn-Charing</xs:documentation>
+					<xs:documentation>Burn-Charring</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3525015">
@@ -3134,7 +3179,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3525049">
 				<xs:annotation>
-					<xs:documentation>Tenderness-General</xs:documentation>
+					<xs:documentation>Tenderness-General (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

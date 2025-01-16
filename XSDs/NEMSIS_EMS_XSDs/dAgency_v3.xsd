@@ -113,7 +113,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>This has been clarified to reflect that it is the state in which the EMS Agency resides and the state associated with the EMS Agency number.
+							<comment>This has been clarified to reflect that it is the state associated with the EMS Agency number listed in dAgency.02 – EMS Agency Number.
 								&lt;br/>&lt;br/>GNIS Codes Website: &lt;a href="http://geonames.usgs.gov/domestic/download_data.htm" target="_blank">http://geonames.usgs.gov/domestic/download_data.htm&lt;/a></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
@@ -201,7 +201,7 @@
 										&lt;br/>2-digit State Code 3-digit County Code 6-digit Census Tract Number (no decimal) 
 										&lt;br/>&lt;br/>Example: NEMSIS TAC office (UT, Salt Lake County, Census Tract - located at 295 Chipeta Way, Salt Lake City, UT) 
 										49035101400
-										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a href="http://www.census.gov/geo/maps-data/data/tract_rel_download.html" target="_blank">http://www.census.gov/geo/maps-data/data/tract_rel_download.html&lt;/a>																		
+										&lt;br/>&lt;br/>Census Tract Data Website (files and descriptions): &lt;a href="https://www.census.gov/geographies/reference-files/2010/geo/relationship-files.html" target="_blank">https://www.census.gov/geographies/reference-files/2010/geo/relationship-files.html&lt;/a>
 										</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
@@ -806,6 +806,21 @@
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>
+			</xs:element>
+			<xs:element name="dAgency.27" type="YesNoValues" id="dAgency.LicensedAgency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>dAgency.27</number>
+							<name>Licensed Agency</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>Indication if the agency is licensed by the state that issued the EMS Agency Number (dAgency.02).</definition>
+							<usage>Optional</usage>
+							<comment>Associated with each of the EMS Agency Number (dAgency.02).</comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>

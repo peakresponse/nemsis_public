@@ -315,6 +315,8 @@
 						
 						
 						
+						
+						
 					</xs:sequence>
 					
 				</xs:complexType>
@@ -674,6 +676,43 @@
 			<xs:enumeration value="3913081">
 				<xs:annotation>
 					<xs:documentation>Wrist-Right</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AirwayPlacementTechnique">
+		<xs:annotation>
+			<xs:documentation>The manner/equipment used during the placement of the advanced airway.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="3914001">
+				<xs:annotation>
+					<xs:documentation>Blind Digital Technique</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3914003">
+				<xs:annotation>
+					<xs:documentation>Cross Finger Technique</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3914005">
+				<xs:annotation>
+					<xs:documentation>Direct Laryngoscopy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3914007">
+				<xs:annotation>
+					<xs:documentation>Fiberoptic Laryngoscopy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3914009">
+				<xs:annotation>
+					<xs:documentation>Indirect Laryngoscopy</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3914011">
+				<xs:annotation>
+					<xs:documentation>Video Laryngoscopy</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

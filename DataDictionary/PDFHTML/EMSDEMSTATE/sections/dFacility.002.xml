@@ -1,8 +1,8 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
 <section name="dFacility">
-  <group number="dFacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="Yes" isNillable="No">
+  <group number="dFacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="Yes" ProcedureGroupCorrelationID="" CustomElementID="" timeStamp="" isNillable="No">
     <element number="dFacility.01" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="TypeOfFacility"><name>Type of Facility</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
-    <group number="dFacility.FacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="Yes" isNillable="No">
+    <group number="dFacility.FacilityGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="Yes" ProcedureGroupCorrelationID="" CustomElementID="" timeStamp="" isNillable="No">
       <element number="dFacility.02" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="FacilityName"><name>Facility Name</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
       <element number="dFacility.03" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="FacilityCode"><name>Facility Location Code</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
       <element number="dFacility.04" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="" isNillable="No" dataType="HospitalDesignation"><name>Hospital Designations</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>

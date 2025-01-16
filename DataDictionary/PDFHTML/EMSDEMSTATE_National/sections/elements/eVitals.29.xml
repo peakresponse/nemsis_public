@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
 <element number="eVitals.29"  minOccurs="1"  maxOccurs="1"  dataTypeName="StrokeScale"  isNillable="Yes">
-<name>Stroke Scale Score</name>
+<name>Stroke Scale Result</name>
 <national>Yes</national>
 <deprecated></deprecated>
 <state>Yes</state>
@@ -30,19 +30,19 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e086" role="Warning">
-      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eVitals.29">Stroke Scale Score</elementRef> is "Positive".
+      <elementRef elementNumber="eSituation.18">Date/Time Last Known Well</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eVitals.29">Stroke Scale Result</elementRef> is &quot;Positive&quot;.
       </assert>
   <assert id="nemSch_e172" role="Warning">
-      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is "Hospital..." or "Freestanding Emergency Department" and <elementRef elementNumber="eVitals.29">Stroke Scale Score</elementRef> is "Positive".
+      <elementRef elementNumber="eDisposition.23">Hospital Capability</elementRef> should be recorded when <elementRef elementNumber="eDisposition.21">Type of Destination</elementRef> is &quot;Hospital...&quot; or &quot;Freestanding Emergency Department&quot; and <elementRef elementNumber="eVitals.29">Stroke Scale Result</elementRef> is &quot;Positive&quot;.
       </assert>
   <assert id="nemSch_e008" role="Error">
-      When Stroke Scale Score has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      When Stroke Scale Result has a Pertinent Negative, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
       </assert>
   <assert id="nemSch_e002" role="Error">
-      When Stroke Scale Score has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      When Stroke Scale Result has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
       </assert>
   <assert id="nemSch_e001" role="Error">
-      When Stroke Scale Score is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      When Stroke Scale Result is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
       </assert>
 </asserts>
 </element>

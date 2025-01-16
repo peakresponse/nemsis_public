@@ -1,8 +1,8 @@
 @echo off
 rem Windows batch file to build Schematron test cases, generate SVRL output, and check results.
 
-rem Version: 3.5.0.230317CP4_230317
-rem Revision Date: March 17, 2023
+rem Version: 3.5.1.250115_241219
+rem Revision Date: December 19, 2024
 
 rem This product is provided by the NEMSIS TAC, without charge, to facilitate development
 rem of NEMSIS Schematron schemas.
@@ -68,7 +68,7 @@ for /f "delims=" %%i in ('dir /b *.xml') do (
   if "!List!"=="" (set List="%%i") else (set List=!List! "%%i")
 )
 
-%xmllint% --noout --schema "http://nemsis.org/media/nemsis_v3/release-3.5.0/XSDs/NEMSIS_XSDs/%dataset%_v3.xsd" %List%
+%xmllint% --noout --schema "http://nemsis.org/media/nemsis_v3/release-3.5.1/XSDs/NEMSIS_XSDs/%dataset%_v3.xsd" %List%
 
 echo Check XSD validation results for test case files.
 pause

@@ -2,93 +2,32 @@ NEMSIS Schematron Change Log
 
 
 
-3.5.0.230317CP4
-
-
-National Schematron Schemas
-
-Corrected nemSch_e182 codes for eDisposition.30 Transport Disposition. Previously, a warning was incorrectly issued when Unit Disposition is not "Patient Contact Made" and Transport Disposition is "Non-Patient Transport (Not Otherwise Listed)" or "No Transport". (NEMPUB-545)
-Corrected nemSch_e187 to issue a warning when eDisposition.32 Level of Care Provided Per Protocol is "No Care Provided" and Patient Evaluation/Care is "Patient Evaluated and Care Provided". Previously, the warning was only issued when eDisposition.32 is blank. (NEMPUB-536)
-Updated element names for eInjury.03 and eInjury.04 per XSD change.
-
-
-
-3.5.0.211008CP3
-
-
-Updated build number to match XSD critical patch 3
-
-
-
-3.5.0.211001CP2
-
-
-NEMSIS V3 Schematron Guide, Schemas and Development Kit
-
-Added UUID to Schematron diagnostics
-
-
-National Schematron Schemas
-
-Incorporated Schematron diagnostics update
-Minor improvements to diagnostic information in some asserts (no impact on business logic of rules)
-
-
-
-3.5.0.191130CP1_210121
-
-
-NEMSIS V3 Schematron Guide, Schemas and Development Kit
-
-Added Test-driven Schematron development resources
-SchematronHtml.xsl: Bug fix for element name lookups in summary pages
-
-
-
-3.5.0.191130CP1
-
-
-National Schematron Schemas
-
-Corrected documentation hyperlink to nemsis.org Schematron page
-
-
-
-3.5.0.190930
+3.5.1.250115
 
 
 NEMSIS V3 Schematron Guide
 
-Change to 2016 version of ISO Schematron standard
-@schemaVersion must include a version or build number
-Documentation of new properties element (optional)
-Discussion of use of StateDataSet in Schematron schemas
-States should not update Schematron schemas more than quarterly
-State must test their Schematron schemas
+Added link to NEMSIS Schematron schema validator.
 
 
 National Schematron Schemas
 
-Rewrote all asserts to be more atomic
-Added asserts from new data elements and from full data dictionary review
-Removed asserts not pertaining to national elements (except structural asserts related to nil, NV, PN, and UUID)
-Added Schematron schema for StateDataSet
+Updated element names for eVitals.29 and eDisposition.19 per XSD change.
+nemSch_e066: Removed assertion: Primary Method of Payment should be recorded when Transport Disposition is "Transport by This EMS Unit...". (NEMPUB-689)
+nemSch_e078: Removed assertion: Chief Complaint Anatomic Location should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided". (NEMPUB-681)
+nemSch_e079: Removed assertion: Chief Complaint Organ System should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided". (NEMPUB-677)
+nemSch_e103: Changed assertion to no longer apply when eArrest.01 Cardiac Arrest is "Yes, Prior to Any EMS Arrival (includes Transport EMS & Medical First Responders)". Assertion now reads: AED Use Prior to EMS Arrival should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Cardiac Arrest is "Yes, Prior to Any EMS Arrival (includes Transport EMS & Medical First Responders)". (NEMPUB-624)
+nemSch_e188: Added assertion per XSD change: When Date/Time Last Known Well has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e189: Added assertion per XSD change: When Date/Time of Cardiac Arrest has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e190: Added assertion per XSD change: When Age has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e191: Added assertion per XSD change: When Date/Time Last Known Well has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+nemSch_e192: Added assertion per XSD change: When Date/Time of Cardiac Arrest has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
 
 
-Documentation Interface
+Development Kit and Documentation Interface
 
-Added Assert IDs to overview pages
-Integrated national Schematron schemas into NEMSIS Data Dictionary
-
-
-Schemas and Development Kit
-
-Modified nemsisDiagnostic to support StateDataSet
-iso-schematron.rnc: Updated to modified copy of ISO 2016 schema
-iso-schematron.sch: Updated to copy of ISO 2016 schema
-nemsis-schematron.sch: Updated to reflect requirement changes and support StateDataSet
-nemsis-svrl.rnc: Updated to modified copy of ISO 2016 schema
+Updated element list.
 
 
 
-For changes prior to version 3.5.0, see the appropriate release-* branch of the NEMSIS repository.
+For changes prior to version 3.5.1, see the appropriate release-* branch of the NEMSIS repository.

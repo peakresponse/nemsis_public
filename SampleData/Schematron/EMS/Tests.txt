@@ -330,11 +330,6 @@ ID:               nemSch_e065_A
 Description:      Age Units should be recorded when Age is recorded.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-nemSch_e066_A.xml
-ID:               nemSch_e066_A
-Description:      Primary Method of Payment should be recorded when Transport Disposition is "Transport by This EMS Unit...".
-Expected Result:  [WARNING]
-
 File:             EMSDataSet-nemSch_e067_A.xml
 ID:               nemSch_e067_A
 Description:      Number of Patients at Scene should be "Multiple" or "Single" when Unit Disposition is "Patient Contact Made".
@@ -390,16 +385,6 @@ ID:               nemSch_e077_A
 Description:      Possible Injury should be "Yes" when a symptom or impression is injury-related.
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-nemSch_e078_A.xml
-ID:               nemSch_e078_A
-Description:      Chief Complaint Anatomic Location should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided".
-Expected Result:  [WARNING]
-
-File:             EMSDataSet-nemSch_e079_A.xml
-ID:               nemSch_e079_A
-Description:      Chief Complaint Organ System should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided".
-Expected Result:  [WARNING]
-
 File:             EMSDataSet-nemSch_e080_A.xml
 ID:               nemSch_e080_A
 Description:      Primary Symptom should be recorded when Type of Service Requested is "Emergency Response (Primary Response Area)" and Patient Evaluation/Care is "Patient Evaluated and Care Provided".
@@ -432,7 +417,7 @@ Expected Result:  [WARNING]
 
 File:             EMSDataSet-nemSch_e086_A.xml
 ID:               nemSch_e086_A
-Description:      Date/Time Last Known Well should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Stroke Scale Score is "Positive".
+Description:      Date/Time Last Known Well should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided" and Stroke Scale Result is "Positive".
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-nemSch_e087_A.xml
@@ -887,7 +872,7 @@ Expected Result:  [WARNING]
 
 File:             EMSDataSet-nemSch_e172_A.xml
 ID:               nemSch_e172_A
-Description:      Hospital Capability should be recorded when Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Stroke Scale Score is "Positive".
+Description:      Hospital Capability should be recorded when Type of Destination is "Hospital..." or "Freestanding Emergency Department" and Stroke Scale Result is "Positive".
 Expected Result:  [WARNING]
 
 File:             EMSDataSet-nemSch_e173_A.xml
@@ -964,6 +949,31 @@ File:             EMSDataSet-nemSch_e187_A.xml
 ID:               nemSch_e187_A
 Description:      Level of Care Provided per Protocol should be recorded (with a value other than "No Care Provided") when Patient Evaluation/Care is "Patient Evaluated and Care Provided".
 Expected Result:  [WARNING]
+
+File:             EMSDataSet-nemSch_e188_A.xml
+ID:               nemSch_e188_A
+Description:      When Date/Time Last Known Well has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-nemSch_e189_A.xml
+ID:               nemSch_e189_A
+Description:      When Date/Time of Cardiac Arrest has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-nemSch_e190_A.xml
+ID:               nemSch_e190_A
+Description:      When Age has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-nemSch_e191_A.xml
+ID:               nemSch_e191_A
+Description:      When Date/Time Last Known Well has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
+
+File:             EMSDataSet-nemSch_e192_A.xml
+ID:               nemSch_e192_A
+Description:      When Date/Time of Cardiac Arrest has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+Expected Result:  [ERROR]
 
 File:             EMSDataSet-nemSch_eNilNvPn_eNvPn_A.xml
 ID:               nemSch_eNilNvPn_eNvPn_A

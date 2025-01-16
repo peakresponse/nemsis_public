@@ -22,11 +22,10 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) 
-								and the FL 17 - Patient Discharge Status Required. 
-								(For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6).
-								
-								&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/Regulations-and-Guidance/Guidance/Transmittals/downloads/R1104CP.pdf" target="_blank">https://www.cms.gov/Regulations-and-Guidance/Guidance/Transmittals/downloads/R1104CP.pdf&lt;/a>  Search for: "FL 17 – Patient Status"</comment>
+							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and FL 17 - Patient Discharge Status.
+								&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/clm104c25.pdf" target="_blank">https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/clm104c25.pdf&lt;/a> (see "FL 17 – Patient Discharge Status")
+								&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing Committee (NUBC, &lt;a href="http://www.nubc.org/" target="_blank">http://www.nubc.org/&lt;/a>) via the NUBC's Official UB-04 Data Specifications Manual.
+							</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -61,11 +60,10 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and the FL 17 - Patient Discharge Status Required.  
-								(For all Part A inpatient, SNF, hospice, home health agency (HHA) and outpatient hospital services.) This code indicates the patient's status as of the "Through" date of the billing period (FL 6). 
-							&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/transmittals/downloads/R1104CP.pdf">https://www.cms.gov/transmittals/downloads/R1104CP.pdf&lt;/a>  Page 35-36
-							&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing company (NUBC &lt;a href="http://www.nubc.org">http://www.nubc.org&lt;/a>) via the NUBC's Official UB-04 Data Specifications Manual.  
-							&lt;br/>&lt;br/>Contractor site, Knowledge Trek:  &lt;a href="http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf">http://www.ub04.net/downloads/Medicare_Pub_Ch_25.pdf&lt;/a> Please reference the section "FL 17 - Patient Status" found on page 23-25 of 126.</comment>
+							<comment>The list of values and codes is based on and in compliance with the Medicare Claims Processing Manual Chapter 25 Completing and Processing the Form CMS-1450 Data Set, referencing the Uniform Bill - Form CMS-1450 (UB-04) and FL 17 - Patient Discharge Status.
+								&lt;br/>&lt;br/>&lt;a href="https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/clm104c25.pdf" target="_blank">https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/clm104c25.pdf&lt;/a> (see "FL 17 – Patient Discharge Status")
+								&lt;br/>&lt;br/>Codes are available from Medicare contractors and the National Uniform Billing Committee (NUBC, &lt;a href="http://www.nubc.org/" target="_blank">http://www.nubc.org/&lt;/a>) via the NUBC's Official UB-04 Data Specifications Manual.
+							</comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -550,6 +548,20 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="eOutcome.21" id="eOutcome.InjurySeverityScore" type="InjurySeverityScore" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>eOutcome.21</number>
+							<name>Injury Severity Score</name>
+							<national>No</national>
+							<state>No</state>
+							<definition>The patient's total Injury Severity Score.</definition>
+							<usage>Optional</usage>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="OutcomeAtHospitalDischarge">
@@ -973,6 +985,15 @@
 		<xs:restriction base="xs:integer">
 			<xs:minInclusive value="1"/>
 			<xs:maxInclusive value="400"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="InjurySeverityScore">
+		<xs:annotation>
+			<xs:documentation>The patient's total Injury Severity Score.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="75"/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

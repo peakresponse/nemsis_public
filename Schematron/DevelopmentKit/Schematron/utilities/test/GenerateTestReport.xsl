@@ -6,8 +6,8 @@ Generate Test Case Validation Report XSL Transformation
 
 XML Stylesheet Language Transformation (XSLT) to generate a report of test case validation results
 
-Version: 3.5.0.230317CP4_230317
-Revision Date: March 17, 2023
+Version: 3.5.1.250115_241219
+Revision Date: December 19, 2024
 
 This product is provided by the NEMSIS TAC, without charge, to facilitate test-driven development
 of NEMSIS Schematron schemas.
@@ -21,7 +21,7 @@ of NEMSIS Schematron schemas.
   <xsl:output method="text"/>
 
   <xsl:template match="/">
-    <xsl:variable name="svrl" select="collection(concat(document-uri(/), '/../?select=*.xml'))"/>
+    <xsl:variable name="svrl" select="collection(concat(base-uri(/), '/../?select=*.xml'))"/>
     <svrl:text>NEMSIS V3 Schematron Test Case Results</svrl:text>
 Schema:           <xsl:value-of select="svrl:schematron-output/@title"/>
 Version:          <xsl:value-of select="svrl:schematron-output/@schemaVersion"/>

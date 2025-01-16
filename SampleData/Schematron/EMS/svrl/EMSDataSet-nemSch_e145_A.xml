@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<svrl:schematron-output xmlns:iso="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:nem="http://www.nemsis.org"
                         xmlns:saxon="http://saxon.sf.net/"
                         xmlns:schold="http://www.ascc.net/xml/schematron"
-                        xmlns:iso="http://purl.oclc.org/dsdl/schematron"
+                        xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                         xmlns:xhtml="http://www.w3.org/1999/xhtml"
-                        xmlns:nem="http://www.nemsis.org"
+                        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for EMSDataSet"
-                        schemaVersion="3.5.0.230317CP4"><!--   
+                        schemaVersion="3.5.1.250115"><!--   
 		   
 		   
 		 -->
@@ -64,9 +64,6 @@
                         id="nemSch_ePatient"
                         name="EMSDataSet / Patient Information"/>
    <svrl:fired-rule context="nem:ePatient.07[. != '']" id="nemSch_ePatient_rule_2"/>
-   <svrl:active-pattern document="file:/C:/Users/Josh/Documents/NEMSIS%20TAC/Repository/nemsis/Schematron/utilities/../dist/SampleData/Schematron/EMS/xml/EMSDataSet-nemSch_e145_A.xml"
-                        id="nemSch_ePayment"
-                        name="EMSDataSet / Insurance/Payment Information"/>
    <svrl:active-pattern document="file:/C:/Users/Josh/Documents/NEMSIS%20TAC/Repository/nemsis/Schematron/utilities/../dist/SampleData/Schematron/EMS/xml/EMSDataSet-nemSch_e145_A.xml"
                         id="nemSch_eScene"
                         name="EMSDataSet / Incident Scene Information"/>
@@ -128,7 +125,7 @@
       <svrl:text>Medication Administered should be an RxNorm code of between 2 and 7 digits or a SNOMED code specifically allowed in the data dictionary.
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
-         <nemsisDiagnostic xmlns="http://www.nemsis.org">
+         <nemsisDiagnostic xmlns="http://www.nemsis.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
             <record>
                <dAgency.01>0</dAgency.01>
                <dAgency.02>A</dAgency.02>

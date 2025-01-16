@@ -10,7 +10,7 @@
 							<name>Barriers to Patient Care</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>Indication of whether or not there were any patient specific barriers to serving the patient at the scene.</definition>
+							<definition>Indication of whether or not there were any patient specific barriers to serving the patient.</definition>
 							<v2Number>E12_01</v2Number>
 							<usage>Required</usage>
 							<comment></comment>
@@ -149,6 +149,16 @@
 			<xs:enumeration value="3117013">
 				<xs:annotation>
 					<xs:documentation>Physical Exam Indicates Suspected Alcohol or Drug Use</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3117015">
+				<xs:annotation>
+					<xs:documentation>Bystander/Family Reports Drug Use</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3117017">
+				<xs:annotation>
+					<xs:documentation>Bystander/Family Reports Alcohol Use</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -408,7 +418,7 @@
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="3120001">
 				<xs:annotation>
-					<xs:documentation>qi (every hour)</xs:documentation>
+					<xs:documentation>q1h (every hour)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3120003">
@@ -433,7 +443,7 @@
 			</xs:enumeration>
 			<xs:enumeration value="3120011">
 				<xs:annotation>
-					<xs:documentation>tad (three times a day)</xs:documentation>
+					<xs:documentation>tid (three times a day)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3120013">
@@ -468,12 +478,12 @@
 			</xs:enumeration>
 			<xs:enumeration value="3120025">
 				<xs:annotation>
-					<xs:documentation>has (at bedtime)</xs:documentation>
+					<xs:documentation>hs (at bedtime)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3120027">
 				<xs:annotation>
-					<xs:documentation>sod (every other day)</xs:documentation>
+					<xs:documentation>qod (every other day)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="3120029">

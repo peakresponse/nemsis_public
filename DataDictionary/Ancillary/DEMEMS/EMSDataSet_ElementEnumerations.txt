@@ -96,6 +96,7 @@
 'EMSDataSet'|'eResponse.09'|'Type of Response Delay'|'2209029'|'Weather'|
 'EMSDataSet'|'eResponse.09'|'Type of Response Delay'|'2209031'|'Mechanical Issue-Unit, Equipment, etc.'|
 'EMSDataSet'|'eResponse.09'|'Type of Response Delay'|'2209033'|'Flight Planning'|
+'EMSDataSet'|'eResponse.09'|'Type of Response Delay'|'2209035'|'Out of Service Area Response'|
 'EMSDataSet'|'eResponse.10'|'Type of Scene Delay'|'2210001'|'Awaiting Air Unit'|
 'EMSDataSet'|'eResponse.10'|'Type of Scene Delay'|'2210003'|'Awaiting Ground Unit'|
 'EMSDataSet'|'eResponse.10'|'Type of Scene Delay'|'2210005'|'Crowd'|
@@ -211,6 +212,10 @@
 'EMSDataSet'|'eDispatch.01'|'Dispatch Reason'|'2301087'|'Intercept'|
 'EMSDataSet'|'eDispatch.01'|'Dispatch Reason'|'2301089'|'Nausea'|
 'EMSDataSet'|'eDispatch.01'|'Dispatch Reason'|'2301091'|'Vomiting'|
+'EMSDataSet'|'eDispatch.01'|'Dispatch Reason'|'2301093'|'Hanging/Strangulation/Asphyxiation'|
+'EMSDataSet'|'eDispatch.01'|'Dispatch Reason'|'2301095'|'Intoxicated Subject'|
+'EMSDataSet'|'eDispatch.01'|'Dispatch Reason'|'2301097'|'EMS Requested by Law Enforcement'|
+'EMSDataSet'|'eDispatch.01'|'Dispatch Reason'|'2301099'|'Active Shooter'|
 'EMSDataSet'|'eDispatch.02'|'EMD Performed'|'2302001'|'No'|
 'EMSDataSet'|'eDispatch.02'|'EMD Performed'|'2302003'|'Yes, With Pre-Arrival Instructions'|
 'EMSDataSet'|'eDispatch.02'|'EMD Performed'|'2302005'|'Yes, Without Pre-Arrival Instructions'|
@@ -254,6 +259,7 @@
 'EMSDataSet'|'ePatient.14'|'Race'|'2514007'|'Hispanic or Latino'|
 'EMSDataSet'|'ePatient.14'|'Race'|'2514009'|'Native Hawaiian or Other Pacific Islander'|
 'EMSDataSet'|'ePatient.14'|'Race'|'2514011'|'White'|
+'EMSDataSet'|'ePatient.14'|'Race'|'2514013'|'Middle Eastern or North African'|
 'EMSDataSet'|'ePatient.16'|'Age Units'|'2516001'|'Days'|
 'EMSDataSet'|'ePatient.16'|'Age Units'|'2516003'|'Hours'|
 'EMSDataSet'|'ePatient.16'|'Age Units'|'2516005'|'Minutes'|
@@ -262,6 +268,58 @@
 'EMSDataSet'|'ePatient.22'|'Alternate Home Residence'|'2522001'|'Homeless'|
 'EMSDataSet'|'ePatient.22'|'Alternate Home Residence'|'2522003'|'Migrant Worker'|
 'EMSDataSet'|'ePatient.22'|'Alternate Home Residence'|'2522005'|'Foreign Visitor'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'amh'|'Amharic'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'ara'|'Arabic'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'arm'|'Armenian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'ben'|'Bengali'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'crp'|'Cajun (Creole and Pidgins)'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'chi'|'Chinese'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'hrv'|'Croatian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'cze'|'Czech'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'dan'|'Danish'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'dut'|'Dutch'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'eng'|'English'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'fin'|'Finnish'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'tai'|'Formosan'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'fre'|'French'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'cpf'|'French Creole'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'ger'|'German'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'gre'|'Greek'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'guj'|'Gujarati'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'heb'|'Hebrew'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'hin'|'Hindi (Urdu)'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'hun'|'Hungarian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'ilo'|'Ilocano'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'itl'|'Italian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'jpn'|'Japanese'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'kor'|'Korean'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'kro'|'Kru'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'lit'|'Lithuanian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'mal'|'Malayalam'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'hmn'|'Miao (Hmong)'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'mkh'|'Mon-Khmer (Cambodian)'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'nav'|'Navaho'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'nno'|'Norwegian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'pan'|'Panjabi'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'gem'|'Pennsylvania Dutch (Germanic Other)'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'per'|'Persian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'pol'|'Polish'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'por'|'Portuguese'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'rum'|'Romanian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'rus'|'Russian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'sgn'|'Sign Languages'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'smo'|'Samoan'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'srp'|'Serbo-Croatian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'slo'|'Slovak'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'spa'|'Spanish'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'swe'|'Swedish'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'syr'|'Syriac'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'tgl'|'Tagalog'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'tha'|'Thai (Laotian)'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'tur'|'Turkish'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'ukr'|'Ukrainian'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'vie'|'Vietnamese'|
+'EMSDataSet'|'ePatient.24'|'Patient's Preferred Language(s)'|'yid'|'Yiddish'|
 'EMSDataSet'|'ePayment.01'|'Primary Method of Payment'|'2601001'|'Insurance'|
 'EMSDataSet'|'ePayment.01'|'Primary Method of Payment'|'2601003'|'Medicaid'|
 'EMSDataSet'|'ePayment.01'|'Primary Method of Payment'|'2601005'|'Medicare'|
@@ -426,7 +484,7 @@
 'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704003'|'Fire'|
 'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704005'|'First Responder'|
 'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704007'|'Hazmat'|
-'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704009'|'Law'|
+'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704009'|'Law Enforcement'|
 'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704011'|'Other'|
 'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704013'|'Other EMS Agency'|
 'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704015'|'Other Health Care Provider'|
@@ -434,6 +492,9 @@
 'EMSDataSet'|'eScene.04'|'Type of Other Service at Scene'|'2704019'|'Utilities'|
 'EMSDataSet'|'eScene.24'|'First Other EMS or Public Safety Agency at Scene to Provide Patient Care'|'9923001'|'No'|
 'EMSDataSet'|'eScene.24'|'First Other EMS or Public Safety Agency at Scene to Provide Patient Care'|'9923003'|'Yes'|
+'EMSDataSet'|'eScene.25'|'Transferred Patient/Care To/From Agency'|'2725001'|'Transferred Patient to Agency'|
+'EMSDataSet'|'eScene.25'|'Transferred Patient/Care To/From Agency'|'2725003'|'Received Patient from Agency'|
+'EMSDataSet'|'eScene.25'|'Transferred Patient/Care To/From Agency'|'2725005'|'No Transfer of Patient/Care To/From Agency'|
 'EMSDataSet'|'eScene.06'|'Number of Patients at Scene'|'2707001'|'Multiple'|
 'EMSDataSet'|'eScene.06'|'Number of Patients at Scene'|'2707003'|'None'|
 'EMSDataSet'|'eScene.06'|'Number of Patients at Scene'|'2707005'|'Single'|
@@ -681,7 +742,7 @@
 'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009007'|'Compressions-External Thumper Type Device'|
 'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009009'|'Compressions-Intermittent with Ventilation'|
 'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009011'|'Compressions-Other Device'|
-'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009021'|'Compressions-Hands Only CPR'|
+'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009021'|'Compressions-Hands Only CPR (DEPRECATED)'|
 'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009013'|'Ventilation-Bag Valve Mask'|
 'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009015'|'Ventilation-Impedance Threshold Device'|
 'EMSDataSet'|'eArrest.09'|'Type of CPR Provided'|'3009017'|'Ventilation-Mouth to Mouth'|
@@ -896,20 +957,20 @@
 'EMSDataSet'|'eHistory.15'|'Current Medication Administration Route'|'9927071'|'Nebulizer'|
 'EMSDataSet'|'eHistory.15'|'Current Medication Administration Route'|'9927073'|'Umbilical Artery Catheter'|
 'EMSDataSet'|'eHistory.15'|'Current Medication Administration Route'|'9927075'|'Umbilical Venous Catheter'|
-'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120001'|'qi (every hour)'|
+'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120001'|'q1h (every hour)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120003'|'q2h (every 2 hours)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120005'|'q3h (every 3 hours)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120007'|'q4h (every 4 hours)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120009'|'qid (four times a day)'|
-'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120011'|'tad (three times a day)'|
+'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120011'|'tid (three times a day)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120013'|'ac (before meals)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120015'|'pc (after meals)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120017'|'bid (twice a day)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120019'|'qd (every day)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120021'|'qd-am (every day in the morning)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120023'|'qd-pm (every day in the evening)'|
-'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120025'|'has (at bedtime)'|
-'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120027'|'sod (every other day)'|
+'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120025'|'hs (at bedtime)'|
+'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120027'|'qod (every other day)'|
 'EMSDataSet'|'eHistory.20'|'Current Medication Frequency'|'3120029'|'prn (as needed)'|
 'EMSDataSet'|'eHistory.16'|'Presence of Emergency Information Form'|'9923001'|'No'|
 'EMSDataSet'|'eHistory.16'|'Presence of Emergency Information Form'|'9923003'|'Yes'|
@@ -919,6 +980,8 @@
 'EMSDataSet'|'eHistory.17'|'Alcohol/Drug Use Indicators'|'3117007'|'Patient Admits to Drug Use'|
 'EMSDataSet'|'eHistory.17'|'Alcohol/Drug Use Indicators'|'3117009'|'Positive Level known from Law Enforcement or Hospital Record'|
 'EMSDataSet'|'eHistory.17'|'Alcohol/Drug Use Indicators'|'3117013'|'Physical Exam Indicates Suspected Alcohol or Drug Use'|
+'EMSDataSet'|'eHistory.17'|'Alcohol/Drug Use Indicators'|'3117015'|'Bystander/Family Reports Drug Use'|
+'EMSDataSet'|'eHistory.17'|'Alcohol/Drug Use Indicators'|'3117017'|'Bystander/Family Reports Alcohol Use'|
 'EMSDataSet'|'eHistory.18'|'Pregnancy'|'3118001'|'No'|
 'EMSDataSet'|'eHistory.18'|'Pregnancy'|'3118003'|'Possible, Unconfirmed'|
 'EMSDataSet'|'eHistory.18'|'Pregnancy'|'3118005'|'Yes, Confirmed 12 to 20 Weeks'|
@@ -1037,21 +1100,24 @@
 'EMSDataSet'|'eVitals.28'|'Pain Scale Type'|'3328003'|'Numeric (0-10)'|
 'EMSDataSet'|'eVitals.28'|'Pain Scale Type'|'3328005'|'Other'|
 'EMSDataSet'|'eVitals.28'|'Pain Scale Type'|'3328007'|'Wong-Baker (FACES)'|
-'EMSDataSet'|'eVitals.29'|'Stroke Scale Score'|'3329001'|'Negative'|
-'EMSDataSet'|'eVitals.29'|'Stroke Scale Score'|'3329003'|'Non-Conclusive'|
-'EMSDataSet'|'eVitals.29'|'Stroke Scale Score'|'3329005'|'Positive'|
+'EMSDataSet'|'eVitals.29'|'Stroke Scale Result'|'3329001'|'Negative'|
+'EMSDataSet'|'eVitals.29'|'Stroke Scale Result'|'3329003'|'Non-Conclusive'|
+'EMSDataSet'|'eVitals.29'|'Stroke Scale Result'|'3329005'|'Positive'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330001'|'Cincinnati Prehospital Stroke Scale (CPSS)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330004'|'Los Angeles Prehospital Stroke Screen (LAPSS)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330005'|'Massachusetts Stroke Scale (MSS)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330007'|'Miami Emergency Neurologic Deficit Exam (MEND)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330009'|'NIH Stroke Scale (NIHSS)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330011'|'Other Stroke Scale Type'|
-'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330013'|'FAST-ED'|
+'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330013'|'FAST'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330015'|'Boston Stroke Scale (BOSS)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330017'|'Ontario Prehospital Stroke Scale (OPSS)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330019'|'Melbourne Ambulance Stroke Screen (MASS)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330021'|'Rapid Arterial oCclusion Evaluation (RACE)'|
 'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330023'|'Los Angeles Motor Score (LAMS)'|
+'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330025'|'Vision, Aphasia, Neglect (VAN)'|
+'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330027'|'FAST-ED'|
+'EMSDataSet'|'eVitals.30'|'Stroke Scale Type'|'3330029'|'BEFAST'|
 'EMSDataSet'|'eVitals.31'|'Reperfusion Checklist'|'3331001'|'Definite Contraindications to Thrombolytic Use'|
 'EMSDataSet'|'eVitals.31'|'Reperfusion Checklist'|'3331003'|'No Contraindications to Thrombolytic Use'|
 'EMSDataSet'|'eVitals.31'|'Reperfusion Checklist'|'3331005'|'Possible Contraindications to Thrombolytic Use'|
@@ -1115,7 +1181,7 @@
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403117'|'ACT Kaolin (ACTk)'|
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403119'|'Bands'|
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403121'|'Basophils'|
-'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403123'|'Creatine Phosphokinase (CK)'|
+'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403123'|'Creatine Phosphokinase (CK) (DEPRECATED)'|
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403125'|'Eosinophils'|
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403127'|'Erythrocyte Count'|
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403129'|'Erythrocyte Morphology'|
@@ -1134,11 +1200,11 @@
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403155'|'Prothromblin test time (PT/INR)'|
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403157'|'Red Cell Distribution Width (RDW)'|
 'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403159'|'Reticulocyte Count'|
-'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403161'|'Troporin T (cTnT)'|
-'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405001'|'CAT Scan'|
+'EMSDataSet'|'eLabs.03'|'Laboratory Result Type'|'3403161'|'Troponin T (cTnT)'|
+'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405001'|'Computed Tomography (CT) Scan'|
 'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405003'|'Magnetic Resonance Imaging (MRI)'|
 'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405005'|'Other'|
-'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405007'|'PET Scan'|
+'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405007'|'Positron Emission Tomography (PET) Scan'|
 'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405009'|'Ultrasound'|
 'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405011'|'X-ray'|
 'EMSDataSet'|'eLabs.05'|'Imaging Study Type'|'3405013'|'Angiography'|
@@ -1332,6 +1398,8 @@
 'EMSDataSet'|'eExam.13'|'Back and Spine Assessment Finding Location'|'3513021'|'Sacral-Left'|
 'EMSDataSet'|'eExam.13'|'Back and Spine Assessment Finding Location'|'3513023'|'Sacral-Midline'|
 'EMSDataSet'|'eExam.13'|'Back and Spine Assessment Finding Location'|'3513025'|'Sacral-Right'|
+'EMSDataSet'|'eExam.13'|'Back and Spine Assessment Finding Location'|'3513029'|'Flank-Left'|
+'EMSDataSet'|'eExam.13'|'Back and Spine Assessment Finding Location'|'3513031'|'Flank-Right'|
 'EMSDataSet'|'eExam.14'|'Back and Spine Assessment'|'3514001'|'Abrasion'|
 'EMSDataSet'|'eExam.14'|'Back and Spine Assessment'|'3514003'|'Avulsion'|
 'EMSDataSet'|'eExam.14'|'Back and Spine Assessment'|'3514005'|'Bleeding Controlled'|
@@ -1450,6 +1518,13 @@
 'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516079'|'Swelling'|
 'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516081'|'Contusion'|
 'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516083'|'Arm Drift'|
+'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516085'|'Cool/Cold to Touch'|
+'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516087'|'Cyanosis'|
+'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516089'|'Erythema/Flushing'|
+'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516091'|'Hot/Warm to Touch'|
+'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516093'|'Lividity'|
+'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516095'|'Mottled'|
+'EMSDataSet'|'eExam.16'|'Extremities Assessment'|'3516097'|'Pale'|
 'EMSDataSet'|'eExam.17'|'Eye Assessment Finding Location'|'3517001'|'Bilateral'|
 'EMSDataSet'|'eExam.17'|'Eye Assessment Finding Location'|'3517003'|'Left'|
 'EMSDataSet'|'eExam.17'|'Eye Assessment Finding Location'|'3517005'|'Right'|
@@ -1497,7 +1572,7 @@
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523013'|'Normal'|
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523015'|'Not Done'|
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523017'|'Pain'|
-'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523019'|'Pain with Inspiraton/Expiration'|
+'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523019'|'Pain with Inspiration/Expiration'|
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523021'|'Rales'|
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523023'|'Rhonchi'|
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523025'|'Rhonchi/Wheezing'|
@@ -1505,9 +1580,9 @@
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523029'|'Wheezing-Expiratory'|
 'EMSDataSet'|'eExam.23'|'Lung Assessment'|'3523031'|'Wheezing-Inspiratory'|
 'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524001'|'Left - Anterior'|
-'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524003'|'Left - Posterior'|
+'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524003'|'Left - Posterior (DEPRECATED)'|
 'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524005'|'Right - Anterior'|
-'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524007'|'Right - Posterior'|
+'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524007'|'Right - Posterior (DEPRECATED)'|
 'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524009'|'General - Anterior'|
 'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524011'|'General - Posterior'|
 'EMSDataSet'|'eExam.24'|'Chest Assessment Finding Location'|'3524013'|'Left - Side'|
@@ -1518,7 +1593,7 @@
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525007'|'Bleeding Controlled'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525009'|'Bleeding Uncontrolled'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525011'|'Burn-Blistering'|
-'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525013'|'Burn-Charing'|
+'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525013'|'Burn-Charring'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525015'|'Burn-Redness'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525017'|'Burn-White/Waxy'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525019'|'Crush Injury'|
@@ -1536,7 +1611,7 @@
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525043'|'Gunshot Wound'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525045'|'Swelling'|
 'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525047'|'Contusion'|
-'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525049'|'Tenderness-General'|
+'EMSDataSet'|'eExam.25'|'Chest Assessment'|'3525049'|'Tenderness-General (DEPRECATED)'|
 'EMSDataSet'|'eExam.19'|'Mental Status Assessment'|'3519001'|'Combative'|
 'EMSDataSet'|'eExam.19'|'Mental Status Assessment'|'3519003'|'Confused'|
 'EMSDataSet'|'eExam.19'|'Mental Status Assessment'|'3519005'|'Hallucinations'|
@@ -1822,6 +1897,8 @@
 'EMSDataSet'|'eMedications.11'|'Medication Authorization'|'9918003'|'On-Scene'|
 'EMSDataSet'|'eMedications.11'|'Medication Authorization'|'9918005'|'Protocol (Standing Order)'|
 'EMSDataSet'|'eMedications.11'|'Medication Authorization'|'9918007'|'Written Orders (Patient Specific)'|
+'EMSDataSet'|'eMedications.13'|'Medication Administered by Another Unit'|'9923001'|'No'|
+'EMSDataSet'|'eMedications.13'|'Medication Administered by Another Unit'|'9923003'|'Yes'|
 'EMSDataSet'|'eProcedures.02'|'Procedure Performed Prior to this Unit's EMS Care'|'9923001'|'No'|
 'EMSDataSet'|'eProcedures.02'|'Procedure Performed Prior to this Unit's EMS Care'|'9923003'|'Yes'|
 'EMSDataSet'|'eProcedures.06'|'Procedure Successful'|'9923001'|'No'|
@@ -1919,6 +1996,14 @@
 'EMSDataSet'|'eProcedures.13'|'Vascular Access Location'|'3913077'|'Radial-Right'|
 'EMSDataSet'|'eProcedures.13'|'Vascular Access Location'|'3913079'|'Wrist-Left'|
 'EMSDataSet'|'eProcedures.13'|'Vascular Access Location'|'3913081'|'Wrist-Right'|
+'EMSDataSet'|'eProcedures.14'|'Airway Placement Technique'|'3914001'|'Blind Digital Technique'|
+'EMSDataSet'|'eProcedures.14'|'Airway Placement Technique'|'3914003'|'Cross Finger Technique'|
+'EMSDataSet'|'eProcedures.14'|'Airway Placement Technique'|'3914005'|'Direct Laryngoscopy'|
+'EMSDataSet'|'eProcedures.14'|'Airway Placement Technique'|'3914007'|'Fiberoptic Laryngoscopy'|
+'EMSDataSet'|'eProcedures.14'|'Airway Placement Technique'|'3914009'|'Indirect Laryngoscopy'|
+'EMSDataSet'|'eProcedures.14'|'Airway Placement Technique'|'3914011'|'Video Laryngoscopy'|
+'EMSDataSet'|'eProcedures.15'|'Procedure Performed by Another Unit'|'9923001'|'No'|
+'EMSDataSet'|'eProcedures.15'|'Procedure Performed by Another Unit'|'9923003'|'Yes'|
 'EMSDataSet'|'eAirway.01'|'Indications for Invasive Airway'|'4001001'|'Adequate Airway Reflexes/Effort, Potential for Compromise'|
 'EMSDataSet'|'eAirway.01'|'Indications for Invasive Airway'|'4001003'|'Airway Reflex Compromised'|
 'EMSDataSet'|'eAirway.01'|'Indications for Invasive Airway'|'4001005'|'Apnea or Agonal Respirations'|
@@ -2047,8 +2132,8 @@
 'EMSDataSet'|'eDisposition.29'|'Crew Disposition'|'4229013'|'Back in Service, Care/Support Services Refused'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230001'|'Transport by This EMS Unit (This Crew Only)'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230003'|'Transport by This EMS Unit, with a Member of Another Crew'|
-'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230005'|'Transport by Another EMS Unit'|
-'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230007'|'Transport by Another EMS Unit, with a Member of This Crew'|
+'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230005'|'Transport by Another EMS Unit/Agency'|
+'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230007'|'Transport by Another EMS Unit/Agency, with a Member of This Crew'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230009'|'Patient Refused Transport'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230011'|'Non-Patient Transport (Not Otherwise Listed)'|
 'EMSDataSet'|'eDisposition.30'|'Transport Disposition'|'4230013'|'No Transport'|
@@ -2060,6 +2145,7 @@
 'EMSDataSet'|'eDisposition.31'|'Reason for Refusal/Release'|'4231011'|'DNR'|
 'EMSDataSet'|'eDisposition.31'|'Reason for Refusal/Release'|'4231013'|'Medical/Physician Orders for Life Sustaining Treatment'|
 'EMSDataSet'|'eDisposition.31'|'Reason for Refusal/Release'|'4231015'|'Other, Not Listed'|
+'EMSDataSet'|'eDisposition.31'|'Reason for Refusal/Release'|'4231017'|'Patient Elopement'|
 'EMSDataSet'|'eDisposition.13'|'How Patient Was Moved to Ambulance'|'9909001'|'Assisted/Walk'|
 'EMSDataSet'|'eDisposition.13'|'How Patient Was Moved to Ambulance'|'9909003'|'Backboard'|
 'EMSDataSet'|'eDisposition.13'|'How Patient Was Moved to Ambulance'|'9909005'|'Chair'|
@@ -2078,6 +2164,10 @@
 'EMSDataSet'|'eDisposition.14'|'Position of Patient During Transport'|'4214015'|'Sitting'|
 'EMSDataSet'|'eDisposition.14'|'Position of Patient During Transport'|'4214017'|'Supine'|
 'EMSDataSet'|'eDisposition.14'|'Position of Patient During Transport'|'4214019'|'Trendelenburg'|
+'EMSDataSet'|'eDisposition.14'|'Position of Patient During Transport'|'4214021'|'Pediatric Ambulance Restraint Device'|
+'EMSDataSet'|'eDisposition.14'|'Position of Patient During Transport'|'4214023'|'Neonatal Ambulance Restraint Device'|
+'EMSDataSet'|'eDisposition.14'|'Position of Patient During Transport'|'4214025'|'Patient's Car Seat'|
+'EMSDataSet'|'eDisposition.14'|'Position of Patient During Transport'|'4214027'|'Ambulance Integrated Car Seat'|
 'EMSDataSet'|'eDisposition.15'|'How Patient Was Moved From Ambulance'|'9909001'|'Assisted/Walk'|
 'EMSDataSet'|'eDisposition.15'|'How Patient Was Moved From Ambulance'|'9909003'|'Backboard'|
 'EMSDataSet'|'eDisposition.15'|'How Patient Was Moved From Ambulance'|'9909005'|'Chair'|
@@ -2109,12 +2199,12 @@
 'EMSDataSet'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'4218015'|'No Lights or Sirens'|
 'EMSDataSet'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'4218017'|'Initial No Lights or Sirens, Upgraded to Lights and Sirens'|
 'EMSDataSet'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'4218019'|'Initial Lights and Sirens, Downgraded to No Lights or Sirens'|
-'EMSDataSet'|'eDisposition.19'|'Final Patient Acuity'|'4219001'|'Critical (Red)'|
-'EMSDataSet'|'eDisposition.19'|'Final Patient Acuity'|'4219003'|'Emergent (Yellow)'|
-'EMSDataSet'|'eDisposition.19'|'Final Patient Acuity'|'4219005'|'Lower Acuity (Green)'|
-'EMSDataSet'|'eDisposition.19'|'Final Patient Acuity'|'4219007'|'Dead without Resuscitation Efforts (Black)'|
-'EMSDataSet'|'eDisposition.19'|'Final Patient Acuity'|'4219009'|'Dead with Resuscitation Efforts (Black)'|
-'EMSDataSet'|'eDisposition.19'|'Final Patient Acuity'|'4219011'|'Non-Acute/Routine'|
+'EMSDataSet'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'4219001'|'Critical (Red)'|
+'EMSDataSet'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'4219003'|'Emergent (Yellow)'|
+'EMSDataSet'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'4219005'|'Lower Acuity (Green)'|
+'EMSDataSet'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'4219007'|'Dead without Resuscitation Efforts (Black)'|
+'EMSDataSet'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'4219009'|'Dead with Resuscitation Efforts (Black)'|
+'EMSDataSet'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'4219011'|'Non-Acute/Routine'|
 'EMSDataSet'|'eDisposition.20'|'Reason for Choosing Destination'|'4220001'|'Closest Facility'|
 'EMSDataSet'|'eDisposition.20'|'Reason for Choosing Destination'|'4220003'|'Diversion'|
 'EMSDataSet'|'eDisposition.20'|'Reason for Choosing Destination'|'4220005'|'Family Choice'|
@@ -2314,6 +2404,12 @@
 'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506025'|'Injury-Other'|
 'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506027'|'None'|
 'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506029'|'Other'|
+'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506031'|'Violence-Offensive, Intimidating, or Hateful Language'|
+'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506033'|'Violence-Physical Threat, or Threatening Behavior'|
+'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506035'|'Violence-Physical Attack or Attempt to Attack'|
+'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506037'|'Violence-Unwelcome Sexual Attention, Remarks, Jokes or Gestures'|
+'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506039'|'Violence-Unwanted Touching of a Sexual Nature'|
+'EMSDataSet'|'eOther.06'|'The Type of Work-Related Injury, Death or Suspected Exposure'|'4506041'|'Struck by Vehicle Along Roadway'|
 'EMSDataSet'|'eOther.07'|'Natural, Suspected, Intentional, or Unintentional Disaster'|'4507001'|'Biologic Agent'|
 'EMSDataSet'|'eOther.07'|'Natural, Suspected, Intentional, or Unintentional Disaster'|'4507003'|'Building Failure'|
 'EMSDataSet'|'eOther.07'|'Natural, Suspected, Intentional, or Unintentional Disaster'|'4507005'|'Chemical Agent'|

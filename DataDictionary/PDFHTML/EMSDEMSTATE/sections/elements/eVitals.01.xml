@@ -50,13 +50,13 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e125" role="Warning">
-      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should be recorded, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should be recorded, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e126" role="Warning">
-      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.03">Unit Notified by Dispatch Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e127" role="Warning">
-      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be earlier than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef>, unless <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e128" role="Warning">
       <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef>.
@@ -65,7 +65,7 @@
       <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef>.
       </assert>
   <assert id="nemSch_e130" role="Warning">
-      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is "Yes".
+      <elementRef elementNumber="eVitals.01">Date/Time Vital Signs Taken</elementRef> should not be later than <elementRef elementNumber="eTimes.07">Arrived at Patient Date/Time</elementRef> when <elementRef elementNumber="eVitals.02">Obtained Prior to this Unit's EMS Care</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Date/Time Vital Signs Taken has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

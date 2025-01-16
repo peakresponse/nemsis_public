@@ -47,7 +47,9 @@
 'EMSDataSet'|'element'|'ePatient.13'|'Gender'|'NV'|
 'EMSDataSet'|'element'|'ePatient.14'|'Race'|'NV'|
 'EMSDataSet'|'element'|'ePatient.14'|'Race'|'CorrelationID'|
+'EMSDataSet'|'element'|'ePatient.14'|'Race'|'PN'|
 'EMSDataSet'|'element'|'ePatient.15'|'Age'|'NV'|
+'EMSDataSet'|'element'|'ePatient.15'|'Age'|'PN'|
 'EMSDataSet'|'element'|'ePatient.16'|'Age Units'|'NV'|
 'EMSDataSet'|'element'|'ePatient.17'|'Date of Birth'|'NV'|
 'EMSDataSet'|'element'|'ePatient.17'|'Date of Birth'|'PN'|
@@ -57,6 +59,7 @@
 'EMSDataSet'|'element'|'ePatient.19'|'Patient's Email Address'|'EmailAddressType'|
 'EMSDataSet'|'element'|'ePatient.19'|'Patient's Email Address'|'CorrelationID'|
 'EMSDataSet'|'element'|'ePatient.22'|'Alternate Home Residence'|'NV'|
+'EMSDataSet'|'element'|'ePatient.24'|'Patient's Preferred Language(s)'|'CorrelationID'|
 'EMSDataSet'|'element'|'ePayment.01'|'Primary Method of Payment'|'NV'|
 'EMSDataSet'|'element'|'ePayment.04'|'Reason for Physician Certification Statement'|'CorrelationID'|
 'EMSDataSet'|'group'|'ePayment.InsuranceGroup'|''|'CorrelationID'|
@@ -79,6 +82,7 @@
 'EMSDataSet'|'element'|'eScene.01'|'First EMS Unit on Scene'|'NV'|
 'EMSDataSet'|'group'|'eScene.ResponderGroup'|''|'CorrelationID'|
 'EMSDataSet'|'element'|'eScene.24'|'First Other EMS or Public Safety Agency at Scene to Provide Patient Care'|'NV'|
+'EMSDataSet'|'element'|'eScene.25'|'Transferred Patient/Care To/From Agency'|'NV'|
 'EMSDataSet'|'element'|'eScene.06'|'Number of Patients at Scene'|'NV'|
 'EMSDataSet'|'element'|'eScene.07'|'Mass Casualty Incident'|'NV'|
 'EMSDataSet'|'element'|'eScene.08'|'Triage Classification for MCI Patient'|'NV'|
@@ -151,6 +155,7 @@
 'EMSDataSet'|'element'|'eArrest.12'|'Any Return of Spontaneous Circulation'|'NV'|
 'EMSDataSet'|'element'|'eArrest.12'|'Any Return of Spontaneous Circulation'|'CorrelationID'|
 'EMSDataSet'|'element'|'eArrest.14'|'Date/Time of Cardiac Arrest'|'NV'|
+'EMSDataSet'|'element'|'eArrest.14'|'Date/Time of Cardiac Arrest'|'PN'|
 'EMSDataSet'|'element'|'eArrest.15'|'Date/Time Resuscitation Discontinued'|'NV'|
 'EMSDataSet'|'element'|'eArrest.16'|'Reason CPR/Resuscitation Discontinued'|'NV'|
 'EMSDataSet'|'element'|'eArrest.17'|'Cardiac Rhythm on Arrival at Destination'|'NV'|
@@ -226,9 +231,11 @@
 'EMSDataSet'|'element'|'eVitals.27'|'Pain Scale Score'|'PN'|
 'EMSDataSet'|'element'|'eVitals.27'|'Pain Scale Score'|'NV'|
 'EMSDataSet'|'element'|'eVitals.28'|'Pain Scale Type'|'NV'|
-'EMSDataSet'|'element'|'eVitals.29'|'Stroke Scale Score'|'PN'|
-'EMSDataSet'|'element'|'eVitals.29'|'Stroke Scale Score'|'NV'|
+'EMSDataSet'|'element'|'eVitals.29'|'Stroke Scale Result'|'PN'|
+'EMSDataSet'|'element'|'eVitals.29'|'Stroke Scale Result'|'NV'|
 'EMSDataSet'|'element'|'eVitals.30'|'Stroke Scale Type'|'NV'|
+'EMSDataSet'|'element'|'eVitals.34'|'Stroke Scale Score'|'PN'|
+'EMSDataSet'|'element'|'eVitals.34'|'Stroke Scale Score'|'NV'|
 'EMSDataSet'|'element'|'eVitals.31'|'Reperfusion Checklist'|'PN'|
 'EMSDataSet'|'element'|'eVitals.31'|'Reperfusion Checklist'|'NV'|
 'EMSDataSet'|'element'|'eVitals.32'|'APGAR'|'PN'|
@@ -296,6 +303,7 @@
 'EMSDataSet'|'element'|'eMedications.08'|'Medication Complication'|'CorrelationID'|
 'EMSDataSet'|'element'|'eMedications.09'|'Medication Crew (Healthcare Professionals) ID'|'NV'|
 'EMSDataSet'|'element'|'eMedications.10'|'Role/Type of Person Administering Medication'|'NV'|
+'EMSDataSet'|'element'|'eMedications.13'|'Medication Administered by Another Unit'|'NV'|
 'EMSDataSet'|'group'|'eProcedures.ProcedureGroup'|''|'CorrelationID'|
 'EMSDataSet'|'element'|'eProcedures.01'|'Date/Time Procedure Performed'|'NV'|
 'EMSDataSet'|'element'|'eProcedures.02'|'Procedure Performed Prior to this Unit's EMS Care'|'NV'|
@@ -309,6 +317,9 @@
 'EMSDataSet'|'element'|'eProcedures.09'|'Procedure Crew Members ID'|'NV'|
 'EMSDataSet'|'element'|'eProcedures.10'|'Role/Type of Person Performing the Procedure'|'NV'|
 'EMSDataSet'|'element'|'eProcedures.13'|'Vascular Access Location'|'NV'|
+'EMSDataSet'|'element'|'eProcedures.14'|'Airway Placement Technique'|'NV'|
+'EMSDataSet'|'element'|'eProcedures.14'|'Airway Placement Technique'|'CorrelationID'|
+'EMSDataSet'|'element'|'eProcedures.15'|'Procedure Performed by Another Unit'|'NV'|
 'EMSDataSet'|'element'|'eAirway.01'|'Indications for Invasive Airway'|'NV'|
 'EMSDataSet'|'element'|'eAirway.01'|'Indications for Invasive Airway'|'CorrelationID'|
 'EMSDataSet'|'group'|'eAirway.ConfirmationGroup'|''|'CorrelationID'|
@@ -320,6 +331,7 @@
 'EMSDataSet'|'element'|'eAirway.06'|'Type of Individual Confirming Airway Device Placement'|'NV'|
 'EMSDataSet'|'element'|'eAirway.07'|'Crew Member ID'|'NV'|
 'EMSDataSet'|'element'|'eAirway.08'|'Airway Complications Encountered'|'NV'|
+'EMSDataSet'|'element'|'eAirway.08'|'Airway Complications Encountered'|'PN'|
 'EMSDataSet'|'element'|'eAirway.08'|'Airway Complications Encountered'|'CorrelationID'|
 'EMSDataSet'|'element'|'eAirway.09'|'Suspected Reasons for Failed Airway Management'|'CorrelationID'|
 'EMSDataSet'|'group'|'eDevice.DeviceGroup'|''|'CorrelationID'|
@@ -343,7 +355,7 @@
 'EMSDataSet'|'element'|'eDisposition.17'|'Transport Mode from Scene'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.18'|'Additional Transport Mode Descriptors'|'CorrelationID'|
-'EMSDataSet'|'element'|'eDisposition.19'|'Final Patient Acuity'|'NV'|
+'EMSDataSet'|'element'|'eDisposition.19'|'Acuity Upon EMS Release of Patient'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.20'|'Reason for Choosing Destination'|'NV'|
 'EMSDataSet'|'element'|'eDisposition.20'|'Reason for Choosing Destination'|'CorrelationID'|
 'EMSDataSet'|'element'|'eDisposition.21'|'Type of Destination'|'NV'|

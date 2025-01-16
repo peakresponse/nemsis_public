@@ -251,6 +251,7 @@
 										<state>Yes</state>
 										<definition>The airway management complications encountered during the patient care episode.</definition>
 										<usage>Recommended</usage>
+										<PNNil>Yes</PNNil>
 										<performanceMeasuresGroup>
 											<performanceMeasure>Airway</performanceMeasure>
 										</performanceMeasuresGroup>
@@ -264,6 +265,11 @@
 										<xs:attribute name="NV" use="optional">
 											<xs:simpleType>
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="PN" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="PN.NoneReported"/>
 											</xs:simpleType>
 										</xs:attribute>
 										<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>

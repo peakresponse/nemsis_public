@@ -188,7 +188,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 													<state>No</state>
 													<definition>The country of the personnel mailing address.</definition>
 													<usage>Optional</usage>
-													<comment>Based on ANSI Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+													<comment>Based on ANSI Code.&lt;br/>&lt;br/>ANSI Country Codes (ISO 3166) Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>
 												</nemsisTacDoc>
 											</xs:documentation>
 										</xs:annotation>
@@ -306,7 +306,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<definition>The personnel's race as defined by the OMB (US Office of Management and Budget).</definition>
 										<v2Number>D08_13</v2Number>
 										<usage>Recommended</usage>
-										<comment>OMB requirements are provided at: &lt;a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html" target="_blank">https://grants.nih.gov/grants/guide/notice-files/NOT-OD-15-089.html&lt;/a>. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</comment>
+										<comment>OMB requirements are provided at: &lt;a href="https://www.federalregister.gov/d/2024-06469" target="_blank">https://www.federalregister.gov/d/2024-06469&lt;/a>. A single multiple choice question methodology is being implemented to improve the completion of ethnicity information. Ethnicity (Version 2.1.1:  D08_14) has been merged with this data element and retired.</comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -333,7 +333,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 										<state>No</state>
 										<definition>The documentation of the personnel's citizenship.</definition>
 										<usage>Optional</usage>
-										<comment>Website: &lt;a href="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm" target="_blank">http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm&lt;/a></comment>
+										<comment>Website: &lt;a href="https://www.iso.org/iso-3166-country-codes.html" target="_blank">https://www.iso.org/iso-3166-country-codes.html&lt;/a></comment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>
@@ -887,6 +887,11 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					<xs:documentation>White</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="1513013">
+				<xs:annotation>
+					<xs:documentation>Middle Eastern or North African</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="EmploymentStatus">
@@ -1019,7 +1024,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelDegreeFieldofStudy">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
+			<xs:documentation>The area of the personnel's post high-school (post-secondary) degree.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1516001">
@@ -1206,7 +1211,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelForeignLanguageAbility">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget)</xs:documentation>
+			<xs:documentation>The languages spoken (other than English) by the personnel with at least an elementary level of proficiency.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="amh">
@@ -1399,6 +1404,11 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 					<xs:documentation>Russian</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
+			<xs:enumeration value="sgn">
+				<xs:annotation>
+					<xs:documentation>Sign Languages</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
 			<xs:enumeration value="smo">
 				<xs:annotation>
 					<xs:documentation>Samoan</xs:documentation>
@@ -1463,7 +1473,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelHighestEducationalDegree">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
+			<xs:documentation>The highest educational degree completed by the personnel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1515001">
@@ -1550,7 +1560,7 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 	</xs:simpleType>
 	<xs:simpleType name="PersonnelVehicleLicenseType">
 		<xs:annotation>
-			<xs:documentation>The EMS Personnel's ethnicity as defined by the OMB (US Office of Management and Budget).</xs:documentation>
+			<xs:documentation>The type of motor vehicle license (i.e. Class A, B, Pilot, etc.) of the EMS personnel.</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="1517001">

@@ -845,6 +845,37 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 								<xs:attribute name="UUID" type="UUID" use="required" />
 							</xs:complexType>
 						</xs:element>
+						<xs:element name="dPersonnel.40" nillable="true" id="dPersonnel.EMSPersonnelsSex" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>
+									<nemsisTacDoc>
+										<number>dPersonnel.40</number>
+										<name>EMS Personnel's Sex</name>
+										<national>No</national>
+										<state>Yes</state>
+										<definition>The personnel's sex at birth.</definition>
+										<usage>Recommended</usage>
+										<comment>Implemented with v3.5.1 Critical Patch 1</comment>
+									</nemsisTacDoc>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="Sex">
+										<xs:attribute name="NV" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="PN" use="optional">
+											<xs:simpleType>
+												<xs:union memberTypes="PN.Refused"/>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
 					</xs:sequence>
 					<xs:attribute name="CorrelationID" type="CorrelationID" use="optional"/>
 					<xs:attribute name="UUID" type="UUID" use="required"></xs:attribute>

@@ -867,11 +867,6 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 												<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"/>
 											</xs:simpleType>
 										</xs:attribute>
-										<xs:attribute name="PN" use="optional">
-											<xs:simpleType>
-												<xs:union memberTypes="PN.Refused"/>
-											</xs:simpleType>
-										</xs:attribute>
 									</xs:extension>
 								</xs:simpleContent>
 							</xs:complexType>

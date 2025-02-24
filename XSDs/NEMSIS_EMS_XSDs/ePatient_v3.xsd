@@ -691,7 +691,7 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ePatient.25" nillable="true" id="ePatient.Sex">
+			<xs:element name="ePatient.25" nillable="true" id="ePatient.Sex" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
@@ -699,7 +699,7 @@
 							<name>Sex</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The patient's sex at birth.</definition>
+							<definition>The patient's sex.</definition>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -710,7 +710,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Implemented with v3.5.1 Critical Patch 1</comment>
+							<comment></comment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -724,7 +724,7 @@
 							</xs:attribute>
 							<xs:attribute name="PN" use="optional">
 								<xs:simpleType>
-									<xs:union memberTypes="PN.Refused"/>
+									<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
 								</xs:simpleType>
 							</xs:attribute>
 						</xs:extension>

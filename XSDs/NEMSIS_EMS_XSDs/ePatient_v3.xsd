@@ -366,16 +366,17 @@
 					</xs:simpleContent>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ePatient.13" nillable="true" id="ePatient.Gender">
+			<xs:element name="ePatient.13" nillable="true" id="ePatient.Gender" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>ePatient.13</number>
-							<name>Gender</name>
+							<deprecated>Yes</deprecated>
+							<number>ePatient.13 (DEPRECATED)</number>
+							<name>Gender (DEPRECATED)</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The patient's gender.</definition>
-							<v2Number>E06_11</v2Number>
+							<definition>The patient's gender. (DEPRECATED)</definition>
+							<v2Number>DEPRECATED</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -386,7 +387,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a></comment>
+							<deprecatedComment>The NEMSIS Program is funded by the National Highway Traffic Safety Administration and this element was modified to comply with President Trump’s Executive Orders.</deprecatedComment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>

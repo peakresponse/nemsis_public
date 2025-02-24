@@ -867,37 +867,37 @@
 	</xs:simpleType>
 	<xs:simpleType name="Gender">
 		<xs:annotation>
-			<xs:documentation>Gender</xs:documentation>
+			<xs:documentation>Gender (DEPRECATED)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="9906001">
 				<xs:annotation>
-					<xs:documentation>Female</xs:documentation>
+					<xs:documentation>Female (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9906003">
 				<xs:annotation>
-					<xs:documentation>Male</xs:documentation>
+					<xs:documentation>Male (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9906007">
 				<xs:annotation>
-					<xs:documentation>Female-to-Male, Transgender Male</xs:documentation>
+					<xs:documentation>Female-to-Male, Transgender Male (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9906009">
 				<xs:annotation>
-					<xs:documentation>Male-to-Female, Transgender Female</xs:documentation>
+					<xs:documentation>Male-to-Female, Transgender Female (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9906011">
 				<xs:annotation>
-					<xs:documentation>Other, neither exclusively male or female</xs:documentation>
+					<xs:documentation>Other, neither exclusively male or female (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="9906005">
 				<xs:annotation>
-					<xs:documentation>Unknown (Unable to Determine)</xs:documentation>
+					<xs:documentation>Unknown (Unable to Determine) (DEPRECATED)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

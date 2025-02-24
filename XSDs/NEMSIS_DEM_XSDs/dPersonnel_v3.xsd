@@ -272,14 +272,15 @@ City codes are based on GNIS Feature Class. The primary Feature Class to use is 
 							<xs:annotation>
 								<xs:documentation>
 									<nemsisTacDoc>
-										<number>dPersonnel.12</number>
-										<name>EMS Personnel's Gender</name>
+										<deprecated>Yes</deprecated>
+										<number>dPersonnel.12 (DEPRECATED)</number>
+										<name>EMS Personnel's Gender (DEPRECATED)</name>
 										<national>No</national>
 										<state>Yes</state>
-										<definition>The personnel's gender.</definition>
-										<v2Number>D08_12</v2Number>
+										<definition>The personnel's gender. (DEPRECATED)</definition>
+										<v2Number>DEPRECATED</v2Number>
 										<usage>Recommended</usage>
-										<comment>Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity" target="_blank">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a></comment>
+										<deprecatedComment>The NEMSIS Program is funded by the National Highway Traffic Safety Administration and this element was modified to comply with President Trump’s Executive Orders.</deprecatedComment>
 									</nemsisTacDoc>
 								</xs:documentation>
 							</xs:annotation>

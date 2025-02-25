@@ -9,7 +9,7 @@ Expected Result:  [WARNING]
 -->
 <DEMDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.0.211008CP3/XSDs/NEMSIS_XSDs/DEMDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.0.250403CP5/XSDs/NEMSIS_XSDs/DEMDataSet_v3.xsd">
    <dCustomConfiguration>
       <dCustomConfiguration.CustomGroup CustomElementID="c.dConfiguration.10">
          <dCustomConfiguration.01 nemsisElement="dConfiguration.10">EMS Agency Protocols</dCustomConfiguration.01>
@@ -430,7 +430,7 @@ Expected Result:  [WARNING]
             <dPersonnel.10 EmailAddressType="9904003">DwOziRPM@DveI.com</dPersonnel.10>
             <dPersonnel.10 EmailAddressType="9904003">Q75zgMIb@stAC.com</dPersonnel.10>
             <dPersonnel.11>1956-10-08</dPersonnel.11>
-            <dPersonnel.12>9906005</dPersonnel.12>
+            <dPersonnel.12 xsi:nil="true" NV="7701003"/>
             <dPersonnel.13>1513011</dPersonnel.13>
             <dPersonnel.13>1513009</dPersonnel.13>
             <dPersonnel.13>1513007</dPersonnel.13>
@@ -496,6 +496,7 @@ Expected Result:  [WARNING]
                <dPersonnel.38>9925043</dPersonnel.38>
                <dPersonnel.39>2018-10-31</dPersonnel.39>
             </dPersonnel.CertificationLevelGroup>
+            <dPersonnel.40>9919005</dPersonnel.40>
          </dPersonnel.PersonnelGroup>
          <dPersonnel.PersonnelGroup UUID="5d16b538-bad0-4a15-881c-57285d5ddff8">
             <dPersonnel.NameGroup>
@@ -515,7 +516,7 @@ Expected Result:  [WARNING]
             <dPersonnel.10 EmailAddressType="9904003">VcBm9m5x@LSX3.com</dPersonnel.10>
             <dPersonnel.10 EmailAddressType="9904003">pRbxkdq3@3UpK.com</dPersonnel.10>
             <dPersonnel.11>1993-06-19</dPersonnel.11>
-            <dPersonnel.12>9906005</dPersonnel.12>
+            <dPersonnel.12 xsi:nil="true" NV="7701003"/>
             <dPersonnel.13>1513011</dPersonnel.13>
             <dPersonnel.13>1513009</dPersonnel.13>
             <dPersonnel.13>1513007</dPersonnel.13>
@@ -577,6 +578,7 @@ Expected Result:  [WARNING]
                <dPersonnel.38>9925043</dPersonnel.38>
                <dPersonnel.39>2017-10-23</dPersonnel.39>
             </dPersonnel.CertificationLevelGroup>
+            <dPersonnel.40>9919005</dPersonnel.40>
          </dPersonnel.PersonnelGroup>
       </dPersonnel>
       <dDevice>

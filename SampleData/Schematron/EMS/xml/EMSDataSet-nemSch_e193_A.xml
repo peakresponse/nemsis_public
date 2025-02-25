@@ -2,14 +2,14 @@
 <!--
 
 NEMSIS V3 Schematron Test Case
-ID:               nemSch_e061_A
-Description:      Gender should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided".
+ID:               nemSch_e193_A
+Description:      Sex should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided".
 Expected Result:  [WARNING]
 
 -->
 <EMSDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.0.211008CP3/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.0.250403CP5/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>0</dAgency.01>
@@ -139,10 +139,7 @@ Expected Result:  [WARNING]
             <ePatient.10>US</ePatient.10>
             <ePatient.11>47526956273</ePatient.11>
             <ePatient.12>436337953</ePatient.12>
-            <!-- + -->
             <ePatient.13 xsi:nil="true" NV="7701003"/>
-            <!---->
-            <!-- - -->
             <ePatient.14>2514011</ePatient.14>
             <ePatient.14>2514009</ePatient.14>
             <ePatient.14>2514007</ePatient.14>
@@ -158,6 +155,10 @@ Expected Result:  [WARNING]
             <ePatient.19 EmailAddressType="9904003">vwPCsk5R@Czxh.com</ePatient.19>
             <ePatient.20>49</ePatient.20>
             <ePatient.21>e</ePatient.21>
+            <!-- + -->
+            <ePatient.25 xsi:nil="true" NV="7701003"/>
+            <!---->
+            <!-- - -->
          </ePatient>
          <ePayment>
             <ePayment.01>2601023</ePayment.01>

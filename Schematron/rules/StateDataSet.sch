@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="StateDataSet" schemaVersion="3.5.0.230317CP4" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?><sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2" id="StateDataSet" schemaVersion="3.5.0.250403CP5" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>NEMSIS National ISO Schematron file for StateDataSet</sch:title>
 
@@ -124,7 +124,7 @@
   <element name="dPersonnel.09">EMS Personnel's Phone Number</element>
   <element name="dPersonnel.10">EMS Personnel's Email Address</element>
   <element name="dPersonnel.11">EMS Personnel's Date of Birth</element>
-  <element name="dPersonnel.12">EMS Personnel's Gender</element>
+  <element name="dPersonnel.12">dPersonnel.12</element>
   <element name="dPersonnel.13">EMS Personnel's Race</element>
   <element name="dPersonnel.14">EMS Personnel's Citizenship</element>
   <element name="dPersonnel.15">EMS Personnel's Highest Educational Degree</element>
@@ -152,6 +152,7 @@
   <element name="dPersonnel.37">EMS Personnel's Date Length of Service Documented</element>
   <element name="dPersonnel.38">EMS Personnel's Practice Level</element>
   <element name="dPersonnel.39">Date of Personnel's Certification or Licensure for Agency</element>
+  <element name="dPersonnel.40">EMS Personnel's Sex</element>
   <element name="dVehicle.01">Unit/Vehicle Number</element>
   <element name="dVehicle.02">Vehicle Identification Number</element>
   <element name="dVehicle.03">EMS Unit Call Sign</element>
@@ -402,7 +403,7 @@
   <element name="ePatient.10">Patient's Country of Residence</element>
   <element name="ePatient.11">Patient Home Census Tract</element>
   <element name="ePatient.12">Social Security Number</element>
-  <element name="ePatient.13">Gender</element>
+  <element name="ePatient.13">ePatient.13</element>
   <element name="ePatient.14">Race</element>
   <element name="ePatient.15">Age</element>
   <element name="ePatient.16">Age Units</element>
@@ -412,6 +413,7 @@
   <element name="ePatient.20">State Issuing Driver's License</element>
   <element name="ePatient.21">Driver's License Number</element>
   <element name="ePatient.22">Alternate Home Residence</element>
+  <element name="ePatient.25">Sex</element>
   <element name="ePayment.01">Primary Method of Payment</element>
   <element name="ePayment.02">Physician Certification Statement</element>
   <element name="ePayment.03">Date Physician Certification Statement Signed</element>

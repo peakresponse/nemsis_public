@@ -9,7 +9,7 @@ Expected Result:  [ERROR]
 -->
 <EMSDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.250115/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org http://nemsis.org/media/nemsis_v3/3.5.1.250403CP1/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>0</dAgency.01>
@@ -139,7 +139,7 @@ Expected Result:  [ERROR]
             <ePatient.10>US</ePatient.10>
             <ePatient.11>47526956273</ePatient.11>
             <ePatient.12>436337953</ePatient.12>
-            <ePatient.13>9906005</ePatient.13>
+            <ePatient.13 xsi:nil="true" NV="7701003"/>
             <ePatient.14>2514011</ePatient.14>
             <ePatient.14>2514009</ePatient.14>
             <ePatient.14>2514007</ePatient.14>
@@ -155,6 +155,7 @@ Expected Result:  [ERROR]
             <ePatient.19 EmailAddressType="9904003">vwPCsk5R@Czxh.com</ePatient.19>
             <ePatient.20>49</ePatient.20>
             <ePatient.21>e</ePatient.21>
+            <ePatient.25>9919005</ePatient.25>
          </ePatient>
          <ePayment>
             <ePayment.01>2601023</ePayment.01>

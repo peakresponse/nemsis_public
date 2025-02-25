@@ -4,8 +4,8 @@
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS v3 Schematron to HTML for 
 documentation purposes
 
-Version: 3.5.1.250115_241219
-Revision Date: December 19, 2024
+Version: 3.5.1.250403CP1_250225
+Revision Date: February 25, 2025
 
 This product is provided by the NEMSIS TAC, without charge, to facilitate browsing NEMSIS 3 
 Schematron files via a user-friendly web-based interface.
@@ -927,7 +927,7 @@ Schematron files via a user-friendly web-based interface.
               <dPersonnel.09 nemsisName="EMS Personnel's Phone Number"/>
               <dPersonnel.10 nemsisName="EMS Personnel's Email Address"/>
               <dPersonnel.11 nemsisName="EMS Personnel's Date of Birth"/>
-              <dPersonnel.12 nemsisName="EMS Personnel's Gender"/>
+              <dPersonnel.12 nemsisName="dPersonnel.12"/>
               <dPersonnel.13 nemsisName="EMS Personnel's Race"/>
               <dPersonnel.14 nemsisName="EMS Personnel's Citizenship"/>
               <dPersonnel.15 nemsisName="EMS Personnel's Highest Educational Degree"/>
@@ -961,6 +961,7 @@ Schematron files via a user-friendly web-based interface.
                 <dPersonnel.38 nemsisName="EMS Personnel's Practice Level"/>
                 <dPersonnel.39 nemsisName="Date of Personnel's Certification or Licensure for Agency"/>
               </dPersonnel.CertificationLevelGroup>
+              <dPersonnel.40 nemsisName="EMS Personnel's Sex"/>
             </dPersonnel.PersonnelGroup>
           </dPersonnel>
           <dDevice nemsisName="Device Information">
@@ -1111,7 +1112,7 @@ Schematron files via a user-friendly web-based interface.
               <ePatient.10 nemsisName="Patient's Country of Residence"/>
               <ePatient.11 nemsisName="Patient Home Census Tract"/>
               <ePatient.12 nemsisName="Social Security Number"/>
-              <ePatient.13 nemsisName="Gender"/>
+              <ePatient.13 nemsisName="ePatient.13"/>
               <ePatient.14 nemsisName="Race"/>
               <ePatient.AgeGroup nemsisName="Age">
                 <ePatient.15 nemsisName="Age"/>
@@ -1124,6 +1125,7 @@ Schematron files via a user-friendly web-based interface.
               <ePatient.21 nemsisName="Driver's License Number"/>
               <ePatient.22 nemsisName="Alternate Home Residence"/>
               <ePatient.24 nemsisName="Patient's Preferred Language(s)"/>
+              <ePatient.25 nemsisName="Sex"/>
             </ePatient>
             <ePayment nemsisName="Insurance/Payment Information">
               <ePayment.01 nemsisName="Primary Method of Payment"/>
@@ -1858,7 +1860,7 @@ Schematron files via a user-friendly web-based interface.
               <dPersonnel.09 nemsisName="EMS Personnel's Phone Number"/>
               <dPersonnel.10 nemsisName="EMS Personnel's Email Address"/>
               <dPersonnel.11 nemsisName="EMS Personnel's Date of Birth"/>
-              <dPersonnel.12 nemsisName="EMS Personnel's Gender"/>
+              <dPersonnel.12 nemsisName="dPersonnel.12"/>
               <dPersonnel.13 nemsisName="EMS Personnel's Race"/>
               <dPersonnel.14 nemsisName="EMS Personnel's Citizenship"/>
               <dPersonnel.15 nemsisName="EMS Personnel's Highest Educational Degree"/>
@@ -1892,6 +1894,7 @@ Schematron files via a user-friendly web-based interface.
                 <dPersonnel.38 nemsisName="EMS Personnel's Practice Level"/>
                 <dPersonnel.39 nemsisName="Date of Personnel's Certification or Licensure for Agency"/>
               </dPersonnel.CertificationLevelGroup>
+              <dPersonnel.40 nemsisName="EMS Personnel's Sex"/>
             </dPersonnel.PersonnelGroup>
           </dPersonnel>
           <dDevice nemsisName="Device Information">
@@ -2041,7 +2044,7 @@ Schematron files via a user-friendly web-based interface.
               <ePatient.10 nemsisName="Patient's Country of Residence"/>
               <ePatient.11 nemsisName="Patient Home Census Tract"/>
               <ePatient.12 nemsisName="Social Security Number"/>
-              <ePatient.13 nemsisName="Gender"/>
+              <ePatient.13 nemsisName="ePatient.13"/>
               <ePatient.14 nemsisName="Race"/>
               <ePatient.AgeGroup nemsisName="Age">
                 <ePatient.15 nemsisName="Age"/>
@@ -2053,6 +2056,7 @@ Schematron files via a user-friendly web-based interface.
               <ePatient.20 nemsisName="State Issuing Driver's License"/>
               <ePatient.21 nemsisName="Driver's License Number"/>
               <ePatient.22 nemsisName="Alternate Home Residence"/>
+              <ePatient.25 nemsisName="Sex"/>
             </ePatient>
             <ePayment nemsisName="Insurance/Payment Information">
               <ePayment.01 nemsisName="Primary Method of Payment"/>

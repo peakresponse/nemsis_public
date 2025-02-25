@@ -2,7 +2,7 @@
 <!--
   Distributed by the NEMSIS Technical Assistance Center
  -->
-<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:lang="en" queryBinding="xslt2" schemaVersion="3.5.1.250115" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
+<sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:lang="en" queryBinding="xslt2" schemaVersion="3.5.1.250403CP1" see="https://nemsis.org/technical-resources/version-3/version-3-schematron/">
 
   <sch:title>Schema for Additional Constraints in NEMSIS Schematron v3.5+</sch:title>
 

@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS DEMDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.230317CP4_3.4.0.200910CP2_230425
-Revision Date: April 25, 2023
+Version: 3.5.0.250403CP5_3.4.0.200910CP2_250225
+Revision Date: February 25, 2025
 
 -->
 
@@ -238,6 +238,9 @@ Revision Date: April 25, 2023
   <xsl:template match="n:dPersonnel.29[. = '1529012']">
     <xsl:copy>1529011</xsl:copy>
   </xsl:template>
+
+  <!-- dPersonnel.40: Remove -->
+  <xsl:template match="n:dPersonnel.40"/>
 
   <!-- dFacility.01: Map "Diagnostic Services", "Freestanding Emergency Department", "Morgue/Mortuary", "Police/Jail", "Other EMS Responder (air)", "Other EMS Responder (ground)", "Other Recurring Care Center", "Drug and/or Alcohol Rehabilitation Facility", "Skilled Nursing Facility" to "Other" -->
   <xsl:template match="n:dFacility.01[. = ('1701019', '1701021', '1701023', '1701025', '1701027', '1701029', '1701031', '1701033', '1701035')]">

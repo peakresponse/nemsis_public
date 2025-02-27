@@ -10,7 +10,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
 -->
 <DEMDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.1.250115/XSDs/NEMSIS_XSDs/DEMDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.1.250403CP1/XSDs/NEMSIS_XSDs/DEMDataSet_v3.xsd">
    <dCustomConfiguration>
       <dCustomConfiguration.CustomGroup CustomElementID="dPersonnel.18">
          <dCustomConfiguration.01 nemsisElement="dPersonnel.18">EMS Personnel's Immunization Status</dCustomConfiguration.01>
@@ -26,7 +26,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
          <dRecord.SoftwareApplicationGroup>
             <dRecord.01>NEMSIS Technical Assistance Center</dRecord.01>
             <dRecord.02>Compliance Testing</dRecord.02>
-            <dRecord.03>3.5.1.250115_250109</dRecord.03>
+            <dRecord.03>3.5.1.250403CP1_250227</dRecord.03>
          </dRecord.SoftwareApplicationGroup>
       </dRecord>
       <dAgency>
@@ -784,7 +784,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
             <dPersonnel.10 EmailAddressType="9904001">heath_percy@example.com</dPersonnel.10>
             <dPersonnel.10 EmailAddressType="9904003">rpercy@df.example.org</dPersonnel.10>
             <dPersonnel.11>1986-09-05</dPersonnel.11>
-            <dPersonnel.12>9906003</dPersonnel.12>
+            <dPersonnel.12 xsi:nil="true" NV="7701003"/>
             <dPersonnel.13>1513005</dPersonnel.13>
             <dPersonnel.14>US</dPersonnel.14>
             <dPersonnel.15>1515019</dPersonnel.15>
@@ -822,6 +822,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
                <dPersonnel.38>9925005</dPersonnel.38>
                <dPersonnel.39>2024-04-29</dPersonnel.39>
             </dPersonnel.CertificationLevelGroup>
+            <dPersonnel.40>9919003</dPersonnel.40>
          </dPersonnel.PersonnelGroup>
          <dPersonnel.PersonnelGroup UUID="04f7b01d-735a-400d-9936-73a59cbc32f2">
             <dPersonnel.NameGroup>
@@ -839,7 +840,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
             <dPersonnel.09 PhoneNumberType="9913009">203-796-9784</dPersonnel.09>
             <dPersonnel.10 EmailAddressType="9904003">mframi@df.example.org</dPersonnel.10>
             <dPersonnel.11>2002-05-19</dPersonnel.11>
-            <dPersonnel.12>9906009</dPersonnel.12>
+            <dPersonnel.12 xsi:nil="true" NV="7701003"/>
             <dPersonnel.13>1513009</dPersonnel.13>
             <dPersonnel.13>1513013</dPersonnel.13>
             <dPersonnel.14>US</dPersonnel.14>
@@ -874,6 +875,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
                <dPersonnel.38>9925005</dPersonnel.38>
                <dPersonnel.39>2020-09-10</dPersonnel.39>
             </dPersonnel.CertificationLevelGroup>
+            <dPersonnel.40>9919003</dPersonnel.40>
          </dPersonnel.PersonnelGroup>
          <dPersonnel.PersonnelGroup UUID="a6caf754-6e95-4e0f-91f3-70a24cfcc19a">
             <dPersonnel.NameGroup>
@@ -892,7 +894,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
             <dPersonnel.09 PhoneNumberType="9913009">203-796-9788</dPersonnel.09>
             <dPersonnel.10 EmailAddressType="9904003">mspencer@df.example.org</dPersonnel.10>
             <dPersonnel.11>1994-02-28</dPersonnel.11>
-            <dPersonnel.12>9906001</dPersonnel.12>
+            <dPersonnel.12 xsi:nil="true" NV="7701003"/>
             <dPersonnel.13>1513011</dPersonnel.13>
             <dPersonnel.14>GB</dPersonnel.14>
             <dPersonnel.15>1515023</dPersonnel.15>
@@ -948,6 +950,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
                <dPersonnel.38>9925035</dPersonnel.38>
                <dPersonnel.39>2021-11-15</dPersonnel.39>
             </dPersonnel.CertificationLevelGroup>
+            <dPersonnel.40>9919001</dPersonnel.40>
          </dPersonnel.PersonnelGroup>
          <dPersonnel.PersonnelGroup UUID="26f9894a-6490-4610-bc1c-b84a43b7a7fa">
             <dPersonnel.NameGroup>
@@ -965,7 +968,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
             <dPersonnel.09 PhoneNumberType="9913009">203-796-9705</dPersonnel.09>
             <dPersonnel.10 EmailAddressType="9904003">tstokes@df.example.org</dPersonnel.10>
             <dPersonnel.11>1981-08-25</dPersonnel.11>
-            <dPersonnel.12>9906003</dPersonnel.12>
+            <dPersonnel.12 xsi:nil="true" NV="7701003"/>
             <dPersonnel.13>1513011</dPersonnel.13>
             <dPersonnel.14>US</dPersonnel.14>
             <dPersonnel.15>1515025</dPersonnel.15>
@@ -1015,6 +1018,7 @@ Expected Message: Element name 'dConfiguration.02' is invalid. One of the follow
                <dPersonnel.38>9925007</dPersonnel.38>
                <dPersonnel.39>2021-10-18</dPersonnel.39>
             </dPersonnel.CertificationLevelGroup>
+            <dPersonnel.40>9919003</dPersonnel.40>
          </dPersonnel.PersonnelGroup>
       </dPersonnel>
       <dDevice>

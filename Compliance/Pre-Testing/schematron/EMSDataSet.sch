@@ -4,7 +4,7 @@
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
             queryBinding="xslt2"
             id="EMSDataSet"
-            schemaVersion="3.5.1.250115_compliance_pretesting_2025">
+            schemaVersion="3.5.1.250403CP1_compliance_pretesting_2025">
    <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing (2025, v3.5.1)</sch:title>
    <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
    <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>

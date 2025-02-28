@@ -10,7 +10,7 @@ Expected Message: Child elements are missing from element 'eSituation'. The foll
 -->
 <EMSDataSet xmlns="http://www.nemsis.org"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.0.230317CP4/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
+            xsi:schemaLocation="http://www.nemsis.org https://nemsis.org/media/nemsis_v3/3.5.0.250403CP5/XSDs/NEMSIS_XSDs/EMSDataSet_v3.xsd">
    <Header>
       <DemographicGroup>
          <dAgency.01>C034</dAgency.01>
@@ -23,7 +23,7 @@ Expected Message: Child elements are missing from element 'eSituation'. The foll
             <eRecord.SoftwareApplicationGroup>
                <eRecord.02>NEMSIS Technical Assistance Center</eRecord.02>
                <eRecord.03>Compliance Testing</eRecord.03>
-               <eRecord.04>3.5.0.230317CP4_241118</eRecord.04>
+               <eRecord.04>3.5.0.250403CP5_250227</eRecord.04>
             </eRecord.SoftwareApplicationGroup>
          </eRecord>
          <eResponse>
@@ -87,13 +87,14 @@ Expected Message: Child elements are missing from element 'eSituation'. The foll
             <ePatient.10>US</ePatient.10>
             <ePatient.11>36119015000</ePatient.11>
             <ePatient.12>805141893</ePatient.12>
-            <ePatient.13>9906001</ePatient.13>
+            <ePatient.13 xsi:nil="true" NV="7701003"/>
             <ePatient.14>2514011</ePatient.14>
             <ePatient.AgeGroup>
                <ePatient.15>79</ePatient.15>
                <ePatient.16>2516009</ePatient.16>
             </ePatient.AgeGroup>
             <ePatient.17>1945-08-29</ePatient.17>
+            <ePatient.25>9919001</ePatient.25>
          </ePatient>
          <ePayment>
             <ePayment.01>2601017</ePayment.01>

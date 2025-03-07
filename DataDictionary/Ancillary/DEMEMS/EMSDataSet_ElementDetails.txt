@@ -76,7 +76,7 @@
 'EMSDataSet'|'element'|'ePatient.10'|'Patient's Country of Residence'|'E06_09'|''|'State'|'Optional'|'0'|'1'|''|'ANSICountryCode'|''|''|''|''|''|''|''|'2'|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.11'|'Patient Home Census Tract'|''|''|''|'Optional'|'0'|'1'|''|'CensusTracts'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{11}'|
 'EMSDataSet'|'element'|'ePatient.12'|'Social Security Number'|'E06_10'|''|''|'Optional'|'0'|'1'|'Nillable'|'SocialSecurityNumber'|''|'PN'|''|''|'PN.UnableToComplete; '|''|''|''|''|''|''|''|''|'[0-9]{9}'|
-'EMSDataSet'|'element'|'ePatient.13'|'Gender'|'E06_11'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'Gender'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePatient.13'|'Gender (DEPRECATED)'|'DEPRECATED'|'National'|'State'|'Required'|'0'|'1'|'Nillable'|'Gender'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.14'|'Race'|'E06_12'|'National'|'State'|'Required'|'1'|'M'|'Nillable'|'Race'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.15'|'Age'|'E06_14'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'Age'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|'1'|'120'|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.16'|'Age Units'|'E06_15'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'AgeUnits'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
@@ -86,6 +86,7 @@
 'EMSDataSet'|'element'|'ePatient.20'|'State Issuing Driver's License'|'E06_18'|''|''|'Optional'|'0'|'1'|''|'ANSIStateCode'|''|''|''|''|''|''|''|''|''|''|''|''|''|'[0-9]{2}'|
 'EMSDataSet'|'element'|'ePatient.21'|'Driver's License Number'|'E06_19'|''|''|'Optional'|'0'|'1'|''|'DriversLicenseNumber'|''|''|''|''|''|'1'|'30'|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePatient.22'|'Alternate Home Residence'|''|''|''|'Recommended'|'0'|'1'|'Nillable'|'AlternateHomeResidence'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
+'EMSDataSet'|'element'|'ePatient.25'|'Sex'|''|'National'|'State'|'Required'|'0'|'1'|'Nillable'|'Sex'|'NV'|'PN'|''|'NV.NotReporting; NV.NotRecorded; NV.NotApplicable; '|'PN.UnableToComplete; PN.Refused; '|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.01'|'Primary Method of Payment'|'E07_01'|'National'|'State'|'Required'|'1'|'1'|'Nillable'|'PrimaryMethodOfPayment'|'NV'|''|''|'NV.NotRecorded; NV.NotApplicable; '|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.02'|'Physician Certification Statement'|'E07_02'|''|''|'Optional'|'0'|'1'|''|'YesNoUnkValues'|''|''|''|''|''|''|''|''|''|''|''|''|''|''|
 'EMSDataSet'|'element'|'ePayment.03'|'Date Physician Certification Statement Signed'|''|''|''|'Optional'|'0'|'1'|''|'DateTimeType'|''|''|''|''|''|''|''|''|'1950-01-01T00:00:00-00:00'|'2050-01-01T00:00:00-00:00'|''|''|''|'[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\.\d+)?(\+|-)[0-9]{2}:[0-9]{2}'|

@@ -28,13 +28,13 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e108" role="Warning">
-      <elementRef elementNumber="eArrest.12">Any Return of Spontaneous Circulation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.12">Any Return of Spontaneous Circulation</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e109" role="Warning">
-      <elementRef elementNumber="eArrest.12">Any Return of Spontaneous Circulation</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.12">Any Return of Spontaneous Circulation</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e110" role="Warning">
-      When <elementRef elementNumber="eArrest.12">Any Return of Spontaneous Circulation</elementRef> is "No", no other value should be recorded.
+      When <elementRef elementNumber="eArrest.12">Any Return of Spontaneous Circulation</elementRef> is &quot;No&quot;, no other value should be recorded.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Any Return of Spontaneous Circulation has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

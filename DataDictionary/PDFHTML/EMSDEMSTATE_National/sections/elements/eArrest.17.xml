@@ -61,10 +61,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e113" role="Warning">
-      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> is "Transport by This EMS Unit..." and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should be recorded when <elementRef elementNumber="eDisposition.30">Transport Disposition</elementRef> is &quot;Transport by This EMS Unit...&quot; and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e114" role="Warning">
-      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.17">Cardiac Rhythm on Arrival at Destination</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Cardiac Rhythm on Arrival at Destination has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

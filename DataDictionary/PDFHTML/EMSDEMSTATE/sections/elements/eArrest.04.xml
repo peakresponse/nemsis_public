@@ -28,13 +28,13 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e100" role="Warning">
-      <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e101" role="Warning">
-      <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e102" role="Warning">
-      When <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> is "Not Witnessed", no other value should be recorded.
+      When <elementRef elementNumber="eArrest.04">Arrest Witnessed By</elementRef> is &quot;Not Witnessed&quot;, no other value should be recorded.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Arrest Witnessed By has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

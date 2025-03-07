@@ -1,6 +1,6 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
 <section name="dDevice">
-  <group number="dDevice.DeviceGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="Yes" isNillable="No">
+  <group number="dDevice.DeviceGroup" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="Yes" ProcedureGroupCorrelationID="" CustomElementID="" timeStamp="" isNillable="No">
     <element number="dDevice.01" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="DeviceSerialNumber"><name>Medical Device Serial Number</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     <element number="dDevice.02" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="DeviceNameorID"><name>Medical Device Name or ID</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     <element number="dDevice.03" minOccurs="0" maxOccurs="M" CorrelationID="Yes" UUID="" isNillable="No" dataType="MedicalDeviceType"><name>Medical Device Type</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>

@@ -29,10 +29,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e115" role="Warning">
-      <elementRef elementNumber="eArrest.18">End of EMS Cardiac Arrest Event</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided" and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.18">End of EMS Cardiac Arrest Event</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot; and <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e116" role="Warning">
-      <elementRef elementNumber="eArrest.18">End of EMS Cardiac Arrest Event</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.18">End of EMS Cardiac Arrest Event</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When End of EMS Cardiac Arrest Event has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

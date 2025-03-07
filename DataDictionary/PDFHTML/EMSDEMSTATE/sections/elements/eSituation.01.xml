@@ -54,10 +54,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e003" role="Error">
-      When <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef> has a Pertinent Negative of "Unable to Complete", it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      When <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef> has a Pertinent Negative of &quot;Unable to Complete&quot;, it should be empty and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
       </assert>
   <assert id="nemSch_e004" role="Error">
-      When <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef> has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
+      When <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef> has a Pertinent Negative of &quot;Approximate&quot;, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
       </assert>
   <assert id="nemSch_e043" role="Warning">
       <elementRef elementNumber="eTimes.12">Destination Patient Transfer of Care Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef>.
@@ -66,7 +66,7 @@
       <elementRef elementNumber="eTimes.13">Unit Back in Service Date/Time</elementRef> should not be earlier than <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef>.
       </assert>
   <assert id="nemSch_e075" role="Warning">
-      <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef> should be recorded when <elementRef elementNumber="eResponse.05">Type of Service Requested</elementRef> is "Emergency Response (Primary Response Area)" and <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided".
+      <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef> should be recorded when <elementRef elementNumber="eResponse.05">Type of Service Requested</elementRef> is &quot;Emergency Response (Primary Response Area)&quot; and <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Date/Time of Symptom Onset has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

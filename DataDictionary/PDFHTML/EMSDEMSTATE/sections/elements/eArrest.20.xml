@@ -39,10 +39,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e117" role="Warning">
-      <elementRef elementNumber="eArrest.20">Who First Initiated CPR</elementRef> should be recorded when <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> is "Attempted..." or "Initiated...".
+      <elementRef elementNumber="eArrest.20">Who First Initiated CPR</elementRef> should be recorded when <elementRef elementNumber="eArrest.03">Resuscitation Attempted By EMS</elementRef> is &quot;Attempted...&quot; or &quot;Initiated...&quot;.
       </assert>
   <assert id="nemSch_e118" role="Warning">
-      <elementRef elementNumber="eArrest.20">Who First Initiated CPR</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is "Yes...".
+      <elementRef elementNumber="eArrest.20">Who First Initiated CPR</elementRef> should only be recorded when <elementRef elementNumber="eArrest.01">Cardiac Arrest</elementRef> is &quot;Yes...&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Who First Initiated CPR has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

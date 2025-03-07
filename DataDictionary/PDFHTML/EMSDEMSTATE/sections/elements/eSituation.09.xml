@@ -28,10 +28,10 @@
 </attributes>
 <asserts>
   <assert id="nemSch_e077" role="Warning">
-      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be "Yes" when a symptom or impression is injury-related.
+      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be &quot;Yes&quot; when a symptom or impression is injury-related.
       </assert>
   <assert id="nemSch_e080" role="Warning">
-      <elementRef elementNumber="eSituation.09">Primary Symptom</elementRef> should be recorded when <elementRef elementNumber="eResponse.05">Type of Service Requested</elementRef> is "Emergency Response (Primary Response Area)" and <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is "Patient Evaluated and Care Provided".
+      <elementRef elementNumber="eSituation.09">Primary Symptom</elementRef> should be recorded when <elementRef elementNumber="eResponse.05">Type of Service Requested</elementRef> is &quot;Emergency Response (Primary Response Area)&quot; and <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
       </assert>
   <assert id="nemSch_e081" role="Warning">
       <elementRef elementNumber="eSituation.10">Other Associated Symptoms</elementRef> should only be recorded when <elementRef elementNumber="eSituation.09">Primary Symptom</elementRef> is recorded.

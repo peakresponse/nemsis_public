@@ -257,24 +257,76 @@
           
              <xsl:if test="$count &lt; 2"> 
                 <div class="element">
-                  <xsl:value-of select="@number"/> - 
+                  <xsl:choose>
+					  <xsl:when test="deprecated/text()='Yes'">
+						<span style="text-decoration: line-through;">
+						  <xsl:value-of select="@number"/>
+						</span>
+					  </xsl:when>
+					  <xsl:otherwise>
+						<xsl:value-of select="@number"/>
+					  </xsl:otherwise>
+					</xsl:choose> - 
                     <xsl:choose>  
                     <xsl:when test="refNumber/text()!=''"> 
                             (<xsl:value-of select="refNumber"/>) 
                     </xsl:when>
                     </xsl:choose> 
-                  <xsl:value-of select="name"/>
+                  <xsl:choose>
+			            <xsl:when test="deprecated/text()='Yes'">
+			              <span style="text-decoration: line-through;">
+			                <xsl:choose>
+						        <xsl:when test="contains(name, ' (DEPRECATED)')">
+						          <xsl:value-of select="substring-before(name, ' (DEPRECATED)')"/>
+						        </xsl:when>
+						        <xsl:otherwise>
+						          <xsl:value-of select="name"/>
+						        </xsl:otherwise>
+						      </xsl:choose>
+			              </span>
+			              <span> (DEPRECATED)</span>
+			            </xsl:when>
+			            <xsl:otherwise>
+			              <xsl:value-of select="name"/>
+			            </xsl:otherwise>
+			          </xsl:choose>
                 </div>
             </xsl:if>   
             <xsl:if test="$count &gt; 1"> 
                 <div class="elementSmall">
-                  <xsl:value-of select="@number"/> - 
-                    <xsl:choose>  
-                    <xsl:when test="refNumber/text()!=''"> 
-                            (<xsl:value-of select="refNumber"/>) 
-                    </xsl:when>
-                    </xsl:choose> 
-                  <xsl:value-of select="name"/>
+                  <xsl:choose>
+					  <xsl:when test="deprecated/text()='Yes'">
+						<span style="text-decoration: line-through;">
+						  <xsl:value-of select="@number"/>
+						</span>
+					  </xsl:when>
+					  <xsl:otherwise>
+						<xsl:value-of select="@number"/>
+					  </xsl:otherwise>
+					</xsl:choose> - 
+	                   <xsl:choose>  
+	                   <xsl:when test="refNumber/text()!=''"> 
+	                           (<xsl:value-of select="refNumber"/>) 
+	                   </xsl:when>
+	                   </xsl:choose> 
+                  <xsl:choose>
+		            <xsl:when test="deprecated/text()='Yes'">
+		              <span style="text-decoration: line-through;">
+		                <xsl:choose>
+					        <xsl:when test="contains(name, ' (DEPRECATED)')">
+					          <xsl:value-of select="substring-before(name, ' (DEPRECATED)')"/>
+					        </xsl:when>
+					        <xsl:otherwise>
+					          <xsl:value-of select="name"/>
+					        </xsl:otherwise>
+					      </xsl:choose>
+		              </span>
+		              <span> (DEPRECATED)</span>
+		            </xsl:when>
+		            <xsl:otherwise>
+		              <xsl:value-of select="name"/>
+		            </xsl:otherwise>
+		          </xsl:choose>
                 </div>
             </xsl:if>   
           

@@ -70,16 +70,34 @@
 </head>
 <body>
 
+  <xsl:variable name="isDeprecated" select="element/deprecated[text()='Yes']"/>
   <table border="0" cellspacing="0" cellpadding="0" width="675px">    
     <tr><td>
         <table width="675px" border="0" cellspacing="0" cellpadding="0" >
           <tr>            
-            <xsl:choose><xsl:when test="element/deprecated/text()='Yes'">
+            <xsl:choose><xsl:when test="$isDeprecated">
             <td class="deprecated" height="23px">Deprecated</td>
             </xsl:when></xsl:choose> 
             
             <td align="right" class="pageHeadingElement">
-              <xsl:value-of select="element/@number"/>
+			  <xsl:choose>
+				  <xsl:when test="$isDeprecated">
+				    <span style="text-decoration: line-through;">
+				      <xsl:choose>
+				        <xsl:when test="contains(element/@number, ' (DEPRECATED)')">
+				          <xsl:value-of select="substring-before(element/@number, ' (DEPRECATED)')"/>
+				        </xsl:when>
+				        <xsl:otherwise>
+				          <xsl:value-of select="element/@number"/>
+				        </xsl:otherwise>
+				      </xsl:choose>
+				    </span>
+				    <span> (DEPRECATED)</span>
+				  </xsl:when>
+				  <xsl:otherwise>
+				    <xsl:value-of select="element/@number"/>
+				  </xsl:otherwise>
+			  </xsl:choose>
             </td>
           </tr>
         </table>
@@ -90,12 +108,26 @@
         <table border="0" cellspacing="0" cellpadding="0" align="right" >
           <tr>  
             <xsl:choose><xsl:when test="element/state/text()='Yes'">
-            <td class="state" height="23px">State</td>
+            <td class="state" height="23px">
+			  <xsl:choose>
+				<xsl:when test="$isDeprecated">
+				  <span style="text-decoration: line-through;">State</span>
+				</xsl:when>
+				<xsl:otherwise>State</xsl:otherwise>
+			  </xsl:choose>
+			</td>
             </xsl:when></xsl:choose> 
                
             <xsl:choose><xsl:when test="element/national/text()='Yes'">
             <td width="5px;"></td> 
-            <td class="national" height="23px">National</td>
+            <td class="national" height="23px">
+			  <xsl:choose>
+				<xsl:when test="$isDeprecated">
+				  <span style="text-decoration: line-through;">National</span>
+				</xsl:when>
+				<xsl:otherwise>National</xsl:otherwise>
+			  </xsl:choose>
+			</td>
             <td width="2px;"></td> 
             </xsl:when></xsl:choose>  
              
@@ -108,13 +140,46 @@
         <table width="675px" border="0" cellspacing="0" cellpadding="0" >
           <tr>
             <td class="numberName" height="26px;">
-              <xsl:value-of select="element/@number"/> - 
+              <xsl:choose>
+				  <xsl:when test="$isDeprecated">
+					<span style="text-decoration: line-through;">
+					  <xsl:choose>
+						<xsl:when test="contains(element/@number, ' (DEPRECATED)')">
+						  <xsl:value-of select="substring-before(element/@number, ' (DEPRECATED)')"/>
+						</xsl:when>
+						<xsl:otherwise>
+						  <xsl:value-of select="element/@number"/>
+						</xsl:otherwise>
+					  </xsl:choose>
+					</span>
+				  </xsl:when>
+				  <xsl:otherwise>
+					<xsl:value-of select="element/@number"/>
+				  </xsl:otherwise>
+				</xsl:choose> - 
                 <xsl:choose>  
                   <xsl:when test="element/refNumber"> 
                     (<xsl:value-of select="element/refNumber"/>) 
                   </xsl:when>
                 </xsl:choose> 
-              <xsl:value-of select="element/name"/>
+              <xsl:choose>
+	            <xsl:when test="$isDeprecated">
+	              <span style="text-decoration: line-through;">
+	                <xsl:choose>
+				        <xsl:when test="contains(element/name, ' (DEPRECATED)')">
+				          <xsl:value-of select="substring-before(element/name, ' (DEPRECATED)')"/>
+				        </xsl:when>
+				        <xsl:otherwise>
+				          <xsl:value-of select="element/name"/>
+				        </xsl:otherwise>
+				      </xsl:choose>
+	              </span>
+	              <span> (DEPRECATED)</span>
+	            </xsl:when>
+	            <xsl:otherwise>
+	              <xsl:value-of select="element/name"/>
+	            </xsl:otherwise>
+	          </xsl:choose>
             </td>
           </tr>
         </table>
@@ -136,7 +201,26 @@
                 </tr>
                 <tr><td height="2px;"></td></tr>
                 <tr>                  
-                  <td class="definitionValue" style="padding-left:5px"><xsl:value-of select="element/definition"/></td>
+                  <td class="definitionValue" style="padding-left:5px">
+					<xsl:choose>
+			            <xsl:when test="$isDeprecated">
+			              <span style="text-decoration: line-through;">
+			                <xsl:choose>
+						        <xsl:when test="contains(element/definition, ' (DEPRECATED)')">
+						          <xsl:value-of select="substring-before(element/definition, ' (DEPRECATED)')"/>
+						        </xsl:when>
+						        <xsl:otherwise>
+						          <xsl:value-of select="element/definition"/>
+						        </xsl:otherwise>
+						      </xsl:choose>
+			              </span>
+			              <span> (DEPRECATED)</span>
+			            </xsl:when>
+			            <xsl:otherwise>
+			              <xsl:value-of select="element/definition"/>
+			            </xsl:otherwise>
+			          </xsl:choose>
+				  </td>
                 </tr>
               </table>
             </td>        
@@ -161,7 +245,18 @@
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td align="center" class="summaryValue"><xsl:value-of select="element/national"/></td>
+                        <td align="center" class="summaryValue">
+						  <xsl:choose>
+							<xsl:when test="$isDeprecated">
+							  <span style="text-decoration: line-through;">
+								<xsl:value-of select="element/national"/>
+							  </span>
+							</xsl:when>
+							<xsl:otherwise>
+							  <xsl:value-of select="element/national"/>
+							</xsl:otherwise>
+						  </xsl:choose>
+						</td>
                       </tr>
                     </table>
                   </td>
@@ -185,8 +280,20 @@
                       <tr>
                         <td align="center" class="summaryValue">                        
                           <xsl:choose>
-                            <xsl:when test="element/attributes/PN">Yes</xsl:when>
-                            <xsl:otherwise>No</xsl:otherwise>
+                            <xsl:when test="$isDeprecated">
+							    <span style="text-decoration: line-through;">
+							      <xsl:choose>
+							        <xsl:when test="element/attributes/PN">Yes</xsl:when>
+							        <xsl:otherwise>No</xsl:otherwise>
+							      </xsl:choose>
+							    </span>
+							  </xsl:when>
+							  <xsl:otherwise>
+							    <xsl:choose>
+							      <xsl:when test="element/attributes/PN">Yes</xsl:when>
+							      <xsl:otherwise>No</xsl:otherwise>
+							    </xsl:choose>
+							  </xsl:otherwise>
                           </xsl:choose>    
                         </td>
                       </tr>      
@@ -212,7 +319,18 @@
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td align="center" class="summaryValue"><xsl:value-of select="element/state"/></td>
+                        <td align="center" class="summaryValue">
+						  <xsl:choose>
+							<xsl:when test="$isDeprecated">
+							  <span style="text-decoration: line-through;">
+								<xsl:value-of select="element/state"/>
+							  </span>
+							</xsl:when>
+							<xsl:otherwise>
+							  <xsl:value-of select="element/state"/>
+							</xsl:otherwise>
+						  </xsl:choose>
+						</td>
                       </tr>      
                     </table>
                   </td>
@@ -236,8 +354,20 @@
                       <tr>
                         <td align="center" class="summaryValue">
                           <xsl:choose>
-                            <xsl:when test="element/attributes/NV">Yes</xsl:when>
-                            <xsl:otherwise>No</xsl:otherwise>
+                            <xsl:when test="$isDeprecated">
+							    <span style="text-decoration: line-through;">
+							      <xsl:choose>
+							        <xsl:when test="element/attributes/NV">Yes</xsl:when>
+							        <xsl:otherwise>No</xsl:otherwise>
+							      </xsl:choose>
+							    </span>
+							  </xsl:when>
+							  <xsl:otherwise>
+							    <xsl:choose>
+							      <xsl:when test="element/attributes/NV">Yes</xsl:when>
+							      <xsl:otherwise>No</xsl:otherwise>
+							    </xsl:choose>
+							  </xsl:otherwise>
                           </xsl:choose> 
                         </td>
                       </tr>
@@ -265,7 +395,9 @@
                       <tr>
                         <td align="center" class="summaryValue">                        
                           <xsl:choose>
-                            <xsl:when test="string-length(element/v2Number) &gt; 0"><xsl:value-of select="element/v2Number"/></xsl:when>
+                            <xsl:when test="string-length(element/v2Number) &gt; 0">
+								<xsl:value-of select="element/v2Number"/>
+							</xsl:when>
                             <xsl:otherwise>&#160;</xsl:otherwise>
                           </xsl:choose>     
                         </td>
@@ -290,7 +422,18 @@
                   <td>
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
-                        <td align="center" class="summaryValue"><xsl:value-of select="element/@isNillable"/></td>
+                        <td align="center" class="summaryValue">
+							<xsl:choose>
+							  <xsl:when test="$isDeprecated">
+							    <span style="text-decoration: line-through;">
+							      <xsl:value-of select="element/@isNillable"/>
+							    </span>
+							  </xsl:when>
+							  <xsl:otherwise>
+							    <xsl:value-of select="element/@isNillable"/>
+							  </xsl:otherwise>
+							</xsl:choose>
+						</td>
                       </tr>
                     </table>
                   </td>
@@ -316,8 +459,24 @@
                       <tr>
                         <td align="center" class="summaryValue">
                           <xsl:choose>
-                            <xsl:when test="element/usage"><xsl:value-of select="element/usage"/></xsl:when>
-                            <xsl:otherwise>&#160;</xsl:otherwise>
+                            <xsl:when test="$isDeprecated">
+							    <span style="text-decoration: line-through;">
+							      <xsl:choose>
+							        <xsl:when test="element/usage">
+							          <xsl:value-of select="element/usage"/>
+							        </xsl:when>
+							        <xsl:otherwise>&#160;</xsl:otherwise>
+							      </xsl:choose>
+							    </span>
+							  </xsl:when>
+							  <xsl:otherwise>
+							    <xsl:choose>
+							      <xsl:when test="element/usage">
+							        <xsl:value-of select="element/usage"/>
+							      </xsl:when>
+							      <xsl:otherwise>&#160;</xsl:otherwise>
+							    </xsl:choose>
+							  </xsl:otherwise>
                           </xsl:choose>   
                         </td>
                       </tr>
@@ -342,7 +501,16 @@
                     <table width="140px" cellspacing="0" cellpadding="0" border="0" >
                       <tr>
                         <td align="center" class="summaryValue">
-                          <xsl:value-of select="element/@minOccurs"/> : <xsl:value-of select="element/@maxOccurs"/>
+                          <xsl:choose>
+							  <xsl:when test="$isDeprecated">
+							    <span style="text-decoration: line-through;">
+							      <xsl:value-of select="element/@minOccurs"/> : <xsl:value-of select="element/@maxOccurs"/>
+							    </span>
+							  </xsl:when>
+							  <xsl:otherwise>
+							    <xsl:value-of select="element/@minOccurs"/> : <xsl:value-of select="element/@maxOccurs"/>
+							  </xsl:otherwise>
+							</xsl:choose>
                         </td>
                       </tr>      
                     </table>
@@ -378,7 +546,16 @@
                 <td width="5px"></td>
                 <xsl:for-each select="element/performanceMeasuresGroup/*">                 
                     <td class="sectionAssociatedMeasuresValue">
-                      <xsl:value-of select="."/>
+                      <xsl:choose>
+						  <xsl:when test="$isDeprecated">
+						    <span style="text-decoration: line-through;">
+						      <xsl:value-of select="."/>
+						    </span>
+						  </xsl:when>
+						  <xsl:otherwise>
+						    <xsl:value-of select="."/>
+						  </xsl:otherwise>
+						</xsl:choose>
                     </td>                 
                 </xsl:for-each>  
                 </tr>      
@@ -426,7 +603,19 @@
                         <td>
                         <xsl:for-each select="element/attributes/NV/*/facet">
                         <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;">
-                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation" disable-output-escaping="yes"/>
+                          <xsl:choose>
+						        <xsl:when test="$isDeprecated">
+						          <span style="text-decoration: line-through;">
+						            <xsl:value-of select="@value"/>
+						          </span> - 
+						          <span style="text-decoration: line-through;">
+						            <xsl:value-of select="@annotation" disable-output-escaping="yes"/>
+						          </span> 
+						        </xsl:when>
+						        <xsl:otherwise>
+						          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation" disable-output-escaping="yes"/>
+						        </xsl:otherwise>
+						      </xsl:choose>
                         </div>
                         </xsl:for-each> 
                         </td>
@@ -458,7 +647,16 @@
                         <td>
                         <xsl:for-each select="element/attributes/PN/*/facet">
                         <div class="attributeValue" style="width:220px;float:left;white-space: nowrap;">
-                          <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation"/>
+                          <xsl:choose>
+							  <xsl:when test="$isDeprecated">
+							    <span style="text-decoration: line-through;">
+							      <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation"/>
+							    </span>
+							  </xsl:when>
+							  <xsl:otherwise>
+							    <xsl:value-of select="@value"/> - <xsl:value-of select="@annotation"/>
+							  </xsl:otherwise>
+							</xsl:choose>
                         </div>
                         </xsl:for-each> 
                         </td>
@@ -749,19 +947,54 @@
                   <tr>
                     <td width="5px"></td>
                     <td class="sectionRestrictionsEnumerationCodeValue" valign="top">
-                      <xsl:value-of select="@value"/>
+                      <xsl:choose>
+						  <xsl:when test="$isDeprecated">
+							<span style="text-decoration: line-through;">
+							  <xsl:value-of select="@value"/>
+							</span>
+						  </xsl:when>
+						  <xsl:otherwise>
+							<xsl:value-of select="@value"/>
+						  </xsl:otherwise>
+						</xsl:choose>
                     </td>
                     <td class="sectionRestrictionsEnumerationDescriptionValue">
                         
                         <!--fix for escaping &lt;-->
-                        <xsl:call-template name="replace-string">
-                            <xsl:with-param name="text" select="@annotation"/>
-                            <xsl:with-param name="replace" select="'&amp;lt;'" />
-                            <xsl:with-param name="with" select="'&lt;'"/>
-                        </xsl:call-template>
+                        <xsl:choose>
+						  <xsl:when test="$isDeprecated or contains(@annotation, '(DEPRECATED)')">
+						    <span style="text-decoration: line-through;">
+						      	<xsl:choose>
+							        <xsl:when test="contains(@annotation, '(DEPRECATED)')">
+							        	<xsl:call-template name="replace-string">
+								          <xsl:with-param name="text" select="substring-before(@annotation, '(DEPRECATED)')"/>
+								          <xsl:with-param name="replace" select="'&amp;lt;'"/>
+							        	  <xsl:with-param name="with" select="'&lt;'"/>
+								        </xsl:call-template>
+							        </xsl:when>
+							        <xsl:otherwise>
+							        	<xsl:call-template name="replace-string">
+								          <xsl:with-param name="text" select="@annotation"/>
+								          <xsl:with-param name="replace" select="'&amp;lt;'"/>
+							        	  <xsl:with-param name="with" select="'&lt;'"/>
+								        </xsl:call-template>
+							        </xsl:otherwise>
+							      </xsl:choose>
+						        <!-- <xsl:with-param name="text" select="substring-before(@annotation, '(DEPRECATED)')"/> -->
+						    </span>
+						    <span>(DEPRECATED)</span>
+						  </xsl:when>
+						  <xsl:otherwise>
+						    <xsl:call-template name="replace-string">
+						      <xsl:with-param name="text" select="@annotation"/>
+						      <xsl:with-param name="replace" select="'&amp;lt;'"/>
+						      <xsl:with-param name="with" select="'&lt;'"/>
+						    </xsl:call-template>
+						  </xsl:otherwise>
+						</xsl:choose>
                         <!--<xsl:value-of    disable-output-escaping="no" select="string(@annotation)"/>-->
                         
-                      
+						<!-- Not sure how this is supposed to work or if it ever worked -->
     									<xsl:choose>  
     									<xsl:when test="@deprecated='true'">
                            <span style="background:purple;margin:0 2px;color:white;padding:0 2px">DEPRECATED</span>
@@ -818,7 +1051,7 @@
     <tr><td>    
         <table border="0" cellspacing="0" cellpadding="0" width="675px">
           <tr>
-                  <td width="667px" class="sectionV3ChangesTitle">Deprecated Comments</td>
+            <td width="667px" class="sectionDeprecatedCommentTitle">Deprecated Comment</td>
           </tr>
           <tr>
             <td class="sectionDeprecatedComment" style="padding-left:5px"><xsl:copy-of select="element/deprecatedComment"/></td>
@@ -858,7 +1091,16 @@
                   <tr class="assert">
                     <td width="5px"></td>
                     <td class="sectionRestrictionsEnumerationCodeValue" valign="top">
-                      <xsl:value-of select="@id"/>
+                    	<xsl:choose>
+						  <xsl:when test="$isDeprecated">
+						    <span style="text-decoration: line-through;">
+				      			<xsl:value-of select="@id"/>
+							</span>
+						  </xsl:when>
+						  <xsl:otherwise>
+						    <xsl:value-of select="@id"/>
+						  </xsl:otherwise>
+						</xsl:choose>
                     </td>
                     <td class="sectionRestrictionsEnumerationCodeValue" valign="top">
                       <span>
@@ -866,16 +1108,40 @@
                           role
                           <xsl:value-of select="@role" />
                         </xsl:attribute>
-                      <xsl:value-of select="@role" />
+                        
+                        <xsl:choose>
+						  <xsl:when test="$isDeprecated">
+						    <span style="text-decoration: line-through;">
+					      		<xsl:value-of select="@role" />
+							</span>
+						  </xsl:when>
+						  <xsl:otherwise>
+						    <xsl:value-of select="@role" />
+						  </xsl:otherwise>
+						</xsl:choose>
                     </span>
                     </td>
                     <td class="sectionRestrictionsEnumerationDescriptionValue">
-                        <!--fix for escaping &lt;-->
-                        <xsl:call-template name="replace-string">
-                            <xsl:with-param name="text" select="."/>
-                            <xsl:with-param name="replace" select="'&amp;lt;'" />
-                            <xsl:with-param name="with" select="'&lt;'"/>
-                        </xsl:call-template>
+                        <xsl:choose>
+						  <xsl:when test="$isDeprecated">
+						    <span style="text-decoration: line-through;">
+				      			<!--fix for escaping &lt;-->
+					        	<xsl:call-template name="replace-string">
+						          <xsl:with-param name="text" select="."/>
+						          <xsl:with-param name="replace" select="'&amp;lt;'"/>
+					        	  <xsl:with-param name="with" select="'&lt;'"/>
+						        </xsl:call-template>
+							</span>
+						  </xsl:when>
+						  <xsl:otherwise>
+						  	<!--fix for escaping &lt;-->
+						    <xsl:call-template name="replace-string">
+						      <xsl:with-param name="text" select="."/>
+						      <xsl:with-param name="replace" select="'&amp;lt;'"/>
+						      <xsl:with-param name="with" select="'&lt;'"/>
+						    </xsl:call-template>
+						  </xsl:otherwise>
+						</xsl:choose>
                     </td>
                   </tr>
                   <tr><td height="3px"></td></tr>

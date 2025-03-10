@@ -1,12 +1,12 @@
 <?xml-stylesheet type="text/xsl" href="../xslt/grouping.xslt"?>
 <section name="eResponse">
-  <group number="eResponse.AgencyGroup" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" isNillable="No">
+  <group number="eResponse.AgencyGroup" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" ProcedureGroupCorrelationID="" CustomElementID="" timeStamp="" isNillable="No">
     <element number="eResponse.01" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="EMSAgencyNumber"><name>EMS Agency Number</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     <element number="eResponse.02" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="Yes" dataType="EMSAgencyName"><name>EMS Agency Name</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>Yes</state><usage>Recommended</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
   </group>
   <element number="eResponse.03" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" isNillable="Yes" dataType="EMSIncidentNumber"><name>Incident Number</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Required</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
   <element number="eResponse.04" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" isNillable="Yes" dataType="EMSResponseNumber"><name>EMS Response Number</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Required</usage><notValue>Yes</notValue><pertinentNegative></pertinentNegative></element>
-  <group number="eResponse.ServiceGroup" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" isNillable="No">
+  <group number="eResponse.ServiceGroup" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" ProcedureGroupCorrelationID="" CustomElementID="" timeStamp="" isNillable="No">
     <element number="eResponse.05" minOccurs="1" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="EMSServiceCat"><name>Type of Service Requested</name><refNumber></refNumber><national>Yes</national><deprecated></deprecated><state>Yes</state><usage>Mandatory</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
     <element number="eResponse.06" minOccurs="0" maxOccurs="1" CorrelationID="" UUID="" isNillable="No" dataType="EMSStandByReason"><name>Standby Purpose</name><refNumber></refNumber><national>No</national><deprecated></deprecated><state>No</state><usage>Optional</usage><notValue></notValue><pertinentNegative></pertinentNegative></element>
   </group>

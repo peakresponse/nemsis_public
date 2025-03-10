@@ -37,7 +37,7 @@ START reference:  Benson M, Koenig KL, Schultz CH. Disaster triage: START, then 
 </attributes>
 <asserts>
   <assert id="nemSch_e069" role="Warning">
-      <elementRef elementNumber="eScene.08">Triage Classification for MCI Patient</elementRef> should be recorded when <elementRef elementNumber="eScene.07">Mass Casualty Incident</elementRef> is "Yes".
+      <elementRef elementNumber="eScene.08">Triage Classification for MCI Patient</elementRef> should be recorded when <elementRef elementNumber="eScene.07">Mass Casualty Incident</elementRef> is &quot;Yes&quot;.
       </assert>
   <assert id="nemSch_e002" role="Error">
       When Triage Classification for MCI Patient has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.

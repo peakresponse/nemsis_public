@@ -33,7 +33,7 @@
       When <elementRef elementNumber="eSituation.10">Other Associated Symptoms</elementRef> has a Pertinent Negative, it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
       </assert>
   <assert id="nemSch_e077" role="Warning">
-      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be "Yes" when a symptom or impression is injury-related.
+      <elementRef elementNumber="eSituation.02">Possible Injury</elementRef> should be &quot;Yes&quot; when a symptom or impression is injury-related.
       </assert>
   <assert id="nemSch_e081" role="Warning">
       <elementRef elementNumber="eSituation.10">Other Associated Symptoms</elementRef> should only be recorded when <elementRef elementNumber="eSituation.09">Primary Symptom</elementRef> is recorded.
@@ -46,9 +46,6 @@
       </assert>
   <assert id="nemSch_e009" role="Warning">
       When Other Associated Symptoms has a Not Value, no other value should be recorded.
-      </assert>
-  <assert id="nemSch_e010" role="Warning">
-      When Other Associated Symptoms has a Pertinent Negative, no other value should be recorded.
       </assert>
 </asserts>
 </element>

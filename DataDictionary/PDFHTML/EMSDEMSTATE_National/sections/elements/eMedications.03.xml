@@ -60,10 +60,10 @@
       <elementRef elementNumber="eMedications.03">Medication Administered</elementRef> should be recorded when a medication is administered.
       </assert>
   <assert id="nemSch_e143" role="Error">
-      <elementRef elementNumber="eMedications.03">Medication Administered</elementRef> should be a code of between 2 and 7 digits when Code Type is "RxNorm".
+      <elementRef elementNumber="eMedications.03">Medication Administered</elementRef> should be a code of between 2 and 7 digits when Code Type is &quot;RxNorm&quot;.
       </assert>
   <assert id="nemSch_e144" role="Error">
-      <elementRef elementNumber="eMedications.03">Medication Administered</elementRef> should be a SNOMED code specifically allowed in the data dictionary when Code Type is "SNOMED".
+      <elementRef elementNumber="eMedications.03">Medication Administered</elementRef> should be a SNOMED code specifically allowed in the data dictionary when Code Type is &quot;SNOMED&quot;.
       </assert>
   <assert id="nemSch_e145" role="Error">
       <elementRef elementNumber="eMedications.03">Medication Administered</elementRef> should be an RxNorm code of between 2 and 7 digits or a SNOMED code specifically allowed in the data dictionary.

@@ -44,7 +44,7 @@
 'EMSDataSet'|'element'|'ePatient.08'|'Patient's Home State'|'NV'|
 'EMSDataSet'|'element'|'ePatient.09'|'Patient's Home ZIP Code'|'NV'|
 'EMSDataSet'|'element'|'ePatient.12'|'Social Security Number'|'PN'|
-'EMSDataSet'|'element'|'ePatient.13'|'Gender'|'NV'|
+'EMSDataSet'|'element'|'ePatient.13'|'Gender (DEPRECATED)'|'NV'|
 'EMSDataSet'|'element'|'ePatient.14'|'Race'|'NV'|
 'EMSDataSet'|'element'|'ePatient.14'|'Race'|'CorrelationID'|
 'EMSDataSet'|'element'|'ePatient.14'|'Race'|'PN'|
@@ -60,6 +60,8 @@
 'EMSDataSet'|'element'|'ePatient.19'|'Patient's Email Address'|'CorrelationID'|
 'EMSDataSet'|'element'|'ePatient.22'|'Alternate Home Residence'|'NV'|
 'EMSDataSet'|'element'|'ePatient.24'|'Patient's Preferred Language(s)'|'CorrelationID'|
+'EMSDataSet'|'element'|'ePatient.25'|'Sex'|'NV'|
+'EMSDataSet'|'element'|'ePatient.25'|'Sex'|'PN'|
 'EMSDataSet'|'element'|'ePayment.01'|'Primary Method of Payment'|'NV'|
 'EMSDataSet'|'element'|'ePayment.04'|'Reason for Physician Certification Statement'|'CorrelationID'|
 'EMSDataSet'|'group'|'ePayment.InsuranceGroup'|''|'CorrelationID'|
@@ -493,7 +495,7 @@
 'DEMDataSet'|'element'|'dPersonnel.10'|'EMS Personnel's Email Address'|'EmailAddressType'|
 'DEMDataSet'|'element'|'dPersonnel.10'|'EMS Personnel's Email Address'|'CorrelationID'|
 'DEMDataSet'|'element'|'dPersonnel.11'|'EMS Personnel's Date of Birth'|'NV'|
-'DEMDataSet'|'element'|'dPersonnel.12'|'EMS Personnel's Gender'|'NV'|
+'DEMDataSet'|'element'|'dPersonnel.12'|'EMS Personnel's Gender (DEPRECATED)'|'NV'|
 'DEMDataSet'|'element'|'dPersonnel.13'|'EMS Personnel's Race'|'NV'|
 'DEMDataSet'|'element'|'dPersonnel.13'|'EMS Personnel's Race'|'CorrelationID'|
 'DEMDataSet'|'element'|'dPersonnel.16'|'EMS Personnel's Degree Subject/Field of Study'|'CorrelationID'|
@@ -513,6 +515,7 @@
 'DEMDataSet'|'element'|'dPersonnel.35'|'EMS Personnel's Other Job Responsibilities'|'CorrelationID'|
 'DEMDataSet'|'group'|'dPersonnel.CertificationLevelGroup'|''|'UUID'|
 'DEMDataSet'|'group'|'dPersonnel.CertificationLevelGroup'|''|'CorrelationID'|
+'DEMDataSet'|'element'|'dPersonnel.40'|'EMS Personnel's Sex'|'NV'|
 'DEMDataSet'|'group'|'dDevice.DeviceGroup'|''|'UUID'|
 'DEMDataSet'|'group'|'dDevice.DeviceGroup'|''|'CorrelationID'|
 'DEMDataSet'|'element'|'dDevice.03'|'Medical Device Type'|'CorrelationID'|

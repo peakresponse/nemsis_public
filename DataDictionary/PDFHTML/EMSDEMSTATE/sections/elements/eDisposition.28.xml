@@ -36,9 +36,6 @@
   <assert id="nemSch_e060" role="Warning">
       <elementRef elementNumber="ePatient.09">Patient's Home ZIP Code</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
       </assert>
-  <assert id="nemSch_e061" role="Warning">
-      <elementRef elementNumber="ePatient.13">Gender</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
-      </assert>
   <assert id="nemSch_e062" role="Warning">
       <elementRef elementNumber="ePatient.14">Race</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
       </assert>
@@ -47,6 +44,9 @@
       </assert>
   <assert id="nemSch_e064" role="Warning">
       <elementRef elementNumber="ePatient.16">Age Units</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
+      </assert>
+  <assert id="nemSch_e193" role="Warning">
+      <elementRef elementNumber="ePatient.25">Sex</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
       </assert>
   <assert id="nemSch_e075" role="Warning">
       <elementRef elementNumber="eSituation.01">Date/Time of Symptom Onset</elementRef> should be recorded when <elementRef elementNumber="eResponse.05">Type of Service Requested</elementRef> is &quot;Emergency Response (Primary Response Area)&quot; and <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.

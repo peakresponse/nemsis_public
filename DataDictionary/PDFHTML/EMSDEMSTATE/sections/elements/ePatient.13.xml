@@ -1,24 +1,24 @@
 <?xml-stylesheet type="text/xsl" href="../../xslt/element.xslt"?>
-<element number="ePatient.13"  minOccurs="1"  maxOccurs="1"  dataTypeName="Gender"  isNillable="Yes">
-<name>Gender</name>
+<element number="ePatient.13"  minOccurs="0"  maxOccurs="1"  dataTypeName="Gender"  isNillable="Yes">
+<name>Gender (DEPRECATED)</name>
 <national>Yes</national>
-<deprecated></deprecated>
+<deprecated>Yes</deprecated>
 <state>Yes</state>
-<definition>The patient's gender.</definition>
-<v2Number>E06_11</v2Number>
+<definition>The patient's gender. (DEPRECATED)</definition>
+<v2Number>DEPRECATED</v2Number>
 <usage>Required</usage>
 <performanceMeasuresGroup><performanceMeasure>Airway</performanceMeasure><performanceMeasure>Cardiac Arrest</performanceMeasure><performanceMeasure>Pediatric</performanceMeasure><performanceMeasure>Response</performanceMeasure><performanceMeasure>STEMI</performanceMeasure><performanceMeasure>Stroke</performanceMeasure><performanceMeasure>Trauma</performanceMeasure></performanceMeasuresGroup>
-<v3Comment>Code list referenced from: <a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity</a></v3Comment>
+<v3Comment></v3Comment>
 <v3Changes></v3Changes>
-<deprecatedComment></deprecatedComment>
+<deprecatedComment>The NEMSIS Program is funded by the National Highway Traffic Safety Administration and this element was modified to comply with President Trump’s Executive Orders.</deprecatedComment>
 <restrictions>
   <Gender baseType="string">
-    <facet name="enumeration" value="9906001" annotation="Female"/>
-    <facet name="enumeration" value="9906003" annotation="Male"/>
-    <facet name="enumeration" value="9906007" annotation="Female-to-Male, Transgender Male"/>
-    <facet name="enumeration" value="9906009" annotation="Male-to-Female, Transgender Female"/>
-    <facet name="enumeration" value="9906011" annotation="Other, neither exclusively male or female"/>
-    <facet name="enumeration" value="9906005" annotation="Unknown (Unable to Determine)"/>
+    <facet name="enumeration" value="9906001" annotation="Female (DEPRECATED)"/>
+    <facet name="enumeration" value="9906003" annotation="Male (DEPRECATED)"/>
+    <facet name="enumeration" value="9906007" annotation="Female-to-Male, Transgender Male (DEPRECATED)"/>
+    <facet name="enumeration" value="9906009" annotation="Male-to-Female, Transgender Female (DEPRECATED)"/>
+    <facet name="enumeration" value="9906011" annotation="Other, neither exclusively male or female (DEPRECATED)"/>
+    <facet name="enumeration" value="9906005" annotation="Unknown (Unable to Determine) (DEPRECATED)"/>
   </Gender>
 </restrictions>
 <attributes>
@@ -28,14 +28,11 @@
   </NV>
 </attributes>
 <asserts>
-  <assert id="nemSch_e061" role="Warning">
-      <elementRef elementNumber="ePatient.13">Gender</elementRef> should be recorded when <elementRef elementNumber="eDisposition.28">Patient Evaluation/Care</elementRef> is &quot;Patient Evaluated and Care Provided&quot;.
-      </assert>
   <assert id="nemSch_e002" role="Error">
-      When Gender has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
+      When Gender (DEPRECATED) has a Not Value (Not Applicable, Not Recorded, or Not Reporting), it should be empty.
       </assert>
   <assert id="nemSch_e001" role="Error">
-      When Gender is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
+      When Gender (DEPRECATED) is empty, it should have a Not Value (Not Applicable, Not Recorded, or Not Reporting, if allowed for the element) or a Pertinent Negative (if allowed for the element), or it should be omitted (if the element is optional).
       </assert>
 </asserts>
 </element>

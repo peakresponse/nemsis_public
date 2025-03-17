@@ -1321,7 +1321,7 @@
     <sch:let name="nemsisElementsMissing" value=".[not(nem:ePatient.25)]/'ePatient.25'"/>
 
     <sch:assert id="nemSch_e193" role="[WARNING]" diagnostics="nemsisDiagnostic" subject="nem:ePatient.25, ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28" test="ancestor::nem:PatientCareReport/nem:eDisposition/nem:eDisposition.IncidentDispositionGroup/nem:eDisposition.28 != '4228001'">
-      <sch:value-of select="key('nemSch_key_elements', local-name(), $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
+      <sch:value-of select="key('nemSch_key_elements', 'ePatient.25', $nemSch_elements)"/> should be recorded when <sch:value-of select="key('nemSch_key_elements', 'eDisposition.28', $nemSch_elements)"/> is "Patient Evaluated and Care Provided".
     </sch:assert>
 
   </sch:rule>

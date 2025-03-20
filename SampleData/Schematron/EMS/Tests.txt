@@ -305,11 +305,6 @@ ID:               nemSch_e060_A
 Description:      Patient's Home ZIP Code should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided".
 Expected Result:  [WARNING]
 
-File:             EMSDataSet-nemSch_e061_A.xml
-ID:               nemSch_e061_A
-Description:      Gender should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided".
-Expected Result:  [WARNING]
-
 File:             EMSDataSet-nemSch_e062_A.xml
 ID:               nemSch_e062_A
 Description:      Race should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided".
@@ -974,6 +969,11 @@ File:             EMSDataSet-nemSch_e192_A.xml
 ID:               nemSch_e192_A
 Description:      When Date/Time of Cardiac Arrest has a Pertinent Negative of "Approximate", it should have a value and it should not have a Not Value (Not Applicable, Not Recorded, or Not Reporting).
 Expected Result:  [ERROR]
+
+File:             EMSDataSet-nemSch_e193_A.xml
+ID:               nemSch_e193_A
+Description:      Sex should be recorded when Patient Evaluation/Care is "Patient Evaluated and Care Provided".
+Expected Result:  [WARNING]
 
 File:             EMSDataSet-nemSch_eNilNvPn_eNvPn_A.xml
 ID:               nemSch_eNilNvPn_eNvPn_A

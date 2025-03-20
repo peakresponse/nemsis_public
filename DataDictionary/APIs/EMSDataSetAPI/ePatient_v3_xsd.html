@@ -32,6 +32,7 @@
 				'properties_ePatient_ePatient.21', 
 				'properties_ePatient_ePatient.22', 
 				'properties_ePatient_ePatient.24', 
+				'properties_ePatient_ePatient.25', 
 				'properties_ePatient_ePatient_ePatient.PatientNameGroup_ePatient_ePatient_ePatient.PatientNameGroup_ePatient.02_NV', 
 				'properties_ePatient_ePatient_ePatient.PatientNameGroup_ePatient_ePatient_ePatient.PatientNameGroup_ePatient.02_PN', 
 				'properties_ePatient_ePatient_ePatient.PatientNameGroup_ePatient_ePatient_ePatient.PatientNameGroup_ePatient.03_NV', 
@@ -58,7 +59,9 @@
 				'properties_ePatient_ePatient_ePatient.19_EmailAddressType', 
 				'properties_ePatient_ePatient_ePatient.19_CorrelationID', 
 				'properties_ePatient_ePatient_ePatient.22_NV', 
-				'properties_ePatient_ePatient_ePatient.24_CorrelationID');
+				'properties_ePatient_ePatient_ePatient.24_CorrelationID', 
+				'properties_ePatient_ePatient_ePatient.25_NV', 
+				'properties_ePatient_ePatient_ePatient.25_PN');
 var facetsBoxes= new Array('facets_ePatient_ePatient.01', 
 				'facets_ePatient_ePatient_ePatient.PatientNameGroup_ePatient.04', 
 				'facets_ePatient_ePatient_ePatient.PatientNameGroup_ePatient.23', 
@@ -114,7 +117,9 @@ var usedByBoxes= new Array('usedBy_ePatient',
 				'usedBy_ePatient_ePatient_ePatient.19_EmailAddressType', 
 				'usedBy_ePatient_ePatient_ePatient.19_CorrelationID', 
 				'usedBy_ePatient_ePatient_ePatient.22_NV', 
-				'usedBy_ePatient_ePatient_ePatient.24_CorrelationID');
+				'usedBy_ePatient_ePatient_ePatient.24_CorrelationID', 
+				'usedBy_ePatient_ePatient_ePatient.25_NV', 
+				'usedBy_ePatient_ePatient_ePatient.25_PN');
 var sourceBoxes= new Array('source_ePatient_ePatient.01', 
 				'source_ePatient_ePatient.PatientNameGroup', 
 				'source_ePatient_ePatient_ePatient.PatientNameGroup_ePatient.02', 
@@ -141,6 +146,7 @@ var sourceBoxes= new Array('source_ePatient_ePatient.01',
 				'source_ePatient_ePatient.21', 
 				'source_ePatient_ePatient.22', 
 				'source_ePatient_ePatient.24', 
+				'source_ePatient_ePatient.25', 
 				'source_ePatient', 
 				'source_PatientID', 
 				'source_Race', 
@@ -175,7 +181,9 @@ var sourceBoxes= new Array('source_ePatient_ePatient.01',
 				'source_ePatient_ePatient_ePatient.19_EmailAddressType', 
 				'source_ePatient_ePatient_ePatient.19_CorrelationID', 
 				'source_ePatient_ePatient_ePatient.22_NV', 
-				'source_ePatient_ePatient_ePatient.24_CorrelationID');
+				'source_ePatient_ePatient_ePatient.24_CorrelationID', 
+				'source_ePatient_ePatient_ePatient.25_NV', 
+				'source_ePatient_ePatient_ePatient.25_PN');
 var instanceBoxes= new Array('instance_ePatient_ePatient.PatientNameGroup', 
 				'instance_ePatient_ePatient.AgeGroup');
 var diagramBoxes= new Array('diagram_ePatient_ePatient.01', 
@@ -204,6 +212,7 @@ var diagramBoxes= new Array('diagram_ePatient_ePatient.01',
 				'diagram_ePatient_ePatient.21', 
 				'diagram_ePatient_ePatient.22', 
 				'diagram_ePatient_ePatient.24', 
+				'diagram_ePatient_ePatient.25', 
 				'diagram_ePatient', 
 				'diagram_PatientID', 
 				'diagram_Race', 
@@ -238,6 +247,7 @@ var annotationBoxes= new Array('annotations_ePatient_ePatient.01',
 				'annotations_ePatient_ePatient.21', 
 				'annotations_ePatient_ePatient.22', 
 				'annotations_ePatient_ePatient.24', 
+				'annotations_ePatient_ePatient.25', 
 				'annotations_PatientID', 
 				'annotations_Race', 
 				'annotations_Age', 
@@ -261,7 +271,8 @@ var attributesBoxes= new Array('attributes_ePatient_ePatient_ePatient.PatientNam
 				'attributes_ePatient_ePatient.18', 
 				'attributes_ePatient_ePatient.19', 
 				'attributes_ePatient_ePatient.22', 
-				'attributes_ePatient_ePatient.24');
+				'attributes_ePatient_ePatient.24', 
+				'attributes_ePatient_ePatient.25');
 var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup', 
 				'model_ePatient_ePatient.AgeGroup', 
 				'model_ePatient');
@@ -3044,12 +3055,13 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
                                     <tr>
                                        <td style="width:100%">
                                           <pre><span class="tEl">&lt;nemsisTacDoc</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.13</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Gender</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;deprecated</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/deprecated&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.13 (DEPRECATED)</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Gender (DEPRECATED)</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
   </span><span class="tEl">&lt;national</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/national&gt;</span><span class="tI">
   </span><span class="tEl">&lt;state</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/state&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's gender.</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;v2Number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">E06_11</span><span class="tEl">&lt;/v2Number&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's gender. (DEPRECATED)</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;v2Number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">DEPRECATED</span><span class="tEl">&lt;/v2Number&gt;</span><span class="tI">
   </span><span class="tEl">&lt;usage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Required</span><span class="tEl">&lt;/usage&gt;</span><span class="tI">
   </span><span class="tEl">&lt;performanceMeasuresGroup</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Airway</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
@@ -3060,7 +3072,7 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
     </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
     </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity"&gt;https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a&gt;</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;deprecatedComment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The NEMSIS Program is funded by the National Highway Traffic Safety Administration and this element was modified to comply with President Trump’s Executive Orders.</span><span class="tEl">&lt;/deprecatedComment&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
 </span></pre>
                                        </td>
@@ -3105,6 +3117,10 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">content</td>
                                     <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
                                  </tr>
                                  <tr>
                                     <td class="firstColumn" style="white-space: nowrap;">nillable</td>
@@ -3152,16 +3168,17 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
                               <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
                                  <tr>
                                     <td style="width:100%">
-                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ePatient.13"</span><span class="tAN"> nillable=</span><span class="tAV">"true"</span><span class="tAN"> id=</span><span class="tAV">"ePatient.Gender"</span><span class="tEl">&gt;</span><span class="tI">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ePatient.13"</span><span class="tAN"> nillable=</span><span class="tAV">"true"</span><span class="tAN"> id=</span><span class="tAV">"ePatient.Gender"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
   </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;nemsisTacDoc</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.13</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Gender</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;deprecated</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/deprecated&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.13 (DEPRECATED)</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Gender (DEPRECATED)</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
         </span><span class="tEl">&lt;national</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/national&gt;</span><span class="tI">
         </span><span class="tEl">&lt;state</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/state&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's gender.</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;v2Number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">E06_11</span><span class="tEl">&lt;/v2Number&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's gender. (DEPRECATED)</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;v2Number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">DEPRECATED</span><span class="tEl">&lt;/v2Number&gt;</span><span class="tI">
         </span><span class="tEl">&lt;usage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Required</span><span class="tEl">&lt;/usage&gt;</span><span class="tI">
         </span><span class="tEl">&lt;performanceMeasuresGroup</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Airway</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
@@ -3172,7 +3189,7 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
           </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
           </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity"&gt;https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a&gt;</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;deprecatedComment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The NEMSIS Program is funded by the National Highway Traffic Safety Administration and this element was modified to comply with President Trump’s Executive Orders.</span><span class="tEl">&lt;/deprecatedComment&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
@@ -5187,6 +5204,209 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
             <td class="rt_lineBottom"></td>
             <td class="rt_cornerBottomRight"></td>
          </tr>
+      </table><a id="ePatient_ePatient.25"></a><div class="componentTitle">Element <span class="qname"><b><a href="ePatient_v3_xsd.html#ePatient" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient</a></b> / ePatient.25</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>http://www.nemsis.org</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_ePatient_ePatient.25" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('annotations_ePatient_ePatient.25');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_ePatient_ePatient.25" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td style="width:100%">
+                                          <pre><span class="tEl">&lt;nemsisTacDoc</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.25</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Sex</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;national</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/national&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;state</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/state&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's sex.</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;usage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Required</span><span class="tEl">&lt;/usage&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;performanceMeasuresGroup</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Airway</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Cardiac Arrest</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Pediatric</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Response</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">STEMI</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;comment</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
+</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_ePatient_ePatient.25" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('diagram_ePatient_ePatient.25');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_ePatient_ePatient.25" style="display:block"><img alt="Diagram" style="border:0" src="img/ePatient_v3_xsd_Element_ePatient_25.jpeg" usemap="#ePatient_v3_xsd_Element_ePatient_25" /><map name="ePatient_v3_xsd_Element_ePatient_25" id="ePatient_v3_xsd_Element_ePatient_25"><area alt="commonTypes_v3_xsd.tmp#Sex" href="commonTypes_v3_xsd.html#Sex" coords="132,2,207,28" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient_ePatient.25_NV" href="ePatient_v3_xsd.html#ePatient_ePatient_ePatient.25_NV" coords="146,108,216,133" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient_ePatient.25_PN" href="ePatient_v3_xsd.html#ePatient_ePatient_ePatient.25_PN" coords="146,143,216,168" /></map></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>extension of <b><a href="commonTypes_v3_xsd.html#Sex" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">Sex</a></b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type hierarchy</b></td>
+                        <td>
+                           <ul class="internal">
+                              <li class="internal"><b>xs:string</b><ul class="internal">
+                                    <li class="internal"><b><a href="commonTypes_v3_xsd.html#Sex" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">Sex</a></b></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ePatient_ePatient.25" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('properties_ePatient_ePatient.25');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ePatient_ePatient.25" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">content</td>
+                                    <td><b>complex</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">minOccurs</td>
+                                    <td><b>0</b></td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">nillable</td>
+                                    <td><b>true</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Attributes</b></div>
+                           <div class="floatRight"><input id="button_attributes_ePatient_ePatient.25" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('attributes_ePatient_ePatient.25');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="attributes_ePatient_ePatient.25" style="display:block">
+                              <table class="attributesTable">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th style="width:10%">Type</th>
+                                       <th style="width:10%">Use</th>
+                                       <th></th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="ePatient_v3_xsd.html#ePatient_ePatient_ePatient.25_NV" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">NV</a></b></td>
+                                    <td>union of(<b><a href="commonTypes_v3_xsd.html#NV.NotApplicable" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotApplicable</a></b>, <b><a href="commonTypes_v3_xsd.html#NV.NotRecorded" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotRecorded</a></b>, <b><a href="commonTypes_v3_xsd.html#NV.NotReporting" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotReporting</a></b>)</td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn"><b><a href="ePatient_v3_xsd.html#ePatient_ePatient_ePatient.25_PN" target="mainFrame" title="No namespace" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">PN</a></b></td>
+                                    <td>union of(<b><a href="commonTypes_v3_xsd.html#PN.Refused" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">PN.Refused</a></b>, <b><a href="commonTypes_v3_xsd.html#PN.UnableToComplete" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">PN.UnableToComplete</a></b>)</td>
+                                    <td>optional</td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ePatient_ePatient.25" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('source_ePatient_ePatient.25');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ePatient_ePatient.25" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td style="width:100%">
+                                       <pre><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ePatient.25"</span><span class="tAN"> nillable=</span><span class="tAV">"true"</span><span class="tAN"> id=</span><span class="tAV">"ePatient.Sex"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;nemsisTacDoc</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.25</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Sex</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;national</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/national&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;state</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/state&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's sex.</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;usage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Required</span><span class="tEl">&lt;/usage&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;performanceMeasuresGroup</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Airway</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Cardiac Arrest</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Pediatric</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Response</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">STEMI</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;comment</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:simpleContent</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"Sex"</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"NV"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"NV.NotApplicable NV.NotRecorded NV.NotReporting"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"PN"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"PN.Refused PN.UnableToComplete"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:simpleContent&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
       </table><a id="ePatient"></a><div class="componentTitle">Complex Type <span class="qname">ePatient</span></div>
       <table class="rt">
          <tr>
@@ -5209,7 +5429,7 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
                            <div class="floatRight"><input id="button_diagram_ePatient" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('diagram_ePatient');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_ePatient" style="display:block"><img alt="Diagram" style="border:0" src="img/ePatient_v3_xsd_Complex_Type_ePatient.jpeg" usemap="#ePatient_v3_xsd_Complex_Type_ePatient" /><map name="ePatient_v3_xsd_Complex_Type_ePatient" id="ePatient_v3_xsd_Complex_Type_ePatient"><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.01" href="ePatient_v3_xsd.html#ePatient_ePatient.01" coords="213,0,297,25" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.PatientNameGroup" href="ePatient_v3_xsd.html#ePatient_ePatient.PatientNameGroup" coords="213,94,374,119" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.05" href="ePatient_v3_xsd.html#ePatient_ePatient.05" coords="213,160,297,185" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.06" href="ePatient_v3_xsd.html#ePatient_ePatient.06" coords="213,254,297,279" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.07" href="ePatient_v3_xsd.html#ePatient_ePatient.07" coords="213,348,297,373" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.08" href="ePatient_v3_xsd.html#ePatient_ePatient.08" coords="213,442,297,467" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.09" href="ePatient_v3_xsd.html#ePatient_ePatient.09" coords="213,536,297,561" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.10" href="ePatient_v3_xsd.html#ePatient_ePatient.10" coords="213,630,297,655" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.11" href="ePatient_v3_xsd.html#ePatient_ePatient.11" coords="213,724,297,749" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.12" href="ePatient_v3_xsd.html#ePatient_ePatient.12" coords="213,818,297,843" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.13" href="ePatient_v3_xsd.html#ePatient_ePatient.13" coords="213,912,297,937" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.14" href="ePatient_v3_xsd.html#ePatient_ePatient.14" coords="213,1006,297,1031" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.AgeGroup" href="ePatient_v3_xsd.html#ePatient_ePatient.AgeGroup" coords="213,1100,335,1125" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.17" href="ePatient_v3_xsd.html#ePatient_ePatient.17" coords="213,1166,297,1191" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.18" href="ePatient_v3_xsd.html#ePatient_ePatient.18" coords="213,1260,297,1285" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.19" href="ePatient_v3_xsd.html#ePatient_ePatient.19" coords="213,1354,297,1379" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.20" href="ePatient_v3_xsd.html#ePatient_ePatient.20" coords="213,1448,297,1473" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.21" href="ePatient_v3_xsd.html#ePatient_ePatient.21" coords="213,1542,297,1567" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.22" href="ePatient_v3_xsd.html#ePatient_ePatient.22" coords="213,1636,297,1661" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.24" href="ePatient_v3_xsd.html#ePatient_ePatient.24" coords="213,1730,297,1755" /></map></div>
+                           <div id="diagram_ePatient" style="display:block"><img alt="Diagram" style="border:0" src="img/ePatient_v3_xsd_Complex_Type_ePatient.jpeg" usemap="#ePatient_v3_xsd_Complex_Type_ePatient" /><map name="ePatient_v3_xsd_Complex_Type_ePatient" id="ePatient_v3_xsd_Complex_Type_ePatient"><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.01" href="ePatient_v3_xsd.html#ePatient_ePatient.01" coords="213,0,297,25" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.PatientNameGroup" href="ePatient_v3_xsd.html#ePatient_ePatient.PatientNameGroup" coords="213,94,374,119" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.05" href="ePatient_v3_xsd.html#ePatient_ePatient.05" coords="213,160,297,185" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.06" href="ePatient_v3_xsd.html#ePatient_ePatient.06" coords="213,254,297,279" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.07" href="ePatient_v3_xsd.html#ePatient_ePatient.07" coords="213,348,297,373" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.08" href="ePatient_v3_xsd.html#ePatient_ePatient.08" coords="213,442,297,467" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.09" href="ePatient_v3_xsd.html#ePatient_ePatient.09" coords="213,536,297,561" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.10" href="ePatient_v3_xsd.html#ePatient_ePatient.10" coords="213,630,297,655" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.11" href="ePatient_v3_xsd.html#ePatient_ePatient.11" coords="213,724,297,749" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.12" href="ePatient_v3_xsd.html#ePatient_ePatient.12" coords="213,818,297,843" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.13" href="ePatient_v3_xsd.html#ePatient_ePatient.13" coords="213,912,297,937" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.14" href="ePatient_v3_xsd.html#ePatient_ePatient.14" coords="213,1006,297,1031" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.AgeGroup" href="ePatient_v3_xsd.html#ePatient_ePatient.AgeGroup" coords="213,1100,335,1125" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.17" href="ePatient_v3_xsd.html#ePatient_ePatient.17" coords="213,1166,297,1191" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.18" href="ePatient_v3_xsd.html#ePatient_ePatient.18" coords="213,1260,297,1285" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.19" href="ePatient_v3_xsd.html#ePatient_ePatient.19" coords="213,1354,297,1379" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.20" href="ePatient_v3_xsd.html#ePatient_ePatient.20" coords="213,1448,297,1473" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.21" href="ePatient_v3_xsd.html#ePatient_ePatient.21" coords="213,1542,297,1567" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.22" href="ePatient_v3_xsd.html#ePatient_ePatient.22" coords="213,1636,297,1661" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.24" href="ePatient_v3_xsd.html#ePatient_ePatient.24" coords="213,1730,297,1755" /><area alt="ePatient_v3_xsd.tmp#ePatient_ePatient.25" href="ePatient_v3_xsd.html#ePatient_ePatient.25" coords="213,1824,297,1849" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -5232,12 +5452,12 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
                         <td class="firstColumn"><b>Model</b><div class="floatRight"><input id="button_model_ePatient" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('model_ePatient');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="model_ePatient" style="display:block"><b><a href="ePatient_v3_xsd.html#ePatient_ePatient.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.01{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.PatientNameGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.PatientNameGroup{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.05" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.05{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.06" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.06{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.07" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.07</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.08" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.08</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.09" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.09</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.10{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.11{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.12" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.12{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.13</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.14" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.14+</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.AgeGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.AgeGroup</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.17" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.17{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.18*</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.19" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.19*</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.20" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.20{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.21" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.21{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.22" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.22{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.24" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.24*</a></b></div>
+                           <div id="model_ePatient" style="display:block"><b><a href="ePatient_v3_xsd.html#ePatient_ePatient.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.01{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.PatientNameGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.PatientNameGroup{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.05" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.05{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.06" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.06{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.07" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.07</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.08" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.08</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.09" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.09</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.10{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.11{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.12" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.12{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.13{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.14" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.14+</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.AgeGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.AgeGroup</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.17" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.17{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.18*</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.19" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.19*</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.20" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.20{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.21" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.21{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.22" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.22{0,1}</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.24" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.24*</a></b> , <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.25" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.25{0,1}</a></b></div>
                         </td>
                      </tr>
                      <tr>
                         <td class="firstColumn"><b>Children</b></td>
-                        <td><b><a href="ePatient_v3_xsd.html#ePatient_ePatient.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.01</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.05" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.05</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.06" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.06</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.07" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.07</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.08" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.08</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.09" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.09</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.10</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.11</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.12" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.12</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.13</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.14" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.14</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.17" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.17</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.18</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.19" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.19</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.20" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.20</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.21" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.21</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.22" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.22</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.24" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.24</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.AgeGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.AgeGroup</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.PatientNameGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.PatientNameGroup</a></b></td>
+                        <td><b><a href="ePatient_v3_xsd.html#ePatient_ePatient.01" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.01</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.05" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.05</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.06" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.06</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.07" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.07</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.08" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.08</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.09" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.09</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.10" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.10</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.11" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.11</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.12" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.12</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.13" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.13</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.14" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.14</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.17" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.17</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.18" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.18</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.19" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.19</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.20" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.20</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.21" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.21</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.22" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.22</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.24" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.24</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.25" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.25</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.AgeGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.AgeGroup</a></b>, <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.PatientNameGroup" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.PatientNameGroup</a></b></td>
                      </tr>
                      <tr>
                         <td class="firstColumn">
@@ -5599,16 +5819,17 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
         </span><span class="tEl">&lt;/xs:simpleContent&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ePatient.13"</span><span class="tAN"> nillable=</span><span class="tAV">"true"</span><span class="tAN"> id=</span><span class="tAV">"ePatient.Gender"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ePatient.13"</span><span class="tAN"> nillable=</span><span class="tAV">"true"</span><span class="tAN"> id=</span><span class="tAV">"ePatient.Gender"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;nemsisTacDoc</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.13</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Gender</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;deprecated</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/deprecated&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.13 (DEPRECATED)</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Gender (DEPRECATED)</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
             </span><span class="tEl">&lt;national</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/national&gt;</span><span class="tI">
             </span><span class="tEl">&lt;state</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/state&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's gender.</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;v2Number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">E06_11</span><span class="tEl">&lt;/v2Number&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's gender. (DEPRECATED)</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;v2Number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">DEPRECATED</span><span class="tEl">&lt;/v2Number&gt;</span><span class="tI">
             </span><span class="tEl">&lt;usage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Required</span><span class="tEl">&lt;/usage&gt;</span><span class="tI">
             </span><span class="tEl">&lt;performanceMeasuresGroup</span><span class="tEl">&gt;</span><span class="tI">
               </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Airway</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
@@ -5619,7 +5840,7 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
               </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
               </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
             </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
-            </span><span class="tEl">&lt;comment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity"&gt;https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a&gt;</span><span class="tEl">&lt;/comment&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;deprecatedComment</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The NEMSIS Program is funded by the National Highway Traffic Safety Administration and this element was modified to comply with President Trump’s Executive Orders.</span><span class="tEl">&lt;/deprecatedComment&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
@@ -5920,6 +6141,46 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
         </span><span class="tEl">&lt;xs:simpleContent</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"PatientPreferredLanguage"</span><span class="tEl">&gt;</span><span class="tI">
             </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"CorrelationID"</span><span class="tAN"> type=</span><span class="tAV">"CorrelationID"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:simpleContent&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/xs:element&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:element</span><span class="tAN"> name=</span><span class="tAV">"ePatient.25"</span><span class="tAN"> nillable=</span><span class="tAV">"true"</span><span class="tAN"> id=</span><span class="tAV">"ePatient.Sex"</span><span class="tAN"> minOccurs=</span><span class="tAV">"0"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;nemsisTacDoc</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;number</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">ePatient.25</span><span class="tEl">&lt;/number&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;name</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Sex</span><span class="tEl">&lt;/name&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;national</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/national&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;state</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Yes</span><span class="tEl">&lt;/state&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;definition</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">The patient's sex.</span><span class="tEl">&lt;/definition&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;usage</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Required</span><span class="tEl">&lt;/usage&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;performanceMeasuresGroup</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Airway</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Cardiac Arrest</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Pediatric</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Response</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">STEMI</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Stroke</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;performanceMeasure</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Trauma</span><span class="tEl">&lt;/performanceMeasure&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/performanceMeasuresGroup&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;comment</span><span class="tEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/nemsisTacDoc&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;xs:complexType</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;xs:simpleContent</span><span class="tEl">&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;xs:extension</span><span class="tAN"> base=</span><span class="tAV">"Sex"</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"NV"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"NV.NotApplicable NV.NotRecorded NV.NotReporting"</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"PN"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+                </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"PN.Refused PN.UnableToComplete"</span><span class="tEl">/&gt;</span><span class="tI">
+              </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+            </span><span class="tEl">&lt;/xs:attribute&gt;</span><span class="tI">
           </span><span class="tEl">&lt;/xs:extension&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/xs:simpleContent&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/xs:complexType&gt;</span><span class="tI">
@@ -10549,6 +10810,172 @@ var modelBoxes= new Array('model_ePatient_ePatient.PatientNameGroup',
                                  <tr>
                                     <td style="width:100%">
                                        <pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"CorrelationID"</span><span class="tAN"> type=</span><span class="tAV">"CorrelationID"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">/&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="ePatient_ePatient_ePatient.25_NV"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="ePatient_v3_xsd.html#ePatient" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient</a></b> / <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.25" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.25</a></b> / @NV</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>union of(<b><a href="commonTypes_v3_xsd.html#NV.NotApplicable" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotApplicable</a></b>, <b><a href="commonTypes_v3_xsd.html#NV.NotRecorded" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotRecorded</a></b>, <b><a href="commonTypes_v3_xsd.html#NV.NotReporting" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">NV.NotReporting</a></b>)</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ePatient_ePatient_ePatient.25_NV" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('properties_ePatient_ePatient_ePatient.25_NV');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ePatient_ePatient_ePatient.25_NV" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>optional</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_ePatient_ePatient_ePatient.25_NV" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('usedBy_ePatient_ePatient_ePatient.25_NV');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_ePatient_ePatient_ePatient.25_NV" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="ePatient_v3_xsd.html#ePatient_ePatient.25" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient/ePatient.25</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ePatient_ePatient_ePatient.25_NV" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('source_ePatient_ePatient_ePatient.25_NV');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ePatient_ePatient_ePatient.25_NV" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td style="width:100%">
+                                       <pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"NV"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"NV.NotApplicable NV.NotRecorded NV.NotReporting"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="ePatient_ePatient_ePatient.25_PN"></a><div class="componentTitle">Attribute <span class="qname"><b><a href="ePatient_v3_xsd.html#ePatient" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient</a></b> / <b><a href="ePatient_v3_xsd.html#ePatient_ePatient.25" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient.25</a></b> / @PN</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>union of(<b><a href="commonTypes_v3_xsd.html#PN.Refused" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">PN.Refused</a></b>, <b><a href="commonTypes_v3_xsd.html#PN.UnableToComplete" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for commonTypes_v3.xsd')">PN.UnableToComplete</a></b>)</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Properties</b></div>
+                           <div class="floatRight"><input id="button_properties_ePatient_ePatient_ePatient.25_PN" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('properties_ePatient_ePatient_ePatient.25_PN');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="properties_ePatient_ePatient_ePatient.25_PN" style="display:block">
+                              <table class="propertiesTable">
+                                 <tr>
+                                    <td class="firstColumn" style="white-space: nowrap;">use</td>
+                                    <td><b>optional</b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_ePatient_ePatient_ePatient.25_PN" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('usedBy_ePatient_ePatient_ePatient.25_PN');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_ePatient_ePatient_ePatient.25_PN" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="ePatient_v3_xsd.html#ePatient_ePatient.25" target="mainFrame" title="http://www.nemsis.org" onclick="updatePageTitle('Schema documentation for ePatient_v3.xsd')">ePatient/ePatient.25</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_ePatient_ePatient_ePatient.25_PN" type="image" src="img/btM.gif" alt="expand/collapse" onclick="switchState('source_ePatient_ePatient_ePatient.25_PN');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_ePatient_ePatient_ePatient.25_PN" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td style="width:100%">
+                                       <pre><span class="tEl">&lt;xs:attribute</span><span class="tAN"> name=</span><span class="tAV">"PN"</span><span class="tAN"> use=</span><span class="tAV">"optional"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:simpleType</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:union</span><span class="tAN"> memberTypes=</span><span class="tAV">"PN.Refused PN.UnableToComplete"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:simpleType&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:attribute&gt;</span></pre>
                                     </td>
                                  </tr>
                               </table>

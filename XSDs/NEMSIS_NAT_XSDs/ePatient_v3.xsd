@@ -119,16 +119,17 @@
 			
 			
 			
-			<xs:element name="ePatient.13" nillable="true" id="ePatient.Gender">
+			<xs:element name="ePatient.13" nillable="true" id="ePatient.Gender" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>
 						<nemsisTacDoc>
-							<number>ePatient.13</number>
-							<name>Gender</name>
+							<deprecated>Yes</deprecated>
+							<number>ePatient.13 (DEPRECATED)</number>
+							<name>Gender (DEPRECATED)</name>
 							<national>Yes</national>
 							<state>Yes</state>
-							<definition>The patient's gender.</definition>
-							<v2Number>E06_11</v2Number>
+							<definition>The patient's gender. (DEPRECATED)</definition>
+							<v2Number>DEPRECATED</v2Number>
 							<usage>Required</usage>
 							<performanceMeasuresGroup>
 								<performanceMeasure>Airway</performanceMeasure>
@@ -139,7 +140,7 @@
 								<performanceMeasure>Stroke</performanceMeasure>
 								<performanceMeasure>Trauma</performanceMeasure>
 							</performanceMeasuresGroup>
-							<comment>Code list referenced from: &lt;a href="https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity">https://www.healthit.gov/isa/sex-birth-sexual-orientation-and-gender-identity&lt;/a></comment>
+							<deprecatedComment>The NEMSIS Program is funded by the National Highway Traffic Safety Administration and this element was modified to comply with President Trump’s Executive Orders.</deprecatedComment>
 						</nemsisTacDoc>
 					</xs:documentation>
 				</xs:annotation>
@@ -288,7 +289,46 @@
 			
 			
 			
-			
+			<xs:element name="ePatient.25" nillable="true" id="ePatient.Sex" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<nemsisTacDoc>
+							<number>ePatient.25</number>
+							<name>Sex</name>
+							<national>Yes</national>
+							<state>Yes</state>
+							<definition>The patient's sex.</definition>
+							<usage>Required</usage>
+							<performanceMeasuresGroup>
+								<performanceMeasure>Airway</performanceMeasure>
+								<performanceMeasure>Cardiac Arrest</performanceMeasure>
+								<performanceMeasure>Pediatric</performanceMeasure>
+								<performanceMeasure>Response</performanceMeasure>
+								<performanceMeasure>STEMI</performanceMeasure>
+								<performanceMeasure>Stroke</performanceMeasure>
+								<performanceMeasure>Trauma</performanceMeasure>
+							</performanceMeasuresGroup>
+							<comment></comment>
+						</nemsisTacDoc>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="Sex">
+							<xs:attribute name="NV" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="NV.NotApplicable NV.NotRecorded NV.NotReporting"></xs:union>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="PN" use="optional">
+								<xs:simpleType>
+									<xs:union memberTypes="PN.Refused PN.UnableToComplete"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="Age">

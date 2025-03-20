@@ -152,7 +152,7 @@
    <xsl:template match="/">
       <svrl:schematron-output xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
                               title="Schema for Additional Constraints in NEMSIS Schematron v3.5+"
-                              schemaVersion="3.5.1.250115">
+                              schemaVersion="3.5.1.250403CP1">
          <xsl:comment>
             <xsl:value-of select="$archiveDirParameter"/>   
 		 <xsl:value-of select="$archiveNameParameter"/>  

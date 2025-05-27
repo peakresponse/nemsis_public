@@ -1,8 +1,8 @@
 xquery version '1.0';
 declare default element namespace 'http://www.nemsis.org';
 (: NEMSIS Case Definition :)
-(: General Filters - v3.4.0 and v3.5.0 :)
-(: June 27, 2023 :)
+(: General Filters - v3.4 and v3.5 :)
+(: May 27, 2025 :)
 for
   $dataset in doc('/path/to/EMSDataSetDocument.xml')
 let
@@ -14,9 +14,9 @@ let
   (: Interfacility Transfer, Medical Transport :)
   let $TypeOfService_Interfacility := $records[eResponse/eResponse.ServiceGroup/eResponse.05 = ('2205005', '2205007', '2205015', '2205017', '2205019')]
 
-(: eResponse.07 - Unit Transport and Equipment Capability (v3.5.0) :)
-(: eResponse.07 - Primary Role of the Unit (v3.4.0) :)
-(: eResponse.15 - Level of Care of This Unit (v3.4.0) :)
+(: eResponse.07 - Unit Transport and Equipment Capability (v3.5) :)
+(: eResponse.07 - Primary Role of the Unit (v3.4) :)
+(: eResponse.15 - Level of Care of This Unit (v3.4) :)
   (: Transport :)
   let $UnitCapability_Transport := $records[eResponse/eResponse.07 = ('2207003', '2207011', '2207013', '2207015', '2207017', '2207019', '2207025')]
   (: Non-Transport :)
@@ -39,7 +39,7 @@ let
       or
       eResponse/eResponse.15 = ('2215009', '2215011', '2215013', '2215015', '2215017', '22150019', '22150021')
     ]
-  (: Other (v3.5.0 only) :)
+  (: Other (v3.5 only) :)
   let $UnitCapability_Other := $records[eResponse/eResponse.07 = ('2207025', '2207027')]
 
 (: eResponse.23 - Response Mode to Scene :)
@@ -59,7 +59,7 @@ let
   let $InitialAcuity_LowerAcuity := $records[eSituation/eSituation.13 = '2813005']
   (: Dead without Resuscitation Efforts (Black) :)
   let $InitialAcuity_Dead := $records[eSituation/eSituation.13 = '2813007']
-  (: Non-Acute/Routine (v3.5.0 only) :)
+  (: Non-Acute/Routine (v3.5 only) :)
   let $InitialAcuity_NonAcute := $records[eSituation/eSituation.13 = '2813009']
   (: Alive :)
   let $InitialAcuity_Alive := $records[eSituation/eSituation.13 = ('2813001', '2813003', '2813005', '2813009')]
@@ -72,8 +72,8 @@ let
   (: Geriatric (65 years or older) :)
   let $Age_Geriatric := $records[ePatient/ePatient.AgeGroup[ePatient.15 != '' and ePatient.15 >= 65 and ePatient.16 = '2516009']]
 
-(: eDisposition.IncidentDispositionGroup - Disposition (v3.5.0) :)
-(: eDisposition.12 - Incident/Patient Disposition (v3.4.0) :)
+(: eDisposition.IncidentDispositionGroup - Disposition (v3.5) :)
+(: eDisposition.12 - Incident/Patient Disposition (v3.4) :)
   (: Patient :)
   let $Disposition_Patient := $records
     [

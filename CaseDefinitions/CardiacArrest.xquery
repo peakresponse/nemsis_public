@@ -2,13 +2,13 @@ xquery version '1.0';
 declare default element namespace 'http://www.nemsis.org';
 (: NEMSIS Case Definition :)
 (: Cardiac Arrest :)
-(: August 26, 2021 :)
+(: May 27, 2025 :)
 for
   $dataset in doc('/path/to/EMSDataSetDocument.xml')
 let
   $records := $dataset/EMSDataSet/Header/PatientCareReport
   [
-    eSituation/(eSituation.09, eSituation.10, eSituation.11, eSituation.12)[starts-with(., 'I46')]
+    eSituation/(eSituation.09, eSituation.10[not(@PN)], eSituation.11, eSituation.12)[starts-with(., 'I46')]
     and
     (
       (

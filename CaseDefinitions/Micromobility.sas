@@ -1,6 +1,6 @@
 /* NEMSIS Case Definition */
 /* Micromobility */
-/* June 27, 2023 */
+/* May 27, 2025 */
 proc sql;
   create table MicromobilityKey as
   select distinct pcrKey from

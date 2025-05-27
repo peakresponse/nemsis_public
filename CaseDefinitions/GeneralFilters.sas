@@ -1,6 +1,6 @@
 /* NEMSIS Case Definition */
-/* General Filters - v3.4.0 and v3.5.0  */
-/* June 27, 2023 */
+/* General Filters - v3.4 and v3.5  */
+/* May 27, 2025 */
 proc sql;
 
 /* eResponse.05 - Type of Service Requested */
@@ -9,9 +9,9 @@ proc sql;
   /* Interfacility Transfer, Medical Transport */
   create table TypeOfService_Interfacility as select * from nemsis.pub_pcrEvents where eResponse_05 in ('2205005', '2205007', '2205015', '2205017', '2205019');
 
-/* eResponse.07 - Unit Transport and Equipment Capability (v3.5.0) */
-/* eResponse.07 - Primary Role of the Unit (v3.4.0) */
-/* eResponse.15 - Level of Care of This Unit (v3.4.0) */
+/* eResponse.07 - Unit Transport and Equipment Capability (v3.5) */
+/* eResponse.07 - Primary Role of the Unit (v3.4) */
+/* eResponse.15 - Level of Care of This Unit (v3.4) */
   /* Transport */
   create table UnitCapability_Transport as select * from nemsis.pub_pcrEvents where eResponse_07 in ('2207003', '2207011', '2207013', '2207015', '2207017', '2207019', '2207025');
   /* Non-Transport */
@@ -28,7 +28,7 @@ proc sql;
   create table UnitCapability_Als as select * from nemsis.pub_pcrEvents
     where eResponse_07 in ('2207011', '2207013', '2207015', '2207019', '2207021')
     or eResponse_15 in ('2215009', '2215011', '2215013', '2215015', '2215017', '22150019', '22150021');
-  /* Other (v3.5.0 only) */
+  /* Other (v3.5 only) */
   create table UnitCapability_Other as select * from nemsis.pub_pcrEvents where eResponse_07 in ('2207025', '2207027');
 
 /* eResponse.23 - Response Mode to Scene */
@@ -48,7 +48,7 @@ proc sql;
   create table InitialAcuity_LowerAcuity as select * from nemsis.pub_pcrEvents where eSituation_13 = '2813005';
   /* Dead without Resuscitation Efforts (Black) */
   create table InitialAcuity_Dead as select * from nemsis.pub_pcrEvents where eSituation_13 = '2813007';
-  /* Non-Acute/Routine (v3.5.0 only) */
+  /* Non-Acute/Routine (v3.5 only) */
   create table InitialAcuity_NonAcute as select * from nemsis.pub_pcrEvents where eSituation_13 = '2813009';
   /* Alive */
   create table InitialAcuity_Alive as select * from nemsis.pub_pcrEvents where eSituation_13 in ('2813001', '2813003', '2813005', '2813009');
@@ -61,7 +61,7 @@ proc sql;
   /* Geriatric (65 years or older) */
   create table Age_Geriatric as select * from nemsis.computedElements where ageInYear ge 65;
 
-/* eDisposition.IncidentDispositionGroup - Disposition (v3.5.0) */
+/* eDisposition.IncidentDispositionGroup - Disposition (v3.5) */
 /* eDisposition.12 - Incident/Patient Disposition */
   /* Patient */
   create table Disposition_Patient as select * from nemsis.pub_pcrEvents where

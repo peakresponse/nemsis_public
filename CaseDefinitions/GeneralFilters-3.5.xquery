@@ -1,8 +1,8 @@
 xquery version '1.0';
 declare default element namespace 'http://www.nemsis.org';
 (: NEMSIS Case Definition :)
-(: General Filters - v3.5.0 :)
-(: June 27, 2023 :)
+(: General Filters - v3.5 :)
+(: May 27, 2025 :)
 for
   $dataset in doc('/path/to/EMSDataSetDocument.xml')
 let

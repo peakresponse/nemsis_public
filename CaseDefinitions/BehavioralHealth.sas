@@ -1,6 +1,10 @@
 /* NEMSIS Case Definition */
 /* Behavioral Health */
-/* June 27, 2023 */
+/* May 27, 2025 */
+/* The NEMSIS public release research dataset does not include the Pertinent Negative attribute on 
+   eSituation.10 - Other Associated Symptoms, which was added in NEMSIS version 3.5, so the SAS 
+   code will select some records where a symptom was actually documented as "Symptom Not Present." 
+   This is estimated to affect less than 3% of v3.5 records. */
 proc sql;
   create table BehavioralHealthKey as
   select distinct pcrKey from 

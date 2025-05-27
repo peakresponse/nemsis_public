@@ -2,7 +2,7 @@ xquery version '1.0';
 declare default element namespace 'http://www.nemsis.org';
 (: NEMSIS Case Definition :)
 (: Micromobility :)
-(: June 27, 2023 :)
+(: May 27, 2025 :)
 for
   $dataset in doc('/path/to/EMSDataSetDocument.xml')
 let

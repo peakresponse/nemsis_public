@@ -1,17 +1,21 @@
 /* NEMSIS Case Definition */
 /* Influenza-like Illness */
-/* August 30, 2021 */
+/* May 27, 2025 */
+/* The NEMSIS public release research dataset does not include the Pertinent Negative attribute on 
+   eSituation.10 - Other Associated Symptoms, which was added in NEMSIS version 3.5, so the SAS 
+   code will select some records where a symptom was actually documented as "Symptom Not Present." 
+   This is estimated to affect less than 3% of v3.5 records. */
 proc sql;
   create table InfluenzaLikeIllnessKey as
   select distinct pcrKey from
     (
-      select pcrKey from nemsis.factPcrPrimarySymptom where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$/', eSituation_09)
+      select pcrKey from nemsis.factPcrPrimarySymptom where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(U07\.1)|(Z20\.8.*)|(Z20\.9)$/', eSituation_09)
       union
-      select pcrKey from nemsis.factPcrAdditionalSymptom where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$/', eSituation_10)
+      select pcrKey from nemsis.factPcrAdditionalSymptom where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(U07\.1)|(Z20\.8.*)|(Z20\.9)$/', eSituation_10)
       union
-      select pcrKey from nemsis.factPcrPrimaryImpression where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$/', eSituation_11)
+      select pcrKey from nemsis.factPcrPrimaryImpression where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(U07\.1)|(Z20\.8.*)|(Z20\.9)$/', eSituation_11)
       union
-      select pcrKey from nemsis.factPcrSecondaryImpression where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(Z20\.8.*)|(Z20\.9)$/', eSituation_12)
+      select pcrKey from nemsis.factPcrSecondaryImpression where prxmatch('/^(B97\.2.*)|(J00.*)|(J09.*)|(J1[0-8].*)|(J2[0-2].*)|(U07\.1)|(Z20\.8.*)|(Z20\.9)$/', eSituation_12)
       union
       select pcrKey from
         (

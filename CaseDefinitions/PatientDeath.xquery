@@ -2,7 +2,7 @@ xquery version '1.0';
 declare default element namespace 'http://www.nemsis.org';
 (: NEMSIS Case Definition :)
 (: Patient Death :)
-(: June 27, 2023 :)
+(: May 27, 2025 :)
 for
   $dataset in doc('/path/to/EMSDataSetDocument.xml')
 let
@@ -10,7 +10,7 @@ let
   [
     eScene/eScene.08 = '2708009'
     or
-    eSituation/(eSituation.09, eSituation.10, eSituation.11, eSituation.12) = 'R99'
+    eSituation/(eSituation.09, eSituation.10[not(@PN)], eSituation.11, eSituation.12) = 'R99'
     or
     eSituation/eSituation.13 = '2813007'
     or

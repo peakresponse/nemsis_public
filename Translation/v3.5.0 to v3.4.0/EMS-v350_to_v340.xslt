@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.0 to v3.4.0
 
-Version: 3.5.0.250403CP5_3.4.0.200910CP2_250225
-Revision Date: February 25, 2025
+Version: 3.5.0.250403CP5_3.4.0.200910CP2_250630
+Revision Date: June 30, 2025
 
 -->
 
@@ -454,22 +454,39 @@ Revision Date: February 25, 2025
     </xsl:copy>
   </xsl:template>
 
-  <!-- eVitals.16: Convert Percentage to mmHg -->
-  <xsl:template match="n:eVitals.16[. != '' and @ETCO2Type = '3340003']">
-    <xsl:copy>
-      <!-- @ETCO2Type: Remove -->
-      <!-- BTPS (Body Temperature, Pressure Saturated): normal air pressure = 760mmHg; water vapor pressure = 47mmHg -->
-      <xsl:value-of select="round((760 - 47) * . div 100)"/>
-    </xsl:copy>
-  </xsl:template>
-
-  <!-- eVitals.16: Convert kPa to mmHg -->
-  <xsl:template match="n:eVitals.16[. != '' and @ETCO2Type = '3340005']">
-    <xsl:copy>
-      <!-- @ETCO2Type: Remove -->
-      <!-- 1kPa = 7.5mmHg -->
-      <xsl:value-of select="round(. * 7.5)"/>
-    </xsl:copy>
+  <!-- eVitals.16: Convert to mmHg -->
+  <xsl:template match="n:eVitals.16[. != '']">
+    <xsl:variable name="value" as="xs:numeric">
+      <xsl:choose>
+        <!-- ETCO2Type: Percentage -->
+        <!-- BTPS (Body Temperature, Pressure Saturated): normal air pressure = 760mmHg; water vapor pressure = 47mmHg -->
+        <xsl:when test="@ETCO2Type = '3340003'">
+          <xsl:value-of select="(760 - 47) * . div 100"/>
+        </xsl:when>
+        <!-- ETCO2Type: kPa -->
+        <!-- 1kPa = 7.5mmHg -->
+        <xsl:when test="@ETCO2Type = '3340005'">
+          <xsl:value-of select=". * 7.5"/>
+        </xsl:when>
+        <!-- ETCO2Type: mmHg or missing -->
+        <!-- Assume mmHg -->
+        <xsl:otherwise>
+            <xsl:value-of select="."/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:choose>
+      <!--  If converted value is between 0 and 200: round to integer -->
+      <xsl:when test="$value le 200">
+        <xsl:copy>
+          <xsl:value-of select="round($value)"/>
+        </xsl:copy>
+      </xsl:when>
+      <!-- Otherwise, remove value -->
+      <xsl:otherwise>
+        <xsl:copy use-attribute-sets="NotRecorded"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <!-- eVitals.16/@ETCO2Type: Remove -->

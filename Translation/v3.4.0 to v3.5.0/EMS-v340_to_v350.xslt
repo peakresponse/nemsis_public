@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.4.0 to v3.5.0
 
-Version: 3.4.0.200910CP2_3.5.0.250403CP5_250225
-Revision Date: February 25, 2025
+Version: 3.4.0.200910CP2_3.5.0.251001CP6_250925
+Revision Date: September 25, 2025
 
 -->
 
@@ -121,6 +121,14 @@ Revision Date: February 25, 2025
 
   <!-- eResponse.15: Remove -->
   <xsl:template match="n:eResponse.15"/>
+
+  <!-- ePatient.25: Insert required element -->
+  <xsl:template match="n:ePatient">
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+      <ePatient.25 xsi:nil="true" NV="7701003"/>
+    </xsl:copy>
+  </xsl:template>
 
   <!-- ePayment.42: Map "First Responder" to "Emergency Medical Responder (EMR)" -->
   <xsl:template match="n:ePayment.42[. = '2642019']">

@@ -9,7 +9,7 @@
                         xmlns:nem="http://www.nemsis.org"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         title="NEMSIS National ISO Schematron file for DEMDataSet"
-                        schemaVersion="3.5.0.250403CP5"><!--   
+                        schemaVersion="3.5.0.251001CP6"><!--   
 		   
 		   
 		 -->
@@ -107,7 +107,7 @@
                        role="[ERROR]"
                        location="/*:DEMDataSet[namespace-uri()='http://www.nemsis.org'][1]/*:DemographicReport[namespace-uri()='http://www.nemsis.org'][1]">
       <svrl:text>
-      The timestamp of the DemographicReport should not be in the future (the current time according to this system is February 25, 2025, 11:11 PST).
+      The timestamp of the DemographicReport should not be in the future (the current time according to this system is September 25, 2025, 10:48 PDT).
     </svrl:text>
       <svrl:diagnostic-reference diagnostic="nemsisDiagnostic">
          <nemsisDiagnostic xmlns="http://www.nemsis.org">

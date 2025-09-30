@@ -1,8 +1,8 @@
 @echo off
 rem Windows batch file to compile a schema from Schematron to XSLT
 
-rem Version: 3.5.1.250403CP1_250225
-rem Revision Date: February 25, 2025
+rem Version: 3.5.1.251001CP2_250925
+rem Revision Date: September 25, 2025
 
 rem This product is provided by the NEMSIS TAC, without charge, to facilitate development
 rem of NEMSIS Schematron schemas.

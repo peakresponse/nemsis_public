@@ -1,6 +1,6 @@
 /* NEMSIS Case Definition */
 /* STEMI */
-/* May 27, 2025 */
+/* December 17, 2025 */
 /* The NEMSIS public release research dataset does not include the Pertinent Negative attribute on 
    eSituation.10 - Other Associated Symptoms, which was added in NEMSIS version 3.5, so the SAS 
    code will select some records where a symptom was actually documented as "Symptom Not Present." 
@@ -9,13 +9,13 @@ proc sql;
   create table StemiKey as
   select distinct pcrKey from
     (
-      select pcrKey from nemsis.factPcrPrimarySymptom where substr(eSituation_09,1,5) in ('I21.0', 'I21.1', 'I21.2', 'I21.3')
+      select pcrKey from nemsis.factPcrPrimarySymptom where prxmatch('/^((I21.0)|(I21.1)|(I21.2)|(I21.3))/', eSituation_09)
       union
-      select pcrKey from nemsis.factPcrAdditionalSymptom where substr(eSituation_10,1,5) in ('I21.0', 'I21.1', 'I21.2', 'I21.3')
+      select pcrKey from nemsis.factPcrAdditionalSymptom where prxmatch('/^((I21.0)|(I21.1)|(I21.2)|(I21.3))/', eSituation_10)
       union
-      select pcrKey from nemsis.factPcrPrimaryImpression where substr(eSituation_11,1,5) in ('I21.0', 'I21.1', 'I21.2', 'I21.3')
+      select pcrKey from nemsis.factPcrPrimaryImpression where prxmatch('/^((I21.0)|(I21.1)|(I21.2)|(I21.3))/', eSituation_11)
       union
-      select pcrKey from nemsis.factPcrSecondaryImpression where substr(eSituation_12,1,5) in ('I21.0', 'I21.1', 'I21.2', 'I21.3')
+      select pcrKey from nemsis.factPcrSecondaryImpression where prxmatch('/^((I21.0)|(I21.1)|(I21.2)|(I21.3))/', eSituation_12)
       union
       select pcrKey from nemsis.factPcrVital where pcrVitalKey in
         (

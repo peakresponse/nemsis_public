@@ -2,13 +2,13 @@ xquery version '1.0';
 declare default element namespace 'http://www.nemsis.org';
 (: NEMSIS Case Definition :)
 (: STEMI :)
-(: May 27, 2025 :)
+(: December 17, 2025 :)
 for
   $dataset in doc('/path/to/EMSDataSetDocument.xml')
 let
   $records := $dataset/EMSDataSet/Header/PatientCareReport
   [
-    eSituation/(eSituation.09, eSituation.10[not(@PN)], eSituation.11, eSituation.12)[matches(., '^(I21.0)|(I21.1)|(I21.2)|(I21.3)')]
+    eSituation/(eSituation.09, eSituation.10[not(@PN)], eSituation.11, eSituation.12)[matches(., '^((I21.0)|(I21.1)|(I21.2)|(I21.3))')]
     or
     eVitals/eVitals.VitalGroup/eVitals.03 = ('9901051', '9901053', '9901055', '9901057')
     or

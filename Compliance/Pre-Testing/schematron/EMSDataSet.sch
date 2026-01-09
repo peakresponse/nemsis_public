@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?>
+<?xml-stylesheet type="text/xsl" href="//nemsis.org/media/nemsis_v3/release-3.5.1/Schematron/utilities/html/schematronHtml.xsl"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
             queryBinding="xslt2"
             id="EMSDataSet"
-            schemaVersion="3.5.1.251001CP2_compliance_pretesting_2025">
-   <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing (2025, v3.5.1)</sch:title>
+            schemaVersion="3.5.1.251001CP2_compliance_pretesting_2026">
+   <sch:title>NEMSIS ISO Schematron file for EMSDataSet for Compliance Pre-testing (2026, v3.5.1)</sch:title>
    <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
    <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
    <!-- "Initialize" variables used by nemsisDiagnostic. -->
@@ -15,35 +15,37 @@
    <!-- PHASES -->
    <!-- No phases used. -->
    <!-- PATTERNS -->
-   <sch:pattern id="compliance_overdose">
-      <sch:title>Patients in the Garrett Recovery pilot program should be assessed for hallucinations.</sch:title>
-      <sch:rule id="compliance_overdose_rule"
-                context="nem:PatientCareReport[nem:ePayment/nem:ePayment.54 = 'Garrett Recovery']">
-         <sch:let name="nemsisElements" value="nem:ePayment/nem:ePayment.54"/>
-         <sch:let name="nemsisElementsMissing" value="'eExam.19'"/>
-         <sch:let name="nemsisElementsMissingContext"
-                  value="nem:eExam/nem:eExam.AssessmentGroup[1]"/>
-         <!-- To test: On case 2023-EMS-1-Overdose_v351, remove "Hallucinations" from eExam.19 Mental Status Assessment. -->
-         <sch:assert id="compliance_overdose_assert"
+   <sch:pattern id="compliance_directives">
+      <sch:title>Advance Directives should be recorded when Incident Location Type is a nursing home.</sch:title>
+      <sch:rule id="compliance_directives_rule"
+                context="nem:PatientCareReport[starts-with(nem:eScene/nem:eScene.09, 'Y92.12')]">
+         <sch:let name="nemsisElements"
+                  value="nem:eScene/nem:eScene.09, nem:eHistory/nem:eHistory.05"/>
+         <sch:let name="nemsisElementsMissing"
+                  value=".[not(nem:eHistory/nem:eHistory.05)]/'eHistory.05'"/>
+         <sch:let name="nemsisElementsMissingContext" value="nem:eHistory"/>
+         <!-- To test: On case 2026-EMS-5-Evacuation_v351, clear the value recorded in eHistory.05 Advance Directives. -->
+         <sch:assert id="compliance_directives_assert"
                      role="[WARNING]"
                      diagnostics="nemsisDiagnostic"
-                     test="nem:eExam/nem:eExam.AssessmentGroup/nem:eExam.19 = '3519005'">
-        Mental Status Assessment should include "Hallucinations" (either as an exam finding or as an exam finding not present) when a patient is in the Garrett Recovery pilot program (Prior Authorization Code Payer is "Garrett Recovery"). This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
+                     test="nem:eHistory/nem:eHistory.05[. != '']">
+      Advance Directives should be recorded when Incident Location Type is a nursing home. This is a validation message for compliance pre-testing for 2026 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="compliance_cpmih_procedure">
-      <sch:title>Community paramedicine visits should include the "Informing doctor" procedure.</sch:title>
-      <sch:rule id="compliance_cpmih_procedure_rule"
-                context="nem:PatientCareReport[nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05 = '2205031']">
-         <sch:let name="nemsisElements"
-                  value="nem:eResponse/nem:eResponse.ServiceGroup/nem:eResponse.05, nem:eProcedures/nem:eProcedures.ProcedureGroup/nem:eProcedures.03"/>
-         <!-- To test: On case 2023-EMS-5-CPMIH_v351, remove the "Informing doctor" procedure, or change eProcedures.03 Procedure in that instance to a different value. -->
-         <sch:assert id="compliance_cpmih_procedure_assert"
+   <sch:pattern id="compliance_burn_registry">
+      <sch:title>External Report ID/Number should begin with "B" when Other Report Registry Type is "Burn Registry".</sch:title>
+      <sch:rule id="compliance_burn_registry_rule"
+                context="nem:eOutcome.ExternalDataGroup[nem:eOutcome.05 = 'Burn Registry']">
+         <sch:let name="nemsisElements" value="nem:eOutcome.04, nem:eOutcome.05"/>
+         <sch:let name="nemsisElementsMissing"
+                  value=".[not(nem:eOutcome.04)]/'eOutcome.04'"/>
+         <!-- To test: On case 2026-EMS-3-Fire_v351, change the External Report ID/Number for the Burn Registry to not begin with "B". -->
+         <sch:assert id="compliance_burn_registry_assert"
                      role="[ERROR]"
                      diagnostics="nemsisDiagnostic"
-                     test="nem:eProcedures/nem:eProcedures.ProcedureGroup/nem:eProcedures.03 = '304562007'">
-        A procedure of "Informing doctor" should be recorded when Type of Service Requested is "Mobile Integrated Health Care Encounter". This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
+                     test="starts-with(nem:eOutcome.04, 'B')">
+      External Report ID/Number should begin with "B" when Other Report Registry Type is "Burn Registry". This is a validation message for compliance pre-testing for 2026 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>

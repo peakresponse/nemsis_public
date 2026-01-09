@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../utilities/html/schematronHtml.xsl"?>
+<?xml-stylesheet type="text/xsl" href="//nemsis.org/media/nemsis_v3/release-3.5.1/Schematron/utilities/html/schematronHtml.xsl"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
             xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
             queryBinding="xslt2"
             id="DEMDataSet"
-            schemaVersion="3.5.1.251001CP2_compliance_pretesting_2025">
-   <sch:title>NEMSIS ISO Schematron file for DEMDataSet for Compliance Pre-testing (2025, v3.5.1)</sch:title>
+            schemaVersion="3.5.1.251001CP2_compliance_pretesting_2026">
+   <sch:title>NEMSIS ISO Schematron file for DEMDataSet for Compliance Pre-testing (2026, v3.5.1)</sch:title>
    <sch:ns prefix="nem" uri="http://www.nemsis.org"/>
    <sch:ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
    <!-- "Initialize" variables used by nemsisDiagnostic. -->
@@ -15,31 +15,33 @@
    <!-- PHASES -->
    <!-- No phases used. -->
    <!-- PATTERNS -->
-   <sch:pattern id="compliance_capability_protocol">
-      <sch:title>EMS Agency Protocols should include "General-Community Paramedicine / Mobile Integrated Healthcare" when EMS Agency Specialty Service Capability includes "Community Health Medicine".</sch:title>
-      <sch:rule id="compliance_capability_protocol_rule"
-                context="nem:dConfiguration.11[. = '1211005']">
-         <sch:let name="nemsisElements" value="."/>
-         <sch:let name="nemsisElementsMissing" value="'dConfiguration.10'"/>
-         <!-- To test: Remove "General-Community Paramedicine / Mobile Integrated Healthcare" from the list of EMS Agency Protocols. -->
-         <sch:assert id="compliance_capability_protocol_assert"
+   <sch:pattern id="compliance_ambulance_cost">
+      <sch:title>Initial Vehicle Cost should be between $100,000 and $300,000 when Vehicle Type is "Ambulance".</sch:title>
+      <sch:rule id="compliance_ambulance_cost_rule"
+                context="nem:dVehicle.09[../nem:dVehicle.04 = '1404001']">
+         <sch:let name="nemsisElements" value="., ../nem:dVehicle.04"/>
+         <!-- To test: Change Initial Vehicle Cost to more than $300,000 on a vehicle that is an ambulance. -->
+         <sch:assert id="compliance_ambulance_cost_assert"
                      role="[WARNING]"
                      diagnostics="nemsisDiagnostic"
-                     test="../nem:dConfiguration.10 = '9914175'">
-      EMS Agency Protocols should include "General-Community Paramedicine / Mobile Integrated Healthcare" when EMS Agency Specialty Service Capability includes "Community Health Medicine". This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
+                     test="xs:integer(.) ge 100000 and xs:integer(.) le 300000">
+      Initial Vehicle Cost should be between $100,000 and $300,000 when Vehicle Type is "Ambulance". This is a validation message for compliance pre-testing for 2026 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>
-   <sch:pattern id="compliance_certification_dates">
-      <sch:title>EMS Personnel's State EMS Current Certification Date should not be earlier than EMS Personnel's Initial State's Licensure Issue Date.</sch:title>
-      <sch:rule id="compliance_certification_dates_rule" context="nem:dPersonnel.25">
-         <sch:let name="nemsisElements" value="., nem:dPersonnel.26"/>
-         <!-- To test: Change an EMS Personnel's State EMS Current Certification Date to be later than EMS Personnel's Initial State's Licensure Issue Date. -->
-         <sch:assert id="compliance_certification_dates_assert"
+   <sch:pattern id="compliance_contact_phone">
+      <sch:title>The Agency Contact Phone Number list should include a mobile phone number.</sch:title>
+      <sch:rule id="compliance_contact_phone_rule"
+                context="nem:dContact.ContactInfoGroup">
+         <sch:let name="nemsisElements" value="nem:dContact.10"/>
+         <sch:let name="nemsisElementsMissing"
+                  value=".[not(nem:dContact.10)]/'dContact.10'"/>
+         <!-- To test: On an agency contact, remove the mobile phone number or change its type to something other than "mobile". -->
+         <sch:assert id="compliance_contact_phone_assert"
                      role="[ERROR]"
                      diagnostics="nemsisDiagnostic"
-                     test="../nem:dPersonnel.26 and xs:date(.) &gt;= xs:date(../nem:dPersonnel.26)">
-        EMS Personnel's State EMS Current Certification Date should not be earlier than EMS Personnel's Initial State's Licensure Issue Date. This is a validation message for compliance pre-testing for 2025 for NEMSIS v3.5.1.
+                     test="nem:dContact.10/@PhoneNumberType = '9913005'">
+      The Agency Contact Phone Number list should include a mobile phone number. This is a validation message for compliance pre-testing for 2026 for NEMSIS v3.5.1.
       </sch:assert>
       </sch:rule>
    </sch:pattern>

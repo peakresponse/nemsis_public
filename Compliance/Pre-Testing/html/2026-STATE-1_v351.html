@@ -6,19 +6,19 @@
 <html xmlns:nem="http://www.nemsis.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Connecticut | NEMSIS V3 State Data Set
+      <title>Delaware | NEMSIS V3 State Data Set
         </title>
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="https://nemsis.org/media/statedataset/StateDataSetHtml.css"><script src="https://nemsis.org/media/statedataset/config.js"></script><script src="https://nemsis.org/media/statedataset/StateDataSetHtml.js"></script><script>
-          var stateAbbrev = 'CT';
+          var stateAbbrev = 'DE';
         </script></head>
    <body>
       <div id="menu"><a href="#">
             <h1>
-               NEMSIS V3 State Data Set<br><strong>Connecticut</strong><br>
+               NEMSIS V3 State Data Set<br><strong>Delaware</strong><br>
                NEMSIS Version 3.5<br>
-               Version Date: 09/01/2024<br>
-               Effective Date: 10/01/2024</h1></a><div class="contents"><a href="#overview">Overview</a><a href="#CustomConfiguration">
+               Version Date: 10/08/2025<br>
+               Effective Date: 11/01/2025</h1></a><div class="contents"><a href="#overview">Overview</a><a href="#CustomConfiguration">
                Custom Data Elements
                <span class="count">
                   (3)
@@ -29,11 +29,11 @@
                   </span></a><a href="#LicensureLevels">
                State Certification/Licensure Levels
                <span class="count">
-                  (5)
+                  (3)
                   </span></a><a href="#Procedures">
                Procedures Permitted by the State
                <span class="count">
-                  (118)
+                  (116)
                   </span></a><a href="#Medications">
                Medications Permitted by the State
                <span class="count">
@@ -45,11 +45,11 @@
                   </span></a><a href="#Agencies">
                EMS Agencies
                <span class="count">
-                  (3)
+                  (5)
                   </span></a><a href="#Facilities">
                Facilities
                <span class="count">
-                  (5)
+                  (6)
                   </span></a></div>
          <div class="subMenu" id="subMenuCustomConfiguration">
             <h1>Custom Data Elements</h1>
@@ -67,13 +67,13 @@
                      <td class="customElementType">
                         <div class="extends">U</div>
                      </td>
-                     <td><a href="#eHistory.10">eHistory.10 - The Patient's Type of Immunization</a></td>
+                     <td><a href="#eDisposition.21">eDisposition.21 - Type of Destination</a></td>
                   </tr>
                   <tr>
                      <td class="customElementType">
                         <div class="new">A</div>
                      </td>
-                     <td><a href="#eMedications.903">eMedications.903 - Medication Lot Number</a></td>
+                     <td><a href="#eHistory.904">eHistory.904 - Recent International Travel</a></td>
                   </tr>
                </table>
                <h2>sdCustomConfiguration</h2>
@@ -82,7 +82,7 @@
                      <td class="customElementType">
                         <div class="extends">U</div>
                      </td>
-                     <td><a href="#dPersonnel.18">dPersonnel.18 - EMS Personnel's Immunization Status</a></td>
+                     <td><a href="#dFacility.01">dFacility.01 - Type of Facility</a></td>
                   </tr>
                </table>
             </div>
@@ -93,16 +93,16 @@
          <div class="titleMain">NEMSIS</div>
          <div class="titleSub">V3 State Data Set</div>
          <div class="spacer50"></div>
-         <div class="nhtsa">Connecticut</div>
+         <div class="nhtsa">Delaware</div>
          <div class="nhtsa2"></div>
          <div class="spacer50"></div>
          <div class="standard"></div>
          <div class="spacer30"></div>
          <div class="version">
             NEMSIS Version 3.5<br>
-            Version Date: 09/01/2024</div>
+            Version Date: 10/08/2025</div>
          <div class="version">
-            Effective Date: 10/01/2024</div>
+            Effective Date: 11/01/2025</div>
          <div class="spacer30"></div>
          <div class="spacer50"></div>
          <div class="url">www.NEMSIS.org</div>
@@ -111,7 +111,7 @@
       </div>
       <div class="page" id="overview">
          <h1>Overview</h1>
-         <p>Connecticut has provided the following state-specific configuration information.
+         <p>Delaware has provided the following state-specific configuration information.
             </p>
          <table>
             <tr>
@@ -127,11 +127,11 @@
                <td><a href="#Elements">State Collected Elements</a></td>
             </tr>
             <tr>
-               <td>5</td>
+               <td>3</td>
                <td><a href="#LicensureLevels">State Certification/Licensure Levels</a></td>
             </tr>
             <tr>
-               <td>118</td>
+               <td>116</td>
                <td><a href="#Procedures">Procedures Permitted by the State</a></td>
             </tr>
             <tr>
@@ -143,17 +143,17 @@
                <td><a href="#Protocols">Protocols Permitted by the State</a></td>
             </tr>
             <tr>
-               <td>3</td>
+               <td>5</td>
                <td><a href="#Agencies">EMS Agencies</a></td>
             </tr>
             <tr>
-               <td>5</td>
+               <td>6</td>
                <td><a href="#Facilities">Facilities</a></td>
             </tr>
          </table>
          <div class="software">
             <p>This StateDataSet was generated by:</p>
-            <p>NEMSIS Technical Assistance Center<br>Compliance Testing<br>3.5.1.251001CP2_250925<br></p>
+            <p>NEMSIS Technical Assistance Center<br>Compliance Testing<br>3.5.1.251001CP2_251218<br></p>
          </div>
       </div>
       <div class="page CustomConfiguration" id="CustomConfiguration">
@@ -188,7 +188,7 @@
                   1
                   </td>
                <td class="element">
-                  <div><a href="#eHistory.10">eHistory.10 - The Patient's Type of Immunization</a></div>
+                  <div><a href="#eDisposition.21">eDisposition.21 - Type of Destination</a></div>
                </td>
                <td class="usage"><span>
                      O
@@ -199,15 +199,15 @@
                <td class="recurrence">
                   0
                   : 
-                  1
+                  M
                   </td>
                <td class="element">
-                  <div><a href="#eMedications.903">eMedications.903 - Medication Lot Number</a></div>
+                  <div><a href="#eHistory.904">eHistory.904 - Recent International Travel</a></div>
                </td>
                <td class="usage"><span>
                      O
                      </span></td>
-               <td class="attributes"><span>L, C</span></td>
+               <td class="attributes"><span>L, P, C</span></td>
             </tr>
          </table>
          <table id="sdCustomConfigurationTable">
@@ -221,7 +221,7 @@
                   1
                   </td>
                <td class="element">
-                  <div><a href="#dPersonnel.18">dPersonnel.18 - EMS Personnel's Immunization Status</a></div>
+                  <div><a href="#dFacility.01">dFacility.01 - Type of Facility</a></div>
                </td>
                <td class="usage"><span>
                      O
@@ -230,20 +230,20 @@
             </tr>
          </table>
       </div>
-      <div class="page CustomConfiguration CustomConfiguration.CustomGroup" id="eHistory.10">
+      <div class="page CustomConfiguration CustomConfiguration.CustomGroup" id="eDisposition.21">
          <h1>Custom Data Elements</h1>
          <table class="CustomConfiguration.CustomGroup">
             <tr>
-               <td class="CustomElementHeading fullWidth" colspan="4">eHistory.10</td>
+               <td class="CustomElementHeading fullWidth" colspan="4">eDisposition.21</td>
             </tr>
             <tr>
-               <td class="CustomElementTitle fullWidth" colspan="4">eHistory.10 - The Patient's Type of Immunization</td>
+               <td class="CustomElementTitle fullWidth" colspan="4">eDisposition.21 - Type of Destination</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Definition</td>
             </tr>
             <tr>
-               <td class="CustomElementContent fullWidth" colspan="4">The immunization type of the patient.</td>
+               <td class="CustomElementContent fullWidth" colspan="4">The type of destination the patient was delivered or transferred to</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading">National Element</td>
@@ -277,9 +277,9 @@
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Extends NEMSIS Element</td>
             </tr>
             <tr>
-               <td class="CustomElementContent fullWidth" colspan="4"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/eHistory.10.xml" target="_new">eHistory.10</a>
+               <td class="CustomElementContent fullWidth" colspan="4"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/eDisposition.21.xml" target="_new">eDisposition.21</a>
                   -
-                  The Patient's Type of Immunization</td>
+                  Type of Destination</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Code List</td>
@@ -293,35 +293,37 @@
                         <th>Description</th>
                      </tr>
                      <tr>
-                        <td>9910055</td>
-                        <td>9910027</td>
-                        <td>COVID-19</td>
+                        <td>4221043</td>
+                        <td>4221013</td>
+                        <td>Alternate Care Site</td>
                      </tr>
                   </table>
                </td>
             </tr>
          </table>
       </div>
-      <div class="page CustomConfiguration CustomConfiguration.CustomGroup" id="eMedications.903">
+      <div class="page CustomConfiguration CustomConfiguration.CustomGroup" id="eHistory.904">
          <h1>Custom Data Elements</h1>
          <table class="CustomConfiguration.CustomGroup">
             <tr>
-               <td class="CustomElementHeading fullWidth" colspan="4">eMedications.903</td>
+               <td class="CustomElementHeading fullWidth" colspan="4">eHistory.904</td>
             </tr>
             <tr>
-               <td class="CustomElementTitle fullWidth" colspan="4">eMedications.903 - Medication Lot Number</td>
+               <td class="CustomElementTitle fullWidth" colspan="4">eHistory.904 - Recent International Travel</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Definition</td>
             </tr>
             <tr>
-               <td class="CustomElementContent fullWidth" colspan="4">The lot number of the medication administered.</td>
+               <td class="CustomElementContent fullWidth" colspan="4">Document all the countries (outside the US) the patient has traveled to prior to symptom
+                  onset. The time frame "prior to symptom onset" is defined by state or local jurisdictions.
+                  Use NEMSIS data type ANSICountryCode.</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading">National Element</td>
                <td class="CustomElementContent"></td>
                <td class="CustomElementSectionHeading">Pertinent Negatives (PN)</td>
-               <td class="CustomElementContent">No</td>
+               <td class="CustomElementContent">Yes</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading">State Element</td>
@@ -342,14 +344,25 @@
                <td class="CustomElementContent">
                   0
                   : 
-                  1
+                  M
                   </td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Extends NEMSIS Element</td>
             </tr>
             <tr>
-               <td class="CustomElementContent fullWidth" colspan="4">eMedications.MedicationGroup</td>
+               <td class="CustomElementContent fullWidth" colspan="4">eHistory</td>
+            </tr>
+            <tr>
+               <td class="CustomElementSectionHeading fullWidth" colspan="4">Attributes</td>
+            </tr>
+            <tr>
+               <td class="CustomElementContent fullWidth" colspan="4">
+                  <div class="attributeName">Pertinent Negatives (PN)</div>
+                  <div class="attributeValue">8801019 - Refused</div>
+                  <div class="attributeValue">8801021 - Unresponsive</div>
+                  <div class="attributeValue">8801023 - Unable to Complete</div>
+               </td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Constraints</td>
@@ -361,27 +374,28 @@
                         <th>Data Type</th>
                      </tr>
                      <tr>
-                        <td>Text/String</td>
+                        <td>Other</td>
                      </tr>
                   </table>
                </td>
             </tr>
          </table>
       </div>
-      <div class="page CustomConfiguration CustomConfiguration.CustomGroup" id="dPersonnel.18">
+      <div class="page CustomConfiguration CustomConfiguration.CustomGroup" id="dFacility.01">
          <h1>Custom Data Elements</h1>
          <table class="CustomConfiguration.CustomGroup">
             <tr>
-               <td class="CustomElementHeading fullWidth" colspan="4">dPersonnel.18</td>
+               <td class="CustomElementHeading fullWidth" colspan="4">dFacility.01</td>
             </tr>
             <tr>
-               <td class="CustomElementTitle fullWidth" colspan="4">dPersonnel.18 - EMS Personnel's Immunization Status</td>
+               <td class="CustomElementTitle fullWidth" colspan="4">dFacility.01 - Type of Facility</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Definition</td>
             </tr>
             <tr>
-               <td class="CustomElementContent fullWidth" colspan="4">The type of immunization status.</td>
+               <td class="CustomElementContent fullWidth" colspan="4">The type of facility (healthcare or other) that the EMS agency transports patients
+                  to or from.</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading">National Element</td>
@@ -415,9 +429,9 @@
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Extends NEMSIS Element</td>
             </tr>
             <tr>
-               <td class="CustomElementContent fullWidth" colspan="4"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/dPersonnel.18.xml" target="_new">dPersonnel.18</a>
+               <td class="CustomElementContent fullWidth" colspan="4"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/dFacility.01.xml" target="_new">dFacility.01</a>
                   -
-                  EMS Personnel's Immunization Status</td>
+                  Type of Facility</td>
             </tr>
             <tr>
                <td class="CustomElementSectionHeading fullWidth" colspan="4">Code List</td>
@@ -431,9 +445,9 @@
                         <th>Description</th>
                      </tr>
                      <tr>
-                        <td>9910055</td>
-                        <td>9910027</td>
-                        <td>COVID-19</td>
+                        <td>1701037</td>
+                        <td>1701009</td>
+                        <td>Alternate Care Site</td>
                      </tr>
                   </table>
                </td>
@@ -3780,9 +3794,9 @@
                   <td class="value"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/dPersonnel.11.xml" target="_new">dPersonnel.11</a></td>
                   <td class="label">EMS Personnel's Date of Birth</td>
                </tr>
-               <tr class="DEMDataSet State ">
+               <tr class="DEMDataSet ">
                   <td class="National"></td>
-                  <td class="State">S</td>
+                  <td class="State"></td>
                   <td class="value"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/dPersonnel.12.xml" target="_new">dPersonnel.12</a></td>
                   <td class="label">EMS Personnel's Gender (DEPRECATED)</td>
                </tr>
@@ -3948,9 +3962,9 @@
                   <td class="value"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/dPersonnel.39.xml" target="_new">dPersonnel.39</a></td>
                   <td class="label">Date of Personnel's Certification or Licensure for Agency</td>
                </tr>
-               <tr class="DEMDataSet ">
+               <tr class="DEMDataSet State ">
                   <td class="National"></td>
-                  <td class="State"></td>
+                  <td class="State">S</td>
                   <td class="value"><a href="https://nemsis.org/media/nemsis_v3/release-3.5.1/DataDictionary/PDFHTML/EMSDEMSTATE/sections/elements/dPersonnel.40.xml" target="_new">dPersonnel.40</a></td>
                   <td class="label">EMS Personnel's Sex</td>
                </tr>
@@ -4117,8 +4131,8 @@
                </tr>
             </thead>
             <tbody>
-               <tr class="State">
-                  <td class="State">S</td>
+               <tr>
+                  <td class="State"></td>
                   <td class="value">9917001</td>
                   <td class="label">Advanced Emergency Medical Technician (AEMT)</td>
                </tr>
@@ -4127,8 +4141,8 @@
                   <td class="value">9917002</td>
                   <td class="label">Emergency Medical Technician - Intermediate</td>
                </tr>
-               <tr class="State">
-                  <td class="State">S</td>
+               <tr>
+                  <td class="State"></td>
                   <td class="value">9917003</td>
                   <td class="label">Emergency Medical Responder (EMR)</td>
                </tr>
@@ -4152,8 +4166,8 @@
                   <td class="value">9917021</td>
                   <td class="label">Critical Care Paramedic</td>
                </tr>
-               <tr class="State">
-                  <td class="State">S</td>
+               <tr>
+                  <td class="State"></td>
                   <td class="value">9917023</td>
                   <td class="label">Community Paramedicine</td>
                </tr>
@@ -4172,8 +4186,8 @@
                   <td class="value">9917029</td>
                   <td class="label">Licensed Practical Nurse (LPN)</td>
                </tr>
-               <tr>
-                  <td class="State"></td>
+               <tr class="State">
+                  <td class="State">S</td>
                   <td class="value">9917031</td>
                   <td class="label">Registered Nurse</td>
                </tr>
@@ -4191,28 +4205,29 @@
                <tr>
                   <th class="sortable" onclick="sortTable('ProceduresTable', 0)" title="Sort by Code">Code</th>
                   <th class="sortable" onclick="sortTable('ProceduresTable', 1)" title="Sort by Description">Description</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 2, true)&#xA;                        " title="&#xA;                          Sort by Advanced Emergency Medical Technician (AEMT)">Advanced Emergency Medical Technician (AEMT)</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 3, true)&#xA;                        " title="&#xA;                          Sort by Emergency Medical Responder (EMR)">Emergency Medical Responder (EMR)</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 4, true)&#xA;                        " title="&#xA;                          Sort by Emergency Medical Technician (EMT)">Emergency Medical Technician (EMT)</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 5, true)&#xA;                        " title="&#xA;                          Sort by Paramedic">Paramedic</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 6, true)&#xA;                        " title="&#xA;                          Sort by Community Paramedicine">Community Paramedicine</th>
+                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 2, true)&#xA;                        " title="&#xA;                          Sort by Emergency Medical Technician (EMT)">Emergency Medical Technician (EMT)</th>
+                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 3, true)&#xA;                        " title="&#xA;                          Sort by Paramedic">Paramedic</th>
+                  <th class="sortable" onclick="&#xA;                          sortTable('ProceduresTable', 4, true)&#xA;                        " title="&#xA;                          Sort by Registered Nurse">Registered Nurse</th>
                </tr>
             </thead>
             <tbody>
                <tr>
-                  <td class="value">103744005</td>
-                  <td class="label">Administration of intravenous fluids</td>
-                  <td class="label"></td>
+                  <td class="value">103699006</td>
+                  <td class="label sConfiguration.03" data-value="103699006"><em><a href="https://lookup.snomedtools.org/103699006" target="new">Look up in SNOMED</a></em></td>
                   <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
+               </tr>
+               <tr>
+                  <td class="value">103744005</td>
+                  <td class="label">Administration of intravenous fluids</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">116859006</td>
                   <td class="label">Transfusion of blood product</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label"></td>
@@ -4221,100 +4236,78 @@
                   <td class="value">128968000</td>
                   <td class="label">Vagal stimulation physiologic challenge</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">133901003</td>
                   <td class="label">Burn care</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">171397002</td>
                   <td class="label">Medical examination for suspected condition</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">182531007</td>
                   <td class="label">Dressing of wound</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">182555002</td>
                   <td class="label">Application of bandage</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">182556001</td>
                   <td class="label">Pelvic sling</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">182692007</td>
                   <td class="label">Nasopharyngeal airway insertion</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">182705007</td>
                   <td class="label">Tension pneumothorax relief</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">182777000</td>
                   <td class="label">Monitoring of patient</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">18590009</td>
                   <td class="label">Cardiac pacing</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">18629005</td>
                   <td class="label">Administration of drug or medicament</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">20655006</td>
@@ -4322,35 +4315,27 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">22206003</td>
                   <td class="label">Application of dressing, occlusive plastic</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">225116006</td>
                   <td class="label">Irrigation of wound</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">225287004</td>
                   <td class="label">Procedures relating to positioning and support</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">225358003</td>
@@ -4358,41 +4343,31 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">225398001</td>
                   <td class="label">Neurological assessment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">225399009</td>
                   <td class="label">Pain assessment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">225718003</td>
                   <td class="label">Checking position of endotracheal tube</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">226005007</td>
                   <td class="label">Care of central line</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -4400,20 +4375,16 @@
                <tr>
                   <td class="value">22633006</td>
                   <td class="label">Vaginal delivery, medical personnel present</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">228621007</td>
                   <td class="label">Provision of environmental control system</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">230040009</td>
@@ -4421,8 +4392,6 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">232664002</td>
@@ -4430,23 +4399,17 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">232674004</td>
                   <td class="label">Orotracheal intubation</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">235425002</td>
                   <td class="label">Insertion of orogastric tube</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -4457,26 +4420,20 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">23852006</td>
                   <td class="label">Cardiac monitoring</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">241689008</td>
                   <td class="label">Rapid sequence induction</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">243140006</td>
@@ -4484,50 +4441,38 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">243142003</td>
                   <td class="label">Dual pressure spontaneous ventilation support</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">248753002</td>
                   <td class="label">Capillary refill</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">250980009</td>
                   <td class="label">Cardioversion</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">252465000</td>
                   <td class="label">Pulse oximetry</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">268400002</td>
                   <td class="label">12 lead electrocardiogram</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -4535,74 +4480,58 @@
                <tr>
                   <td class="value">26906007</td>
                   <td class="label">Application of dressing, pressure</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">270352002</td>
                   <td class="label">Medical examinations/reports</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">278414003</td>
                   <td class="label">Pain management</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">284029005</td>
                   <td class="label">Respired carbon dioxide monitoring</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">284394000</td>
                   <td class="label">Examination of spine</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">284405008</td>
                   <td class="label">Examination of cervical spine</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">29303009</td>
                   <td class="label">Electrocardiographic procedure</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">302488007</td>
                   <td class="label">Application of traction using a traction device</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">304562007</td>
@@ -4610,158 +4539,108 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-               </tr>
-               <tr>
-                  <td class="value">306102000</td>
-                  <td class="label sConfiguration.03" data-value="306102000"><em><a href="https://lookup.snomedtools.org/306102000" target="new">Look up in SNOMED</a></em></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label">✓</td>
-               </tr>
-               <tr>
-                  <td class="value">306226009</td>
-                  <td class="label sConfiguration.03" data-value="306226009"><em><a href="https://lookup.snomedtools.org/306226009" target="new">Look up in SNOMED</a></em></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">308292007</td>
                   <td class="label">Transfer of care</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">315639002</td>
                   <td class="label">Initial patient assessment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">33747003</td>
                   <td class="label">Glucose measurement, blood</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">353008</td>
                   <td class="label">Intravenous/irrigation monitoring</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">371907003</td>
                   <td class="label">Oxygen administration by nasal cannula</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">371908008</td>
                   <td class="label">Oxygen administration by mask</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">372045002</td>
                   <td class="label">Application of chemical hemostatic agents</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">373675000</td>
                   <td class="label">Application of pressure bandage</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">385857005</td>
                   <td class="label">Ventilator care and adjustment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
-                  <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">386053000</td>
                   <td class="label">Evaluation procedure</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">386237008</td>
                   <td class="label">Circulatory care: mechanical assist device</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">386328006</td>
                   <td class="label">Hypoglycemia management</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">386358000</td>
                   <td class="label">Administration of drug or medicament via intravenous route</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">386423001</td>
                   <td class="label">Physical restraint</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">392230005</td>
                   <td class="label">Catheterization of vein</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -4770,28 +4649,15 @@
                   <td class="value">392247006</td>
                   <td class="label">Insertion of catheter into artery</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
-               </tr>
-               <tr>
-                  <td class="value">396150002</td>
-                  <td class="label sConfiguration.03" data-value="396150002"><em><a href="https://lookup.snomedtools.org/396150002" target="new">Look up in SNOMED</a></em></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">396540005</td>
                   <td class="label">Phlebotomy</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">398041008</td>
@@ -4799,86 +4665,66 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">405427009</td>
                   <td class="label">Catheterization of external jugular vein</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">408867002</td>
                   <td class="label">Taking respiratory rate</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">408994004</td>
                   <td class="label">Adult care assessment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">409582008</td>
                   <td class="label">Isolation precautions</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">422618004</td>
                   <td class="label">Continuous physical assessment</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">423184003</td>
                   <td class="label">Adult pain assessment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">423401003</td>
                   <td class="label">Pediatric pain assessment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">423850004</td>
                   <td class="label">Pediatric continuous physical assessment</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">424287005</td>
                   <td class="label">Removal of peripheral intravenous catheter</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -4886,18 +4732,14 @@
                <tr>
                   <td class="value">424979004</td>
                   <td class="label">Laryngeal mask airway insertion</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">425058005</td>
                   <td class="label">Taking orthostatic vital signs</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
+                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
@@ -4905,10 +4747,8 @@
                   <td class="value">425074000</td>
                   <td class="label">Conversion of intravenous infusion to saline lock</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">425447009</td>
@@ -4916,26 +4756,20 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">425543005</td>
                   <td class="label">Digital respired carbon dioxide monitoring</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">426220008</td>
                   <td class="label">External ventricular defibrillation</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">426498007</td>
@@ -4943,23 +4777,17 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">427753009</td>
                   <td class="label">Insertion of esophageal tracheal double lumen supraglottic airway</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">428803005</td>
                   <td class="label">3 lead electrocardiographic monitoring</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -4967,164 +4795,128 @@
                <tr>
                   <td class="value">429202003</td>
                   <td class="label">Transfer of care to hospital</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">429283006</td>
                   <td class="label">Mechanically assisted chest compression</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">429705000</td>
                   <td class="label">Insertion of esophageal tracheal combitube</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">430824005</td>
                   <td class="label">Intraosseous cannulation</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">431393006</td>
                   <td class="label">Administration of intravenous fluid bolus</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">431774007</td>
                   <td class="label">Active external cooling of subject</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">431949004</td>
                   <td class="label">Active external warming of subject</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">445828009</td>
                   <td class="label">Assessment using functional capacity evaluation</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">447686008</td>
                   <td class="label">Application of pressure to wound</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">449199004</td>
                   <td class="label">Manual inline stabilization of cervical spine</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">450591000124106</td>
                   <td class="label">Immobilization using long board</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">450601000124103</td>
                   <td class="label">Orotracheal intubation using bougie device</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">450611000124100</td>
                   <td class="label">Insertion of Single Lumen Supraglottic Airway Device</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">450661000124102</td>
                   <td class="label">Defibrillation using automated external cardiac defibrillator</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">45851008</td>
                   <td class="label">Positive end expiratory pressure ventilation therapy, initiation and management</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">46825001</td>
                   <td class="label">Electrocardiographic monitoring</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">46973005</td>
                   <td class="label">Blood pressure taking</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">47545007</td>
                   <td class="label">Continuous positive airway pressure ventilation treatment</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">49689007</td>
@@ -5132,14 +4924,10 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">56251003</td>
                   <td class="label">Nebulizer therapy</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5147,74 +4935,58 @@
                <tr>
                   <td class="value">56342008</td>
                   <td class="label">Temperature taking</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">56469005</td>
                   <td class="label">Moving a patient</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">57485005</td>
                   <td class="label">Oxygen therapy</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">58715004</td>
                   <td class="label">Moving a patient to a stretcher</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">61746007</td>
                   <td class="label">Taking patient vital signs</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
-                  <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">65653002</td>
                   <td class="label">Pulse taking</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">68664003</td>
                   <td class="label">Glasgow coma testing and evaluation</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">707794004</td>
                   <td class="label">Immobilization using extrication splint</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">7443007</td>
@@ -5222,17 +4994,13 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">78086002</td>
                   <td class="label">Holding patient</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">79321009</td>
@@ -5240,14 +5008,10 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">87750000</td>
                   <td class="label">Insertion of nasogastric tube</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5258,8 +5022,6 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
             </tbody>
          </table>
@@ -5275,11 +5037,9 @@
                <tr>
                   <th class="sortable" onclick="sortTable('MedicationsTable', 0)" title="Sort by Code">Code</th>
                   <th class="sortable" onclick="sortTable('MedicationsTable', 1)" title="Sort by Description">Description</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 2, true)&#xA;                        " title="&#xA;                          Sort by Advanced Emergency Medical Technician (AEMT)">Advanced Emergency Medical Technician (AEMT)</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 3, true)&#xA;                        " title="&#xA;                          Sort by Emergency Medical Responder (EMR)">Emergency Medical Responder (EMR)</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 4, true)&#xA;                        " title="&#xA;                          Sort by Emergency Medical Technician (EMT)">Emergency Medical Technician (EMT)</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 5, true)&#xA;                        " title="&#xA;                          Sort by Paramedic">Paramedic</th>
-                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 6, true)&#xA;                        " title="&#xA;                          Sort by Community Paramedicine">Community Paramedicine</th>
+                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 2, true)&#xA;                        " title="&#xA;                          Sort by Emergency Medical Technician (EMT)">Emergency Medical Technician (EMT)</th>
+                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 3, true)&#xA;                        " title="&#xA;                          Sort by Paramedic">Paramedic</th>
+                  <th class="sortable" onclick="&#xA;                          sortTable('MedicationsTable', 4, true)&#xA;                        " title="&#xA;                          Sort by Registered Nurse">Registered Nurse</th>
                </tr>
             </thead>
             <tbody>
@@ -5287,106 +5047,82 @@
                   <td class="value">1008377</td>
                   <td class="label">Calcium chloride / lactate / potassium chloride / sodium chloride</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">10154</td>
                   <td class="label">Succinylcholine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">10368</td>
                   <td class="label">Terbutaline</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">10454</td>
                   <td class="label">Thiamine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">10691</td>
                   <td class="label">Tranexamic acid</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">11124</td>
                   <td class="label">Vancomycin</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">11149</td>
                   <td class="label">Vasopressin (USP)</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">116762002</td>
                   <td class="label">Administration of blood product</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">116795008</td>
                   <td class="label">Transfusion of cryoprecipitate</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">116861002</td>
                   <td class="label">Transfusion of fresh frozen plasma</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">116865006</td>
                   <td class="label">Administration of albumin</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">1191</td>
                   <td class="label">Aspirin</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5395,25 +5131,12 @@
                   <td class="value">1223</td>
                   <td class="label">Atropine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
-               </tr>
-               <tr>
-                  <td class="value">1596450</td>
-                  <td class="label sConfiguration.05" data-value="1596450"><em><a href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=1596450" target="_new">Look up in RxNorm</a></em></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">1605101</td>
                   <td class="label">Insulin isophane</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5424,59 +5147,45 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">1795477</td>
                   <td class="label">500 ML glucose 100 MG/ML injection</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">180208003</td>
                   <td class="label">Intravenous blood transfusion of platelets</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">1819</td>
                   <td class="label">Buprenorphine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">1901</td>
                   <td class="label">Calcium chloride</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">1908</td>
                   <td class="label">Calcium gluconate</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">214199</td>
                   <td class="label">Albuterol / ipratropium</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5485,8 +5194,6 @@
                   <td class="value">2193</td>
                   <td class="label">Ceftriaxone</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
@@ -5494,35 +5201,41 @@
                   <td class="value">237159</td>
                   <td class="label">Levalbuterol</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">237653</td>
                   <td class="label">Glucose 500 MG/ML injectable solution</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
+                  <td class="label">✓</td>
+               </tr>
+               <tr>
+                  <td class="value">2573160</td>
+                  <td class="label sConfiguration.05" data-value="2573160"><em><a href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=2573160" target="_new">Look up in RxNorm</a></em></td>
                   <td class="label"></td>
+                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">260258</td>
                   <td class="label">Glucose 250 MG/ML injectable solution</td>
                   <td class="label"></td>
+                  <td class="label">✓</td>
+                  <td class="label">✓</td>
+               </tr>
+               <tr>
+                  <td class="value">2612526</td>
+                  <td class="label sConfiguration.05" data-value="2612526"><em><a href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=2612526" target="_new">Look up in RxNorm</a></em></td>
                   <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">26225</td>
                   <td class="label">Ondansetron</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
@@ -5530,97 +5243,75 @@
                   <td class="value">296</td>
                   <td class="label">Adenosine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">313002</td>
                   <td class="label">Sodium chloride 9 MG/ML Injectable Solution</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">317361</td>
                   <td class="label">Epinephrine 0.1 MG/ML</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">3264</td>
                   <td class="label">Dexamethasone</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">328316</td>
                   <td class="label">Epinephrine 1 MG/ML</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">3322</td>
                   <td class="label">Diazepam</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">33389009</td>
                   <td class="label">Transfusion of whole blood</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">3423</td>
                   <td class="label">Hydromorphone</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">3443</td>
                   <td class="label">Diltiazem</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">3498</td>
                   <td class="label">Diphenhydramine</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">35827</td>
                   <td class="label">Ketorolac</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5629,44 +5320,34 @@
                   <td class="value">3628</td>
                   <td class="label">Dopamine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">36676</td>
                   <td class="label">Sodium bicarbonate</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">4177</td>
                   <td class="label">Etomidate</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">4337</td>
                   <td class="label">Fentanyl</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">435</td>
                   <td class="label">Albuterol</td>
-                  <td class="label">✓</td>
                   <td class="label"></td>
-                  <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
@@ -5674,26 +5355,20 @@
                   <td class="value">4603</td>
                   <td class="label">Furosemide</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">4832</td>
                   <td class="label">Glucagon</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">4850</td>
                   <td class="label">Glucose</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
@@ -5701,8 +5376,6 @@
                   <td class="value">4917</td>
                   <td class="label">Nitroglycerin</td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
@@ -5710,16 +5383,12 @@
                   <td class="value">5093</td>
                   <td class="label">Haloperidol</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">5224</td>
                   <td class="label">Heparin</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5728,61 +5397,47 @@
                   <td class="value">6130</td>
                   <td class="label">Ketamine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">6185</td>
                   <td class="label">Labetalol</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">6387</td>
                   <td class="label">Lidocaine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">6470</td>
                   <td class="label">Lorazepam</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">6585</td>
                   <td class="label">Magnesium sulfate</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">68139</td>
                   <td class="label">Rocuronium</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">6902</td>
                   <td class="label">Methylprednisolone</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5791,72 +5446,49 @@
                   <td class="value">6918</td>
                   <td class="label">Metoprolol</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">6960</td>
                   <td class="label">Midazolam</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">703</td>
                   <td class="label">Amiodarone</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">7052</td>
                   <td class="label">Morphine</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">71493000</td>
                   <td class="label">Transfusion of packed red blood cells</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">71535</td>
                   <td class="label">Vecuronium</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">7213</td>
                   <td class="label">Ipratropium</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
-               </tr>
-               <tr>
-                  <td class="value">723</td>
-                  <td class="label sConfiguration.05" data-value="723"><em><a href="https://mor.nlm.nih.gov/RxNav/search?searchBy=RXCUI&amp;searchTerm=723" target="_new">Look up in RxNorm</a></em></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                </tr>
                <tr>
@@ -5865,32 +5497,24 @@
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
-                  <td class="label">✓</td>
-                  <td class="label"></td>
                </tr>
                <tr>
                   <td class="value">7396</td>
                   <td class="label">Nicardipine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">7512</td>
                   <td class="label">Norepinephrine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">7806</td>
                   <td class="label">Oxygen</td>
-                  <td class="label">✓</td>
-                  <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5899,16 +5523,12 @@
                   <td class="value">8163</td>
                   <td class="label">Phenylephrine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
                <tr>
                   <td class="value">8591</td>
                   <td class="label">Potassium chloride</td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
@@ -5917,8 +5537,6 @@
                   <td class="value">8745</td>
                   <td class="label">Promethazine</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
                   <td class="label">✓</td>
                </tr>
@@ -5926,10 +5544,8 @@
                   <td class="value">8782</td>
                   <td class="label">Propofol</td>
                   <td class="label"></td>
-                  <td class="label"></td>
-                  <td class="label"></td>
                   <td class="label">✓</td>
-                  <td class="label"></td>
+                  <td class="label">✓</td>
                </tr>
             </tbody>
          </table>
@@ -6529,19 +6145,29 @@
             </thead>
             <tbody>
                <tr>
-                  <td class="value">C009</td>
-                  <td class="value">C009B1</td>
-                  <td class="label">The Stony Hill Volunteer Fire Company</td>
+                  <td class="value">11261</td>
+                  <td class="value">350-11261</td>
+                  <td class="label">East Coast Ambulance Service</td>
                </tr>
                <tr>
-                  <td class="value">C034</td>
-                  <td class="value">351-C034P2</td>
-                  <td class="label">Danbury EMS Division of Danbury Fire Department</td>
+                  <td class="value">11261</td>
+                  <td class="value">350-11261R</td>
+                  <td class="label">East Coast Ambulance Service R&amp;P</td>
                </tr>
                <tr>
-                  <td class="value">C097</td>
-                  <td class="value">C097P1</td>
-                  <td class="label">The Newtown Ambulance Association Inc.</td>
+                  <td class="value">46</td>
+                  <td class="value">46</td>
+                  <td class="label">Dover Fire Department</td>
+               </tr>
+               <tr>
+                  <td class="value">51</td>
+                  <td class="value">51</td>
+                  <td class="label">Hartly Volunteer Fire Company</td>
+               </tr>
+               <tr>
+                  <td class="value">996</td>
+                  <td class="value">996</td>
+                  <td class="label">Kent County EMS</td>
                </tr>
             </tbody>
          </table>
@@ -6612,110 +6238,117 @@
             <tbody>
                <tr>
                   <td class="sFacility.01">Hospital</td>
-                  <td class="sFacility.02">Connecticut Children's Medical Center</td>
-                  <td class="sFacility.03">073300</td>
+                  <td class="sFacility.02">Bayhealth Kent General Hospital</td>
+                  <td class="sFacility.03">HSPTL005</td>
                   <td class="sFacility.04">Hospital (General)<br>&#xD;
-                     Pediatric Center<br>&#xD;
-                     Trauma Center Level 1</td>
-                  <td class="sFacility.05">1134271661<br>&#xD;
-                     1215947387<br>&#xD;
-                     1467541805<br>&#xD;
-                     1578106951</td>
+                     Trauma Center Level 3</td>
+                  <td class="sFacility.05">1467546135</td>
                   <td class="sFacility.06"></td>
-                  <td class="sFacility.07">282 Washington Street</td>
+                  <td class="sFacility.07">640 South State Street</td>
                   <td class="sFacility.07.StreetAddress2"></td>
-                  <td class="sFacility.08" data-value="213442">213442</td>
-                  <td class="sFacility.09">CT</td>
-                  <td class="sFacility.10">06106</td>
-                  <td class="sFacility.11">Hartford County</td>
+                  <td class="sFacility.08" data-value="2390583">2390583</td>
+                  <td class="sFacility.09">DE</td>
+                  <td class="sFacility.10">19901</td>
+                  <td class="sFacility.11">Kent County</td>
                   <td class="sFacility.12">US</td>
-                  <td class="sFacility.13"><a href="http://maps.google.com/?q=41.753,-72.681" target="_blank">41.753,-72.681</a></td>
-                  <td class="sFacility.14">18TXM92802495</td>
-                  <td class="sFacility.15">860-545-9000 (Work)<br>&#xD;
-                     860-545-9001 (Fax)</td>
+                  <td class="sFacility.13"><a href="http://maps.google.com/?q=39.151,-75.523" target="_blank">39.151,-75.523</a></td>
+                  <td class="sFacility.14">18SVJ5480833663</td>
+                  <td class="sFacility.15">302-674-4700</td>
                </tr>
                <tr>
                   <td class="sFacility.01">Hospital</td>
-                  <td class="sFacility.02">Danbury Hospital</td>
-                  <td class="sFacility.03">070033</td>
+                  <td class="sFacility.02">MedStar Georgetown University Hospital</td>
+                  <td class="sFacility.03">OT010000878</td>
+                  <td class="sFacility.04">Burn Center<br>&#xD;
+                     Hospital (General)<br>&#xD;
+                     Trauma Center Level 1<br>&#xD;
+                     Cancer Center</td>
+                  <td class="sFacility.05">1518391267</td>
+                  <td class="sFacility.06"></td>
+                  <td class="sFacility.07">3800 Reservoir Road Northwest</td>
+                  <td class="sFacility.07.StreetAddress2"></td>
+                  <td class="sFacility.08" data-value="2390665">2390665</td>
+                  <td class="sFacility.09">DC</td>
+                  <td class="sFacility.10">20007</td>
+                  <td class="sFacility.11">District of Columbia</td>
+                  <td class="sFacility.12">US</td>
+                  <td class="sFacility.13"><a href="http://maps.google.com/?q=38.911,-77.075" target="_blank">38.911,-77.075</a></td>
+                  <td class="sFacility.14">18SUJ2008808946</td>
+                  <td class="sFacility.15">202-444-2000 (Work)<br>&#xD;
+                     202-444-2001 (Fax)</td>
+               </tr>
+               <tr>
+                  <td class="sFacility.01">Hospital</td>
+                  <td class="sFacility.02">Nanticoke Memorial Hospital</td>
+                  <td class="sFacility.03">HSPTL008</td>
                   <td class="sFacility.04">Hospital (General)<br>&#xD;
                      Trauma Center Level 2</td>
-                  <td class="sFacility.05">1801064274</td>
+                  <td class="sFacility.05">1245214477</td>
                   <td class="sFacility.06"></td>
-                  <td class="sFacility.07">24 Hospital Avenue</td>
+                  <td class="sFacility.07">801 Middleford Road</td>
                   <td class="sFacility.07.StreetAddress2"></td>
-                  <td class="sFacility.08" data-value="213415">213415</td>
-                  <td class="sFacility.09">CT</td>
-                  <td class="sFacility.10">06810</td>
-                  <td class="sFacility.11">Fairfield County</td>
+                  <td class="sFacility.08" data-value="2390650">2390650</td>
+                  <td class="sFacility.09">DE</td>
+                  <td class="sFacility.10">19973</td>
+                  <td class="sFacility.11">Sussex County</td>
                   <td class="sFacility.12">US</td>
-                  <td class="sFacility.13"><a href="http://maps.google.com/?q=41.405,-73.444" target="_blank">41.405,-73.444</a></td>
-                  <td class="sFacility.14">18TXL30058488</td>
-                  <td class="sFacility.15">203-739-7000 (Work)</td>
+                  <td class="sFacility.13"><a href="http://maps.google.com/?q=38.641,-75.604" target="_blank">38.641,-75.604</a></td>
+                  <td class="sFacility.14">18SVH47437711</td>
+                  <td class="sFacility.15">302-629-6611</td>
                </tr>
                <tr>
                   <td class="sFacility.01">Hospital</td>
-                  <td class="sFacility.02">St. Francis Hospital &amp; Medical Center</td>
-                  <td class="sFacility.03">070002</td>
-                  <td class="sFacility.04">Hospital (General)<br>&#xD;
-                     Trauma Center Level 1<br>&#xD;
-                     Stroke-Primary Stroke Center (PSC)</td>
-                  <td class="sFacility.05">1356634737<br>&#xD;
-                     1407833486</td>
+                  <td class="sFacility.02">Wilmington VA Medical Center</td>
+                  <td class="sFacility.03">1407805898</td>
+                  <td class="sFacility.04">Hospital (General)</td>
+                  <td class="sFacility.05">1407805898</td>
                   <td class="sFacility.06"></td>
-                  <td class="sFacility.07">114 Woodland Street</td>
+                  <td class="sFacility.07">1601 Kirkwood Highway</td>
                   <td class="sFacility.07.StreetAddress2"></td>
-                  <td class="sFacility.08" data-value="213442">213442</td>
-                  <td class="sFacility.09">CT</td>
-                  <td class="sFacility.10">06105</td>
-                  <td class="sFacility.11">Hartford County</td>
+                  <td class="sFacility.08" data-value="2390676">2390676</td>
+                  <td class="sFacility.09">DE</td>
+                  <td class="sFacility.10">19805</td>
+                  <td class="sFacility.11">New Castle County</td>
                   <td class="sFacility.12">US</td>
-                  <td class="sFacility.13"><a href="http://maps.google.com/?q=41.774,-72.698" target="_blank">41.774,-72.698</a></td>
-                  <td class="sFacility.14">18TXM91322724</td>
-                  <td class="sFacility.15">860-714-4000 (Work)</td>
+                  <td class="sFacility.13"><a href="http://maps.google.com/?q=39.740,-75.606" target="_blank">39.740,-75.606</a></td>
+                  <td class="sFacility.14">18SVJ4807699075</td>
+                  <td class="sFacility.15">302-994-2511</td>
                </tr>
                <tr>
-                  <td class="sFacility.01">Hospital</td>
-                  <td class="sFacility.02">Yale New Haven Hospital</td>
-                  <td class="sFacility.03">070022</td>
-                  <td class="sFacility.04">Behavioral Health<br>&#xD;
-                     Burn Center<br>&#xD;
-                     Hospital (General)<br>&#xD;
-                     Pediatric Center<br>&#xD;
-                     Trauma Center Level 1<br>&#xD;
-                     Cardiac-STEMI/PCI Capable (24/7)<br>&#xD;
-                     Stroke-Comprehensive Stroke Center (CSC)</td>
-                  <td class="sFacility.05">1427100957<br>&#xD;
-                     1578778726</td>
+                  <td class="sFacility.01">Mental Health Facility</td>
+                  <td class="sFacility.02">Dover Behavioral Health System</td>
+                  <td class="sFacility.03">9008</td>
+                  <td class="sFacility.04"></td>
+                  <td class="sFacility.05"></td>
                   <td class="sFacility.06"></td>
-                  <td class="sFacility.07">20 York Street</td>
+                  <td class="sFacility.07">725 Horsepond Road</td>
                   <td class="sFacility.07.StreetAddress2"></td>
-                  <td class="sFacility.08" data-value="2378285">2378285</td>
-                  <td class="sFacility.09">CT</td>
-                  <td class="sFacility.10">06510</td>
-                  <td class="sFacility.11">New Haven County</td>
+                  <td class="sFacility.08" data-value="2390583">2390583</td>
+                  <td class="sFacility.09">DE</td>
+                  <td class="sFacility.10">19901</td>
+                  <td class="sFacility.11">Kent County</td>
                   <td class="sFacility.12">US</td>
-                  <td class="sFacility.13"><a href="http://maps.google.com/?q=41.303,-72.935" target="_blank">41.303,-72.935</a></td>
-                  <td class="sFacility.14">18TXL72877445</td>
-                  <td class="sFacility.15">203-688-4242 (Work)</td>
+                  <td class="sFacility.13"><a href="http://maps.google.com/?q=39.153,-75.484" target="_blank">39.153,-75.484</a></td>
+                  <td class="sFacility.14">18SVJ5817933866</td>
+                  <td class="sFacility.15">302-741-0140</td>
                </tr>
                <tr>
                   <td class="sFacility.01">Drug and/or Alcohol Rehabilitation Facility</td>
-                  <td class="sFacility.02">Garrett Recovery</td>
-                  <td class="sFacility.03">330125</td>
+                  <td class="sFacility.02">NET Centers Kirkwood Recovery Center</td>
+                  <td class="sFacility.03">9050</td>
                   <td class="sFacility.04"></td>
                   <td class="sFacility.05"></td>
-                  <td class="sFacility.06">Suite A</td>
-                  <td class="sFacility.07">13 Main Street</td>
-                  <td class="sFacility.07.StreetAddress2">PO Box 825</td>
-                  <td class="sFacility.08" data-value="2391557">2391557</td>
-                  <td class="sFacility.09">NY</td>
-                  <td class="sFacility.10">10509</td>
-                  <td class="sFacility.11">Putnam County</td>
+                  <td class="sFacility.06">Room 101</td>
+                  <td class="sFacility.07">3315 Kirkwood Highway</td>
+                  <td class="sFacility.07.StreetAddress2">Building 1</td>
+                  <td class="sFacility.08" data-value="2390676">2390676</td>
+                  <td class="sFacility.09">DE</td>
+                  <td class="sFacility.10">19808</td>
+                  <td class="sFacility.11">New Castle County</td>
                   <td class="sFacility.12">US</td>
-                  <td class="sFacility.13"><a href="http://maps.google.com/?q=41.394,-73.619" target="_blank">41.394,-73.619</a></td>
-                  <td class="sFacility.14">18TXL15458341</td>
-                  <td class="sFacility.15">914-370-4231 (Work)</td>
+                  <td class="sFacility.13"><a href="http://maps.google.com/?q=39.737,-75.628" target="_blank">39.737,-75.628</a></td>
+                  <td class="sFacility.14">18SVJ4618898755</td>
+                  <td class="sFacility.15">302-691-0140</td>
                </tr>
             </tbody>
          </table>

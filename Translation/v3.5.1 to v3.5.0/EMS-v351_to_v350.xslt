@@ -4,8 +4,8 @@
 
 XML Stylesheet Language Transformation (XSLT) to transform NEMSIS EMSDataSet from v3.5.1 to v3.5.0
 
-Version: 3.5.1.251001CP2_3.5.0.251001CP6_250925
-Revision Date: September 25, 2025
+Version: 3.5.1.251001CP2_3.5.0.251001CP6260331
+Revision Date: March 31, 2026
 
 -->
 
@@ -55,10 +55,8 @@ Revision Date: September 25, 2025
       <xsl:analyze-string select="." regex="(.+)([0-9]{{5}})([0-9]{{5}})$">
         <xsl:matching-substring>
           <xsl:value-of select="regex-group(1)"/>
-        <xsl:value-of
-            select="round(xs:integer(regex-group(2)) div 10)"/>
-        <xsl:value-of
-            select="round(xs:integer(regex-group(3)) div 10)"/>
+          <xsl:value-of select="format-number(round(xs:integer(regex-group(2)) div 10), '0000')"/>
+          <xsl:value-of select="format-number(round(xs:integer(regex-group(3)) div 10), '0000')"/>
         </xsl:matching-substring>
       </xsl:analyze-string>
     </xsl:copy>
